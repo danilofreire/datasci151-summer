@@ -36,7 +36,7 @@ editor:
 - How to perform queries with `SELECT`, `WHERE` and `ORDER BY` 
 - Group data with `GROUP BY` and filter groups with `HAVING` 
 - Statistics with `COUNT`, `SUM`, `AVG`, `MIN`, and `MAX` 
-- That was a nice revision! 🤓 
+- That was a lot! 🤓 
 - SQLite is generally easier to set up as it's often file-based or in-memory
 :::
 
@@ -48,7 +48,6 @@ editor:
 - Other SQL commands, such as `LIKE`, `IN`, `BETWEEN`, `CASE`, window functions, and string functions like `SUBSTR` and `LENGTH` 
 - How to fill missing data with `COALESCE` 
 - How to use database cursors and fetch results (`fetchall`, `fetchone`) 
-- If time allows, we will also see how to pivot tables using `CASE`
 - Let's get started! 🚀
 :::
 :::
@@ -84,7 +83,7 @@ cur = conn.cursor()
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 - We define the structure of our data using `CREATE TABLE`.
-- Use `cursor.execute()` to run the command and `conn.commit()` to [save]{.alert} the change.
+- Use `cur.execute()` to run the command and `conn.commit()` to [save]{.alert} the change.
 
 ```{python}
 #| echo: true
@@ -129,10 +128,16 @@ cur.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='drivers
 #| echo: true
 #| eval: true
 # Insert a few rows
-cur.execute("INSERT INTO drivers (driver_name, team, nationality, victories) VALUES ('Lewis Hamilton', 'Mercedes', 'British', 103);")
-cur.execute("INSERT INTO drivers (driver_name, team, nationality, victories) VALUES ('Max Verstappen', 'Red Bull Racing', 'Dutch', 55);")
-cur.execute("INSERT INTO drivers (driver_name, team, nationality, victories) VALUES ('Fernando Alonso', 'Aston Martin', NULL, NULL);")
-cur.execute("INSERT INTO drivers (driver_name, team, nationality) VALUES ('Charles Leclerc', 'Ferrari', 'Monégasque');") 
+insert_query = '''
+INSERT INTO drivers (driver_name, team, nationality, victories) VALUES
+('Lewis Hamilton', 'Mercedes', 'British', 103),
+('Max Verstappen', 'Red Bull Racing', 'Dutch', 55),
+('Fernando Alonso', 'Aston Martin', NULL, NULL),
+('Charles Leclerc', 'Ferrari', 'Monégasque', NULL);
+'''
+
+# Execute the insert command
+cur.execute(insert_query)
 
 # Commit the insertions
 conn.commit()
@@ -175,7 +180,7 @@ print(row2) # Second row
 ## Iterating Over the Cursor
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- A more "Pythonic" and [memory-efficient]{.alert} way to process results row-by-row is to iterate directly over the cursor.
+- A more "Pythonic" and [memory-efficient]{.alert} way to process results row-by-row is to iterate directly over the cursor. 
 
 ```{python}
 #| echo: true
@@ -186,6 +191,16 @@ query = "SELECT driver_name, team FROM drivers WHERE driver_name LIKE 'M%'"
 # Loop directly over the cursor object after execute
 for row_tuple in cur.execute(query):
      print(row_tuple) 
+
+```
+
+- However, you can also use `.fetchall()` or `.fetchone()` after executing a query, depending on your needs.
+
+```{python}
+#| echo: true
+#| eval: true
+# Fetch all results at once
+cur.execute("SELECT driver_name, team FROM drivers WHERE driver_name LIKE 'M%'").fetchall()
 ```
 :::
 
@@ -199,30 +214,21 @@ for row_tuple in cur.execute(query):
 ```{python}
 #| echo: true
 #| eval: true
-query_in = "SELECT driver_name, team FROM drivers WHERE team IN ('Ferrari', 'Mercedes')" 
-cur.execute(query_in)
-for row in cur.fetchall():
-    print(row)
+cur.execute("SELECT driver_name, team FROM drivers WHERE team IN ('Ferrari', 'Mercedes')").fetchall()
 ```
 
 - `NOT IN` works similarly to exclude values in the list.
 ```{python}
 #| echo: true
 #| eval: true
-query_not_in = "SELECT driver_name, team FROM drivers WHERE team NOT IN ('Ferrari', 'Mercedes')" 
-cur.execute(query_not_in)
-for row in cur.fetchall():
-    print(row)
+cur.execute("SELECT driver_name, team FROM drivers WHERE team NOT IN ('Ferrari', 'Mercedes')").fetchall()
 ```
 - `BETWEEN` checks if a value is within a specified range. [Inclusive]{.alert} of the endpoints.
 
 ```{python}
 #| echo: true
 #| eval: true
-query_between = "SELECT driver_name, victories FROM drivers WHERE victories BETWEEN 10 AND 60" 
-cur.execute(query_between)
-for row in cur.fetchall():
-    print(row)
+cur.execute("SELECT driver_name, victories FROM drivers WHERE victories BETWEEN 10 AND 60").fetchall()
 ```
 
 - `NOT BETWEEN` excludes values within the specified range.
@@ -254,8 +260,8 @@ for row in cur.fetchall(): print(row)
 ```{python}
 #| echo: true
 #| eval: true
-# 'o' as the second letter
-cur.execute("SELECT driver_name FROM drivers WHERE driver_name LIKE '_o%'")
+# 'e' as the second letter
+cur.execute("SELECT driver_name FROM drivers WHERE driver_name LIKE '_e%'")
 for row in cur.fetchall(): print(row)
 ```
 :::
@@ -263,7 +269,7 @@ for row in cur.fetchall(): print(row)
 ## `LIKE` Operator: Case Sensitivity and `NOT LIKE`
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- SQLite `LIKE` is case-insensitive for ASCII by default. Use `LOWER()`/`UPPER()` for [reliable, explicit case handling]{.alert}.
+- SQLite `LIKE` is case-insensitive by default. Use `LOWER()`/`UPPER()` for [reliable, explicit case handling]{.alert}.
 
 ```{python}
 #| echo: true
@@ -280,7 +286,6 @@ for row in cur.fetchall(): print(row)
 #| eval: true
 # Case-insensitive search for names starting with 'l' using COLLATE
 cur.execute("SELECT driver_name FROM drivers WHERE driver_name LIKE 'l%' COLLATE NOCASE")
-
 for row in cur.fetchall(): print(row)
 ```
 
@@ -328,6 +333,10 @@ for row in cur.fetchall(): print(row)
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 - The default value in `COALESCE` can be dynamic, calculated by a [subquery]{.alert}.
+- If `victories` is `NOT NULL`, it uses that value. Otherwise, it computes the average from non-NULL rows.
+- The syntax is `COALESCE(column01, column02, ..., (subquery))`.
+- `CAST` converts the result to a specific type, if needed.
+- We use `CAST(... AS INTEGER)` to ensure the result is an integer. But this is optional.
 
 ```{python}
 #| echo: true
@@ -363,25 +372,23 @@ for row in cur.fetchall(): print(row)
 #| echo: true
 #| eval: true
 # Add more data for better examples
-more_drivers_data = [
-    ('Valtteri Bottas', 'Mercedes', 'Finnish', 10),
-    ('Sergio Perez', 'Red Bull Racing', 'Mexican', 5),
-    ('Lando Norris', 'McLaren', 'British', 2),
-    ('Esteban Ocon', 'Alpine', 'French', 1) 
-]
-# Check if data already exists to avoid duplicates 
-cur.execute("SELECT COUNT(*) FROM drivers WHERE driver_name = 'Valtteri Bottas'")
-if cur.fetchone()[0] == 0:
-    cur.executemany('INSERT INTO drivers (driver_name, team, nationality, victories) VALUES (?, ?, ?, ?)', more_drivers_data)
-    conn.commit()
-    print(f"Added {len(more_drivers_data)} more drivers.")
-else:
-    print("Additional drivers already exist.")
+more_drivers = """
+INSERT INTO drivers (driver_name, team, nationality, victories) VALUES
+('Valtteri Bottas', 'Mercedes', 'Finnish', 10),
+('Sergio Perez', 'Red Bull Racing', 'Mexican', 5),
+('Lando Norris', 'McLaren', 'British', 2),
+('Esteban Ocon', 'Alpine', 'French', 1);
+"""
 
+cur.execute(more_drivers)
+
+cur.execute("SELECT * FROM drivers") # Check inserted data
+
+# Fetch and print data
+for row in cur.fetchall(): print(row)
 
 # Check SQLite Version
-cur.execute("SELECT sqlite_version();")
-print(f"SQLite Version: {cur.fetchone()[0]}")
+cur.execute("SELECT sqlite_version();").fetchone()
 ```
 :::
 
@@ -407,6 +414,7 @@ WHERE victories IS NOT NULL
 ORDER BY rank_overall; 
 '''
 cur.execute(query_window_avg_rank)
+print([names[0] for names in cur.description]) # Print column names
 for row in cur.fetchall(): print(row)
 ```
 :::
@@ -419,7 +427,7 @@ for row in cur.fetchall(): print(row)
 ```{python}
 #| echo: true
 #| eval: true
-# GROUP BY example (summarizes)
+# GROUP BY example (summarises)
 cur.execute("SELECT team, ROUND(AVG(victories), 2) FROM drivers WHERE victories IS NOT NULL GROUP BY team")
 print("--- GROUP BY Output (Collapsed) ---")
 for row in cur.fetchall(): print(row)
@@ -657,10 +665,10 @@ print(df.query('victories > 50 and nationality == "British"'))
 #| echo: true
 #| eval: true
 # Example: Create a DataFrame with British drivers
-df_british = df[df['nationality'] == 'British'].copy()
+df_british = df.query('nationality == "British"').copy()
 
 # Write to a new table named 'british_drivers'
-# index=False: [Important!]{.alert} Prevents pandas index from becoming a DB column.
+# index=False: Prevents pandas index from becoming a DB column (important!)
 df_british.to_sql('british_drivers', conn, if_exists='replace', index=False)
 
 # Verify by reading it back using pandas
@@ -671,65 +679,11 @@ print(pd.read_sql('SELECT * FROM british_drivers', conn))
 ## Try it yourself! 🤓 {#sec:exercise04}
 
 :::{style="margin-top: 50px; font-size: 20px;"}
-- 1. Create `employees` table (`id`, `name`, `dept`, `salary`) using `cursor`.
-- 2. Insert data for Alice (HR, 50k), Bob (IT, 60k), Charlie (HR, 70k), David (IT, 80k) using `cursor`. Commit.
-- 3. Read the full `employees` table into `df_employees` using [`pd.read_sql()`]{.alert}. Print it.
-- 4. Using [`df_employees`]{.alert}, calculate and print the average salary per department.
+- Create `employees` table (`id`, `name`, `dept`, `salary`) using `cursor`.
+- Insert data for Alice (HR, 50k), Bob (IT, 60k), Charlie (HR, 70k), David (IT, 80k) using `cursor`. Commit.
+- Read the full `employees` table into `df_employees` using [`pd.read_sql()`]{.alert}. Print it.
+- Using [`df_employees`]{.alert}, calculate and print the average salary per department.
 - [[Appendix 04]{.button}](#sec:appendix04)
-:::
-
-# Pivot tables in SQL 📄 {background-color="#2d4563"}
-
-## Pivot Setup: Student Scores
-
-:::{style="margin-top: 50px; font-size: 20px;"}
-- Pivoting reshapes data from "long" to "wide" format. SQLite lacks a dedicated `PIVOT` command, so we use conditional aggregation.
-- Let's set up the `student_scores` data first.
-
-```{python}
-#| echo: true
-#| eval: true
-# Create and populate student_scores table
-cur.execute('DROP TABLE IF EXISTS student_scores;')
-cur.execute('CREATE TABLE student_scores (student_name TEXT, subject TEXT, score INTEGER, term TEXT);')
-scores_data = [
-    ('Alice', 'Maths', 90, 'Q1'), ('Alice', 'Maths', 80, 'Q2'), ('Alice', 'Science', 80, 'Q1'), ('Alice', 'Science', 75, 'Q2'),
-    ('Bob', 'Maths', 80, 'Q1'), ('Bob', 'Maths', 100, 'Q2'), ('Bob', 'Science', 80, 'Q1'), ('Bob', 'Science', 70, 'Q2'),
-    ('Charles', 'Maths', 70, 'Q1'), ('Charles', 'Maths', 75, 'Q2'), ('Charles', 'Science', 90, 'Q1'), ('Charles', 'Science', 85, 'Q2')
-]
-cur.executemany('INSERT INTO student_scores VALUES (?, ?, ?, ?)', scores_data)
-conn.commit()
-print("Created and populated student_scores.")
-
-# Display raw data using pandas
-print(pd.read_sql('SELECT * FROM student_scores ORDER BY student_name, term, subject', conn))
-```
-:::
-
-## Pivoting with `CASE` and `GROUP BY`
-
-:::{style="margin-top: 50px; font-size: 20px;"}
-- The technique involves using an aggregate function (`AVG`, `SUM`, etc.) around a `CASE` statement for each desired new column. [`GROUP BY`]{.alert} ensures one row per student.
-
-```{python}
-#| echo: true
-#| eval: true
-pivot_query = '''
-SELECT 
-    student_name,
-    -- Avg Maths: Only average score WHEN subject is Maths
-    AVG(CASE WHEN subject = 'Maths' THEN score END) as Avg_Maths, 
-    -- Avg Science: Only average score WHEN subject is Science
-    AVG(CASE WHEN subject = 'Science' THEN score END) as Avg_Science
-FROM student_scores
-GROUP BY student_name 
-ORDER BY student_name;
-'''
-# Display the pivoted result using pandas
-df_pivot = pd.read_sql(pivot_query, conn)
-print(df_pivot)
-```
-- [`AVG` ignores NULLs]{.alert}, which are produced by the `CASE` statement when the subject doesn't match.
 :::
 
 # Conclusion 📚 {background-color="#2d4563"}
@@ -872,8 +826,6 @@ ORDER BY victories DESC NULLS LAST;
 cur.execute(query_driver_level)
 print("--- Driver classification using CASE ---")
 for row in cur.fetchall(): print(row)
-
-conn.close()
 ```
 
 [[Back to exercise]{.button}](#sec:exercise03)
@@ -882,20 +834,12 @@ conn.close()
 ## Appendix 04 {#sec:appendix04}
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-**Exercise Solution** (Using `pandas` as requested)
+**Exercise Solution** (Using `pandas`)
 
 ```{python}
 #| echo: true
 #| eval: true
-import pandas as pd 
-import sqlite3
-import os
-
-db_file = 'lecture12.db' 
-conn = sqlite3.connect(db_file)
-cur = conn.cursor() 
-
-# 1. Create employees table
+# Create employees table
 cur.execute('DROP TABLE IF EXISTS employees;') 
 cur.execute('''
 CREATE TABLE employees (
@@ -904,68 +848,26 @@ CREATE TABLE employees (
 );''')
 
 # 2. Insert data
-employee_data = [
-    ('Alice', 'HR', 50000), ('Bob', 'IT', 60000),
-    ('Charlie', 'HR', 70000), ('David', 'IT', 80000)
-]
-cur.executemany('INSERT INTO employees (employee_name, department, salary) VALUES (?, ?, ?)', employee_data)
+cur.execute('''
+INSERT INTO employees (employee_name, department, salary) VALUES
+('Alice', 'HR', 50000),
+('Bob', 'IT', 60000),
+('Charlie', 'HR', 70000),
+('David', 'IT', 80000);
+''')
 conn.commit()
-print("Employees table created and populated.")
 
-# --- Pandas part starts here ---
 # 3. Read data with pandas
 df_employees = pd.read_sql('SELECT * FROM employees', conn)
-print("\n--- Employees DataFrame ---")
 print(df_employees)
 
 # 4. Compute average salary by department using pandas
 avg_salary_dept = df_employees.groupby('department')['salary'].mean()
 print("\n--- Average salary by department (pandas) ---")
 print(avg_salary_dept)
+
+conn.close()
 ```
 
 [[Back to exercise]{.button}](#sec:exercise04)
-:::
-
-## Appendix 05 {#sec:appendix05}
-### Cleaning an SQLite Database
-
-:::{style="margin-top: 50px; font-size: 22px;"}
-- **Option 1 (Easiest)**: [Delete the database file]{.alert}. Find `.db` file (`lecture12.db`) or use code:
-
-```{python}
-#| echo: true
-#| eval: false 
-import os
-db_file_to_delete = 'lecture12.db' 
-if os.path.exists(db_file_to_delete):
-    try:
-        # Ensure connection is closed first!
-        os.remove(db_file_to_delete)
-        print(f"Deleted database file: {db_file_to_delete}")
-    except OSError as e:
-        print(f"Error deleting file {db_file_to_delete}: {e}")
-```
-
-- **Option 2**: Drop all tables programmatically.
-
-```{python}
-#| echo: true
-#| eval: false 
-import sqlite3
-db_file_to_clean = 'lecture12.db' 
-conn_clean = sqlite3.connect(db_file_to_clean)
-cur_clean = conn_clean.cursor()
-cur_clean.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%';")
-tables = cur_clean.fetchall()
-print(f"Tables to drop: {tables}")
-for table_name_tuple in tables:
-    cur_clean.execute(f"DROP TABLE IF EXISTS {table_name_tuple[0]}")
-    print(f"Dropped table: {table_name_tuple[0]}")
-conn_clean.commit()
-conn_clean.close()
-print("Finished dropping tables.")
-```
-
-[[Back to the lecture]{.button}](#sec:tables)
 :::
