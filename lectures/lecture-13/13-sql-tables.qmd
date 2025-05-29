@@ -35,7 +35,6 @@ editor:
 - Use many SQL commands, such as `CASE WHEN`, window functions, and string functions
 - Fill missing data with `COALESCE` and `CASE WHEN`
 - Use `pandas` to write and run SQL queries
-- Pivot tables in SQLite
 :::
 
 :::{.column width="50%"}
@@ -549,7 +548,7 @@ ORDER BY player_name;
 :::{style="margin-top: 50px; font-size: 20px;"}
 - SQLite provides "UPSERT" (Update or Insert) operations using the `INSERT ... ON CONFLICT` clause.
 - This allows you to attempt an `INSERT`, and if it violates a constraint (like `UNIQUE` or `PRIMARY KEY`), you can specify an alternative action, typically a `DO UPDATE`.
-- You can specify different actions for different types of conflicts, such as `IGNORE`, `REPLACE`, or `UPDATE`.
+- You can specify different actions for different types of conflicts, such as `DO NOTHING`, `REPLACE`, or `DO UPDATE SET`.
 - Let's see a simplified example: If we try to insert a player with an existing `player_name`, we update their `goals` instead.
 - You will notice that `excluded` is a special table that refers to the row that would have been inserted if there was no conflict. [SQLite always uses this name]{.alert}.
 
@@ -601,7 +600,7 @@ pd.read_sql('SELECT * FROM player_stats LIMIT 4', connection)
 ## Views
 
 :::{style="margin-top: 50px; font-size: 20px;"}
-- You can also use the view in a join with another table. For example, let's join the `player_stats` view with the `teams` table to see which players are in which teams.
+- You can also use the view in a join with another table. For example, let's create a view that combines colours and sizes of T-shirts as we did before.
 ```{python}
 #| echo: true
 #| eval: true
@@ -675,37 +674,6 @@ print(pd.read_sql('''
 
 [[Back to exercise]{.button}](#sec:exercise01b)
 :::
-
-## Appendix 02 {#sec:appendix02}
-
-:::{style="margin-top: 50px; font-size: 20px;"}
-- Here is the solution to the self-join exercise comparing player victories.
-- Note the use of `CAST(... AS REAL)` or multiplying by `1.0` to ensure floating-point division in SQLite.
-
-```{python}
-#| echo: true
-#| eval: true
-print("Self Join on Players to Compare Victories:")
-print(pd.read_sql('''
-SELECT
-    p1.player_name,
-    p1.victories,
-    p2.player_name AS compared_to,
-    p2.victories AS their_victories,
-    -- Ensure floating point division by casting one operand to REAL or NUMERIC
-    ROUND(CAST(p1.victories AS REAL) / p2.victories, 2) AS victories_ratio
-FROM players p1
-JOIN players p2
-    ON p1.player_id < p2.player_id -- Avoid duplicates and self-comparison
-WHERE
-    p2.victories > 0 -- Avoid division by zero
-ORDER BY
-    p1.player_id, p2.player_id; -- Consistent ordering
-''', connection))
-```
-[[Back to exercise]{.button}](#sec:exercise02)
-:::
-
 
 ## Appendix 03 {#sec:appendix05}
 ### Cleaning the SQLite database
