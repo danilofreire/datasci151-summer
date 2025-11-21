@@ -29,19 +29,17 @@ Please also refer to the Discussion tab on the repository for any questions or c
 
 ### Lectures
 
-We will meet every weekday from May 11th to May 29th, 2025 from 9:00 AM to 12:30 PM. Our meetings will be online via Zoom. Please check our Canvas page for the link.  Please check the [course schedule](https://danilofreire.github.io/datasci151-summer/lectures/lectures.html) for the full list of topics and dates. Lecture materials are available in the [lectures folder](https://github.com/danilofreire/datasci151-summer/tree/main/lectures) in the repository.
+We will meet every weekday from May 12th to May 29th, 2025 from 9:00 AM to 12:30 PM. Our meetings will be online via Teams. Please check our Canvas page for the link.  Please check the [course schedule](https://danilofreire.github.io/datasci151-summer/lectures/lectures.html) for the full list of topics and dates. Lecture materials are available in the [lectures folder](https://github.com/danilofreire/datasci151-summer/tree/main/lectures) in the repository.
 
 Each folder contains an HTML presentation or a Jupyter notebook (`.ipynb`) with code examples and explanations, along with any additional resources or datasets used in the lecture.
 
 ### Assignments and Quizzes
 
-Throughout the course, students will complete various assignments and quizzes to reinforce their learning. The assignments will be posted in the [`assignments/`](https://github.com/danilofreire/datasci151-summer/tree/main/assignments) folder as the course progresses. The quizzes will be available as separate GitHub repositories. We will also announce these in class and on Canvas. Please refer to the syllabus or the lecture schedule for due dates and
-submission guidelines.
+Throughout the course, students will complete five assignments and three quizzes to reinforce their learning. The assignments will be posted in the [`assignments/`](https://github.com/danilofreire/datasci151-summer/tree/main/assignments) folder as the course progresses. The quizzes will be available as separate GitHub repositories. We will also announce these in class and on Canvas. Please refer to the syllabus or the lecture schedule for due dates and submission guidelines.
 
 ### Tutorials
 
-The [`tutorials/`](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials) tab contains step-by-step guides for various tools and techniques used in the course. Please have a look at
-these resources to help you get started. 
+The [`tutorials/`](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials) tab contains step-by-step guides for various tools and techniques used in the course. Please have a look at these resources to help you get started. 
 
 PDF versions of the tutorials are also [available in the repository](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials).
 
@@ -53,8 +51,8 @@ PDF versions of the tutorials are also [available in the repository](https://git
 
 ## Grading
 
-- Assignments: 50%
-- Class Quizzes: 50%
+- Assignments (5x): 50%
+- Class Quizzes (3x): 50%
 
 ## Course Policies and Expectations
 
@@ -85,4 +83,4 @@ This repository is licensed under the [MIT License](LICENSE.qmd). You are free t
 
 -----
 
-We look forward to an engaging and productive semester! Good luck, and happy coding! :smiley:
+We look forward to an engaging and productive month! Good luck, and happy coding! :smiley:

@@ -291,7 +291,7 @@
     "href": "index.html#course-content",
     "title": "DATASCI 151 - Introduction to Statistical Computing II",
     "section": "Course Content",
-    "text": "Course Content\n\nLectures\nWe will meet every weekday from May 11th to May 29th, 2025 from 9:00 AM to 12:30 PM. Our meetings will be online via Zoom. Please check our Canvas page for the link. Please check the course schedule for the full list of topics and dates. Lecture materials are available in the lectures folder in the repository.\nEach folder contains an HTML presentation or a Jupyter notebook (.ipynb) with code examples and explanations, along with any additional resources or datasets used in the lecture.\n\n\nAssignments and Quizzes\nThroughout the course, students will complete various assignments and quizzes to reinforce their learning. The assignments will be posted in the assignments/ folder as the course progresses. The quizzes will be available as separate GitHub repositories. We will also announce these in class and on Canvas. Please refer to the syllabus or the lecture schedule for due dates and submission guidelines.\n\n\nTutorials\nThe tutorials/ tab contains step-by-step guides for various tools and techniques used in the course. Please have a look at these resources to help you get started.\nPDF versions of the tutorials are also available in the repository."
+    "text": "Course Content\n\nLectures\nWe will meet every weekday from May 12th to May 29th, 2025 from 9:00 AM to 12:30 PM. Our meetings will be online via Teams. Please check our Canvas page for the link. Please check the course schedule for the full list of topics and dates. Lecture materials are available in the lectures folder in the repository.\nEach folder contains an HTML presentation or a Jupyter notebook (.ipynb) with code examples and explanations, along with any additional resources or datasets used in the lecture.\n\n\nAssignments and Quizzes\nThroughout the course, students will complete five assignments and three quizzes to reinforce their learning. The assignments will be posted in the assignments/ folder as the course progresses. The quizzes will be available as separate GitHub repositories. We will also announce these in class and on Canvas. Please refer to the syllabus or the lecture schedule for due dates and submission guidelines.\n\n\nTutorials\nThe tutorials/ tab contains step-by-step guides for various tools and techniques used in the course. Please have a look at these resources to help you get started.\nPDF versions of the tutorials are also available in the repository."
   },
   {
     "objectID": "index.html#course-requirements",
@@ -305,7 +305,7 @@
     "href": "index.html#grading",
     "title": "DATASCI 151 - Introduction to Statistical Computing II",
     "section": "Grading",
-    "text": "Grading\n\nAssignments: 50%\nClass Quizzes: 50%"
+    "text": "Grading\n\nAssignments (5x): 50%\nClass Quizzes (3x): 50%"
   },
   {
     "objectID": "index.html#course-policies-and-expectations",
@@ -340,7 +340,7 @@
     "href": "index.html#license",
     "title": "DATASCI 151 - Introduction to Statistical Computing II",
     "section": "License",
-    "text": "License\nThis repository is licensed under the MIT License. You are free to use, modify, and distribute the materials as needed, with appropriate attribution to the original source.\n\nWe look forward to an engaging and productive semester! Good luck, and happy coding! :smiley:"
+    "text": "License\nThis repository is licensed under the MIT License. You are free to use, modify, and distribute the materials as needed, with appropriate attribution to the original source.\n\nWe look forward to an engaging and productive month! Good luck, and happy coding! :smiley:"
   },
   {
     "objectID": "03-github-tutorial.html",
