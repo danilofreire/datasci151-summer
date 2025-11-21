@@ -32,14 +32,14 @@
     "href": "lectures.html",
     "title": "Lectures",
     "section": "",
-    "text": "The course covers the following main topics, with corresponding lecture materials available in the lectures folder in our course repository:"
+    "text": "The course covers the following main topics, with corresponding lecture materials available in the lectures folder in our course repository:\nEach lecture folder contains an HTML file or a Jupyter notebook (.ipynb) with code examples and explanations, along with any additional resources or datasets used in the lecture."
   },
   {
     "objectID": "lectures.html#schedule",
     "href": "lectures.html#schedule",
     "title": "Lectures",
     "section": "Schedule",
-    "text": "Schedule\n\nTuesday, May 13: Lecture 01: Welcome to QTM 151 - Introduction and Course Overview. Please make sure to install the necessary software for the course by following the Course Tutorials: How to Install Anaconda, Jupyter, PostgreSQL, VSCode, and Open a Free Educational Account on GitHub.\nWednesday, May 14: Lecture 02: Jupyter Notebooks, Packages, Variables, and Lists. Lecture Slides, Lecture Notebook.\nThursday, May 15: Lecture 03: Maths Operations, Arrays, and Boolean Logic. Lecture Slides, Lecture Notebook\n\nKahoot Quiz. The quiz is optional and will not be graded. We will do it in class! It is a fun way to review the material covered in the lecture.\n\nFriday, May 16: Lecture 04: Quiz 01 - Based on Lectures 01-03. The repository contains the quiz questions and will be made online on the day of the quiz.\n\nAssignment 01 due.\n\nMonday, May 19: Lecture 05: Conditional Statements. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nTuesday, May 20: Lecture 06: While and For Loops. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nWednesday, May 21: Lecture 07: Functions. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\nAssignment 02 due.\n\nThursday, May 22: Lecture 08: Data Wrangling with Pandas. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nFriday, May 23: Lecture 09: Quiz 02 - Based on Lectures 05-08. As with Quiz 01, the repository will be available on the day of the quiz.\n\nAssignment 03 due.\n\nMonday, May 26: Lecture 10: Subsetting and Filtering Data. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nTuesday, May 27: Lecture 11: Introduction to SQL. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nWednesday, May 28: Lecture 12: SQL in Python. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\nAssignment 04 due.\n\nThursday, May 29: Lecture 13: Merge Tables in SQL. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nFriday, May 30: Lecture 14: Quiz 03 - Based on Lectures 10-13.\n\nAssignment 05 due.\n\n\nEach lecture folder contains an HTML file or a Jupyter notebook (.ipynb) with code examples and explanations, along with any additional resources or datasets used in the lecture."
+    "text": "Schedule\n\nTuesday, May 12: Lecture 01: Welcome to DATASCI 151 - Introduction and Course Overview. Please make sure to install the necessary software for the course by following the Course Tutorials: How to Install Anaconda, Jupyter, PostgreSQL, VSCode, and Open a Free Educational Account on GitHub.\nWednesday, May 13: Lecture 02: Jupyter Notebooks, Packages, Variables, and Lists. Lecture Slides, Lecture Notebook.\nThursday, May 14: Lecture 03: Maths Operations, Arrays, and Boolean Logic. Lecture Slides, Lecture Notebook\n\nKahoot Quiz. Kahoot quizzes are optional and will not be graded. We will do it in class! It is a fun way to review the material covered in the lecture.\n\nFriday, May 15: Lecture 04: Quiz 01 - Based on Lectures 01-03. The repository contains the quiz questions and will be made online on the day of the quiz.\n\nAssignment 01 due.\n\nMonday, May 18: Lecture 05: Conditional Statements. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nTuesday, May 19: Lecture 06: While and For Loops. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nWednesday, May 20: Lecture 07: Functions. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\nAssignment 02 due.\n\nThursday, May 21: Lecture 08: Data Wrangling with Pandas. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nFriday, May 22: Lecture 09: Quiz 02 - Based on Lectures 05-08. As with Quiz 01, the repository will be available on the day of the quiz.\n\nAssignment 03 due.\n\nMonday, May 25: Lecture 10: Subsetting and Filtering Data. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nTuesday, May 26: Lecture 11: Introduction to SQL. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nWednesday, May 27: Lecture 12: SQL in Python. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\nAssignment 04 due.\n\nThursday, May 28: Lecture 13: Merge Tables in SQL. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nFriday, May 29: Lecture 14: Quiz 03 - Based on Lectures 10-13.\n\nAssignment 05 due."
   },
   {
     "objectID": "testing-ipython.html",
@@ -373,28 +373,28 @@
   {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
-    "title": "QTM 151 - Introduction to Statistical Computing II",
+    "title": "DATASCI 151 - Introduction to Statistical Computing II",
     "section": "",
-    "text": "Welcome to QTM 151! This course introduces students to data analysis and statistical computing using Python and SQL. It is ideal for those with little or no programming experience who want to develop skills for data-driven decision making.\nOver the next three weeks, we will cover version control for collaborative coding, Jupyter Notebooks for reproducible research, Python programming basics, data wrangling and merging in SQL, data visualisation, and introductions to linear modelling and time series analysis.\nYou will work with real-world datasets and problems, gaining practical experience in using these tools to extract insights from data. The course aims to develop both technical skills and critical thinking needed for complex data challenges. By the end, you will be ready for advanced study in quantitative methods and data science."
+    "text": "Welcome to DATASCI 151! This Maymester course introduces data analysis and statistical computing using Python and SQL. It is perfect for beginners with little or no programming experience who want to build skills for data-driven decision making.\nWe will cover Python programming fundamentals, Jupyter Notebooks for reproducible research, data wrangling and merging with SQL, data visualisation, and introductions to linear modelling and time series analysis.\nYou will work with real-world datasets and problems, gaining hands-on experience using these tools to extract insights from data. The course develops both technical skills and critical thinking abilities needed for tackling complex data challenges."
   },
   {
     "objectID": "syllabus.html#suggested-books",
     "href": "syllabus.html#suggested-books",
-    "title": "QTM 151 - Introduction to Statistical Computing II",
+    "title": "DATASCI 151 - Introduction to Statistical Computing II",
     "section": "Suggested Books",
     "text": "Suggested Books\n\nPython for Data Analysis by Wes McKinney\nElements of Data Science by Allen Downey\nAutomate the Boring Stuff with Python by Al Sweigart\nPython for Everybody by Charles Severance\nSQL for Data Scientists by Renee M. P. Teate"
   },
   {
     "objectID": "syllabus.html#online-courses",
     "href": "syllabus.html#online-courses",
-    "title": "QTM 151 - Introduction to Statistical Computing II",
+    "title": "DATASCI 151 - Introduction to Statistical Computing II",
     "section": "Online Courses",
     "text": "Online Courses\n\nCoursera: Python for Everybody Specialisation\nedX: Python Basics for Data Science\nCodecademy: Learn Python\nDataCamp: Introduction to SQL\nCoursera: SQL for Data Science"
   },
   {
     "objectID": "syllabus.html#additional-resources",
     "href": "syllabus.html#additional-resources",
-    "title": "QTM 151 - Introduction to Statistical Computing II",
+    "title": "DATASCI 151 - Introduction to Statistical Computing II",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nPython Documentation\nPandas Documentation\nPostgreSQL Documentation\nSQLBolt\nDataLemur for SQL interview practice\nGithub Guides"
   },

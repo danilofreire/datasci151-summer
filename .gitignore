@@ -634,3 +634,5 @@ $RECYCLE.BIN/
 
 
 /.quarto/
+
+**/*.quarto_ipynb
