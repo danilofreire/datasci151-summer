@@ -8,22 +8,21 @@ Assignment submissions are typically due on Wednesdays and Fridays at 11:59pm fo
 
 I encourage you to complete assignments in Jupyter Notebooks and submit them in PDF format. 
 
-You will find the assignments in `.ipynb` format in the `assignments` folder on [the course repository](https://github.com/danilofreire/qtm151-summer/tree/main/assignments). 
+You will find the assignments in `.ipynb` format in the `assignments` folder on [the course repository](https://github.com/danilofreire/datasci151-summer/tree/main/assignments). 
 
 ## Assignment Timeline
 
 | Sessions | Topics | Assignment | Submission Deadline |
 |---------|-------|------------|---------------------|
-| 02-03 | Variables and Lists | [Assignment 01](https://github.com/danilofreire/qtm151-summer/tree/main/assignments/01-assignment) | 2025-05-16 |
-| 03-05 | Arrays and Conditional Statements| [Assignment 02](https://github.com/danilofreire/qtm151-summer/tree/main/assignments/02-assignment) | 2025-05-21 |
-| 06-07 | While and For Loops, Functions| [Assignment 03](https://github.com/danilofreire/qtm151-summer/tree/main/assignments/03-assignment) | 2025-05-23 |
-| 10-11 | Subsetting Data| [Assignment 04](https://github.com/danilofreire/qtm151-summer/tree/main/assignments/04-assignment) | 2025-05-28 |
-| 12-13 | SQL | [Assignment 05](https://github.com/danilofreire/qtm151-summer/tree/main/assignments/05-assignment) | 2025-05-30 |
-
+| 02-03 | Variables and Lists | [Assignment 01](https://github.com/danilofreire/datasci151-summer/tree/main/assignments/01-assignment) | 2026-05-15 |
+| 03-05 | Arrays and Conditional Statements| [Assignment 02](https://github.com/danilofreire/datasci151-summer/tree/main/assignments/02-assignment) | 2026-05-20 |
+| 06-07 | While and For Loops, Functions| [Assignment 03](https://github.com/danilofreire/datasci151-summer/tree/main/assignments/03-assignment) | 2026-05-22 |
+| 10-11 | Subsetting Data| [Assignment 04](https://github.com/danilofreire/datasci151-summer/tree/main/assignments/04-assignment) | 2026-05-27 |
+| 12-13 | SQL | [Assignment 05](https://github.com/danilofreire/datasci151-summer/tree/main/assignments/05-assignment) | 2026-05-29 |
 ## In-Class Quizzes
 
 In-class quizzes will be held on Fridays. They will be based on the material covered in the previous sessions. The quizzes will be open-book and open-notes, but you will not be allowed communicate with others during the quiz. 
 
-* Quiz 01: <https://github.com/danilofreire/qtm151-summer-quiz01>. 
-* Quiz 02: <https://github.com/danilofreire/qtm151-summer-quiz02>. 
-* Quiz 03: <https://github.com/danilofreire/qtm151-summer-quiz03>. 
+* Quiz 01: <https://github.com/danilofreire/datasci151-summer-quiz01>. 
+* Quiz 02: <https://github.com/danilofreire/datasci151-summer-quiz02>. 
+* Quiz 03: <https://github.com/danilofreire/datasci151-summer-quiz03>. 
