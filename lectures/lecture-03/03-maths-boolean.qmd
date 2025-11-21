@@ -1,5 +1,5 @@
 ---
-title: QTM 151 - Introduction to Statistical Computing II
+title: DATASCI 151 - Introduction to Statistical Computing II
 subtitle: Lecture 03 - Maths Operations, Arrays, and Boolean Logic
 author:
   - name: Danilo Freire
@@ -9,7 +9,7 @@ author:
 format:
   clean-revealjs:
     self-contained: true
-    footer: "[Maths with NumPy](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-04/04-maths-arrays-random.html)"
+    footer: "[Maths with NumPy](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-04/04-maths-arrays-random.html)"
 transition: slide
 transition-speed: default
 scrollable: true

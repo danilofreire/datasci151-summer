@@ -1,7 +1,7 @@
 ---
-title: "QTM 151 - Introduction to Statistical Computing II"
+title: "DATASCI 151 - Introduction to Statistical Computing II"
 author: "Danilo Freire"  
-date: "Summer 2025"
+date: "Summer 2026"
 fontsize: 12pt
 fontfamily: libertine
 monofont: inconsolata
@@ -25,38 +25,38 @@ format:
       toc-depth: 3
       number-sections: false
 editor: 
-  render-on-save: false
+  render-on-save: true
 ---
 
 \doublespacing 
 
 # Course Description
 
-Welcome to [QTM 151](https://github.com/danilofreire/qtm151)! This course introduces students to data analysis and statistical computing using Python and SQL. It is ideal for those with little or no programming experience who want to develop skills for data-driven decision making.
+Welcome to [DATASCI 151](https://github.com/danilofreire/datasci151-summer)! This Maymester course introduces data analysis and statistical computing using Python and SQL. It is perfect for beginners with little or no programming experience who want to build skills for data-driven decision making.
 
-Over the semester, we will cover version control for collaborative coding, Jupyter Notebooks for reproducible research, Python programming basics, data wrangling and merging in SQL, data visualisation, and introductions to linear modelling and time series analysis.
+We will cover Python programming fundamentals, Jupyter Notebooks for reproducible research, data wrangling and merging with SQL, data visualisation, and introductions to linear modelling and time series analysis.
 
-Students will work with real-world datasets and problems, gaining practical experience in using these tools to extract insights from data. The course aims to develop both technical skills and critical thinking needed for complex data challenges. By the end, students will be ready for advanced study in quantitative methods and data science.
+You will work with real-world datasets and problems, gaining hands-on experience using these tools to extract insights from data. The course develops both technical skills and critical thinking abilities needed for tackling complex data challenges.
 
 # Learning Objectives
 
-By the end of this course, students will be able to:
+By the end of this course, you will be able to:
 
-1. Perform basic operations and write functions in Python.
-2. Conduct data wrangling and manipulate data using Python libraries such as Pandas.
-3. Merge and manage databases using SQL.
-4. Create visualisations to effectively communicate data insights.
-5. Implement linear models and understand the principles of time series analysis.
-6. Use Jupyter Notebooks for reproducible research.
-7. Develop problem-solving skills relevant to data analysis and statistical computing.
+1. Write Python functions and perform mathematical operations
+2. Wrangle and manipulate data using Python libraries like Pandas
+3. Merge and manage databases with SQL
+4. Create visualisations to communicate data insights
+5. Implement linear models and understand time series analysis principles
+6. Use Jupyter Notebooks for reproducible research
+7. Develop problem-solving skills for data analysis and statistical computing
 
 # Prerequisites
 
-There are no prerequisites for this course. All students are welcome to join, regardless of their prior experience with programming or data analysis. Please feel free to reach out if you have any questions about the course content or your readiness to take the class.
+There are no prerequisites for this course. Everyone is welcome, regardless of prior programming or data analysis experience. Feel free to reach out if you have questions about the course content or whether it is right for you.
 
 # Materials
 
-This course is designed to be self-contained, providing all the necessary resources and materials to succeed in mastering the core concepts. However, students are encouraged to explore the following suggested books and online courses to deepen their understanding of Python and SQL.
+This course provides everything you need to master the core concepts, but you are encouraged to explore these additional resources to deepen your understanding of Python and SQL.
 
 ## Suggested Books
 
@@ -86,45 +86,49 @@ This course is designed to be self-contained, providing all the necessary resour
 # Course Information
 
 
-We will meet every Monday and Wednesday from 16:00 to 16:50 in the [Anthropology Building, 303](https://maps.app.goo.gl/bgxTfADzf1Vz2z1EA). It is important that you read the materials before class. All information about the course is available on the course's GitHub repository at <https://github.com/danilofreire/qtm151>. While I will try to adhere to the course schedule as much as possible, I also want to adapt to your learning pace and style. The syllabus and course plan may change in the semester. Again, please check [the course repository](https://github.com/danilofreire/qtm151) regularly to check for updates. I will also announce any changes in class and via email.
+We will meet online Monday through Friday from 9 AM to 12:30 PM. Please review the materials before each class. All course information is available on our GitHub repository at <https://github.com/danilofreire/datasci151-summer>. While I intend to follow the schedule as planned, I also want to adapt to your learning pace and style, so the syllabus may change during the course. Please check [the course repository](https://github.com/danilofreire/datasci151-summer) regularly for updates, which I will also announce in class and on Canvas.
 
 # Software
 
-We will mainly use [Python](https://www.python.org) in this course. Python is a free, versatile, and powerful programming language that is widely used in data science, machine learning, and scientific computing. I recommend using the [Anaconda distribution](https://www.anaconda.com/products/individual) as it comes with many necessary Python libraries for data analysis, such as [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), and [Jupyter](https://jupyter.org/). 
+We will mainly use [Python](https://www.python.org) in this course, which is a free and general-purpose programming language widely used in data science and machine learning. I recommend the [Anaconda distribution](https://www.anaconda.com/products/individual), which already includes many useful libraries like [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), and [Jupyter](https://jupyter.org/).
 
-You can write your Python code in any text editor, but I recommend [VS Code](https://code.visualstudio.com/) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python). [Pycharm](https://www.jetbrains.com/pycharm/) is also well-regarded by developers. If you are feeling adventurous, you can also use [Neovim](https://neovim.io/) with the [coc-pyright](https://github.com/fannheyward/coc-pyright) plugin. That is, if [you can exit the editor](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/). :)
+You can use any text editor, but I recommend [VS Code](https://code.visualstudio.com/) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python). [PyCharm](https://www.jetbrains.com/pycharm/) is another excellent option. Feeling adventurous? Try [Neovim](https://neovim.io/) with the [coc-pyright](https://github.com/fannheyward/coc-pyright) plugin—that is, if [you can exit the editor](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/). :)
 
-We will use [PostgreSQL](https://www.postgresql.org/) for database management. You can download PostgreSQL from the [official website](https://www.postgresql.org/). Please also install [pgAdmin](https://www.pgadmin.org/) and the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=ckolkman.vscode-postgres) for PostgreSQL to interact with the database.
+We will also use [Jupyter Notebooks](https://jupyter.org/) in class. Jupyter comes pre-installed with Anaconda, but please install the [Jupyter extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter&ssr=false) too. We will have a hands-on session to use Jupyter effectively.
 
-We will also use [Jupyter Notebooks](https://jupyter.org/) in class. Jupyter itself comes pre-installed with Anaconda, but please install the [Jupyter extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter&ssr=false) as well. We will have a hands-on session to learn how to use Jupyter effectively.
-
-To help you get started, I have prepared [a series of tutorials](https://github.com/danilofreire/qtm151/tree/main/tutorials) on how to install Anaconda, Jupyter, PostgreSQL, VS Code, and open a free educational account on GitHub. Please follow these tutorials as soon as possible to ensure that you have all the necessary tools for the course.
+I have prepared [a series of tutorials](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials) to help you install Anaconda, Jupyter, VS Code, and set up a free GitHub educational account. Please work through these tutorials as soon as possible to ensure you have all the necessary tools.
 
 # Office Hours
 
-I am very flexible with office hours, but it is easier to contact me via email. Feel free to send me a message any time at [danilo.freire@emory.edu](mailto:danilo.freire@emory.edu), and I will likely reply within a few hours. You can also book an appointment with me on [Calendly](https://calendly.com/danilofreire/office-hours), or just email me your availability. If you prefer, you can meet me in the afternoon at my office. I am in the [Department of Quantitative Theory and Methods](https://qtm.emory.edu) almost every weekday. My office address is in the [Psychology and Interdisciplinary Sciences Building, 36 Eagle Row, 5th Floor, room XXXX](https://maps.app.goo.gl/bGHKwasQyp5MnQND6). If possible, please email me before coming to ensure that no two students book the same time slot.
+I am flexible with office hours, but email works best. Feel free to message me anytime at [danilo.freire@emory.edu](mailto:danilo.freire@emory.edu). I will usually reply within a few hours.
 
 # Academic Integrity
 
-Upon every individual who is a part of Emory University falls the responsibility for maintaining in the life of Emory a standard of unimpeachable honour in all academic work. The [Honour Code of Emory College](http://catalog.college.emory.edu/academic/policies-regulations/honor-code.html) is based on the fundamental assumption that every loyal person of the University not only will conduct his or her own life according to the dictates of the highest honor, but will also refuse to tolerate in others action which would sully the good name of the institution. Academic misconduct is an offense generally defined as any action or inaction which is offensive to the integrity and honesty of the members of the academic community. Any suspected case of academic misconduct will be referred to the Emory Honour Council.
+Every Emory University community member is responsible for upholding a standard of unimpeachable honour in all academic work. The [Honour Code of Emory College](http://catalog.college.emory.edu/academic/policies-regulations/honor-code.html) assumes that every member of the University will not only conduct their own life according to the highest ethical standards but will also refuse to tolerate actions in others that would harm the institution's reputation. Academic misconduct includes any action or inaction that violates the integrity and honesty of the academic community. Any suspected cases will be referred to the Emory Honour Council.
 
 # Artificial Intelligence
 
-Students have to submit ten problem sets and complete five in-class quizzes. You are allowed to use AI to assist with your assignments. I recommend using [GitHub Copilot](https://copilot.github.com/) to generate code snippets, as it is free for students and provides good suggestions and explanations. [Claude](https://claude.ai), [ChatGPT](https://chat.openai.com), and [Perplexity AI](https://perplexity.ai) are also good tools. I am available to provide support and assistance with these tools during office hours or by appointment. However, please note that any errors or omissions resulting from the use of AI tools are your responsibility. Do not rely solely on AI to complete your assignments; you must always double-check your work. Remember to cite all sources used in your problem sets and projects, including AI tools. Please include a note at the end of any document indicating that AI was used in its development.
+You will complete five problem sets and three in-class quizzes. You are welcome to use AI tools for assignments. I recommend [GitHub Copilot](https://copilot.github.com/) for generating code snippets (it is free for students and provides excellent suggestions). [Claude](https://claude.ai), [ChatGPT](https://chat.openai.com), and [Perplexity AI](https://perplexity.ai) are also great options. I am happy to help you use these tools during office hours or by appointment.
+
+However, you are responsible for any errors from AI tools. Do not rely on them exclusively. Always double-check your work and cite all sources, including AI assistance. Please add a note at the end of any document where AI was used.
 
 # Special Needs and Accessibility Services
 
-I am committed to providing necessary accommodations to ensure all students have an equal opportunity to succeed in this course. Students with medical or health conditions that may impact their academic performance should visit the [Department of Accessibility Services (DAS)](http://accessibility.emory.edu/) to determine eligibility for appropriate accommodations. Those who receive accommodations should provide me with an Accommodation Letter from DAS at the beginning of the semester or as soon as the accommodation is granted. Please note that DAS accommodations, such as extra time or quiet spaces, will apply only to quizzes, not assignments. This is because assignments are released in advance, allowing students to work at their own pace. Athletes and students with other commitments should also inform me of any scheduling conflicts at the beginning of the semester. I will do my best to accommodate these students, but I cannot guarantee that all requests will be granted. If you have any questions or concerns, please contact me.
+I am committed to providing accommodations so all students can succeed. If you have medical or health conditions that might affect your performance, please visit the [Department of Accessibility Services (DAS)](http://accessibility.emory.edu/) to learn about available accommodations. Provide me with your DAS Accommodation Letter at the start of the semester or when it is granted.
+
+Note: DAS accommodations like extra time apply only to quizzes, not assignments (since assignments are released in advance, letting you work at your own pace). Athletes and students with other commitments should inform me of scheduling conflicts early in the course. I will do my best to accommodate you, though I cannot guarantee every request. Questions? Just reach out.
 
 # English Language Learners
 
-Emory University welcomes students from around the country and the world, and the unique perspectives international and multilingual students bring enrich the campus community. To empower multilingual learners, an array of support is available including language and culture workshops and individual appointments. For more information about English Language Learning support at Emory, please contact the ELLP Specialists at <https://writingcenter.emory.edu>. No student will be penalised for their command of the English language.
+Emory University welcomes students from across the country and around the world. The unique perspectives that international and multilingual students bring enrich our entire community. To support multilingual learners, we offer language and culture workshops and individual appointments. For more information about English Language Learning support, contact the ELLP Specialists at <https://writingcenter.emory.edu>. Your English proficiency will never be penalized.
 
 # Assignments and Grading Policy
 
-**Problem Sets (50%).** There will be five problem sets throughout the course. These assignments are designed to reinforce concepts covered in lectures and readings, and to provide hands-on practice with statistical programming. Problem sets will include a mix of theoretical questions and practical applications. They will be assigned regularly and must be completed individually. You may discuss your work with other colleagues as long as you do not copy entire sentences, just changing a few words. If you worked with other students, please write down their names on your assignment. Please also acknowledge any sources you used in your work, including textbooks, articles, and AI resources. *Any assignment submitted after the due date/time will automatically be graded for half points*. To accommodate unexpected circumstances, your lowest assignment grade will be automatically dropped at the end of the semester. *The same applies to in-class quizzes*. Please submit all assignments in PDF format via Canvas until midnight on the due date.
+**Problem Sets (50%).** You will complete five problem sets throughout the course. These reinforce lecture concepts and give you hands-on practise with statistical programming. Each set includes theoretical questions and practical applications that you must complete individually. Acknowledge all sources, including textbooks, articles, and AI tools.
 
-**Class Quizzes (30%).** Students will also take three in-class quizzes throughout the semester. These quizzes will be based on the lectures from the previous weeks. They will be designed to test your understanding of the material and your ability to apply the concepts to new problems. Quizzes will be open-book and open-notes. You are **not** allowed to use AI tools. They are individual assessments, and students are not allowed to discuss the questions with their colleagues in class. 
+*Late submissions receive half credit automatically.* Please submit all assignments as HTML files, Jupyter notebooks (`.ipynb`), or PDFs via Canvas by midnight on the due date.
+
+**Class Quizzes (50%).** You will take three in-class quizzes on Fridays, based on that week's lectures. Quizzes test your understanding and ability to apply concepts to new problems. They are open-book and open-notes, but **AI tools are not allowed**. Quizzes are individual assessments—no discussing questions with classmates.
 
 # Grading Scale
 
@@ -136,50 +140,49 @@ Each student's final grade will be based on the following after rounding up to t
 
 # Course Outline and Suggested Readings
 
-The lecture notes cover all the necessary material for the course, and the weekly suggested readings are recommended for those who want to deepen their understanding of the course topics. As mentioned above, the course outline is subject to change, and I will update the syllabus if needed. Please remember to check the course [GitHub repository](https://github.com/danilofreire/qtm151-summer) regularly.
-
-
-- Tuesday, May 13: [Lecture 01: Welcome to QTM 151 - Introduction and Course Overview](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-01/01-introduction.html).
-  Please make sure to install the necessary software for the course by following the [Course Tutorials: How to Install Anaconda, Jupyter, PostgreSQL, VSCode, and Open a Free Educational Account on GitHub](https://danilofreire.github.io/qtm151/tutorials/tutorials.html).
-
-- Wednesday, May 14: Lecture 02: Jupyter Notebooks, Packages, Variables, and Lists. [Lecture Slides](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-02/02-jupyter-variables.html), [Lecture Notebook](https://github.com/danilofreire/qtm151-summer/blob/main/lectures/lecture-02/02-jupyter-variables.ipynb). 
-
-- Thursday, May 15: Lecture 03: Maths Operations, Arrays, and Boolean Logic. [Lecture Slides](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-03/03-maths-boolean.html), [Lecture Notebook](https://github.com/danilofreire/qtm151-summer/blob/main/lectures/lecture-03/03-maths-boolean.ipynb)
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=b9d95c73-826e-411a-99c3-1b5cc87780f2&hostId=05eb977d-4f8a-440e-9e45-95212b29d103). The quiz is optional and will not be graded. We will do it in class! It is a fun way to review the material covered in the lecture.
-
-- Friday, May 16: [Lecture 04: Quiz 01 - Based on Lectures 01-03](https://github.com/danilofreire/qtm151-summer-quiz01/). The repository contains the quiz questions and will be made online on the day of the quiz.
-  - [Assignment 01 due](https://github.com/danilofreire/qtm151-summer/tree/main/assignments/01-assignment).
-
-- Monday, May 19: Lecture 05: Conditional Statements. [Lecture Slides](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-05/05-conditional-statements.html), [Lecture Notebook](https://github.com/danilofreire/qtm151-summer/blob/main/lectures/lecture-05/05-conditional-statements.ipynb).
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=d8d3593a-52c8-4d6c-b938-d880edb69745&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
-
-- Tuesday, May 20: Lecture 06: While and For Loops. [Lecture Slides](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-06/06-loops.html), [Lecture Notebook](https://github.com/danilofreire/qtm151-summer/blob/main/lectures/lecture-06/06-loops.ipynb).
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=de289cbf-f886-4d4a-bd4c-91f1b2cc01c2&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
-
-- Wednesday, May 21: Lecture 07: Functions. [Lecture Slides](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-07/07-functions.html), [Lecture Notebook](https://github.com/danilofreire/qtm151-summer/blob/main/lectures/lecture-07/07-functions.ipynb).
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=0219d3ce-d690-4c88-9396-3ce6330bbfdb&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
-  - [Assignment 02 due](https://github.com/danilofreire/qtm151-summer/tree/main/assignments/02-assignment).
-
-- Thursday, May 22: Lecture 08: Data Wrangling with Pandas. [Lecture Slides](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-08/08-data-wrangling.html), [Lecture Notebook](https://github.com/danilofreire/qtm151-summer/blob/main/lectures/lecture-08/08-data-wrangling.ipynb).
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=1b854633-5911-431d-8ae3-fb3535c40266&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
-
-- Friday, May 23: [Lecture 09: Quiz 02 - Based on Lectures 05-08](https://github.com/danilofreire/qtm151-summer-quiz02/). As with Quiz 01, the repository will be available on the day of the quiz.
-  - [Assignment 03 due](https://github.com/danilofreire/qtm151-summer/tree/main/assignments/03-assignment).
-
-- Monday, May 26: Lecture 10: Subsetting and Filtering Data. [Lecture Slides](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-10/10-subsetting-data.html), [Lecture Notebook](https://github.com/danilofreire/qtm151-summer/blob/main/lectures/lecture-10/10-subsetting-data.ipynb).
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=0479c8ec-6e88-43b7-9d65-fa41b23d60c1&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
-
-- Tuesday, May 27: Lecture 11: Introduction to SQL. [Lecture Slides](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-11/11-introduction-sql.html), [Lecture Notebook](https://github.com/danilofreire/qtm151-summer/blob/main/lectures/lecture-11/11-introduction-sql.ipynb).
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=29a7984b-c6ed-4e87-91bd-cd5e4bf38094&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
-
-- Wednesday, May 28: Lecture 12: SQL in Python. [Lecture Slides](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-12/12-sql-python.html), [Lecture Notebook](https://github.com/danilofreire/qtm151-summer/blob/main/lectures/lecture-12/12-sql-python.ipynb).
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=8e782b35-ddb5-41a5-91e9-233fd7b01fbf&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
-  - [Assignment 04 due](https://github.com/danilofreire/qtm151-summer/tree/main/assignments/04-assignment).
-
-- Thursday, May 29: Lecture 13: Merge Tables in SQL. [Lecture Slides](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-13/13-sql-tables.html), [Lecture Notebook](https://github.com/danilofreire/qtm151-summer/blob/main/lectures/lecture-13/13-sql-tables.ipynb).
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=762c7a39-ee91-4977-a119-d3f34bc5a4f2&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
-
-- Friday, May 30: [Lecture 14: Quiz 03 - Based on Lectures 10-13](https://github.com/danilofreire/qtm151-summer-quiz03/). 
-  - [Assignment 05 due](https://github.com/danilofreire/qtm151-summer/tree/main/assignments/05-assignment).
+The lecture notes cover all essential material we will cover. As mentioned, the course outline may change, so please check our [GitHub repository](https://github.com/danilofreire/datasci151-summer-summer) regularly for updates.
 
 Each lecture folder contains an HTML file or a Jupyter notebook (`.ipynb`) with code examples and explanations, along with any additional resources or datasets used in the lecture.
+
+- Tuesday, May 12: [Lecture 01: Welcome to DATASCI 151 - Introduction and Course Overview](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-01/01-introduction.html).
+  Please make sure to install the necessary software for the course by following the [Course Tutorials: How to Install Anaconda, Jupyter, PostgreSQL, VSCode, and Open a Free Educational Account on GitHub](https://danilofreire.github.io/datasci151-summer/tutorials/tutorials.html).
+
+- Wednesday, May 13: Lecture 02: Jupyter Notebooks, Packages, Variables, and Lists. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-02/02-jupyter-variables.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-02/02-jupyter-variables.ipynb). 
+
+- Thursday, May 14: Lecture 03: Maths Operations, Arrays, and Boolean Logic. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-03/03-maths-boolean.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-03/03-maths-boolean.ipynb)
+  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=b9d95c73-826e-411a-99c3-1b5cc87780f2&hostId=05eb977d-4f8a-440e-9e45-95212b29d103). Kahoot quizzes are optional and will not be graded. We will do it in class! It is a fun way to review the material covered in the lecture.
+
+- Friday, May 15: [Lecture 04: Quiz 01 - Based on Lectures 01-03](https://github.com/danilofreire/datasci151-summer-summer-quiz01/). The repository contains the quiz questions and will be made online on the day of the quiz.
+  - [Assignment 01 due](https://github.com/danilofreire/datasci151-summer-summer/tree/main/assignments/01-assignment).
+
+- Monday, May 18: Lecture 05: Conditional Statements. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-05/05-conditional-statements.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-05/05-conditional-statements.ipynb).
+  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=d8d3593a-52c8-4d6c-b938-d880edb69745&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
+
+- Tuesday, May 19: Lecture 06: While and For Loops. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-06/06-loops.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-06/06-loops.ipynb).
+  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=de289cbf-f886-4d4a-bd4c-91f1b2cc01c2&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
+
+- Wednesday, May 20: Lecture 07: Functions. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-07/07-functions.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-07/07-functions.ipynb).
+  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=0219d3ce-d690-4c88-9396-3ce6330bbfdb&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
+  - [Assignment 02 due](https://github.com/danilofreire/datasci151-summer-summer/tree/main/assignments/02-assignment).
+
+- Thursday, May 21: Lecture 08: Data Wrangling with Pandas. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-08/08-data-wrangling.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-08/08-data-wrangling.ipynb).
+  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=1b854633-5911-431d-8ae3-fb3535c40266&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
+
+- Friday, May 22: [Lecture 09: Quiz 02 - Based on Lectures 05-08](https://github.com/danilofreire/datasci151-summer-summer-quiz02/). As with Quiz 01, the repository will be available on the day of the quiz.
+  - [Assignment 03 due](https://github.com/danilofreire/datasci151-summer-summer/tree/main/assignments/03-assignment).
+
+- Monday, May 25: Lecture 10: Subsetting and Filtering Data. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-10/10-subsetting-data.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-10/10-subsetting-data.ipynb).
+  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=0479c8ec-6e88-43b7-9d65-fa41b23d60c1&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
+
+- Tuesday, May 26: Lecture 11: Introduction to SQL. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-11/11-introduction-sql.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-11/11-introduction-sql.ipynb).
+  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=29a7984b-c6ed-4e87-91bd-cd5e4bf38094&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
+
+- Wednesday, May 27: Lecture 12: SQL in Python. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-12/12-sql-python.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-12/12-sql-python.ipynb).
+  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=8e782b35-ddb5-41a5-91e9-233fd7b01fbf&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
+  - [Assignment 04 due](https://github.com/danilofreire/datasci151-summer-summer/tree/main/assignments/04-assignment).
+
+- Thursday, May 28: Lecture 13: Merge Tables in SQL. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-13/13-sql-tables.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-13/13-sql-tables.ipynb).
+  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=762c7a39-ee91-4977-a119-d3f34bc5a4f2&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
+
+- Friday, May 29: [Lecture 14: Quiz 03 - Based on Lectures 10-13](https://github.com/danilofreire/datasci151-summer-summer-quiz03/). 
+  - [Assignment 05 due](https://github.com/danilofreire/datasci151-summer-summer/tree/main/assignments/05-assignment).

@@ -1,5 +1,5 @@
 ---
-title: QTM 151 - Introduction to Statistical Computing II
+title: DATASCI 151 - Introduction to Statistical Computing II
 subtitle: Lecture 11 - Introduction to SQL
 author:
   - name: Danilo Freire
@@ -9,7 +9,7 @@ format:
   clean-revealjs:
     self-contained: true
     code-overflow: wrap
-    footer: "[Introduction to SQL](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-11/11-introduction-sql.html)"
+    footer: "[Introduction to SQL](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-11/11-introduction-sql.html)"
 transition: slide
 transition-speed: default
 scrollable: true

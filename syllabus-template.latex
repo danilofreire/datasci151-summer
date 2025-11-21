@@ -241,7 +241,7 @@ $endif$
 % Explicit date formatting
 \usepackage{datetime}
 \newdateformat{summerdate}{\monthname[\THEMONTH] \THEYEAR}
-\date{Summer 2025}
+\date{Summer 2026}
 
 % Tightlist
 \providecommand{\tightlist}{%

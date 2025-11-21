@@ -1,5 +1,5 @@
 ---
-title: QTM 151 - Introduction to Statistical Computing II
+title: DATASCI 151 - Introduction to Statistical Computing II
 subtitle: Jupyter Notebooks, Packages, Variables, and Lists
 author:
   - name: Danilo Freire
@@ -9,7 +9,7 @@ author:
 format:
   clean-revealjs:
     self-contained: true
-    footer: "[Packages, Variables, and Lists](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-02/02-jupyter-variables.html)"
+    footer: "[Packages, Variables, and Lists](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-02/02-jupyter-variables.html)"
     slide-number: true
 transition: slide
 transition-speed: default

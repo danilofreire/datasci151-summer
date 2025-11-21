@@ -1,5 +1,5 @@
 ---
-title: QTM 151 - Introduction to Statistical Computing II
+title: DATASCI 151 - Introduction to Statistical Computing II
 subtitle: "Lecture 08 - Data Wrangling with Pandas"
 author:
   - name: Danilo Freire
@@ -8,7 +8,7 @@ author:
 format:
   clean-revealjs:
     self-contained: true
-    footer: "[Data Wrangling with Pandas](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-08/08-data-wrangling.html)"
+    footer: "[Data Wrangling with Pandas](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-08/08-data-wrangling.html)"
 transition: slide
 transition-speed: default
 scrollable: true
@@ -413,7 +413,7 @@ import numpy as np
 circuits = pd.read_csv("data_raw/circuits.csv")
 
 # Or download it from the internet
-# circuits = pd.read_csv("https://raw.githubusercontent.com/danilofreire/qtm151-summer/main/lectures/lecture-08/data_raw/circuits.csv")
+# circuits = pd.read_csv("https://raw.githubusercontent.com/danilofreire/datasci151-summer/main/lectures/lecture-08/data_raw/circuits.csv")
 display(circuits.head(2))
 ```
 :::
@@ -423,7 +423,7 @@ display(circuits.head(2))
 :::{style="margin-top: 30px; font-size: 25px;"}
 - The dataset contains information about F1 circuits, such as its name, location, latitude, longitude, and more
 - You can find more information about the dataset [here](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020/data)
-- The dataset is available in the course's GitHub repository [here](https://github.com/danilofreire/qtm151-summer/blob/main/lectures/lecture-08/data_raw/circuits.csv)
+- The dataset is available in the course's GitHub repository [here](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-08/data_raw/circuits.csv)
   - Or you can download it using the command above
 - Let's see how the codebook looks like
 - More information about [Formula 1 here](https://en.wikipedia.org/wiki/Formula_One)

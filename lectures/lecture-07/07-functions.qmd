@@ -1,5 +1,5 @@
 ---
-title: QTM 151 - Introduction to Statistical Computing II
+title: DATASCI 151 - Introduction to Statistical Computing II
 subtitle: "Lecture 07 - Custom Functions and Variable Scope"
 author:
   - name: Danilo Freire
@@ -8,7 +8,7 @@ author:
 format:
   clean-revealjs:
     self-contained: true
-    footer: "[Functions](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-07/07-functions.html)"
+    footer: "[Functions](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-07/07-functions.html)"
 transition: slide
 transition-speed: default
 scrollable: true

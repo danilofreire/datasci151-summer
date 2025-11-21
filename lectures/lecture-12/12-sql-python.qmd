@@ -1,5 +1,5 @@
 ---
-title: QTM 151 - Introduction to Statistical Computing II
+title: DATASCI 151 - Introduction to Statistical Computing II
 subtitle: Lecture 12 - SQLite in Python
 author:
   - name: Danilo Freire
@@ -9,7 +9,7 @@ format:
   clean-revealjs:
     self-contained: true
     code-overflow: wrap
-    footer: "[SQLite in Python](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-12/12-sql-python.html)"
+    footer: "[SQLite in Python](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-12/12-sql-python.html)"
 transition: slide
 transition-speed: default
 scrollable: true

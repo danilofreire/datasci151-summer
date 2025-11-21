@@ -1,5 +1,5 @@
 ---
-title: QTM 151 - Introduction to Statistical Computing II
+title: DATASCI 151 - Introduction to Statistical Computing II
 subtitle: Lecture 06 - While and For Loops
 author:
   - name: Danilo Freire
@@ -8,7 +8,7 @@ author:
 format:
   clean-revealjs:
     self-contained: true
-    footer: "[While and For Loops](https://raw.githack.com/danilofreire/qtm151-summer/main/lectures/lecture-06/06-loops.html)"
+    footer: "[While and For Loops](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-06/06-loops.html)"
 transition: slide
 transition-speed: default
 scrollable: true
@@ -208,7 +208,7 @@ Strings are sequences of characters, so you can iterate over them directly:
 ```{python}
 #| echo: true
 #| eval: true
-course_name = "QTM 151"
+course_name = "DATASCI 151"
 for char in course_name:
     print(char)
 ```

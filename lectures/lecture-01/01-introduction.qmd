@@ -1,5 +1,5 @@
 ---
-title: QTM 151 - Introduction to Statistical Computing II
+title: DATASCI 151 - Introduction to Statistical Computing II
 subtitle: Lecture 01 - Introduction and Course Overview
 author:
   - name: Danilo Freire
@@ -8,7 +8,7 @@ author:
 format:
   clean-revealjs:
     self-contained: true
-    footer: "[Introduction](https://danilofreire.github.io/qtm151-summer/lectures/lecture-01/01-introduction.html)"
+    footer: "[Introduction](https://danilofreire.github.io/datasci151-summer/lectures/lecture-01/01-introduction.html)"
 transition: slide
 transition-speed: default
 scrollable: true
@@ -35,7 +35,7 @@ packages <- c("emo", "fontawesome")
 lapply(packages, install_if_missing)
 ```
 
-# Welcome to QTM 151 - Introduction to Statistical Computing II! 🥳🎉 {background-color="#2d4563"}
+# Welcome to DATASCI 151 - Introduction to Statistical Computing II! 🥳🎉 {background-color="#2d4563"}
 
 ## Lecture Overview
 
@@ -61,9 +61,9 @@ lapply(packages, install_if_missing)
 ### Important Links
 
 ::: {style="font-size: 28px;"}
-`r fa('github')` Course repository: <https://github.com/danilofreire/qtm151-summer>
+`r fa('github')` Course repository: <https://github.com/danilofreire/datasci151-summer>
 
-`r fa('globe')` Course website: <https://danilofreire.github.io/qtm151-summer>
+`r fa('globe')` Course website: <https://danilofreire.github.io/datasci151-summer>
 
 - This course is hosted on [GitHub](https://github.com), where you will find lecture materials, code samples, our discussion space, tutorials, and assignments. 
 - Canvas will be used for course management, including assignment submissions, grades, and announcements. Please familiarise yourself with both platforms, and reach out if you have any questions.
@@ -273,7 +273,7 @@ print("Welcome to QTM151!")
 
 <br>
 
-- Follow the instructions [on our GitHub website](https://danilofreire.github.io/qtm151-summer/tutorials/01-vscode-anaconda-tutorial.html) 
+- Follow the instructions [on our GitHub website](https://danilofreire.github.io/datasci151-summer/tutorials/01-vscode-anaconda-tutorial.html) 
 - We are using Anaconda virtual environments for this class (I will cover this in more detail soon)​
 - For now: Anaconda comes with a full Python installation​ with everything you need to follow along with the course 
 
@@ -284,7 +284,7 @@ print("Welcome to QTM151!")
 ## Installing VSCode and Connecting Anaconda​
 
 :::{style="font-size: 27px; margin-top: 50px;"}
-- Follow the instructions [Installing Visual Studio Code and Connecting it with Anaconda](https://github.com/danilofreire/qtm151/blob/main/tutorials/01-vscode-anaconda-tutorial.pdf) from GitHub
+- Follow the instructions [Installing Visual Studio Code and Connecting it with Anaconda](https://github.com/danilofreire/datasci151-summer/blob/main/tutorials/01-vscode-anaconda-tutorial.pdf) from GitHub
 - Install the [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) and [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) extensions for VSCode
 - For now: know that "base" is the Anaconda virtual environment that comes by default with the installation​
 - The next step is to check if the connection between VSCode and Anaconda worked 
@@ -357,14 +357,14 @@ conda install jupyter
 :::{.column width=40%}
 - We will use Jupyter Notebooks a lot for our classes!
 - Quizzes and assignments will be in this format
-- Our website has [a tutorial on how to use them too](https://danilofreire.github.io/qtm151-summer/tutorials/02-jupyter-markdown-tutorial.html)
+- Our website has [a tutorial on how to use them too](https://danilofreire.github.io/datasci151-summer/tutorials/02-jupyter-markdown-tutorial.html)
 - There are both Jupyter Notebooks and lecture notes for each class in the course repository
 - So you can choose which one you prefer to use, or use both!
 - Lecture notes are designed to be followed along, and there will be many "try it yourself" exercises throughout the lectures!
 :::
 
 :::{.column width=60%}
-- In case you have any trouble with the installation, you can also use an online version of Jupyter Notebooks included in our website: <https://danilofreire.github.io/qtm151-summer/>
+- In case you have any trouble with the installation, you can also use an online version of Jupyter Notebooks included in our website: <https://danilofreire.github.io/datasci151-summer/>
 - Just click on ["Jupyter Lite"]{.alert} and it will open a Jupyter Notebook in your browser
 
 :::{style="margin-top: -30px; text-align: center;"}
@@ -380,7 +380,7 @@ conda install jupyter
 - Let me know if you have any questions about the course or the material or how to set up your computer
 - We will start with the basics of Jupyter Notebooks
 - We will also cover the basics of Anaconda and VSCode
-- Please remember to check the course repository and the website at <https://github.com/danilofreire/qtm151-summer>  and <https://danilofreire.github.io/qtm151-summer>
+- Please remember to check the course repository and the website at <https://github.com/danilofreire/datasci151-summer> and <https://danilofreire.github.io/datasci151-summer>
 - And please do not forget:
   - Coding ability can be developed
   - Academic skills and abilities are acquired through hard work, mistakes, and perseverance. Coding is no different
