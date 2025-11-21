@@ -1,10 +1,10 @@
 ---
-title: "QTM 151 - Introduction to Statistical Computing II"
+title: "DATASCI 151 - Introduction to Statistical Computing II"
 ---
 
 ## Course Overview
 
-Welcome to [QTM 151](https://github.com/danilofreire/qtm151-summer)! This course introduces students to data analysis and statistical computing using Python and SQL. Please have a look at [the course syllabus](https://danilofreire.github.io/qtm151-summer/syllabus.html) and the [lecture schedule](https://danilofreire.github.io/qtm151-summer/lectures.html) for more information. A brief overview of the course content is provided below.
+Welcome to [DATASCI 151](https://github.com/danilofreire/datasci151-summer)! This course introduces students to data analysis and statistical computing using Python and SQL. Please have a look at [the course syllabus](https://danilofreire.github.io/datasci151-summer/syllabus.html) and the [lecture schedule](https://danilofreire.github.io/datasci151-summer/lectures.html) for more information. A brief overview of the course content is provided below.
 
 ## Contact Information
 
@@ -14,14 +14,14 @@ Welcome to [QTM 151](https://github.com/danilofreire/qtm151-summer)! This course
 
 ## Repository Structure
 
-While this website provides an overview of the course materials, the primary source of content is the course's GitHub repository at <https://github.com/danilofreire/qtm151-summer>. The repository is organised as follows:
+While this website provides an overview of the course materials, the primary source of content is the course's GitHub repository at <https://github.com/danilofreire/datasci151-summer>. The repository is organised as follows:
 
-- [`assignments/`](https://github.com/danilofreire/qtm151-summer/tree/main/assignments): Contains all course assignments
-- [`lectures/`](https://github.com/danilofreire/qtm151-summer/tree/main/lectures): Includes lecture materials and code
-- [`tutorials/`](https://github.com/danilofreire/qtm151-summer/tree/main/tutorials): Step-by-step guides for the tools used in the course
-- [`syllabus.pdf`](https://github.com/danilofreire/qtm151-summer/blob/main/syllabus.pdf): Course syllabus in PDF format
+- [`assignments/`](https://github.com/danilofreire/datasci151-summer/tree/main/assignments): Contains all course assignments
+- [`lectures/`](https://github.com/danilofreire/datasci151-summer/tree/main/lectures): Includes lecture materials and code
+- [`tutorials/`](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials): Step-by-step guides for the tools used in the course
+- [`syllabus.pdf`](https://github.com/danilofreire/datasci151-summer/blob/main/syllabus.pdf): Course syllabus in PDF format
 
-Please also refer to the Discussion tab on the repository for any questions or comments: <https://github.com/danilofreire/qtm151-summer/discussions>. 
+Please also refer to the Discussion tab on the repository for any questions or comments: <https://github.com/danilofreire/datasci151-summer/discussions>. 
 
 **Note**: The links will take you to the respective folders or files in the repository, not on this website. You can find links for the rendered content in the navigation bar above.
 
@@ -29,21 +29,21 @@ Please also refer to the Discussion tab on the repository for any questions or c
 
 ### Lectures
 
-We will meet every weekday from May 13th to May 30th, 2025 from 11:30 AM to 12:50 PM. Our meetings will be online via Zoom. Please check our Canvas page for the link.  Please check the [course schedule](https://danilofreire.github.io/qtm151-summer/lectures/lectures.html) for the full list of topics and dates. Lecture materials are available in the [lectures folder](https://github.com/danilofreire/qtm151-summer/tree/main/lectures) in the repository.
+We will meet every weekday from May 11th to May 29th, 2025 from 9:00 AM to 12:30 PM. Our meetings will be online via Zoom. Please check our Canvas page for the link.  Please check the [course schedule](https://danilofreire.github.io/datasci151-summer/lectures/lectures.html) for the full list of topics and dates. Lecture materials are available in the [lectures folder](https://github.com/danilofreire/datasci151-summer/tree/main/lectures) in the repository.
 
 Each folder contains an HTML presentation or a Jupyter notebook (`.ipynb`) with code examples and explanations, along with any additional resources or datasets used in the lecture.
 
 ### Assignments and Quizzes
 
-Throughout the course, students will complete various assignments and quizzes to reinforce their learning. The assignments will be posted in the [`assignments/`](https://github.com/danilofreire/qtm151-summer/tree/main/assignments) folder as the course progresses. The quizzes will be available as separate GitHub repositories. We will also announce these in class and on Canvas. Please refer to the syllabus or the lecture schedule for due dates and
+Throughout the course, students will complete various assignments and quizzes to reinforce their learning. The assignments will be posted in the [`assignments/`](https://github.com/danilofreire/datasci151-summer/tree/main/assignments) folder as the course progresses. The quizzes will be available as separate GitHub repositories. We will also announce these in class and on Canvas. Please refer to the syllabus or the lecture schedule for due dates and
 submission guidelines.
 
 ### Tutorials
 
-The [`tutorials/`](https://github.com/danilofreire/qtm151-summer/tree/main/tutorials) tab contains step-by-step guides for various tools and techniques used in the course. Please have a look at
+The [`tutorials/`](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials) tab contains step-by-step guides for various tools and techniques used in the course. Please have a look at
 these resources to help you get started. 
 
-PDF versions of the tutorials are also [available in the repository](https://github.com/danilofreire/qtm151-summer/tree/main/tutorials).
+PDF versions of the tutorials are also [available in the repository](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials).
 
 ## Course Requirements
 
@@ -58,22 +58,22 @@ PDF versions of the tutorials are also [available in the repository](https://git
 
 ## Course Policies and Expectations
 
-For detailed information on course policies, grading criteria, attendance requirements, and academic integrity guidelines, please refer to the [syllabus](https://github.com/danilofreire/qtm151-summer/blob/main/syllabus.pdf) in the repository or [on the course website](https://danilofreire.github.io/qtm151-summer/syllabus.html).
+For detailed information on course policies, grading criteria, attendance requirements, and academic integrity guidelines, please refer to the [syllabus](https://github.com/danilofreire/datasci151-summer/blob/main/syllabus.pdf) in the repository or [on the course website](https://danilofreire.github.io/datasci151-summer/syllabus.html).
 
 ## Getting Help
 
 If you encounter any issues with the course materials or have questions about the content, please:
 
-1. Check the [course syllabus](https://github.com/danilofreire/qtm151-summer/blob/main/syllabus.pdf) for relevant information
-2. Review the [lecture materials](https://github.com/danilofreire/qtm151-summer/tree/main/lectures) and
-   [tutorials](https://github.com/danilofreire/qtm151-summer/tree/main/tutorials) either in the repository or on the
+1. Check the [course syllabus](https://github.com/danilofreire/datasci151-summer/blob/main/syllabus.pdf) for relevant information
+2. Review the [lecture materials](https://github.com/danilofreire/datasci151-summer/tree/main/lectures) and
+   [tutorials](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials) either in the repository or on the
    course website
-3. Consult with your classmates or post in the [course discussion forum](https://github.com/danilofreire/qtm151-summer/discussions)
+3. Consult with your classmates or post in the [course discussion forum](https://github.com/danilofreire/datasci151-summer/discussions)
 4. Attend office hours or schedule an appointment with the instructor
 
 ## Contributing to the Repository
 
-While this repository is primarily maintained by the course instructor, everyone is welcome to contribute. Please feel free to suggest improvements or report issues by [opening a GitHub issue](https://github.com/danilofreire/qtm151-summer/issues), [submitting a pull request](https://github.com/danilofreire/qtm151-summer/pulls), [creating a discussion post](https://github.com/danilofreire/qtm151-summer/discussions), or [contacting the instructor directly](mailto:danilo.freire@emory.edu).
+While this repository is primarily maintained by the course instructor, everyone is welcome to contribute. Please feel free to suggest improvements or report issues by [opening a GitHub issue](https://github.com/danilofreire/datasci151-summer/issues), [submitting a pull request](https://github.com/danilofreire/datasci151-summer/pulls), [creating a discussion post](https://github.com/danilofreire/datasci151-summer/discussions), or [contacting the instructor directly](mailto:danilo.freire@emory.edu).
 
 ## Acknowledgements
 

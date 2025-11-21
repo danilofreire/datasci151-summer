@@ -3,17 +3,17 @@ project:
   output-dir: docs
 
 website:
-  title: "QTM 151"
+  title: "DATASCI 151"
   page-navigation: true
   back-to-top-navigation: true
   reader-mode: true
-  repo-url: https://github.com/danilofreire/qtm151-summer
+  repo-url: https://github.com/danilofreire/datasci151-summer
   repo-actions: [issue, source]
   navbar:
     pinned: true
     tools:
       - icon: github
-        href: https://github.com/danilofreire/qtm151-summer
+        href: https://github.com/danilofreire/datasci151-summer
     left:
       - href: syllabus.qmd
         text: Syllabus
@@ -23,14 +23,14 @@ website:
         text: Tutorials
       - href: assignments.qmd
         text: Assignments
-      - href: https://danilofreire.github.io/qtm151-summer/jupyter
+      - href: https://danilofreire.github.io/datasci151-summer/jupyter
         text: Jupyter Lite
       - href: LICENSE.html
   page-footer: 
-    left: "Copyright 2025, Danilo Freire. The content of this site is licensed under the [MIT License](LICENSE.qmd)." 
+    left: "Copyright 2026, Danilo Freire. The content of this site is licensed under the [MIT License](LICENSE.qmd)." 
     right: 
       - icon: github
-        href: https://github.com/danilofreire/qtm151-summer
+        href: https://github.com/danilofreire/datasci151-summer
 
 format:
   html:
