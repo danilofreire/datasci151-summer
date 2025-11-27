@@ -18,14 +18,14 @@
     "href": "tutorials.html#available-tutorials",
     "title": "Tutorials",
     "section": "Available Tutorials",
-    "text": "Available Tutorials\n\n01 - VSCode and Anaconda Tutorial\n02 - Jupyter Notebook and Markdown Tutorial\n03 - GitHub Tutorial\n04 - PostgreSQL Tutorial\n\nPDF versions of the tutorials are also available on GitHub: https://github.com/danilofreire/qtm151-summer/tree/gh-pages."
+    "text": "Available Tutorials\n\n01 - VSCode and Anaconda Tutorial\n02 - Jupyter Notebook and Markdown Tutorial\n03 - GitHub Tutorial\n\nPDF versions of the tutorials are also available on GitHub: https://github.com/danilofreire/datasci151-summer/tree/gh-pages."
   },
   {
     "objectID": "tutorials.html#additional-resources",
     "href": "tutorials.html#additional-resources",
     "title": "Tutorials",
     "section": "Additional Resources",
-    "text": "Additional Resources\n\nFurther examples\n\ntesting-ipython.ipynb: A Jupyter Notebook for showing Markdown and code cells\ntesting-anaconda.py: A Python script for testing Anaconda installation\n\n\n\nSuggested Books\n\nPython for Data Analysis by Wes McKinney\nElements of Data Science by Allen Downey\nAutomate the Boring Stuff with Python by Al Sweigart\nPython for Everybody by Charles Severance\nSQL for Data Scientists by Renee M. P. Teate\n\n\n\nOnline Courses\n\nCoursera: Python for Everybody Specialisation\nedX: Python Basics for Data Science\nCodecademy: Learn Python\nDataCamp: Introduction to SQL\nCoursera: SQL for Data Science\n\n\n\nDocumentation\n\nPython Documentation\nPandas Documentation\nPostgreSQL Documentation\nSQLBolt\nGithub Guides\n\nFor any questions or issues regarding these tutorials, please open a GitHub issue, submit a pull request, or create a discussion post.\nI hope you like the tutorials and find them useful!"
+    "text": "Additional Resources\n\nFurther examples\n\ntesting-ipython.ipynb: A Jupyter Notebook for showing Markdown and code cells\ntesting-anaconda.py: A Python script for testing Anaconda installation\n\n\n\nSuggested Books\n\nPython for Data Analysis by Wes McKinney\nElements of Data Science by Allen Downey\nAutomate the Boring Stuff with Python by Al Sweigart\nPython for Everybody by Charles Severance\nSQL for Data Scientists by Renee M. P. Teate\n\n\n\nOnline Courses\n\nCoursera: Python for Everybody Specialisation\nedX: Python Basics for Data Science\nCodecademy: Learn Python\nDataCamp: Introduction to SQL\nCoursera: SQL for Data Science\n\n\n\nDocumentation\n\nPython Documentation\nPandas Documentation\nSQLite Documentation\nSQLBolt\nGithub Guides\n\nFor any questions or issues regarding these tutorials, please open a GitHub issue, submit a pull request, or create a discussion post.\nI hope you like the tutorials and find them useful!"
   },
   {
     "objectID": "lectures.html",

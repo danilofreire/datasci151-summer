@@ -10,9 +10,8 @@ install and use the tools we will be using in class.
 - [01 - VSCode and Anaconda Tutorial](01-vscode-anaconda-tutorial.qmd)
 - [02 - Jupyter Notebook and Markdown Tutorial](02-jupyter-markdown-tutorial.qmd)
 - [03 - GitHub Tutorial](03-github-tutorial.qmd)
-- [04 - PostgreSQL Tutorial](04-postgresql-tutorial.qmd)
 
-PDF versions of the tutorials are also available on GitHub: <https://github.com/danilofreire/qtm151-summer/tree/gh-pages>.
+PDF versions of the tutorials are also available on GitHub: <https://github.com/danilofreire/datasci151-summer/tree/gh-pages>.
 
 ## Additional Resources
 
@@ -41,11 +40,11 @@ PDF versions of the tutorials are also available on GitHub: <https://github.com/
 
 - [Python Documentation](https://docs.python.org/3/)
 - [Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
-- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
+- [SQLite Documentation](https://www.sqlite.org/docs.html)
 - [SQLBolt](https://sqlbolt.com/)
 - [Github Guides](https://guides.github.com/)
 
 
-For any questions or issues regarding these tutorials, please [open a GitHub issue](https://github.com/danilofreire/qtm151-summer/issues), [submit a pull request](https://github.com/danilofreire/qtm151-summer/pulls), or [create a discussion post](https://github.com/danilofreire/qtm151-summer/discussions). 
+For any questions or issues regarding these tutorials, please [open a GitHub issue](https://github.com/danilofreire/datasci151-summer/issues), [submit a pull request](https://github.com/danilofreire/datasci151-summer/pulls), or [create a discussion post](https://github.com/danilofreire/datasci151-summer/discussions). 
 
 I hope you like the tutorials and find them useful! 
