@@ -9,8 +9,9 @@ Welcome to [DATASCI 151](https://github.com/danilofreire/datasci151-summer)! Thi
 ## Contact Information
 
 - **Name**: Danilo Freire
-- **Contact**: <danilo.freire@emory.edu>
-- **Office Hours**: By appointment at your convenience, please email me to schedule a meeting
+- **Email**: <danilo.freire@emory.edu>
+- **Office Hours**: By appointment, please email me to schedule a meeting
+- **Canvas**: course announcements, Teams meeting links, and grades
 
 ## Repository Structure
 
@@ -20,8 +21,6 @@ While this website provides an overview of the course materials, the primary sou
 - [`lectures/`](https://github.com/danilofreire/datasci151-summer/tree/main/lectures): Includes lecture materials and code
 - [`tutorials/`](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials): Step-by-step guides for the tools used in the course
 - [`syllabus.pdf`](https://github.com/danilofreire/datasci151-summer/blob/main/syllabus.pdf): Course syllabus in PDF format
-
-Please also refer to the Discussion tab on the repository for any questions or comments: <https://github.com/danilofreire/datasci151-summer/discussions>. 
 
 **Note**: The links will take you to the respective folders or files in the repository, not on this website. You can find links for the rendered content in the navigation bar above.
 
@@ -39,9 +38,13 @@ Throughout the course, students will complete five assignments and three quizzes
 
 ### Tutorials
 
-The [`tutorials/`](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials) tab contains step-by-step guides for various tools and techniques used in the course. Please have a look at these resources to help you get started. 
+The [`tutorials/`](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials) tab contains step-by-step guides for various tools and techniques used in the course. Please have a look at these resources to help you get started.
 
 PDF versions of the tutorials are also [available in the repository](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials).
+
+### JupyterLite
+
+You can run Python directly in your browser at <https://danilofreire.github.io/datasci151-summer/jupyter>, no installation required. The runtime is [Pyodide](https://pyodide.org), a WebAssembly Python that comes with pandas, numpy, matplotlib, and the other libraries we use throughout the course. Useful for quick experiments without the local Anaconda setup.
 
 ## Course Requirements
 
@@ -83,4 +86,4 @@ This repository is licensed under the [MIT License](LICENSE.qmd). You are free t
 
 -----
 
-We look forward to an engaging and productive month! Good luck, and happy coding! :smiley:
+We look forward to an engaging and productive month! Good luck, and happy coding! 😀

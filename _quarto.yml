@@ -8,7 +8,6 @@ website:
   title: "DATASCI 151"
   page-navigation: true
   back-to-top-navigation: true
-  reader-mode: true
   repo-url: https://github.com/danilofreire/datasci151-summer
   repo-actions: [issue, source]
   navbar:
