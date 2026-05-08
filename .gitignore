@@ -333,7 +333,7 @@ TSWLatexianTemp*
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 
 # Thumbnails
 ._*
@@ -967,7 +967,7 @@ TSWLatexianTemp*
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 
 # Thumbnails
 ._*
@@ -1269,6 +1269,9 @@ _site/
 _quarto/
 /.quarto/
 /_site/
+
+# JupyterLite scaffold leftovers when switching from gh-pages
+jupyter/
 
 # End of https://www.toptal.com/developers/gitignore/api/latex,linux,macos,python,r,vim,windows
 
