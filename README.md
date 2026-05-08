@@ -1,31 +1,91 @@
-# DATASCI 151 Tutorials
+# DATASCI 151: Course Website Source
 
-This folder contains several tutorials for the DATASCI 151 course. Below you will find a list of available tutorials with links to both PDF and QMD versions where applicable.
+This is the source for the [DATASCI 151 course
+website](https://danilofreire.github.io/datasci151-summer/),
+the Summer 2026 instance of *Introduction to Statistical
+Computing II* at Emory University.
 
-## Available Tutorials
+If you came here looking for the website itself, click the link
+above. This branch (`gh-pages`) holds the Quarto sources, tutorial
+PDFs, and the JupyterLite scaffolding. Lecture slides and notebooks
+live on the [`main`](https://github.com/danilofreire/datasci151-summer/tree/main)
+branch.
 
-- [01 - VSCode and Anaconda Tutorial](01-vscode-anaconda-tutorial.pdf) ([QMD version](01-vscode-anaconda-tutorial.qmd))
-- [02 - Jupyter Notebook and Markdown Tutorial](02-jupyter-markdown-tutorial.pdf) ([QMD version](02-jupyter-markdown-tutorial.qmd))
-- [03 - GitHub Tutorial](03-github-tutorial.pdf) ([QMD version](03-github-tutorial.qmd))
-- [04 - PostgreSQL Tutorial](04-postgresql-tutorial.pdf) ([QMD version](04-postgresql-tutorial.qmd))
+## What's on the site
 
-## File Formats
+- **[Syllabus](syllabus.qmd)**: schedule, grading, and policies.
+- **[Lectures](lectures.qmd)**: slides and notebooks for each session, with dates.
+- **[Tutorials](tutorials.qmd)**: setup guides for the tools we use in class.
+- **[Assignments](assignments.qmd)**: instructions and starter files.
+- **[JupyterLite](https://danilofreire.github.io/datasci151-summer/jupyter)**: a Python sandbox that runs entirely in the browser, no installation required.
 
-- **PDF files**: These contain the final version of the tutorials with images and complete output. They are ideal for reading and following along.
-- **QMD files**: These include the source code used to write the tutorials. They are [Quarto](https://quarto.org/) files, a Markdown-based document format that allows for code cells and other features. They are provided for those who want to learn more about the Markdown syntax and how to create similar documents for their own projects.
+## Updating the site
 
-## How to Read the PDF Files on GitHub
+From the repo root:
 
-You can either read the tutorials directly on GitHub or download them to your computer. To read them on GitHub, click on the links above and you will see them in an embedded viewer. You can also click on the download icon to save the raw files to your computer.
+```bash
+quarto render
+```
 
-![](images/github-pdf-viewer.png)
+That builds the static HTML into `docs/`, which is the directory
+GitHub Pages serves from this branch. The render also rebuilds
+JupyterLite automatically through a `post-render` hook in
+`_quarto.yml`, so the in-browser Python environment stays in sync
+without any extra steps.
 
-## Additional Resources
+For a live preview while editing:
 
-- `article-template.latex`: A LaTeX template for articles
-- `python-postgresql-example.ipynb`: A Jupyter Notebook with a PostgreSQL example
-- `testing-ipython`: A Jupyter Notebook for showing Markdown and code cells
-- `testing-anaconda.py`: A Python script for testing Anaconda installation
-- `.gitignore`: Git configuration file to specify intentionally untracked files
+```bash
+quarto preview
+```
 
-For any questions or issues regarding these tutorials, please open an issue in the main repository or email me at [danilo.freire@emory.edu](mailto:danilo.freire@emory.edu). I hope you like the tutorials and find them useful! :smiley:
+## Tutorials
+
+| Tutorial | Source |
+| --- | --- |
+| 01 - VSCode and Anaconda | [qmd](01-vscode-anaconda-tutorial.qmd) |
+| 02 - Jupyter Notebook and Markdown | [qmd](02-jupyter-markdown-tutorial.qmd) |
+| 03 - GitHub | [qmd](03-github-tutorial.qmd) |
+
+PDF versions render to `docs/` alongside the HTML when the site is
+built. They are easier to print and read offline.
+
+## JupyterLite pipeline
+
+Students can run Python in their browser at
+<https://danilofreire.github.io/datasci151-summer/jupyter>, no
+installation required. The runtime is [Pyodide](https://pyodide.org),
+a WebAssembly Python that ships pandas, numpy, matplotlib, scipy,
+scikit-learn, and similar libraries used throughout the course.
+
+The build setup lives in [`jupyter/`](jupyter/):
+
+```text
+jupyter/
+├── build.sh           # invoked by Quarto's post-render hook
+├── content/           # starter notebooks shipped to students
+├── overrides.json     # JupyterLab theme override (dark mode)
+└── requirements.txt   # host-side build dependencies
+```
+
+To add a starter notebook or dataset, drop it into `jupyter/content/`
+and re-run `quarto render`. See [`jupyter/README.md`](jupyter/README.md)
+for the full reference, including how to swap themes or troubleshoot
+the build.
+
+## Repository layout
+
+```text
+.
+├── *.qmd               # source for site pages and tutorials
+├── _quarto.yml         # site config and post-render hook
+├── docs/               # rendered output, served by GitHub Pages
+├── jupyter/            # JupyterLite build inputs and script
+└── images/             # figures used across site pages
+```
+
+## Questions or feedback?
+
+Open a [GitHub
+issue](https://github.com/danilofreire/datasci151-summer/issues),
+email me at <danilo.freire@emory.edu>, or catch me after class.
