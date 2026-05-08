@@ -108,9 +108,7 @@ Every Emory University community member is responsible for upholding a standard 
 
 # Artificial Intelligence
 
-You will complete five problem sets and three in-class quizzes. You are welcome to use AI tools for assignments. I recommend [GitHub Copilot](https://copilot.github.com/) for generating code snippets (it is free for students and provides excellent suggestions). [Claude](https://claude.ai), [ChatGPT](https://chat.openai.com), and [Perplexity AI](https://perplexity.ai) are also great options. I am happy to help you use these tools during office hours or by appointment.
-
-However, you are responsible for any errors from AI tools. Do not rely on them exclusively. Always double-check your work and cite all sources, including AI assistance. Please add a note at the end of any document where AI was used.
+You will complete five problem sets and three in-class quizzes. You may use AI tools for assignments as a supplement to your own thinking, not a replacement for it. **AI tools are not permitted during quizzes**, which are individual tests of your understanding. If you use AI on an assignment, check the output carefully and take responsibility for any errors in what you submit. Cite all sources, including AI tools, and add a brief note at the end of any document where AI was used.
 
 # Special Needs and Accessibility Services
 

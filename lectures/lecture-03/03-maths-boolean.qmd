@@ -9,6 +9,13 @@ author:
 format:
   clean-revealjs:
     self-contained: true
+    include-in-header:
+      - text: |
+          <style>
+          #title-slide .title {
+            font-size: 42px !important;
+          }
+          </style>
     footer: "[Maths with NumPy](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-04/04-maths-arrays-random.html)"
 transition: slide
 transition-speed: default

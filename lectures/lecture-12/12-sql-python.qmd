@@ -8,6 +8,13 @@ author:
 format:
   clean-revealjs:
     self-contained: true
+    include-in-header:
+      - text: |
+          <style>
+          #title-slide .title {
+            font-size: 42px !important;
+          }
+          </style>
     code-overflow: wrap
     footer: "[SQLite in Python](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-12/12-sql-python.html)"
 transition: slide

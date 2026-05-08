@@ -9,6 +9,13 @@ author:
 format:
   clean-revealjs:
     self-contained: true
+    include-in-header:
+      - text: |
+          <style>
+          #title-slide .title {
+            font-size: 42px !important;
+          }
+          </style>
     footer: "[Packages, Variables, and Lists](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-02/02-jupyter-variables.html)"
     slide-number: true
 transition: slide
