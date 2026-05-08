@@ -245,13 +245,6 @@
     "text": "Verify the Connection:\n\nPlease click on the “Run” button at the top right corner of the editor to execute the code in your .py file. Select “Run Current File in Dedicated Terminal”\n\n\n\n\nRun Python File in VS Code\n\n\n\nThe output should show the Anaconda Python version and its location.\n\n\n\n\nPython Output in VS Code"
   },
   {
-    "objectID": "python-postgresql-example.html",
-    "href": "python-postgresql-example.html",
-    "title": "PostgreSQL Example",
-    "section": "",
-    "text": "Here is an example of how to use PostgreSQL with Python. The example uses the psycopg2 library to connect to a PostgreSQL database and perform some basic operations. Please refer to tutorial 04 for more information.\n\n# Install the required packages\n# conda install psycopg2\n\n# Import the required library\nimport psycopg2\n\n# Connect to the database\nconn = psycopg2.connect(\n    host=\"localhost\", \n    port=5432,\n    database=\"tutorial\",\n    user=\"postgres\",\n    password=\"\") # Change the password to your password\n\n# Create a cursor object. This is used to interact with the database.\ncur = conn.cursor()\n\n\n# Now we will execute the queries\ncur.execute(\"SELECT * FROM students\")\n\n# Fetch the results\nrows = cur.fetchall()\n\n# Print the results\nfor row in rows:\n    print(row)\n\n(1, 'Alice', 25)\n(2, 'Bob', 30)\n(3, 'Charlie', 35)\n\n\n\n# Let us run another query\ncur.execute(\"SELECT * FROM students WHERE name = 'Bob' \")\n\n# Fetch the results\nrows = cur.fetchall()\n\n# Print the results\nfor row in rows:\n    print(row)\n\n(2, 'Bob', 30)\n\n\n\n# Close the cursor and the connection. This is important as it will free up the resources.\ncur.close()\n\n# Commit the transaction. This will save the changes to the database. \n# You do not need to do this if you are only reading from the database.\nconn.commit()\n\n# Close the connection\nconn.close()\n\n\n# Converting tables to pandas dataframe\n# Install the required packages\n# conda install pandas sqlalchemy\n\n# Import the required libraries\nimport pandas as pd\nfrom sqlalchemy import create_engine\n\n# Create a connection to the database\n# The syntax is 'postgresql://username:password@host:port/database'\n# In our case, the username is postgres, password is blank, host is localhost, \n# port is 5432 and database is tutorial\nengine = create_engine('postgresql://postgres:@localhost:5432/tutorial')\n\n# Read the table into a pandas dataframe\ndf = pd.read_sql_table('students', engine)\n\n# Print the dataframe\nprint(df)\n\n   id     name  age\n0   1    Alice   25\n1   2      Bob   30\n2   3  Charlie   35\n\n\n\n\n\n Back to top"
-  },
-  {
     "objectID": "assignments.html",
     "href": "assignments.html",
     "title": "Assignments",
