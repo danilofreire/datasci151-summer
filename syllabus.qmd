@@ -78,7 +78,7 @@ This course provides everything you need to master the core concepts, but you ar
 
 - [Python Documentation](https://docs.python.org/3/)
 - [Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
-- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
+- [SQLite Documentation](https://www.sqlite.org/docs.html)
 - [SQLBolt](https://sqlbolt.com/)
 - [DataLemur for SQL interview practice](https://datalemur.com)
 - [Github Guides](https://guides.github.com/)
@@ -143,7 +143,7 @@ The lecture notes cover all essential material we will cover. As mentioned, the 
 Each lecture folder contains an HTML file or a Jupyter notebook (`.ipynb`) with code examples and explanations, along with any additional resources or datasets used in the lecture.
 
 - Tuesday, May 12: [Lecture 01: Welcome to DATASCI 151 - Introduction and Course Overview](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-01/01-introduction.html).
-  Please make sure to install the necessary software for the course by following the [Course Tutorials: How to Install Anaconda, Jupyter, PostgreSQL, VSCode, and Open a Free Educational Account on GitHub](https://danilofreire.github.io/datasci151-summer/tutorials/tutorials.html).
+  Please make sure to install the necessary software for the course by following the [Course Tutorials: How to Install Anaconda, Jupyter, VSCode, and Open a Free Educational Account on GitHub](https://danilofreire.github.io/datasci151-summer/tutorials/tutorials.html).
 
 - Wednesday, May 13: Lecture 02: Jupyter Notebooks, Packages, Variables, and Lists. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-02/02-jupyter-variables.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-02/02-jupyter-variables.ipynb). 
 
