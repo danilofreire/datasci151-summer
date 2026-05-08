@@ -84,7 +84,7 @@ editor:
 # Argument: "Hello" 
 # Return: Showing the message on screen
 
-print("Hello, "+str("QTM151!"))
+print("Hello, "+str("DATASCI 151!"))
 ```
 :::{style="margin-top: 40px; font-size: 24px;"}
 :::

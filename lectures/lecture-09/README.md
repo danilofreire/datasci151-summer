@@ -1,4 +1,4 @@
-# QTM 151 (Summer 2025) - Quiz 02
+# DATASCI 151 (Summer 2026) - Quiz 02
 
 ## Instructions
 
@@ -8,6 +8,6 @@ The quiz is open book, and you are allowed to use any resources available to you
 
 Quiz data are available in the `data` folder. Please let me know if you have any issues accessing the data.
 
-The link for the quiz is <https://github.com/danilofreire/qtm151-summer-quiz02/>.
+The link for the quiz is <https://github.com/danilofreire/datasci151-summer-quiz02/>.
 
 Best of luck! 😊

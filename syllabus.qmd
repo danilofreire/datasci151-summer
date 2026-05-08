@@ -86,7 +86,7 @@ This course provides everything you need to master the core concepts, but you ar
 # Course Information
 
 
-We will meet online Monday through Friday from 9 AM to 12:30 PM. Please review the materials before each class. All course information is available on our GitHub repository at <https://github.com/danilofreire/datasci151-summer>. While I intend to follow the schedule as planned, I also want to adapt to your learning pace and style, so the syllabus may change during the course. Please check [the course repository](https://github.com/danilofreire/datasci151-summer) regularly for updates, which I will also announce in class and on Canvas.
+We will meet online Monday through Friday from 11:00am to 12:20pm EDT. Please review the materials before each class. All course information is available on our GitHub repository at <https://github.com/danilofreire/datasci151-summer>. While I intend to follow the schedule as planned, I also want to adapt to your learning pace and style, so the syllabus may change during the course. Please check [the course repository](https://github.com/danilofreire/datasci151-summer) regularly for updates, which I will also announce in class and on Canvas.
 
 # Software
 
@@ -132,57 +132,57 @@ Emory University welcomes students from across the country and around the world.
 
 # Grading Scale
 
-Each student's final grade will be based on the following after rounding up to the nearest point:
+Each student's final grade will be based on the following percentage ranges, rounded up to the nearest point:
 
-| Grade | A       | A-      | B+      | B       | B-      | C       | D       | F    |
-|-------|---------|---------|---------|---------|---------|---------|---------|------|
-| Range | 91%–100%| 86%–90% | 81%–85% | 76%–80% | 71%–75% | 66%–70% | 60%–65% | <60% |
+| Grade | A  | A- | B+ | B  | B- | C  | D  | F  |
+|-------|----|----|----|----|----|----|----|----|
+| Range | 91–100 | 86–90 | 81–85 | 76–80 | 71–75 | 66–70 | 60–65 | <60 |
 
 # Course Outline and Suggested Readings
 
-The lecture notes cover all essential material we will cover. As mentioned, the course outline may change, so please check our [GitHub repository](https://github.com/danilofreire/datasci151-summer-summer) regularly for updates.
+The lecture notes cover all essential material we will cover. As mentioned, the course outline may change, so please check our [GitHub repository](https://github.com/danilofreire/datasci151-summer) regularly for updates.
 
 Each lecture folder contains an HTML file or a Jupyter notebook (`.ipynb`) with code examples and explanations, along with any additional resources or datasets used in the lecture.
 
-- Tuesday, May 12: [Lecture 01: Welcome to DATASCI 151 - Introduction and Course Overview](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-01/01-introduction.html).
+- Tuesday, May 12: [Lecture 01: Welcome to DATASCI 151 - Introduction and Course Overview](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-01/01-introduction.html).
   Please make sure to install the necessary software for the course by following the [Course Tutorials: How to Install Anaconda, Jupyter, PostgreSQL, VSCode, and Open a Free Educational Account on GitHub](https://danilofreire.github.io/datasci151-summer/tutorials/tutorials.html).
 
-- Wednesday, May 13: Lecture 02: Jupyter Notebooks, Packages, Variables, and Lists. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-02/02-jupyter-variables.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-02/02-jupyter-variables.ipynb). 
+- Wednesday, May 13: Lecture 02: Jupyter Notebooks, Packages, Variables, and Lists. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-02/02-jupyter-variables.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-02/02-jupyter-variables.ipynb). 
 
-- Thursday, May 14: Lecture 03: Maths Operations, Arrays, and Boolean Logic. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-03/03-maths-boolean.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-03/03-maths-boolean.ipynb)
+- Thursday, May 14: Lecture 03: Maths Operations, Arrays, and Boolean Logic. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-03/03-maths-boolean.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-03/03-maths-boolean.ipynb)
   - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=b9d95c73-826e-411a-99c3-1b5cc87780f2&hostId=05eb977d-4f8a-440e-9e45-95212b29d103). Kahoot quizzes are optional and will not be graded. We will do it in class! It is a fun way to review the material covered in the lecture.
 
-- Friday, May 15: [Lecture 04: Quiz 01 - Based on Lectures 01-03](https://github.com/danilofreire/datasci151-summer-summer-quiz01/). The repository contains the quiz questions and will be made online on the day of the quiz.
-  - [Assignment 01 due](https://github.com/danilofreire/datasci151-summer-summer/tree/main/assignments/01-assignment).
+- Friday, May 15: [Lecture 04: Quiz 01 - Based on Lectures 01-03](https://github.com/danilofreire/datasci151-summer-quiz01/). The repository contains the quiz questions and will be made online on the day of the quiz.
+  - [Assignment 01 due](https://github.com/danilofreire/datasci151-summer/tree/main/assignments/01-assignment).
 
-- Monday, May 18: Lecture 05: Conditional Statements. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-05/05-conditional-statements.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-05/05-conditional-statements.ipynb).
+- Monday, May 18: Lecture 05: Conditional Statements. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-05/05-conditional-statements.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-05/05-conditional-statements.ipynb).
   - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=d8d3593a-52c8-4d6c-b938-d880edb69745&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
 
-- Tuesday, May 19: Lecture 06: While and For Loops. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-06/06-loops.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-06/06-loops.ipynb).
+- Tuesday, May 19: Lecture 06: While and For Loops. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-06/06-loops.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-06/06-loops.ipynb).
   - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=de289cbf-f886-4d4a-bd4c-91f1b2cc01c2&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
 
-- Wednesday, May 20: Lecture 07: Functions. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-07/07-functions.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-07/07-functions.ipynb).
+- Wednesday, May 20: Lecture 07: Functions. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-07/07-functions.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-07/07-functions.ipynb).
   - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=0219d3ce-d690-4c88-9396-3ce6330bbfdb&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
-  - [Assignment 02 due](https://github.com/danilofreire/datasci151-summer-summer/tree/main/assignments/02-assignment).
+  - [Assignment 02 due](https://github.com/danilofreire/datasci151-summer/tree/main/assignments/02-assignment).
 
-- Thursday, May 21: Lecture 08: Data Wrangling with Pandas. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-08/08-data-wrangling.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-08/08-data-wrangling.ipynb).
+- Thursday, May 21: Lecture 08: Data Wrangling with Pandas. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-08/08-data-wrangling.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-08/08-data-wrangling.ipynb).
   - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=1b854633-5911-431d-8ae3-fb3535c40266&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
 
-- Friday, May 22: [Lecture 09: Quiz 02 - Based on Lectures 05-08](https://github.com/danilofreire/datasci151-summer-summer-quiz02/). As with Quiz 01, the repository will be available on the day of the quiz.
-  - [Assignment 03 due](https://github.com/danilofreire/datasci151-summer-summer/tree/main/assignments/03-assignment).
+- Friday, May 22: [Lecture 09: Quiz 02 - Based on Lectures 05-08](https://github.com/danilofreire/datasci151-summer-quiz02/). As with Quiz 01, the repository will be available on the day of the quiz.
+  - [Assignment 03 due](https://github.com/danilofreire/datasci151-summer/tree/main/assignments/03-assignment).
 
-- Monday, May 25: Lecture 10: Subsetting and Filtering Data. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-10/10-subsetting-data.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-10/10-subsetting-data.ipynb).
+- Monday, May 25: Lecture 10: Subsetting and Filtering Data. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-10/10-subsetting-data.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-10/10-subsetting-data.ipynb).
   - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=0479c8ec-6e88-43b7-9d65-fa41b23d60c1&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
 
-- Tuesday, May 26: Lecture 11: Introduction to SQL. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-11/11-introduction-sql.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-11/11-introduction-sql.ipynb).
+- Tuesday, May 26: Lecture 11: Introduction to SQL. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-11/11-introduction-sql.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-11/11-introduction-sql.ipynb).
   - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=29a7984b-c6ed-4e87-91bd-cd5e4bf38094&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
 
-- Wednesday, May 27: Lecture 12: SQL in Python. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-12/12-sql-python.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-12/12-sql-python.ipynb).
+- Wednesday, May 27: Lecture 12: SQL in Python. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-12/12-sql-python.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-12/12-sql-python.ipynb).
   - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=8e782b35-ddb5-41a5-91e9-233fd7b01fbf&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
-  - [Assignment 04 due](https://github.com/danilofreire/datasci151-summer-summer/tree/main/assignments/04-assignment).
+  - [Assignment 04 due](https://github.com/danilofreire/datasci151-summer/tree/main/assignments/04-assignment).
 
-- Thursday, May 28: Lecture 13: Merge Tables in SQL. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-13/13-sql-tables.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-13/13-sql-tables.ipynb).
+- Thursday, May 28: Lecture 13: Merge Tables in SQL. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-13/13-sql-tables.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-13/13-sql-tables.ipynb).
   - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=762c7a39-ee91-4977-a119-d3f34bc5a4f2&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
 
-- Friday, May 29: [Lecture 14: Quiz 03 - Based on Lectures 10-13](https://github.com/danilofreire/datasci151-summer-summer-quiz03/). 
-  - [Assignment 05 due](https://github.com/danilofreire/datasci151-summer-summer/tree/main/assignments/05-assignment).
+- Friday, May 29: [Lecture 14: Quiz 03 - Based on Lectures 10-13](https://github.com/danilofreire/datasci151-summer-quiz03/). 
+  - [Assignment 05 due](https://github.com/danilofreire/datasci151-summer/tree/main/assignments/05-assignment).

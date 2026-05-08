@@ -49,7 +49,7 @@ Jupyter Notebooks provide an interactive development environment that allows you
 
 ## Creating a New Notebook
 
-First, please make sure you have Python, Jupyter Notebook, and VSCode installed on your computer. If you do not have these installed, please refer to the [VSCode and Anaconda Tutorial](https://github.com/danilofreire/qtm151/blob/main/tutorials/01-vscode-anaconda-tutorial.pdf) for instructions on how to install them.
+First, please make sure you have Python, Jupyter Notebook, and VSCode installed on your computer. If you do not have these installed, please refer to the [VSCode and Anaconda Tutorial](https://github.com/danilofreire/datasci151-summer/blob/main/tutorials/01-vscode-anaconda-tutorial.pdf) for instructions on how to install them.
 
 To create a new Jupyter Notebook in VSCode, please go to the tab "File" > "New File". You will see a prompt in the middle of the screen. Select the option "Jupyter Notebook". 
 
@@ -88,7 +88,7 @@ Here you should enter the Python commands. For example, type the following lines
 ```{python}
 #| output: false
 #| eval: false
-print("Welcome to QTM 151!")
+print("Welcome to DATASCI 151!")
 
 x = 5
 y = 10
@@ -107,10 +107,10 @@ The results of the code will be displayed below the code cell. In this case, the
 To create a text cell click on "+ Markdown." You will get an empty white box where you can type text. We will cover Markdown in more detail in the next section. But for now, you can type the following text in the Markdown cell:
 
 ```{markdown}
-# Welcome to QTM 151!
+# Welcome to DATASCI 151!
 
 This is a Jupyter Notebook. You can write *text*, **equations**, and `code` 
-in [this notebook](https://github.com/danilofreire/qtm151/blob/main/tutorials/testing-ipython.ipynb). 
+in [this notebook](https://github.com/danilofreire/datasci151-summer/blob/main/tutorials/testing-ipython.ipynb). 
 ```
 
 The text will be displayed in the text cell like this:

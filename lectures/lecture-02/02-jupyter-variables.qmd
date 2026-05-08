@@ -78,23 +78,23 @@ editor:
 - For this course, we will use the `base` environment
 - But you are free to create your own environments if you want!
 - There are two ways to create environments:
-  - Using the command line: `conda create -n qtm151 python=3.12`
+  - Using the command line: `conda create -n datasci151 python=3.12`
   - Using Anaconda Navigator: Go to the "Environments" tab and click on "Create"
-- After creating an environment in the command line, you can activate it using the command line: `conda activate qtm151`
+- After creating an environment in the command line, you can activate it using the command line: `conda activate datasci151`
 - To remove a package from an environment, use the command line: `conda remove package_name`
 - To deactivate an environment, use the command line: `conda deactivate`
-- To remove an environment, use the command line: `conda remove -n qtm151 --all`
+- To remove an environment, use the command line: `conda remove -n datasci151 --all`
 :::
 
 :::{.column width="50%"}
 ```{python}
 #| echo: true
 #| eval: false
-# Create a new environment called qtm151
-conda create -n qtm151 python=3.12
+# Create a new environment called datasci151
+conda create -n datasci151 python=3.12
 
-# Activate the qtm151 environment
-conda activate qtm151
+# Activate the datasci151 environment
+conda activate datasci151
 
 # Install the required packages
 conda install numpy pandas matplotlib jupyter
@@ -102,8 +102,8 @@ conda install numpy pandas matplotlib jupyter
 # Deactivate the current environment
 conda deactivate
 
-# Remove the qtm151 environment
-conda remove -n qtm151 --all
+# Remove the datasci151 environment
+conda remove -n datasci151 --all
 ```
 
 - Windows users, please open the [Anaconda PowerShell Prompt](https://powershellcommands.com/anaconda-powershell-prompt) instead of the regular command line. [More info here.](https://www.anaconda.com/docs/tools/working-with-conda/ide-tutorials/vscode)

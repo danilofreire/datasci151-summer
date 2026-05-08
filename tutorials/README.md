@@ -1,6 +1,6 @@
-# QTM151 Tutorials
+# DATASCI 151 Tutorials
 
-This folder contains several tutorials for the QTM151 course. Below you will find a list of available tutorials with links to both PDF and QMD versions where applicable.
+This folder contains several tutorials for the DATASCI 151 course. Below you will find a list of available tutorials with links to both PDF and QMD versions where applicable.
 
 ## Available Tutorials
 

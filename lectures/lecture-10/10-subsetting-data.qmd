@@ -154,7 +154,7 @@ editor:
 - Finally, we will export the code to a Jupyter notebook
 - Let's do it together!
 
-- [Download the dataset](https://github.com/danilofreire/qtm151/blob/main/lectures/lecture-11/data_raw/features.csv) if you don't have it (click on `Download Raw File`)
+- [Download the dataset](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-10/data_raw/features.csv) if you don't have it (click on `Download Raw File`)
 - Open the dataset in the `Data Wrangler` and do the following:
   - Click on `Filter`
   - Select `cylinders` in `Choose column`

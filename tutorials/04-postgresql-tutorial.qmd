@@ -350,7 +350,7 @@ conn.commit()
 conn.close()
 ```
 
-This code connects to the `tutorial` database on `localhost` using the `psycopg2` library. It runs a query to select all rows from the `students` table and prints the results. You can run this code in a Python script or a Jupyter notebook to interact with the database from Python. You can find a Jupyter Notebook with this code in the [GitHub repository](https://github.com/danilofreire/qtm151/tree/main/tutorials). 
+This code connects to the `tutorial` database on `localhost` using the `psycopg2` library. It runs a query to select all rows from the `students` table and prints the results. You can run this code in a Python script or a Jupyter notebook to interact with the database from Python. You can find a Jupyter Notebook with this code in the [GitHub repository](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials). 
 
 # Converting PostgreSQL Data to a `pandas DataFrame`
 

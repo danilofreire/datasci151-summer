@@ -181,7 +181,7 @@ The Python community is very active and welcoming!
 ```{verbatim}
 public class Welcome {
     public static void main(String[] args) {
-        System.out.println("Welcome to QTM151!");
+        System.out.println("Welcome to DATASCI 151!");
     }
 }
 
@@ -192,7 +192,7 @@ public class Welcome {
 #| eval: false
 #| output: false
 #| python.reticulate: false
-print("Welcome to QTM151!")
+print("Welcome to DATASCI 151!")
 ```
 :::
 ::::
@@ -291,7 +291,7 @@ print("Welcome to QTM151!")
   - In VSCode, click on "View" and then "Command Palette"
   - Type ["Python: Select Interpreter"]{.alert} and select the Anaconda environment you just created
   - I recommend using the ["base"]{.alert} environment for this course
-- Next step: we will create a new folder for the QTM151 course and download our virtual GitHub folder and opening it in VSCode
+- Next step: we will create a new folder for the DATASCI 151 course and download our virtual GitHub folder and opening it in VSCode
 :::
 
 # Git and GitHub 🐙{background-color="#2d4563"}

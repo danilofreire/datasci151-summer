@@ -30,6 +30,8 @@ $endif$
 % Add the following packages to support kableExtra
 \usepackage{booktabs}
 \usepackage{longtable}
+% Fix for Quarto's \LTcaptype{none} longtable counter issue
+\newcounter{none}
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{wrapfig}
