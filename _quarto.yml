@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  post-render:
+    - jupyter/build.sh
 
 website:
   title: "DATASCI 151"

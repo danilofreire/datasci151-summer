@@ -571,6 +571,10 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
+# JupyterLite build venv and incremental-build cache
+jupyter/.venv/
+jupyter/.jupyterlite.doit.db
+
 # translation temp files
 po/*~
 
