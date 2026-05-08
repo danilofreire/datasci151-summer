@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Lectures – DATASCI 151</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -31,19 +34,18 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-250a0ad726c327aed60c1b8aba93cc6c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-5100b8561cd7f6cd8c35657ed6fe7ee7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-250a0ad726c327aed60c1b8aba93cc6c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0f9aa9b9e44320098794e46e8ae1c927.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4d72738a521f03bda770c6fbcc444206.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-0f9aa9b9e44320098794e46e8ae1c927.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -245,8 +247,6 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">DATASCI 151</span>
     </a>
@@ -336,57 +336,57 @@ ul.task-list li input[type="checkbox"] {
 <section id="schedule" class="level2">
 <h2 class="anchored" data-anchor-id="schedule">Schedule</h2>
 <ul>
-<li><p>Tuesday, May 12: <a href="https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-01/01-introduction.html">Lecture 01: Welcome to DATASCI 151 - Introduction and Course Overview</a>. Please make sure to install the necessary software for the course by following the <a href="https://danilofreire.github.io/datasci151-summer/tutorials/tutorials.html">Course Tutorials: How to Install Anaconda, Jupyter, PostgreSQL, VSCode, and Open a Free Educational Account on GitHub</a>.</p></li>
-<li><p>Wednesday, May 13: Lecture 02: Jupyter Notebooks, Packages, Variables, and Lists. <a href="https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-02/02-jupyter-variables.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-02/02-jupyter-variables.ipynb">Lecture Notebook</a>.</p></li>
-<li><p>Thursday, May 14: Lecture 03: Maths Operations, Arrays, and Boolean Logic. <a href="https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-03/03-maths-boolean.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-03/03-maths-boolean.ipynb">Lecture Notebook</a></p>
+<li><p>Tuesday, May 12: <a href="https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-01/01-introduction.html">Lecture 01: Welcome to DATASCI 151 - Introduction and Course Overview</a>. Please make sure to install the necessary software for the course by following the <a href="https://danilofreire.github.io/datasci151-summer/tutorials/tutorials.html">Course Tutorials: How to Install Anaconda, Jupyter, PostgreSQL, VSCode, and Open a Free Educational Account on GitHub</a>.</p></li>
+<li><p>Wednesday, May 13: Lecture 02: Jupyter Notebooks, Packages, Variables, and Lists. <a href="https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-02/02-jupyter-variables.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-02/02-jupyter-variables.ipynb">Lecture Notebook</a>.</p></li>
+<li><p>Thursday, May 14: Lecture 03: Maths Operations, Arrays, and Boolean Logic. <a href="https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-03/03-maths-boolean.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-03/03-maths-boolean.ipynb">Lecture Notebook</a></p>
 <ul>
 <li><a href="https://play.kahoot.it/v2/?quizId=b9d95c73-826e-411a-99c3-1b5cc87780f2&amp;hostId=05eb977d-4f8a-440e-9e45-95212b29d103">Kahoot Quiz</a>. Kahoot quizzes are optional and will not be graded. We will do it in class! It is a fun way to review the material covered in the lecture.</li>
 </ul></li>
-<li><p>Friday, May 15: <a href="https://github.com/danilofreire/datasci151-summer-summer-quiz01/">Lecture 04: Quiz 01 - Based on Lectures 01-03</a>. The repository contains the quiz questions and will be made online on the day of the quiz.</p>
+<li><p>Friday, May 15: <a href="https://github.com/danilofreire/datasci151-summer-quiz01/">Lecture 04: Quiz 01 - Based on Lectures 01-03</a>. The repository contains the quiz questions and will be made online on the day of the quiz.</p>
 <ul>
-<li><a href="https://github.com/danilofreire/datasci151-summer-summer/tree/main/assignments/01-assignment">Assignment 01 due</a>.</li>
+<li><a href="https://github.com/danilofreire/datasci151-summer/tree/main/assignments/01-assignment">Assignment 01 due</a>.</li>
 </ul></li>
-<li><p>Monday, May 18: Lecture 05: Conditional Statements. <a href="https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-05/05-conditional-statements.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-05/05-conditional-statements.ipynb">Lecture Notebook</a>.</p>
+<li><p>Monday, May 18: Lecture 05: Conditional Statements. <a href="https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-05/05-conditional-statements.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-05/05-conditional-statements.ipynb">Lecture Notebook</a>.</p>
 <ul>
 <li><a href="https://play.kahoot.it/v2/?quizId=d8d3593a-52c8-4d6c-b938-d880edb69745&amp;hostId=05eb977d-4f8a-440e-9e45-95212b29d103">Kahoot Quiz</a>.</li>
 </ul></li>
-<li><p>Tuesday, May 19: Lecture 06: While and For Loops. <a href="https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-06/06-loops.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-06/06-loops.ipynb">Lecture Notebook</a>.</p>
+<li><p>Tuesday, May 19: Lecture 06: While and For Loops. <a href="https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-06/06-loops.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-06/06-loops.ipynb">Lecture Notebook</a>.</p>
 <ul>
 <li><a href="https://play.kahoot.it/v2/?quizId=de289cbf-f886-4d4a-bd4c-91f1b2cc01c2&amp;hostId=05eb977d-4f8a-440e-9e45-95212b29d103">Kahoot Quiz</a>.</li>
 </ul></li>
-<li><p>Wednesday, May 20: Lecture 07: Functions. <a href="https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-07/07-functions.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-07/07-functions.ipynb">Lecture Notebook</a>.</p>
+<li><p>Wednesday, May 20: Lecture 07: Functions. <a href="https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-07/07-functions.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-07/07-functions.ipynb">Lecture Notebook</a>.</p>
 <ul>
 <li><a href="https://play.kahoot.it/v2/?quizId=0219d3ce-d690-4c88-9396-3ce6330bbfdb&amp;hostId=05eb977d-4f8a-440e-9e45-95212b29d103">Kahoot Quiz</a>.</li>
-<li><a href="https://github.com/danilofreire/datasci151-summer-summer/tree/main/assignments/02-assignment">Assignment 02 due</a>.</li>
+<li><a href="https://github.com/danilofreire/datasci151-summer/tree/main/assignments/02-assignment">Assignment 02 due</a>.</li>
 </ul></li>
-<li><p>Thursday, May 21: Lecture 08: Data Wrangling with Pandas. <a href="https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-08/08-data-wrangling.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-08/08-data-wrangling.ipynb">Lecture Notebook</a>.</p>
+<li><p>Thursday, May 21: Lecture 08: Data Wrangling with Pandas. <a href="https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-08/08-data-wrangling.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-08/08-data-wrangling.ipynb">Lecture Notebook</a>.</p>
 <ul>
 <li><a href="https://play.kahoot.it/v2/?quizId=1b854633-5911-431d-8ae3-fb3535c40266&amp;hostId=05eb977d-4f8a-440e-9e45-95212b29d103">Kahoot Quiz</a>.</li>
 </ul></li>
-<li><p>Friday, May 22: <a href="https://github.com/danilofreire/datasci151-summer-summer-quiz02/">Lecture 09: Quiz 02 - Based on Lectures 05-08</a>. As with Quiz 01, the repository will be available on the day of the quiz.</p>
+<li><p>Friday, May 22: <a href="https://github.com/danilofreire/datasci151-summer-quiz02/">Lecture 09: Quiz 02 - Based on Lectures 05-08</a>. As with Quiz 01, the repository will be available on the day of the quiz.</p>
 <ul>
-<li><a href="https://github.com/danilofreire/datasci151-summer-summer/tree/main/assignments/03-assignment">Assignment 03 due</a>.</li>
+<li><a href="https://github.com/danilofreire/datasci151-summer/tree/main/assignments/03-assignment">Assignment 03 due</a>.</li>
 </ul></li>
-<li><p>Monday, May 25: Lecture 10: Subsetting and Filtering Data. <a href="https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-10/10-subsetting-data.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-10/10-subsetting-data.ipynb">Lecture Notebook</a>.</p>
+<li><p>Monday, May 25: Lecture 10: Subsetting and Filtering Data. <a href="https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-10/10-subsetting-data.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-10/10-subsetting-data.ipynb">Lecture Notebook</a>.</p>
 <ul>
 <li><a href="https://play.kahoot.it/v2/?quizId=0479c8ec-6e88-43b7-9d65-fa41b23d60c1&amp;hostId=05eb977d-4f8a-440e-9e45-95212b29d103">Kahoot Quiz</a>.</li>
 </ul></li>
-<li><p>Tuesday, May 26: Lecture 11: Introduction to SQL. <a href="https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-11/11-introduction-sql.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-11/11-introduction-sql.ipynb">Lecture Notebook</a>.</p>
+<li><p>Tuesday, May 26: Lecture 11: Introduction to SQL. <a href="https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-11/11-introduction-sql.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-11/11-introduction-sql.ipynb">Lecture Notebook</a>.</p>
 <ul>
 <li><a href="https://play.kahoot.it/v2/?quizId=29a7984b-c6ed-4e87-91bd-cd5e4bf38094&amp;hostId=05eb977d-4f8a-440e-9e45-95212b29d103">Kahoot Quiz</a>.</li>
 </ul></li>
-<li><p>Wednesday, May 27: Lecture 12: SQL in Python. <a href="https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-12/12-sql-python.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-12/12-sql-python.ipynb">Lecture Notebook</a>.</p>
+<li><p>Wednesday, May 27: Lecture 12: SQL in Python. <a href="https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-12/12-sql-python.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-12/12-sql-python.ipynb">Lecture Notebook</a>.</p>
 <ul>
 <li><a href="https://play.kahoot.it/v2/?quizId=8e782b35-ddb5-41a5-91e9-233fd7b01fbf&amp;hostId=05eb977d-4f8a-440e-9e45-95212b29d103">Kahoot Quiz</a>.</li>
-<li><a href="https://github.com/danilofreire/datasci151-summer-summer/tree/main/assignments/04-assignment">Assignment 04 due</a>.</li>
+<li><a href="https://github.com/danilofreire/datasci151-summer/tree/main/assignments/04-assignment">Assignment 04 due</a>.</li>
 </ul></li>
-<li><p>Thursday, May 28: Lecture 13: Merge Tables in SQL. <a href="https://raw.githack.com/danilofreire/datasci151-summer-summer/main/lectures/lecture-13/13-sql-tables.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer-summer/blob/main/lectures/lecture-13/13-sql-tables.ipynb">Lecture Notebook</a>.</p>
+<li><p>Thursday, May 28: Lecture 13: Merge Tables in SQL. <a href="https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-13/13-sql-tables.html">Lecture Slides</a>, <a href="https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-13/13-sql-tables.ipynb">Lecture Notebook</a>.</p>
 <ul>
 <li><a href="https://play.kahoot.it/v2/?quizId=762c7a39-ee91-4977-a119-d3f34bc5a4f2&amp;hostId=05eb977d-4f8a-440e-9e45-95212b29d103">Kahoot Quiz</a>.</li>
 </ul></li>
-<li><p>Friday, May 29: <a href="https://github.com/danilofreire/datasci151-summer-summer-quiz03/">Lecture 14: Quiz 03 - Based on Lectures 10-13</a>.</p>
+<li><p>Friday, May 29: <a href="https://github.com/danilofreire/datasci151-summer-quiz03/">Lecture 14: Quiz 03 - Based on Lectures 10-13</a>.</p>
 <ul>
-<li><a href="https://github.com/danilofreire/datasci151-summer-summer/tree/main/assignments/05-assignment">Assignment 05 due</a>.</li>
+<li><a href="https://github.com/danilofreire/datasci151-summer/tree/main/assignments/05-assignment">Assignment 05 due</a>.</li>
 </ul></li>
 </ul>
 

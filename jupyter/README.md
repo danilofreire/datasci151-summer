@@ -3,7 +3,7 @@
 I have created a simple JupyterLite page using Pyodide for this website. The
 idea is that students can run Python code in the browser without needing to
 install Python on their own machines. The page is available at
-<https://danilofreire.github.io/qtm151/jupyter>. The code for the page is
+<https://danilofreire.github.io/datasci151-summer/jupyter>. The code for the page is
 available in the `jupyter` folder of this repository.
 
 The main issue I had was that I use the `docs/` folder to build the Quarto

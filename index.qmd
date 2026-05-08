@@ -29,7 +29,7 @@ Please also refer to the Discussion tab on the repository for any questions or c
 
 ### Lectures
 
-We will meet every weekday from May 12th to May 29th, 2025 from 9:00 AM to 12:30 PM. Our meetings will be online via Teams. Please check our Canvas page for the link.  Please check the [course schedule](https://danilofreire.github.io/datasci151-summer/lectures/lectures.html) for the full list of topics and dates. Lecture materials are available in the [lectures folder](https://github.com/danilofreire/datasci151-summer/tree/main/lectures) in the repository.
+We will meet every weekday from May 12th to May 29th, 2026 from 11:00am to 12:20pm EDT. Our meetings will be online via Teams. Please check our Canvas page for the link.  Please check the [course schedule](https://danilofreire.github.io/datasci151-summer/lectures/lectures.html) for the full list of topics and dates. Lecture materials are available in the [lectures folder](https://github.com/danilofreire/datasci151-summer/tree/main/lectures) in the repository.
 
 Each folder contains an HTML presentation or a Jupyter notebook (`.ipynb`) with code examples and explanations, along with any additional resources or datasets used in the lecture.
 

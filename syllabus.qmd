@@ -58,7 +58,7 @@ This course provides everything you need to master the core concepts, but you ar
 # Course Information
 
 
-We will meet online Monday through Friday from 9 AM to 12:30 PM. Please review the materials before each class. All course information is available on our GitHub repository at <https://github.com/danilofreire/datasci151-summer>. While I intend to follow the schedule as planned, I also want to adapt to your learning pace and style, so the syllabus may change during the course. Please check [the course repository](https://github.com/danilofreire/datasci151-summer) regularly for updates, which I will also announce in class and on Canvas.
+We will meet online Monday through Friday from 11:00am to 12:20pm EDT. Please review the materials before each class. All course information is available on our GitHub repository at <https://github.com/danilofreire/datasci151-summer>. While I intend to follow the schedule as planned, I also want to adapt to your learning pace and style, so the syllabus may change during the course. Please check [the course repository](https://github.com/danilofreire/datasci151-summer) regularly for updates, which I will also announce in class and on Canvas.
 
 # Software
 
