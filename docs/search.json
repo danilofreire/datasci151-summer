@@ -32,7 +32,7 @@
     "href": "syllabus.html#additional-resources",
     "title": "DATASCI 151 - Introduction to Statistical Computing II",
     "section": "Additional Resources",
-    "text": "Additional Resources\n\nPython Documentation\nPandas Documentation\nPostgreSQL Documentation\nSQLBolt\nDataLemur for SQL interview practice\nGithub Guides"
+    "text": "Additional Resources\n\nPython Documentation\nPandas Documentation\nSQLite Documentation\nSQLBolt\nDataLemur for SQL interview practice\nGithub Guides"
   },
   {
     "objectID": "lectures.html",
