@@ -1270,8 +1270,15 @@ _quarto/
 /.quarto/
 /_site/
 
+# Quarto jupyter intermediate notebooks (use `qclean` to remove from disk)
+*.quarto_ipynb
+*.quarto_ipynb_*
+
 # JupyterLite scaffold leftovers when switching from gh-pages
 jupyter/
+
+# Local VS Code workspace settings (user-specific paths)
+.vscode/
 
 # End of https://www.toptal.com/developers/gitignore/api/latex,linux,macos,python,r,vim,windows
 
