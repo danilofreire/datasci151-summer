@@ -21,8 +21,10 @@ transition: slide
 transition-speed: default
 scrollable: true
 engine: jupyter
+jupyter: python3
 revealjs-plugins:
   - multimodal
+  - appearance
 editor:
   render-on-save: true
 ---
@@ -49,9 +51,9 @@ editor:
 
 ::::{.column width="50%"}
 :::{style="text-align: center;"}
-![](figures/Sql_data_base_with_logo.png){width="40%"}
+[![](figures/Sql_data_base_with_logo.png){width="40%"}](#){data-modal-type="image" data-modal-url="figures/Sql_data_base_with_logo.png"}
 
-![](figures/whats-a-relational-database.jpg){width="90%"}
+[![](figures/whats-a-relational-database.jpg){width="90%"}](#){data-modal-type="image" data-modal-url="figures/whats-a-relational-database.jpg"}
 :::
 :::
 :::
@@ -184,7 +186,7 @@ sqlite>
 
 :::{.column width="60%"}
 :::{style="text-align: center;"}
-![](figures/vscode-sqlite.png){width="100%"}
+[![](figures/vscode-sqlite.png){width="100%"}](#){data-modal-type="image" data-modal-url="figures/vscode-sqlite.png"}
 [Download it here](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor) or search for it in the extensions tab in VSCode
 :::
 :::
@@ -214,7 +216,7 @@ touch example.db
 
 :::{.column width="50%"}
 :::{style="text-align: center;"}
-![](figures/sqlite-editor.png){width="90%"}
+[![](figures/sqlite-editor.png){width="90%"}](#){data-modal-type="image" data-modal-url="figures/sqlite-editor.png"}
 :::
 :::
 :::
@@ -236,7 +238,7 @@ touch example.db
 
 :::{.column width="50%"}
 :::{style="text-align: center;"}
-![](figures/create-table.png){width="90%"}
+[![](figures/create-table.png){width="90%"}](#){data-modal-type="image" data-modal-url="figures/create-table.png"}
 :::
 :::
 :::
@@ -259,7 +261,7 @@ touch example.db
 
 :::{.column width="60%"}
 :::{style="text-align: center;"}
-![](figures/add-columns.png){width="100%"}
+[![](figures/add-columns.png){width="100%"}](#){data-modal-type="image" data-modal-url="figures/add-columns.png"}
 :::
 
 - This is equivalent of the following SQL code (as you can see in the editor):
@@ -279,7 +281,7 @@ CREATE TABLE drivers (
 ## Creating a table with SQLite3 Editor
 
 :::{style="margin-top: 50px; font-size: 22px; text-align=center;"}
-![](figures/view-table.png)
+[![](figures/view-table.png)](#){data-modal-type="image" data-modal-url="figures/view-table.png"}
 :::
 
 ## Database structure and data types in SQLite
@@ -361,7 +363,7 @@ Table: orders
 ## Add rows to table using the editor
 
 :::{style="margin-top: 50px; text-align: center; font-size: 22px;"}
-![](figures/add-rows.png){width="90%"}
+[![](figures/add-rows.png){width="90%"}](#){data-modal-type="image" data-modal-url="figures/add-rows.png"}
 :::
 
 ## Adding rows to the table using SQL commands
@@ -395,7 +397,7 @@ INSERT INTO drivers (driver_id, driver_name, nationality, victories) VALUES
 ## Adding rows to the table
 
 :::{style="margin-top: 50px; font-size: 22px; text-align=center;"}
-![](figures/added-values.png)
+[![](figures/added-values.png)](#){data-modal-type="image" data-modal-url="figures/added-values.png"}
 :::
 
 ## Querying the table
@@ -412,7 +414,7 @@ SELECT * FROM drivers;
 - If you are running SQL in the command line, you need to type `SELECT` to see the results
 
 :::{style="text-align: center;"}
-![](figures/select-all.png){width="68%"}
+[![](figures/select-all.png){width="68%"}](#){data-modal-type="image" data-modal-url="figures/select-all.png"}
 :::
 ::: 
 
@@ -469,7 +471,7 @@ DROP TABLE students;
 :::
 
 :::{style="text-align: center;"}
-![](figures/table-info.png){width="70%"}
+[![](figures/table-info.png){width="70%"}](#){data-modal-type="image" data-modal-url="figures/table-info.png"}
 :::
 
 ## Creating and modifying table schemas
@@ -504,21 +506,21 @@ DROP TABLE students;
 :::{.column width="50%"}
 - Add a column: `ALTER TABLE students ADD COLUMN age INTEGER;`
 
-![](figures/add-column.png)
+[![](figures/add-column.png)](#){data-modal-type="image" data-modal-url="figures/add-column.png"}
 
 - Drop a column: `ALTER TABLE students DROP COLUMN major;`
 
-![](figures/drop-column.png)
+[![](figures/drop-column.png)](#){data-modal-type="image" data-modal-url="figures/drop-column.png"}
 :::
 
 :::{.column width="50%"}
 - Rename a column: `ALTER TABLE students RENAME COLUMN gpa TO grade;`
 
-![](figures/rename-column.png){width="90%}
+[![](figures/rename-column.png){width="90%}](#){data-modal-type="image" data-modal-url="figures/rename-column.png"}
 
 - Delete a row with `student_id = 2`: `DELETE FROM students WHERE student_id = 2;`
 
-![](figures/delete-row.png)
+[![](figures/delete-row.png)](#){data-modal-type="image" data-modal-url="figures/delete-row.png"}
 :::
 :::
 :::
@@ -537,7 +539,7 @@ DROP TABLE students;
 SELECT driver_id, nationality FROM drivers;
 ```
 
-![](figures/select-columns.png)
+[![](figures/select-columns.png)](#){data-modal-type="image" data-modal-url="figures/select-columns.png"}
 :::
 
 :::{.column width="50%"}
@@ -550,7 +552,7 @@ SELECT * FROM drivers
 WHERE nationality = 'German';
 ```
 
-![](figures/where-german.png)
+[![](figures/where-german.png)](#){data-modal-type="image" data-modal-url="figures/where-german.png"}
 :::
 :::
 :::
@@ -568,7 +570,7 @@ SELECT * FROM drivers
 WHERE (nationality = 'Spanish') OR (nationality = 'German');
 ```
 
-![](figures/or-conditions.png)
+[![](figures/or-conditions.png)](#){data-modal-type="image" data-modal-url="figures/or-conditions.png"}
 :::
 
 :::{.column width="46%"}
@@ -580,7 +582,7 @@ SELECT * FROM drivers
 WHERE (nationality = 'German') AND (driver_id = 3);
 ```
 
-![](figures/and-conditions.png)
+[![](figures/and-conditions.png)](#){data-modal-type="image" data-modal-url="figures/and-conditions.png"}
 :::
 :::
 :::
@@ -604,7 +606,7 @@ SELECT SUM(victories) AS sum_victories,
 FROM drivers;
 ```
 
-![](figures/aggregate.png)
+[![](figures/aggregate.png)](#){data-modal-type="image" data-modal-url="figures/aggregate.png"}
 :::
 
 :::{.column width="50%"}
@@ -618,7 +620,7 @@ SELECT driver_name, victories FROM drivers
 ORDER BY victories ASC;
 ```
 
-![](figures/order-asc.png)
+[![](figures/order-asc.png)](#){data-modal-type="image" data-modal-url="figures/order-asc.png"}
 :::
 :::
 :::
@@ -653,7 +655,7 @@ FROM drivers
 GROUP BY nationality;
 ```
 
-![](figures/groupby.png)
+[![](figures/groupby.png)](#){data-modal-type="image" data-modal-url="figures/groupby.png"}
 :::
 
 :::{.column width="50%"}
@@ -673,7 +675,7 @@ FROM drivers
 GROUP BY nationality;
 ```
 
-![](figures/round.png)
+[![](figures/round.png)](#){data-modal-type="image" data-modal-url="figures/round.png"}
 :::
 :::
 :::
@@ -699,7 +701,7 @@ HAVING SUM(victories) > 50;
 - Why? Because `HAVING` is used to filter the results of the `GROUP BY` clause
 - [So please remember]{.alert}: `WHERE` is used before aggregating and `HAVING` is used after aggregating!
 
-![](figures/having.png){width="90%"}
+[![](figures/having.png){width="90%"}](#){data-modal-type="image" data-modal-url="figures/having.png"}
 :::
 
 ## Python vs. SQL
@@ -771,7 +773,7 @@ result = result[result['sum_victories'] > 10]
 :::
 
 :::{.column width="50%"}
-![](figures/export-import.png)
+[![](figures/export-import.png)](#){data-modal-type="image" data-modal-url="figures/export-import.png"}
 :::
 :::
 :::
@@ -840,11 +842,11 @@ WHERE victories > (SELECT AVG(victories) FROM drivers);
 
 :::{.columns}
 :::{.column width="50%"}
-![](figures/app02-01.png)
+[![](figures/app02-01.png)](#){data-modal-type="image" data-modal-url="figures/app02-01.png"}
 :::
 
 :::{.column width="50%"}
-![](figures/app02-02.png)
+[![](figures/app02-02.png)](#){data-modal-type="image" data-modal-url="figures/app02-02.png"}
 :::
 :::
 

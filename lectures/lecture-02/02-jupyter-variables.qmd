@@ -18,10 +18,14 @@ format:
           </style>
     footer: "[Packages, Variables, and Lists](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-02/02-jupyter-variables.html)"
     slide-number: true
+revealjs-plugins:
+  - multimodal
+  - appearance
 transition: slide
 transition-speed: default
 scrollable: true
 engine: jupyter
+jupyter: python3
 editor:
   render-on-save: true
 ---
@@ -48,7 +52,7 @@ editor:
 :::
 
 :::{style="text-align: center; font-size: 20px; margin-top: -60px;"}
-![](figures/project_flow.png){width="60%"}
+[![](figures/project_flow.png){width="60%"}](#){data-modal-type="image" data-modal-url="figures/project_flow.png"}
 :::
 :::
 
@@ -59,17 +63,17 @@ editor:
 :::{style="margin-top: 30px; font-size: 24px;"}
 :::{.columns}
 :::{.column width="50%"}
-- A [Python environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) is a self-contained directory that contains a specific Python interpreter and a collection of packages
-- It allows you to manage dependencies and avoid conflicts between different projects
-- You can create multiple environments with different versions of Python and packages
-- Each environment is isolated from others, ensuring that changes in one environment do not affect others
-- You can create, activate, and deactivate environments using the command line or Anaconda Navigator
-- The default environment is called `base`, and it is created when you install Anaconda
+- A [Python environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) is a [self-contained folder]{.alert} with its own Python and packages
+- It helps you [avoid conflicts]{.alert} between projects
+- You can have many environments, each with different versions
+- Environments are [isolated]{.alert}, so changes in one do not affect the others
+- You can create, activate, and deactivate them from the command line or Anaconda Navigator
+- The default one is called `base` and ships with Anaconda
 :::
 
 :::{.column width="50%"}
 :::{style="text-align: center; margin-top: -30px;"}
-![](figures/env.jpg){width="100%"}
+[![](figures/env.jpg){width="100%"}](#){data-modal-type="image" data-modal-url="figures/env.jpg"}
 :::
 :::
 :::
@@ -77,20 +81,58 @@ editor:
 
 ## {background-image="figures/anaconda_navigator_installed.png" background-size="100%"}
 
+## Opening the terminal in VS Code
+
+:::{style="margin-top: 30px; font-size: 24px;"}
+- All `conda` commands run inside VS Code's [integrated terminal]{.alert}
+- Open it from the menu: **View → Terminal** (or press `` Ctrl + ` ``)
+
+:::{style="margin-top: 30px;"}
+:::
+
+:::{.columns}
+:::{.column width="50%"}
+### macOS
+
+- The terminal opens with [zsh]{.alert} by default
+- The first time only, run:
+
+```{verbatim}
+conda init zsh
+conda update conda
+```
+
+- Close and reopen the terminal
+- From now on, you can type `conda` commands directly
+:::
+
+:::{.column width="50%"}
+### Windows
+
+- VS Code may default to PowerShell or Command Prompt
+- For conda, switch to the [Anaconda PowerShell Prompt]{.alert}
+- Click the small dropdown next to the `+` icon at the top of the terminal panel and pick "Anaconda PowerShell Prompt"
+- [More info on Anaconda + VS Code](https://www.anaconda.com/docs/getting-started/guides/ides/vscode)
+:::
+:::
+:::
+
 ## Creating and managing environments with the command line
 
 :::{style="margin-top: 30px; font-size: 20px;"}
 :::{.columns}
 :::{.column width="50%"}
 - For this course, we will use the `base` environment
-- But you are free to create your own environments if you want!
-- There are two ways to create environments:
-  - Using the command line: `conda create -n datasci151 python=3.12`
-  - Using Anaconda Navigator: Go to the "Environments" tab and click on "Create"
-- After creating an environment in the command line, you can activate it using the command line: `conda activate datasci151`
-- To remove a package from an environment, use the command line: `conda remove package_name`
-- To deactivate an environment, use the command line: `conda deactivate`
-- To remove an environment, use the command line: `conda remove -n datasci151 --all`
+- But [you are free to create your own environments if you want!]{.alert}
+- There are [two ways]{.alert} to create environments:
+  - Command line: `conda create -n datasci151 python=3.12`
+  - Anaconda Navigator: go to the "Environments" tab and click "Create"
+- Once it exists, the useful commands are:
+  - Activate: `conda activate datasci151`
+  - Install a package: `conda install package_name`
+  - Remove a package: `conda remove package_name`
+  - Deactivate: `conda deactivate`
+  - Delete the environment: `conda remove -n datasci151 --all`
 :::
 
 :::{.column width="50%"}
@@ -113,13 +155,11 @@ conda deactivate
 conda remove -n datasci151 --all
 ```
 
-- Windows users, please open the [Anaconda PowerShell Prompt](https://powershellcommands.com/anaconda-powershell-prompt) instead of the regular command line. [More info here.](https://www.anaconda.com/docs/tools/working-with-conda/ide-tutorials/vscode)
-- You can also run the  following command in VSCode's terminal: 
+:::{style="margin-top: 20px;"}
+- [Important]{.alert}: tell VS Code which Python to use! Open the command palette (`Cmd + Shift + P` on macOS, `Ctrl + Shift + P` on Windows), type "Python: Select Interpreter", and pick your conda environment
+- This ensures that when you run code in your Jupyter Notebook, [it uses the correct Python and packages from your environment!]{.alert} More on this later 😉
+:::
 
-```{verbatim}
-conda update conda
-conda init
-```
 :::
 :::
 :::
@@ -142,11 +182,12 @@ conda init
 :::{.column width="50%"}
 - In Anaconda Navigator, you can search for packages in the "Environments" tab
 - The main packages we will use are:
-  - [numpy]{.alert}: for numerical computing
-  - [pandas]{.alert}: for data manipulation
-  - [matplotlib]{.alert}: for data visualisation
+  - [numpy](https://numpy.org/): for numerical computing
+  - [pandas](https://pandas.pydata.org/): for data manipulation
+  - [matplotlib](https://matplotlib.org/): for data visualisation
+  - [sqlite3](https://docs.python.org/3/library/sqlite3.html): for working with SQLite databases
 
-- You should have them installed already, as they come with the base Anaconda installation
+- [You should have them installed already]{.alert}, as they come with the base Anaconda installation
 - If not, please try to install them using the Anaconda Navigator
 :::
 :::
@@ -161,17 +202,16 @@ conda init
 ## Setting up your workspace: VSCode & Jupyter
 
 :::{style="margin-top: 30px; font-size: 22px;"}
-- We will use [Visual Studio Code (VSCode)]{.alert} as our code editor
-- VSCode is a lightweight, open-source code editor that supports many programming languages, including Python
-- It has excellent support for Jupyter Notebooks, making it a great choice for data science projects
+- As you have noticed, we will use [Visual Studio Code (VSCode)]{.alert} as our code editor
+- It has excellent support for Jupyter Notebooks and integrates well with Anaconda environments
 
-- **Ensure VS Code Uses Your Anaconda Python (Kernel Selection):**
-  - When you open or create a `.ipynb` file in VS Code, it needs to know which Python installation (kernel) to use.
-  - Look for the kernel indicator (usually top-right). If it's not set or incorrect (e.g., not pointing to your Anaconda Python), click it.
-  - Choose "Python Environments" and select the Python version associated with your Anaconda installation.
+- **Ensure VSCode Uses Your Anaconda Python (Kernel Selection):**
+  - When you open or create a `.ipynb` file in VSCode, it needs to know which Python installation (kernel) to use
+  - Look for the kernel indicator (usually top-right). If it's not set or incorrect (e.g., not pointing to your Anaconda Python), click it
+  - Choose "Python Environments" and select the Python version associated with your Anaconda installation
 
 :::{style="text-align: center;"}
-![](figures/python_kernel.png){alt="VS Code Python Kernel Selection" width="900"}
+[![](figures/python_kernel.png){alt="VS Code Python Kernel Selection" width="900"}](#){data-modal-type="image" data-modal-url="figures/python_kernel.png"}
 :::
 :::
 
@@ -181,20 +221,26 @@ conda init
 :::{.columns}
 :::{.column width="50%"}
 **Option 1: Via File Menu**
+
 - Go to "File" > "New File...".
 - Select "Jupyter Notebook" from the options.
 - Save the new file with a `.ipynb` extension (e.g., `lecture_notes.ipynb`).
 
-![](figures/vscode-new-file.png){alt="VS Code New File Menu" width="100%"}
+:::{style="text-align: center;"}
+[![](figures/vscode-new-file.png){alt="VS Code New File Menu" width="80%"}](#){data-modal-type="image" data-modal-url="figures/vscode-new-file.png"}
+:::
 :::
 
 :::{.column width="50%"}
 **Option 2: Via Command Palette**
+
 - Press `Cmd + Shift + P` (macOS) or `Ctrl + Shift + P` (Windows/Linux).
 - Type "Create: New Jupyter Notebook" and select it.
 - Again, ensure the correct kernel is selected for this new notebook.
 
-![](figures/vscode-jupyter.png){alt="VS Code Command Palette for New Jupyter Notebook" width="100%"}
+:::{style="text-align: center;"}
+[![](figures/vscode-jupyter.png){alt="VS Code Command Palette for New Jupyter Notebook" width="80%"}](#){data-modal-type="image" data-modal-url="figures/vscode-jupyter.png"}
+:::
 :::
 :::
 :::
@@ -270,16 +316,16 @@ VS Code offers several ways to inspect your DataFrame:
 - [Jupyter Variables Tab:]{.alert}
     - Look for a "Variables" icon or section in the Jupyter interface within VS Code
     - Clicking it shows active variables; double-clicking a DataFrame (like `carfeatures`) opens it in a new tab for viewing
-    ![](figures/topbar.png){alt="Jupyter Toolbar with Variables button" width="600"}
-    ![](figures/sampledata.png){alt="DataFrame viewed in VS Code tab" width="600"}
+    [![](figures/topbar.png){alt="Jupyter Toolbar with Variables button" width="600"}](#){data-modal-type="image" data-modal-url="figures/topbar.png"}
+    [![](figures/sampledata.png){alt="DataFrame viewed in VS Code tab" width="600"}](#){data-modal-type="image" data-modal-url="figures/sampledata.png"}
 :::
 
 :::{.column width="50%"}
 - [Data Wrangler Extension (if installed):](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler)
     - This extension provides more advanced tools for data viewing and cleaning
     - You might find a "View Data" button or a right-click option on the DataFrame variable
-    ![](figures/data-wrangler.png){alt="Data Wrangler button" width="600"}
-    ![](figures/data-wrangler02.png){alt="Data Wrangler interface" width="600"}
+    [![](figures/data-wrangler.png){alt="Data Wrangler button" width="600"}](#){data-modal-type="image" data-modal-url="figures/data-wrangler.png"}
+    [![](figures/data-wrangler02.png){alt="Data Wrangler interface" width="600"}](#){data-modal-type="image" data-modal-url="figures/data-wrangler02.png"}
 :::
 :::
 :::

@@ -21,8 +21,10 @@ transition: slide
 transition-speed: default
 scrollable: true
 engine: jupyter
+jupyter: python3
 revealjs-plugins:
   - multimodal
+  - appearance
 editor:
   render-on-save: true
 ---
@@ -73,7 +75,7 @@ editor:
   - SQLite supports foreign keys, and the Python `sqlite3` module handles them correctly by default
 
 :::{style="text-align: center;"}
-![](figures/common_database_keys_explained-f_mobile.png){width="70%"}
+[![](figures/common_database_keys_explained-f_mobile.png){width="70%"}](#){data-modal-type="image" data-modal-url="figures/common_database_keys_explained-f_mobile.png"}
 :::
 :::
 
@@ -161,7 +163,7 @@ pd.read_sql('SELECT * FROM teams', connection)
 ## Types of joins
 
 :::{style="margin-top: 50px; font-size: 20px; text-align: center;"}
-![](figures/joins.webp){width="80%"}
+[![](figures/joins.webp){width="80%"}](#){data-modal-type="image" data-modal-url="figures/joins.webp"}
 :::
 
 ## Inner join

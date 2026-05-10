@@ -17,10 +17,14 @@ format:
           }
           </style>
     footer: "[Maths with NumPy](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-04/04-maths-arrays-random.html)"
+revealjs-plugins:
+  - multimodal
+  - appearance
 transition: slide
 transition-speed: default
 scrollable: true
 engine: jupyter
+jupyter: python3
 editor:
   render-on-save: true
 ---
@@ -44,7 +48,7 @@ editor:
 
 :::{.column width="50%"}
 :::{style="text-align: center;"}
-![](figures/boolean03.jpg){width="90%"}
+[![](figures/boolean03.jpg){width="90%"}](#){data-modal-type="image" data-modal-url="figures/boolean03.jpg"}
 :::
 :::
 :::
@@ -407,7 +411,7 @@ plt.show()
 :::
 
 :::{.column width="50%"}
-![](figures/boole.jpg){width="100%"}
+[![](figures/boole.jpg){width="100%"}](#){data-modal-type="image" data-modal-url="figures/boole.jpg"}
 :::
 :::
 :::
@@ -593,7 +597,7 @@ vec_a == vec_b
 :::
 
 :::{.column width="50%"}
-![](figures/boolean01.jpg){width="100%"}
+[![](figures/boolean01.jpg){width="100%"}](#){data-modal-type="image" data-modal-url="figures/boolean01.jpg"}
 :::
 :::
 :::

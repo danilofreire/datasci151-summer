@@ -16,10 +16,14 @@ format:
           }
           </style>
     footer: "[Data Wrangling with Pandas](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-08/08-data-wrangling.html)"
+revealjs-plugins:
+  - multimodal
+  - appearance
 transition: slide
 transition-speed: default
 scrollable: true
 engine: jupyter
+jupyter: python3
 editor:
   render-on-save: true
 ---
@@ -41,9 +45,9 @@ editor:
 
 :::{.column width="50%"}
 :::{style="text-align: center; margin-top: -30px;"}
-![](figures/functions.webp){width="80%"}
+[![](figures/functions.webp){width="80%"}](#){data-modal-type="image" data-modal-url="figures/functions.webp"}
 
-![](figures/lambda.jpg){width="80%"}
+[![](figures/lambda.jpg){width="80%"}](#){data-modal-type="image" data-modal-url="figures/lambda.jpg"}
 :::
 :::
 :::
@@ -66,7 +70,7 @@ editor:
 
 :::{.column width="50%"}
 :::{style="text-align: center; margin-top: -90px;"}
-![](figures/pandas.png){width="100%"}
+[![](figures/pandas.png){width="100%"}](#){data-modal-type="image" data-modal-url="figures/pandas.png"}
 :::
 :::
 :::
@@ -441,7 +445,7 @@ display(circuits.head(2))
 :::{style="margin-top: 30px; font-size: 23px;"}
 :::{.columns}
 :::{.column width="50%"}
-![](figures/codebook.png)
+[![](figures/codebook.png)](#){data-modal-type="image" data-modal-url="figures/codebook.png"}
 
 - `Field` - Name of the variable
 - `Type` - Type of the variable

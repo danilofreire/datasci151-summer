@@ -16,10 +16,14 @@ format:
           }
           </style>
     footer: "[Subsetting Data](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-10/10-subsetting-data.html)"
+revealjs-plugins:
+  - multimodal
+  - appearance
 transition: slide
 transition-speed: default
 scrollable: true
 engine: jupyter
+jupyter: python3
 editor:
   render-on-save: true
 ---
@@ -44,7 +48,7 @@ editor:
 
 :::{.column width="50%"}
 :::{style="text-align: center;"}
-![](/figures/pandas.png)
+[![](/figures/pandas.png)](#){data-modal-type="image" data-modal-url="/figures/pandas.png"}
 :::
 :::
 :::
@@ -66,7 +70,7 @@ editor:
 
 :::{.column width="50%"}
 :::{style="text-align: center;"}
-![](/figures/data-wrangler01.png)
+[![](/figures/data-wrangler01.png)](#){data-modal-type="image" data-modal-url="/figures/data-wrangler01.png"}
 :::
 
 - The extension is automatically integrated with the Jupyter extension, so you can open a `.csv` file and start wrangling the data
@@ -95,7 +99,7 @@ editor:
 
 :::{.column width="50%"}
 :::{style="text-align: center;"}
-![](/figures/data-wrangler02.png){width="70%"}
+[![](/figures/data-wrangler02.png){width="70%"}](#){data-modal-type="image" data-modal-url="/figures/data-wrangler02.png"}
 :::
 :::
 :::
@@ -104,19 +108,19 @@ editor:
 ## Subsetting data with `Data Wrangler`
 
 :::{style="margin-top: 30px; text-align: center;"}
-![](/figures/data-wrangler03.png){width="85%"}
+[![](/figures/data-wrangler03.png){width="85%"}](#){data-modal-type="image" data-modal-url="/figures/data-wrangler03.png"}
 :::
 
 ## Subsetting data with `Data Wrangler`
 
 :::{style="margin-top: 30px; text-align: center;"}
-![](/figures/data-wrangler04.png){width="85%"}
+[![](/figures/data-wrangler04.png){width="85%"}](#){data-modal-type="image" data-modal-url="/figures/data-wrangler04.png"}
 :::
 
 ## Subsetting data with `Data Wrangler`
 
 :::{style="margin-top: 30px; text-align: center;"}
-![](/figures/data-wrangler05.png){width="85%"}
+[![](/figures/data-wrangler05.png){width="85%"}](#){data-modal-type="image" data-modal-url="/figures/data-wrangler05.png"}
 :::
 
 # Any questions so far? 🤔 {background-color="#2d4563"}
@@ -128,19 +132,19 @@ editor:
 :::{.column width="50%"}
 - When you click on `Filter`, you will see a menu like this:
 
-![](/figures/data-wrangler06.png){width="85%"}
+[![](/figures/data-wrangler06.png){width="85%"}](#){data-modal-type="image" data-modal-url="/figures/data-wrangler06.png"}
 
 - Select the column you want to filter, and click on `Add Filter`
 - Then you can select the condition you want to filter by and click on `Apply`
 
-![](/figures/data-wrangler07.png){width="85%"}
+[![](/figures/data-wrangler07.png){width="85%"}](#){data-modal-type="image" data-modal-url="/figures/data-wrangler07.png"}
 
 - You can also sort the data by clicking on `Sort` and selecting the column you want to sort by
 :::
 
 :::{.column width="50%"}
 :::{style="text-align: center;"}
-![](/figures/data-wrangler08.png)
+[![](/figures/data-wrangler08.png)](#){data-modal-type="image" data-modal-url="/figures/data-wrangler08.png"}
 :::
 
 - `Data Wrangler` will also show the Python code that corresponds to the operations you are doing!
@@ -172,9 +176,9 @@ editor:
 
 :::{.column width="50%"}
 :::{style="text-align: center;"}
-![](/figures/data-wrangler09.png){width="70%"}
+[![](/figures/data-wrangler09.png){width="70%"}](#){data-modal-type="image" data-modal-url="/figures/data-wrangler09.png"}
 
-![](/figures/data-wrangler10.png){width="70%"}
+[![](/figures/data-wrangler10.png){width="70%"}](#){data-modal-type="image" data-modal-url="/figures/data-wrangler10.png"}
 :::
 :::
 :::

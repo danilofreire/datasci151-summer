@@ -16,10 +16,14 @@ format:
           }
           </style>
     footer: "[While and For Loops](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-06/06-loops.html)"
+revealjs-plugins:
+  - multimodal
+  - appearance
 transition: slide
 transition-speed: default
 scrollable: true
 engine: jupyter
+jupyter: python3
 editor:
   render-on-save: true
 ---
@@ -96,7 +100,7 @@ for i in variable:
 :::
 
 :::{.column width="50%"}
-![](figures/for-loops.png)
+[![](figures/for-loops.png)](#){data-modal-type="image" data-modal-url="figures/for-loops.png"}
 :::
 :::
 :::
@@ -128,7 +132,7 @@ for i in students_scores:
 :::
 
 :::{.column width="50%"}
-![](figures/forloop.png)
+[![](figures/forloop.png)](#){data-modal-type="image" data-modal-url="figures/forloop.png"}
 :::
 :::
 :::
@@ -434,7 +438,7 @@ while test_expression:
 ```
 :::
 :::{.column width="30%"}
-![](figures/while.png)
+[![](figures/while.png)](#){data-modal-type="image" data-modal-url="figures/while.png"}
 :::
 :::
 :::
@@ -551,7 +555,7 @@ Python provides statements to control the flow of execution within loops:
 
 :::{.column width="50%"}
 :::{style="margin-top: -30px; text-align: center;"}
-![](figures/break.png)
+[![](figures/break.png)](#){data-modal-type="image" data-modal-url="figures/break.png"}
 :::
 :::
 :::

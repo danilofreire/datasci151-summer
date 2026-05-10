@@ -17,10 +17,14 @@ format:
           }
           </style>
     footer: "[Conditional Statements](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-05/05-conditional-statements.html)"
+revealjs-plugins:
+  - multimodal
+  - appearance
 transition: slide
 transition-speed: default
 scrollable: true
 engine: jupyter
+jupyter: python3
 editor:
   render-on-save: true
 ---
@@ -45,7 +49,7 @@ Today we will:
 :::
 
 :::{.column width="50%"}
-![](figures/example.png){width="100%"}
+[![](figures/example.png){width="100%"}](#){data-modal-type="image" data-modal-url="figures/example.png"}
 :::
 :::
 :::
@@ -72,7 +76,7 @@ Today we will:
 :::
 
 :::{.column width="50%"}
-![](figures/if.png){width="70%"}
+[![](figures/if.png){width="70%"}](#){data-modal-type="image" data-modal-url="figures/if.png"}
 :::
 :::
 :::
@@ -248,7 +252,7 @@ else:
 :::
 
 :::{.column width="50%"}
-![](figures/elif.png){width="70%"}
+[![](figures/elif.png){width="70%"}](#){data-modal-type="image" data-modal-url="figures/elif.png"}
 :::
 :::
 :::
@@ -815,7 +819,7 @@ print(len(list_answers_rep))
 - In the body, store the output in a new variable called "letter_grade"
 - Print the letter grade at the end
 
-![](figures/grading_scale.png){width="100%"}
+[![](figures/grading_scale.png){width="100%"}](#){data-modal-type="image" data-modal-url="figures/grading_scale.png"}
 
 :::{.callout-important}
 Check that it works by trying different values of "points"!

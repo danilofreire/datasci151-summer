@@ -16,6 +16,9 @@ format:
           }
           </style>
     footer: "[Introduction](https://danilofreire.github.io/datasci151-summer/lectures/lecture-01/01-introduction.html)"
+revealjs-plugins:
+  - multimodal
+  - appearance
 transition: slide
 transition-speed: default
 scrollable: true
@@ -57,7 +60,7 @@ lapply(packages, install_if_missing)
 
 :::{.column width=40%}
 :::{style="text-align: center;, margin-top: -20px;"}
-![](figures/dark-side.jpg){width="100%"}
+[![](figures/dark-side.jpg){width="100%"}](#){data-modal-type="image" data-modal-url="figures/dark-side.jpg"}
 :::
 :::
 :::
@@ -161,7 +164,7 @@ Please remember to check the course website regularly for updates and announceme
 :::
 
 ::: {.column width=30%}
-![](figures/stupid-questions.jpg)
+[![](figures/stupid-questions.jpg)](#){data-modal-type="image" data-modal-url="figures/stupid-questions.jpg"}
 :::
 ::::
 
@@ -171,9 +174,9 @@ Please remember to check the course website regularly for updates and announceme
 ### The world's most popular programming language
 
 ::: {layout-ncol=2}
-![](figures/career.jpg)
+[![](figures/career.jpg)](#){data-modal-type="image" data-modal-url="figures/career.jpg"}
 
-![](figures/popularity.jpg)
+[![](figures/popularity.jpg)](#){data-modal-type="image" data-modal-url="figures/popularity.jpg"}
 :::
 
 ## Why Python
@@ -184,7 +187,7 @@ Please remember to check the course website regularly for updates and announceme
 There are thousands of Python user groups worldwide 
 
 The Python community is very active and welcoming!
-![](figures/python-meetup.png)
+[![](figures/python-meetup.png)](#){data-modal-type="image" data-modal-url="figures/python-meetup.png"}
 :::
 
 ::: {.column width=57%}
@@ -216,7 +219,7 @@ Much easier! 😃
 ### Salaries are good!
 
 :::{style="text-align: center;"}
-![](figures/salary.png){width="90%"}
+[![](figures/salary.png){width="90%"}](#){data-modal-type="image" data-modal-url="figures/salary.png"}
 :::
 
 ## Why SQL
@@ -233,8 +236,8 @@ Much easier! 😃
 :::
 
 ::: {.column width=50%}
-![](figures/sql.png){width=400px}
-![](figures/sqlite.png){width=400px}
+[![](figures/sql.png){width=400px}](#){data-modal-type="image" data-modal-url="figures/sql.png"}
+[![](figures/sqlite.png){width=400px}](#){data-modal-type="image" data-modal-url="figures/sqlite.png"}
 :::
 ::::
 
@@ -242,7 +245,7 @@ Much easier! 😃
 ### Salaries are good too!
 
 :::{style="text-align: center;"}
-![](figures/sql-salary.png){width="90%"}
+[![](figures/sql-salary.png){width="90%"}](#){data-modal-type="image" data-modal-url="figures/sql-salary.png"}
 :::
 
 # Course Logistics 📚 {background-color="#2d4563"}
@@ -283,7 +286,7 @@ Much easier! 😃
 
 ## Our Class in a Nutshell
 
-![](figures/nutshell.png)
+[![](figures/nutshell.png)](#){data-modal-type="image" data-modal-url="figures/nutshell.png"}
 
 ## Installing Python using Anaconda
 ### Anaconda has all the libraries we need
@@ -327,8 +330,8 @@ Much easier! 😃
 
 :::{.column width=50%}
 :::{style="margin-top: -30px; text-align: center;"}
-![](figures/github.png){width=80%}
-![](figures/git.png){width=80%}
+[![](figures/github.png){width=80%}](#){data-modal-type="image" data-modal-url="figures/github.png"}
+[![](figures/git.png){width=80%}](#){data-modal-type="image" data-modal-url="figures/git.png"}
 :::
 :::
 :::
@@ -351,7 +354,7 @@ Much easier! 😃
 
 :::{.column width=50%}
 :::{style="margin-top: -30px; text-align: center;"}
-![](figures/github02.png){width=100%}
+[![](figures/github02.png){width=100%}](#){data-modal-type="image" data-modal-url="figures/github02.png"}
 
 <https://github.com/danilofreire/datasci151-summer>
 :::
@@ -374,7 +377,7 @@ Much easier! 😃
 
 :::{.column width=60%}
 :::{style="margin-top: -30px; text-align: center;"}
-![](figures/jupyter.png)
+[![](figures/jupyter.png)](#){data-modal-type="image" data-modal-url="figures/jupyter.png"}
 
 - If you are using Anaconda, Jupyter Notebooks should be installed by default. If not, you can install it using the Anaconda Navigator or the command line
 
@@ -405,7 +408,7 @@ conda install jupyter
 - Just click on ["Jupyter Lite"]{.alert} and it will open a Jupyter Notebook in your browser
 
 :::{style="margin-top: -30px; text-align: center;"}
-![](figures/jupyterlite.png){width=80%}
+[![](figures/jupyterlite.png){width=80%}](#){data-modal-type="image" data-modal-url="figures/jupyterlite.png"}
 :::
 :::
 :::

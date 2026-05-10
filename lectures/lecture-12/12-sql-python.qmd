@@ -21,8 +21,10 @@ transition: slide
 transition-speed: default
 scrollable: true
 engine: jupyter
+jupyter: python3
 revealjs-plugins:
   - multimodal
+  - appearance
 editor:
   render-on-save: true
 ---

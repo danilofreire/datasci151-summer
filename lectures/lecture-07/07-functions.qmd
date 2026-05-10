@@ -16,10 +16,14 @@ format:
           }
           </style>
     footer: "[Functions](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-07/07-functions.html)"
+revealjs-plugins:
+  - multimodal
+  - appearance
 transition: slide
 transition-speed: default
 scrollable: true
 engine: jupyter
+jupyter: python3
 editor:
   render-on-save: true
 ---
@@ -44,9 +48,9 @@ editor:
 
 :::{.column width="50%"}
 :::{style="text-align: center; margin-top: -30px;"}
-![](figures/functions.webp){width="80%"}
+[![](figures/functions.webp){width="80%"}](#){data-modal-type="image" data-modal-url="figures/functions.webp"}
 
-![](figures/lambda.jpg){width="80%"}
+[![](figures/lambda.jpg){width="80%"}](#){data-modal-type="image" data-modal-url="figures/lambda.jpg"}
 :::
 :::
 :::
@@ -366,7 +370,7 @@ print(result)
 
 :::{.column width="50%"}
 :::{style="text-align: center; margin-top: -30px;"}
-![](figures/scope.png){width="60%"}
+[![](figures/scope.png){width="60%"}](#){data-modal-type="image" data-modal-url="figures/scope.png"}
 :::
 
 - It is easier to understand them with an example:
