@@ -202,13 +202,11 @@ conda remove -n datasci151 --all
 ## Setting up your workspace: VSCode & Jupyter
 
 :::{style="margin-top: 30px; font-size: 22px;"}
-- As you have noticed, we will use [Visual Studio Code (VSCode)]{.alert} as our code editor
-- It has excellent support for Jupyter Notebooks and integrates well with Anaconda environments
-
-- **Ensure VSCode Uses Your Anaconda Python (Kernel Selection):**
-  - When you open or create a `.ipynb` file in VSCode, it needs to know which Python installation (kernel) to use
-  - Look for the kernel indicator (usually top-right). If it's not set or incorrect (e.g., not pointing to your Anaconda Python), click it
-  - Choose "Python Environments" and select the Python version associated with your Anaconda installation
+- We will use [Visual Studio Code (VSCode)]{.alert} as our code editor
+- It works well with Jupyter Notebooks and Anaconda environments
+- Each `.ipynb` file needs a [kernel]{.alert}: the Python installation that will actually run your code
+- Look for the kernel indicator at the [top-right]{.alert} of the notebook
+- If it is missing or pointing to the wrong Python, click it, choose "Python Environments", and pick your Anaconda Python
 
 :::{style="text-align: center;"}
 [![](figures/python_kernel.png){alt="VS Code Python Kernel Selection" width="900"}](#){data-modal-type="image" data-modal-url="figures/python_kernel.png"}
@@ -252,16 +250,17 @@ conda remove -n datasci151 --all
 ## Loading Packages: the `import` statement
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-- Before you can use functions from an installed package in your notebook, you must `import` it into your current session
-- It's a strong convention to use common aliases (nicknames) for widely used packages using the `as` keyword. This improves code readability and conciseness
+- To use a package in your notebook, you first need to load it with [`import`]{.alert}
+- Most popular packages have a [short nickname]{.alert} (an *alias*) that you set with the `as` keyword
   - `import pandas as pd`
-  - `import matplotlib.pyplot as plt` (pyplot is the main plotting module from Matplotlib)
+  - `import matplotlib.pyplot as plt` (pyplot is the main plotting module of Matplotlib)
   - `import numpy as np`
-- These nicknames are widely recognised in the data science community, so using them makes your code more understandable to others
-- You can also import specific functions from a package using the `from` keyword
+- These aliases are a [shared convention]{.alert} in the data science community
+- Using them keeps your code [shorter]{.alert} and easier for others to read
+- If you only need one or two functions, you can grab them directly with [`from`]{.alert}
   - `from pandas import DataFrame`
   - `from matplotlib.pyplot import plot`
-- This is useful if you only need a few functions from a package and want to avoid loading the entire package
+- This way, you avoid loading the entire package into memory
 :::
 
 ## Loading packages: in practice
@@ -290,7 +289,7 @@ print("Packages (matplotlib.pyplot, pandas, numpy) loaded successfully!")
 
 :::{style="margin-top: 30px; font-size: 23px;"}
 - Pandas is excellent for working with tabular data
-- The `pd.read_csv()` function is used to load data from a Comma Separated Values (CSV) file into a pandas DataFrame
+- The [`pd.read_csv()`]{.alert} function is used to load data from a Comma Separated Values (CSV) file into a pandas [DataFrame]{.alert}
 - Windows users, if you encounter issues with your file path, try using double backslashes `\\` or a raw string `r'path'` to avoid escape character issues (e.g., `'C:\\path\\to\\file.csv'` or `r'C:\path\to\file.csv'`)
 
 ```{python}
@@ -439,7 +438,7 @@ table
 ## Example: Generating basic summary statistics
 
 :::{style="margin-top: 30px; font-size: 22px;"}
-- The `.describe()` method on a DataFrame provides key descriptive statistics for all numerical columns
+- The [`.describe()`]{.alert} method on a DataFrame provides key descriptive statistics for all numerical columns
 
 ```{python}
 #| echo: true
@@ -472,8 +471,10 @@ The `horsepower` column might be missing from `.describe()` if it was read as no
 :::
 
 :::{.column width="60%"}
-- Use `type()` to check a variable's data type.
-- Use `print()` to display a variable's value.
+- Use `type()` to check a variable's data type, and `print()` to show its value
+- An [f-string]{.alert} is a regular string with the letter `f` written just before the opening quote
+- Anything you put inside `{}` is [replaced by the value of that variable]{.alert} when the string is printed
+- For example, if `name = "Alice"`, then `f"Hi, {name}!"` prints `Hi, Alice!`
 
 ```{python}
 #| echo: true
@@ -493,20 +494,20 @@ print(f"Value: {is_enrolled}, Type: {type(is_enrolled)}")
 :::
 :::
 
-## Storing variables in memory & naming conventions 
+## Storing variables in memory & naming conventions {#sec:exercise01}
 
 :::{style="margin-top: 30px; font-size: 22px;"}
 :::{.columns}
 ::::{.column width="50%"}
-- Assignment: Use the `=` operator (e.g., `user_count = 150`).
-- **Naming Rules & Best Practices:**
-  - Must start with a letter or underscore (`_`).
-  - Can contain letters, numbers, and underscores.
-  - Case-sensitive (`myVariable` is different from `myvariable`).
-  - Cannot be a Python keyword (e.g., `if`, `for`, `class`).
-  - Use descriptive names (e.g., `average_score` instead of `avg`).
-  - Convention: `snake_case` (lowercase with underscores) for variables and functions.
-- View active variables in VS Code Jupyter using the "Variables" panel or Data Wrangler.
+- Assign values with `=`, e.g., `user_count = 150`
+- **Naming rules (Python enforces these):**
+  - Must start with a letter or underscore (`_`); after that, use letters, numbers, or `_`
+  - Must not match a Python keyword (`if`, `for`, `class`, ...)
+  - Names are [case-sensitive]{.alert}: `myVar` and `myvar` are different variables
+- **Naming style (we choose these):**
+  - Use [`snake_case`]{.alert}: lowercase words joined with underscores
+  - Pick descriptive names: `average_score` beats `avg`
+- See your active variables in the [Variables panel]{.alert} or Data Wrangler
 :::
 
 :::{.column width="50%"}
@@ -524,11 +525,12 @@ print(user_greeting)
 
 - [Try it yourself!]{.alert}
 - **Exercise:** Create a variable to store the title of your favourite film and print it!
+- [[Solution]{.button}](#sec:appendix01)
 :::
 :::
 :::
 
-## Basic operations with variables
+## Basic operations with variables {#sec:exercise02}
 
 :::{style="margin-top: 30px; font-size: 21px;"}
 :::{.columns}
@@ -571,6 +573,7 @@ print(full_name)
 
 - [Try it yourself!]{.alert}
 - **Exercise:** Define variables for your name and major, then print a concatenated string introducing yourself
+- [[Solution]{.button}](#sec:appendix02)
 :::
 :::
 :::
@@ -580,14 +583,13 @@ print(full_name)
 ## Lists: Ordered, mutable collections
 
 :::{style="margin-top: 30px; font-size: 28px;"}
-- Lists are versatile and widely used to store multiple items in a single variable.
-- **Characteristics:**
-    - Created using square brackets `[]`, items separated by commas.
-    - Items can be of [different data types]{.alert} (e.g., numbers, strings, even other lists).
-    - [Ordered]{.alert}: Items maintain their position/sequence.
-    - [Mutable]{.alert}: You can change, add, or remove items after the list is created.
-- Access items using their **index** (position).
-- [Very important: Python indexing starts at 0!]{.alert} The first item is at index `0`.
+- Lists let you store [multiple items in a single variable]{.alert}
+- Create one with square brackets `[]` and commas between items
+- Items can be of [different data types]{.alert}: numbers, strings, even other lists
+- Lists are [ordered]{.alert}: items keep their position
+- Lists are [mutable]{.alert}: you can change, add, or remove items at any time
+- Access an item by its [index]{.alert} (its position in the list)
+- [Python indexing starts at 0!]{.alert} The first item is at index `0`
 :::
 
 ## Lists: Ordered, mutable collections
@@ -616,13 +618,13 @@ nested_list_example
 ## Accessing list elements: Indexing
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-- Use square brackets `[]` with the index number after the list's name.
-  - `my_list[0]` gets the first element.
-  - `my_list[1]` gets the second element.
+- Use square brackets `[]` with the index number after the list's name
+  - `my_list[0]` gets the first element
+  - `my_list[1]` gets the second element
 - **Negative Indexing:**
-  - `my_list[-1]` gets the *last* element.
-  - `my_list[-2]` gets the second-to-last element.
-- For nested lists, use multiple index brackets: `nested_list[outer_index][inner_index]`.
+  - `my_list[-1]` gets the *last* element
+  - `my_list[-2]` gets the second-to-last element
+- For nested lists, use multiple index brackets: `nested_list[outer_index][inner_index]`
 ```{python}
 #| echo: true
 #| eval: true
@@ -633,7 +635,7 @@ print(f"Last prime: {prime_numbers[-1]}")     # Output: 11
 ```
 :::
 
-## Accessing list elements: Indexing
+## Accessing list elements: Indexing {#sec:exercise03}
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 - Using `nested_list_example = [[[1, 2], ["a", "b"], ["Python", 3.11, 42, True]]]`
@@ -650,6 +652,7 @@ nested_list_example[2][0]
 - [Try it yourself!]{.alert}
   - Create a list containing the titles of your three favourite films
   - Print the last film using both positive and negative indexing
+- [[Solution]{.button}](#sec:appendix03)
 :::
 
 # Visualising data with matplotlib 📊 {background-color="#2d4563"}
@@ -659,10 +662,10 @@ nested_list_example[2][0]
 :::{style="margin-top: 30px; font-size: 22px;"}
 :::{.columns}
 :::{.column width="40%"}
-- `matplotlib.pyplot` (imported as `plt`) is Python's primary plotting library
-- `plt.hist()` creates a histogram. This is useful for visualising the distribution of a single set of numerical data or the frequency of categorical items in a list
-- `plt.show()` displays the generated plot
-- Always add labels and a title for clarity:
+- [`matplotlib.pyplot`]{.alert} (imported as `plt`) is Python's main plotting library
+- [`plt.hist()`]{.alert} creates a histogram: useful for showing the distribution of numbers or how often each category appears in a list
+- [`plt.show()`]{.alert} draws the plot on screen
+- Always add a title and axis labels:
     - `plt.title("My Plot Title")`
     - `plt.xlabel("X-axis Label")`
     - `plt.ylabel("Y-axis Label")`
@@ -687,19 +690,21 @@ plt.show()
 :::
 :::
 
-## Try it yourself!
+## Try it yourself! {#sec:exercise04}
 
 :::{style="margin-top: 30px; font-size: 28px;"}
 - Create a list with repeated string values (e.g., favourite books) and generate a histogram
 - Ensure you add a title, and labels for the x and y axes!
+
+[[Solution]{.button}](#sec:appendix04)
 :::
 
 ## Visualising relationships: scatter plots with lists
 
 :::{style="margin-top: 30px; font-size: 22px;"}
-- `plt.scatter()` is used to create a scatter plot.
-- It requires two lists of equal length: one for the x-coordinates and one for the y-coordinates.
-- Scatter plots are excellent for visualising the relationship (or lack thereof) between two numerical variables.
+- [`plt.scatter()`]{.alert} creates a scatter plot
+- It needs two lists of [equal length]{.alert}: one for the x-axis, one for the y-axis
+- Scatter plots are great for spotting whether two numerical variables are [related to each other]{.alert} (or not)
 
 ```{python}
 #| echo: true
@@ -739,22 +744,23 @@ plt.show()
 **Suggestion:** Try another scatter plot using different columns, e.g., `x=carfeatures['acceleration']` vs `y=carfeatures['mpg']`.
 :::
 
-## Try it yourself!
+## Try it yourself! {#sec:exercise05}
 
 :::{style="margin-top: 30px; font-size: 28px;"}
 - Create two lists of numbers representing, for example, hours studied and exam scores.
 - Generate your own scatter plot from these lists.
 - Ensure you add a title, and labels for the x and y axes.
 
+[[Solution]{.button}](#sec:appendix05)
 :::
-
-# And that's all for today! 🎉 {background-color="#2d4563"}
 
 # Any Questions? 🤔 {background-color="#2d4563"}
 
-# See You Next Time! 🚀 {background-color="#2d4563"}
+# And that's all for today! 🎉 {background-color="#2d4563"}
 
-## Appendix - Solutions
+# Appendices: Solutions to exercises {background-color="#2d4563"}
+
+## Appendix 01 {#sec:appendix01}
 
 :::{style="margin-top: 30px; font-size: 22px;"}
 - Create a variable with your favourite film
@@ -763,8 +769,15 @@ plt.show()
 #| echo: true
 #| eval: true
 my_favourite_film = "The Godfather"
-print(my_favourite_film) 
+print(my_favourite_film)
 ```
+
+[[Back to exercise]{.button}](#sec:exercise01)
+:::
+
+## Appendix 02 {#sec:appendix02}
+
+:::{style="margin-top: 30px; font-size: 22px;"}
 - Define variables for your name and major, then print an introduction
 
 ```{python}
@@ -780,9 +793,11 @@ print(introduction_message)
 # Alternative using an f-string (formatted string literal - often preferred for readability)
 print(f"My name is {user_name} and I am majoring in {user_major}.")
 ```
+
+[[Back to exercise]{.button}](#sec:exercise02)
 :::
 
-## Appendix - Solutions
+## Appendix 03 {#sec:appendix03}
 
 :::{style="margin-top: 30px; font-size: 22px;"}
 - Create a list of your three favourite films and print the last one
@@ -799,9 +814,11 @@ print(favourite_films_list[2])
 # Print the last film using negative indexing (-1 always refers to the last element)
 print(favourite_films_list[-1])
 ```
+
+[[Back to exercise]{.button}](#sec:exercise03)
 :::
 
-## Appendix - Solutions
+## Appendix 04 {#sec:appendix04}
 
 :::{style="margin-top: 30px; font-size: 22px;"}
 - Create a list of your favourite books and generate a histogram
@@ -821,9 +838,11 @@ plt.xlabel("Book Title")
 plt.ylabel("Number of Mentions")
 plt.show()
 ```
+
+[[Back to exercise]{.button}](#sec:exercise04)
 :::
 
-## Appendix - Solutions
+## Appendix 05 {#sec:appendix05}
 
 :::{style="margin-top: 30px; font-size: 22px;"}
 - Create two lists of numbers (e.g., hours studied & exam scores) and make a scatter plot
@@ -842,4 +861,6 @@ plt.ylim(50, 100) # Set y-axis limits
 plt.grid(True, linestyle='--', alpha=0.7) # Add a styled grid
 plt.show()
 ```
+
+[[Back to exercise]{.button}](#sec:exercise05)
 :::
