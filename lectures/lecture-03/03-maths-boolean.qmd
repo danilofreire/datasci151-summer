@@ -37,13 +37,13 @@ editor:
 :::{style="margin-top: 30px; font-size: 22px;"}
 :::{.columns}
 :::{.column width="50%"}
-- First, a brief overview of [NumPy](https://numpy.org)
-- [NumPy](https://numpy.org) (short for "Numerical Python") is a library that provides support for large, multi-dimensional arrays and matrices
-- [An array](https://numpy.org/doc/stable/user/absolute_beginners.html) is [a collection of numbers that are arranged in a regular grid]{.alert} (vector, matrix, high-dimensional array - tensors)
-- In simpler terms, NumPy arrays are a "super-powered list of numbers"
-- NumPy is the backbone of many other libraries in Python, such as `pandas` and `scikit-learn`
-- We will also learn about the `random` module, which generates random numbers
-- Then, we will see how to use [Boolean logic](https://en.wikipedia.org/wiki/Boolean_data_type) in Python
+- [NumPy](https://numpy.org) (short for [Numerical Python]{.alert}) is a [library]{.alert} for working with [arrays]{.alert}
+- An [array](https://numpy.org/doc/stable/user/absolute_beginners.html) is a collection of numbers arranged in a [regular grid]{.alert}
+- 1D arrays are [vectors]{.alert}, 2D arrays are [matrices]{.alert}, higher-dimensional ones are [tensors]{.alert}
+- Think of a NumPy array as a "super-powered list of numbers"
+- NumPy is the [backbone]{.alert} of `pandas`, `scikit-learn`, and many other Python libraries
+- Next, we will see the [`random`]{.alert} module, which generates random numbers
+- Finally, [Boolean logic](https://en.wikipedia.org/wiki/Boolean_data_type): how Python works with `True` and `False`
 :::
 
 :::{.column width="50%"}
@@ -63,11 +63,8 @@ editor:
 :::{.column width="50%"}
 - As usual, we start by importing the libraries we will use
 - NumPy has several functions
-- For instance, $ln(x), e^x, sin(x), cos(x), \sqrt{x}$
+- For instance, $\ln(x), e^x, \sin(x), \cos(x), \sqrt{x}$
 - Remember that exponentiation in Python is done using `**`, not `^`
-
-<br>
-
 - You can check a list of NumPy functions [here](https://numpy.org/doc/stable/reference/routines.math.html) (there are many!)
 :::
 
@@ -100,7 +97,7 @@ print(np.sqrt(1))
 - Create a new variable, $x = 5$
 - Compute $\pi x^2$
 - Compute $\frac{1}{\sqrt{2\pi}}e^{-x^2}$
-  - This is the probability density function of the standard normal distribution (don't worry if you don't know what it is yet! 🤓)
+  - This is the [probability density function of the standard normal distribution](https://en.wikipedia.org/wiki/Normal_distribution) (don't worry if you don't know what it is yet! 🤓)
 
 - Don't forget how to exponentiate in Python 😉 
 
@@ -121,9 +118,9 @@ x ** 5
 
 :::{style="margin-top: 40px; font-size: 32px;"}
 - NumPy arrays are created using the `np.array()` function
-- We can create arrays from lists
-- We can also create arrays with a sequence of numbers using `np.arange()`
-- We can create arrays with zeros or ones using `np.zeros()` and `np.ones()`
+- We can [create arrays from lists]{.alert}
+- We can also create arrays with a [sequence of numbers]{.alert} using `np.arange()`
+- We can create arrays with [zeros or ones]{.alert} using `np.zeros()` and `np.ones()`
 - And we're going to learn all of this in this lecture! 🤓
 :::
 
@@ -156,8 +153,8 @@ vec_d  = np.array([4,2])
 ## Accessing an element of an array
 
 :::{style="margin-top: 40px; font-size: 26px;"}
-- We can access elements of an array using square brackets `[]`
-- Remember that Python is zero-indexed
+- We can access elements of an array using [square brackets]{.alert} `[]`
+- Remember that [Python is zero-indexed]{.alert}, which means that the first element is accessed with index 0, the second with index 1, and so on
   
 - Access the first and the third element of $a$
 ```{python}
@@ -174,7 +171,7 @@ print(vec_a[2])
 :::{style="margin-top: 40px; font-size: 26px;"}
 :::{.columns}
 :::{.column width="50%"}
-- We can perform operations with a single array and a scalar
+- We can perform operations with [a single array and a scalar]{.alert}
 - For instance, we can add or multiply a scalar to an array
 
 <br>
@@ -195,7 +192,7 @@ print(vec_a + 2)
 ```
 
 - A scalar refers to either an int or float
-- We can do many common operations with 
+- We can do many common operations, such as: 
 
 ```{python}
 #| echo: true
@@ -257,9 +254,10 @@ print(vec_a / vec_b)
 :::{style="margin-top: 40px; font-size: 26px;"}
 - NumPy provides several functions to compute summary statistics of an array
 - For instance, we can compute the mean, median, standard deviation, variance, minimum, and maximum
-- We can also compute the sum, product, and cumulative sum
+- We can also compute the sum, product, and cumulative sum of the elements in an array
 
-<br>
+:::{style="margin-top: 40px;"}
+:::
 
 ```{python}
 #| echo: true
@@ -269,6 +267,9 @@ print(np.std(vec_a))
 print(np.min(vec_a))
 print(np.median(vec_a))
 print(np.max(vec_a))
+print(np.sum(vec_a))
+print(np.prod(vec_a))
+print(np.cumsum(vec_a))
 ```
 :::
 
@@ -324,7 +325,7 @@ ValueError: operands could not be broadcast together with shapes (3,) (5,)
 :::{style="margin-top: 40px; font-size: 24px;"}
 :::{.columns}
 :::{.column width="40%"}
-- Why randomness?
+- [Why randomness?]{.alert}
   - Simulate different scenarios: high risk or low risk
   - Study properties of a complex system and/or estimator
   - In medicine, randomly assign subjects to treatment or control
@@ -344,8 +345,8 @@ ValueError: operands could not be broadcast together with shapes (3,) (5,)
 # Generate 10 random variables 
 # from a normal distribution
 # with mean = 0 and sd = 1
-randomvar_a = np.random.normal(loc=0, scale=1, size=10)
-print(randomvar_a)
+random_var_a = np.random.normal(loc=0, scale=1, size=10)
+print(random_var_a)
 ```
 :::
 :::
@@ -354,8 +355,8 @@ print(randomvar_a)
 ## Random numbers differ every time!
 
 :::{style="margin-top: 40px; font-size: 30px;"}
-- Avoid this problem by drawing from a "pregenerated" set.
-- This is called a seed, and it is set using `np.random.seed()`
+- Avoid this problem by drawing from a "pregenerated" set!
+- This is called a [seed]{.alert}, and it is set using `np.random.seed()`
 - This allows for [reproducibility](https://en.wikipedia.org/wiki/Reproducibility) of results
 
 ```{python}
@@ -378,9 +379,9 @@ print(random_var_b)
 #| eval: true
 
 # Create a histogram of the random variable
-randomvar_x = np.random.normal(loc=0, scale=1, size=1000)
+random_var_x = np.random.normal(loc=0, scale=1, size=1000)
 
-plt.hist(x = randomvar_x)
+plt.hist(random_var_x)
 plt.xlabel("Variable a")
 plt.ylabel("Frequency")
 plt.title("Histogram of random variable a")
@@ -391,7 +392,8 @@ plt.show()
 ## Try it yourself! {#sec:histogram}
 
 :::{style="margin-top: 40px; font-size: 26px;"}
-- Try this again with $size = 100, 1000, 10000$ and see how the histogram changes 
+- Try this again with $size = 100, 1000, 10000$ and see how the histogram changes
+- [[Appendix 03]{.button}](#sec:appendix03)
 :::
 
 # Boolean logic 🧠 {background-color="#2d4563"}
@@ -411,6 +413,8 @@ plt.show()
 :::
 
 :::{.column width="50%"}
+:::{style="margin-top: -40px;"}
+:::
 [![](figures/boole.jpg){width="100%"}](#){data-modal-type="image" data-modal-url="figures/boole.jpg"}
 :::
 :::
@@ -423,7 +427,7 @@ plt.show()
 :::{style="margin-top: 30px; font-size: 22px;"}
 - We can test whether two values are equal using the `==` operator ([two equal signs]{.alert})
 - For example, `5 == 5` returns `True`
-- We can also test whether two values are not equal using the &#33;= operator ([exclamation mark followed by an equal sign]{.alert}, rendered as `!=` here)
+- We can also test whether two values are not equal using the `!=` operator ([exclamation mark followed by an equal sign]{.alert})
 - Let's see how this works in Python
 
 - First, let's load the `matplotlib` and `numpy` libraries
@@ -440,7 +444,7 @@ import numpy as np
 "Is this the real life?" == "is this just fantasy?" 
 ```
 
-Note: the [order of the strings matter]{.alert}!
+Note: the [order of the strings matters]{.alert}!
 
 ```{python}
 #| echo: true
@@ -558,7 +562,7 @@ print(isinstance(y,str))
 ```
 :::
 
-## Equality of vectors {#sec:question02}
+## Equality of vectors
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 - We can test whether two vectors are equal using the `==` operator
@@ -575,31 +579,27 @@ vec_a == vec_b
 ```
 :::
 
-## Try it out! 🧠 {#sec:equality}
+## Try it yourself! 🧠 {#sec:equality}
 
 :::{style="margin-top: 30px; font-size: 26px;"}
 - Define $x= -1$. Check whether $x^2 + 2x + 1 = 0$ is true 
   - Please remember that $x^2$ is written as `x**2` in Python
   - Please note the difference between `==` and `=`
-- [[Appendix 03]{.button}](#sec:appendix03)
+- [[Appendix 04]{.button}](#sec:appendix04)
 :::
 
 # Testing multiple conditions 🐍 {background-color="#2d4563"}
 
 ## Testing multiple conditions
 
-:::{style="margin-top: 30px; font-size: 24px;"}
-:::{.columns}
-:::{.column width="50%"}
+:::{style="margin-top: 30px; font-size: 25px;"}
+:::{style="text-align: center;"}
+[![](figures/boolean01.jpg){width="80%"}](#){data-modal-type="image" data-modal-url="figures/boolean01.jpg"}
+:::
+
 - We can test multiple conditions using the `and` and `or` operators
 - The `and` operator returns `True` if both conditions are `True`
 - The `or` operator returns `True` if at least one condition is `True`
-:::
-
-:::{.column width="50%"}
-[![](figures/boolean01.jpg){width="100%"}](#){data-modal-type="image" data-modal-url="figures/boolean01.jpg"}
-:::
-:::
 :::
 
 ## `not`: the negation operator
@@ -637,52 +637,74 @@ not age < 18
 :::
 :::
 
-## Condition A and B need to be satisfied: `&` operator
+## Condition A and B need to be satisfied: `and` operator
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-- We can test multiple conditions using the `&` operator
-- The `&` operator returns `True` if both conditions are `True`
-- For example, `5 > 3 & 5 < 10` returns `True`
+- We can combine two conditions with the `and` operator
+- The `and` operator returns `True` only if [both]{.alert} conditions are `True`
+- For example, `(5 > 3) and (5 < 10)` returns `True`
 
 ```{python}
 #| echo: true
 #| eval: true
-# We use the "&" symbol to separate "AND" conditions
+# We use the `and` keyword to combine two conditions
 age = 31
 
 # Is this age between 20 and 30 (including these ages)?
-(age >= 20) & (age <= 30)
+(age >= 20) and (age <= 30)
 ```
 :::
 
-## Condition A or B needs to be satisfied: `|` operator
+## Condition A or B needs to be satisfied: `or` operator
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-- To test whether at least one condition is `True`, we use the `|` operator
-- For example, `5 > 3 | 5 > 10` returns `True`
+- To test whether [at least one]{.alert} condition is `True`, we use the `or` operator
+- For example, `(5 > 3) or (5 > 10)` returns `True`
 
 ```{python}
 #| echo: true
 #| eval: true
-# We use the "|" symbol to separate "OR" conditions.
+# We use the `or` keyword to combine two conditions
 age = 31
 
 # Is this age higher than 20 or lower than 30?
-(age >= 20) | (age <= 30)
+(age >= 20) or (age <= 30)
 ```
 
 ```{python}
 #| echo: true
 #| eval: true
 # Another example
-student_status = "freshman" 
+student_status = "freshman"
 
 # Is the student in the first two years of undergrad?
-(student_status == "freshman") | (student_status == "sophomore")
+(student_status == "freshman") or (student_status == "sophomore")
 ```
 :::
 
-## Try it out! 🚀 {#sec:question04}
+## Looking ahead: `and` and `or` vs `&` and `|` 💡
+
+:::{style="margin-top: 30px; font-size: 24px;"}
+- For [single values]{.alert} (one comparison at a time), use `and`, `or`, and `not`
+- For [NumPy arrays]{.alert} (a whole list of values), use `&`, `|`, and `~`
+  - These check each element separately and return [one answer per element]{.alert}
+
+```{python}
+#| echo: true
+#| eval: true
+# Single value: one True/False answer
+age = 25
+print((age >= 20) and (age <= 30))
+
+# Array of values: one True/False per element
+ages = np.array([15, 25, 35])
+print((ages >= 20) & (ages <= 30))
+```
+
+- We will use this in the [next lecture]{.alert}, when we filter arrays of data 🚀
+:::
+
+## Try it yourself! 🚀 {#sec:question04}
 
 :::{style="margin-top: 30px; font-size: 30px;"}
 - Now, let's test whether you can identify the correct expression
@@ -690,8 +712,8 @@ student_status = "freshman"
 :::{style="margin-top: 30px;"}
 - Write code that checks the following conditions:
   - Whether age is strictly less than 20, or greater than 30
-  - Not in the age range 25-27 
-- [[Appendix 04]{.button}](#sec:appendix04)
+  - Not in the age range 25-27
+- [[Appendix 05]{.button}](#sec:appendix05)
 :::
 :::
 
@@ -715,7 +737,7 @@ print(np.pi * x ** 2)
 print(1 / np.sqrt(2 * np.pi) * np.exp(-x ** 2))
 ```
 
-[[Back to the main text]{.button}](#sec:functions)
+[[Back to exercise]{.button}](#sec:functions)
 :::
 
 ## Appendix 02 {#sec:appendix02}
@@ -732,10 +754,38 @@ vec_e = np.array([10, 8, 15, 0, 24])
 print(np.mean(vec_e))
 ```
 
-[[Back to the main text]{.button}](#sec:summary)
+[[Back to exercise]{.button}](#sec:summary)
 :::
 
 ## Appendix 03 {#sec:appendix03}
+### Histogram with different sample sizes
+
+:::{style="margin-top: 30px; font-size: 22px;"}
+```{python}
+#| echo: true
+#| eval: true
+#| layout-ncol: 3
+np.random.seed(151)
+
+plt.hist(np.random.normal(loc=0, scale=1, size=100))
+plt.title("size = 100")
+plt.show()
+
+plt.hist(np.random.normal(loc=0, scale=1, size=1000))
+plt.title("size = 1000")
+plt.show()
+
+plt.hist(np.random.normal(loc=0, scale=1, size=10000))
+plt.title("size = 10000")
+plt.show()
+```
+
+- As `size` grows, the histogram becomes [smoother]{.alert} and looks more like the [bell curve]{.alert} of the normal distribution
+
+[[Back to exercise]{.button}](#sec:histogram)
+:::
+
+## Appendix 04 {#sec:appendix04}
 
 :::{style="margin-top: 30px; font-size: 30px;"}
 - Whether $x = -1$ is a solution to the equation $x^2 + 2x + 1 = 0$
@@ -748,10 +798,10 @@ x = -1
 print(x ** 2 + 2 * x + 1 == 0)
 ```
 
-[[Back to the main text]{.button}](#sec:equality)
+[[Back to exercise]{.button}](#sec:equality)
 :::
 
-## Appendix 04 {#sec:appendix04}
+## Appendix 05 {#sec:appendix05}
 
 :::{style="margin-top: 30px; font-size: 30px;"}
 - Whether age (`age = 31`) is strictly less than 20, or greater than 30
@@ -762,15 +812,15 @@ print(x ** 2 + 2 * x + 1 == 0)
 #| eval: true
 age = 31
 
-(age < 20) | (age > 30) 
+(age < 20) or (age > 30)
 ```
 ```{python}
 #| echo: true
 #| eval: true
-(age < 25) | (age > 27)
+(age < 25) or (age > 27)
 ```
 
-The second answer uses `|` because `&` evaluates both statements at the same time, and [one cannot be less than 25 and greater than 27 at the same time](https://en.wikipedia.org/wiki/Empty_set). Therefore, it must be `|`.
+The second answer uses `or` because no single age can satisfy both conditions at once: [less than 25 and greater than 27 has no solution](https://en.wikipedia.org/wiki/Empty_set). We want to know if [either]{.alert} is true, since that means the age falls outside the 25-27 range
 
-[[Back to the main text]{.button}](#sec:question04)
+[[Back to exercise]{.button}](#sec:question04)
 :::
