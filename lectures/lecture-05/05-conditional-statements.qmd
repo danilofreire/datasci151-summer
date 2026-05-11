@@ -68,15 +68,17 @@ Today we will:
 :::{style="margin-top: 30px; font-size: 24px;"}
 :::{.columns}
 :::{.column width="50%"}
-- Conditional statements are used to make decisions in programming
-- The `if` statement is used to execute a block of code if a condition is `True`
-- The `elif` statement is used to execute a block of code if the first condition is `False` and the second condition is `True`
-- The `else` statement is used to execute a block of code if all other conditions are `False`
+- [Conditional statements]{.alert} are used to make decisions in programming
+- The [`if`]{.alert} statement runs a block of code if a condition is `True`
+- The [`elif`]{.alert} statement runs a block of code if the first condition is `False` and the second condition is `True`
+- The [`else`]{.alert} statement runs a block of code if all other conditions are `False`
 - We use this a lot in data cleaning or data analysis to filter out data!
 :::
 
 :::{.column width="50%"}
+:::{style="margin-top: -40px;"}
 [![](figures/if.png){width="70%"}](#){data-modal-type="image" data-modal-url="figures/if.png"}
+:::
 :::
 :::
 :::
@@ -260,7 +262,7 @@ else:
 ```{python}
 #| echo: true
 #| eval: true
-years_in_program = 1
+years_in_program = 2
 
 if years_in_program == 1:
     print("This student is a freshman")
@@ -280,10 +282,10 @@ else:
 :::{style="margin-top: 30px; font-size: 25px;"}
 :::{.columns}
 :::{.column width="35%"}
-- You can combine conditions using logical operators too!
+- You can combine conditions using [logical operators]{.alert} too!
 - Remember what we learned in [lecture 03]{.alert}?
 - The logical operators are:
-  - `and`, `or`, `not` (Python booleans)
+  - [`and`, `or`, `not`]{.alert} (Python booleans)
   - `==` (equal), `!=` (not equal)
   - `>`, `<`, `>=`, `<=` (comparisons)
 - For [NumPy arrays]{.alert}, you would use `&`, `|`, `~` instead
@@ -312,7 +314,7 @@ else:
 :::{.column width="40%"}
 - You can combine [several conditions at once]{.alert}
 - It is good practice to use parentheses to group conditions, so that the code is easier to read
-- For example, let's say you want to know if a student is eligible for a program discount
+- For example, let's say you want to know if a student is eligible for a programme discount
 - The student is eligible if:
   - They are under 25 years old and a student
   - Or they have a scholarship
@@ -346,9 +348,9 @@ else:
 :::{style="margin-top: 30px; font-size: 22px;"}
 :::{.columns}
 :::{.column width="35%"}
-- An `if` statement can be placed inside another `if` (or `elif`/`else`) statement. This is called nesting.
-- Used for more granular decision-making where one check depends on the outcome of a previous one.
-- **Caution:** Nesting too deeply (more than 2-3 levels) can make code hard to read and debug.
+- An `if` statement can be placed inside another `if` (or `elif`/`else`) statement. This is called [nesting]{.alert}!
+- Used for more granular decision-making where one check depends on the outcome of a previous one
+- Caution: [nesting]{.alert} too deeply (more than 2-3 levels) makes code hard to read and debug
 :::
 
 :::{.column width="65%"}
@@ -373,7 +375,7 @@ else:
     print("Condition 1 is False")
 ```
 
-The path is like a tree: 1. Check `condition1` (outer `if`). 2. If `True`, check `condition2` (inner `if`). 3. If `False`, go to the inner `else`. 4. If `condition1` is `False`, go to the outer `else`.
+The path is like a tree: 1. Check `condition1` (outer `if`). 2. If `True`, check `condition2` (inner `if`). 3. If `False`, go to the inner `else`. 4. If `condition1` is `False`, go to the outer `else`
 :::
 :::
 :::
@@ -381,7 +383,7 @@ The path is like a tree: 1. Check `condition1` (outer `if`). 2. If `True`, check
 ## Nested `if` example: ticket pricing
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-**Scenario:** Ticket price depends on age group, and then on the day of the week for adults.
+Scenario: ticket price depends on age group, and then on the day of the week for adults
 
 ```{python}
 #| echo: true
@@ -412,7 +414,7 @@ print(f"Category: {category}, Day: {day}, Price: ${price}")
 :::{style="margin-top: 30px; font-size: 28px;"}
 Modify the ticket pricing example:
 
-- Add a "student" category: if `age` is between 18 and 25 (inclusive) AND an assumed variable `is_student = True`, their price is always $13. This should take precedence over the standard adult pricing.
+- Add a "student" category: if `age` is between 18 and 25 (inclusive) AND an assumed variable `is_student = True`, their price is always $13. This should take precedence over the standard adult pricing
 - [[Appendix 02]{.button}](#sec:appendix02)
 :::
 
@@ -424,7 +426,7 @@ Modify the ticket pricing example:
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 - For simple `if/else` that just [picks a value]{.alert}, Python has a [one-liner]{.alert}
-- Also called a "ternary operator" (three parts joined together)
+- Also called a [ternary operator]{.alert} (three parts joined together)
 - Syntax: `value_if_true if condition else value_if_false`
   - If `condition` is `True`, the whole expression evaluates to `value_if_true`
   - If `condition` is `False`, the whole expression evaluates to `value_if_false`
@@ -435,7 +437,7 @@ Modify the ticket pricing example:
 :::{style="margin-top: 30px; font-size: 22px;"}
 :::{.columns}
 :::{.column width="50%"}
-**Standard `if/else` for assignment:**
+Standard `if/else` for assignment:
 
 ```{python}
 #| echo: true
@@ -449,7 +451,7 @@ else:
 print(f"Status (standard if/else): {status}")
 ```
 
-**Using a conditional expression:**
+Using a conditional expression:
 
 ```{python}
 #| echo: true
@@ -461,7 +463,7 @@ print(f"Status (ternary operator): {status_ternary}")
 
 :::
 :::{.column width="50%"}
-**Another example (setting a discount):**
+Another example, setting a discount:
 
 ```{python}
 #| echo: true
@@ -487,13 +489,12 @@ print(f"Final price: ${final_price}")
 
 :::{style="margin-top: 30px; font-size: 20px;"}
 
-  - Conditions in an `if...elif...else` chain are evaluated in order from top to bottom
-  - The first condition that evaluates to `True` will have its block of code executed, and the rest of the chain is skipped
-  - Therefore, you should generally place **more specific conditions before more general ones**
+  - Conditions in an `if...elif...else` chain are evaluated top to bottom, and the first `True` branch wins (the rest is skipped)
+  - Therefore, place [more specific conditions before more general ones]{.alert}
 
 :::{.columns}
 :::{.column width="50%"}
-**Problematic order (grading):**
+Problematic order (grading):
 
 ```{python}
 #| echo: true
@@ -516,7 +517,7 @@ print(f"Score: {score}, Problematic Grade: {grade}")
 
 :::
 :::{.column width="50%"}
-**Correct order (grading):**
+Correct order (grading):
 
 ```{python}
 #| echo: true
@@ -545,14 +546,11 @@ print(f"Score: {score}, Correct Grade: {grade}")
 ## Lists with placeholder values
 ### Pre-allocating a list with `None`
 
-:::{style="margin-top: 30px; font-size: 20px;"}
-- You can create a list of [placeholder values]{.alert} using `None`
-- A [truly empty list]{.alert} (zero elements) is just `[]`
-- `None` is a special object that represents [the absence of a value]{.alert}
-- It is often used as a placeholder, to be filled in later
-- Please note that `None` is not the same as `0`, `False`, or an empty string `''`
-- You should also not use quotes with `None`, as [it is not a string]{.alert}
-- Let's see how to pre-fill a list with `None`:
+:::{style="margin-top: 30px; font-size: 22px;"}
+- You can create a list of [placeholder values]{.alert} using [`None`]{.alert} (a [truly empty list]{.alert} is just `[]`)
+- `None` represents [the absence of a value]{.alert} and is often used as a placeholder to be filled in later
+- `None` is [not]{.alert} the same as `0`, `False`, or an empty string `''`, and [you should never write it in quotes]{.alert}
+- Let's pre-fill a list with `None`:
 
 ```{python}
 #| echo: true
@@ -571,7 +569,7 @@ You can read more about `None` at <https://realpython.com/null-in-python/>.
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 - You can assign or replace values in a list using the index of the element
-- The index of a list starts at 0
+- [The index of a list starts at 0]{.alert}
 - We use the following syntax:
 
 ```{python}
@@ -589,7 +587,7 @@ print(list_answers)
 :::{style="margin-top: 30px; font-size: 24px;"}
 :::{.columns}
 :::{.column width="50%"}
-- You can find the index of a value in a list using the `list.index()` method
+- You can find the index of a value in a list using the [`list.index()`]{.alert} method
 - This method returns the index of [the first occurrence]{.alert} of the value in the list
 - If the value is not in the list, it will raise a `ValueError`
 - The syntax is as follows:
@@ -599,7 +597,7 @@ print(list_answers)
 cities = ["Nashville", "Bogota", "Atlanta"]
 cities.index("Bogota")
 ```
-- You can also use the `in` operator to check if a value is in a list, as we saw before
+- You can also use the [`in`]{.alert} operator to check if a value is in a list, as we saw before
 
 ```{python}
 #| echo: true
@@ -633,7 +631,7 @@ print(matching_cities_loop)
 ### The `list.append()` method
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-- You can add elements to a list using the `list.append()` command
+- You can add elements to a list using the [`list.append()`]{.alert} command
 - This command adds the element to [the end of the list]{.alert}
 - You can only add [one element at a time]{.alert}
 
@@ -657,7 +655,7 @@ print(new_list)
 ### The `list.extend()` method
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-- You can also add multiple elements to a list using the `list.extend()` command
+- You can also add multiple elements to a list using the [`list.extend()`]{.alert} command
 - Here you can add [multiple elements at once]{.alert}
 
 ```{python}
@@ -732,7 +730,7 @@ print(list_none_rep)
 ```{python}
 #| echo: true
 #| eval: true
-# When you multipy a list times a number you repeat the list
+# When you multiply a list times a number you repeat the list
 list_a = [1,2,3]
 print(list_a * 4)
 ```
@@ -751,7 +749,7 @@ print(list_a + list_b)
 ```{python}
 #| echo: true
 #| eval: true
-# When you multipy an array times a number, you multiply each element
+# When you multiply an array times a number, you multiply each element
 import numpy as np
 
 vec_a = np.array(list_a)
@@ -764,7 +762,7 @@ print(vec_a * 4)
 ## Counting the length of a list
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-- You can count the length of a list using the `len()` function
+- You can count the length of a list using the [`len()`]{.alert} function
 
 ```{python}
 #| echo: true
@@ -788,7 +786,7 @@ print(len(list_answers_rep))
 ```
 :::
 
-## Try it yourself! 😊 {#sec:lists}
+## Try it yourself! 😊 {#sec:exercise03}
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 - Create an empty list called `list_personal`
@@ -821,7 +819,7 @@ Check that it works by trying different values of "points"!
 :::
 :::
 
-# Thank you very much and see you next time! 🙏 {background-color="#2d4563"}
+# Appendix: solutions to exercises {background-color="#2d4563"}
 
 ## Appendix 01a {#sec:appendix01}
 
@@ -1019,5 +1017,5 @@ list_personal[1] = "Last element"
 print(list_personal)
 ```
 
-[[Back to exercise]{.button}](#sec:lists)
+[[Back to exercise]{.button}](#sec:exercise03)
 :::

@@ -233,7 +233,7 @@ display(data)
   - A series is a single column of a pandas DataFrame
 - [In pandas]{.alert}, `map` works very similarly to `apply`, and they are interchangeable when working with series
 - `map` can be faster for simple functions; `apply` is more flexible (it also works with DataFrames)
-- For regular lists (e.g., `list01 = [1,2,3]`), use `map`. `apply` is not a built-in Python function
+- For regular lists (e.g., `list01 = [1,2,3]`), use `map`, since [`apply` is not a built-in Python function]{.alert}
   
 :::{style="font-size: 20px;"}
 :::{.columns}
@@ -348,7 +348,7 @@ NameError: name 'apply' is not defined
 :::{.column width="50%"}
 - While `.ipynb` files are great for learning and teaching, they are not the best for sharing code
 - When you write a lot of functions, you should save them in a `.py` file, which is a [Python script]{.alert}
-- A Python script, or module, is just a file containing Python code
+- [A Python script, or module, is just a file containing Python code]{.alert}
 - This code can be functions, classes, or variables
 - A folder containing Python scripts is called a [package]{.alert}
 - You can import modules to use their code in your own code
@@ -380,8 +380,8 @@ ef.message_hello("Juan")
 :::{.columns}
 :::{.column width="50%"}
 - You can also import variables from a module
-- However, it is not recommended to import variables
-- It is better to import functions and use them to create variables
+- However, [it is not recommended to import variables]{.alert}
+- It is better to [import functions and use them to create variables]{.alert}
 - This is because variables can be changed in the module, leading to unexpected results
 :::
 
@@ -649,19 +649,17 @@ circuits.dtypes
 :::{style="margin-top: 30px; font-size: 25px;"}
 :::{.columns}
 :::{.column width="50%"}
-- Here we will use the `.str.isnumeric()` function
-- This function actually combines two functions: `.str` and `.isnumeric()`
-- The `.str` function is used to check if the variable is a string
-- The `.isnumeric()` part is used to check if the string is numeric
-- [Why do we need both?]{.alert} Because DataFrame columns often contain mixed data types (e.g., numbers and strings), and we need to check if the variable is a string before we can check if it is numeric
-- If we used only `.isnumeric()`, we would get an error (trust me, I tried 😅)
+- We will use [`.str.isnumeric()`]{.alert}, which combines two calls:
+  - [`.str`]{.alert}: treat the column as text
+  - [`.isnumeric()`]{.alert}: check whether each string is numeric
+- [Why do we need both?]{.alert} DataFrame columns often mix data types, so we have to treat the values as strings before we can test them
+- Using `.isnumeric()` on its own would raise an error (trust me, I tried 😅)
 :::
 
 :::{.column width="50%"}
-- The two dots between the functions are called [method chaining]{.alert}
-- It is a way to call multiple functions in a single line of code
+- The two dots between the calls are [method chaining]{.alert}: stacking several function calls in one line
 - If you use `R`, this is similar to the `%>%` operator in `dplyr`
-- Let's see how it works
+- Let's see it in action:
 
 ```{python}
 #| echo: true
@@ -702,19 +700,13 @@ circuits["location"].str.lower()
 ## Extract list of non-numeric values
 
 :::{style="margin-top: 30px; font-size: 25px;"}
-- We can use the function `query()` to reference subattributes of a variable
-  - `query()` is a method of a pandas DataFrame and it has [many useful functions](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.query.html)!
-  - We will use it more in the future!
-- Here we will combine `query()` with `pd.unique()` to extract a list of non-numeric values
-- The `pd.unique()` function will return a list of unique values in a variable
+- [`query()`]{.alert} is a pandas DataFrame method that lets us [reference subattributes of a column](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.query.html) (we'll see more of it later)
+- Combined with [`pd.unique()`]{.alert} (which returns the unique values of a column), we can extract every non-numeric value in one go
 
 ```{python}
 #| echo: true
 #| eval: true
-# Extract a list of non-numeric values
-# The pd.unique() function extracts unique values from a list
-# Check each value in the alt column to see if it is not numeric
-# True if it is not numeric, False if it is numeric
+# Keep only the rows where "alt" is NOT numeric, then list the unique values
 subset = circuits.query("alt.str.isnumeric() == False")
 list_unique = pd.unique(subset["alt"])
 print(list_unique)

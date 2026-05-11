@@ -70,7 +70,7 @@ else:
     print("Not eligible for program discount.")
 ```
 
-The ability to control program flow based on conditions is very important, and [loops will build upon this by allowing us to repeat actions]{.alert}.
+The ability to control program flow based on conditions is very important, and [loops will build upon this by allowing us to repeat actions]{.alert} 🤓
 :::
 
 # For loops in Python 🔄🐍 {background-color="#2d4563"}
@@ -194,18 +194,26 @@ for id in list_ids + ['a', 'b', 'c']:
 
 ## Iterating with `range()`
 
-:::{style="margin-top: 30px; font-size: 24px;"}
-The `range()` function is often used with `for` loops to generate a sequence of numbers.
+:::{style="margin-top: 30px; font-size: 22px;"}
+The `range()` function is often used with `for` loops to generate a sequence of numbers
 
--   `range(stop)`: Generates numbers from 0 up to (but not including) `stop`.
+-   `range(stop)`: Generates numbers from 0 up to (but not including) `stop`
     ```{python}
     #| echo: true
     #| eval: true
     for i in range(5): # Generates 0, 1, 2, 3, 4
         print(i)
     ```
--   `range(start, stop)`: Generates numbers from `start` up to (but not including) `stop`.
--   `range(start, stop, step)`: Generates numbers from `start` up to (but not including) `stop`, with an increment of `step`.
+-   `range(start, stop)`: Generates numbers from `start` up to (but not including) `stop`
+
+    ```{python}
+    #| echo: true
+    #| eval: true
+    for i in range(2, 5): # Generates 2, 3, 4
+        print(i)
+    ```
+
+-   `range(start, stop, step)`: Generates numbers from `start` up to (but not including) `stop`, with an increment of `step`
     ```{python}
     #| echo: true
     #| eval: true
@@ -227,7 +235,7 @@ for char in course_name:
     print(char)
 ```
 
-This is useful for character-by-character processing.
+This is useful for character-by-character processing, such as counting letters or checking for specific characters
 :::
 
 ## Using `enumerate()`
@@ -504,7 +512,7 @@ print(f"You entered a valid positive number: {number}")
 ## Caution: infinite loops!
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-A common pitfall with `while` loops is creating an [infinite loop]{.alert}.
+A common pitfall with `while` loops is creating an [infinite loop]{.alert}
 
 - It happens when the condition in the `while` statement never becomes `False`
 - This usually occurs when you forget to update the variable(s) inside the loop
@@ -553,11 +561,11 @@ index = 0 # Remember, lists are 0-indexed!
 :::{style="margin-top: 30px; font-size: 27px;"}
 :::{.columns}
 :::{.column width="50%"}
-Python provides statements to control the flow of execution within loops:
+Python has three ways to control the flow inside a loop:
 
--   **`break`**: Terminates the current loop prematurely and transfers control to the statement immediately following the loop.
--   **`continue`**: Skips the rest of the code inside the current iteration of the loop and proceeds to the next iteration.
--   **`else` clause in loops**: An optional block that executes if the loop completes all its iterations without encountering a `break` statement.
+- [`break`]{.alert}: exits the loop immediately and skips to whatever comes after it
+- [`continue`]{.alert}: skips the rest of the current iteration and jumps to the next one
+- [`else` clause]{.alert}: an optional block that runs only if the loop finished without hitting a `break`
 :::
 
 :::{.column width="50%"}

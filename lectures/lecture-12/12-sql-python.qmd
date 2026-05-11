@@ -64,10 +64,10 @@ editor:
 
 # Connecting SQLite with Python 🐍 {background-color="#2d4563"}
 
-## Connecting and Creating a Cursor
+## Connecting and creating a cursor
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- To interact with an SQLite database from Python, we first need to establish a connection and then create a cursor.
+- To interact with an SQLite database from Python, we first need to [establish a connection]{.alert} and then [create a cursor]{.alert}.
 - The [connection]{.alert} links our script to the database file.
 - The [cursor]{.alert} is like a handle we use to send SQL commands and manage results.
 
@@ -88,10 +88,10 @@ cur = conn.cursor()
 
 # Executing SQL in Python {background-color="#2d4563"}
 
-## Creating Tables
+## Creating tables
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- We define the structure of our data using `CREATE TABLE`.
+- We define the structure of our data using [`CREATE TABLE`]{.alert}.
 - Use `cur.execute()` to run the command and `conn.commit()` to [save]{.alert} the change.
 
 ```{python}
@@ -127,10 +127,10 @@ cur.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='drivers
 ```
 :::
 
-## Inserting Data
+## Inserting data
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- Once the table exists, we populate it using `INSERT INTO`.
+- Once the table exists, we populate it using [`INSERT INTO`]{.alert}.
 - Again, `cursor.execute()` runs the command, and `conn.commit()` [makes the insertions permanent]{.alert}.
 
 ```{python}
@@ -153,7 +153,7 @@ conn.commit()
 ```
 :::
 
-## Fetching All Results (`fetchall`) and One Result (`fetchone`)
+## Fetching all results (`fetchall`) and one result (`fetchone`)
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 - After a `SELECT` query, `fetchall()` retrieves [all results at once]{.alert} into a list of tuples.
@@ -186,7 +186,7 @@ print(row2) # Second row
 ```
 :::
 
-## Iterating Over the Cursor
+## Iterating over the cursor
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 - A more "Pythonic" and [memory-efficient]{.alert} way to process results row-by-row is to iterate directly over the cursor. 
@@ -213,9 +213,9 @@ cur.execute("SELECT driver_name, team FROM drivers WHERE driver_name LIKE 'M%'")
 ```
 :::
 
-# Filtering Data {background-color="#2d4563"}
+# Filtering data {background-color="#2d4563"}
 
-## `IN` and `BETWEEN` Operators
+## `IN` and `BETWEEN` operators
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 - Use `IN` to check if a column's value matches [any value in a specified list]{.alert}.
@@ -243,7 +243,7 @@ cur.execute("SELECT driver_name, victories FROM drivers WHERE victories BETWEEN 
 - `NOT BETWEEN` excludes values within the specified range.
 :::
 
-## `LIKE` Operator: Basic Patterns
+## `LIKE` operator: basic patterns
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 - `LIKE` enables simple pattern matching in text strings.
@@ -275,7 +275,7 @@ for row in cur.fetchall(): print(row)
 ```
 :::
 
-## `LIKE` Operator: Case Sensitivity and `NOT LIKE`
+## `LIKE` operator: case sensitivity and `NOT LIKE`
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 - SQLite `LIKE` is case-insensitive by default. Use `LOWER()`/`UPPER()` for [reliable, explicit case handling]{.alert}.
@@ -313,9 +313,9 @@ for row in cur.fetchall(): print(row)
 - [[Appendix 01]{.button}](#sec:appendix01)
 :::
 
-# Handling Missing Data {background-color="#2d4563"}
+# Handling missing data {background-color="#2d4563"}
 
-## Finding NULLs (`IS NULL`)  and `COALESCE`
+## Finding NULLs (`IS NULL`) and `COALESCE`
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 - SQL represents missing values as `NULL`. Use `IS NULL` to find them. [`IS NOT NULL` finds rows with values]{.alert}.
@@ -338,7 +338,7 @@ for row in cur.fetchall(): print(row)
 ```
 :::
 
-## `COALESCE` with Subqueries
+## `COALESCE` with subqueries
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 - The default value in `COALESCE` can be dynamic, calculated by a [subquery]{.alert}.
@@ -367,13 +367,13 @@ for row in cur.fetchall(): print(row)
 - Here, `NULL` victories are replaced by the average of non-NULL victories.
 :::
 
-# Window Functions {background-color="#2d4563"}
+# Window functions {background-color="#2d4563"}
 
-## Introduction to Window Functions
+## Introduction to window functions
 
 :::{style="margin-top: 50px; font-size: 21px;"}
 - Window functions compute values across a set of rows (a "window") related to the current row, without collapsing them like `GROUP BY`.
-- Essential for ranking, running totals, moving averages, etc.
+- Useful for ranking, running totals, moving averages, etc.
 - Basic syntax involves the [`OVER()`]{.alert} clause.
 - [Requires SQLite version 3.25.0 or newer]{.alert}.
 
@@ -401,7 +401,7 @@ cur.execute("SELECT sqlite_version();").fetchone()
 ```
 :::
 
-## Window Functions: `AVG` and `RANK`
+## Window functions: `AVG` and `RANK`
 
 :::{style="margin-top: 50px; font-size: 21px;"}
 - Let's see common window functions in action:
@@ -428,7 +428,7 @@ for row in cur.fetchall(): print(row)
 ```
 :::
 
-## Window Functions vs. `GROUP BY`
+## Window functions vs. `GROUP BY`
 
 :::{style="margin-top: 50px; font-size: 21px;"}
 - A key difference: `GROUP BY` [reduces]{.alert} the number of rows to one per group. Window functions [maintain]{.alert} all original rows and add new columns based on the window calculation.
@@ -465,9 +465,9 @@ for row in cur.fetchall(): print(row)
 - [[Appendix 02]{.button}](#sec:appendix02)
 :::
 
-# String Manipulation {background-color="#2d4563"}
+# String manipulation {background-color="#2d4563"}
 
-## Basic String Functions
+## Basic string functions
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 - SQLite provides standard functions for text processing.
@@ -490,7 +490,7 @@ for row in cur.fetchall(): print(row)
 ```
 :::
 
-## More String Functions
+## More string functions
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 - `TRIM(str)` removes leading/trailing whitespace.
@@ -513,9 +513,9 @@ for row in cur.fetchall(): print(row)
 ```
 :::
 
-# Conditional Logic: CASE {background-color="#2d4563"}
+# Conditional logic: `CASE` {background-color="#2d4563"}
 
-## Basic `CASE` Statement
+## Basic `CASE` statement
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 - The `CASE` statement is SQL's way of implementing [if-then-else logic]{.alert} within a query.
@@ -537,7 +537,7 @@ for row in cur.fetchall(): print(row)
 ```
 :::
 
-## `CASE` with Multiple Conditions
+## `CASE` with multiple conditions
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 - You can chain multiple `WHEN` clauses. The [first condition that evaluates to true]{.alert} determines the result for that row. The optional `ELSE` handles cases where no `WHEN` is true.
@@ -559,9 +559,11 @@ FROM drivers ORDER BY victories DESC NULLS LAST;
 cur.execute(query_case2)
 for row in cur.fetchall(): print(row)
 ```
+
+- Note: `NULLS LAST` requires SQLite 3.30 or newer. If your version is older, drop the `NULLS LAST` and `DESC` will still put NULLs at the end
 :::
 
-## `CASE` for Conditional NULL Handling
+## `CASE` for conditional NULL handling
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 - `CASE` offers more nuanced control over handling `NULL`s compared to just `COALESCE`, allowing checks on [other columns]{.alert}.
@@ -605,7 +607,7 @@ for row in cur.fetchall(): print(row)
 
 # Using SQL with `pandas` 🐼 {background-color="#2d4563"}
 
-## Reading Data with `pandas.read_sql`
+## Reading data with `pandas.read_sql`
 
 :::{style="margin-top: 50px; font-size: 21px;"}
 - Reading data using loops and `fetchall()` works, but `pandas` makes it much easier for analysis.
@@ -624,7 +626,7 @@ print(df)
 - This combines execution and fetching into one step, returning a structured table.
 :::
 
-## `read_sql` with Any `SELECT` Query
+## `read_sql` with any `SELECT` query
 
 :::{style="margin-top: 50px; font-size: 21px;"}
 - You can use complex `SELECT` statements, including joins, filtering, ordering, etc., within `read_sql`.
@@ -738,15 +740,15 @@ if 'conn' in locals() and conn:
 ## Appendix 01 {#sec:appendix01}
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-**Exercise Solutions** (Using standard `sqlite3` fetching)
+*Using standard `sqlite3` fetching:*
 
 ```{python}
 #| echo: true
 #| eval: true
-import sqlite3 
-db_file = 'lecture12.db' 
-conn = sqlite3.connect(db_file) 
-cur = conn.cursor() 
+import sqlite3
+db_file = 'lecture12.db'
+conn = sqlite3.connect(db_file)
+cur = conn.cursor()
 
 # Find M names
 cur.execute("SELECT * FROM drivers WHERE driver_name LIKE 'M%';")
@@ -777,7 +779,7 @@ conn.close()
 ## Appendix 02 {#sec:appendix02}
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-**Exercise Solution** (Using standard `sqlite3` fetching)
+*Using standard `sqlite3` fetching:*
 
 ```{python}
 #| echo: true
@@ -785,7 +787,7 @@ conn.close()
 import sqlite3
 db_file = 'lecture12.db'
 conn = sqlite3.connect(db_file)
-cur = conn.cursor() 
+cur = conn.cursor()
 
 # Query and display using standard fetch
 query_rank_nationality = '''
@@ -810,7 +812,7 @@ conn.close()
 ## Appendix 03 {#sec:appendix03}
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-**Exercise Solution** (Using standard `sqlite3` fetching)
+*Using standard `sqlite3` fetching:*
 
 ```{python}
 #| echo: true
@@ -821,20 +823,22 @@ conn = sqlite3.connect(db_file)
 cur = conn.cursor()
 
 query_driver_level = '''
-SELECT 
+SELECT
     driver_name, victories,
-    CASE 
-        WHEN victories IS NULL THEN 'Unknown' 
+    CASE
+        WHEN victories IS NULL THEN 'Unknown'
         WHEN victories > 50 THEN 'Expert'
-        WHEN victories BETWEEN 10 AND 50 THEN 'Intermediate' 
-        WHEN victories < 10 THEN 'Beginner' 
+        WHEN victories BETWEEN 10 AND 50 THEN 'Intermediate'
+        WHEN victories < 10 THEN 'Beginner'
     END AS driver_level
 FROM drivers
-ORDER BY victories DESC NULLS LAST; 
+ORDER BY victories DESC NULLS LAST;
 '''
 cur.execute(query_driver_level)
 print("--- Driver classification using CASE ---")
 for row in cur.fetchall(): print(row)
+
+conn.close()
 ```
 
 [[Back to exercise]{.button}](#sec:exercise03)
@@ -843,13 +847,20 @@ for row in cur.fetchall(): print(row)
 ## Appendix 04 {#sec:appendix04}
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-**Exercise Solution** (Using `pandas`)
+*Using `pandas`:*
 
 ```{python}
 #| echo: true
 #| eval: true
-# Create employees table
-cur.execute('DROP TABLE IF EXISTS employees;') 
+import sqlite3
+import pandas as pd
+
+db_file = 'lecture12.db'
+conn = sqlite3.connect(db_file)
+cur = conn.cursor()
+
+# 1. Create employees table
+cur.execute('DROP TABLE IF EXISTS employees;')
 cur.execute('''
 CREATE TABLE employees (
     employee_id INTEGER PRIMARY KEY AUTOINCREMENT,

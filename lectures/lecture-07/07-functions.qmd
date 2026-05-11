@@ -208,14 +208,10 @@ my_function(argument)
 :::
 
 :::{.column width="50%"}
-- The function name should be descriptive, that is, its name should reflect what the function does
-- The parameters are the variables that the function expects to receive
-  - In our case, the parameter is `parameter` (duh! 😅)
-- The body is the code that the function will run
-  - Please don't forget that the [body should be indented!]{.alert}
-- The return statement is optional
-  - If you don't provide a return statement, the function will return `None`
-  - So it's a good practice to always return something!
+- The [function name]{.alert} should reflect what the function does
+- The [parameters]{.alert} are the variables the function expects to receive (here, `parameter` 😅)
+- The [body]{.alert} is the code the function will run, [indented four spaces]{.alert}
+- The [`return`]{.alert} statement is optional. Without it, the function returns `None`, so it's good practice to always return something
 :::
 :::
 :::
@@ -541,8 +537,8 @@ print(y)
 :::{style="margin-top: 30px; font-size: 22px;"}
 :::{.columns}
 :::{.column width="50%"}
-- If you want to change a global variable inside a function, you need to use the [`global`]{.alert} keyword
-- The `global` keyword tells Python that you want to use the global variable, not create a new local variable
+- To change a global variable inside a function, use the [`global`]{.alert} keyword
+- It tells Python to reuse the global variable instead of creating a new local one
 
 ```{python}
 #| echo: true
@@ -559,11 +555,11 @@ print(x)
 :::
 
 :::{.column width="50%"}
-Why [avoid `global`]{.alert}:
+Why you should [avoid `global`]{.alert}:
 
-- It makes your code harder to follow. It's not clear where a variable is being changed
-- It can lead to unexpected side effects if multiple functions modify the same global variable
-- It's generally better for functions to receive data as parameters and return results
+- It hides where a variable changes, making code harder to follow
+- Multiple functions touching the same global can cause unexpected side effects
+- It's cleaner to pass data in as parameters and return results
 
 Use `global` sparingly, if at all! 😉
 :::
@@ -636,11 +632,10 @@ print(dir(builtins))
 ## Enclosing scope: functions inside functions (nested functions)
 
 :::{style="margin-top: 30px; font-size: 26px;"}
-- Sometimes, you might define a function *inside* another function. This is called a [nested function]{.alert} (we've spoken about this before!)
-- The "enclosing scope" refers to the variables of the outer function that the inner (nested) function can "see" and use
-- This is the 'E' in the LEGB rule (Local -> Enclosing -> Global -> Built-in)
-- They are easier to understand once you understand local and global scopes
-- We will not use them much in this course, but they are useful in some cases!
+- You can define a function *inside* another function. This is called a [nested function]{.alert}
+- The [enclosing scope]{.alert} is made up of the variables in the outer function that the inner one can see and use
+- This is the **E** in the LEGB rule (Local → Enclosing → Global → Built-in)
+- We won't use nested functions much in this course, but they are useful in some cases
 :::
 
 ## Enclosing scope: accessing outer variables
@@ -671,26 +666,26 @@ In this example, `outer_variable` is "enclosing" for `inner_function`.
 ## Enclosing scope: what if inner defines its own variable? (shadowing)
 
 :::{style="margin-top: 30px; font-size: 22px;"}
-If the inner function defines a variable with the *same name* as one in the outer function, the inner function will use its *own local* variable. This is called "shadowing".
+- If the inner function defines a variable with the *same name* as one in the outer function, the inner one uses its *own local* copy
+- This is called [shadowing]{.alert}: the outer variable is hidden, not replaced
 
 ```{python}
 #| echo: true
 #| eval: true
 def outer_function_shadow():
-    message = "This is the OUTER message." # Variable in outer_function_shadow's scope
-    
+    message = "This is the OUTER message."   # outer scope
+
     def inner_function_shadow():
-        message = "This is the INNER message!" # This is a NEW, LOCAL variable for inner_function_shadow
-                                             # It "shadows" the outer 'message'
-        print(f"Inside inner_function_shadow: {message}") 
-    
+        message = "This is the INNER message!"   # NEW local variable; shadows the outer one
+        print(f"Inside inner_function_shadow: {message}")
+
     print(f"Before calling inner, outer message is: {message}")
     inner_function_shadow()
-    print(f"After calling inner, outer message is still: {message}") # Unchanged
+    print(f"After calling inner, outer message is still: {message}")   # unchanged
 
 outer_function_shadow()
 ```
-The `message` inside `inner_function_shadow` is a completely separate variable from the `message` in `outer_function_shadow`.
+The inner `message` is a completely separate variable from the outer `message`.
 :::
 
 ## Try it out! 🚀 {#sec:exercise-07}
