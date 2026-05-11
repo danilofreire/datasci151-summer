@@ -37,17 +37,20 @@ editor:
 :::{style="margin-top: 30px; font-size: 26px;"}
 In our last lecture, we covered conditional statements:
 
--   **`if` statement:** Executes a block of code if a condition is `True`.
--   **`elif` statement:** Checks a new condition if previous `if` or `elif` conditions were `False`.
--   **`else` statement:** Executes a block of code if all preceding `if` and `elif` conditions were `False`.
+-   `if`: executes a block of code if a condition is `True`
+-   `elif`: checks a new condition if previous `if`/`elif` conditions were `False`
+-   `else`: executes a block of code if all preceding conditions were `False`
+
+:::{style="margin-top: 20px;"}
+:::
 
 We also looked at:
 
--   **Combining Conditions:** Using logical operators `and`, `or`, `not`.
--   **Nested `if` statements:** Placing one `if` statement inside another for more complex decision-making.
+-   [Combining conditions]{.alert} with logical operators `and`, `or`, `not`
+-   [Nested `if` statements]{.alert}: one `if` inside another for more complex decisions
 :::
 
-## Recap: Conditional Example
+## Recap: conditional example
 
 :::{style="margin-top: 30px; font-size: 22px;"}
 Remember this kind of structure?
@@ -77,8 +80,8 @@ The ability to control program flow based on conditions is very important, and [
 :::{style="margin-top: 30px; font-size: 24px;"}
 :::{.columns}
 :::{.column width="50%"}
-- A `for` loop is a way to iterate over a sequence of elements
-- It is a very useful tool to automate repetitive tasks
+- A `for` loop is a way to [iterate over a sequence]{.alert} of elements
+- It is a very useful tool to [automate repetitive tasks]{.alert}
 - The syntax is similar to an `if` statement, including the colon `:` and the necessary indentation (4 spaces)
 - The syntax is as follows:
   
@@ -114,7 +117,7 @@ for i in variable:
   - Numbers, strings, or any other type of object
 
 - You can also iterate over a range of numbers
-- You can even iterate over a list of lists (nested lists) 🤯
+- You can even iterate over a [list of lists (nested lists)]{.alert} 🤯
   - This is very useful when working with dataframes or matrices
 
 ```{python}
@@ -176,10 +179,10 @@ for i in list_ids:
 ## You can also iterate over additional elements
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-- This code iterates over each element in `list_ids` and three additional elements: 'a', 'b', and 'c'. 
-- The `+` operator is used to concatenate `list_ids` with another list `['a', 'b', 'c']`.
-
-- For each element in this combined list, the loop assigns the element to the variable `id` and then prints it out using the `print` function.
+- This code iterates over `list_ids` plus three extra elements: `'a'`, `'b'`, and `'c'`
+- The `+` operator [concatenates]{.alert} `list_ids` with `['a', 'b', 'c']`
+- For each element in the combined list, the loop assigns it to `id`
+- Then `print(id)` displays the value
 
 ```{python}
 #| echo: true
@@ -230,7 +233,7 @@ This is useful for character-by-character processing.
 ## Using `enumerate()`
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-Sometimes you need both the index and the value of an item in a sequence. The `enumerate()` function provides this:
+Sometimes you need [both the index and the value]{.alert} of an item in a sequence. The `enumerate()` function provides this:
 
 Syntax: `for index, value in enumerate(sequence):`
 
@@ -394,7 +397,7 @@ plt.show()
 list_x = [1,2,4,5,6,7,8,9,10]
 list_y = []
 
-# Create an index 
+# No index needed - we append each y to list_y as we go
 for x in list_x:
     y = x**2 + 2*x
     list_y.append(y)
@@ -443,17 +446,17 @@ while test_expression:
 :::
 :::
 
-## When to Use `while` vs `for`
+## When to use `while` vs `for`
 
 :::{style="margin-top: 30px; font-size: 28px;"}
--   **`for` loop:**
-    -   Use when you know the number of iterations or you are iterating over a known sequence (list, string, range, etc.).
+-   `for` loop:
+    -   Use when you [know the number of iterations]{.alert}, or you are iterating over a known sequence (list, string, range, etc.)
     -   Example: "Process each item in this list."
 
--   **`while` loop:**
-    -   Use when the number of iterations is not known in advance and depends on a condition becoming `False`.
-    -   Example: "Keep doing this until a certain condition is met (e.g., user enters 'quit', or a calculation converges)."
-    -   Requires careful management of the condition to avoid infinite loops.
+-   `while` loop:
+    -   Use when the number of iterations is not known in advance and depends on a [condition becoming `False`]{.alert}
+    -   Example: "Keep doing this until a certain condition is met (e.g., user enters 'quit', or a calculation converges)"
+    -   Requires careful management of the condition to avoid infinite loops
 :::
 
 ## `while` loop: simple counter example
@@ -494,26 +497,30 @@ while number <= 0:
 print(f"You entered a valid positive number: {number}")
 ```
 
-(This code is best run in an interactive Python session.)
+- The `try`/`except` block catches the error if the user types something that isn't a number. We'll cover error handling properly in a later lecture
+- This code is best run in an interactive Python session
 :::
 
-## Caution: Infinite Loops!
+## Caution: infinite loops!
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-A common pitfall with `while` loops is creating an **infinite loop**!
-- This happens if the condition in the `while` statement never becomes `False`
-- **Cause:** Often due to forgetting to update the variable(s) involved in the condition within the loop
+A common pitfall with `while` loops is creating an [infinite loop]{.alert}.
+
+- It happens when the condition in the `while` statement never becomes `False`
+- This usually occurs when you forget to update the variable(s) inside the loop
 
 Example of an infinite loop (DO NOT RUN THIS CELL AS IS 😅):
-```python
+
+```{python}
 #| echo: true
-#| eval: false # This would run forever
+#| eval: false
 count = 0
 while count < 5:
     print("Still looping...")
     # Missing count = count + 1
 ```
-- If you accidentally run an infinite loop in a Jupyter notebook or Python script, you usually need to interrupt the kernel (e.g., by pressing `Ctrl+C` in the terminal, or using the "Interrupt Kernel" button in Jupyter).
+
+- If you accidentally run an infinite loop, you usually need to interrupt the kernel (press `Ctrl+C` in the terminal, or click the "Interrupt Kernel" button in Jupyter)
 :::
 
 ## Try it yourself! {#sec:exercise_for_break_simple}
@@ -564,7 +571,7 @@ Python provides statements to control the flow of execution within loops:
 ## The `break` statement
 
 :::{style="margin-top: 30px; font-size: 22px;"}
-- The `break` statement is used to exit a `for` or `while` loop immediately, regardless of whether the loop's condition is still true or if there are more items to iterate over
+- The `break` statement is used to [exit a `for` or `while` loop immediately]{.alert}, regardless of whether the loop's condition is still true or if there are more items to iterate over
 
 Example: Find the first non-integer element in a list and stop the loop
 ```{python}
@@ -584,7 +591,7 @@ print("Loop finished or broken.")
 ## The `continue` statement
 
 :::{style="margin-top: 30px; font-size: 22px;"}
-- The `continue` statement is used to skip the remaining code inside the current iteration of a loop and move to the next iteration
+- The `continue` statement is used to [skip the remaining code]{.alert} inside the current iteration of a loop and move to the next iteration
 
 Example: Print only integers from a list and skip non-integer elements
 ```{python}
@@ -605,7 +612,7 @@ print("Loop finished processing all elements.")
 
 :::{style="margin-top: 30px; font-size: 22px;"}
 - Both `for` and `while` loops can have an optional `else` clause
-- The `else` block is executed **if and only if** the loop terminates normally (i.e., not by a `break` statement)
+- The `else` block runs [if and only if]{.alert} the loop terminates normally (i.e., not by a `break` statement)
 
 Example with `for` and `else`: Searching for an item
 ```{python}
@@ -636,8 +643,8 @@ else:
 ## What are list comprehensions?
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-- List comprehensions provide a concise and readable way to create lists
-- They often achieve the same result as a `for` loop (and sometimes an `if` condition) but in a single line of code.
+- List comprehensions provide a [concise and readable]{.alert} way to create lists
+- They often achieve the same result as a `for` loop (and sometimes an `if` condition) but in a [single line of code]{.alert}
 - **Basic Syntax:**
   `new_list = [expression for item in iterable]`
 
@@ -716,12 +723,12 @@ You have a list of names:
 1. `range(len(list_ids))`:
    - `len(list_ids)` gets the length (number of items) in the `list_ids` list.
    - `range()` then creates a sequence of numbers from 0 up to (but not including) that length.
-   - This allows the loop to iterate over each index of the list[1].
+   - This allows the loop to iterate over each index of the list.
 
 2. `str(i+1)`:
    - `i` is the current loop index, starting at 0.
    - `i+1` adds 1 to that index so that the position number starts at 1. (Remember: Python indexes start at 0.)
-   - `str()` converts the resulting number to a string[2].
+   - `str()` converts the resulting number to a string.
    - This is done because `i` starts at 0, but we want to display position numbers starting at 1 for the customers.
 
 So, this code loops through each item in `list_ids`, printing a message for each customer that includes:
@@ -748,7 +755,7 @@ for dataset in list_datasets:
     print("\n")
 ```
 
-- [[Back to the main text]{.button}](#sec:exercise2)
+- [[Back to exercise]{.button}](#sec:exercise2)
 :::
 
 ## Appendix 03 {#sec:appendix3_for_break_simple}
@@ -767,10 +774,10 @@ while index < len(list_fruits):
 
 ```
 
-- [[Back to the main text]{.button}](#sec:exercise_for_break_simple)
+- [[Back to exercise]{.button}](#sec:exercise_for_break_simple)
 :::
 
-## Appendix 04: Solution for List Comprehensions Exercise {#sec:appendix4_list_comp}
+## Appendix 04: solution for list comprehensions exercise {#sec:appendix4_list_comp}
 
 :::{style="margin-top: 30px; font-size: 21px;"}
 Solution for the list comprehension "Try it yourself!" exercise:
@@ -790,5 +797,5 @@ uppercase_long_names = [name.upper() for name in names if len(name) > 5]
 print(f"Uppercase long names (> 5 chars): {uppercase_long_names}")
 ```
 
-[[Back to the main text]{.button}](#sec:exercise_list_comp)
+[[Back to exercise]{.button}](#sec:exercise_list_comp)
 :::

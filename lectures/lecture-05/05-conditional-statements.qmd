@@ -86,15 +86,12 @@ Today we will:
 :::{style="margin-top: 30px; font-size: 24px;"}
 :::{.columns}
 :::{.column width="50%"}
-- Test expression
-  - We type `if` followed by a logical condition and the `:` symbol.
-  - The `:` says: run the following command 
-- Body of expression
-  - The "body" of the `if` statement needs to [indented with four spaces](https://www.python.org/dev/peps/pep-0008/#indentation)
-  - You can indent text by pressing `tab` in your keyboard
-
-- If the condition is true, a message will appear
-- If the condition is false, then nothing happens
+- Two parts of an `if`:
+  - The [test expression]{.alert}: `if`, a condition, and `:`
+  - The [body]{.alert}: the code to run, [indented with four spaces](https://www.python.org/dev/peps/pep-0008/#indentation)
+- Tip: press `Tab` to indent in your editor
+- If the condition is `True`, the body runs
+- If the condition is `False`, the body is skipped
 :::
 
 :::{.column width="50%"}
@@ -151,9 +148,9 @@ else:
 #| echo: true
 #| eval: true
 age = 22
-national = False
+national = True   # Try setting this to False to see the `else` branch
 
-if national & (age >= 18):
+if national and (age >= 18):
     print("This person can vote in the US")
 else:
     print("This person cannot vote in the US")
@@ -217,7 +214,7 @@ else:
 :::
 :::
 
-## Try it out! 🚀 {#sec:question04}
+## Try it yourself! 🚀 {#sec:exercise01}
 
 :::{style="margin-top: 30px; font-size: 30px;"}
 What happens if ... ? Try the following:
@@ -226,7 +223,8 @@ What happens if ... ? Try the following:
 - Rerun the above code but change the value of `is_graph_red`.
 - What happens if you set a non-boolean value of `is_graph_red`?
 - Don't include `:`
-- Don't indent the body of the `if` [[Appendix 01]{.button}](#sec:appendix01)
+- Don't indent the body of the `if`
+- [[Appendix 01]{.button}](#sec:appendix01)
 :::
 
 ## If/elif/else statements
@@ -234,10 +232,9 @@ What happens if ... ? Try the following:
 :::{style="margin-top: 30px; font-size: 24px;"}
 :::{.columns}
 :::{.column width="50%"}
-- The last conditional statement is the `elif` statement
-- The `elif` statement is used to execute a block of code if the first condition is `False` and the second condition is `True`
-- It is just like another `if` statement, but it is used when you have more than two possible outcomes
-- The `elif` statement syntax is as follows:
+- The `elif` statement [checks the next condition]{.alert} only when the previous one was `False`
+- Useful when you have [more than two outcomes]{.alert}
+- Syntax:
 
 ```{python}
 #| echo: true
@@ -284,14 +281,12 @@ else:
 :::{.columns}
 :::{.column width="35%"}
 - You can combine conditions using logical operators too!
-- Remember what we learned about logical operators?
+- Remember what we learned in [lecture 03]{.alert}?
 - The logical operators are:
-  - `&` (and)
-  - `|` (or)
-  - `~` (not)
-  - `==` (equal)
-  - `!=` (not equal)
-  - `>` (greater than), `<` (less than), etc
+  - `and`, `or`, `not` (Python booleans)
+  - `==` (equal), `!=` (not equal)
+  - `>`, `<`, `>=`, `<=` (comparisons)
+- For [NumPy arrays]{.alert}, you would use `&`, `|`, `~` instead
 :::
 
 :::{.column width="65%"}
@@ -412,7 +407,7 @@ print(f"Category: {category}, Day: {day}, Price: ${price}")
 ```
 :::
 
-## Try it yourself! 🧠 {#sec:exercise05}
+## Try it yourself! 🧠 {#sec:exercise02}
 
 :::{style="margin-top: 30px; font-size: 28px;"}
 Modify the ticket pricing example:
@@ -421,19 +416,18 @@ Modify the ticket pricing example:
 - [[Appendix 02]{.button}](#sec:appendix02)
 :::
 
-# Conditional expressions (ternary operator) ✨ {background-color="\#2d4563"}
+# Conditional expressions (ternary operator) ✨ {background-color="#2d4563"}
 
 ## Conditional expressions (ternary operator)
 
 ### A concise way to assign based on condition
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-- Python offers a more compact way to write simple `if/else` statements that assign a value to a variable or return a value. This is known as a conditional expression or a "ternary operator".
-- It's a one-liner!
-  - **Syntax:** `value_if_true if condition else value_if_false`
-  - This expression evaluates the `condition`:
-      - If `True`, the whole expression evaluates to `value_if_true`.
-      - If `False`, the whole expression evaluates to `value_if_false`.
+- For simple `if/else` that just [picks a value]{.alert}, Python has a [one-liner]{.alert}
+- Also called a "ternary operator" (three parts joined together)
+- Syntax: `value_if_true if condition else value_if_false`
+  - If `condition` is `True`, the whole expression evaluates to `value_if_true`
+  - If `condition` is `False`, the whole expression evaluates to `value_if_false`
 :::
 
 ## Conditional expression examples
@@ -455,7 +449,7 @@ else:
 print(f"Status (standard if/else): {status}")
 ```
 
-**Using Conditional Expression:**
+**Using a conditional expression:**
 
 ```{python}
 #| echo: true
@@ -467,7 +461,7 @@ print(f"Status (ternary operator): {status_ternary}")
 
 :::
 :::{.column width="50%"}
-**Another Example (Setting a discount):**
+**Another example (setting a discount):**
 
 ```{python}
 #| echo: true
@@ -487,9 +481,9 @@ print(f"Final price: ${final_price}")
 :::
 :::
 
-## Pitfall: Order of `elif` Statements
+## Pitfall: order of `elif` statements
 
-### Specificity Matters
+### Specificity matters
 
 :::{style="margin-top: 30px; font-size: 20px;"}
 
@@ -499,7 +493,7 @@ print(f"Final price: ${final_price}")
 
 :::{.columns}
 :::{.column width="50%"}
-**Problematic Order (Grading):**
+**Problematic order (grading):**
 
 ```{python}
 #| echo: true
@@ -522,7 +516,7 @@ print(f"Score: {score}, Problematic Grade: {grade}")
 
 :::
 :::{.column width="50%"}
-**Correct Order (Grading):**
+**Correct order (grading):**
 
 ```{python}
 #| echo: true
@@ -548,17 +542,17 @@ print(f"Score: {score}, Correct Grade: {grade}")
 
 # A bit more about lists in Python 📝 {background-color="#2d4563"}
 
-## Lists with blank elements
-### How to create an empty list?
+## Lists with placeholder values
+### Pre-allocating a list with `None`
 
 :::{style="margin-top: 30px; font-size: 20px;"}
-- You can create an empty list using the `None` object
-- `None` is a special object in Python that represents the absence of a value
-- The type of None is NoneType. It is the only instance of this type
-- `None` is often used to represent missing values or, in our case today, placeholders
+- You can create a list of [placeholder values]{.alert} using `None`
+- A [truly empty list]{.alert} (zero elements) is just `[]`
+- `None` is a special object that represents [the absence of a value]{.alert}
+- It is often used as a placeholder, to be filled in later
 - Please note that `None` is not the same as `0`, `False`, or an empty string `''`
 - You should also not use quotes with `None`, as [it is not a string]{.alert}
-- Let's see how to create an empty list using `None`:
+- Let's see how to pre-fill a list with `None`:
 
 ```{python}
 #| echo: true
@@ -617,7 +611,7 @@ cities = ["Nashville", "Bogota", "Atlanta"]
 
 :::{.column width="50%"}
 - How to list _all_ values that match a search term?
-- [There is]{.alert}, but it's a bit more complicated
+- [Yes, there is a way]{.alert}, but it's a bit more complicated
 - We will learn about `for` loops soon, but for those who are curious... 🤓
 
 ```{python}
@@ -731,9 +725,9 @@ print(list_none_rep)
 ## Common pitfalls with lists
 
 :::{style="margin-top: 30px; font-size: 22px;"}
-- A common mistake is to confuse lists and `np.array` objects when doing operations
-- Lists are not arrays, and you cannot perform operations like addition or multiplication
-- You can only concatenate lists using the `+` operator
+- Lists and `np.array` use the same operators (`+`, `*`) but with [different meanings]{.alert}
+- On lists: `+` [concatenates]{.alert}, `*` [repeats]{.alert}; no element-wise maths
+- On NumPy arrays: `+` and `*` work [element-by-element]{.alert} (see lecture 03)
 
 ```{python}
 #| echo: true
@@ -829,7 +823,7 @@ Check that it works by trying different values of "points"!
 
 # Thank you very much and see you next time! 🙏 {background-color="#2d4563"}
 
-## Appendix 01 {#sec:appendix01}
+## Appendix 01a {#sec:appendix01}
 
 :::{style="margin-top: 30px; font-size: 30px;"}
 What happens if `is_graph_red` is set to `True`?
@@ -852,10 +846,10 @@ else:
     plt.show()
 ```
 
-[[Back to the main text]{.button}](#sec:question04)
+[[Back to exercise]{.button}](#sec:exercise01)
 :::
 
-## Appendix 01 - Continued
+## Appendix 01b
 
 :::{style="margin-top: 30px; font-size: 30px;"}
 What happens if you set a non-boolean value of `is_graph_red`?
@@ -880,10 +874,10 @@ else:
     plt.show()
 ```
 
-[[Back to the main text]{.button}](#sec:question04)
+[[Back to exercise]{.button}](#sec:exercise01)
 :::
 
-## Appendix 01 - Continued
+## Appendix 01c
 
 :::{style="margin-top: 30px; font-size: 30px;"}
 What happens if you don't include `:`?
@@ -908,10 +902,10 @@ else:
     plt.show()
 ```
   
-[[Back to the main text]{.button}](#sec:question04)
+[[Back to exercise]{.button}](#sec:exercise01)
 :::
 
-## Appendix 01 - Continued
+## Appendix 01d
 
 :::{style="margin-top: 30px; font-size: 30px;"}
 What happens if you don't indent the body of the `if`?
@@ -936,7 +930,7 @@ plt.xlabel("How many classes are you taking?")
 plt.show()
 ```
 
-[[Back to the main text]{.button}](#sec:question04)
+[[Back to exercise]{.button}](#sec:exercise01)
 :::
 
 ## Appendix 02 {#sec:appendix02}
@@ -969,10 +963,10 @@ else: # Senior
 print(f"Category: {category}, Day: {day}, Price: ${price}")
 ```
 
-[[Back to the main text]{.button}](#sec:exercise05)
+[[Back to exercise]{.button}](#sec:exercise02)
 :::
 
-## Appendix 03 {#sec:appendix03}
+## Appendix 03a {#sec:appendix03}
 
 :::{style="margin-top: 30px; font-size: 22px;"}
 - Create an empty list called "list_personal"
@@ -1003,7 +997,7 @@ print(list_personal)
 - Did you get it right? 🤓
 :::
 
-## Appendix 03 - Continued
+## Appendix 03b
 
 :::{style="margin-top: 30px; font-size: 22px;"}
 - Here is another way to solve the exercise, now using `list.extend()` and `[1]` index
@@ -1025,5 +1019,5 @@ list_personal[1] = "Last element"
 print(list_personal)
 ```
 
-[[Back to the main text]{.button}](#sec:lists)
+[[Back to exercise]{.button}](#sec:lists)
 :::
