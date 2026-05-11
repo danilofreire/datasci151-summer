@@ -14,6 +14,9 @@ format:
           #title-slide .title {
             font-size: 42px !important;
           }
+          .reveal :not(pre) > code {
+            font-size: 0.9em !important;
+          }
           </style>
     footer: "[Introduction](https://danilofreire.github.io/datasci151-summer/lectures/lecture-01/01-introduction.html)"
 revealjs-plugins:
@@ -39,7 +42,7 @@ install_if_missing <- function(package) {
 }
 
 # List of packages to ensure are installed and loaded
-packages <- c("emo", "fontawesome")
+packages <- c("fontawesome")
 
 # Apply the function to each package
 lapply(packages, install_if_missing)
@@ -47,7 +50,7 @@ lapply(packages, install_if_missing)
 
 # Welcome to DATASCI 151! 🥳 {background-color="#2d4563"}
 
-## Lecture Overview
+## Lecture overview
 
 :::{style="font-size: 33px; margin-top: 50px;"}
 :::{.columns}
@@ -66,9 +69,9 @@ lapply(packages, install_if_missing)
 :::
 :::
 
-## Course Materials
+## Course materials
 
-### Important Links
+### Important links
 
 ::: {style="font-size: 28px;"}
 `r fa('globe')` Course website: <https://danilofreire.github.io/datasci151-summer>
@@ -135,10 +138,10 @@ Please remember to check the course website regularly for updates and announceme
 - Classes where [students participate are the best]{.alert}
 - [Hands-on activities]{.alert} help you learn better
 - I am always available to help and answer questions. [And I mean it!]{.alert}
-- Feel free to ask questions during class, office hours, or via email `r emo::ji('smiling_face_with_smiling_eyes')`
+- Feel free to ask questions during class, office hours, or via email 😉
 :::
 
-## Office hours: What for and what not for
+## Office hours: what for and what not for
 
 <br>
 
@@ -248,9 +251,9 @@ Much easier! 😃
 [![](figures/sql-salary.png){width="90%"}](#){data-modal-type="image" data-modal-url="figures/sql-salary.png"}
 :::
 
-# Course Logistics 📚 {background-color="#2d4563"}
+# Course logistics 📚 {background-color="#2d4563"}
 
-## Course Objectives
+## Course objectives
 
 1. Perform basic operations and write functions in Python
 2. Conduct data wrangling and manipulate data using Python libraries such as Pandas
@@ -260,7 +263,7 @@ Much easier! 😃
 6. Use Jupyter Notebooks for reproducible research
 7. Develop problem-solving skills relevant to data analysis and statistical computing
 
-## Grades and Late Policy
+## Grades and late policy
 
 :::{style="font-size: 30px; margin-top: 30px;"}
 ::: {.columns}
@@ -282,9 +285,9 @@ Much easier! 😃
 :::
 :::
 
-# Computing Set Up 🖥️ {background-color="#2d4563"}
+# Computing set up 🖥️ {background-color="#2d4563"}
 
-## Our Class in a Nutshell
+## Our class in a nutshell
 
 [![](figures/nutshell.png)](#){data-modal-type="image" data-modal-url="figures/nutshell.png"}
 
@@ -294,6 +297,7 @@ Much easier! 😃
 <br>
 
 - Follow the instructions [on our GitHub website](https://danilofreire.github.io/datasci151-summer/tutorials/01-vscode-anaconda-tutorial.html) 
+- Or just go to <https://www.anaconda.com/download/success?reg=skipped> and download the version for your operating system
 - We are using Anaconda virtual environments for this class (I will cover this in more detail soon)​
 - For now: Anaconda comes with a full Python installation​ with everything you need to follow along with the course 
 
@@ -301,17 +305,32 @@ Much easier! 😃
 - [Questions?]{.alert}
 :::
 
-## Installing VSCode and Connecting Anaconda​
+## Installing VSCode and connecting Anaconda​
+### Let's do it together!
 
-:::{style="font-size: 27px; margin-top: 50px;"}
-- Follow the instructions [Installing Visual Studio Code and Connecting it with Anaconda](https://github.com/danilofreire/datasci151-summer/blob/main/tutorials/01-vscode-anaconda-tutorial.pdf) from GitHub
+:::{style="font-size: 26px; margin-top: 30px;"}
+:::: {.columns}
+::: {.column width=50%}
+[Install VSCode]{.alert}
+
+- Follow our [step-by-step tutorial](https://github.com/danilofreire/datasci151-summer/blob/main/tutorials/01-vscode-anaconda-tutorial.pdf) on GitHub
+- Or download VSCode directly at <https://code.visualstudio.com/download> (Windows, Mac, or Linux)
+- Find the [Extensions]{.alert} icon in the left sidebar (four small squares with one offset), or press `Ctrl+Shift+X` (`Cmd+Shift+X` on Mac)
 - Install the [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) and [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) extensions for VSCode
-- For now: know that ["base"]{.alert} is the Anaconda virtual environment that comes by default with the installation​
-- The next step is to check if the connection between VSCode and Anaconda worked 
-  - In VSCode, click on "View" and then "Command Palette"
-  - Type ["Python: Select Interpreter"]{.alert} and select the Anaconda environment you just created
-  - I recommend using the ["base"]{.alert} environment for this course
-- Next step: we will create a new folder for the DATASCI 151 course and download our virtual GitHub folder and opening it in VSCode
+:::
+
+::: {.column width=50%}
+[Connect to Anaconda]{.alert}
+
+- In VSCode, open "View" → "Command Palette"
+- Type ["Python: Select Interpreter"]{.alert} and pick your Anaconda environment
+- Use ["base"]{.alert} (Anaconda's default environment) for this course
+:::
+::::
+
+<br>
+
+Next class: we will create a course folder and open our GitHub materials in VSCode
 :::
 
 # Git and GitHub 🐙{background-color="#2d4563"}
@@ -339,9 +358,9 @@ Much easier! 😃
 
 ## {background-image="figures/github01.png" background-size="100%"}
 
-## How to Download the Course Materials
+## How to download the course materials
 
-:::{style="font-size: 27px; margin-top: 30px;"}
+:::{style="font-size: 25px; margin-top: 30px;"}
 :::{.columns}
 :::{.column width=50%}
 - Go to the course repository: <https://github.com/danilofreire/datasci151-summer>
@@ -414,7 +433,7 @@ conda install jupyter
 :::
 :::
 
-## Next Class
+## Next class
 
 :::{style="font-size: 28px;"}
 - Let me know if you have any questions about the course or the material or how to set up your computer
@@ -424,9 +443,9 @@ conda install jupyter
 - And please do not forget:
   - Coding ability can be developed
   - Academic skills and abilities are acquired through hard work, mistakes, and perseverance. Coding is no different
-  - My only goal here is that you learn the material. Please ask me questions! `{r} emo::ji('smiling_face_with_smiling_eyes')`
+  - My only goal here is that you learn the material. Please ask me questions! 😉
 :::
 
 # Questions? {background-color="#2d4563"}
 
-# Thank you very much for your attention! `{r} emo::ji ('smiley')` `{r} emo::ji ('partying_face')` {background-color="#2d4563"}
+# Thank you very much for your attention! 🙏🎉 {background-color="#2d4563"}
