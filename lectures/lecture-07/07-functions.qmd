@@ -64,7 +64,7 @@ editor:
 :::{style="margin-top: 30px; font-size: 25px;"}
 - Functions are used to [organise code, make it readable, and reusable]{.alert}
 - The main idea behind writing and using functions is that, if you have to do the same task multiple times, you can write a function to do that task and then call it whenever you want
-- A (somewhat silly) rule of thumb is that if you do the same task more than three times, you should write a function for it
+- A (somewhat silly) rule of thumb: [if you do the same task more than three times, you should write a function for it]{.alert}
 - As your code grows, functions will help you keep it maintainable and scalable
 - We have already seen lots of functions in Python
   - `print()`, `len()`, `str()`, `type()`, etc
@@ -75,13 +75,13 @@ editor:
 ### A function is a block of code that performs a specific task
 
 :::{style="margin-top: 30px; font-size: 25px;"}
-- Functions have [parameters](https://eitca.org/computer-programming/eitc-cp-ppf-python-programming-fundamentals/functions/function-parameters-and-typing/examination-review-function-parameters-and-typing/what-are-function-parameters-in-python-and-how-are-they-used/), which are the variables that the function expects to receive
-  - For example, `np.random.normal()` expects two parameters: the mean (`loc`) and the standard deviation (`scale`). Size is an optional parameter
-- Functions can take [arguments](https://en.wikipedia.org/wiki/Parameter_(computer_programming)) and [return values](https://en.wikipedia.org/wiki/Return_statement)
-  - For example, `np.random.normal(0, 1)` takes two arguments and returns a random number from a normal distribution with mean 0 and standard deviation 1
-- Functions can also have [default arguments](https://en.wikipedia.org/wiki/Default_argument), which are optional
-  - If you don't provide a value for a default argument, the function will use the default value
-  - Example: `np.random.normal()` will provide a sample of 1 number with mean 0 and standard deviation 1 if you don't provide any arguments
+- Functions have [parameters](https://eitca.org/computer-programming/eitc-cp-ppf-python-programming-fundamentals/functions/function-parameters-and-typing/examination-review-function-parameters-and-typing/what-are-function-parameters-in-python-and-how-are-they-used/): the variables a function expects to receive
+  - Example: `np.random.normal()` expects `loc` (mean) and `scale` (standard deviation); `size` is optional
+- They take [arguments](https://en.wikipedia.org/wiki/Parameter_(computer_programming)) and can [return values](https://en.wikipedia.org/wiki/Return_statement)
+  - Example: `np.random.normal(0, 1)` returns a random number from a normal distribution
+- They can also have [default arguments](https://en.wikipedia.org/wiki/Default_argument)
+  - If you don't pass a value, the function uses the default
+  - Example: `np.random.normal()` with no arguments returns one number with mean 0 and std 1
 :::
 
 ## Some examples 
@@ -187,7 +187,7 @@ print(vec_z)
 :::{style="margin-top: 30px; font-size: 22px;"}
 :::{.columns}
 :::{.column width="50%"}
-- You can create your own functions using the `def` keyword
+- You can create your own functions using the [`def`]{.alert} keyword
 - The syntax is as follows:
 
 ```{python}
@@ -249,7 +249,7 @@ def fn_compound_interest(P, r, n, t):
 ```{python}
 #| eval: true
 #| echo: true
-# You can know compute the formula with different values
+# You can now compute the formula with different values
 # Let's see how much one can gain by investing 50k and 100k
 # Earning 10% a year for 10 years
 
@@ -293,7 +293,7 @@ $f(x) = x^2 + 2x + 1$
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 - Lambda functions are [short functions, which you can write in one line]{.alert}
-- They can have any number of arguments but only one expression (no return statement)
+- They can have any number of arguments but [only one expression]{.alert} (no return statement)
 - They are used when you need a simple function for a short period of time
 - They are also known as [anonymous functions](https://en.wikipedia.org/wiki/Anonymous_function), although you can assign them to a variable
 - Format: `my_function = lambda parameters: expression`
@@ -484,7 +484,7 @@ NameError: name 'x' is not defined
 :::
 :::
 
-## Local variables supercede global variables
+## Local variables supersede global variables
 ### Remember the LEGB rule
 
 :::{style="margin-top: 30px; font-size: 22px;"}
@@ -503,6 +503,8 @@ def fn_square(x):
 x = 5
 y = -5
 
+# Notice: the function's local x and y do not change
+# the global x = 5 and y = -5 defined just above
 print(fn_square(x = 1))
 
 print(x)
@@ -539,7 +541,7 @@ print(y)
 :::{style="margin-top: 30px; font-size: 22px;"}
 :::{.columns}
 :::{.column width="50%"}
-- If you want to change a global variable inside a function, you need to use the `global` keyword
+- If you want to change a global variable inside a function, you need to use the [`global`]{.alert} keyword
 - The `global` keyword tells Python that you want to use the global variable, not create a new local variable
 
 ```{python}
@@ -557,11 +559,13 @@ print(x)
 :::
 
 :::{.column width="50%"}
-- **Why avoid `global`?**
-  - It makes your code harder to follow. It's not clear where a variable is being changed.
-  - It can lead to unexpected side effects if multiple functions modify the same global variable.
-  - It's generally better for functions to receive data as parameters and return results.
-- Use `global` sparingly, if at all! 😉
+Why [avoid `global`]{.alert}:
+
+- It makes your code harder to follow. It's not clear where a variable is being changed
+- It can lead to unexpected side effects if multiple functions modify the same global variable
+- It's generally better for functions to receive data as parameters and return results
+
+Use `global` sparingly, if at all! 😉
 :::
 :::
 :::
@@ -600,7 +604,7 @@ print(x)
 :::{.columns}
 :::{.column width="50%"}
 - We have also seen many [built-in functions]{.alert} in Python, like `print()`, `len()`, `sum()`, etc
-- They are available in any part of your code, and you don't need to define them
+- They are [available in any part of your code]{.alert}, and you don't need to define them
 - Python has a list of variables that are always available to prevent you from using the same names
 - Most of them are error names
 - Python checks the built-in scope last (after Local, Enclosing, and Global)
@@ -629,12 +633,12 @@ print(dir(builtins))
 :::
 :::
 
-## Enclosing scope: functions inside functions (Nested Functions)
+## Enclosing scope: functions inside functions (nested functions)
 
 :::{style="margin-top: 30px; font-size: 26px;"}
-- Sometimes, you might define a function *inside* another function. This is called a **nested function** (we've spoken about this before!)
-- The "enclosing scope" refers to the variables of the **outer** function that the **inner** (nested) function can "see" and use
-- This is the 'E' in the LEGB rule (Local -> Enclosing -> Global -> Built-in).
+- Sometimes, you might define a function *inside* another function. This is called a [nested function]{.alert} (we've spoken about this before!)
+- The "enclosing scope" refers to the variables of the outer function that the inner (nested) function can "see" and use
+- This is the 'E' in the LEGB rule (Local -> Enclosing -> Global -> Built-in)
 - They are easier to understand once you understand local and global scopes
 - We will not use them much in this course, but they are useful in some cases!
 :::
@@ -727,7 +731,7 @@ func_one()
 
 # Have a great day! 😊 {background-color="#2d4563"}
 
-## Appendix 01: Compound Interest Equation {#sec:appendix01}
+## Appendix 01: compound interest equation {#sec:appendix01}
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 - $V$ is the future value of the investment/loan, including interest
@@ -737,10 +741,10 @@ func_one()
 - $t$ is the time the money is invested/borrowed for, in years
 - [More information](https://en.wikipedia.org/wiki/Compound_interest)
 
-[[Back to the function]{.button}](#sec:interest)
+[[Back to the example]{.button}](#sec:interest)
 :::
 
-## Appendix 02: Quadratic Equation {#sec:appendix02}
+## Appendix 02: quadratic equation {#sec:appendix02}
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 ```{python}
@@ -757,10 +761,10 @@ print(f1)
 print(f2)
 ```
 
-[[Back to the exercise]{.button}](#sec:equation)
+[[Back to exercise]{.button}](#sec:equation)
 :::
 
-## Appendix 03: Pass/Fail Function {#sec:appendix03}
+## Appendix 03: pass/fail function {#sec:appendix03}
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 ```{python}
@@ -777,10 +781,10 @@ status = fn_pass_fail(60)
 print(status)
 ```
 
-[[Back to the exercise]{.button}](#sec:names)
+[[Back to exercise]{.button}](#sec:names)
 :::
 
-## Appendix 04: Lambda Function {#sec:appendix04}
+## Appendix 04: lambda function {#sec:appendix04}
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 ```{python}
@@ -792,10 +796,10 @@ result = fn_iseligible_vote(20)
 print(result)
 ```
 
-[[Back to the exercise]{.button}](#sec:lambda)
+[[Back to exercise]{.button}](#sec:lambda)
 :::
 
-## Appendix 05: For loop + Function {#sec:appendix05}
+## Appendix 05: for loop + function {#sec:appendix05}
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 ```{python}
@@ -808,7 +812,7 @@ for age in list_ages:
     print(f"Age: {age} - Eligible to vote: {result}")
 ```
     
-[[Back to the exercise]{.button}](#sec:list)
+[[Back to exercise]{.button}](#sec:list)
 :::
 
 ## Appendix 06 {#sec:appendix-06}
@@ -853,14 +857,16 @@ print(x)
 print(y)
 ```
 
-[[Back to exercise 06]{.button}](#sec:exercise-06)
+[[Back to exercise]{.button}](#sec:exercise-06)
 :::
 :::
 :::
 
 ## Appendix 07 {#sec:appendix-07}
 
-:::{style="margin-top: 30px; font-size: 24px;"}
+:::{style="margin-top: 30px; font-size: 21px;"}
+**1. Working output (predictions):**
+
 ```{python}
 #| echo: true
 #| eval: true
@@ -874,13 +880,24 @@ def func_one():
         c = 30 # Local to func_two
         # 'a' is global, 'b' is from enclosing scope of func_one
         print(f"Inside func_two: a = {a}, b = {b}, c = {c}")
-    
+
     func_two()
-    # print(f"Inside func_one, trying to print c: {c}") # What would happen here?
 
 func_one()
 print(f"Outside all functions: a = {a}")
 ```
 
-- [[Back to exercise 07]{.button}](#sec:exercise-07)
+**2. What would happen if we uncomment the print-outside-scope lines?**
+
+- `print(c)` inside `func_one` after `func_two()` returns: `NameError`, because `c` is local to `func_two` and no longer exists once that function ends
+- `print(b)` outside all functions: `NameError`, because `b` was local to `func_one` and is destroyed when it returns
+- `print(c)` outside all functions: `NameError`, for the same reason as above
+
+**3. Scope of each variable:**
+
+- `a`: [global]{.alert} — defined at the top level, visible everywhere
+- `b`: [local]{.alert} to `func_one` (and [enclosing]{.alert} for `func_two`, which can read it)
+- `c`: [local]{.alert} to `func_two` only
+
+[[Back to exercise]{.button}](#sec:exercise-07)
 :::

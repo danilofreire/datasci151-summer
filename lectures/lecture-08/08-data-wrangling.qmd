@@ -231,10 +231,9 @@ display(data)
 :::{style="margin-top: 30px; font-size: 22px;"}
 - The `map` function is used to [apply a function to a list, an array, or a series]{.alert}
   - A series is a single column of a pandas DataFrame
-- [In pandas]{.alert}, `map` works very similarly to the `apply` function, and they are interchangeable when working with series
-- `map` can be faster than `apply` for simple functions, but `apply` is more flexible as it can be used with DataFrames (many columns)
-- However, if you are using regular lists (e.g., `list01 = [1,2,3]`), you should use `map` instead of `apply`
-  - `apply` is not a built-in Python function
+- [In pandas]{.alert}, `map` works very similarly to `apply`, and they are interchangeable when working with series
+- `map` can be faster for simple functions; `apply` is more flexible (it also works with DataFrames)
+- For regular lists (e.g., `list01 = [1,2,3]`), use `map`. `apply` is not a built-in Python function
   
 :::{style="font-size: 20px;"}
 :::{.columns}
@@ -327,6 +326,16 @@ NameError: name 'apply' is not defined
 - Add a variable to the dataset called `has_siblings`
 - Assign True/False to this variable using `apply()`
 - [[Appendix 02]{.button}](#sec:appendix-02)
+:::
+
+## Try it yourself! 🚗 {#sec:exercise-03}
+
+:::{style="margin-top: 30px; font-size: 24px;"}
+- Read the car dataset `data_raw/features.csv` with `pd.read_csv()`
+- Write a lambda function that tests whether `mpg` $\ge 29$
+- Add a new column called `mpg_above_29` that is `True/False` depending on the result
+- Save the new dataset to `data_clean/features.csv` with `to_csv()`
+- [[Appendix 03]{.button}](#sec:appendix-03)
 :::
 
 # Importing modules 📦 {background-color="#2d4563"}
@@ -449,9 +458,9 @@ display(circuits.head(2))
 
 - `Field` - Name of the variable
 - `Type` - Type of the variable
-  - Integer (`int`), string (`str` - `varchart`), and float (`float`)
+  - Integer (`int`), string (`str` - `varchar`), and float (`float`)
 - `Description` - Label with a description of the variable
-- [Quick discussion]{.alert}: What does `varchart(255)` mean?
+- [Quick discussion]{.alert}: What does `varchar(255)` mean?
 :::
 
 :::{.column width="50%"}
@@ -478,7 +487,7 @@ display(circuits.head(2))
 :::{.columns}
 :::{.column width="50%"}
 - `NaN` stands for "Not a Number"
-- It is a special value in Python that represents missing data
+- It is a special value in Python that represents [missing data]{.alert}
 - `NaN` values can be found in datasets for various reasons
   - Data entry errors
   - Data cleaning and processing errors
@@ -523,7 +532,7 @@ np.nan
 ```{python}
 #| echo: true
 #| eval: true
-# Create two array with and without "NaNs"
+# Create two arrays with and without "NaNs"
 # The "np.array()" functions converts 
 # a list to an array
 
@@ -605,7 +614,7 @@ print(dataset["x"].mean())
 :::
 :::
 
-# Data Cleaning 🧹🧽 {background-color="#2d4563"}
+# Data cleaning 🧹🧽 {background-color="#2d4563"}
 
 ## Data cleaning
 
@@ -613,10 +622,11 @@ print(dataset["x"].mean())
 :::{.columns}
 :::{.column width="50%"}
 - Data cleaning is the process of preparing data for analysis
-- It involves identifying and handling missing data, outliers, and other data quality issues
-- [You guys have no idea]{.alert} how much time you will spend cleaning data in your life 😅
-- According to a [Forbes survey](https://www.forbes.com/sites/gilpress/2016/03/23/data-preparation-most-time-consuming-least-enjoyable-data-science-task-survey-says/), data scientists spend 60% of their time cleaning and preparing data, and 57% say it's the least enjoyable part of their work
-  - I can [really]{.alert} relate to that 😂
+- It involves [identifying and handling missing data, outliers]{.alert}, and other data quality issues
+- [You have no idea]{.alert} how much time you will spend cleaning data in your life 😅
+- According to a [Forbes survey](https://www.forbes.com/sites/gilpress/2016/03/23/data-preparation-most-time-consuming-least-enjoyable-data-science-task-survey-says/), data scientists spend 60% of their time cleaning and preparing data
+- 57% say it's the [least enjoyable]{.alert} part of their work
+- I can [really]{.alert} relate to that 😂
 - But remember that [clean data are good data]{.alert} 🥳
 :::
 
@@ -758,7 +768,7 @@ circuits.to_csv("data_clean/circuits_clean.csv", index=False)
 - [[Appendix 05]{.button}](#sec:appendix-05)
 :::
 
-# Recoding Numeric Variables 🔄 {background-color="#2d4563"}
+# Recoding numeric variables 🔄 {background-color="#2d4563"}
 
 ## Recoding numeric variables
 
@@ -770,7 +780,7 @@ circuits.to_csv("data_clean/circuits_clean.csv", index=False)
   - To create new variables
   - To standardise variables
   - To simplify the analysis
-- Please remember to convert the variable to the correct type before recoding
+- Please remember to [convert the variable to the correct type]{.alert} before recoding
 
 ```{python}
 #| echo: true
@@ -840,53 +850,6 @@ display(circuits.sample(5))
 
 # Thanks very much! 😊 {background-color="#2d4563"}
 
-## Appendix 01 {#sec:appendix-01}
-
-:::{style="margin-top: 30px; font-size: 24px;"}
-:::{.columns}
-:::{.column width="50%"}
-```{python}
-#| echo: true
-#| eval: true
-def modify_x():
-    global x
-    x = x + 5
-
-x = 1
-
-# Now, running the function 
-# will permanently increase x by 5.
-
-modify_x()
-print(x)
-modify_x()
-print(x)
-```
-:::
-
-:::{.column width="50%"}
-```{python}
-#| echo: true
-#| eval: true
-def fn_square(x):
-    global y
-    y = x**2
-    return(y)
-
-x = 5
-y = -5
-
-print("Example 1:")
-print(fn_square(x = 10))
-print(x)
-print(y)
-```
-:::
-:::
-
-[[Back to exercise 01]{.button}](#sec:exercise-01)
-:::
-
 ## Appendix 02 {#sec:appendix-02}
 
 :::{style="margin-top: 30px; font-size: 24px;"}
@@ -904,7 +867,7 @@ data["has_siblings"] = data["num_adult_siblings"].apply(fn_has_siblings)
 display(data[["num_adult_siblings","has_siblings"]])
 ```
 
-[[Back to exercise 02]{.button}](#sec:exercise-02)
+[[Back to exercise]{.button}](#sec:exercise-02)
 :::
 
 ## Appendix 03 {#sec:appendix-03}
@@ -927,7 +890,7 @@ display(data_raw[["mpg","mpg_above_29"]])
 data_raw.to_csv("data_clean/features.csv", index = False)
 ```
 
-[[Back to exercise 03]{.button}](#sec:exercise-03)
+[[Back to exercise]{.button}](#sec:exercise-03)
 :::
 
 ## Appendix 04 {#sec:appendix-04}
@@ -944,7 +907,7 @@ circuits["country"] = circuits["country"].replace("UK", "United Kingdom")
 display(circuits[["country"]])
 ```
 
-[[Back to exercise 04]{.button}](#sec:exercise-04)
+[[Back to exercise]{.button}](#sec:exercise-04)
 :::
 
 ## Appendix 05 {#sec:appendix-05}
@@ -965,5 +928,5 @@ print(circuits["lat"].dtype)
 # It will also raise an error
 ```
 
-[[Back to exercise 05]{.button}](#sec:exercise-05)
+[[Back to exercise]{.button}](#sec:exercise-05)
 :::
