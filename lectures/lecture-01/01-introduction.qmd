@@ -78,8 +78,8 @@ lapply(packages, install_if_missing)
 
 `r fa('github')` Course repository: <https://github.com/danilofreire/datasci151-summer>
 
-- This course is hosted on [GitHub](https://github.com), where you will find lecture materials, code samples, our discussion space, tutorials, and assignments. 
-- Canvas will be used for course management, including assignment submissions, grades, and announcements. Please familiarise yourself with both platforms, and reach out if you have any questions.
+- This course is hosted on [GitHub](https://github.com), where you will find the [syllabus, lecture materials, tutorials, and assignments]{.alert}. You can download the materials and follow along with the lectures using Jupyter Notebooks or the lecture notes
+- Canvas will be used for course management, including [assignment submissions, grades, and announcements]{.alert}. Please familiarise yourself with both platforms, and reach out if you have any questions
 
 ::: {.callout-note}
 Please remember to check the course website regularly for updates and announcements 😉
@@ -255,13 +255,15 @@ Much easier! 😃
 
 ## Course objectives
 
+:::{.incremental}
 1. Perform basic operations and write functions in Python
-2. Conduct data wrangling and manipulate data using Python libraries such as Pandas
-3. Merge and manage databases using SQL
+2. Use Jupyter Notebooks for reproducible research
+3. Conduct data wrangling and manipulate data using Python libraries such as Pandas
 4. Create visualisations to effectively communicate data insights
-5. Implement linear models and understand the principles of time series analysis
-6. Use Jupyter Notebooks for reproducible research
+5. Merge and manage databases using SQL
+6. Implement linear models and understand the principles of time series analysis
 7. Develop problem-solving skills relevant to data analysis and statistical computing
+:::
 
 ## Grades and late policy
 
