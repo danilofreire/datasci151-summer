@@ -4,7 +4,7 @@ subtitle: Lecture 13 - Merge Tables in SQL
 author:
   - name: Danilo Freire
     email: danilo.freire@emory.edu
-    affiliations: Emory University
+    affiliations: "Department of Data and Decision Sciences <br> Emory University"
 format:
   clean-revealjs:
     self-contained: true
@@ -21,7 +21,7 @@ transition: slide
 transition-speed: default
 scrollable: true
 engine: jupyter
-jupyter: python3
+jupyter: datasci
 revealjs-plugins:
   - multimodal
   - appearance

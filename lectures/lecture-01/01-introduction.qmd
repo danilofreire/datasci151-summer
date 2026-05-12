@@ -4,7 +4,7 @@ subtitle: Lecture 01 - Introduction and Course Overview
 author:
   - name: Danilo Freire
     email: danilo.freire@emory.edu
-    affiliations: "Department of Quantitative Theory and Methods <br> Emory University"
+    affiliations: "Department of Data and Decision Sciences <br> Emory University"
 format:
   clean-revealjs:
     self-contained: true

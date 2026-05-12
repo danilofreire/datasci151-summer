@@ -3,9 +3,8 @@ title: DATASCI 151 - Introduction to Statistical Computing II
 subtitle: Lecture 03 - Maths Operations, Arrays, and Boolean Logic
 author:
   - name: Danilo Freire
-    orcid: 0000-0002-4712-6810
     email: danilo.freire@emory.edu
-    affiliations: Emory University
+    affiliations: "Department of Data and Decision Sciences <br> Emory University"
 format:
   clean-revealjs:
     self-contained: true
@@ -24,7 +23,7 @@ transition: slide
 transition-speed: default
 scrollable: true
 engine: jupyter
-jupyter: python3
+jupyter: datasci
 editor:
   render-on-save: true
 ---
