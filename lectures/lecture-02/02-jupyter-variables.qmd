@@ -118,7 +118,7 @@ conda update conda
 
 ## Creating and managing environments with the command line
 
-:::{style="margin-top: 30px; font-size: 20px;"}
+:::{style="margin-top: 30px; font-size: 19px;"}
 :::{.columns}
 :::{.column width="50%"}
 - For this course, we will use the `base` environment
@@ -132,26 +132,29 @@ conda update conda
   - Remove a package: `conda remove package_name`
   - Deactivate: `conda deactivate`
   - Delete the environment: `conda remove -n datasci151 --all`
+  - To list all environments: `conda env list`
 :::
 
 :::{.column width="50%"}
 ```{python}
 #| echo: true
 #| eval: false
+# Run this in the terminal, not in a Jupyter notebook cell
 # Create a new environment called datasci151
-conda create -n datasci151 python=3.12
+conda create -n datasci151 python=3.12 -y
 
 # Activate the datasci151 environment
 conda activate datasci151
 
 # Install the required packages
-conda install numpy pandas matplotlib jupyter
+conda install numpy pandas matplotlib jupyter -y
 
 # Deactivate the current environment
 conda deactivate
 
 # Remove the datasci151 environment
-conda remove -n datasci151 --all
+conda remove -n datasci151 --all -y
+# or: conda env remove -n datasci151 -y
 ```
 
 :::{style="margin-top: 20px;"}
@@ -300,7 +303,7 @@ print("Packages (matplotlib.pyplot, pandas, numpy) loaded successfully!")
 # Ensure 'data/features.csv' is in the correct path relative to your notebook.
 carfeatures = pd.read_csv('data/features.csv')
 
-carfeatures.head()  # Display the first few rows of the DataFrame
+carfeatures.info() # Check the structure of the DataFrame
 ```
 :::
 
@@ -334,7 +337,7 @@ VS Code offers several ways to inspect your DataFrame:
 
 :::{style="margin-top: 30px; font-size: 23px;"}
 - Typing the name of a DataFrame in a code cell and running it will display its contents
-- For large DataFrames, Jupyter typically shows a summary (the first and last few rows).
+- For large DataFrames, Jupyter typically shows a summary (the first and last few rows)
 
 ```{python}
 #| echo: true
@@ -389,7 +392,7 @@ carfeatures['cylinders'].head()
 # Using dot notation
 carfeatures.cylinders.head()
 ```
-- **Note:** Dot notation is less flexible than bracket notation, especially for column names with spaces or special characters
+- **Note:** [Dot notation is less flexible than bracket notation]{.alert}, especially for column names with spaces or special characters
 :::
 :::
 :::
@@ -449,7 +452,7 @@ carfeatures.describe()
 ```
 
 :::{.callout-note}
-The `horsepower` column might be missing from `.describe()` if it was read as non-numeric (e.g., due to placeholder characters like '?'). Data cleaning would be needed to convert it.
+The `horsepower` column might be missing from `.describe()` if it was read as non-numeric (e.g., due to placeholder characters like '?'). Data cleaning would be needed to convert it. You can use `carfeatures['horsepower'] = pd.to_numeric(carfeatures['horsepower'], errors='coerce')` to convert it to numeric, which will turn non-convertible values into NaN (missing values).
 :::
 :::
 
@@ -463,10 +466,10 @@ The `horsepower` column might be missing from `.describe()` if it was read as no
 - Variables are used to store data values.
 - Python is dynamically typed, meaning you don't need to declare the type of a variable.
 - **Common Data Types:**
-  - [Integers (`int`)]{.alert}: Whole numbers (e.g., `x = 10`).
-  - [Floats (`float`)]{.alert}: Numbers with decimals (e.g., `pi = 3.14`).
-  - [Strings (`str`)]{.alert}: Text, enclosed in single `' '` or double `" "` quotes (e.g., `message = "Hello"`).
-  - [Booleans (`bool`)]{.alert}: Logical values, either `True` or `False`.
+  - [Integers (`int`)]{.alert}: Whole numbers (e.g., `x = 10`)
+  - [Floats (`float`)]{.alert}: Numbers with decimals (e.g., `pi = 3.14`)
+  - [Strings (`str`)]{.alert}: Text, enclosed in single `' '` or double `" "` quotes (e.g., `message = "Hello"`)
+  - [Booleans (`bool`)]{.alert}: Logical values, either `True` or `False`
 :::
 
 :::{.column width="60%"}
@@ -637,7 +640,7 @@ print(f"Last prime: {prime_numbers[-1]}")     # Output: 11
 ## Accessing list elements: Indexing {#sec:exercise03}
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-- Using `nested_list_example = [[[1, 2], ["a", "b"], ["Python", 3.11, 42, True]]]`
+- Using `nested_list_example = [[1, 2], ["a", "b"], ["Python", 3.11, 42, True]]`
 - Let's access `Python` from the nested list:
 - The inner list `["Python", 3.11, 42, True]` is at `nested_list_example[2]`
 - `Python` is the first element (index `0`) of that inner list
@@ -645,6 +648,7 @@ print(f"Last prime: {prime_numbers[-1]}")     # Output: 11
 ```{python}
 #| echo: true
 #| eval: true
+nested_list_example = [[1, 2], ["a", "b"], ["Python", 3.11, 42, True]]
 nested_list_example[2][0]
 ```
 
@@ -753,7 +757,7 @@ plt.show()
 [[Solution]{.button}](#sec:appendix05)
 :::
 
-# Any Questions? 🤔 {background-color="#2d4563"}
+# Any questions? 🤔 {background-color="#2d4563"}
 
 # And that's all for today! 🎉 {background-color="#2d4563"}
 
