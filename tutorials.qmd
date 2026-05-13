@@ -11,7 +11,7 @@ install and use the tools we will be using in class.
 - [02 - Jupyter Notebook and Markdown Tutorial](02-jupyter-markdown-tutorial.qmd)
 - [03 - GitHub Tutorial](03-github-tutorial.qmd)
 
-PDF versions of the tutorials are also available on GitHub: <https://github.com/danilofreire/datasci151-summer/tree/gh-pages>.
+PDF versions of the tutorials are also available on GitHub: <https://github.com/danilofreire/datasci151-summer/tree/main/tutorials>.
 
 ## Additional Resources
 
