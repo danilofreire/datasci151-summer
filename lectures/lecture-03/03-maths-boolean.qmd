@@ -250,7 +250,7 @@ print(vec_a / vec_b)
 
 ## Summary statistics of an array
 
-:::{style="margin-top: 40px; font-size: 26px;"}
+:::{style="margin-top: 40px; font-size: 23px;"}
 - NumPy provides several functions to compute summary statistics of an array
 - For instance, we can compute the mean, median, standard deviation, variance, minimum, and maximum
 - We can also compute the sum, product, and cumulative sum of the elements in an array
@@ -321,7 +321,7 @@ ValueError: operands could not be broadcast together with shapes (3,) (5,)
 
 ## Generating random numbers
 
-:::{style="margin-top: 40px; font-size: 24px;"}
+:::{style="margin-top: 40px; font-size: 23px;"}
 :::{.columns}
 :::{.column width="40%"}
 - [Why randomness?]{.alert}
@@ -336,6 +336,7 @@ ValueError: operands could not be broadcast together with shapes (3,) (5,)
 - This code creates a vector of random variables generated from a normal distribution
 - It has the mean `loc` (location) and standard deviation `scale`
 - The number of distinct variables is `size`
+- More information about the `normal` function [here](https://numpy.org/doc/stable/reference/random/generated/numpy.random.normal.html)
 
 ```{python}
 #| echo: true
@@ -424,9 +425,9 @@ plt.show()
 ## True and False values
 
 :::{style="margin-top: 30px; font-size: 22px;"}
-- We can test whether two values are equal using the `==` operator ([two equal signs]{.alert})
-- For example, `5 == 5` returns `True`
-- We can also test whether two values are not equal using the `!=` operator ([exclamation mark followed by an equal sign]{.alert})
+- We can test whether two values are equal using the == operator ([two equal signs]{.alert})
+- For example, 5 == 5 returns `True`
+- We can also test whether two values are not equal using the != operator ([exclamation mark followed by an equal sign]{.alert})
 - Let's see how this works in Python
 
 - First, let's load the `matplotlib` and `numpy` libraries
@@ -606,8 +607,8 @@ vec_a == vec_b
 :::{style="margin-top: 30px; font-size: 24px;"}
 :::{.columns}
 :::{.column width="50%"}
-- We can negate a condition using the `not` operator
-- The `not` operator returns `True` if the condition is `False` and vice versa
+- We can [negate a condition]{.alert} using the `not` operator
+- [The `not` operator returns `True` if the condition is `False` and vice versa]{.alert}
   - Yes, it's a bit confusing at first, but it's intuitive once you see it in action
 - For instance, imagine that you want to know whether someone can vote in the US 
   - Here let's assume the person is a national and we only care about age
@@ -618,7 +619,7 @@ vec_a == vec_b
 ```{python}
 #| echo: true
 #| eval: true
-age  = 22
+age = 22
 
 # Can this person legally vote in the US?
 not (age < 18)
@@ -710,7 +711,7 @@ print((ages >= 20) & (ages <= 30))
 
 :::{style="margin-top: 30px;"}
 - Write code that checks the following conditions:
-  - Whether age is strictly less than 20, or greater than 30
+  - Whether age (31) is strictly less than 20, or greater than 30
   - Not in the age range 25-27
 - [[Appendix 05]{.button}](#sec:appendix05)
 :::
@@ -733,7 +734,7 @@ print((ages >= 20) & (ages <= 30))
 #| eval: true
 x = 5
 print(np.pi * x ** 2)
-print(1 / np.sqrt(2 * np.pi) * np.exp(-x ** 2))
+print((1 / np.sqrt(2 * np.pi)) * np.exp(-x ** 2))
 ```
 
 [[Back to exercise]{.button}](#sec:functions)
