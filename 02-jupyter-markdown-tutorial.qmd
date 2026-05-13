@@ -325,29 +325,29 @@ This will produce a well-formatted table with custom headers, appropriate number
 
 ## Equations
 
-You can create equations using the `$$` symbol. For example in @eq-stddev, we have the formula for the standard deviation of a population:
+You can create equations using the `$$` symbol. For example, here is the formula for the standard deviation of a population:
 
 ```{markdown}
 $$
 \sigma = \sqrt{\frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N}}
-$$ {#eq-stddev}
+$$
 ```
 
 $$
 \sigma = \sqrt{\frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N}}
-$$ {#eq-stddev} 
+$$
 
 You can also create equations inline by using the `$` symbol. For example, `$\alpha = \beta + \gamma$` will render as $\alpha = \beta + \gamma$. To learn more about how to write equations in \LaTeX \hspace{.001cm} using Markdown, you can refer to the [Overleaf documentation](https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols).
 
 ## Figures
 
-You can include figures in your document using the `![Caption](path/to/image.png){#fig-label}` syntax. For example:
+You can include figures in your document using the `![Caption](path/to/image.png)` syntax. For example:
 
 ```{markdown}
-![This is a figure caption.](path/to/image.png){#fig-label}
+![This is a figure caption.](path/to/image.png)
 ```
 
-This will include the image `path/to/image.png` in your document with the caption "This is a figure caption." You can refer to the figure using the label `fig-label`, but this is optional.
+This will include the image `path/to/image.png` in your document with the caption "This is a figure caption."
 
 If you are creating plots on Jupyter Notebook, the graphs will appear after the code cell that generates them.
 

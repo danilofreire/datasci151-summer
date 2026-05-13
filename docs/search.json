@@ -123,14 +123,14 @@
     "href": "02-jupyter-markdown-tutorial.html#equations",
     "title": "Jupyter Notebook and Markdown Tutorial",
     "section": "Equations",
-    "text": "Equations\nYou can create equations using the $$ symbol. For example in Equation 1, we have the formula for the standard deviation of a population:\n$$\n\\sigma = \\sqrt{\\frac{\\sum_{i=1}^{N} (x_i - \\mu)^2}{N}}\n$$ {#eq-stddev}\n\\[\n\\sigma = \\sqrt{\\frac{\\sum_{i=1}^{N} (x_i - \\mu)^2}{N}}\n\\tag{1}\\]\nYou can also create equations inline by using the $ symbol. For example, $\\alpha = \\beta + \\gamma$ will render as \\(\\alpha = \\beta + \\gamma\\). To learn more about how to write equations in using Markdown, you can refer to the Overleaf documentation."
+    "text": "Equations\nYou can create equations using the $$ symbol. For example, here is the formula for the standard deviation of a population:\n$$\n\\sigma = \\sqrt{\\frac{\\sum_{i=1}^{N} (x_i - \\mu)^2}{N}}\n$$\n\\[\n\\sigma = \\sqrt{\\frac{\\sum_{i=1}^{N} (x_i - \\mu)^2}{N}}\n\\]\nYou can also create equations inline by using the $ symbol. For example, $\\alpha = \\beta + \\gamma$ will render as \\(\\alpha = \\beta + \\gamma\\). To learn more about how to write equations in using Markdown, you can refer to the Overleaf documentation."
   },
   {
     "objectID": "02-jupyter-markdown-tutorial.html#figures",
     "href": "02-jupyter-markdown-tutorial.html#figures",
     "title": "Jupyter Notebook and Markdown Tutorial",
     "section": "Figures",
-    "text": "Figures\nYou can include figures in your document using the ![Caption](path/to/image.png){#fig-label} syntax. For example:\n![This is a figure caption.](path/to/image.png){#fig-label}\nThis will include the image path/to/image.png in your document with the caption “This is a figure caption.” You can refer to the figure using the label fig-label, but this is optional.\nIf you are creating plots on Jupyter Notebook, the graphs will appear after the code cell that generates them."
+    "text": "Figures\nYou can include figures in your document using the ![Caption](path/to/image.png) syntax. For example:\n![This is a figure caption.](path/to/image.png)\nThis will include the image path/to/image.png in your document with the caption “This is a figure caption.”\nIf you are creating plots on Jupyter Notebook, the graphs will appear after the code cell that generates them."
   },
   {
     "objectID": "02-jupyter-markdown-tutorial.html#citations",
