@@ -95,7 +95,7 @@ print(np.sqrt(1))
 :::{style="margin-top: 40px; font-size: 26px;"}
 - Create a new variable, $x = 5$
 - Compute $\pi x^2$
-- Compute $\frac{1}{\sqrt{2\pi}}e^{-x^2}$
+- Compute $\frac{1}{\sqrt{2\pi}}e^{-x^2/2}$
   - This is the [probability density function of the standard normal distribution](https://en.wikipedia.org/wiki/Normal_distribution) (don't worry if you don't know what it is yet! 🤓)
 
 - Don't forget how to exponentiate in Python 😉 
@@ -120,7 +120,7 @@ x ** 5
 - We can [create arrays from lists]{.alert}
 - We can also create arrays with a [sequence of numbers]{.alert} using `np.arange()`
 - We can create arrays with [zeros or ones]{.alert} using `np.zeros()` and `np.ones()`
-- And we're going to learn all of this in this lecture! 🤓
+- And we're going to learn all of this in this course! 🤓
 :::
 
 ## Creating arrays from lists
@@ -565,7 +565,7 @@ print(isinstance(y,str))
 ## Equality of vectors
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-- We can test whether two vectors are equal using the `==` operator
+- We can test whether two vectors are equal using the same == operator
 - For example, `[1,2,3] == [1,2,3]` returns `True`
 - Please note that the equality of vectors is [done element-wise](https://numpy.org/doc/stable/reference/generated/numpy.array_equal.html)
 
@@ -626,7 +626,7 @@ not (age < 18)
 ```
 
 - The `not` operator can be separated by a space and parentheses are not necessary
-- But parentheses can be helpful to organize your code logically
+- But parentheses can be helpful to organise your code logically
 
 ```{python}
 #| echo: true
@@ -727,14 +727,14 @@ print((ages >= 20) & (ages <= 30))
 :::{style="margin-top: 40px; font-size: 26px;"}
 - Create a new variable, $x = 5$
 - Compute $\pi x^2$
-- Compute $\frac{1}{\sqrt{2\pi}}e^{-x^2}$
+- Compute $\frac{1}{\sqrt{2\pi}}e^{-x^2/2}$
  
 ```{python}
 #| echo: true
 #| eval: true
 x = 5
 print(np.pi * x ** 2)
-print((1 / np.sqrt(2 * np.pi)) * np.exp(-x ** 2))
+print((1 / np.sqrt(2 * np.pi)) * np.exp(-x ** 2 / 2))
 ```
 
 [[Back to exercise]{.button}](#sec:functions)
