@@ -330,9 +330,9 @@ has_scholarship = False
 # Eligible if (under 25 AND a student) OR 
 # if has a scholarship
 if (age < 25 and is_student) or has_scholarship:
-    print("Eligible for program discount.")
+    print("Eligible for programme discount.")
 else:
-    print("Not eligible for program discount.")
+    print("Not eligible for programme discount.")
 ```
 :::
 :::
@@ -489,7 +489,7 @@ print(f"Final price: ${final_price}")
 :::{style="margin-top: 30px; font-size: 20px;"}
 
   - Conditions in an `if...elif...else` chain are evaluated top to bottom, and the first `True` branch wins (the rest is skipped)
-  - Therefore, place [more specific conditions before more general ones]{.alert}
+  - Therefore, you will often need to place [more specific conditions before more general ones]{.alert}
 
 :::{.columns}
 :::{.column width="50%"}
