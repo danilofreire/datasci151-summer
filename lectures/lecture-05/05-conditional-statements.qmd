@@ -114,7 +114,7 @@ if condition:
 any_questions = "yes"
 
 if any_questions == "yes":
-    print("Need to give more explanations")
+    print("More explanation needed")
 ```
 :::
 :::
@@ -142,16 +142,16 @@ else:
 
 :::{.column width="55%"}
 - For example, let's say you want to know whether someone can vote in the US
-  - First, the person needs to be a national
+  - First, the person needs to be a US citizen
   - Second, the person needs to be at least 18 years old
 
 ```{python}
 #| echo: true
 #| eval: true
 age = 22
-national = True   # Try setting this to False to see the `else` branch
+is_citizen = True   # Try setting this to False to see the `else` branch
 
-if national and (age >= 18):
+if is_citizen and (age >= 18):
     print("This person can vote in the US")
 else:
     print("This person cannot vote in the US")
@@ -177,12 +177,12 @@ is_graph_red = False
 how_many_classes = np.array([7,1,2,3,3,3,4,5,6])
 
 if is_graph_red:
-    plt.hist(x = how_many_classes, color="red")
+    plt.hist(x=how_many_classes, color="red")
     plt.title("Count of students in each category")
     plt.xlabel("How many classes are you taking?")
     plt.show() 
 else:
-    plt.hist(x = how_many_classes, color="purple")
+    plt.hist(x=how_many_classes, color="purple")
     plt.title("Count of students in each category")
     plt.xlabel("How many classes are you taking?")
     plt.show()
@@ -201,12 +201,12 @@ is_graph_red = False
 how_many_classes = np.array([7,1,2,3,3,3,4,5,6])
 
 if is_graph_red:
-    plt.hist(x = how_many_classes, color="red")
+    plt.hist(x=how_many_classes, color="red")
     plt.title("Count of students in each category")
     plt.xlabel("How many classes are you taking?")
     plt.show() 
 else:
-    plt.hist(x = how_many_classes, color="purple")
+    plt.hist(x=how_many_classes, color="purple")
     plt.title("Count of students in each category")
     plt.xlabel("How many classes are you taking?")
     plt.show()
@@ -221,8 +221,8 @@ else:
 What happens if ... ? Try the following:
 <br>
 
-- Rerun the above code but change the value of `is_graph_red`.
-- What happens if you set a non-boolean value of `is_graph_red`?
+- Rerun the above code but change the value of `is_graph_red`?
+- You set a non-boolean value of `is_graph_red`?
 - Don't include `:`
 - Don't indent the body of the `if`
 - [[Appendix 01]{.button}](#sec:appendix01)
@@ -394,7 +394,7 @@ price = 0
 if age < 18: # Child
     price = 10
     category = "Child"
-elif age >= 18 and age < 65: # Adult
+elif 18 <= age < 65: # Adult (Python lets you chain comparisons)
     category = "Adult"
     if day == "Saturday" or day == "Sunday":
         price = 20 # Weekend adult price
@@ -488,8 +488,8 @@ print(f"Final price: ${final_price}")
 
 :::{style="margin-top: 30px; font-size: 20px;"}
 
-  - Conditions in an `if...elif...else` chain are evaluated top to bottom, and the first `True` branch wins (the rest is skipped)
-  - Therefore, you will often need to place [more specific conditions before more general ones]{.alert}
+- Conditions in an `if...elif...else` chain are evaluated top to bottom, and the first `True` branch wins (the rest is skipped)
+- Therefore, you will often need to place [more specific conditions before more general ones]{.alert}
 
 :::{.columns}
 :::{.column width="50%"}
@@ -564,6 +564,33 @@ You can read more about `None` at <https://realpython.com/null-in-python/>.
 :::
 :::
 
+## `is None` vs `== None`
+### How to test for `None`
+
+:::{style="margin-top: 30px; font-size: 24px;"}
+- `None` is a singleton; there is only ever one `None` object in memory
+- Use [`is`]{.alert} (and [`is not`]{.alert}) to compare against it
+- `==` works but is slower and is flagged by linters like `flake8` and `ruff`
+
+```{python}
+#| echo: true
+#| eval: true
+x = None
+
+# Preferred:
+if x is None:
+    print("No value yet")
+```
+
+```{python}
+#| echo: true
+#| eval: false
+# Works, but discouraged
+if x == None:
+    print("No value yet")
+```
+:::
+
 ## Assigning or replacing values to lists
 
 :::{style="margin-top: 30px; font-size: 24px;"}
@@ -594,7 +621,7 @@ print(list_answers)
 #| echo: true
 #| eval: true
 cities = ["Nashville", "Bogota", "Atlanta"]
-cities.index("Bogota")
+print(cities.index("Bogota"))
 ```
 - You can also use the [`in`]{.alert} operator to check if a value is in a list, as we saw before
 
@@ -832,12 +859,12 @@ is_graph_red = True
 how_many_classes = np.array([7,1,2,3,3,3,4,5,6])
 
 if is_graph_red:
-    plt.hist(x = how_many_classes, color="red")
+    plt.hist(x=how_many_classes, color="red")
     plt.title("Count of students in each category")
     plt.xlabel("How many classes are you taking?")
     plt.show() 
 else:
-    plt.hist(x = how_many_classes, color="purple")
+    plt.hist(x=how_many_classes, color="purple")
     plt.title("Count of students in each category")
     plt.xlabel("How many classes are you taking?")
     plt.show()
@@ -846,7 +873,7 @@ else:
 [[Back to exercise]{.button}](#sec:exercise01)
 :::
 
-## Appendix 01b
+## Appendix 01b {#sec:appendix01b}
 
 :::{style="margin-top: 30px; font-size: 30px;"}
 What happens if you set a non-boolean value of `is_graph_red`?
@@ -860,12 +887,12 @@ is_graph_red = 39
 how_many_classes = np.array([7,1,2,3,3,3,4,5,6])
 
 if is_graph_red:
-    plt.hist(x = how_many_classes, color="red")
+    plt.hist(x=how_many_classes, color="red")
     plt.title("Count of students in each category")
     plt.xlabel("How many classes are you taking?")
     plt.show() 
 else:
-    plt.hist(x = how_many_classes, color="purple")
+    plt.hist(x=how_many_classes, color="purple")
     plt.title("Count of students in each category")
     plt.xlabel("How many classes are you taking?")
     plt.show()
@@ -874,7 +901,7 @@ else:
 [[Back to exercise]{.button}](#sec:exercise01)
 :::
 
-## Appendix 01c
+## Appendix 01c {#sec:appendix01c}
 
 :::{style="margin-top: 30px; font-size: 30px;"}
 What happens if you don't include `:`?
@@ -888,12 +915,12 @@ is_graph_red = True
 how_many_classes = np.array([7,1,2,3,3,3,4,5,6])
 
 if is_graph_red
-    plt.hist(x = how_many_classes, color="red")
+    plt.hist(x=how_many_classes, color="red")
     plt.title("Count of students in each category")
     plt.xlabel("How many classes are you taking?")
     plt.show() 
 else:
-    plt.hist(x = how_many_classes, color="purple")
+    plt.hist(x=how_many_classes, color="purple")
     plt.title("Count of students in each category")
     plt.xlabel("How many classes are you taking?")
     plt.show()
@@ -902,7 +929,7 @@ else:
 [[Back to exercise]{.button}](#sec:exercise01)
 :::
 
-## Appendix 01d
+## Appendix 01d {#sec:appendix01d}
 
 :::{style="margin-top: 30px; font-size: 30px;"}
 What happens if you don't indent the body of the `if`?
@@ -916,12 +943,12 @@ is_graph_red = True
 how_many_classes = np.array([7,1,2,3,3,3,4,5,6])
 
 if is_graph_red:
-plt.hist(x = how_many_classes, color="red")
+plt.hist(x=how_many_classes, color="red")
 plt.title("Count of students in each category")
 plt.xlabel("How many classes are you taking?")
 plt.show() 
 else:
-plt.hist(x = how_many_classes, color="purple")
+plt.hist(x=how_many_classes, color="purple")
 plt.title("Count of students in each category")
 plt.xlabel("How many classes are you taking?")
 plt.show()
@@ -944,10 +971,10 @@ price = 0
 if age < 18: # Child
     price = 10
     category = "Child"
-elif (age >= 18 and age <= 25) and is_student: # Student
+elif (18 <= age <= 25) and is_student: # Student
     price = 13
     category = "Student"
-elif age >= 18 and age < 65: # Adult
+elif 18 <= age < 65: # Adult
     category = "Adult"
     if day == "Saturday" or day == "Sunday":
         price = 20 # Weekend adult price
