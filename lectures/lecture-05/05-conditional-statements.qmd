@@ -41,10 +41,10 @@ Today we will:
 
 - Understand how to use [conditional statements in Python](https://www.w3schools.com/python/python_conditions.asp)
 - Explore the `if`, `elif`, and `else` statements
-- Practice writing conditional statements in Python
-- Learn how to combine conditions using logical operators
-- Understand how to use nested `if` statements
-- Learn more about lists and how to create them
+- Practice [writing conditional statements]{.alert} in Python
+- Learn how to [combine conditions using logical operators]{.alert}
+- Understand how to use [nested `if` statements]{.alert}
+- Learn [more about lists]{.alert} and how to modify them
 :::
 
 :::{.column width="50%"}
@@ -64,14 +64,14 @@ Today we will:
 ## Flow control: conditional statements
 ### If, elif, else
 
-:::{style="margin-top: 30px; font-size: 24px;"}
+:::{style="margin-top: 30px; font-size: 25px;"}
 :::{.columns}
 :::{.column width="50%"}
 - [Conditional statements]{.alert} are used to make decisions in programming
 - The [`if`]{.alert} statement runs a block of code if a condition is `True`
 - The [`elif`]{.alert} statement runs a block of code if the first condition is `False` and the second condition is `True`
 - The [`else`]{.alert} statement runs a block of code if all other conditions are `False`
-- We use this a lot in data cleaning or data analysis to filter out data!
+- [We use this a lot]{.alert} in data cleaning or data analysis to filter out data!
 :::
 
 :::{.column width="50%"}
@@ -127,7 +127,7 @@ if any_questions == "yes":
 :::{.columns}
 :::{.column width="45%"}
 - The `else` statement is used to execute a block of code if the condition is `False`
-- The `else` statement is always used in conjunction with the `if` statement
+- The `else` statement is [always used in conjunction with the `if` statement]{.alert}
 - The `else` statement syntax is as follows:
 
 ```{python}
@@ -312,7 +312,7 @@ else:
 :::{.columns}
 :::{.column width="40%"}
 - You can combine [several conditions at once]{.alert}
-- It is good practice to use parentheses to group conditions, so that the code is easier to read
+- [It is good practice to use parentheses to group conditions]{.alert}, so that the code is easier to read
 - For example, let's say you want to know if a student is eligible for a programme discount
 - The student is eligible if:
   - They are under 25 years old and a student
