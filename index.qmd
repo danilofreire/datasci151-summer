@@ -11,7 +11,7 @@ Welcome to [DATASCI 151](https://github.com/danilofreire/datasci151-summer)! Thi
 - **Name**: Danilo Freire
 - **Email**: <danilo.freire@emory.edu>
 - **Office Hours**: By appointment, please email me to schedule a meeting
-- **Canvas**: course announcements, Teams meeting links, and grades
+- **Canvas**: Course announcements, Teams meeting links, and grades
 
 ## Repository Structure
 

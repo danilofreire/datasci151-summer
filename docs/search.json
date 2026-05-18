@@ -268,86 +268,86 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "DATASCI 151 - Introduction to Statistical Computing II",
+    "title": "Lectures",
     "section": "",
     "text": "Welcome to DATASCI 151! This course introduces students to data analysis and statistical computing using Python and SQL. Please have a look at the course syllabus and the lecture schedule for more information. A brief overview of the course content is provided below."
   },
   {
     "objectID": "index.html#course-overview",
     "href": "index.html#course-overview",
-    "title": "DATASCI 151 - Introduction to Statistical Computing II",
+    "title": "Lectures",
     "section": "",
     "text": "Welcome to DATASCI 151! This course introduces students to data analysis and statistical computing using Python and SQL. Please have a look at the course syllabus and the lecture schedule for more information. A brief overview of the course content is provided below."
   },
   {
     "objectID": "index.html#contact-information",
     "href": "index.html#contact-information",
-    "title": "DATASCI 151 - Introduction to Statistical Computing II",
+    "title": "Lectures",
     "section": "Contact Information",
-    "text": "Contact Information\n\nName: Danilo Freire\nEmail: danilo.freire@emory.edu\nOffice Hours: By appointment, please email me to schedule a meeting\nCanvas: course announcements, Teams meeting links, and grades"
+    "text": "Contact Information\n\nName: Danilo Freire\nEmail: danilo.freire@emory.edu\nOffice Hours: By appointment, please email me to schedule a meeting\nCanvas: Course announcements, Teams meeting links, and grades"
   },
   {
     "objectID": "index.html#repository-structure",
     "href": "index.html#repository-structure",
-    "title": "DATASCI 151 - Introduction to Statistical Computing II",
+    "title": "Lectures",
     "section": "Repository Structure",
     "text": "Repository Structure\nWhile this website provides an overview of the course materials, the primary source of content is the course’s GitHub repository at https://github.com/danilofreire/datasci151-summer. The repository is organised as follows:\n\nassignments/: Contains all course assignments\nlectures/: Includes lecture materials and code\ntutorials/: Step-by-step guides for the tools used in the course\nsyllabus.pdf: Course syllabus in PDF format\n\nNote: The links will take you to the respective folders or files in the repository, not on this website. You can find links for the rendered content in the navigation bar above."
   },
   {
     "objectID": "index.html#course-content",
     "href": "index.html#course-content",
-    "title": "DATASCI 151 - Introduction to Statistical Computing II",
+    "title": "Lectures",
     "section": "Course Content",
     "text": "Course Content\n\nLectures\nWe will meet every weekday from May 12th to May 29th, 2026 from 11:00am to 12:20pm EDT. Our meetings will be online via Teams. Please check our Canvas page for the link. Please check the course schedule for the full list of topics and dates. Lecture materials are available in the lectures folder in the repository.\nEach folder contains an HTML presentation or a Jupyter notebook (.ipynb) with code examples and explanations, along with any additional resources or datasets used in the lecture.\n\n\nAssignments and Quizzes\nThroughout the course, students will complete five assignments and three quizzes to reinforce their learning. The assignments will be posted in the assignments/ folder as the course progresses. The quizzes will be available as separate GitHub repositories. We will also announce these in class and on Canvas. Please refer to the syllabus or the lecture schedule for due dates and submission guidelines.\n\n\nTutorials\nThe tutorials/ tab contains step-by-step guides for various tools and techniques used in the course. Please have a look at these resources to help you get started.\nPDF versions of the tutorials are also available in the repository.\n\n\nJupyterLite\nYou can run Python directly in your browser at https://danilofreire.github.io/datasci151-summer/jupyter, no installation required. The runtime is Pyodide, a WebAssembly Python that comes with pandas, numpy, matplotlib, and the other libraries we use throughout the course. Useful for quick experiments without the local Anaconda setup."
   },
   {
     "objectID": "index.html#course-requirements",
     "href": "index.html#course-requirements",
-    "title": "DATASCI 151 - Introduction to Statistical Computing II",
+    "title": "Lectures",
     "section": "Course Requirements",
     "text": "Course Requirements\n\nPrerequisites: None, only willingness to learn and explore new tools!\nSoftware: Anaconda distribution of Python 3.x, VS Code, SQLite, and GitHub Desktop\nPlease also create an educational account on GitHub"
   },
   {
     "objectID": "index.html#grading",
     "href": "index.html#grading",
-    "title": "DATASCI 151 - Introduction to Statistical Computing II",
+    "title": "Lectures",
     "section": "Grading",
     "text": "Grading\n\nAssignments (5x): 50%\nClass Quizzes (3x): 50%"
   },
   {
     "objectID": "index.html#course-policies-and-expectations",
     "href": "index.html#course-policies-and-expectations",
-    "title": "DATASCI 151 - Introduction to Statistical Computing II",
+    "title": "Lectures",
     "section": "Course Policies and Expectations",
     "text": "Course Policies and Expectations\nFor detailed information on course policies, grading criteria, attendance requirements, and academic integrity guidelines, please refer to the syllabus in the repository or on the course website."
   },
   {
     "objectID": "index.html#getting-help",
     "href": "index.html#getting-help",
-    "title": "DATASCI 151 - Introduction to Statistical Computing II",
+    "title": "Lectures",
     "section": "Getting Help",
     "text": "Getting Help\nIf you encounter any issues with the course materials or have questions about the content, please:\n\nCheck the course syllabus for relevant information\nReview the lecture materials and tutorials either in the repository or on the course website\nConsult with your classmates or post in the course discussion forum\nAttend office hours or schedule an appointment with the instructor"
   },
   {
     "objectID": "index.html#contributing-to-the-repository",
     "href": "index.html#contributing-to-the-repository",
-    "title": "DATASCI 151 - Introduction to Statistical Computing II",
+    "title": "Lectures",
     "section": "Contributing to the Repository",
     "text": "Contributing to the Repository\nWhile this repository is primarily maintained by the course instructor, everyone is welcome to contribute. Please feel free to suggest improvements or report issues by opening a GitHub issue, submitting a pull request, creating a discussion post, or contacting the instructor directly."
   },
   {
     "objectID": "index.html#acknowledgements",
     "href": "index.html#acknowledgements",
-    "title": "DATASCI 151 - Introduction to Statistical Computing II",
+    "title": "Lectures",
     "section": "Acknowledgements",
     "text": "Acknowledgements\nThis course and its materials have been developed with inspiration from previous version of this course, as well as various open-source communities and educational resources. I am particularly grateful to Alejandro Sánchez Becerra for his teaching materials and guidance. I am also thankful for the contributions of the Python, SQL, and data science communities that make courses like this possible."
   },
   {
     "objectID": "index.html#license",
     "href": "index.html#license",
-    "title": "DATASCI 151 - Introduction to Statistical Computing II",
+    "title": "Lectures",
     "section": "License",
-    "text": "License\nThis repository is licensed under the MIT License. You are free to use, modify, and distribute the materials as needed, with appropriate attribution to the original source.\n\nWe look forward to an engaging and productive month! Good luck, and happy coding! 😀"
+    "text": "License\nThis repository is licensed under the MIT License. You are free to use, modify, and distribute the materials as needed, with appropriate attribution to the original source.\n\nWe look forward to an engaging and productive month! Good luck, and happy coding! 😀\n\n\nThe course covers the following main topics, with corresponding lecture materials available in the lectures folder in our course repository:\nEach lecture folder contains an HTML file or a Jupyter notebook (.ipynb) with code examples and explanations, along with any additional resources or datasets used in the lecture."
   },
   {
     "objectID": "03-github-tutorial.html",
@@ -390,5 +390,12 @@
     "title": "MIT License",
     "section": "",
     "text": "Copyright (c) 2024 Danilo Freire\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "Lectures",
+    "section": "Schedule",
+    "text": "Schedule\n\nTuesday, May 12: Lecture 01: Welcome to DATASCI 151 - Introduction and Course Overview. Please make sure to install the necessary software for the course by following the Course Tutorials: How to Install Anaconda, Jupyter, VSCode, and Open a Free Educational Account on GitHub.\nWednesday, May 13: Lecture 02: Jupyter Notebooks, Packages, Variables, and Lists. Lecture Slides, Lecture Notebook.\nThursday, May 14: Lecture 03: Maths Operations, Arrays, and Boolean Logic. Lecture Slides, Lecture Notebook\n\nKahoot Quiz. Kahoot quizzes are optional and will not be graded. We will do it in class! It is a fun way to review the material covered in the lecture.\n\nFriday, May 15: Lecture 04: Quiz 01 - Based on Lectures 01-03. The repository contains the quiz questions and will be made online on the day of the quiz.\n\nAssignment 01 due.\n\nMonday, May 18: Lecture 05: Conditional Statements. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nTuesday, May 19: Lecture 06: While and For Loops. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nWednesday, May 20: Lecture 07: Functions. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\nAssignment 02 due.\n\nThursday, May 21: Lecture 08: Data Wrangling with Pandas. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nFriday, May 22: Lecture 09: Quiz 02 - Based on Lectures 05-08. As with Quiz 01, the repository will be available on the day of the quiz.\n\nAssignment 03 due.\n\nMonday, May 25: Lecture 10: Subsetting and Filtering Data. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nTuesday, May 26: Lecture 11: Introduction to SQL. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nWednesday, May 27: Lecture 12: SQL in Python. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\nAssignment 04 due.\n\nThursday, May 28: Lecture 13: Merge Tables in SQL. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\n\nFriday, May 29: Lecture 14: Quiz 03 - Based on Lectures 10-13.\n\nAssignment 05 due."
   }
 ]
