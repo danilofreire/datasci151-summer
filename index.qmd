@@ -78,7 +78,7 @@ While this repository is primarily maintained by the course instructor, everyone
 
 ## Acknowledgements
 
-This course and its materials have been developed with inspiration from previous version of this course, as well as various open-source communities and educational resources. I am particularly grateful to [Alejandro Sánchez Becerra](https://sites.google.com/site/sanchezbecerraalejandro) for his teaching materials and guidance. I am also thankful for the contributions of the Python, SQL, and data science communities that make courses like this possible.
+This course and its materials have been developed with inspiration from previous versions of this course, as well as various open-source communities and educational resources. I am particularly grateful to [Alejandro Sánchez Becerra](https://sites.google.com/site/sanchezbecerraalejandro) for his teaching materials and guidance. I am also thankful for the contributions of the Python, SQL, and data science communities that make courses like this possible.
 
 ## License
 
