@@ -32,7 +32,7 @@ editor:
 
 # Brief recap 📚 {background-color="#2d4563"}
 
-## Recap: conditional statements
+## Recap: conditional statements and lists
 
 :::{style="margin-top: 30px; font-size: 26px;"}
 In our last lecture, we covered conditional statements:
@@ -48,6 +48,9 @@ We also looked at:
 
 -   [Combining conditions]{.alert} with logical operators `and`, `or`, `not`
 -   [Nested `if` statements]{.alert}: one `if` inside another for more complex decisions
+-   [List basics]{.alert}: `[None] * n` for placeholders, `list[i]` for indexing (0-indexed!)
+-   [Growing lists]{.alert} with `.append()` and `.extend()`
+-   [Counting elements]{.alert} with `len()`
 :::
 
 ## Recap: conditional example
@@ -62,17 +65,15 @@ age = 22
 is_student = True
 has_scholarship = False
 
-# Eligible if (under 25 AND a student) OR 
-# if has a scholarship
+# Eligible if (under 25 AND a student) OR if has a scholarship
 if (age < 25 and is_student) or has_scholarship:
-    print("Eligible for program discount.")
+    print("Eligible for programme discount.")
 else:
-    print("Not eligible for program discount.")
+    print("Not eligible for programme discount.")
 ```
 
 The ability to control program flow based on conditions is very important, and [loops will build upon this by allowing us to repeat actions]{.alert} 🤓
 :::
-
 # For loops in Python 🔄🐍 {background-color="#2d4563"}
 
 ## What is a `for` loop?
@@ -82,12 +83,12 @@ The ability to control program flow based on conditions is very important, and [
 :::{.column width="50%"}
 - A `for` loop is a way to [iterate over a sequence]{.alert} of elements
 - It is a very useful tool to [automate repetitive tasks]{.alert}
-- The syntax is similar to an `if` statement, including the colon `:` and the necessary indentation (4 spaces)
+- [The syntax is similar to an `if` statement]{.alert}, including the colon `:` and the necessary indentation (4 spaces)
 - The syntax is as follows:
   
 ```{verbatim}
 for element in sequence:
-    do something
+    body
 ```
 :::{style="margin-top: 20px;"}
 :::
@@ -113,10 +114,8 @@ for i in variable:
 :::{style="margin-top: 30px; font-size: 23px;"}
 :::{.columns}
 :::{.column width="50%"}
-- You can iterate over a list of elements
-  - Numbers, strings, or any other type of object
-
-- You can also iterate over a range of numbers
+- You can iterate over [any sequence of elements]{.alert}, such as:
+  - Numbers, strings, lists, dictionaries, or any other type of object
 - You can even iterate over a [list of lists (nested lists)]{.alert} 🤯
   - This is very useful when working with dataframes or matrices
 
@@ -147,10 +146,10 @@ for i in students_scores:
 #| echo: true
 #| eval: true
 list_ids = ["KIA", "Ferrari", "Ford", "Tesla"]
-print("Dear customer, we are writing about your " + list_ids[0] + " car.")
-print("Dear customer, we are writing about your " + list_ids[1] + " car.")
-print("Dear customer, we are writing about your " + list_ids[2] + " car.")
-print("Dear customer, we are writing about your " + list_ids[3] + " car.")
+print(f"Dear customer, we are writing about your {list_ids[0]} car.")
+print(f"Dear customer, we are writing about your {list_ids[1]} car.")
+print(f"Dear customer, we are writing about your {list_ids[2]} car.")
+print(f"Dear customer, we are writing about your {list_ids[3]} car.")
 ```
 
 :::{.fragment .fade-in}
@@ -167,7 +166,7 @@ print("Dear customer, we are writing about your " + list_ids[3] + " car.")
 list_ids = ["KIA", "Ferrari", "Ford", "Tesla"]
 
 for i in list_ids:
-    print("Dear customer, we are writing about your " + i + " car.")
+    print(f"Dear customer, we are writing about your {i} car.")
 ```
 :::
 
@@ -241,9 +240,10 @@ This is useful for character-by-character processing, such as counting letters o
 ## Using `enumerate()`
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-Sometimes you need [both the index and the value]{.alert} of an item in a sequence. The `enumerate()` function provides this:
+When you need [both the index and the value]{.alert} during a loop, use `enumerate()`. It yields `(index, value)` pairs on each step.
 
-Syntax: `for index, value in enumerate(sequence):`
+- Indices start at [0]{.alert} by default, but `enumerate(variable, start=1)` gives friendlier numbering ("Customer 1, Customer 2, ...")
+- Works with [any iterable]{.alert}: lists, strings, tuples, even `range()`
 
 ```{python}
 #| echo: true
@@ -252,8 +252,6 @@ fruits = ["apple", "banana", "cherry"]
 for index, fruit in enumerate(fruits):
     print(f"Index {index}: {fruit}")
 ```
-
-You can also specify a starting index for `enumerate()`: `enumerate(fruits, start=1)`
 :::
 
 ## Customised messages + numbering
@@ -269,12 +267,11 @@ You can also specify a starting index for `enumerate()`: `enumerate(fruits, star
 list_ids = ["KIA", "Ferrari", "Ford", "Tesla"]
 
 index = 1
-print('We are out of the loop', index)
-for id in list_ids:
-    print("Dear customer, your position is " + str(index) + " on the waitlist" +
-           " and your car brand is " + id )
+print(f"We are out of the loop {index}")
+for i in list_ids:
+    print(f"Dear customer, your position is {index} on the waitlist and your car brand is {i}")
     index = index + 1
-    print('We are inside the loop', index)
+    print(f"We are inside the loop {index}")
 ```
 :::
 
@@ -294,6 +291,55 @@ for i in range(len(list_ids)):
 - [[Appendix 01]{.button}](#sec:appendix1)
 :::
 
+## `for i in list` vs `for i in range(len(list))`
+
+:::{style="margin-top: 30px; font-size: 20px;"}
+- The same loop variable `i` can mean two different things
+- Always ask: *what does Python put into `i` on each pass?* Printing `i` directly shows the answer
+
+::: {.columns}
+::: {.column width="50%"}
+[Loop directly over the values]{.alert}
+
+- `i` becomes each *item* of the list in turn: `"KIA"`, `"Ferrari"`, `"Ford"`, `"Tesla"`
+
+```{python}
+#| echo: true
+#| eval: true
+list_ids = ["KIA", "Ferrari", "Ford", "Tesla"]
+for i in list_ids:
+    print(i)
+```
+
+[Default to the first form]{.alert}: it is shorter and works on any iterable (lists, strings, dictionaries, generators). Use the second only when you really need the position number
+:::
+
+::: {.column width="50%"}
+[Loop over the positions (indices)]{.alert}
+
+- `i` becomes each *position number*: `0`, `1`, `2`, `3` (because `len(list_ids)` is 4, and `range(4)` produces `0, 1, 2, 3`)
+
+```{python}
+#| echo: true
+#| eval: true
+for i in range(len(list_ids)):
+    print(i)
+```
+
+
+- When `i` is a position, you still need to fetch the value yourself with `list_ids[i]`:
+
+```{python}
+#| echo: true
+#| eval: true
+for i in range(len(list_ids)):
+    print(list_ids[i])
+```
+
+:::
+:::
+:::
+
 ## Saving time while coding!
 ### How to make your work easier with `for` loops
 
@@ -310,15 +356,13 @@ carfeatures = pd.read_csv("data/features.csv")
 list_vars = ["acceleration","weight"]
 
 variable_name = "acceleration"
-plt.scatter(x = carfeatures[variable_name],
-            y = carfeatures["mpg"])
+plt.scatter(x=carfeatures[variable_name], y=carfeatures["mpg"])
 plt.ylabel("mpg")
 plt.xlabel(variable_name)
 plt.show()
 
 variable_name = "weight"
-plt.scatter(x = carfeatures[variable_name], 
-            y = carfeatures["mpg"])
+plt.scatter(x=carfeatures[variable_name], y=carfeatures["mpg"])
 plt.ylabel("mpg")
 plt.xlabel(variable_name)
 plt.show()
@@ -336,7 +380,7 @@ carfeatures = pd.read_csv("data/features.csv")
 list_vars = ["acceleration","weight"]
 
 for variable_name in list_vars:
-    plt.scatter(x = carfeatures[variable_name], y = carfeatures["mpg"])
+    plt.scatter(x=carfeatures[variable_name], y=carfeatures["mpg"])
     plt.ylabel("mpg")
     plt.xlabel(variable_name)
     plt.show()
@@ -354,10 +398,10 @@ list_vars   = ["acceleration","weight"]
 
 index = 1
 for variable_name in list_vars:
-    plt.scatter(x = carfeatures[variable_name], y = carfeatures["mpg"])
+    plt.scatter(x=carfeatures[variable_name], y=carfeatures["mpg"])
     plt.ylabel("mpg")
     plt.xlabel(variable_name)
-    plt.title("Figure " + str(index))
+    plt.title(f"Figure {index}")
     plt.show()
     index = index + 1
 ```
@@ -366,15 +410,15 @@ for variable_name in list_vars:
 ## Solving many equations at once
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-- Solve the equation $y = x^2 + 2x$ for $x = 1,2,4,5,6,7,8,9,10$
+- Solve the equation $y = x^2 + 2x$ for $x = 1, 2, 3, \dots, 10$
 
 ```{python}
 #| echo: true
 #| eval: true
-# Create a list of x-values list_x = [1,2,4,5, ..., 50]
+# Create a list of x-values from 1 to 10
 # Create a list of y-values to fill in later.
 
-list_x = [1,2,4,5,6,7,8,9,10]
+list_x = [1,2,3,4,5,6,7,8,9,10]
 list_y = [None] * len(list_x)
 
 # Create an index 
@@ -393,16 +437,16 @@ plt.show()
 ```
 :::
 
-## Math equations using `append`
+## Maths equations using `append`
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 ```{python}
 #| echo: true
 #| eval: true
-# Create a list of x-values list_x = [1,2,4,5, ..., 50]
+# Create a list of x-values from 1 to 10
 # Start an empty list of y-values with []
 
-list_x = [1,2,4,5,6,7,8,9,10]
+list_x = [1,2,3,4,5,6,7,8,9,10]
 list_y = []
 
 # No index needed - we append each y to list_y as we go
@@ -440,7 +484,8 @@ plt.ylabel("Y-axis")
 :::{.columns}
 :::{.column width="70%"}
 - A `while` loop is used to iterate over a block of code as long as the test expression (condition) is `True`
-- We use `while` loops when we don't know the number of times to iterate beforehand, or when the iteration depends on a condition being met
+- In other words, [a `while` loop is a repeated `if` statement]{.alert} that continues to execute until the condition becomes `False`
+- We use `while` loops when [we don't know the number of times to iterate beforehand, or when the iteration depends on a condition being met]{.alert}
 - Syntax:
 ```{verbatim}
 while test_expression:
@@ -462,7 +507,7 @@ while test_expression:
     -   Example: "Process each item in this list."
 
 -   `while` loop:
-    -   Use when the number of iterations is not known in advance and depends on a [condition becoming `False`]{.alert}
+    -   Use when the [number of iterations is not known]{.alert} in advance and depends on a [condition becoming `False`]{.alert}
     -   Example: "Keep doing this until a certain condition is met (e.g., user enters 'quit', or a calculation converges)"
     -   Requires careful management of the condition to avoid infinite loops
 :::
@@ -470,16 +515,20 @@ while test_expression:
 ## `while` loop: simple counter example
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-This `while` loop acts like `for i in range(5):`
+This `while` loop acts like `for count in range(5):`
 
 ```{python}
 #| echo: true
 #| eval: true
-count = 0  # 1. Initialise a counter variable
-while count < 5:  # 2. Set the condition
+count = 0                       # 1. Initialise a counter variable
+while count < 5:                # 2. Set the condition
     print(f"Count is: {count}")
-    count = count + 1  # Update the counter (SERIOUSLY! 😂)
+    count = count + 1           # 3. Update the counter (SERIOUSLY! 😂)
 print("Loop finished.")
+
+# This could also be written as:
+# for count in range(5):
+#    print(f"Count is: {count}")
 ```
 If `count = count + 1` is forgotten, it creates an infinite loop!
 :::
@@ -491,9 +540,11 @@ If `count = count + 1` is forgotten, it creates an infinite loop!
 
 ```{python}
 #| echo: true
-#| eval: false # This would hang in a non-interactive Quarto render
+#| eval: false
 # Example: Get a positive number from the user
-number = -1 # Initialise to a value that fails the condition
+# Initialise to a value that fails the condition
+
+number = -1 
 while number <= 0:
     try:
         user_input = input("Please enter a positive number: ")
@@ -506,7 +557,7 @@ print(f"You entered a valid positive number: {number}")
 ```
 
 - The `try`/`except` block catches the error if the user types something that isn't a number. We'll cover error handling properly in a later lecture
-- This code is best run in an interactive Python session
+- This code is best run in a Jupyter Notebook, it fails in a non-interactive environment (like this one) because `input()` doesn't work here
 :::
 
 ## Caution: infinite loops!
@@ -592,7 +643,7 @@ for value in list_mixed:
         print(f"Stopped: Found a non-integer element: '{value}' (type: {type(value).__name__})")
         break # Exit the loop
     print(f"Processing integer: {value}")
-print("Loop finished or broken.")
+print("Loop ended.")
 ```
 :::
 
@@ -665,7 +716,7 @@ Advantages:
 ## List comprehension examples
 
 :::{style="margin-top: 30px; font-size: 22px;"}
-**Example 1: Customised Messages**
+**Example 1: Customised messages**
 ```{python}
 #| echo: true
 #| eval: true
@@ -688,12 +739,12 @@ print(f"Squared list:  {x_sqr_list}")
 ## List comprehensions with conditionals
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-You can add an `if` condition to filter items during list creation.
+You can add an `if` condition to filter items during list creation
 
 -   **Syntax with `if`:**
     `new_list = [expression for item in iterable if condition]`
 
-Example: Create a list of squares of only the even numbers from 0 to 9.
+Example: Create a list of squares of only the even numbers from 0 to 9
 ```{python}
 #| echo: true
 #| eval: true
@@ -728,23 +779,18 @@ You have a list of names:
 ## Appendix 01 {#sec:appendix1}
 
 :::{style="margin-top: 30px; font-size: 21px;"}
-1. `range(len(list_ids))`:
-   - `len(list_ids)` gets the length (number of items) in the `list_ids` list.
-   - `range()` then creates a sequence of numbers from 0 up to (but not including) that length.
-   - This allows the loop to iterate over each index of the list.
+1. `range(len(list_ids))`
+   - `len(list_ids)` returns the number of items in `list_ids` (4 in our example)
+   - `range(4)` then produces the sequence 0, 1, 2, 3
+   - So the loop variable `i` takes on each of these index values in turn
 
-2. `str(i+1)`:
-   - `i` is the current loop index, starting at 0.
-   - `i+1` adds 1 to that index so that the position number starts at 1. (Remember: Python indexes start at 0.)
-   - `str()` converts the resulting number to a string.
-   - This is done because `i` starts at 0, but we want to display position numbers starting at 1 for the customers.
+2. `str(i+1)`
+   - `i` is the current loop index, starting at 0
+   - `i+1` shifts the displayed position to match everyday counting (Customer 1, not Customer 0)
+   - `str()` converts the result into a string so it can be joined with the rest of the message using `+`
 
-So, this code loops through each item in `list_ids`, printing a message for each customer that includes:
-- Their position (index + 1)
-- The corresponding car brand from `list_ids`
+The loop visits each position from 0 to 3, fetches the matching car brand with `list_ids[i]`, and builds a customised message for each customer
 
-The loop will run once for each item in `list_ids`, with `i` taking on values from 0 to `len(list_ids) - 1`.
-  
 [[Back to the main text]{.button}](#sec:for)
 :::
 
