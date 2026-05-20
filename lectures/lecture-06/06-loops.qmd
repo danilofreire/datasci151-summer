@@ -1,6 +1,6 @@
 ---
 title: DATASCI 151 - Introduction to Statistical Computing II
-subtitle: Lecture 06 - While and For Loops
+subtitle: Lecture 06 - For and While Loops
 author:
   - name: Danilo Freire
     email: danilo.freire@emory.edu
@@ -15,7 +15,7 @@ format:
             font-size: 42px !important;
           }
           </style>
-    footer: "[While and For Loops](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-06/06-loops.html)"
+    footer: "[For and While Loops](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-06/06-loops.html)"
 revealjs-plugins:
   - multimodal
   - appearance
