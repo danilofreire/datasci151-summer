@@ -23,7 +23,7 @@ Each lecture folder contains an HTML file or a Jupyter notebook (`.ipynb`) with 
 - **Monday, May 18**: Lecture 05: Conditional Statements. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-05/05-conditional-statements.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-05/05-conditional-statements.ipynb).
   - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=d8d3593a-52c8-4d6c-b938-d880edb69745&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
 
-- **Tuesday, May 19**: Lecture 06: While and For Loops. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-06/06-loops.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-06/06-loops.ipynb).
+- **Tuesday, May 19**: Lecture 06: For and While Loops. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-06/06-loops.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-06/06-loops.ipynb).
   - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=de289cbf-f886-4d4a-bd4c-91f1b2cc01c2&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
 
 - **Wednesday, May 20**: Lecture 07: Functions. [Lecture Slides](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-07/07-functions.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-07/07-functions.ipynb).
