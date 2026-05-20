@@ -24,7 +24,6 @@ engine: jupyter
 jupyter: datasci
 revealjs-plugins:
   - multimodal
-  - appearance
 editor:
   render-on-save: true
 ---

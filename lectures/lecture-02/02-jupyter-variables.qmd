@@ -19,7 +19,6 @@ format:
     slide-number: true
 revealjs-plugins:
   - multimodal
-  - appearance
 transition: slide
 transition-speed: default
 scrollable: true

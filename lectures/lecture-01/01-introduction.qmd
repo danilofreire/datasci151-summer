@@ -21,7 +21,6 @@ format:
     footer: "[Introduction](https://danilofreire.github.io/datasci151-summer/lectures/lecture-01/01-introduction.html)"
 revealjs-plugins:
   - multimodal
-  - appearance
 transition: slide
 transition-speed: default
 scrollable: true

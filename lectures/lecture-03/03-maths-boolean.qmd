@@ -18,7 +18,6 @@ format:
     footer: "[Maths with NumPy](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-04/04-maths-arrays-random.html)"
 revealjs-plugins:
   - multimodal
-  - appearance
 transition: slide
 transition-speed: default
 scrollable: true

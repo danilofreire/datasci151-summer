@@ -18,7 +18,6 @@ format:
     footer: "[Subsetting Data](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-10/10-subsetting-data.html)"
 revealjs-plugins:
   - multimodal
-  - appearance
 transition: slide
 transition-speed: default
 scrollable: true

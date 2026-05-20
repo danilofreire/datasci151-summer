@@ -18,7 +18,6 @@ format:
     footer: "[Functions](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-07/07-functions.html)"
 revealjs-plugins:
   - multimodal
-  - appearance
 transition: slide
 transition-speed: default
 scrollable: true
