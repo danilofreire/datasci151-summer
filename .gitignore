@@ -1274,6 +1274,16 @@ _quarto/
 *.quarto_ipynb
 *.quarto_ipynb_*
 
+# Quarto render artifacts (anywhere in the tree)
+# *_files/ holds per-document figures/JS bundles emitted alongside each rendered HTML
+# _freeze/ holds frozen computational output so Quarto can skip re-execution
+**/*_files/
+_freeze/
+**/_freeze/
+*_cache/
+**/*_cache/
+.jupyter_cache/
+
 # JupyterLite scaffold leftovers when switching from gh-pages
 jupyter/
 
