@@ -30,6 +30,23 @@ editor:
 
 # I hope you're having a great day! 😊 {background-color="#2d4563"}
 
+# Brief recap 📚 {background-color="#2d4563"}
+
+## Recap: loops in Python
+
+:::{style="margin-top: 30px; font-size: 26px;"}
+In our last lecture, we covered loops:
+
+-   [`for` loops]{.alert}: iterating over a sequence of elements
+-   [`while` loops]{.alert}: repeating actions while a condition is `True`
+-   [`range()`]{.alert} for generating sequences of numbers
+-   [`enumerate()`]{.alert} for accessing both indices and values
+-   [`break` and `continue`]{.alert} for controlling loop flow
+-   [List comprehensions]{.alert} for concise list creation
+
+Today, we will see how to [package reusable code into functions]{.alert} 🤓
+:::
+
 # Today's plan 📋 {background-color="#2d4563"}
 
 ## What we will do today:
@@ -37,12 +54,12 @@ editor:
 :::{style="margin-top: 30px; font-size: 25px;"}
 :::{.columns}
 :::{.column width="50%"}
-- Learn about functions in Python
-- Understand the difference between arguments, parameters, and return values
+- Learn about [functions in Python]{.alert}
+- Understand the difference between [arguments, parameters, and return values]{.alert}
 - Define functions with `def` and `return`
 - Use functions to encapsulate repetitive code
-- Create lambda functions
-- Write a function to calculate the future value of an investment
+- Create [lambda functions]{.alert}
+- Write a function to calculate the future value of an investment (and more!)
 - Learn about local and global variables
 :::
 
@@ -63,7 +80,7 @@ editor:
 
 :::{style="margin-top: 30px; font-size: 25px;"}
 - Functions are used to [organise code, make it readable, and reusable]{.alert}
-- The main idea behind writing and using functions is that, if you have to do the same task multiple times, you can write a function to do that task and then call it whenever you want
+- If you have to do the same task multiple times, you can write a function to do that task and then call it whenever you want
 - A (somewhat silly) rule of thumb: [if you do the same task more than three times, you should write a function for it]{.alert}
 - As your code grows, functions will help you keep it maintainable and scalable
 - We have already seen lots of functions in Python
@@ -211,7 +228,7 @@ my_function(argument)
 - The [function name]{.alert} should reflect what the function does
 - The [parameters]{.alert} are the variables the function expects to receive (here, `parameter` 😅)
 - The [body]{.alert} is the code the function will run, [indented four spaces]{.alert}
-- The [`return`]{.alert} statement is optional. Without it, the function returns `None`, so it's good practice to always return something
+- The [`return`]{.alert} statement is optional. Without it, the function returns `None`, so it's [good practice to always return something]{.alert}
 :::
 :::
 :::
@@ -223,8 +240,6 @@ my_function(argument)
 
 $$V=P\left(1+{\frac {r}{n}}\right)^{nt}$$
 
-To know what each parameter means, click here: [[Appendix 01]{.button}](#sec:appendix01)
-
 :::{style="margin-top: 40px; font-size: 24px;"}
 :::
 
@@ -232,7 +247,11 @@ To know what each parameter means, click here: [[Appendix 01]{.button}](#sec:app
 #| eval: true
 #| echo: true
 def fn_compound_interest(P, r, n, t):
-    V = P*(1 + r/n)**(n*t)
+    # P = principal (initial amount)
+    # r = annual interest rate (as decimal, e.g., 0.10 for 10%)
+    # n = times compounded per year (e.g., 12 for monthly)
+    # t = time in years
+    V = P * (1 + r/n) ** (n*t)
     return V
 ```
 :::
@@ -268,7 +287,7 @@ print(V3)
 $f(x) = x^2 + 2x + 1$
 
 - Test your function with $x = 2$ and $x = 3$
-- [[Appendix 02]{.button}](#sec:appendix02)
+- [[Appendix 01]{.button}](#sec:appendix01)
 :::
 
 ## Try it yourself! 🤓 {#sec:names}
@@ -280,7 +299,7 @@ $f(x) = x^2 + 2x + 1$
 - If it's false, then assign `status = fail`
 - Return the value of `status`
 - Test your function with $numeric\_grade = 60$
-- [[Appendix 03]{.button}](#sec:appendix03)
+- [[Appendix 02]{.button}](#sec:appendix02)
 :::
 
 # Lambda functions  {background-color="#2d4563"}
@@ -333,7 +352,7 @@ print(result)
 - Write a function called `fn_iseligible_vote`
 - This functions returns a boolean value that checks whether $age \ge$ 18
 - Test your function with $age = 20$
-- [[Appendix 04]{.button}](#sec:appendix04)
+- [[Appendix 03]{.button}](#sec:appendix03)
 :::
 
 ## Another one! 🤓 {#sec:list}
@@ -343,7 +362,7 @@ print(result)
 - Create `list_ages = [18,29,15,32,6]`
 - Write a loop that checks whether above ages are eligible to vote
 - Use the above function
-- [[Appendix 05]{.button}](#sec:appendix05)
+- [[Appendix 04]{.button}](#sec:appendix04)
 :::
 
 # Understanding scope in Python 🧐 {background-color="#2d4563"}
@@ -353,7 +372,7 @@ print(result)
 :::{style="margin-top: 30px; font-size: 22px;"}
 :::{.columns}
 :::{.column width="50%"}
-- Scope is the [area of a programme where a variable is accessible]{.alert}
+- Scope is the [area of a program where a variable is accessible]{.alert}
 - Think of scope as a variable's "visibility" in different parts of your code
 - Python uses the [LEGB rule]{.alert} to determine variable scope:
     - [Local]{.alert}: Inside the current function
@@ -537,7 +556,7 @@ print(y)
 :::{style="margin-top: 30px; font-size: 22px;"}
 :::{.columns}
 :::{.column width="50%"}
-- To change a global variable inside a function, use the [`global`]{.alert} keyword
+- To change a global variable inside a function, [use the [`global`]{.alert} keyword]{.alert}
 - It tells Python to reuse the global variable instead of creating a new local one
 
 ```{python}
@@ -561,7 +580,7 @@ Why you should [avoid `global`]{.alert}:
 - Multiple functions touching the same global can cause unexpected side effects
 - It's cleaner to pass data in as parameters and return results
 
-Use `global` sparingly, if at all! 😉
+Use `global` sparingly, [if at all!]{.alert} 😉
 :::
 :::
 :::
@@ -588,7 +607,7 @@ print(x)
 :::{.column width="50%"}
 - What happens if we run the function `modify_x()` again?
 - What happens if we add `global y` inside `fn_square`?
-- [[Appendix 06]{.button}](#sec:appendix-06)
+- [[Appendix 05]{.button}](#sec:appendix-05)
 :::
 :::
 :::
@@ -719,27 +738,14 @@ func_one()
 2.  Uncomment the lines one by one (those trying to print `b` and `c` outside their scopes) and observe the errors. Why do they occur?
 3.  What is the scope of `a`, `b`, and `c`?
 
-- [[Appendix 07]{.button}](#sec:appendix-07)
+- [[Appendix 06]{.button}](#sec:appendix-06)
 :::
 
 # And that's all for today! 🎉 {background-color="#2d4563"}
 
 # Have a great day! 😊 {background-color="#2d4563"}
 
-## Appendix 01: compound interest equation {#sec:appendix01}
-
-:::{style="margin-top: 30px; font-size: 24px;"}
-- $V$ is the future value of the investment/loan, including interest
-- $P$ is the principal investment amount (the initial deposit or loan amount)
-- $r$ is the annual interest rate (decimal)
-- $n$ is the number of times that interest is compounded per year
-- $t$ is the time the money is invested/borrowed for, in years
-- [More information](https://en.wikipedia.org/wiki/Compound_interest)
-
-[[Back to the example]{.button}](#sec:interest)
-:::
-
-## Appendix 02: quadratic equation {#sec:appendix02}
+## Appendix 01: quadratic equation {#sec:appendix01}
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 ```{python}
@@ -759,7 +765,7 @@ print(f2)
 [[Back to exercise]{.button}](#sec:equation)
 :::
 
-## Appendix 03: pass/fail function {#sec:appendix03}
+## Appendix 02: pass/fail function {#sec:appendix02}
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 ```{python}
@@ -779,7 +785,7 @@ print(status)
 [[Back to exercise]{.button}](#sec:names)
 :::
 
-## Appendix 04: lambda function {#sec:appendix04}
+## Appendix 03: lambda function {#sec:appendix03}
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 ```{python}
@@ -794,7 +800,7 @@ print(result)
 [[Back to exercise]{.button}](#sec:lambda)
 :::
 
-## Appendix 05: for loop + function {#sec:appendix05}
+## Appendix 04: for loop + function {#sec:appendix04}
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 ```{python}
@@ -810,7 +816,7 @@ for age in list_ages:
 [[Back to exercise]{.button}](#sec:list)
 :::
 
-## Appendix 06 {#sec:appendix-06}
+## Appendix 05 {#sec:appendix-05}
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 :::{.columns}
@@ -857,7 +863,7 @@ print(y)
 :::
 :::
 
-## Appendix 07 {#sec:appendix-07}
+## Appendix 06 {#sec:appendix-06}
 
 :::{style="margin-top: 30px; font-size: 21px;"}
 **1. Working output (predictions):**
