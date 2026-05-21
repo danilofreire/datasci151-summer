@@ -57,7 +57,7 @@ editor:
 :::{style="margin-top: 30px; font-size: 24px;"}
 :::{.columns}
 :::{.column width="50%"}
-- Introduction to `pandas`, the main library for data manipulation in Python
+- Introduction to `pandas`, the [main library for data manipulation](https://pandas.pydata.org/) in Python
 - Learn how to apply functions to many variables at once
 - How to use the `apply` and `map` functions
 - Learn how to recode and replace variables in a dataset
@@ -94,11 +94,52 @@ editor:
 - The `apply` function is used to [apply a function to a dataset]{.alert}
   - (This course is full of surprises, isn't it? 😄)
 - It is a [method of a pandas DataFrame]{.alert}
+  - A [method]{.alert} is a function that belongs to an object: you call it with the dot syntax (`object.method()`) and it acts on the object's data
 - It can be used with built-in functions, custom functions, or lambda functions
   - `df.apply(function)`
 - You can apply functions to rows or columns
   - `df.apply(function, axis=0)` applies the function to each column (default)
   - `df.apply(function, axis=1)` applies the function to each row
+:::
+
+## How do I find a value's methods?
+
+:::{style="margin-top: 30px; font-size: 23px;"}
+- You don't need to memorise every button on an object. Python and Jupyter will show them to you on demand
+
+:::{.columns}
+:::{.column width="50%"}
+- [Tab-completion]{.alert} is your daily tool. Type the name, a dot, then hit `Tab`:
+
+```python
+circuits.<TAB>
+```
+
+A drop-down lists every method available. Keep typing to filter: `circuits.dr<TAB>` shows `drop`, `dropna`, `drop_duplicates`, and so on
+
+- [`dir()`]{.alert} prints the full list as text
+
+```python
+dir(circuits)
+```
+
+Ignore names starting with `_`; those are internals
+:::
+
+:::{.column width="50%"}
+- [`?`]{.alert} opens the docstring for a method:
+
+```python
+circuits.drop?
+```
+
+You get the arguments and an explanation of what it does. Two question marks (`circuits.drop??`) shows the source code, which is occasionally useful
+
+- [The official docs](https://pandas.pydata.org/docs/) are for when the docstring is too terse, or you want runnable examples
+:::
+:::
+
+- In practice: `Tab` to discover, `?` to investigate, docs only when you need depth
 :::
 
 ## Applying functions to a dataset
@@ -199,7 +240,7 @@ display(data)
 ## Creating a new variable
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-- You can also create a new variable using the `apply` function
+- We can use `apply` itself to [build a brand-new column]{.alert} from an existing one: assign the result of `apply` to a new column name and pandas will add it to the DataFrame
   
 ```{python}
 #| echo: true
@@ -213,15 +254,30 @@ display(data)
 
 ## Deleting a variable
 
-:::{style="margin-top: 30px; font-size: 24px;"}
-- You can also delete a variable using the `drop` function
+:::{style="margin-top: 30px; font-size: 21px;"}
+- You can also delete a variable using the `drop` method
+- Most `pandas` methods are [non-destructive]{.alert}. `drop` does not actually remove the column from `data` on its own; it returns a [new DataFrame]{.alert} with that column removed
+- To make the change stick, we must [reassign]{.alert} the result back to `data` (or pass `inplace=True`)
 
 ```{python}
 #| echo: true
 #| eval: true
+# Option 1: reassign (most common, most readable)
 data = data.drop(columns = ["new_var"])
 
 display(data)
+```
+
+- Two other ways to delete a column (just so you know they exist):
+
+```{python}
+#| echo: true
+#| eval: false
+# Option 2: use `del` (Python built-in, modifies the DataFrame in place)
+del data["new_var"]
+
+# Option 3: use `drop` with inplace=True (also modifies in place, no reassignment needed)
+data.drop(columns = ["new_var"], inplace = True)
 ```
 :::
 
@@ -233,6 +289,7 @@ display(data)
 - [In pandas]{.alert}, `map` works very similarly to `apply`, and they are interchangeable when working with series
 - `map` can be faster for simple functions; `apply` is more flexible (it also works with DataFrames)
 - For regular lists (e.g., `list01 = [1,2,3]`), use `map`, since [`apply` is not a built-in Python function]{.alert}
+- When we ask for two or more columns at once, we use [double square brackets]{.alert} (e.g., `data[["age", "age_bracket01"]]`). The outer brackets are the indexing operator; the inner brackets build a [list of column names]{.alert} to pass to it. Single brackets with one name return a Series; double brackets with a list return a DataFrame
   
 :::{style="font-size: 20px;"}
 :::{.columns}
@@ -390,21 +447,20 @@ ef.message_hello("Juan")
 ```{python}
 #| echo: true
 #| eval: true
+# example_variables.py defines: alpha=5, beta=10, gamma=20, delta=100
 import scripts.example_variables as ev
 
-# When we run this code
-# the value of alpha will be overwritten
-
+# Our local `alpha` and the module's `ev.alpha` live in separate namespaces
 alpha = 1
-print(alpha)
-print(ev.alpha)
+print(alpha)     # -> 1  (local)
+print(ev.alpha)  # -> 5  (module)
 
+# `import *` dumps every name into our namespace and OVERWRITES local `alpha`
 from scripts.example_variables import *
-
-print(alpha)
-print(beta)
-print(gamma)
-print(delta)
+print(alpha)  # -> 5  (clobbered!)
+print(beta)   # -> 10
+print(gamma)  # -> 20
+print(delta)  # -> 100
 ```
 :::
 :::
@@ -818,6 +874,8 @@ $$x_{bin} = \begin{cases} "A" &\text{ if } x_1 < x \le x_2 \\
 - We can use the `pd.cut()` function to do this
 - The syntax is `df["new_variable"] = pd.cut(df["variable"], bins = [x1, x2, x3], labels = ["A", "B"])`
 - Where `bins` are the intervals and `labels` are the new values
+- The argument `right = True` (the default) means each interval is [right-closed, left-open]{.alert}: `(lower, upper]`. So `bins = [0, 2500, 5000]` gives `(0, 2500]` and `(2500, 5000]`, and a value of exactly 2500 falls in the first bin
+  - Heads-up: a value of exactly 0 falls in [no bin]{.alert} and becomes `NaN`. Use `include_lowest = True` if you need the lower edge included
 - More information about the function can be found [here](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.cut.html)
 
 ```{python}

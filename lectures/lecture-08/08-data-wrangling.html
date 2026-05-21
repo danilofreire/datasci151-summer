@@ -1087,216 +1087,6 @@ opacity: 1;
 .multimodal.show.shown .mm-max {
 transition: none;
 }</style>
-  <style type="text/css">
-
-
-@keyframes skidLeft {
-from {
-transform: translate3d(-20%, 0, 0) skewX(0deg);
-opacity: 0;
-}
-50% {
-transform: translate3d(2%, 0, 0) skewX(-10deg);
-opacity: 1;
-}
-75% {
-transform: translate3d(-1%, 0, 0) skewX(10deg);
-}
-to {
-transform: translate3d(0, 0, 0) skewX(0deg);
-}
-}
-@keyframes skidLeftBig {
-from {
-transform: translate3d(-100%, 0, 0) skewX(0deg);
-opacity: 0;
-}
-50% {
-transform: translate3d(2%, 0, 0) skewX(-10deg);
-opacity: 1;
-}
-75% {
-transform: translate3d(-1%, 0, 0) skewX(10deg);
-}
-to {
-transform: translate3d(0, 0, 0) skewX(0deg);
-}
-}
-@keyframes skidRight {
-from {
-transform: translate3d(20%, 0, 0) skewX(0deg);
-opacity: 0;
-}
-50% {
-transform: translate3d(-2%, 0, 0) skewX(10deg);
-opacity: 1;
-}
-75% {
-transform: translate3d(1%, 0, 0) skewX(-10deg);
-}
-to {
-transform: translate3d(0, 0, 0) skewX(0deg);
-}
-}
-@keyframes skidRightBig {
-from {
-transform: translate3d(100%, 0, 0) skewX(0deg);
-opacity: 0;
-}
-50% {
-transform: translate3d(-2%, 0, 0) skewX(10deg);
-opacity: 1;
-}
-75% {
-transform: translate3d(1%, 0, 0) skewX(-10deg);
-}
-to {
-transform: translate3d(0, 0, 0) skewX(0deg);
-}
-}
-@keyframes shrinkIn {
-from {
-transform: scale3d(1.3, 1.3, 1.3);
-opacity: 0;
-}
-to {
-opacity: 1;
-}
-}
-@keyframes shrinkInBig {
-from {
-transform: scale3d(1.6, 1.6, 1.6);
-opacity: 0;
-}
-to {
-opacity: 1;
-}
-}
-@keyframes shrinkInBlur {
-from {
-transform: scale3d(1.3, 1.3, 1.3);
-opacity: 0;
-filter: blur(5px);
-}
-75% {
-opacity: 1;
-filter: blur(0.5px);
-}
-100% {
-transform: scale3d(1, 1, 1);
-}
-}
-
-.skidRight, .animate__skidRight {
-animation-name: skidRight;
-}
-.skidRightBig, .animate__skidRightBig {
-animation-name: skidRightBig;
-}
-.skidLeft, .animate__skidLeft {
-animation-name: skidLeft;
-}
-.skidLeftBig, .animate__skidLeftBig {
-animation-name: skidLeftBig;
-}
-.shrinkIn, .animate__shrinkIn {
-animation-name: shrinkIn;
-}
-.shrinkInBig, .animate__shrinkInBig {
-animation-name: shrinkInBig;
-}
-.shrinkInBlur, .animate__shrinkInBlur {
-animation-name: shrinkIn;
-}
-.shrinkInBlurAnyway, .animate__shrinkInBlurAnyway {
-backface-visibility: hidden;
-perspective: 1000;
-transform: translate3d(0, 0, 0) translateZ(0);
-animation-name: shrinkInBlur;
-}
-
-section:not(.stack):not([data-appearance-can-start]) .animate__animated, section:not(.stack):not([data-appearance-can-start]) .animated {
-opacity: 0;
-animation: none;
-}
-section:not(.stack)[data-appearance-can-start] .animate__animated:not(.fragment), section:not(.stack)[data-appearance-can-start] .animated:not(.fragment) {
-opacity: 1;
-}
-
-section:not(.stack):not([data-appearance-can-start]) .animate__animated,
-section:not(.stack):not([data-appearance-can-start]) .animated,
-.fragment:not(.visible) .animate__animated,
-.fragment:not(.visible) .animated {
-opacity: 0;
-animation: none;
-will-change: animation;
-}
-.reveal.overview section:not(.stack):not([data-appearance-can-start]) .animated,
-.reveal.overview section:not(.stack):not([data-appearance-can-start]) .animate__animated,
-.reveal.overview .fragment:not(.visible) .animated,
-.reveal.overview .fragment:not(.visible) .animate__animated {
-visibility: visible;
-animation: none;
-opacity: 1;
-}
-
-.reveal .fragment.animate__animated:not(.visible), .reveal .fragment.animated:not(.visible) {
-transition: all 0.2s ease;
-opacity: 0;
-animation: none;
-will-change: animation;
-}
-.reveal .fragment.animate__animated.visible:not(.animationended), .reveal .fragment.animated.visible:not(.animationended) {
-transition: none;
-}
-.reveal .fragment.animate__animated.visible.animationended, .reveal .fragment.animated.visible.animationended {
-animation: none;
-transition: all 0.2s ease;
-}
-i.animate__animated, i.animated, span.animate__animated, span.animated {
-display: inline-block;
-}
-.animate__animated[data-auto-animate-target]:not([data-auto-animate-target=unmatched]) {
-animation: none;
-}
-[data-auto-animate=running] .animate__animated[data-auto-animate-target]:not([data-auto-animate-target=unmatched]) {
-opacity: 1 !important;
-}
-.fast, .animate__fast {
-animation-duration: calc(var(--animate-duration) * 0.8);
-}
-.faster, .animate__faster {
-animation-duration: calc(var(--animate-duration) / 2);
-}
-.slow, .animate__slow {
-animation-duration: calc(var(--animate-duration) * 2);
-}
-.slower, .animate__slower {
-animation-duration: calc(var(--animate-duration) * 3);
-}
-.print-pdf .animated, .print-pdf .animate__animated,
-.print-pdf section:not(.stack):not([data-appearance-can-start]) .animated,
-.print-pdf section:not(.stack):not([data-appearance-can-start]) .animate__animated {
-opacity: 1;
-visibility: visible;
-animation: none;
-}
-.print-pdf .reveal .fragment {
-opacity: 1;
-}
-.reveal.sv .animated, .reveal.sv .animate__animated,
-.reveal.sv section:not(.stack):not([data-appearance-can-start]) .animated:not(.fragment),
-.reveal.sv section:not(.stack):not([data-appearance-can-start]) .animate__animated:not(.fragment),
-.reveal.sv section:not(.stack):not([data-appearance-can-start]) .animated.fragment.visible,
-.reveal.sv section:not(.stack):not([data-appearance-can-start]) .animate__animated.fragment.visible, .reveal-viewport.sv .animated, .reveal-viewport.sv .animate__animated,
-.reveal-viewport.sv section:not(.stack):not([data-appearance-can-start]) .animated:not(.fragment),
-.reveal-viewport.sv section:not(.stack):not([data-appearance-can-start]) .animate__animated:not(.fragment),
-.reveal-viewport.sv section:not(.stack):not([data-appearance-can-start]) .animated.fragment.visible,
-.reveal-viewport.sv section:not(.stack):not([data-appearance-can-start]) .animate__animated.fragment.visible {
-opacity: 1;
-visibility: visible;
-animation: none;
-}</style>
   <style type="text/css">.reveal .slide-logo {
 display: block;
 position: fixed;
@@ -1555,7 +1345,7 @@ Danilo Freire
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li>Introduction to <code>pandas</code>, the main library for data manipulation in Python</li>
+<li>Introduction to <code>pandas</code>, the <a href="https://pandas.pydata.org/">main library for data manipulation</a> in Python</li>
 <li>Learn how to apply functions to many variables at once</li>
 <li>How to use the <code>apply</code> and <code>map</code> functions</li>
 <li>Learn how to recode and replace variables in a dataset</li>
@@ -1599,7 +1389,10 @@ Danilo Freire
 <ul>
 <li>(This course is full of surprises, isn’t it? 😄)</li>
 </ul></li>
-<li>It is a <span class="alert">method of a pandas DataFrame</span></li>
+<li>It is a <span class="alert">method of a pandas DataFrame</span>
+<ul>
+<li>A <span class="alert">method</span> is a function that belongs to an object: you call it with the dot syntax (<code>object.method()</code>) and it acts on the object’s data</li>
+</ul></li>
 <li>It can be used with built-in functions, custom functions, or lambda functions
 <ul>
 <li><code>df.apply(function)</code></li>
@@ -1612,20 +1405,53 @@ Danilo Freire
 </ul>
 </div>
 </section>
+<section id="how-do-i-find-a-values-methods" class="slide level2">
+<h2>How do I find a value’s methods?</h2>
+<div style="margin-top: 30px; font-size: 23px;">
+<ul>
+<li>You don’t need to memorise every button on an object. Python and Jupyter will show them to you on demand</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><span class="alert">Tab-completion</span> is your daily tool. Type the name, a dot, then hit <code>Tab</code>:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href></a>circuits.<span class="op">&lt;</span>TAB<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A drop-down lists every method available. Keep typing to filter: <code>circuits.dr&lt;TAB&gt;</code> shows <code>drop</code>, <code>dropna</code>, <code>drop_duplicates</code>, and so on</p>
+<ul>
+<li><span class="alert"><code>dir()</code></span> prints the full list as text</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href></a><span class="bu">dir</span>(circuits)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ignore names starting with <code>_</code>; those are internals</p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><span class="alert"><code>?</code></span> opens the docstring for a method:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href></a>circuits.drop?</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You get the arguments and an explanation of what it does. Two question marks (<code>circuits.drop??</code>) shows the source code, which is occasionally useful</p>
+<ul>
+<li><a href="https://pandas.pydata.org/docs/">The official docs</a> are for when the docstring is too terse, or you want runnable examples</li>
+</ul>
+</div></div>
+<ul>
+<li>In practice: <code>Tab</code> to discover, <code>?</code> to investigate, docs only when you need depth</li>
+</ul>
+</div>
+</section>
 <section id="applying-functions-to-a-dataset-1" class="slide level2">
 <h2>Applying functions to a dataset</h2>
 <div style="margin-top: 30px; font-size: 22px;">
-<div id="60359433" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-3"><a href></a></span>
-<span id="cb1-4"><a href></a>df <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb1-5"><a href></a>    <span class="st">&#39;A&#39;</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
-<span id="cb1-6"><a href></a>    <span class="st">&#39;B&#39;</span>: [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>],</span>
-<span id="cb1-7"><a href></a>    <span class="st">&#39;C&#39;</span>: [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
-<span id="cb1-8"><a href></a>})</span>
-<span id="cb1-9"><a href></a></span>
-<span id="cb1-10"><a href></a><span class="bu">print</span>(df.<span class="bu">apply</span>(np.sqrt))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="6792684c" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-3"><a href></a></span>
+<span id="cb4-4"><a href></a>df <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb4-5"><a href></a>    <span class="st">&#39;A&#39;</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
+<span id="cb4-6"><a href></a>    <span class="st">&#39;B&#39;</span>: [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>],</span>
+<span id="cb4-7"><a href></a>    <span class="st">&#39;C&#39;</span>: [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
+<span id="cb4-8"><a href></a>})</span>
+<span id="cb4-9"><a href></a></span>
+<span id="cb4-10"><a href></a><span class="bu">print</span>(df.<span class="bu">apply</span>(np.sqrt))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>          A         B         C
 0  1.000000  2.000000  2.645751
@@ -1633,8 +1459,8 @@ Danilo Freire
 2  1.732051  2.449490  3.000000</code></pre>
 </div>
 </div>
-<div id="5fb10e23" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href></a><span class="bu">print</span>(df.<span class="bu">apply</span>(np.<span class="bu">sum</span>, axis<span class="op">=</span><span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="9317d2e6" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href></a><span class="bu">print</span>(df.<span class="bu">apply</span>(np.<span class="bu">sum</span>, axis<span class="op">=</span><span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0    12
 1    15
@@ -1642,8 +1468,8 @@ Danilo Freire
 dtype: int64</code></pre>
 </div>
 </div>
-<div id="a7c8f2ce" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href></a><span class="bu">print</span>(df.<span class="bu">apply</span>(<span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="613fc660" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href></a><span class="bu">print</span>(df.<span class="bu">apply</span>(<span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   A   B   C
 0  1  16  49
@@ -1659,16 +1485,16 @@ dtype: int64</code></pre>
 <ul>
 <li>Let’s do a quick exercise</li>
 </ul>
-<div id="97eff185" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href></a><span class="co"># Create an empty DataFrame</span></span>
-<span id="cb7-2"><a href></a>data <span class="op">=</span> pd.DataFrame()</span>
-<span id="cb7-3"><a href></a></span>
-<span id="cb7-4"><a href></a><span class="co"># Add variables</span></span>
-<span id="cb7-5"><a href></a>data[<span class="st">&quot;age&quot;</span>] <span class="op">=</span> [<span class="dv">18</span>,<span class="dv">29</span>,<span class="dv">15</span>,<span class="dv">32</span>,<span class="dv">6</span>]</span>
-<span id="cb7-6"><a href></a>data[<span class="st">&quot;num_underage_siblings&quot;</span>] <span class="op">=</span> [<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>]</span>
-<span id="cb7-7"><a href></a>data[<span class="st">&quot;num_adult_siblings&quot;</span>] <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>]</span>
-<span id="cb7-8"><a href></a></span>
-<span id="cb7-9"><a href></a>display(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="17874f2b" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href></a><span class="co"># Create an empty DataFrame</span></span>
+<span id="cb10-2"><a href></a>data <span class="op">=</span> pd.DataFrame()</span>
+<span id="cb10-3"><a href></a></span>
+<span id="cb10-4"><a href></a><span class="co"># Add variables</span></span>
+<span id="cb10-5"><a href></a>data[<span class="st">&quot;age&quot;</span>] <span class="op">=</span> [<span class="dv">18</span>,<span class="dv">29</span>,<span class="dv">15</span>,<span class="dv">32</span>,<span class="dv">6</span>]</span>
+<span id="cb10-6"><a href></a>data[<span class="st">&quot;num_underage_siblings&quot;</span>] <span class="op">=</span> [<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>]</span>
+<span id="cb10-7"><a href></a>data[<span class="st">&quot;num_adult_siblings&quot;</span>] <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>]</span>
+<span id="cb10-8"><a href></a></span>
+<span id="cb10-9"><a href></a>display(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <style scoped>
@@ -1737,25 +1563,25 @@ text-align: right;
 <ul>
 <li>Now let’s define some functions</li>
 </ul>
-<div id="f65e5b20" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href></a><span class="co"># The first two functions return True/False depending on age constraints</span></span>
-<span id="cb8-2"><a href></a><span class="co"># The third function returns the sum of two numbers</span></span>
-<span id="cb8-3"><a href></a><span class="co"># The fourth function returns a string with the age bracket</span></span>
-<span id="cb8-4"><a href></a></span>
-<span id="cb8-5"><a href></a>fn_iseligible_vote <span class="op">=</span> <span class="kw">lambda</span> age: age <span class="op">&gt;=</span> <span class="dv">18</span></span>
-<span id="cb8-6"><a href></a></span>
-<span id="cb8-7"><a href></a>fn_istwenties <span class="op">=</span> <span class="kw">lambda</span> age: (age <span class="op">&gt;=</span> <span class="dv">20</span>) <span class="op">&amp;</span> (age <span class="op">&lt;</span> <span class="dv">30</span>)</span>
-<span id="cb8-8"><a href></a></span>
-<span id="cb8-9"><a href></a>fn_sum <span class="op">=</span> <span class="kw">lambda</span> x,y: x <span class="op">+</span> y</span>
-<span id="cb8-10"><a href></a></span>
-<span id="cb8-11"><a href></a><span class="kw">def</span> fn_agebracket(age):</span>
-<span id="cb8-12"><a href></a>    <span class="cf">if</span> (age <span class="op">&gt;=</span> <span class="dv">18</span>):</span>
-<span id="cb8-13"><a href></a>        status <span class="op">=</span> <span class="st">&quot;Adult&quot;</span></span>
-<span id="cb8-14"><a href></a>    <span class="cf">elif</span> (age <span class="op">&gt;=</span> <span class="dv">10</span>) <span class="op">&amp;</span> (age <span class="op">&lt;</span> <span class="dv">18</span>):</span>
-<span id="cb8-15"><a href></a>        status <span class="op">=</span> <span class="st">&quot;Adolescent&quot;</span></span>
-<span id="cb8-16"><a href></a>    <span class="cf">else</span>:</span>
-<span id="cb8-17"><a href></a>        status <span class="op">=</span> <span class="st">&quot;Child&quot;</span></span>
-<span id="cb8-18"><a href></a>    <span class="cf">return</span>(status)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="e9b6441a" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href></a><span class="co"># The first two functions return True/False depending on age constraints</span></span>
+<span id="cb11-2"><a href></a><span class="co"># The third function returns the sum of two numbers</span></span>
+<span id="cb11-3"><a href></a><span class="co"># The fourth function returns a string with the age bracket</span></span>
+<span id="cb11-4"><a href></a></span>
+<span id="cb11-5"><a href></a>fn_iseligible_vote <span class="op">=</span> <span class="kw">lambda</span> age: age <span class="op">&gt;=</span> <span class="dv">18</span></span>
+<span id="cb11-6"><a href></a></span>
+<span id="cb11-7"><a href></a>fn_istwenties <span class="op">=</span> <span class="kw">lambda</span> age: (age <span class="op">&gt;=</span> <span class="dv">20</span>) <span class="op">&amp;</span> (age <span class="op">&lt;</span> <span class="dv">30</span>)</span>
+<span id="cb11-8"><a href></a></span>
+<span id="cb11-9"><a href></a>fn_sum <span class="op">=</span> <span class="kw">lambda</span> x,y: x <span class="op">+</span> y</span>
+<span id="cb11-10"><a href></a></span>
+<span id="cb11-11"><a href></a><span class="kw">def</span> fn_agebracket(age):</span>
+<span id="cb11-12"><a href></a>    <span class="cf">if</span> (age <span class="op">&gt;=</span> <span class="dv">18</span>):</span>
+<span id="cb11-13"><a href></a>        status <span class="op">=</span> <span class="st">&quot;Adult&quot;</span></span>
+<span id="cb11-14"><a href></a>    <span class="cf">elif</span> (age <span class="op">&gt;=</span> <span class="dv">10</span>) <span class="op">&amp;</span> (age <span class="op">&lt;</span> <span class="dv">18</span>):</span>
+<span id="cb11-15"><a href></a>        status <span class="op">=</span> <span class="st">&quot;Adolescent&quot;</span></span>
+<span id="cb11-16"><a href></a>    <span class="cf">else</span>:</span>
+<span id="cb11-17"><a href></a>        status <span class="op">=</span> <span class="st">&quot;Child&quot;</span></span>
+<span id="cb11-18"><a href></a>    <span class="cf">return</span>(status)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -1765,12 +1591,12 @@ text-align: right;
 <ul>
 <li>Now let’s apply the functions to the <code>data[&quot;age&quot;]</code> column</li>
 </ul>
-<div id="c205ab7a" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href></a>data[<span class="st">&quot;can_vote&quot;</span>]    <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">apply</span>(fn_iseligible_vote)</span>
-<span id="cb9-2"><a href></a>data[<span class="st">&quot;in_twenties&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">apply</span>(fn_istwenties)</span>
-<span id="cb9-3"><a href></a>data[<span class="st">&quot;age_bracket&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">apply</span>(fn_agebracket)</span>
-<span id="cb9-4"><a href></a></span>
-<span id="cb9-5"><a href></a>display(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="9cac45a0" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href></a>data[<span class="st">&quot;can_vote&quot;</span>]    <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">apply</span>(fn_iseligible_vote)</span>
+<span id="cb12-2"><a href></a>data[<span class="st">&quot;in_twenties&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">apply</span>(fn_istwenties)</span>
+<span id="cb12-3"><a href></a>data[<span class="st">&quot;age_bracket&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">apply</span>(fn_agebracket)</span>
+<span id="cb12-4"><a href></a></span>
+<span id="cb12-5"><a href></a>display(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <style scoped>
@@ -1855,13 +1681,13 @@ text-align: right;
 <h2>Creating a new variable</h2>
 <div style="margin-top: 30px; font-size: 24px;">
 <ul>
-<li>You can also create a new variable using the <code>apply</code> function</li>
+<li>We can use <code>apply</code> itself to <span class="alert">build a brand-new column</span> from an existing one: assign the result of <code>apply</code> to a new column name and pandas will add it to the DataFrame</li>
 </ul>
-<div id="33acca11" class="cell" data-execution_count="7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href></a><span class="co"># Creating a new variable</span></span>
-<span id="cb10-2"><a href></a>data[<span class="st">&quot;new_var&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> age: age <span class="op">&gt;=</span> <span class="dv">18</span>)</span>
-<span id="cb10-3"><a href></a></span>
-<span id="cb10-4"><a href></a>display(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="a5779c35" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href></a><span class="co"># Creating a new variable</span></span>
+<span id="cb13-2"><a href></a>data[<span class="st">&quot;new_var&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> age: age <span class="op">&gt;=</span> <span class="dv">18</span>)</span>
+<span id="cb13-3"><a href></a></span>
+<span id="cb13-4"><a href></a>display(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <style scoped>
@@ -1950,14 +1776,17 @@ text-align: right;
 </section>
 <section id="deleting-a-variable" class="slide level2">
 <h2>Deleting a variable</h2>
-<div style="margin-top: 30px; font-size: 24px;">
+<div style="margin-top: 30px; font-size: 21px;">
 <ul>
-<li>You can also delete a variable using the <code>drop</code> function</li>
+<li>You can also delete a variable using the <code>drop</code> method</li>
+<li>Most <code>pandas</code> methods are <span class="alert">non-destructive</span>. <code>drop</code> does not actually remove the column from <code>data</code> on its own; it returns a <span class="alert">new DataFrame</span> with that column removed</li>
+<li>To make the change stick, we must <span class="alert">reassign</span> the result back to <code>data</code> (or pass <code>inplace=True</code>)</li>
 </ul>
-<div id="dffd71ea" class="cell" data-execution_count="8">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href></a>data <span class="op">=</span> data.drop(columns <span class="op">=</span> [<span class="st">&quot;new_var&quot;</span>])</span>
-<span id="cb11-2"><a href></a></span>
-<span id="cb11-3"><a href></a>display(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="7e3e0ec2" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href></a><span class="co"># Option 1: reassign (most common, most readable)</span></span>
+<span id="cb14-2"><a href></a>data <span class="op">=</span> data.drop(columns <span class="op">=</span> [<span class="st">&quot;new_var&quot;</span>])</span>
+<span id="cb14-3"><a href></a></span>
+<span id="cb14-4"><a href></a>display(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <style scoped>
@@ -2036,6 +1865,16 @@ text-align: right;
 </div>
 </div>
 </div>
+<ul>
+<li>Two other ways to delete a column (just so you know they exist):</li>
+</ul>
+<div id="77b37d2b" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href></a><span class="co"># Option 2: use `del` (Python built-in, modifies the DataFrame in place)</span></span>
+<span id="cb15-2"><a href></a><span class="kw">del</span> data[<span class="st">&quot;new_var&quot;</span>]</span>
+<span id="cb15-3"><a href></a></span>
+<span id="cb15-4"><a href></a><span class="co"># Option 3: use `drop` with inplace=True (also modifies in place, no reassignment needed)</span></span>
+<span id="cb15-5"><a href></a>data.drop(columns <span class="op">=</span> [<span class="st">&quot;new_var&quot;</span>], inplace <span class="op">=</span> <span class="va">True</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section>
 <section id="mapping-functions-to-a-list-array-or-series" class="slide level2">
@@ -2049,14 +1888,15 @@ text-align: right;
 <li><span class="alert">In pandas</span>, <code>map</code> works very similarly to <code>apply</code>, and they are interchangeable when working with series</li>
 <li><code>map</code> can be faster for simple functions; <code>apply</code> is more flexible (it also works with DataFrames)</li>
 <li>For regular lists (e.g., <code>list01 = [1,2,3]</code>), use <code>map</code>, since <span class="alert"><code>apply</code> is not a built-in Python function</span></li>
+<li>When we ask for two or more columns at once, we use <span class="alert">double square brackets</span> (e.g., <code>data[[&quot;age&quot;, &quot;age_bracket01&quot;]]</code>). The outer brackets are the indexing operator; the inner brackets build a <span class="alert">list of column names</span> to pass to it. Single brackets with one name return a Series; double brackets with a list return a DataFrame</li>
 </ul>
 <div style="font-size: 20px;">
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="76952f99" class="cell" data-execution_count="9">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href></a>data[<span class="st">&quot;age_bracket01&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">map</span>(fn_agebracket)</span>
-<span id="cb12-2"><a href></a></span>
-<span id="cb12-3"><a href></a>display(data[[<span class="st">&quot;age&quot;</span>,<span class="st">&quot;age_bracket01&quot;</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="21413cd0" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href></a>data[<span class="st">&quot;age_bracket01&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">map</span>(fn_agebracket)</span>
+<span id="cb16-2"><a href></a></span>
+<span id="cb16-3"><a href></a>display(data[[<span class="st">&quot;age&quot;</span>,<span class="st">&quot;age_bracket01&quot;</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <style scoped>
@@ -2112,10 +1952,10 @@ text-align: right;
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="df21ba9a" class="cell" data-execution_count="10">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href></a>data[<span class="st">&quot;age_bracket02&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">apply</span>(fn_agebracket)</span>
-<span id="cb13-2"><a href></a></span>
-<span id="cb13-3"><a href></a>display(data[[<span class="st">&quot;age&quot;</span>,<span class="st">&quot;age_bracket02&quot;</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="eee7bed2" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href></a>data[<span class="st">&quot;age_bracket02&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">apply</span>(fn_agebracket)</span>
+<span id="cb17-2"><a href></a></span>
+<span id="cb17-3"><a href></a>display(data[[<span class="st">&quot;age&quot;</span>,<span class="st">&quot;age_bracket02&quot;</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <style scoped>
@@ -2182,26 +2022,26 @@ text-align: right;
 <ul>
 <li>Using <code>map</code> with a list and an array</li>
 </ul>
-<div id="7b4fefb1" class="cell" data-execution_count="11">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href></a><span class="co"># Create a list</span></span>
-<span id="cb14-2"><a href></a>list01 <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
-<span id="cb14-3"><a href></a></span>
-<span id="cb14-4"><a href></a><span class="co"># Map a function to the list</span></span>
-<span id="cb14-5"><a href></a>list02 <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span>, list01))</span>
-<span id="cb14-6"><a href></a></span>
-<span id="cb14-7"><a href></a><span class="bu">print</span>(list02)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="7ad15a42" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href></a><span class="co"># Create a list</span></span>
+<span id="cb18-2"><a href></a>list01 <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
+<span id="cb18-3"><a href></a></span>
+<span id="cb18-4"><a href></a><span class="co"># Map a function to the list</span></span>
+<span id="cb18-5"><a href></a>list02 <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span>, list01))</span>
+<span id="cb18-6"><a href></a></span>
+<span id="cb18-7"><a href></a><span class="bu">print</span>(list02)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1, 4, 9, 16, 25]</code></pre>
 </div>
 </div>
-<div id="7e55d272" class="cell" data-execution_count="12">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href></a><span class="co"># Create a numpy array</span></span>
-<span id="cb16-2"><a href></a>array01 <span class="op">=</span> np.array([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>])</span>
-<span id="cb16-3"><a href></a></span>
-<span id="cb16-4"><a href></a><span class="co"># Map a function to the array</span></span>
-<span id="cb16-5"><a href></a>array02 <span class="op">=</span> np.array(<span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span>, array01)))</span>
-<span id="cb16-6"><a href></a></span>
-<span id="cb16-7"><a href></a><span class="bu">print</span>(array02)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="785f7812" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href></a><span class="co"># Create a numpy array</span></span>
+<span id="cb20-2"><a href></a>array01 <span class="op">=</span> np.array([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>])</span>
+<span id="cb20-3"><a href></a></span>
+<span id="cb20-4"><a href></a><span class="co"># Map a function to the array</span></span>
+<span id="cb20-5"><a href></a>array02 <span class="op">=</span> np.array(<span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span>, array01)))</span>
+<span id="cb20-6"><a href></a></span>
+<span id="cb20-7"><a href></a><span class="bu">print</span>(array02)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[ 1  4  9 16 25]</code></pre>
 </div>
@@ -2210,24 +2050,24 @@ text-align: right;
 <ul>
 <li>Trying to use <code>apply</code> with a list or an array will raise an error</li>
 </ul>
-<div id="fe762da0" class="cell" data-execution_count="13">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href></a><span class="co"># Create a list</span></span>
-<span id="cb18-2"><a href></a>list01 <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
-<span id="cb18-3"><a href></a></span>
-<span id="cb18-4"><a href></a><span class="co"># Apply a function to the list</span></span>
-<span id="cb18-5"><a href></a>list02 <span class="op">=</span> <span class="bu">list</span>(<span class="bu">apply</span>(<span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span>, list01))</span>
-<span id="cb18-6"><a href></a></span>
-<span id="cb18-7"><a href></a><span class="bu">print</span>(list02)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="b34c3c2d" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href></a><span class="co"># Create a list</span></span>
+<span id="cb22-2"><a href></a>list01 <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
+<span id="cb22-3"><a href></a></span>
+<span id="cb22-4"><a href></a><span class="co"># Apply a function to the list</span></span>
+<span id="cb22-5"><a href></a>list02 <span class="op">=</span> <span class="bu">list</span>(<span class="bu">apply</span>(<span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span>, list01))</span>
+<span id="cb22-6"><a href></a></span>
+<span id="cb22-7"><a href></a><span class="bu">print</span>(list02)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource {verbatim} number-lines code-with-copy"><code class="sourceCode"><span id="cb19-1"><a href></a>---------------------------------------------------------------------------</span>
-<span id="cb19-2"><a href></a>NameError                                 Traceback (most recent call last)</span>
-<span id="cb19-3"><a href></a>Cell In[168], line 5</span>
-<span id="cb19-4"><a href></a>      2 list01 = [1,2,3,4,5]</span>
-<span id="cb19-5"><a href></a>      4 # Apply a function to the list</span>
-<span id="cb19-6"><a href></a>----&gt; 5 list02 = list(apply(lambda x: x**2, list01))</span>
-<span id="cb19-7"><a href></a>      7 print(list02)</span>
-<span id="cb19-8"><a href></a></span>
-<span id="cb19-9"><a href></a>NameError: name &#39;apply&#39; is not defined</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode numberSource {verbatim} number-lines code-with-copy"><code class="sourceCode"><span id="cb23-1"><a href></a>---------------------------------------------------------------------------</span>
+<span id="cb23-2"><a href></a>NameError                                 Traceback (most recent call last)</span>
+<span id="cb23-3"><a href></a>Cell In[168], line 5</span>
+<span id="cb23-4"><a href></a>      2 list01 = [1,2,3,4,5]</span>
+<span id="cb23-5"><a href></a>      4 # Apply a function to the list</span>
+<span id="cb23-6"><a href></a>----&gt; 5 list02 = list(apply(lambda x: x**2, list01))</span>
+<span id="cb23-7"><a href></a>      7 print(list02)</span>
+<span id="cb23-8"><a href></a></span>
+<span id="cb23-9"><a href></a>NameError: name &#39;apply&#39; is not defined</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </div>
 </section>
@@ -2277,15 +2117,15 @@ text-align: right;
 <ul>
 <li>We can import functions into the working environment from a file</li>
 </ul>
-<div id="802d63ee" class="cell" data-execution_count="14">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href></a><span class="co"># Import the folder `scripts` as a package</span></span>
-<span id="cb20-2"><a href></a><span class="co"># And the file `example_functions.py` as `ef`</span></span>
-<span id="cb20-3"><a href></a><span class="im">import</span> scripts.example_functions <span class="im">as</span> ef</span>
-<span id="cb20-4"><a href></a></span>
-<span id="cb20-5"><a href></a><span class="bu">print</span>(ef.fn_quadratic(<span class="dv">2</span>))</span>
-<span id="cb20-6"><a href></a><span class="bu">print</span>(ef.fn_cubic(<span class="dv">3</span>))</span>
-<span id="cb20-7"><a href></a></span>
-<span id="cb20-8"><a href></a>ef.message_hello(<span class="st">&quot;Juan&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="ccc9dfb3" class="cell" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href></a><span class="co"># Import the folder `scripts` as a package</span></span>
+<span id="cb24-2"><a href></a><span class="co"># And the file `example_functions.py` as `ef`</span></span>
+<span id="cb24-3"><a href></a><span class="im">import</span> scripts.example_functions <span class="im">as</span> ef</span>
+<span id="cb24-4"><a href></a></span>
+<span id="cb24-5"><a href></a><span class="bu">print</span>(ef.fn_quadratic(<span class="dv">2</span>))</span>
+<span id="cb24-6"><a href></a><span class="bu">print</span>(ef.fn_cubic(<span class="dv">3</span>))</span>
+<span id="cb24-7"><a href></a></span>
+<span id="cb24-8"><a href></a>ef.message_hello(<span class="st">&quot;Juan&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>4
 27</code></pre>
@@ -2313,22 +2153,21 @@ text-align: right;
 <ul>
 <li>Example:</li>
 </ul>
-<div id="620ac1b0" class="cell" data-execution_count="15">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href></a><span class="im">import</span> scripts.example_variables <span class="im">as</span> ev</span>
-<span id="cb23-2"><a href></a></span>
-<span id="cb23-3"><a href></a><span class="co"># When we run this code</span></span>
-<span id="cb23-4"><a href></a><span class="co"># the value of alpha will be overwritten</span></span>
-<span id="cb23-5"><a href></a></span>
-<span id="cb23-6"><a href></a>alpha <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb23-7"><a href></a><span class="bu">print</span>(alpha)</span>
-<span id="cb23-8"><a href></a><span class="bu">print</span>(ev.alpha)</span>
-<span id="cb23-9"><a href></a></span>
-<span id="cb23-10"><a href></a><span class="im">from</span> scripts.example_variables <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb23-11"><a href></a></span>
-<span id="cb23-12"><a href></a><span class="bu">print</span>(alpha)</span>
-<span id="cb23-13"><a href></a><span class="bu">print</span>(beta)</span>
-<span id="cb23-14"><a href></a><span class="bu">print</span>(gamma)</span>
-<span id="cb23-15"><a href></a><span class="bu">print</span>(delta)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="2f28b9d8" class="cell" data-execution_count="16">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href></a><span class="co"># example_variables.py defines: alpha=5, beta=10, gamma=20, delta=100</span></span>
+<span id="cb27-2"><a href></a><span class="im">import</span> scripts.example_variables <span class="im">as</span> ev</span>
+<span id="cb27-3"><a href></a></span>
+<span id="cb27-4"><a href></a><span class="co"># Our local `alpha` and the module&#39;s `ev.alpha` live in separate namespaces</span></span>
+<span id="cb27-5"><a href></a>alpha <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb27-6"><a href></a><span class="bu">print</span>(alpha)     <span class="co"># -&gt; 1  (local)</span></span>
+<span id="cb27-7"><a href></a><span class="bu">print</span>(ev.alpha)  <span class="co"># -&gt; 5  (module)</span></span>
+<span id="cb27-8"><a href></a></span>
+<span id="cb27-9"><a href></a><span class="co"># `import *` dumps every name into our namespace and OVERWRITES local `alpha`</span></span>
+<span id="cb27-10"><a href></a><span class="im">from</span> scripts.example_variables <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb27-11"><a href></a><span class="bu">print</span>(alpha)  <span class="co"># -&gt; 5  (clobbered!)</span></span>
+<span id="cb27-12"><a href></a><span class="bu">print</span>(beta)   <span class="co"># -&gt; 10</span></span>
+<span id="cb27-13"><a href></a><span class="bu">print</span>(gamma)  <span class="co"># -&gt; 20</span></span>
+<span id="cb27-14"><a href></a><span class="bu">print</span>(delta)  <span class="co"># -&gt; 100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1
 5
@@ -2352,19 +2191,19 @@ text-align: right;
 <ul>
 <li>First, we will load the packages we need</li>
 </ul>
-<div id="ce5d5db3" class="cell" data-execution_count="16">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb25-2"><a href></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="f8aac58a" class="cell" data-execution_count="17">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb29-2"><a href></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>Then, we will load the dataset</li>
 </ul>
-<div id="59f2fff7" class="cell" data-execution_count="17">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href></a>circuits <span class="op">=</span> pd.read_csv(<span class="st">&quot;data_raw/circuits.csv&quot;</span>)</span>
-<span id="cb26-2"><a href></a></span>
-<span id="cb26-3"><a href></a><span class="co"># Or download it from the internet</span></span>
-<span id="cb26-4"><a href></a><span class="co"># circuits = pd.read_csv(&quot;https://raw.githubusercontent.com/danilofreire/datasci151-summer/main/lectures/lecture-08/data_raw/circuits.csv&quot;)</span></span>
-<span id="cb26-5"><a href></a>display(circuits.head(<span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="75ce6d34" class="cell" data-execution_count="18">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href></a>circuits <span class="op">=</span> pd.read_csv(<span class="st">&quot;data_raw/circuits.csv&quot;</span>)</span>
+<span id="cb30-2"><a href></a></span>
+<span id="cb30-3"><a href></a><span class="co"># Or download it from the internet</span></span>
+<span id="cb30-4"><a href></a><span class="co"># circuits = pd.read_csv(&quot;https://raw.githubusercontent.com/danilofreire/datasci151-summer/main/lectures/lecture-08/data_raw/circuits.csv&quot;)</span></span>
+<span id="cb30-5"><a href></a>display(circuits.head(<span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <style scoped>
@@ -2524,8 +2363,8 @@ text-align: right;
 <ul>
 <li><code>NaN</code> is a special number, available in <code>numpy</code></li>
 </ul>
-<div id="46ad791f" class="cell" data-execution_count="18">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href></a>np.nan</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="5cfbd214" class="cell" data-execution_count="19">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href></a>np.nan</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>nan</code></pre>
 </div>
@@ -2538,21 +2377,21 @@ text-align: right;
 <ul>
 <li>Let’s see some examples. We start with <code>numpy</code> arrays</li>
 </ul>
-<div id="0881154a" class="cell" data-execution_count="19">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href></a><span class="co"># Create two arrays with and without &quot;NaNs&quot;</span></span>
-<span id="cb29-2"><a href></a><span class="co"># The &quot;np.array()&quot; functions converts </span></span>
-<span id="cb29-3"><a href></a><span class="co"># a list to an array</span></span>
-<span id="cb29-4"><a href></a></span>
-<span id="cb29-5"><a href></a>vec_without_nans <span class="op">=</span> np.array([<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>])</span>
-<span id="cb29-6"><a href></a>vec_with_nans    <span class="op">=</span> np.array([np.nan,<span class="dv">4</span>,<span class="dv">5</span>])</span>
-<span id="cb29-7"><a href></a></span>
-<span id="cb29-8"><a href></a><span class="co"># When you add the vectors</span></span>
-<span id="cb29-9"><a href></a><span class="co"># you will produce a NaN </span></span>
-<span id="cb29-10"><a href></a><span class="co"># on any entries with &quot;NaNs&quot;</span></span>
-<span id="cb29-11"><a href></a><span class="bu">print</span>(vec_without_nans <span class="op">*</span> vec_with_nans)</span>
-<span id="cb29-12"><a href></a><span class="bu">print</span>(vec_without_nans <span class="op">/</span> vec_with_nans)</span>
-<span id="cb29-13"><a href></a><span class="bu">print</span>(vec_without_nans <span class="op">+</span> vec_with_nans)</span>
-<span id="cb29-14"><a href></a><span class="bu">print</span>(vec_without_nans <span class="op">-</span> vec_with_nans)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="a354193c" class="cell" data-execution_count="20">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href></a><span class="co"># Create two arrays with and without &quot;NaNs&quot;</span></span>
+<span id="cb33-2"><a href></a><span class="co"># The &quot;np.array()&quot; functions converts </span></span>
+<span id="cb33-3"><a href></a><span class="co"># a list to an array</span></span>
+<span id="cb33-4"><a href></a></span>
+<span id="cb33-5"><a href></a>vec_without_nans <span class="op">=</span> np.array([<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>])</span>
+<span id="cb33-6"><a href></a>vec_with_nans    <span class="op">=</span> np.array([np.nan,<span class="dv">4</span>,<span class="dv">5</span>])</span>
+<span id="cb33-7"><a href></a></span>
+<span id="cb33-8"><a href></a><span class="co"># When you add the vectors</span></span>
+<span id="cb33-9"><a href></a><span class="co"># you will produce a NaN </span></span>
+<span id="cb33-10"><a href></a><span class="co"># on any entries with &quot;NaNs&quot;</span></span>
+<span id="cb33-11"><a href></a><span class="bu">print</span>(vec_without_nans <span class="op">*</span> vec_with_nans)</span>
+<span id="cb33-12"><a href></a><span class="bu">print</span>(vec_without_nans <span class="op">/</span> vec_with_nans)</span>
+<span id="cb33-13"><a href></a><span class="bu">print</span>(vec_without_nans <span class="op">+</span> vec_with_nans)</span>
+<span id="cb33-14"><a href></a><span class="bu">print</span>(vec_without_nans <span class="op">-</span> vec_with_nans)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[nan  4.  5.]
 [ nan 0.25 0.2 ]
@@ -2573,8 +2412,8 @@ text-align: right;
 <li>Some summary statistics functions will not work with <code>NaN</code> values</li>
 <li>For example, the <code>mean()</code> function</li>
 </ul>
-<div id="a0c055b8" class="cell" data-execution_count="20">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href></a><span class="bu">print</span>(np.mean(vec_with_nans))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="053f8438" class="cell" data-execution_count="21">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href></a><span class="bu">print</span>(np.mean(vec_with_nans))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>nan</code></pre>
 </div>
@@ -2586,8 +2425,8 @@ text-align: right;
 <ul>
 <li>To calculate the mean without <code>NaN</code> values, we can use the <code>nanmean()</code> function</li>
 </ul>
-<div id="a5f7516b" class="cell" data-execution_count="21">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href></a><span class="bu">print</span>(np.nanmean(vec_with_nans))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="921ce9ea" class="cell" data-execution_count="22">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href></a><span class="bu">print</span>(np.nanmean(vec_with_nans))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>4.5</code></pre>
 </div>
@@ -2607,10 +2446,10 @@ text-align: right;
 <ul>
 <li>Let’s create an empty DataFrame and create a new column <code>x</code> with <code>NaN</code> values</li>
 </ul>
-<div id="c4571426" class="cell" data-execution_count="22">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href></a>dataset <span class="op">=</span> pd.DataFrame()</span>
-<span id="cb35-2"><a href></a>dataset[<span class="st">&quot;x&quot;</span>] <span class="op">=</span> vec_with_nans</span>
-<span id="cb35-3"><a href></a>dataset</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="707900a0" class="cell" data-execution_count="23">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href></a>dataset <span class="op">=</span> pd.DataFrame()</span>
+<span id="cb39-2"><a href></a>dataset[<span class="st">&quot;x&quot;</span>] <span class="op">=</span> vec_with_nans</span>
+<span id="cb39-3"><a href></a>dataset</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="21">
 <div>
 <style scoped>
@@ -2655,8 +2494,8 @@ text-align: right;
 <ul>
 <li>You will see that <code>pandas</code> will handle <code>NaN</code> values differently: it will <span class="alert">ignore them</span></li>
 </ul>
-<div id="eb16cac3" class="cell" data-execution_count="23">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href></a><span class="bu">print</span>(dataset[<span class="st">&quot;x&quot;</span>].mean())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="6de2e33c" class="cell" data-execution_count="24">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href></a><span class="bu">print</span>(dataset[<span class="st">&quot;x&quot;</span>].mean())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>4.5</code></pre>
 </div>
@@ -2692,8 +2531,8 @@ text-align: right;
 <li>We use the command <code>dtypes</code> for that</li>
 <li><code>object</code> means that the variable is a string or a variable with mixed types (e.g., numbers and strings)</li>
 </ul>
-<div id="f953aba0" class="cell" data-execution_count="24">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href></a>circuits.dtypes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="c928143c" class="cell" data-execution_count="25">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href></a>circuits.dtypes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
 <pre><code>circuitId       int64
 circuitRef        str
@@ -2730,9 +2569,9 @@ dtype: object</code></pre>
 <li>If you use <code>R</code>, this is similar to the <code>%&gt;%</code> operator in <code>dplyr</code></li>
 <li>Let’s see it in action:</li>
 </ul>
-<div id="f36772c2" class="cell" data-execution_count="25">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href></a><span class="co"># Check if the variable &quot;alt&quot; is numeric</span></span>
-<span id="cb40-2"><a href></a>circuits[<span class="st">&quot;alt&quot;</span>].<span class="bu">str</span>.isnumeric()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="a902f74d" class="cell" data-execution_count="26">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href></a><span class="co"># Check if the variable &quot;alt&quot; is numeric</span></span>
+<span id="cb44-2"><a href></a>circuits[<span class="st">&quot;alt&quot;</span>].<span class="bu">str</span>.isnumeric()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
 <pre><code>0      True
 1      True
@@ -2756,10 +2595,10 @@ Name: alt, Length: 77, dtype: bool</code></pre>
 <div style="margin-top: 30px; font-size: 25px;">
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="ca936643" class="cell" data-execution_count="26">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href></a><span class="co"># Check if the variable </span></span>
-<span id="cb42-2"><a href></a><span class="co"># &quot;circuitRef&quot; is numeric</span></span>
-<span id="cb42-3"><a href></a>circuits[<span class="st">&quot;circuitRef&quot;</span>].<span class="bu">str</span>.isnumeric()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="189234a1" class="cell" data-execution_count="27">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href></a><span class="co"># Check if the variable </span></span>
+<span id="cb46-2"><a href></a><span class="co"># &quot;circuitRef&quot; is numeric</span></span>
+<span id="cb46-3"><a href></a>circuits[<span class="st">&quot;circuitRef&quot;</span>].<span class="bu">str</span>.isnumeric()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="25">
 <pre><code>0     False
 1     False
@@ -2776,10 +2615,10 @@ Name: circuitRef, Length: 77, dtype: bool</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="c4edfa3b" class="cell" data-execution_count="27">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href></a><span class="co"># Convert the variable </span></span>
-<span id="cb44-2"><a href></a><span class="co"># `location` to lowercase</span></span>
-<span id="cb44-3"><a href></a>circuits[<span class="st">&quot;location&quot;</span>].<span class="bu">str</span>.lower()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="3ac9833b" class="cell" data-execution_count="28">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href></a><span class="co"># Convert the variable </span></span>
+<span id="cb48-2"><a href></a><span class="co"># `location` to lowercase</span></span>
+<span id="cb48-3"><a href></a>circuits[<span class="st">&quot;location&quot;</span>].<span class="bu">str</span>.lower()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="26">
 <pre><code>0        melbourne
 1     kuala lumpur
@@ -2805,11 +2644,11 @@ Name: location, Length: 77, dtype: str</code></pre>
 <li><span class="alert"><code>query()</code></span> is a pandas DataFrame method that lets us <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.query.html">reference subattributes of a column</a> (we’ll see more of it later)</li>
 <li>Combined with <span class="alert"><code>pd.unique()</code></span> (which returns the unique values of a column), we can extract every non-numeric value in one go</li>
 </ul>
-<div id="092e3da3" class="cell" data-execution_count="28">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href></a><span class="co"># Keep only the rows where &quot;alt&quot; is NOT numeric, then list the unique values</span></span>
-<span id="cb46-2"><a href></a>subset <span class="op">=</span> circuits.query(<span class="st">&quot;alt.str.isnumeric() == False&quot;</span>)</span>
-<span id="cb46-3"><a href></a>list_unique <span class="op">=</span> pd.unique(subset[<span class="st">&quot;alt&quot;</span>])</span>
-<span id="cb46-4"><a href></a><span class="bu">print</span>(list_unique)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="07433fa3" class="cell" data-execution_count="29">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href></a><span class="co"># Keep only the rows where &quot;alt&quot; is NOT numeric, then list the unique values</span></span>
+<span id="cb50-2"><a href></a>subset <span class="op">=</span> circuits.query(<span class="st">&quot;alt.str.isnumeric() == False&quot;</span>)</span>
+<span id="cb50-3"><a href></a>list_unique <span class="op">=</span> pd.unique(subset[<span class="st">&quot;alt&quot;</span>])</span>
+<span id="cb50-4"><a href></a><span class="bu">print</span>(list_unique)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;StringArray&gt;
 [&#39;\N&#39;, &#39;-7&#39;]
@@ -2826,23 +2665,23 @@ Length: 2, dtype: str</code></pre>
 <li>The syntax is <code>dataframe[&quot;variable&quot;].replace(list_old, list_new)</code></li>
 <li>More information about the function can be found <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.replace.html">here</a></li>
 </ul>
-<div id="5c080063" class="cell" data-execution_count="29">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href></a><span class="co"># &quot;list_old&quot; encodes values we want to change</span></span>
-<span id="cb48-2"><a href></a><span class="co"># From the list_unique, we see that the values we want to change are &#39;\N&#39; and &#39;-7&#39;</span></span>
-<span id="cb48-3"><a href></a><span class="co"># &quot;list_new&quot; encodes the values that will replace the old</span></span>
-<span id="cb48-4"><a href></a>list_old <span class="op">=</span> [<span class="st">&#39;</span><span class="ch">\\</span><span class="st">N&#39;</span>,<span class="st">&#39;-7&#39;</span>]</span>
-<span id="cb48-5"><a href></a>list_new <span class="op">=</span> [np.nan, <span class="op">-</span><span class="dv">7</span>]</span>
-<span id="cb48-6"><a href></a></span>
-<span id="cb48-7"><a href></a><span class="co"># This command replaces the values of the &quot;alt&quot; column</span></span>
-<span id="cb48-8"><a href></a>circuits[<span class="st">&quot;alt&quot;</span>] <span class="op">=</span> circuits[<span class="st">&quot;alt&quot;</span>].replace(list_old, list_new)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="febbb88e" class="cell" data-execution_count="30">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href></a><span class="co"># &quot;list_old&quot; encodes values we want to change</span></span>
+<span id="cb52-2"><a href></a><span class="co"># From the list_unique, we see that the values we want to change are &#39;\N&#39; and &#39;-7&#39;</span></span>
+<span id="cb52-3"><a href></a><span class="co"># &quot;list_new&quot; encodes the values that will replace the old</span></span>
+<span id="cb52-4"><a href></a>list_old <span class="op">=</span> [<span class="st">&#39;</span><span class="ch">\\</span><span class="st">N&#39;</span>,<span class="st">&#39;-7&#39;</span>]</span>
+<span id="cb52-5"><a href></a>list_new <span class="op">=</span> [np.nan, <span class="op">-</span><span class="dv">7</span>]</span>
+<span id="cb52-6"><a href></a></span>
+<span id="cb52-7"><a href></a><span class="co"># This command replaces the values of the &quot;alt&quot; column</span></span>
+<span id="cb52-8"><a href></a>circuits[<span class="st">&quot;alt&quot;</span>] <span class="op">=</span> circuits[<span class="st">&quot;alt&quot;</span>].replace(list_old, list_new)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>After the cleaning process is done, you may want to store the dataset again</li>
 <li>It’s <span class="alert">strongly recommended</span> to do this in a separate file from the original</li>
 <li>Use <code>to_csv()</code> to save the dataset as a <code>.csv</code> file</li>
 </ul>
-<div id="2ef3e322" class="cell" data-execution_count="30">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href></a>circuits.to_csv(<span class="st">&quot;data_clean/circuits_clean.csv&quot;</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="1c9fd82e" class="cell" data-execution_count="31">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href></a>circuits.to_csv(<span class="st">&quot;data_clean/circuits_clean.csv&quot;</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -2887,9 +2726,9 @@ Length: 2, dtype: str</code></pre>
 </ul></li>
 <li>Please remember to <span class="alert">convert the variable to the correct type</span> before recoding</li>
 </ul>
-<div id="b9e87fba" class="cell" data-execution_count="31">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href></a><span class="co"># Check the data type of the &quot;alt&quot; column</span></span>
-<span id="cb50-2"><a href></a>circuits[<span class="st">&quot;alt&quot;</span>].dtype</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="f22a362f" class="cell" data-execution_count="32">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href></a><span class="co"># Check the data type of the &quot;alt&quot; column</span></span>
+<span id="cb54-2"><a href></a>circuits[<span class="st">&quot;alt&quot;</span>].dtype</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="29">
 <pre><code>dtype(&#39;O&#39;)</code></pre>
 </div>
@@ -2898,22 +2737,22 @@ Length: 2, dtype: str</code></pre>
 <ul>
 <li><code>pd.to_numeric()</code> is used to convert a variable to a numeric type</li>
 </ul>
-<div id="12b15f76" class="cell" data-execution_count="32">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href></a><span class="co"># pd.to_numeric() converts </span></span>
-<span id="cb52-2"><a href></a><span class="co"># a column to numeric</span></span>
-<span id="cb52-3"><a href></a><span class="co"># Before you use this option, </span></span>
-<span id="cb52-4"><a href></a><span class="co"># make sure to &quot;clean&quot; the variable</span></span>
-<span id="cb52-5"><a href></a><span class="co"># as we did before by checking what</span></span>
-<span id="cb52-6"><a href></a><span class="co"># the non-numeric values are</span></span>
-<span id="cb52-7"><a href></a>circuits[<span class="st">&quot;alt_numeric&quot;</span>] <span class="op">=</span> pd.to_numeric(circuits[<span class="st">&quot;alt&quot;</span>])</span>
-<span id="cb52-8"><a href></a><span class="bu">print</span>(circuits[<span class="st">&quot;alt_numeric&quot;</span>].mean())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="01c3b607" class="cell" data-execution_count="33">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href></a><span class="co"># pd.to_numeric() converts </span></span>
+<span id="cb56-2"><a href></a><span class="co"># a column to numeric</span></span>
+<span id="cb56-3"><a href></a><span class="co"># Before you use this option, </span></span>
+<span id="cb56-4"><a href></a><span class="co"># make sure to &quot;clean&quot; the variable</span></span>
+<span id="cb56-5"><a href></a><span class="co"># as we did before by checking what</span></span>
+<span id="cb56-6"><a href></a><span class="co"># the non-numeric values are</span></span>
+<span id="cb56-7"><a href></a>circuits[<span class="st">&quot;alt_numeric&quot;</span>] <span class="op">=</span> pd.to_numeric(circuits[<span class="st">&quot;alt&quot;</span>])</span>
+<span id="cb56-8"><a href></a><span class="bu">print</span>(circuits[<span class="st">&quot;alt_numeric&quot;</span>].mean())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>248.1891891891892</code></pre>
 </div>
 </div>
-<div id="6ac9d92a" class="cell" data-execution_count="33">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href></a><span class="bu">print</span>(circuits[<span class="st">&quot;alt_numeric&quot;</span>].<span class="bu">min</span>())</span>
-<span id="cb54-2"><a href></a><span class="bu">print</span>(circuits[<span class="st">&quot;alt_numeric&quot;</span>].<span class="bu">max</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="e965d000" class="cell" data-execution_count="34">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href></a><span class="bu">print</span>(circuits[<span class="st">&quot;alt_numeric&quot;</span>].<span class="bu">min</span>())</span>
+<span id="cb58-2"><a href></a><span class="bu">print</span>(circuits[<span class="st">&quot;alt_numeric&quot;</span>].<span class="bu">max</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>-7.0
 2227.0</code></pre>
@@ -2934,20 +2773,24 @@ Length: 2, dtype: str</code></pre>
 <li>We can use the <code>pd.cut()</code> function to do this</li>
 <li>The syntax is <code>df[&quot;new_variable&quot;] = pd.cut(df[&quot;variable&quot;], bins = [x1, x2, x3], labels = [&quot;A&quot;, &quot;B&quot;])</code></li>
 <li>Where <code>bins</code> are the intervals and <code>labels</code> are the new values</li>
+<li>The argument <code>right = True</code> (the default) means each interval is <span class="alert">right-closed, left-open</span>: <code>(lower, upper]</code>. So <code>bins = [0, 2500, 5000]</code> gives <code>(0, 2500]</code> and <code>(2500, 5000]</code>, and a value of exactly 2500 falls in the first bin
+<ul>
+<li>Heads-up: a value of exactly 0 falls in <span class="alert">no bin</span> and becomes <code>NaN</code>. Use <code>include_lowest = True</code> if you need the lower edge included</li>
+</ul></li>
 <li>More information about the function can be found <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.cut.html">here</a></li>
 </ul>
-<div id="0e74e8d6" class="cell" data-execution_count="34">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href></a><span class="co"># Recode the &quot;alt&quot; variable into an interval</span></span>
-<span id="cb56-2"><a href></a>bins_x <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">2500</span>, <span class="dv">5000</span>]</span>
-<span id="cb56-3"><a href></a>labels_x <span class="op">=</span> [<span class="st">&quot;Between 0 and 2500&quot;</span>,</span>
-<span id="cb56-4"><a href></a>            <span class="st">&quot;Between 2500 and 5000&quot;</span>]</span>
-<span id="cb56-5"><a href></a></span>
-<span id="cb56-6"><a href></a>circuits[<span class="st">&quot;bins_alt&quot;</span>] <span class="op">=</span> pd.cut(circuits[<span class="st">&quot;alt_numeric&quot;</span>],</span>
-<span id="cb56-7"><a href></a>                              bins <span class="op">=</span> bins_x,</span>
-<span id="cb56-8"><a href></a>                              right <span class="op">=</span> <span class="va">True</span>,</span>
-<span id="cb56-9"><a href></a>                              labels <span class="op">=</span> labels_x)</span>
-<span id="cb56-10"><a href></a>np.random.seed(<span class="dv">1</span>)</span>
-<span id="cb56-11"><a href></a>display(circuits.sample(<span class="dv">5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="8f7b7ff4" class="cell" data-execution_count="35">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href></a><span class="co"># Recode the &quot;alt&quot; variable into an interval</span></span>
+<span id="cb60-2"><a href></a>bins_x <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">2500</span>, <span class="dv">5000</span>]</span>
+<span id="cb60-3"><a href></a>labels_x <span class="op">=</span> [<span class="st">&quot;Between 0 and 2500&quot;</span>,</span>
+<span id="cb60-4"><a href></a>            <span class="st">&quot;Between 2500 and 5000&quot;</span>]</span>
+<span id="cb60-5"><a href></a></span>
+<span id="cb60-6"><a href></a>circuits[<span class="st">&quot;bins_alt&quot;</span>] <span class="op">=</span> pd.cut(circuits[<span class="st">&quot;alt_numeric&quot;</span>],</span>
+<span id="cb60-7"><a href></a>                              bins <span class="op">=</span> bins_x,</span>
+<span id="cb60-8"><a href></a>                              right <span class="op">=</span> <span class="va">True</span>,</span>
+<span id="cb60-9"><a href></a>                              labels <span class="op">=</span> labels_x)</span>
+<span id="cb60-10"><a href></a>np.random.seed(<span class="dv">1</span>)</span>
+<span id="cb60-11"><a href></a>display(circuits.sample(<span class="dv">5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <style scoped>
@@ -3076,12 +2919,12 @@ text-align: right;
 <li>Add a variable to the dataset called <code>has_siblings</code></li>
 <li>Assign True/False to this variable using <code>apply()</code></li>
 </ul>
-<div id="37c7fd74" class="cell" data-execution_count="35">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href></a>fn_has_siblings <span class="op">=</span> <span class="kw">lambda</span> num_siblings: num_siblings <span class="op">&gt;=</span> <span class="dv">1</span></span>
-<span id="cb57-2"><a href></a></span>
-<span id="cb57-3"><a href></a>data[<span class="st">&quot;has_siblings&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;num_adult_siblings&quot;</span>].<span class="bu">apply</span>(fn_has_siblings)</span>
-<span id="cb57-4"><a href></a></span>
-<span id="cb57-5"><a href></a>display(data[[<span class="st">&quot;num_adult_siblings&quot;</span>,<span class="st">&quot;has_siblings&quot;</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="0c2612fd" class="cell" data-execution_count="36">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href></a>fn_has_siblings <span class="op">=</span> <span class="kw">lambda</span> num_siblings: num_siblings <span class="op">&gt;=</span> <span class="dv">1</span></span>
+<span id="cb61-2"><a href></a></span>
+<span id="cb61-3"><a href></a>data[<span class="st">&quot;has_siblings&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;num_adult_siblings&quot;</span>].<span class="bu">apply</span>(fn_has_siblings)</span>
+<span id="cb61-4"><a href></a></span>
+<span id="cb61-5"><a href></a>display(data[[<span class="st">&quot;num_adult_siblings&quot;</span>,<span class="st">&quot;has_siblings&quot;</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <style scoped>
@@ -3148,14 +2991,14 @@ text-align: right;
 <li>Add a variable <code>mpg_above_29</code> which is <code>True/False</code> if <code>mpg</code> <span class="math inline">\(\ge\)</span> 29</li>
 <li>Store the new dataset to <code>data_clean/features.csv</code></li>
 </ul>
-<div id="618a8380" class="cell" data-execution_count="36">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href></a>data_raw <span class="op">=</span> pd.read_csv(<span class="st">&quot;data_raw/features.csv&quot;</span>)</span>
-<span id="cb58-2"><a href></a></span>
-<span id="cb58-3"><a href></a>data_raw[<span class="st">&quot;mpg_above_29&quot;</span>] <span class="op">=</span> data_raw[<span class="st">&quot;mpg&quot;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> mpg: mpg <span class="op">&gt;=</span> <span class="dv">29</span>)</span>
-<span id="cb58-4"><a href></a></span>
-<span id="cb58-5"><a href></a>display(data_raw[[<span class="st">&quot;mpg&quot;</span>,<span class="st">&quot;mpg_above_29&quot;</span>]])</span>
-<span id="cb58-6"><a href></a></span>
-<span id="cb58-7"><a href></a>data_raw.to_csv(<span class="st">&quot;data_clean/features.csv&quot;</span>, index <span class="op">=</span> <span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="a396961b" class="cell" data-execution_count="37">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href></a>data_raw <span class="op">=</span> pd.read_csv(<span class="st">&quot;data_raw/features.csv&quot;</span>)</span>
+<span id="cb62-2"><a href></a></span>
+<span id="cb62-3"><a href></a>data_raw[<span class="st">&quot;mpg_above_29&quot;</span>] <span class="op">=</span> data_raw[<span class="st">&quot;mpg&quot;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> mpg: mpg <span class="op">&gt;=</span> <span class="dv">29</span>)</span>
+<span id="cb62-4"><a href></a></span>
+<span id="cb62-5"><a href></a>display(data_raw[[<span class="st">&quot;mpg&quot;</span>,<span class="st">&quot;mpg_above_29&quot;</span>]])</span>
+<span id="cb62-6"><a href></a></span>
+<span id="cb62-7"><a href></a>data_raw.to_csv(<span class="st">&quot;data_clean/features.csv&quot;</span>, index <span class="op">=</span> <span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <style scoped>
@@ -3251,10 +3094,10 @@ text-align: right;
 <li>Use <code>.replace()</code> with the “country” column</li>
 <li>Replace “UK” with “United Kingdom”</li>
 </ul>
-<div id="0e869f96" class="cell" data-execution_count="37">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href></a><span class="co"># Replace &quot;UK&quot; with &quot;United Kingdom&quot;</span></span>
-<span id="cb59-2"><a href></a>circuits[<span class="st">&quot;country&quot;</span>] <span class="op">=</span> circuits[<span class="st">&quot;country&quot;</span>].replace(<span class="st">&quot;UK&quot;</span>, <span class="st">&quot;United Kingdom&quot;</span>)</span>
-<span id="cb59-3"><a href></a>display(circuits[[<span class="st">&quot;country&quot;</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="9c9ae232" class="cell" data-execution_count="38">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href></a><span class="co"># Replace &quot;UK&quot; with &quot;United Kingdom&quot;</span></span>
+<span id="cb63-2"><a href></a>circuits[<span class="st">&quot;country&quot;</span>] <span class="op">=</span> circuits[<span class="st">&quot;country&quot;</span>].replace(<span class="st">&quot;UK&quot;</span>, <span class="st">&quot;United Kingdom&quot;</span>)</span>
+<span id="cb63-3"><a href></a>display(circuits[[<span class="st">&quot;country&quot;</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <style scoped>
@@ -3334,17 +3177,17 @@ text-align: right;
 <section id="sec:appendix-05" class="slide level2">
 <h2>Appendix 05</h2>
 <div style="margin-top: 30px; font-size: 24px;">
-<div id="1e70f146" class="cell" data-execution_count="38">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href></a><span class="co"># Check the data type of the &quot;lat&quot; column</span></span>
-<span id="cb60-2"><a href></a><span class="bu">print</span>(circuits[<span class="st">&quot;lat&quot;</span>].dtype)</span>
-<span id="cb60-3"><a href></a></span>
-<span id="cb60-4"><a href></a><span class="co"># Check if the variable &quot;lat&quot; is numeric</span></span>
-<span id="cb60-5"><a href></a><span class="co"># print(circuits[&quot;lat&quot;].str.isnumeric())</span></span>
-<span id="cb60-6"><a href></a><span class="co"># It will raise an error because &quot;lat&quot; is a float</span></span>
-<span id="cb60-7"><a href></a></span>
-<span id="cb60-8"><a href></a><span class="co"># Check if the variable &quot;lng&quot; is numeric</span></span>
-<span id="cb60-9"><a href></a><span class="co"># print(circuits[&quot;lng&quot;].str.isnumeric())</span></span>
-<span id="cb60-10"><a href></a><span class="co"># It will also raise an error</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="5fec83da" class="cell" data-execution_count="39">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href></a><span class="co"># Check the data type of the &quot;lat&quot; column</span></span>
+<span id="cb64-2"><a href></a><span class="bu">print</span>(circuits[<span class="st">&quot;lat&quot;</span>].dtype)</span>
+<span id="cb64-3"><a href></a></span>
+<span id="cb64-4"><a href></a><span class="co"># Check if the variable &quot;lat&quot; is numeric</span></span>
+<span id="cb64-5"><a href></a><span class="co"># print(circuits[&quot;lat&quot;].str.isnumeric())</span></span>
+<span id="cb64-6"><a href></a><span class="co"># It will raise an error because &quot;lat&quot; is a float</span></span>
+<span id="cb64-7"><a href></a></span>
+<span id="cb64-8"><a href></a><span class="co"># Check if the variable &quot;lng&quot; is numeric</span></span>
+<span id="cb64-9"><a href></a><span class="co"># print(circuits[&quot;lng&quot;].str.isnumeric())</span></span>
+<span id="cb64-10"><a href></a><span class="co"># It will also raise an error</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>float64</code></pre>
 </div>
@@ -3905,22 +3748,6 @@ window.RevealMenuToolHandlers = {
  ******************************************************************/
 !function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e="undefined"!=typeof globalThis?globalThis:e||self).Multimodal=t()}(this,(function(){"use strict";var e="undefined"!=typeof document?document.currentScript:null;const t=e=>e&&"object"==typeof e&&!Array.isArray(e),n=(e,...s)=>{if(!s.length)return e;const r=s.shift();if(t(e)&&t(r))for(const s in r)t(r[s])?(e[s]||Object.assign(e,{[s]:{}}),n(e[s],r[s])):Object.assign(e,{[s]:r[s]});return n(e,...s)},s=(e,t,n)=>{let s,r=document.querySelector("head"),i=!1;if("script"===t?document.querySelector(`script[src="${e}"]`)?i=!0:(s=document.createElement("script"),s.type="text/javascript",s.src=e):"stylesheet"===t&&(document.querySelector(`link[href="${e}"]`)?i=!0:(s=document.createElement("link"),s.rel="stylesheet",s.href=e)),!i){const e=()=>{"function"==typeof n&&(n.call(),n=null)};s.onload=e,s.onreadystatechange=function(){"loaded"===this.readyState&&e()},r.appendChild(s)}},r=t=>{let n,s=document.querySelector(`script[src$="${t}"]`);return n=s?s.getAttribute("src").slice(0,-1*t.length):("undefined"==typeof document&&"undefined"==typeof location?require("url").pathToFileURL(__filename).href:"undefined"==typeof document?location.href:e&&e.src||new URL("multimodal.js",document.baseURI).href).slice(0,("undefined"==typeof document&&"undefined"==typeof location?require("url").pathToFileURL(__filename).href:"undefined"==typeof document?location.href:e&&e.src||new URL("multimodal.js",document.baseURI).href).lastIndexOf("/")+1),n},i=(e,t=1)=>{const n=1/t;return Math.round(e*n)/n};const l="multimodal",o="mm-body",a="shown",c="show",d="multimodal:show",h="multimodal:shown",u="multimodal:hidden";class m{constructor(e){this.isOpen=!1,this.modalElement=e.getRevealElement().querySelector(`.${l}`),this.modalMax=this.modalElement.querySelector(".mm-max"),this.modalDialog=this.modalElement.querySelector(".mm-dialog"),this.modalBody=this.modalElement.querySelector(`.${o}`),this.modalElement.style.setProperty("display","none"),this.modalElement.setAttribute("aria-hidden","true"),this.eventListeners={},this.presetConfigs={},this.closeButtonHtml="",this.deck=e,this.modalElement.addEventListener("transitionend",(e=>{e.target==this.modalElement&&(this.isOpen?(this.modalElement.classList.add(a),this.trigger(h,"shown")):(this.modalElement.classList.remove(a),this.modalElement.classList.remove(c),this.modalElement.style.setProperty("display","none"),this.trigger(u,"hidden"),this.modalElement.classList.forEach((e=>{e!==l&&e!==c&&e!==a&&"hide"!==e&&"hidden"!==e&&this.modalElement.classList.remove(e)}))))}))}on(e,t){this.eventListeners[e]||(this.eventListeners[e]=[]),this.eventListeners[e].push(t)}trigger(e,t="show",...n){const s=this.eventListeners[e];s&&s.forEach((e=>e(t,...n)));let r={action:t,trigger:this.triggerElement,modal:this.modalElement,dialog:this.modalDialog,body:this.modalDialog.querySelector(`.${o}`),args:n};const i=new CustomEvent(e,{detail:r});this.modalElement.dispatchEvent(i)}show(){this.isOpen=!0,this.modalElement.style.removeProperty("display"),this.modalElement.removeAttribute("aria-hidden"),"0s"===window.getComputedStyle(this.modalElement).getPropertyValue("transition-duration")?(this.modalElement.classList.add(c),this.trigger(d,"show"),this.modalElement.classList.add(a),this.trigger(h,"shown")):setTimeout((()=>{this.modalElement.classList.add(c),this.trigger(d,"show")}),10)}hide(){this.isOpen=!1,this.trigger("multimodal:hide","hide"),this.modalElement.setAttribute("aria-hidden","true"),"0s"===window.getComputedStyle(this.modalElement).getPropertyValue("transition-duration")?(this.modalElement.classList.remove(a),this.modalElement.classList.remove(c),this.modalElement.style.setProperty("display","none"),this.trigger(u,"hide")):this.modalElement.classList.remove(c)}setContent(e,t){let n=e;"html"==t&&(n=`<div class="mm-body"><div class="mm-scrollbody">${e}</div></div>`),this.modalDialog.innerHTML=this.closeButtonHtml+n}}let p=!1;if("undefined"!=typeof window){const e={get passive(){p=!0}};window.addEventListener("testPassive",null,e),window.removeEventListener("testPassive",null,e)}const g="undefined"!=typeof window&&window.navigator&&window.navigator.platform&&(/iP(ad|hone|od)/.test(window.navigator.platform)||"MacIntel"===window.navigator.platform&&window.navigator.maxTouchPoints>1);let f,k,w,x,y=[],b=new Map,v=!1,E=-1;const $=e=>y.some((t=>!(!t.options.allowTouchMove||!t.options.allowTouchMove(e)))),_=e=>{const t=e||window.event;return!!$(t.target)||(t.touches.length>1||(t.preventDefault&&t.preventDefault(),!1))},S=(e,t)=>{if(!e)return void console.error("disableBodyScroll unsuccessful - targetElement must be provided when calling disableBodyScroll on IOS devices.");if(b.set(e,(null==b?void 0:b.get(e))?(null==b?void 0:b.get(e))+1:1),y.some((t=>t.targetElement===e)))return;const n={targetElement:e,options:t||{}};y=[...y,n],g?window.requestAnimationFrame((()=>{const e=document.documentElement,t=document.body;if(void 0===w){k={...e.style},w={...t.style};const{scrollY:n,scrollX:s,innerHeight:r}=window;e.style.height="100%",e.style.overflow="hidden",t.style.position="fixed",t.style.top=-n+"px",t.style.left=-s+"px",t.style.width="100%",t.style.height="auto",t.style.overflow="hidden",setTimeout((()=>window.requestAnimationFrame((()=>{const e=r-window.innerHeight;e&&n>=r&&(t.style.top=-(n+e)+"px")}))),300)}})):(e=>{if(void 0===x){const t=!!e&&!0===e.reserveScrollBarGap,n=window.innerWidth-document.documentElement.getBoundingClientRect().width;if(t&&n>0){const e=parseInt(window.getComputedStyle(document.body).getPropertyValue("padding-right"),10);x=document.body.style.paddingRight,document.body.style.paddingRight=`${e+n}px`}}void 0===f&&(f=document.body.style.overflow,document.body.style.overflow="hidden")})(t),g&&(e.ontouchstart=e=>{1===e.targetTouches.length&&(E=e.targetTouches[0].clientY)},e.ontouchmove=t=>{1===t.targetTouches.length&&((e,t)=>{const n=e.targetTouches[0].clientY-E;!$(e.target)&&(t&&0===t.scrollTop&&n>0||(e=>!!e&&e.scrollHeight-e.scrollTop<=e.clientHeight)(t)&&n<0?_(e):e.stopPropagation())})(t,e)},v||(document.addEventListener("touchmove",_,p?{passive:!1}:void 0),v=!0))},z=e=>{e?(b.set(e,(null==b?void 0:b.get(e))?(null==b?void 0:b.get(e))-1:0),0===(null==b?void 0:b.get(e))&&(y=y.filter((t=>t.targetElement!==e)),null==b||b.delete(e)),g&&(e.ontouchstart=null,e.ontouchmove=null,v&&0===y.length&&(document.removeEventListener("touchmove",_,p?{passive:!1}:void 0),v=!1)),0===y.length&&(g?(()=>{if(void 0!==w){const e=-parseInt(document.body.style.top,10),t=-parseInt(document.body.style.left,10),n=document.documentElement,s=document.body;n.style.height=(null==k?void 0:k.height)||"",n.style.overflow=(null==k?void 0:k.overflow)||"",s.style.position=w.position||"",s.style.top=w.top||"",s.style.left=w.left||"",s.style.width=w.width||"",s.style.height=w.height||"",s.style.overflow=w.overflow||"",window.scrollTo(t,e),w=void 0}})():(void 0!==x&&(document.body.style.paddingRight=x,x=void 0),void 0!==f&&(document.body.style.overflow=f,f=void 0)))):console.error("enableBodyScroll unsuccessful - targetElement must be provided when calling enableBodyScroll on IOS devices.")},T=e=>!!e.getRevealElement().closest(".reveal-scroll"),L=(e,t,n,s,r)=>{let l=(1-e)*t.offsetWidth/n,o=(1-e)*t.offsetHeight/n;if(s.modalElement.style.setProperty("--mm-maxwidth",`${Math.floor(l)}px`),s.modalElement.style.setProperty("--mm-maxheight",`${Math.floor(o)}px`),r.scalecorrection){let e=Math.max(1,1/n);s.modalElement.style.setProperty("--mm-inversescale",i(e,.1));let t=r.borderwidth.match(/(\d*\.?\d+)\s*(\w+)/);if(null!==t){let n=parseFloat(t[1]),r=t[2],l=i(n*e,.5)+r;s.modalElement.style.setProperty("--mm-borderwidth",l)}}};function A(){return{async:!1,baseUrl:null,breaks:!1,extensions:null,gfm:!0,headerIds:!0,headerPrefix:"",highlight:null,hooks:null,langPrefix:"language-",mangle:!0,pedantic:!1,renderer:null,sanitize:!1,sanitizer:null,silent:!1,smartypants:!1,tokenizer:null,walkTokens:null,xhtml:!1}}let R={async:!1,baseUrl:null,breaks:!1,extensions:null,gfm:!0,headerIds:!0,headerPrefix:"",highlight:null,hooks:null,langPrefix:"language-",mangle:!0,pedantic:!1,renderer:null,sanitize:!1,sanitizer:null,silent:!1,smartypants:!1,tokenizer:null,walkTokens:null,xhtml:!1};const P=/[&<>"']/,C=new RegExp(P.source,"g"),I=/[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/,q=new RegExp(I.source,"g"),M={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"},O=e=>M[e];function D(e,t){if(t){if(P.test(e))return e.replace(C,O)}else if(I.test(e))return e.replace(q,O);return e}const B=/&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/gi;function H(e){return e.replace(B,((e,t)=>"colon"===(t=t.toLowerCase())?":":"#"===t.charAt(0)?"x"===t.charAt(1)?String.fromCharCode(parseInt(t.substring(2),16)):String.fromCharCode(+t.substring(1)):""))}const U=/(^|[^\[])\^/g;function Z(e,t){e="string"==typeof e?e:e.source,t=t||"";const n={replace:(t,s)=>(s=(s=s.source||s).replace(U,"$1"),e=e.replace(t,s),n),getRegex:()=>new RegExp(e,t)};return n}const N=/[^\w:]/g,j=/^$|^[a-z][a-z0-9+.-]*:|^[?#]/i;function Q(e,t,n){if(e){let e;try{e=decodeURIComponent(H(n)).replace(N,"").toLowerCase()}catch(e){return null}if(0===e.indexOf("javascript:")||0===e.indexOf("vbscript:")||0===e.indexOf("data:"))return null}t&&!j.test(n)&&(n=function(e,t){F[" "+e]||(W.test(e)?F[" "+e]=e+"/":F[" "+e]=J(e,"/",!0));e=F[" "+e];const n=-1===e.indexOf(":");return"//"===t.substring(0,2)?n?t:e.replace(G,"$1")+t:"/"===t.charAt(0)?n?t:e.replace(V,"$1")+t:e+t}(t,n));try{n=encodeURI(n).replace(/%25/g,"%")}catch(e){return null}return n}const F={},W=/^[^:]+:\/*[^/]*$/,G=/^([^:]+:)[\s\S]*$/,V=/^([^:]+:\/*[^/]*)[\s\S]*$/;const X={exec:function(){}};function Y(e,t){const n=e.replace(/\|/g,((e,t,n)=>{let s=!1,r=t;for(;--r>=0&&"\\"===n[r];)s=!s;return s?"|":" |"})).split(/ \|/);let s=0;if(n[0].trim()||n.shift(),n.length>0&&!n[n.length-1].trim()&&n.pop(),n.length>t)n.splice(t);else for(;n.length<t;)n.push("");for(;s<n.length;s++)n[s]=n[s].trim().replace(/\\\|/g,"|");return n}function J(e,t,n){const s=e.length;if(0===s)return"";let r=0;for(;r<s;){const i=e.charAt(s-r-1);if(i!==t||n){if(i===t||!n)break;r++}else r++}return e.slice(0,s-r)}function K(e,t){if(t<1)return"";let n="";for(;t>1;)1&t&&(n+=e),t>>=1,e+=e;return n+e}function ee(e,t,n,s){const r=t.href,i=t.title?D(t.title):null,l=e[1].replace(/\\([\[\]])/g,"$1");if("!"!==e[0].charAt(0)){s.state.inLink=!0;const e={type:"link",raw:n,href:r,title:i,text:l,tokens:s.inlineTokens(l)};return s.state.inLink=!1,e}return{type:"image",raw:n,href:r,title:i,text:D(l)}}class te{constructor(e){this.options=e||R}space(e){const t=this.rules.block.newline.exec(e);if(t&&t[0].length>0)return{type:"space",raw:t[0]}}code(e){const t=this.rules.block.code.exec(e);if(t){const e=t[0].replace(/^ {1,4}/gm,"");return{type:"code",raw:t[0],codeBlockStyle:"indented",text:this.options.pedantic?e:J(e,"\n")}}}fences(e){const t=this.rules.block.fences.exec(e);if(t){const e=t[0],n=function(e,t){const n=e.match(/^(\s+)(?:```)/);if(null===n)return t;const s=n[1];return t.split("\n").map((e=>{const t=e.match(/^\s+/);if(null===t)return e;const[n]=t;return n.length>=s.length?e.slice(s.length):e})).join("\n")}(e,t[3]||"");return{type:"code",raw:e,lang:t[2]?t[2].trim().replace(this.rules.inline._escapes,"$1"):t[2],text:n}}}heading(e){const t=this.rules.block.heading.exec(e);if(t){let e=t[2].trim();if(/#$/.test(e)){const t=J(e,"#");this.options.pedantic?e=t.trim():t&&!/ $/.test(t)||(e=t.trim())}return{type:"heading",raw:t[0],depth:t[1].length,text:e,tokens:this.lexer.inline(e)}}}hr(e){const t=this.rules.block.hr.exec(e);if(t)return{type:"hr",raw:t[0]}}blockquote(e){const t=this.rules.block.blockquote.exec(e);if(t){const e=t[0].replace(/^ *>[ \t]?/gm,""),n=this.lexer.state.top;this.lexer.state.top=!0;const s=this.lexer.blockTokens(e);return this.lexer.state.top=n,{type:"blockquote",raw:t[0],tokens:s,text:e}}}list(e){let t=this.rules.block.list.exec(e);if(t){let n,s,r,i,l,o,a,c,d,h,u,m,p=t[1].trim();const g=p.length>1,f={type:"list",raw:"",ordered:g,start:g?+p.slice(0,-1):"",loose:!1,items:[]};p=g?`\\d{1,9}\\${p.slice(-1)}`:`\\${p}`,this.options.pedantic&&(p=g?p:"[*+-]");const k=new RegExp(`^( {0,3}${p})((?:[\t ][^\\n]*)?(?:\\n|$))`);for(;e&&(m=!1,t=k.exec(e))&&!this.rules.block.hr.test(e);){if(n=t[0],e=e.substring(n.length),c=t[2].split("\n",1)[0].replace(/^\t+/,(e=>" ".repeat(3*e.length))),d=e.split("\n",1)[0],this.options.pedantic?(i=2,u=c.trimLeft()):(i=t[2].search(/[^ ]/),i=i>4?1:i,u=c.slice(i),i+=t[1].length),o=!1,!c&&/^ *$/.test(d)&&(n+=d+"\n",e=e.substring(d.length+1),m=!0),!m){const t=new RegExp(`^ {0,${Math.min(3,i-1)}}(?:[*+-]|\\d{1,9}[.)])((?:[ \t][^\\n]*)?(?:\\n|$))`),s=new RegExp(`^ {0,${Math.min(3,i-1)}}((?:- *){3,}|(?:_ *){3,}|(?:\\* *){3,})(?:\\n+|$)`),r=new RegExp(`^ {0,${Math.min(3,i-1)}}(?:\`\`\`|~~~)`),l=new RegExp(`^ {0,${Math.min(3,i-1)}}#`);for(;e&&(h=e.split("\n",1)[0],d=h,this.options.pedantic&&(d=d.replace(/^ {1,4}(?=( {4})*[^ ])/g,"  ")),!r.test(d))&&!l.test(d)&&!t.test(d)&&!s.test(e);){if(d.search(/[^ ]/)>=i||!d.trim())u+="\n"+d.slice(i);else{if(o)break;if(c.search(/[^ ]/)>=4)break;if(r.test(c))break;if(l.test(c))break;if(s.test(c))break;u+="\n"+d}o||d.trim()||(o=!0),n+=h+"\n",e=e.substring(h.length+1),c=d.slice(i)}}f.loose||(a?f.loose=!0:/\n *\n *$/.test(n)&&(a=!0)),this.options.gfm&&(s=/^\[[ xX]\] /.exec(u),s&&(r="[ ] "!==s[0],u=u.replace(/^\[[ xX]\] +/,""))),f.items.push({type:"list_item",raw:n,task:!!s,checked:r,loose:!1,text:u}),f.raw+=n}f.items[f.items.length-1].raw=n.trimRight(),f.items[f.items.length-1].text=u.trimRight(),f.raw=f.raw.trimRight();const w=f.items.length;for(l=0;l<w;l++)if(this.lexer.state.top=!1,f.items[l].tokens=this.lexer.blockTokens(f.items[l].text,[]),!f.loose){const e=f.items[l].tokens.filter((e=>"space"===e.type)),t=e.length>0&&e.some((e=>/\n.*\n/.test(e.raw)));f.loose=t}if(f.loose)for(l=0;l<w;l++)f.items[l].loose=!0;return f}}html(e){const t=this.rules.block.html.exec(e);if(t){const e={type:"html",raw:t[0],pre:!this.options.sanitizer&&("pre"===t[1]||"script"===t[1]||"style"===t[1]),text:t[0]};if(this.options.sanitize){const n=this.options.sanitizer?this.options.sanitizer(t[0]):D(t[0]);e.type="paragraph",e.text=n,e.tokens=this.lexer.inline(n)}return e}}def(e){const t=this.rules.block.def.exec(e);if(t){const e=t[1].toLowerCase().replace(/\s+/g," "),n=t[2]?t[2].replace(/^<(.*)>$/,"$1").replace(this.rules.inline._escapes,"$1"):"",s=t[3]?t[3].substring(1,t[3].length-1).replace(this.rules.inline._escapes,"$1"):t[3];return{type:"def",tag:e,raw:t[0],href:n,title:s}}}table(e){const t=this.rules.block.table.exec(e);if(t){const e={type:"table",header:Y(t[1]).map((e=>({text:e}))),align:t[2].replace(/^ *|\| *$/g,"").split(/ *\| */),rows:t[3]&&t[3].trim()?t[3].replace(/\n[ \t]*$/,"").split("\n"):[]};if(e.header.length===e.align.length){e.raw=t[0];let n,s,r,i,l=e.align.length;for(n=0;n<l;n++)/^ *-+: *$/.test(e.align[n])?e.align[n]="right":/^ *:-+: *$/.test(e.align[n])?e.align[n]="center":/^ *:-+ *$/.test(e.align[n])?e.align[n]="left":e.align[n]=null;for(l=e.rows.length,n=0;n<l;n++)e.rows[n]=Y(e.rows[n],e.header.length).map((e=>({text:e})));for(l=e.header.length,s=0;s<l;s++)e.header[s].tokens=this.lexer.inline(e.header[s].text);for(l=e.rows.length,s=0;s<l;s++)for(i=e.rows[s],r=0;r<i.length;r++)i[r].tokens=this.lexer.inline(i[r].text);return e}}}lheading(e){const t=this.rules.block.lheading.exec(e);if(t)return{type:"heading",raw:t[0],depth:"="===t[2].charAt(0)?1:2,text:t[1],tokens:this.lexer.inline(t[1])}}paragraph(e){const t=this.rules.block.paragraph.exec(e);if(t){const e="\n"===t[1].charAt(t[1].length-1)?t[1].slice(0,-1):t[1];return{type:"paragraph",raw:t[0],text:e,tokens:this.lexer.inline(e)}}}text(e){const t=this.rules.block.text.exec(e);if(t)return{type:"text",raw:t[0],text:t[0],tokens:this.lexer.inline(t[0])}}escape(e){const t=this.rules.inline.escape.exec(e);if(t)return{type:"escape",raw:t[0],text:D(t[1])}}tag(e){const t=this.rules.inline.tag.exec(e);if(t)return!this.lexer.state.inLink&&/^<a /i.test(t[0])?this.lexer.state.inLink=!0:this.lexer.state.inLink&&/^<\/a>/i.test(t[0])&&(this.lexer.state.inLink=!1),!this.lexer.state.inRawBlock&&/^<(pre|code|kbd|script)(\s|>)/i.test(t[0])?this.lexer.state.inRawBlock=!0:this.lexer.state.inRawBlock&&/^<\/(pre|code|kbd|script)(\s|>)/i.test(t[0])&&(this.lexer.state.inRawBlock=!1),{type:this.options.sanitize?"text":"html",raw:t[0],inLink:this.lexer.state.inLink,inRawBlock:this.lexer.state.inRawBlock,text:this.options.sanitize?this.options.sanitizer?this.options.sanitizer(t[0]):D(t[0]):t[0]}}link(e){const t=this.rules.inline.link.exec(e);if(t){const e=t[2].trim();if(!this.options.pedantic&&/^</.test(e)){if(!/>$/.test(e))return;const t=J(e.slice(0,-1),"\\");if((e.length-t.length)%2==0)return}else{const e=function(e,t){if(-1===e.indexOf(t[1]))return-1;const n=e.length;let s=0,r=0;for(;r<n;r++)if("\\"===e[r])r++;else if(e[r]===t[0])s++;else if(e[r]===t[1]&&(s--,s<0))return r;return-1}(t[2],"()");if(e>-1){const n=(0===t[0].indexOf("!")?5:4)+t[1].length+e;t[2]=t[2].substring(0,e),t[0]=t[0].substring(0,n).trim(),t[3]=""}}let n=t[2],s="";if(this.options.pedantic){const e=/^([^'"]*[^\s])\s+(['"])(.*)\2/.exec(n);e&&(n=e[1],s=e[3])}else s=t[3]?t[3].slice(1,-1):"";return n=n.trim(),/^</.test(n)&&(n=this.options.pedantic&&!/>$/.test(e)?n.slice(1):n.slice(1,-1)),ee(t,{href:n?n.replace(this.rules.inline._escapes,"$1"):n,title:s?s.replace(this.rules.inline._escapes,"$1"):s},t[0],this.lexer)}}reflink(e,t){let n;if((n=this.rules.inline.reflink.exec(e))||(n=this.rules.inline.nolink.exec(e))){let e=(n[2]||n[1]).replace(/\s+/g," ");if(e=t[e.toLowerCase()],!e){const e=n[0].charAt(0);return{type:"text",raw:e,text:e}}return ee(n,e,n[0],this.lexer)}}emStrong(e,t,n=""){let s=this.rules.inline.emStrong.lDelim.exec(e);if(!s)return;if(s[3]&&n.match(/[\p{L}\p{N}]/u))return;const r=s[1]||s[2]||"";if(!r||r&&(""===n||this.rules.inline.punctuation.exec(n))){const n=s[0].length-1;let r,i,l=n,o=0;const a="*"===s[0][0]?this.rules.inline.emStrong.rDelimAst:this.rules.inline.emStrong.rDelimUnd;for(a.lastIndex=0,t=t.slice(-1*e.length+n);null!=(s=a.exec(t));){if(r=s[1]||s[2]||s[3]||s[4]||s[5]||s[6],!r)continue;if(i=r.length,s[3]||s[4]){l+=i;continue}if((s[5]||s[6])&&n%3&&!((n+i)%3)){o+=i;continue}if(l-=i,l>0)continue;i=Math.min(i,i+l+o);const t=e.slice(0,n+s.index+(s[0].length-r.length)+i);if(Math.min(n,i)%2){const e=t.slice(1,-1);return{type:"em",raw:t,text:e,tokens:this.lexer.inlineTokens(e)}}const a=t.slice(2,-2);return{type:"strong",raw:t,text:a,tokens:this.lexer.inlineTokens(a)}}}}codespan(e){const t=this.rules.inline.code.exec(e);if(t){let e=t[2].replace(/\n/g," ");const n=/[^ ]/.test(e),s=/^ /.test(e)&&/ $/.test(e);return n&&s&&(e=e.substring(1,e.length-1)),e=D(e,!0),{type:"codespan",raw:t[0],text:e}}}br(e){const t=this.rules.inline.br.exec(e);if(t)return{type:"br",raw:t[0]}}del(e){const t=this.rules.inline.del.exec(e);if(t)return{type:"del",raw:t[0],text:t[2],tokens:this.lexer.inlineTokens(t[2])}}autolink(e,t){const n=this.rules.inline.autolink.exec(e);if(n){let e,s;return"@"===n[2]?(e=D(this.options.mangle?t(n[1]):n[1]),s="mailto:"+e):(e=D(n[1]),s=e),{type:"link",raw:n[0],text:e,href:s,tokens:[{type:"text",raw:e,text:e}]}}}url(e,t){let n;if(n=this.rules.inline.url.exec(e)){let e,s;if("@"===n[2])e=D(this.options.mangle?t(n[0]):n[0]),s="mailto:"+e;else{let t;do{t=n[0],n[0]=this.rules.inline._backpedal.exec(n[0])[0]}while(t!==n[0]);e=D(n[0]),s="www."===n[1]?"http://"+n[0]:n[0]}return{type:"link",raw:n[0],text:e,href:s,tokens:[{type:"text",raw:e,text:e}]}}}inlineText(e,t){const n=this.rules.inline.text.exec(e);if(n){let e;return e=this.lexer.state.inRawBlock?this.options.sanitize?this.options.sanitizer?this.options.sanitizer(n[0]):D(n[0]):n[0]:D(this.options.smartypants?t(n[0]):n[0]),{type:"text",raw:n[0],text:e}}}}const ne={newline:/^(?: *(?:\n|$))+/,code:/^( {4}[^\n]+(?:\n(?: *(?:\n|$))*)?)+/,fences:/^ {0,3}(`{3,}(?=[^`\n]*(?:\n|$))|~{3,})([^\n]*)(?:\n|$)(?:|([\s\S]*?)(?:\n|$))(?: {0,3}\1[~`]* *(?=\n|$)|$)/,hr:/^ {0,3}((?:-[\t ]*){3,}|(?:_[ \t]*){3,}|(?:\*[ \t]*){3,})(?:\n+|$)/,heading:/^ {0,3}(#{1,6})(?=\s|$)(.*)(?:\n+|$)/,blockquote:/^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/,list:/^( {0,3}bull)([ \t][^\n]+?)?(?:\n|$)/,html:"^ {0,3}(?:<(script|pre|style|textarea)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)|comment[^\\n]*(\\n+|$)|<\\?[\\s\\S]*?(?:\\?>\\n*|$)|<![A-Z][\\s\\S]*?(?:>\\n*|$)|<!\\[CDATA\\[[\\s\\S]*?(?:\\]\\]>\\n*|$)|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:(?:\\n *)+\\n|$)|<(?!script|pre|style|textarea)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n *)+\\n|$)|</(?!script|pre|style|textarea)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n *)+\\n|$))",def:/^ {0,3}\[(label)\]: *(?:\n *)?([^<\s][^\s]*|<.*?>)(?:(?: +(?:\n *)?| *\n *)(title))? *(?:\n+|$)/,table:X,lheading:/^((?:.|\n(?!\n))+?)\n {0,3}(=+|-+) *(?:\n+|$)/,_paragraph:/^([^\n]+(?:\n(?!hr|heading|lheading|blockquote|fences|list|html|table| +\n)[^\n]+)*)/,text:/^[^\n]+/,_label:/(?!\s*\])(?:\\.|[^\[\]\\])+/,_title:/(?:"(?:\\"?|[^"\\])*"|'[^'\n]*(?:\n[^'\n]+)*\n?'|\([^()]*\))/};ne.def=Z(ne.def).replace("label",ne._label).replace("title",ne._title).getRegex(),ne.bullet=/(?:[*+-]|\d{1,9}[.)])/,ne.listItemStart=Z(/^( *)(bull) */).replace("bull",ne.bullet).getRegex(),ne.list=Z(ne.list).replace(/bull/g,ne.bullet).replace("hr","\\n+(?=\\1?(?:(?:- *){3,}|(?:_ *){3,}|(?:\\* *){3,})(?:\\n+|$))").replace("def","\\n+(?="+ne.def.source+")").getRegex(),ne._tag="address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option|p|param|section|source|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul",ne._comment=/<!--(?!-?>)[\s\S]*?(?:-->|$)/,ne.html=Z(ne.html,"i").replace("comment",ne._comment).replace("tag",ne._tag).replace("attribute",/ +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex(),ne.paragraph=Z(ne._paragraph).replace("hr",ne.hr).replace("heading"," {0,3}#{1,6} ").replace("|lheading","").replace("|table","").replace("blockquote"," {0,3}>").replace("fences"," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list"," {0,3}(?:[*+-]|1[.)]) ").replace("html","</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag",ne._tag).getRegex(),ne.blockquote=Z(ne.blockquote).replace("paragraph",ne.paragraph).getRegex(),ne.normal={...ne},ne.gfm={...ne.normal,table:"^ *([^\\n ].*\\|.*)\\n {0,3}(?:\\| *)?(:?-+:? *(?:\\| *:?-+:? *)*)(?:\\| *)?(?:\\n((?:(?! *\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)"},ne.gfm.table=Z(ne.gfm.table).replace("hr",ne.hr).replace("heading"," {0,3}#{1,6} ").replace("blockquote"," {0,3}>").replace("code"," {4}[^\\n]").replace("fences"," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list"," {0,3}(?:[*+-]|1[.)]) ").replace("html","</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag",ne._tag).getRegex(),ne.gfm.paragraph=Z(ne._paragraph).replace("hr",ne.hr).replace("heading"," {0,3}#{1,6} ").replace("|lheading","").replace("table",ne.gfm.table).replace("blockquote"," {0,3}>").replace("fences"," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list"," {0,3}(?:[*+-]|1[.)]) ").replace("html","</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag",ne._tag).getRegex(),ne.pedantic={...ne.normal,html:Z("^ *(?:comment *(?:\\n|\\s*$)|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)|<tag(?:\"[^\"]*\"|'[^']*'|\\s[^'\"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))").replace("comment",ne._comment).replace(/tag/g,"(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b)\\w+(?!:|[^\\w\\s@]*@)\\b").getRegex(),def:/^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/,heading:/^(#{1,6})(.*)(?:\n+|$)/,fences:X,lheading:/^(.+?)\n {0,3}(=+|-+) *(?:\n+|$)/,paragraph:Z(ne.normal._paragraph).replace("hr",ne.hr).replace("heading"," *#{1,6} *[^\n]").replace("lheading",ne.lheading).replace("blockquote"," {0,3}>").replace("|fences","").replace("|list","").replace("|html","").getRegex()};const se={escape:/^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/,autolink:/^<(scheme:[^\s\x00-\x1f<>]*|email)>/,url:X,tag:"^comment|^</[a-zA-Z][\\w:-]*\\s*>|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>|^<\\?[\\s\\S]*?\\?>|^<![a-zA-Z]+\\s[\\s\\S]*?>|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>",link:/^!?\[(label)\]\(\s*(href)(?:\s+(title))?\s*\)/,reflink:/^!?\[(label)\]\[(ref)\]/,nolink:/^!?\[(ref)\](?:\[\])?/,reflinkSearch:"reflink|nolink(?!\\()",emStrong:{lDelim:/^(?:\*+(?:([punct_])|[^\s*]))|^_+(?:([punct*])|([^\s_]))/,rDelimAst:/^(?:[^_*\\]|\\.)*?\_\_(?:[^_*\\]|\\.)*?\*(?:[^_*\\]|\\.)*?(?=\_\_)|(?:[^*\\]|\\.)+(?=[^*])|[punct_](\*+)(?=[\s]|$)|(?:[^punct*_\s\\]|\\.)(\*+)(?=[punct_\s]|$)|[punct_\s](\*+)(?=[^punct*_\s])|[\s](\*+)(?=[punct_])|[punct_](\*+)(?=[punct_])|(?:[^punct*_\s\\]|\\.)(\*+)(?=[^punct*_\s])/,rDelimUnd:/^(?:[^_*\\]|\\.)*?\*\*(?:[^_*\\]|\\.)*?\_(?:[^_*\\]|\\.)*?(?=\*\*)|(?:[^_\\]|\\.)+(?=[^_])|[punct*](\_+)(?=[\s]|$)|(?:[^punct*_\s\\]|\\.)(\_+)(?=[punct*\s]|$)|[punct*\s](\_+)(?=[^punct*_\s])|[\s](\_+)(?=[punct*])|[punct*](\_+)(?=[punct*])/},code:/^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/,br:/^( {2,}|\\)\n(?!\s*$)/,del:X,text:/^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*_]|\b_|$)|[^ ](?= {2,}\n)))/,punctuation:/^([\spunctuation])/};function re(e){return e.replace(/---/g,"—").replace(/--/g,"–").replace(/(^|[-\u2014/(\[{"\s])'/g,"$1‘").replace(/'/g,"’").replace(/(^|[-\u2014/(\[{\u2018\s])"/g,"$1“").replace(/"/g,"”").replace(/\.{3}/g,"…")}function ie(e){let t,n,s="";const r=e.length;for(t=0;t<r;t++)n=e.charCodeAt(t),Math.random()>.5&&(n="x"+n.toString(16)),s+="&#"+n+";";return s}se._punctuation="!\"#$%&'()+\\-.,/:;<=>?@\\[\\]`^{|}~",se.punctuation=Z(se.punctuation).replace(/punctuation/g,se._punctuation).getRegex(),se.blockSkip=/\[[^\]]*?\]\([^\)]*?\)|`[^`]*?`|<[^>]*?>/g,se.escapedEmSt=/(?:^|[^\\])(?:\\\\)*\\[*_]/g,se._comment=Z(ne._comment).replace("(?:--\x3e|$)","--\x3e").getRegex(),se.emStrong.lDelim=Z(se.emStrong.lDelim).replace(/punct/g,se._punctuation).getRegex(),se.emStrong.rDelimAst=Z(se.emStrong.rDelimAst,"g").replace(/punct/g,se._punctuation).getRegex(),se.emStrong.rDelimUnd=Z(se.emStrong.rDelimUnd,"g").replace(/punct/g,se._punctuation).getRegex(),se._escapes=/\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/g,se._scheme=/[a-zA-Z][a-zA-Z0-9+.-]{1,31}/,se._email=/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/,se.autolink=Z(se.autolink).replace("scheme",se._scheme).replace("email",se._email).getRegex(),se._attribute=/\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/,se.tag=Z(se.tag).replace("comment",se._comment).replace("attribute",se._attribute).getRegex(),se._label=/(?:\[(?:\\.|[^\[\]\\])*\]|\\.|`[^`]*`|[^\[\]\\`])*?/,se._href=/<(?:\\.|[^\n<>\\])+>|[^\s\x00-\x1f]*/,se._title=/"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)/,se.link=Z(se.link).replace("label",se._label).replace("href",se._href).replace("title",se._title).getRegex(),se.reflink=Z(se.reflink).replace("label",se._label).replace("ref",ne._label).getRegex(),se.nolink=Z(se.nolink).replace("ref",ne._label).getRegex(),se.reflinkSearch=Z(se.reflinkSearch,"g").replace("reflink",se.reflink).replace("nolink",se.nolink).getRegex(),se.normal={...se},se.pedantic={...se.normal,strong:{start:/^__|\*\*/,middle:/^__(?=\S)([\s\S]*?\S)__(?!_)|^\*\*(?=\S)([\s\S]*?\S)\*\*(?!\*)/,endAst:/\*\*(?!\*)/g,endUnd:/__(?!_)/g},em:{start:/^_|\*/,middle:/^()\*(?=\S)([\s\S]*?\S)\*(?!\*)|^_(?=\S)([\s\S]*?\S)_(?!_)/,endAst:/\*(?!\*)/g,endUnd:/_(?!_)/g},link:Z(/^!?\[(label)\]\((.*?)\)/).replace("label",se._label).getRegex(),reflink:Z(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace("label",se._label).getRegex()},se.gfm={...se.normal,escape:Z(se.escape).replace("])","~|])").getRegex(),_extended_email:/[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![-_])/,url:/^((?:ftp|https?):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/,_backpedal:/(?:[^?!.,:;*_'"~()&]+|\([^)]*\)|&(?![a-zA-Z0-9]+;$)|[?!.,:;*_'"~)]+(?!$))+/,del:/^(~~?)(?=[^\s~])([\s\S]*?[^\s~])\1(?=[^~]|$)/,text:/^([`~]+|[^`~])(?:(?= {2,}\n)|(?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)|[\s\S]*?(?:(?=[\\<!\[`*~_]|\b_|https?:\/\/|ftp:\/\/|www\.|$)|[^ ](?= {2,}\n)|[^a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-](?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)))/},se.gfm.url=Z(se.gfm.url,"i").replace("email",se.gfm._extended_email).getRegex(),se.breaks={...se.gfm,br:Z(se.br).replace("{2,}","*").getRegex(),text:Z(se.gfm.text).replace("\\b_","\\b_| {2,}\\n").replace(/\{2,\}/g,"*").getRegex()};class le{constructor(e){this.tokens=[],this.tokens.links=Object.create(null),this.options=e||R,this.options.tokenizer=this.options.tokenizer||new te,this.tokenizer=this.options.tokenizer,this.tokenizer.options=this.options,this.tokenizer.lexer=this,this.inlineQueue=[],this.state={inLink:!1,inRawBlock:!1,top:!0};const t={block:ne.normal,inline:se.normal};this.options.pedantic?(t.block=ne.pedantic,t.inline=se.pedantic):this.options.gfm&&(t.block=ne.gfm,this.options.breaks?t.inline=se.breaks:t.inline=se.gfm),this.tokenizer.rules=t}static get rules(){return{block:ne,inline:se}}static lex(e,t){return new le(t).lex(e)}static lexInline(e,t){return new le(t).inlineTokens(e)}lex(e){let t;for(e=e.replace(/\r\n|\r/g,"\n"),this.blockTokens(e,this.tokens);t=this.inlineQueue.shift();)this.inlineTokens(t.src,t.tokens);return this.tokens}blockTokens(e,t=[]){let n,s,r,i;for(e=this.options.pedantic?e.replace(/\t/g,"    ").replace(/^ +$/gm,""):e.replace(/^( *)(\t+)/gm,((e,t,n)=>t+"    ".repeat(n.length)));e;)if(!(this.options.extensions&&this.options.extensions.block&&this.options.extensions.block.some((s=>!!(n=s.call({lexer:this},e,t))&&(e=e.substring(n.raw.length),t.push(n),!0)))))if(n=this.tokenizer.space(e))e=e.substring(n.raw.length),1===n.raw.length&&t.length>0?t[t.length-1].raw+="\n":t.push(n);else if(n=this.tokenizer.code(e))e=e.substring(n.raw.length),s=t[t.length-1],!s||"paragraph"!==s.type&&"text"!==s.type?t.push(n):(s.raw+="\n"+n.raw,s.text+="\n"+n.text,this.inlineQueue[this.inlineQueue.length-1].src=s.text);else if(n=this.tokenizer.fences(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.heading(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.hr(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.blockquote(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.list(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.html(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.def(e))e=e.substring(n.raw.length),s=t[t.length-1],!s||"paragraph"!==s.type&&"text"!==s.type?this.tokens.links[n.tag]||(this.tokens.links[n.tag]={href:n.href,title:n.title}):(s.raw+="\n"+n.raw,s.text+="\n"+n.raw,this.inlineQueue[this.inlineQueue.length-1].src=s.text);else if(n=this.tokenizer.table(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.lheading(e))e=e.substring(n.raw.length),t.push(n);else{if(r=e,this.options.extensions&&this.options.extensions.startBlock){let t=1/0;const n=e.slice(1);let s;this.options.extensions.startBlock.forEach((function(e){s=e.call({lexer:this},n),"number"==typeof s&&s>=0&&(t=Math.min(t,s))})),t<1/0&&t>=0&&(r=e.substring(0,t+1))}if(this.state.top&&(n=this.tokenizer.paragraph(r)))s=t[t.length-1],i&&"paragraph"===s.type?(s.raw+="\n"+n.raw,s.text+="\n"+n.text,this.inlineQueue.pop(),this.inlineQueue[this.inlineQueue.length-1].src=s.text):t.push(n),i=r.length!==e.length,e=e.substring(n.raw.length);else if(n=this.tokenizer.text(e))e=e.substring(n.raw.length),s=t[t.length-1],s&&"text"===s.type?(s.raw+="\n"+n.raw,s.text+="\n"+n.text,this.inlineQueue.pop(),this.inlineQueue[this.inlineQueue.length-1].src=s.text):t.push(n);else if(e){const t="Infinite loop on byte: "+e.charCodeAt(0);if(this.options.silent){console.error(t);break}throw new Error(t)}}return this.state.top=!0,t}inline(e,t=[]){return this.inlineQueue.push({src:e,tokens:t}),t}inlineTokens(e,t=[]){let n,s,r,i,l,o,a=e;if(this.tokens.links){const e=Object.keys(this.tokens.links);if(e.length>0)for(;null!=(i=this.tokenizer.rules.inline.reflinkSearch.exec(a));)e.includes(i[0].slice(i[0].lastIndexOf("[")+1,-1))&&(a=a.slice(0,i.index)+"["+K("a",i[0].length-2)+"]"+a.slice(this.tokenizer.rules.inline.reflinkSearch.lastIndex))}for(;null!=(i=this.tokenizer.rules.inline.blockSkip.exec(a));)a=a.slice(0,i.index)+"["+K("a",i[0].length-2)+"]"+a.slice(this.tokenizer.rules.inline.blockSkip.lastIndex);for(;null!=(i=this.tokenizer.rules.inline.escapedEmSt.exec(a));)a=a.slice(0,i.index+i[0].length-2)+"++"+a.slice(this.tokenizer.rules.inline.escapedEmSt.lastIndex),this.tokenizer.rules.inline.escapedEmSt.lastIndex--;for(;e;)if(l||(o=""),l=!1,!(this.options.extensions&&this.options.extensions.inline&&this.options.extensions.inline.some((s=>!!(n=s.call({lexer:this},e,t))&&(e=e.substring(n.raw.length),t.push(n),!0)))))if(n=this.tokenizer.escape(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.tag(e))e=e.substring(n.raw.length),s=t[t.length-1],s&&"text"===n.type&&"text"===s.type?(s.raw+=n.raw,s.text+=n.text):t.push(n);else if(n=this.tokenizer.link(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.reflink(e,this.tokens.links))e=e.substring(n.raw.length),s=t[t.length-1],s&&"text"===n.type&&"text"===s.type?(s.raw+=n.raw,s.text+=n.text):t.push(n);else if(n=this.tokenizer.emStrong(e,a,o))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.codespan(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.br(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.del(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.autolink(e,ie))e=e.substring(n.raw.length),t.push(n);else if(this.state.inLink||!(n=this.tokenizer.url(e,ie))){if(r=e,this.options.extensions&&this.options.extensions.startInline){let t=1/0;const n=e.slice(1);let s;this.options.extensions.startInline.forEach((function(e){s=e.call({lexer:this},n),"number"==typeof s&&s>=0&&(t=Math.min(t,s))})),t<1/0&&t>=0&&(r=e.substring(0,t+1))}if(n=this.tokenizer.inlineText(r,re))e=e.substring(n.raw.length),"_"!==n.raw.slice(-1)&&(o=n.raw.slice(-1)),l=!0,s=t[t.length-1],s&&"text"===s.type?(s.raw+=n.raw,s.text+=n.text):t.push(n);else if(e){const t="Infinite loop on byte: "+e.charCodeAt(0);if(this.options.silent){console.error(t);break}throw new Error(t)}}else e=e.substring(n.raw.length),t.push(n);return t}}class oe{constructor(e){this.options=e||R}code(e,t,n){const s=(t||"").match(/\S*/)[0];if(this.options.highlight){const t=this.options.highlight(e,s);null!=t&&t!==e&&(n=!0,e=t)}return e=e.replace(/\n$/,"")+"\n",s?'<pre><code class="'+this.options.langPrefix+D(s)+'">'+(n?e:D(e,!0))+"</code></pre>\n":"<pre><code>"+(n?e:D(e,!0))+"</code></pre>\n"}blockquote(e){return`<blockquote>\n${e}</blockquote>\n`}html(e){return e}heading(e,t,n,s){if(this.options.headerIds){return`<h${t} id="${this.options.headerPrefix+s.slug(n)}">${e}</h${t}>\n`}return`<h${t}>${e}</h${t}>\n`}hr(){return this.options.xhtml?"<hr/>\n":"<hr>\n"}list(e,t,n){const s=t?"ol":"ul";return"<"+s+(t&&1!==n?' start="'+n+'"':"")+">\n"+e+"</"+s+">\n"}listitem(e){return`<li>${e}</li>\n`}checkbox(e){return"<input "+(e?'checked="" ':"")+'disabled="" type="checkbox"'+(this.options.xhtml?" /":"")+"> "}paragraph(e){return`<p>${e}</p>\n`}table(e,t){return t&&(t=`<tbody>${t}</tbody>`),"<table>\n<thead>\n"+e+"</thead>\n"+t+"</table>\n"}tablerow(e){return`<tr>\n${e}</tr>\n`}tablecell(e,t){const n=t.header?"th":"td";return(t.align?`<${n} align="${t.align}">`:`<${n}>`)+e+`</${n}>\n`}strong(e){return`<strong>${e}</strong>`}em(e){return`<em>${e}</em>`}codespan(e){return`<code>${e}</code>`}br(){return this.options.xhtml?"<br/>":"<br>"}del(e){return`<del>${e}</del>`}link(e,t,n){if(null===(e=Q(this.options.sanitize,this.options.baseUrl,e)))return n;let s='<a href="'+e+'"';return t&&(s+=' title="'+t+'"'),s+=">"+n+"</a>",s}image(e,t,n){if(null===(e=Q(this.options.sanitize,this.options.baseUrl,e)))return n;let s=`<img src="${e}" alt="${n}"`;return t&&(s+=` title="${t}"`),s+=this.options.xhtml?"/>":">",s}text(e){return e}}class ae{strong(e){return e}em(e){return e}codespan(e){return e}del(e){return e}html(e){return e}text(e){return e}link(e,t,n){return""+n}image(e,t,n){return""+n}br(){return""}}class ce{constructor(){this.seen={}}serialize(e){return e.toLowerCase().trim().replace(/<[!\/a-z].*?>/gi,"").replace(/[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g,"").replace(/\s/g,"-")}getNextSafeSlug(e,t){let n=e,s=0;if(this.seen.hasOwnProperty(n)){s=this.seen[e];do{s++,n=e+"-"+s}while(this.seen.hasOwnProperty(n))}return t||(this.seen[e]=s,this.seen[n]=0),n}slug(e,t={}){const n=this.serialize(e);return this.getNextSafeSlug(n,t.dryrun)}}class de{constructor(e){this.options=e||R,this.options.renderer=this.options.renderer||new oe,this.renderer=this.options.renderer,this.renderer.options=this.options,this.textRenderer=new ae,this.slugger=new ce}static parse(e,t){return new de(t).parse(e)}static parseInline(e,t){return new de(t).parseInline(e)}parse(e,t=!0){let n,s,r,i,l,o,a,c,d,h,u,m,p,g,f,k,w,x,y,b="";const v=e.length;for(n=0;n<v;n++)if(h=e[n],this.options.extensions&&this.options.extensions.renderers&&this.options.extensions.renderers[h.type]&&(y=this.options.extensions.renderers[h.type].call({parser:this},h),!1!==y||!["space","hr","heading","code","table","blockquote","list","html","paragraph","text"].includes(h.type)))b+=y||"";else switch(h.type){case"space":continue;case"hr":b+=this.renderer.hr();continue;case"heading":b+=this.renderer.heading(this.parseInline(h.tokens),h.depth,H(this.parseInline(h.tokens,this.textRenderer)),this.slugger);continue;case"code":b+=this.renderer.code(h.text,h.lang,h.escaped);continue;case"table":for(c="",a="",i=h.header.length,s=0;s<i;s++)a+=this.renderer.tablecell(this.parseInline(h.header[s].tokens),{header:!0,align:h.align[s]});for(c+=this.renderer.tablerow(a),d="",i=h.rows.length,s=0;s<i;s++){for(o=h.rows[s],a="",l=o.length,r=0;r<l;r++)a+=this.renderer.tablecell(this.parseInline(o[r].tokens),{header:!1,align:h.align[r]});d+=this.renderer.tablerow(a)}b+=this.renderer.table(c,d);continue;case"blockquote":d=this.parse(h.tokens),b+=this.renderer.blockquote(d);continue;case"list":for(u=h.ordered,m=h.start,p=h.loose,i=h.items.length,d="",s=0;s<i;s++)f=h.items[s],k=f.checked,w=f.task,g="",f.task&&(x=this.renderer.checkbox(k),p?f.tokens.length>0&&"paragraph"===f.tokens[0].type?(f.tokens[0].text=x+" "+f.tokens[0].text,f.tokens[0].tokens&&f.tokens[0].tokens.length>0&&"text"===f.tokens[0].tokens[0].type&&(f.tokens[0].tokens[0].text=x+" "+f.tokens[0].tokens[0].text)):f.tokens.unshift({type:"text",text:x}):g+=x),g+=this.parse(f.tokens,p),d+=this.renderer.listitem(g,w,k);b+=this.renderer.list(d,u,m);continue;case"html":b+=this.renderer.html(h.text);continue;case"paragraph":b+=this.renderer.paragraph(this.parseInline(h.tokens));continue;case"text":for(d=h.tokens?this.parseInline(h.tokens):h.text;n+1<v&&"text"===e[n+1].type;)h=e[++n],d+="\n"+(h.tokens?this.parseInline(h.tokens):h.text);b+=t?this.renderer.paragraph(d):d;continue;default:{const e='Token with "'+h.type+'" type was not found.';if(this.options.silent)return void console.error(e);throw new Error(e)}}return b}parseInline(e,t){t=t||this.renderer;let n,s,r,i="";const l=e.length;for(n=0;n<l;n++)if(s=e[n],this.options.extensions&&this.options.extensions.renderers&&this.options.extensions.renderers[s.type]&&(r=this.options.extensions.renderers[s.type].call({parser:this},s),!1!==r||!["escape","html","link","image","strong","em","codespan","br","del","text"].includes(s.type)))i+=r||"";else switch(s.type){case"escape":case"text":i+=t.text(s.text);break;case"html":i+=t.html(s.text);break;case"link":i+=t.link(s.href,s.title,this.parseInline(s.tokens,t));break;case"image":i+=t.image(s.href,s.title,s.text);break;case"strong":i+=t.strong(this.parseInline(s.tokens,t));break;case"em":i+=t.em(this.parseInline(s.tokens,t));break;case"codespan":i+=t.codespan(s.text);break;case"br":i+=t.br();break;case"del":i+=t.del(this.parseInline(s.tokens,t));break;default:{const e='Token with "'+s.type+'" type was not found.';if(this.options.silent)return void console.error(e);throw new Error(e)}}return i}}class he{constructor(e){this.options=e||R}static passThroughHooks=new Set(["preprocess","postprocess"]);preprocess(e){return e}postprocess(e){return e}}function ue(e,t){return(n,s,r)=>{"function"==typeof s&&(r=s,s=null);const i={...s},l=function(e,t,n){return s=>{if(s.message+="\nPlease report this to https://github.com/markedjs/marked.",e){const e="<p>An error occurred:</p><pre>"+D(s.message+"",!0)+"</pre>";return t?Promise.resolve(e):n?void n(null,e):e}if(t)return Promise.reject(s);if(!n)throw s;n(s)}}((s={...me.defaults,...i}).silent,s.async,r);if(null==n)return l(new Error("marked(): input parameter is undefined or null"));if("string"!=typeof n)return l(new Error("marked(): input parameter is of type "+Object.prototype.toString.call(n)+", string expected"));if(function(e){e&&e.sanitize&&!e.silent&&console.warn("marked(): sanitize and sanitizer parameters are deprecated since version 0.7.0, should not be used and will be removed in the future. Read more here: https://marked.js.org/#/USING_ADVANCED.md#options")}(s),s.hooks&&(s.hooks.options=s),r){const i=s.highlight;let o;try{s.hooks&&(n=s.hooks.preprocess(n)),o=e(n,s)}catch(e){return l(e)}const a=function(e){let n;if(!e)try{s.walkTokens&&me.walkTokens(o,s.walkTokens),n=t(o,s),s.hooks&&(n=s.hooks.postprocess(n))}catch(t){e=t}return s.highlight=i,e?l(e):r(null,n)};if(!i||i.length<3)return a();if(delete s.highlight,!o.length)return a();let c=0;return me.walkTokens(o,(function(e){"code"===e.type&&(c++,setTimeout((()=>{i(e.text,e.lang,(function(t,n){if(t)return a(t);null!=n&&n!==e.text&&(e.text=n,e.escaped=!0),c--,0===c&&a()}))}),0))})),void(0===c&&a())}if(s.async)return Promise.resolve(s.hooks?s.hooks.preprocess(n):n).then((t=>e(t,s))).then((e=>s.walkTokens?Promise.all(me.walkTokens(e,s.walkTokens)).then((()=>e)):e)).then((e=>t(e,s))).then((e=>s.hooks?s.hooks.postprocess(e):e)).catch(l);try{s.hooks&&(n=s.hooks.preprocess(n));const r=e(n,s);s.walkTokens&&me.walkTokens(r,s.walkTokens);let i=t(r,s);return s.hooks&&(i=s.hooks.postprocess(i)),i}catch(e){return l(e)}}}function me(e,t,n){return ue(le.lex,de.parse)(e,t,n)}async function pe(e,t,n,s){const r=e.dataset.modalType,i=e.dataset.modalUrl||e.getAttribute("href")||null;let l,o=n.padding;if(e.dataset.modalOverlaycolor&&e.dataset.modalOverlaycolor!==s.overlaycolor&&t.modalElement.style.setProperty("--mm-overlaycolor",e.dataset.modalOverlaycolor),e.dataset.modalClass&&t.modalElement.classList.add(...e.dataset.modalClass.split(/[ ,]+/)),"html"==r){o=e.dataset.modalPadding||n.padding.html||n.padding,o!==s.padding.html&&t.modalElement.style.setProperty("--mm-modal-padding",o);let r=e.dataset.modalBackground||n.background.html||n.background;r!==s.background.html&&t.modalElement.style.setProperty("--mm-modal-background",r)}else if("iframe"==r){o=e.dataset.modalPadding||n.padding.iframe||n.padding,"0"!==o&&t.modalElement.style.setProperty("--mm-modal-padding",o);let r=e.dataset.modalBgcolor||n.background.iframe||n.background;r!==s.background.iframe&&t.modalElement.style.setProperty("--mm-modal-background",r)}else{o=e.dataset.modalPadding||n.padding.media||n.padding,"0"!==o&&t.modalElement.style.setProperty("--mm-modal-padding",o);let r=e.dataset.modalBackground||n.background.media||n.background;r!==s.background.media&&t.modalElement.style.setProperty("--mm-modal-background",r)}t.triggerElement=e;let a=!1;if("video"===r)l=await async function(e,t,n){try{const s=document.createElement("video");if(s.src=e,s.controls=n.videocontrols,s.preload="metadata",await new Promise(((e,t)=>{s.addEventListener("loadedmetadata",e),s.addEventListener("error",t)})),s.readyState>=0)return s.preload="auto",t.modalElement.dataset.modalType="video",s.classList.add("mm-body"),s.outerHTML;throw new Error("Video metadata cannot be loaded.")}catch(e){return console.error("Error loading video:",e),null}}(i,t,n);else if("image"===r){let n=i&&"#"!=i&&"#/"!=i?i:"IMG"==e.firstChild.tagName?e.firstChild.getAttribute("src"):null,s="IMG"==e.firstChild.tagName?e.firstChild.getAttribute("alt"):null;l=await async function(e,t,n){return new Promise((s=>{const r=new Image;let i="";n&&(i=` alt="${n}"`),r.onload=()=>{t.modalElement.dataset.modalType="image",s(`<img class="mm-body" src="${e}"${i}>`)},r.onerror=()=>{console.error(`Error loading image: ${e}`),s(null)},r.src=e}))}(n,t,s)}else if("html"===r)l=await function(e,t){return new Promise((async(n,s)=>{try{let s;if("string"!=typeof e)throw new Error("Invalid HTML content source. Must be a URL string or an anchor element.");if(e.startsWith("#")){const n=document.querySelector(e);if(!n)throw new Error("Anchor element with specified ID not found.");s="section"===n.firstElementChild.tagName.toLowerCase()?n.firstElementChild.innerHTML:n.innerHTML,t.modalElement.dataset.modalType="html"}else if(e.endsWith(".md")){const n=await fetch(e);if(!n.ok)throw new Error("Failed to fetch MD content.");const r=await n.text();t.modalElement.dataset.modalType="html",s=me(r)}else{if(!e.endsWith(".html"))throw new Error("Unsupported HTML content source.");{const n=await fetch(e);if(!n.ok)throw new Error("Failed to fetch HTML content.");s=await n.text(),t.modalElement.dataset.modalType="html"}}n(s)}catch(e){console.error("Error loading HTML content:",e),s(e)}}))}(i,t);else{if("iframe"!==r)return void console.error("Unknown modal type");l=`<iframe class="mm-body" src="${i}" frameborder="0" allowfullscreen></iframe>`,t.modalElement.dataset.modalType="iframe"}l||(a=!0),a||(t.setContent(l,r),t.show())}me.options=me.setOptions=function(e){var t;return me.defaults={...me.defaults,...e},t=me.defaults,R=t,me},me.getDefaults=A,me.defaults=R,me.use=function(...e){const t=me.defaults.extensions||{renderers:{},childTokens:{}};e.forEach((e=>{const n={...e};if(n.async=me.defaults.async||n.async||!1,e.extensions&&(e.extensions.forEach((e=>{if(!e.name)throw new Error("extension name required");if(e.renderer){const n=t.renderers[e.name];t.renderers[e.name]=n?function(...t){let s=e.renderer.apply(this,t);return!1===s&&(s=n.apply(this,t)),s}:e.renderer}if(e.tokenizer){if(!e.level||"block"!==e.level&&"inline"!==e.level)throw new Error("extension level must be 'block' or 'inline'");t[e.level]?t[e.level].unshift(e.tokenizer):t[e.level]=[e.tokenizer],e.start&&("block"===e.level?t.startBlock?t.startBlock.push(e.start):t.startBlock=[e.start]:"inline"===e.level&&(t.startInline?t.startInline.push(e.start):t.startInline=[e.start]))}e.childTokens&&(t.childTokens[e.name]=e.childTokens)})),n.extensions=t),e.renderer){const t=me.defaults.renderer||new oe;for(const n in e.renderer){const s=t[n];t[n]=(...r)=>{let i=e.renderer[n].apply(t,r);return!1===i&&(i=s.apply(t,r)),i}}n.renderer=t}if(e.tokenizer){const t=me.defaults.tokenizer||new te;for(const n in e.tokenizer){const s=t[n];t[n]=(...r)=>{let i=e.tokenizer[n].apply(t,r);return!1===i&&(i=s.apply(t,r)),i}}n.tokenizer=t}if(e.hooks){const t=me.defaults.hooks||new he;for(const n in e.hooks){const s=t[n];he.passThroughHooks.has(n)?t[n]=r=>{if(me.defaults.async)return Promise.resolve(e.hooks[n].call(t,r)).then((e=>s.call(t,e)));const i=e.hooks[n].call(t,r);return s.call(t,i)}:t[n]=(...r)=>{let i=e.hooks[n].apply(t,r);return!1===i&&(i=s.apply(t,r)),i}}n.hooks=t}if(e.walkTokens){const t=me.defaults.walkTokens;n.walkTokens=function(n){let s=[];return s.push(e.walkTokens.call(this,n)),t&&(s=s.concat(t.call(this,n))),s}}me.setOptions(n)}))},me.walkTokens=function(e,t){let n=[];for(const s of e)switch(n=n.concat(t.call(me,s)),s.type){case"table":for(const e of s.header)n=n.concat(me.walkTokens(e.tokens,t));for(const e of s.rows)for(const s of e)n=n.concat(me.walkTokens(s.tokens,t));break;case"list":n=n.concat(me.walkTokens(s.items,t));break;default:me.defaults.extensions&&me.defaults.extensions.childTokens&&me.defaults.extensions.childTokens[s.type]?me.defaults.extensions.childTokens[s.type].forEach((function(e){n=n.concat(me.walkTokens(s[e],t))})):s.tokens&&(n=n.concat(me.walkTokens(s.tokens,t)))}return n},me.parseInline=ue(le.lexInline,de.parseInline),me.Parser=de,me.parser=de.parse,me.Renderer=oe,me.TextRenderer=ae,me.Lexer=le,me.lexer=le.lex,me.Tokenizer=te,me.Slugger=ce,me.Hooks=he,me.parse=me,me.options,me.setOptions,me.use,me.walkTokens,me.parseInline,de.parse,le.lex;return()=>{let e={};const t=(e,t,n)=>{const s="data-modal-type",r="data-modal-close",i=e.getRevealElement(),l=Array.from(i.querySelectorAll(`[${s}]:not(section)`)),o=e.getConfig().margin,a=e=>{const a=new m(e);((e,t)=>{t.presetConfigs={keyboard:e.getConfig().keyboard,mouseWheel:e.getConfig().mouseWheel,scrollProgress:e.getConfig().scrollProgress}})(e,a),async function(e,t,n){if(""!==t.closebuttonhtml&&(e.closeButtonHtml=t.closebuttonhtml),t.overlaycolor!==n.overlaycolor&&e.modalElement.style.setProperty("--mm-overlaycolor",t.overlaycolor),t.speed!==n.speed){let n=t.speed/1e3;e.modalElement.style.setProperty("--mm-transspeed",`${n}s`)}if(t.htmlminwidth!==n.htmlminwidth){let n=isNaN(t.htmlminwidth)?t.htmlminwidth:`${t.htmlminwidth}px`;e.modalElement.style.setProperty("--mm-minwidth",n)}if(t.htmlminheight!==n.htmlminheight){let n=isNaN(t.htmlminheight)?t.htmlminheight:`${t.htmlminheight}px`;e.modalElement.style.setProperty("--mm-minheight",n)}t.radius!==n.radius&&e.modalElement.style.setProperty("--mm-outerradius",t.radius),t.bordercolor!==n.bordercolor&&e.modalElement.style.setProperty("--mm-bordercolor",t.bordercolor),t.borderwidth!==n.borderwidth&&e.modalElement.style.setProperty("--mm-borderwidth",t.borderwidth),t.shadow!==n.shadow&&e.modalElement.style.setProperty("--mm-shadow",t.shadow),t.zoom?t.zoomfrom!==n.zoomfrom&&e.modalElement.style.setProperty("--mm-initialscale",t.zoomfrom):e.modalElement.style.setProperty("--mm-initialscale",1)}(a,t,n);const c=e=>{"Escape"!==e.key&&27!==e.keyCode||a.isOpen&&a.hide()};a.closeButtonHtml=`<button class="mm-close" type="button" aria-hidden="true" ${r} aria-label="Close"><svg class="offset" viewport="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><g transform="rotate(45 12 12)"><line x1="0" y1="12" x2="24" y2="12"></line><line x1="12" y1="0" x2="12" y2="24"></line></g></svg></button>`;const d=async e=>{e.preventDefault();const s=e.currentTarget;!s.hasAttribute("href")||"#"!==s.getAttribute("href")&&"#/"!==s.getAttribute("href")||e.stopPropagation(),await pe(s,a,t,n)};l.forEach((e=>{e.addEventListener("click",d)}));const h=new MutationObserver((e=>{e.forEach((e=>{"childList"===e.type&&e.addedNodes.forEach((e=>{1===e.nodeType&&e.hasAttribute(s)&&"section"!==e.tagName.toLowerCase()&&e.addEventListener("click",d)}))}))}));e.addEventListener("click",(async e=>{(e.target.closest(`[${r}]`)||e.target.closest('a[href="#multimodal"]'))&&(e.preventDefault(),e.stopPropagation(),a.hide())}));const u=e=>{if(e.dataset.modalType){return e.dataset.modalEvent?e.dataset.modalEvent:t.slidemodalevent}};e.on("slidechanged",(async s=>{a.isOpen&&a.hide(),function(e){let t=e.querySelectorAll("[data-modal-type]");t&&t.forEach((e=>{if("image"==e.dataset.modalType){let t=e.dataset.modalUrl||e.getAttribute("href")||null;t||(t="IMG"==e.firstChild.tagName?e.firstChild.getAttribute("src"):null),t&&((new Image).src=t)}}))}(s.currentSlide),T(e)?s.currentSlide.dataset.modalType&&"slidetransitionend"==t.slidemodalevent&&setTimeout((()=>{e.getCurrentSlide()==s.currentSlide&&pe(s.currentSlide,a,t,n)}),10):u(s.currentSlide)&&"slidechanged"==u(s.currentSlide)&&await pe(s.currentSlide,a,t,n)})),e.on("slidetransitionend",(async e=>{u(e.currentSlide)&&"slidetransitionend"==u(e.currentSlide)&&await pe(e.currentSlide,a,t,n)})),e.on("ready",(async s=>{L(o,i,e.getScale(),a,t),!u(s.currentSlide)||"slidetransitionend"!=u(s.currentSlide)&&"slidechanged"!=u(s.currentSlide)||await pe(s.currentSlide,a,t,n),h.observe(i,{childList:!0,subtree:!0})})),e.on("resize",(e=>{L(o,i,e.scale,a,t)})),a.on("multimodal:show",(()=>{i.classList.add("multimodal-open"),document.addEventListener("keydown",c),a.modalElement.closest(".reveal-scroll")||((e,t)=>{if("video"==t.modalElement.dataset.modalType){const n=t.modalDialog.querySelector("video");n&&e.configure({keyboard:{27:()=>{t.hide()},32:()=>{n.paused?n.play():n.pause()}}})}else e.configure({keyboard:{27:()=>{t.hide()},32:()=>{t.hide()}}})})(e,a);const t=e=>{a.isLocked||e.target!==a.modalElement&&e.target!==a.modalMax||a.hide()};a.modalElement.addEventListener("click",t),a.closeOnClickOutside=t})),a.on("multimodal:shown",(()=>{a.triggerElement&&a.triggerElement.dataset.modalNavblock&&"true"==a.triggerElement.dataset.modalNavblock&&((e,t)=>{t.modalElement&&S(t.modalElement),T(e)||e.configure({keyboard:!1,mouseWheel:!1,scrollProgress:!1}),t.isLocked=!0})(e,a);const n=a.modalDialog.querySelector("video");n&&(t.videoautoplay&&n.play(),t.videoautohide&&n.addEventListener("ended",(()=>{a.hide()})),n.addEventListener("webkitendfullscreen",(function(e){t.debug&&console.log("Exited fullscreen"),a.hide()})))})),a.on("multimodal:hide",(()=>{i.classList.remove("multimodal-open"),a.closeOnClickOutside&&(a.modalElement.removeEventListener("click",a.closeOnClickOutside),a.closeOnClickOutside=null),((e,t)=>{t.modalElement&&z(t.modalElement),T(e)||e.configure({keyboard:t.presetConfigs.keyboard,mouseWheel:t.presetConfigs.mouseWheel,scrollProgress:t.presetConfigs.scrollProgress}),t.isLocked=!1})(e,a),document.removeEventListener("keydown",c);const t=a.modalDialog.querySelector("video");t&&t.pause()})),a.on("multimodal:hidden",(()=>{a.modalBody.innerHTML="";const e=a.modalDialog.querySelector("iframe");e&&(e.src=""),a.modalElement.style.removeProperty("--mm-modal-background"),a.modalElement.style.removeProperty("--mm-overlaycolor"),a.modalElement.style.removeProperty("--mm-modal-padding"),a.modalElement.style.removeProperty("--mm-outerradius")})),t.debug&&(e.on("multimodal:shown",(()=>{console.log("Modal shown")})),e.on("multimodal:hidden",(()=>{console.log("Modal hidden")})),e.on("multimodal:show",(()=>{console.log("Modal show")})),e.on("multimodal:hide",(()=>{console.log("Modal hide")})))};i.querySelector(".multimodal")?a(e):function(e){return new Promise(((t,n)=>{const s='\n      <div class="multimodal" id="multimodal" aria-hidden="true">\n        <div class="mm-max">\n          <div class="mm-dialog">\n            <button class="mm-close" type="button" aria-hidden="true" data-modal-close="true" aria-label="Close"><svg class="offset" viewport="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><g transform="rotate(45 12 12)"><line x1="0" y1="12" x2="24" y2="12"></line><line x1="12" y1="0" x2="12" y2="24"></line></g></svg></button>\n            <div class="mm-body"></div>\n          </div>\n        </div>\n      </div>\n    ';document.createElement("div").innerHTML=s,e.getSlidesElement().insertAdjacentHTML("afterend",s),t()}))}(e).then(a(e))};return{id:"multimodal",init:i=>{let l={background:{html:"var(--r-background-color)",iframe:"var(--r-background-color)",media:"white"},bordercolor:"white",borderwidth:"1px",closebuttonhtml:"",cssautoload:!0,csspath:"",htmlminwidth:"100px",htmlminheight:"100px",overlaycolor:"rgba(0, 0, 0, 0.30)",padding:{html:"1em",iframe:"0",media:"0"},radius:"0.5em",scalecorrection:!0,shadow:"0 0.5em 0.75em 0.5em rgba(0, 0, 0, 0.25)",slidemodalevent:"slidetransitionend",speed:300,videoautoplay:!0,videocontrols:!0,videoautohide:!0,zoom:!0,zoomfrom:.9},o=JSON.parse(JSON.stringify(l));if(e=n(l,i.getConfig().multimodal||{}),e.indexbase=i.getConfig().hashOneBasedIndex?1:0,e.cssautoload){let t=e.csspath.multimodal?e.csspath.multimodal:e.csspath?e.csspath:`${r()}multimodal.css`||"plugin/multimodal/multimodal.css";e.debug&&(console.log(`Plugin path = ${r()}`),console.log(`Multimodal CSS path = ${t}`));const n=document.querySelector("[name=generator]");n&&n.content.includes("quarto")||s(t,"stylesheet")}if(e.debug){let e=document.createElement("style");e.innerHTML=".reveal .slides, .scroll-page-content:has(section.present) { box-shadow: inset 0 0 0 1px orange} .mm-max { box-shadow: inset 0 0 0 1px red}",document.head.appendChild(e)}t(i,e,o)}}}}));
 </script>
-  <script>/*****************************************************************
- *
- * Appearance for Reveal.js 
- * Version 1.3.1
- * 
- * @author: Martijn De Jongh (Martino), martijn.de.jongh@gmail.com
- * https://github.com/martinomagnifico
- *
- * @license 
- * MIT licensed
- * 
- * Copyright (C) 2023 Martijn De Jongh (Martino)
- *
- ******************************************************************/
-!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e="undefined"!=typeof globalThis?globalThis:e||self).Appearance=t()}(this,(function(){"use strict";var e="undefined"!=typeof document?document.currentScript:null;const t=e=>e&&"object"==typeof e&&!Array.isArray(e),a=(e,...n)=>{if(!n.length)return e;const s=n.shift();if(t(e)&&t(s))for(const n in s)t(s[n])?(e[n]||Object.assign(e,{[n]:{}}),a(e[n],s[n])):Object.assign(e,{[n]:s[n]});return a(e,...n)},n=e=>{let t="";return"string"==typeof e&&(e=e.replace(/[“”]/g,'"').replace(/[‘’]/g,"'")),t=(e=>{try{return JSON.parse(e)&&!!e}catch(e){return!1}})(e)?e:"object"==typeof e?JSON.stringify(e,null,2):"{"===e.trim().replace(/'/g,'"').charAt(0)?e.trim().replace(/'/g,'"'):`{${e.trim().replace(/'/g,'"')}}`,t},s=(e,t,a)=>{let n,s=document.querySelector("head");"script"===t?(n=document.createElement("script"),n.type="text/javascript",n.src=e):"stylesheet"===t&&(n=document.createElement("link"),n.rel="stylesheet",n.href=e);const r=()=>{"function"==typeof a&&(a.call(),a=null)};n.onload=r,n.onreadystatechange=function(){"loaded"===this.readyState&&r()},s.appendChild(n)},r=(e,t)=>{e.debug&&console.log(t)},i=(t,a)=>{let n=(t=>{let a,n=document.querySelector(`script[src$="${t}"]`);return a=n?n.getAttribute("src").slice(0,-1*t.length):("undefined"==typeof document&&"undefined"==typeof location?require("url").pathToFileURL(__filename).href:"undefined"==typeof document?location.href:e&&e.src||new URL("appearance.js",document.baseURI).href).slice(0,("undefined"==typeof document&&"undefined"==typeof location?require("url").pathToFileURL(__filename).href:"undefined"==typeof document?location.href:e&&e.src||new URL("appearance.js",document.baseURI).href).lastIndexOf("/")+1),a})(a),r=a.replace(/\.[^/.]+$/,""),i=t.csspath.appearance?t.csspath.appearance:`${n}${r}.css`||`plugin/${r}/${r}.css`,o=t.compatibility?t.animatecsspath.compat:t.animatecsspath.link;t.debug&&(console.log("Paths:"),console.log(`  - Plugin path = ${n}`),console.log(`  - Appearance CSS path = ${i}`),console.log(`  - AnimateCSS CSS path = ${o}`)),s(o,"stylesheet",(function(){s(i,"stylesheet")}))},o=(e,t)=>{let a=e.parentNode;if(a){for(const t of a.children)if(t!==e&&t.dataset.appearParent)return;a.classList=e.classList,(({attributes:e},t,a)=>{[...e].filter((({nodeName:e})=>e.includes("data"))).forEach((({nodeName:e,nodeValue:n})=>{(a&&e!==a||!a)&&t.setAttribute(e,n)}))})(e,a,"data-appear-parent"),a.innerHTML=e.innerHTML,a.classList.add(t)}},l=(e,t,a)=>Array.from(a.querySelectorAll(`.${e}`)).filter((e=>!e.closest(`.${t}`))),c=(e,t,a)=>{const n=[l(t,a,e),...Array.from(e.querySelectorAll(`.${a}`)).map((e=>((e,t,a)=>Array.from(a.querySelectorAll(`.${e}`)).filter((e=>e.closest(`.${t}`)===a)))(t,a,e)))];return!!n.some((e=>e.length>0))&&n},d=(e,t)=>{t.hideagain&&e.from&&e.from.dataset.appearanceCanStart&&e.from.removeAttribute("data-appearance-can-start")},p=(e,t,a)=>{if(t.hideagain){e.from.querySelectorAll(a.animatecss).forEach((e=>{e.classList.remove("animationended")}));let t=e.from.querySelectorAll(".fragment.visible");t&&t.forEach((e=>{e.classList.remove("visible")}))}};return()=>{const e={names:{}};let t={};const s=(e,t,a)=>{r(e,"-------------   Preloading   -------------");let s=t.names;i(e,s.es5Filename),e.compatibility&&(s.animatecss=".backInDown, .backInLeft, .backInRight, .backInUp, .bounceIn, .bounceInDown, .bounceInLeft, .bounceInRight, .bounceInUp, .fadeIn, .fadeInDown, .fadeInDownBig, .fadeInLeft, .fadeInLeftBig, .fadeInRight, .fadeInRightBig, .fadeInUp, .fadeInUpBig, .fadeInTopLeft, .fadeInTopRight, .fadeInBottomLeft, .fadeInBottomRight, .flipInX, .flipInY, .lightSpeedInRight, .lightSpeedInLeft, .rotateIn, .rotateInDownLeft, .rotateInDownRight, .rotateInUpLeft, .rotateInUpRight, .jackInTheBox, .rollIn, .zoomIn, .zoomInDown, .zoomInLeft, .zoomInRight, .zoomInUp, .slideInDown, .slideInLeft, .slideInRight, .slideInUp, .skidLeft, .skidLeftBig, .skidRight, .skidRightBig, .shrinkIn, .shrinkInBlur",s.baseclass=e.compatibilitybaseclass),t.appearances=Array.from(t.slides.querySelectorAll(s.animatecss)),t.regularSections.forEach((a=>((e,t,a)=>{let s=null;if(e.hasAttribute("data-autoappear")){let a=e.dataset.autoappear;s="auto"==a||""==a||a.length<1||"true"==a?t.autoelements?t.autoelements:null:a}else t.autoappear&&t.autoelements&&(s=t.autoelements);if(s){let t=JSON.parse(n(s));Object.entries(t).forEach((([t,n])=>{let s=Array.from(e.querySelectorAll(t)).filter((e=>!a.appearances.includes(e)));s.length&&s.forEach((e=>{a.appearances.push(e);let t=[],s=null,r=!1,i=null,o=null;Array.isArray(n)?(t=n[0].split(/[ ,]+/),s=n[1]):"string"==typeof n?t=n.split(/[ ,]+/):n.constructor===Object&&((n.class||n.animation)&&(t=(n.animation?n.animation:n.class).split(/[ ,]+/)),n.speed&&(r=String(n.speed),r.includes("animate__")||(r=`animate__${r}`)),n.delay&&(s=String(n.delay)),n.split&&(i=String(n.split)),n["container-delay"]&&(o=String(n["container-delay"]))),e.classList.add(...t),r&&e.classList.add(r),s&&(e.dataset.delay=s),i&&(e.dataset.split=i),o&&(e.dataset.containerDelay=o)}))}))}})(a,e,t))),t.appearances.forEach(((t,a)=>{((e,t,a)=>{let n=a.baseclass;e.hasAttribute("data-appear-parent")&&o(e,n),t.appearparents&&e.parentNode&&e.parentNode.tagName&&"SPAN"==e.tagName&&"LI"==e.parentNode.tagName&&String(e.outerHTML).length==String(e.parentNode.innerHTML).length&&o(e)})(t,e,s),((e,t)=>{e.classList.contains(t.baseclass)||e.classList.add(t.baseclass),e.classList.contains(t.fragmentClass)&&e.classList.add("custom")})(t,s),t.hasAttribute("data-split")&&((e,t)=>{let a=!1,n=" ";if("words"==t?a=e.textContent.trim().split(/\s+/):"letters"==t&&(a=e.textContent.trim().split(""),n=""),a){const t=Array.from(e.classList).filter((e=>e.startsWith("animate__"))),s=a.map(((t,a)=>{const n=document.createElement("span");return n.textContent=t," "==t&&(n.textContent=" "),e.dataset.delay&&0!==a&&(n.dataset.delay=e.dataset.delay),e.dataset.containerDelay&&0===a&&(n.dataset.delay=e.dataset.containerDelay),e.classList.forEach((e=>e.startsWith("animate__")&&n.classList.add(e))),n.outerHTML})).join(n);t.forEach((t=>e.classList.remove(t))),e.removeAttribute("data-delay"),e.removeAttribute("data-split"),e.removeAttribute("data-container-delay"),e.innerHTML=s}})(t,t.dataset.split)})),t.regularSections.forEach(((t,a)=>{let n=c(t,s.baseclass,s.fragmentClass);n&&n.forEach((t=>{((e,t,a)=>{let n=0;e.forEach(((e,a)=>{if(0==a&&e.dataset.delay||0!=a){let a=t.delay;e.dataset&&e.dataset.delay&&(a=parseInt(e.dataset.delay)),n+=a,e.style.setProperty("animation-delay",n+"ms"),e.removeAttribute("data-delay")}}))})(t,e)}))})),(e=>{setTimeout(e,0)})(a)},l=function(t,a,n){let i=e.names;return i.baseclass=a.baseclass,i.compatibilitybaseclass=a.compatibilitybaseclass,i.fragmentSelector=".fragment",i.fragmentClass="fragment",i.speedClasses=["slower","slow","fast","faster"],i.speedClasses.push(...i.speedClasses.map((e=>`animate__${e}`))),i.animatecss='[class^="animate__"],[class*=" animate__"]',i.es5Filename=n,i.eventnames=["ready","slidechanged","slidetransitionend","autoanimate","overviewhidden","scrolle"],e.deck=t,e.dom=t.getRevealElement(),e.viewport=t.getViewportElement(),e.slides=t.getSlidesElement(),e.sections=e.slides.querySelectorAll("section"),e.fragments=e.slides.querySelectorAll(i.fragmentSelector),e.regularSections=Array.from(e.sections).filter((e=>!(({childNodes:e})=>{let t=!1;for(let a=0;a<e.length;a++)if("SECTION"==e[a].tagName){t=!0;break}return t})(e))),/receiver/i.test(window.location.search)&&e.viewport.classList.add("sv"),i.eventnames.forEach((n=>t.on(n,(t=>{((e,t,a,n)=>{let s=n.deck.getConfig().view,r=e.type,i=(e=>{let t={};return t.from=e.fromSlide||e.previousSlide||null,t.to=e.toSlide||e.currentSlide||null,t})(e);if(i.to){"ready"==r&&(i.to.dataset.appearanceCanStart=!0);let n=((e,t)=>(e.dataset.appearevent&&"auto"===e.dataset.appearevent&&(e.dataset.appearevent="autoanimate"),"auto"==t.appearevent&&(t.appearevent="autoanimate"),e.dataset.appearevent?e.dataset.appearevent:t.appearevent))(i.to,t);(r==n||"slidetransitionend"==r&&"autoanimate"==n)&&(i.to.dataset.appearanceCanStart=!0),"scroll"==s&&"slidechanged"==r&&(d(i,t),p(i,t,a),setTimeout((()=>{i.to.dataset.appearanceCanStart=!0}),t.delay)),"slidetransitionend"==r&&(d(i,t),p(i,t,a)),"slidechanged"==r&&document.body.dataset.exitoverview?(d(i,t),i.to.dataset.appearanceCanStart=!0):"overviewhidden"==r&&(document.body.dataset.exitoverview=!0,setTimeout((()=>{document.body.removeAttribute("data-exitoverview")}),500),e.currentSlide&&(d(i,t),i.to.dataset.appearanceCanStart=!0))}})(t,a,i,e)})))),e.viewport.addEventListener("animationend",(e=>{e.target.classList.add("animationended")})),e.viewport.addEventListener("fragmenthidden",(e=>{e.fragment.classList.remove("animationended"),e.fragment.querySelectorAll(".animationended").forEach((e=>{e.classList.remove("animationended")}))})),new Promise((t=>{s(a,e,t),r(a,"----------   Done preloading   ----------")}))};return{id:"appearance",init:function(e){return t=a({baseclass:"animate__animated",hideagain:!0,delay:300,debug:!1,appearevent:"slidetransitionend",autoappear:!1,autoelements:!1,appearparents:!1,csspath:"",animatecsspath:{link:"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",compat:"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.css"},compatibility:!1,compatibilitybaseclass:"animated"},e.getConfig().appearance||{}),l(e,t,"appearance.js")}}}}));
-</script>
   <script>// catch all plugin for various quarto features
 window.QuartoSupport = function () {
   function isPrintView() {
@@ -4382,7 +4209,6 @@ window.QuartoSupport = function () {
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'appearance': {"hideagain":true,"delay":300,"debug":false,"appearevent":"slidetransitionend","autoappear":false,"autoelements":false,"appearparents":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -4553,7 +4379,7 @@ window.QuartoSupport = function () {
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Multimodal, Appearance, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Multimodal, QuartoSupport,
 
           RevealMath,
           RevealNotes,
