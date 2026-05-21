@@ -1441,7 +1441,7 @@ Danilo Freire
 <section id="applying-functions-to-a-dataset-1" class="slide level2">
 <h2>Applying functions to a dataset</h2>
 <div style="margin-top: 30px; font-size: 22px;">
-<div id="6792684c" class="cell" data-execution_count="1">
+<div id="d52d5fcb" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb4-3"><a href></a></span>
@@ -1459,7 +1459,7 @@ Danilo Freire
 2  1.732051  2.449490  3.000000</code></pre>
 </div>
 </div>
-<div id="9317d2e6" class="cell" data-execution_count="2">
+<div id="52a9e3c2" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href></a><span class="bu">print</span>(df.<span class="bu">apply</span>(np.<span class="bu">sum</span>, axis<span class="op">=</span><span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0    12
@@ -1468,7 +1468,7 @@ Danilo Freire
 dtype: int64</code></pre>
 </div>
 </div>
-<div id="613fc660" class="cell" data-execution_count="3">
+<div id="feb74b63" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href></a><span class="bu">print</span>(df.<span class="bu">apply</span>(<span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   A   B   C
@@ -1485,7 +1485,7 @@ dtype: int64</code></pre>
 <ul>
 <li>Let’s do a quick exercise</li>
 </ul>
-<div id="17874f2b" class="cell" data-execution_count="4">
+<div id="c476e79e" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href></a><span class="co"># Create an empty DataFrame</span></span>
 <span id="cb10-2"><a href></a>data <span class="op">=</span> pd.DataFrame()</span>
 <span id="cb10-3"><a href></a></span>
@@ -1563,7 +1563,7 @@ text-align: right;
 <ul>
 <li>Now let’s define some functions</li>
 </ul>
-<div id="e9b6441a" class="cell" data-execution_count="5">
+<div id="20a4de4b" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href></a><span class="co"># The first two functions return True/False depending on age constraints</span></span>
 <span id="cb11-2"><a href></a><span class="co"># The third function returns the sum of two numbers</span></span>
 <span id="cb11-3"><a href></a><span class="co"># The fourth function returns a string with the age bracket</span></span>
@@ -1591,7 +1591,7 @@ text-align: right;
 <ul>
 <li>Now let’s apply the functions to the <code>data[&quot;age&quot;]</code> column</li>
 </ul>
-<div id="9cac45a0" class="cell" data-execution_count="6">
+<div id="d18f27f9" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href></a>data[<span class="st">&quot;can_vote&quot;</span>]    <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">apply</span>(fn_iseligible_vote)</span>
 <span id="cb12-2"><a href></a>data[<span class="st">&quot;in_twenties&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">apply</span>(fn_istwenties)</span>
 <span id="cb12-3"><a href></a>data[<span class="st">&quot;age_bracket&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">apply</span>(fn_agebracket)</span>
@@ -1683,7 +1683,7 @@ text-align: right;
 <ul>
 <li>We can use <code>apply</code> itself to <span class="alert">build a brand-new column</span> from an existing one: assign the result of <code>apply</code> to a new column name and pandas will add it to the DataFrame</li>
 </ul>
-<div id="a5779c35" class="cell" data-execution_count="7">
+<div id="5e6f6556" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href></a><span class="co"># Creating a new variable</span></span>
 <span id="cb13-2"><a href></a>data[<span class="st">&quot;new_var&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> age: age <span class="op">&gt;=</span> <span class="dv">18</span>)</span>
 <span id="cb13-3"><a href></a></span>
@@ -1782,7 +1782,7 @@ text-align: right;
 <li>Most <code>pandas</code> methods are <span class="alert">non-destructive</span>. <code>drop</code> does not actually remove the column from <code>data</code> on its own; it returns a <span class="alert">new DataFrame</span> with that column removed</li>
 <li>To make the change stick, we must <span class="alert">reassign</span> the result back to <code>data</code> (or pass <code>inplace=True</code>)</li>
 </ul>
-<div id="7e3e0ec2" class="cell" data-execution_count="8">
+<div id="43fad9f5" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href></a><span class="co"># Option 1: reassign (most common, most readable)</span></span>
 <span id="cb14-2"><a href></a>data <span class="op">=</span> data.drop(columns <span class="op">=</span> [<span class="st">&quot;new_var&quot;</span>])</span>
 <span id="cb14-3"><a href></a></span>
@@ -1868,7 +1868,7 @@ text-align: right;
 <ul>
 <li>Two other ways to delete a column (just so you know they exist):</li>
 </ul>
-<div id="77b37d2b" class="cell" data-execution_count="9">
+<div id="8838d8ff" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href></a><span class="co"># Option 2: use `del` (Python built-in, modifies the DataFrame in place)</span></span>
 <span id="cb15-2"><a href></a><span class="kw">del</span> data[<span class="st">&quot;new_var&quot;</span>]</span>
 <span id="cb15-3"><a href></a></span>
@@ -1893,7 +1893,7 @@ text-align: right;
 <div style="font-size: 20px;">
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="21413cd0" class="cell" data-execution_count="10">
+<div id="70b3baa0" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href></a>data[<span class="st">&quot;age_bracket01&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">map</span>(fn_agebracket)</span>
 <span id="cb16-2"><a href></a></span>
 <span id="cb16-3"><a href></a>display(data[[<span class="st">&quot;age&quot;</span>,<span class="st">&quot;age_bracket01&quot;</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1952,7 +1952,7 @@ text-align: right;
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="eee7bed2" class="cell" data-execution_count="11">
+<div id="077f3ff2" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href></a>data[<span class="st">&quot;age_bracket02&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;age&quot;</span>].<span class="bu">apply</span>(fn_agebracket)</span>
 <span id="cb17-2"><a href></a></span>
 <span id="cb17-3"><a href></a>display(data[[<span class="st">&quot;age&quot;</span>,<span class="st">&quot;age_bracket02&quot;</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2022,7 +2022,7 @@ text-align: right;
 <ul>
 <li>Using <code>map</code> with a list and an array</li>
 </ul>
-<div id="7ad15a42" class="cell" data-execution_count="12">
+<div id="54427c58" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href></a><span class="co"># Create a list</span></span>
 <span id="cb18-2"><a href></a>list01 <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
 <span id="cb18-3"><a href></a></span>
@@ -2034,7 +2034,7 @@ text-align: right;
 <pre><code>[1, 4, 9, 16, 25]</code></pre>
 </div>
 </div>
-<div id="785f7812" class="cell" data-execution_count="13">
+<div id="ce411472" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href></a><span class="co"># Create a numpy array</span></span>
 <span id="cb20-2"><a href></a>array01 <span class="op">=</span> np.array([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>])</span>
 <span id="cb20-3"><a href></a></span>
@@ -2050,7 +2050,7 @@ text-align: right;
 <ul>
 <li>Trying to use <code>apply</code> with a list or an array will raise an error</li>
 </ul>
-<div id="b34c3c2d" class="cell" data-execution_count="14">
+<div id="e4013a07" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href></a><span class="co"># Create a list</span></span>
 <span id="cb22-2"><a href></a>list01 <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
 <span id="cb22-3"><a href></a></span>
@@ -2117,7 +2117,7 @@ text-align: right;
 <ul>
 <li>We can import functions into the working environment from a file</li>
 </ul>
-<div id="ccc9dfb3" class="cell" data-execution_count="15">
+<div id="ffa59691" class="cell" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href></a><span class="co"># Import the folder `scripts` as a package</span></span>
 <span id="cb24-2"><a href></a><span class="co"># And the file `example_functions.py` as `ef`</span></span>
 <span id="cb24-3"><a href></a><span class="im">import</span> scripts.example_functions <span class="im">as</span> ef</span>
@@ -2153,7 +2153,7 @@ text-align: right;
 <ul>
 <li>Example:</li>
 </ul>
-<div id="2f28b9d8" class="cell" data-execution_count="16">
+<div id="56341660" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href></a><span class="co"># example_variables.py defines: alpha=5, beta=10, gamma=20, delta=100</span></span>
 <span id="cb27-2"><a href></a><span class="im">import</span> scripts.example_variables <span class="im">as</span> ev</span>
 <span id="cb27-3"><a href></a></span>
@@ -2191,14 +2191,14 @@ text-align: right;
 <ul>
 <li>First, we will load the packages we need</li>
 </ul>
-<div id="f8aac58a" class="cell" data-execution_count="17">
+<div id="5296ff14" class="cell" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb29-2"><a href></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>Then, we will load the dataset</li>
 </ul>
-<div id="75ce6d34" class="cell" data-execution_count="18">
+<div id="19aea905" class="cell" data-execution_count="18">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href></a>circuits <span class="op">=</span> pd.read_csv(<span class="st">&quot;data_raw/circuits.csv&quot;</span>)</span>
 <span id="cb30-2"><a href></a></span>
 <span id="cb30-3"><a href></a><span class="co"># Or download it from the internet</span></span>
@@ -2363,7 +2363,7 @@ text-align: right;
 <ul>
 <li><code>NaN</code> is a special number, available in <code>numpy</code></li>
 </ul>
-<div id="5cfbd214" class="cell" data-execution_count="19">
+<div id="d22aaca3" class="cell" data-execution_count="19">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href></a>np.nan</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>nan</code></pre>
@@ -2377,7 +2377,7 @@ text-align: right;
 <ul>
 <li>Let’s see some examples. We start with <code>numpy</code> arrays</li>
 </ul>
-<div id="a354193c" class="cell" data-execution_count="20">
+<div id="43648c30" class="cell" data-execution_count="20">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href></a><span class="co"># Create two arrays with and without &quot;NaNs&quot;</span></span>
 <span id="cb33-2"><a href></a><span class="co"># The &quot;np.array()&quot; functions converts </span></span>
 <span id="cb33-3"><a href></a><span class="co"># a list to an array</span></span>
@@ -2412,7 +2412,7 @@ text-align: right;
 <li>Some summary statistics functions will not work with <code>NaN</code> values</li>
 <li>For example, the <code>mean()</code> function</li>
 </ul>
-<div id="053f8438" class="cell" data-execution_count="21">
+<div id="1670f149" class="cell" data-execution_count="21">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href></a><span class="bu">print</span>(np.mean(vec_with_nans))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>nan</code></pre>
@@ -2425,7 +2425,7 @@ text-align: right;
 <ul>
 <li>To calculate the mean without <code>NaN</code> values, we can use the <code>nanmean()</code> function</li>
 </ul>
-<div id="921ce9ea" class="cell" data-execution_count="22">
+<div id="e8416e86" class="cell" data-execution_count="22">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href></a><span class="bu">print</span>(np.nanmean(vec_with_nans))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>4.5</code></pre>
@@ -2446,7 +2446,7 @@ text-align: right;
 <ul>
 <li>Let’s create an empty DataFrame and create a new column <code>x</code> with <code>NaN</code> values</li>
 </ul>
-<div id="707900a0" class="cell" data-execution_count="23">
+<div id="89587c10" class="cell" data-execution_count="23">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href></a>dataset <span class="op">=</span> pd.DataFrame()</span>
 <span id="cb39-2"><a href></a>dataset[<span class="st">&quot;x&quot;</span>] <span class="op">=</span> vec_with_nans</span>
 <span id="cb39-3"><a href></a>dataset</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2494,7 +2494,7 @@ text-align: right;
 <ul>
 <li>You will see that <code>pandas</code> will handle <code>NaN</code> values differently: it will <span class="alert">ignore them</span></li>
 </ul>
-<div id="6de2e33c" class="cell" data-execution_count="24">
+<div id="5535426d" class="cell" data-execution_count="24">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href></a><span class="bu">print</span>(dataset[<span class="st">&quot;x&quot;</span>].mean())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>4.5</code></pre>
@@ -2531,7 +2531,7 @@ text-align: right;
 <li>We use the command <code>dtypes</code> for that</li>
 <li><code>object</code> means that the variable is a string or a variable with mixed types (e.g., numbers and strings)</li>
 </ul>
-<div id="c928143c" class="cell" data-execution_count="25">
+<div id="f568b57e" class="cell" data-execution_count="25">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href></a>circuits.dtypes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
 <pre><code>circuitId       int64
@@ -2551,7 +2551,7 @@ dtype: object</code></pre>
 </section>
 <section id="check-rows-with-numeric-values" class="slide level2">
 <h2>Check rows with numeric values</h2>
-<div style="margin-top: 30px; font-size: 25px;">
+<div style="margin-top: 30px; font-size: 23px;">
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -2562,6 +2562,8 @@ dtype: object</code></pre>
 </ul></li>
 <li><span class="alert">Why do we need both?</span> DataFrame columns often mix data types, so we have to treat the values as strings before we can test them</li>
 <li>Using <code>.isnumeric()</code> on its own would raise an error (trust me, I tried 😅)</li>
+<li><span class="alert"><code>.str.isnumeric()</code></span> checks characters, not values: it rejects decimals (<code>&quot;3.5&quot;</code>), negatives (<code>&quot;-2&quot;</code>), and commas (<code>&quot;1,000&quot;</code>)</li>
+<li>For a true “is this a number?” test, use <span class="alert"><code>pd.to_numeric(s, errors=&quot;coerce&quot;).notna()</code></span></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <ul>
@@ -2569,7 +2571,7 @@ dtype: object</code></pre>
 <li>If you use <code>R</code>, this is similar to the <code>%&gt;%</code> operator in <code>dplyr</code></li>
 <li>Let’s see it in action:</li>
 </ul>
-<div id="a902f74d" class="cell" data-execution_count="26">
+<div id="ccef8a64" class="cell" data-execution_count="26">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href></a><span class="co"># Check if the variable &quot;alt&quot; is numeric</span></span>
 <span id="cb44-2"><a href></a>circuits[<span class="st">&quot;alt&quot;</span>].<span class="bu">str</span>.isnumeric()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
@@ -2595,7 +2597,7 @@ Name: alt, Length: 77, dtype: bool</code></pre>
 <div style="margin-top: 30px; font-size: 25px;">
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="189234a1" class="cell" data-execution_count="27">
+<div id="157ddf2a" class="cell" data-execution_count="27">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href></a><span class="co"># Check if the variable </span></span>
 <span id="cb46-2"><a href></a><span class="co"># &quot;circuitRef&quot; is numeric</span></span>
 <span id="cb46-3"><a href></a>circuits[<span class="st">&quot;circuitRef&quot;</span>].<span class="bu">str</span>.isnumeric()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2615,7 +2617,7 @@ Name: circuitRef, Length: 77, dtype: bool</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="3ac9833b" class="cell" data-execution_count="28">
+<div id="a2d8fd64" class="cell" data-execution_count="28">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href></a><span class="co"># Convert the variable </span></span>
 <span id="cb48-2"><a href></a><span class="co"># `location` to lowercase</span></span>
 <span id="cb48-3"><a href></a>circuits[<span class="st">&quot;location&quot;</span>].<span class="bu">str</span>.lower()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2644,7 +2646,7 @@ Name: location, Length: 77, dtype: str</code></pre>
 <li><span class="alert"><code>query()</code></span> is a pandas DataFrame method that lets us <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.query.html">reference subattributes of a column</a> (we’ll see more of it later)</li>
 <li>Combined with <span class="alert"><code>pd.unique()</code></span> (which returns the unique values of a column), we can extract every non-numeric value in one go</li>
 </ul>
-<div id="07433fa3" class="cell" data-execution_count="29">
+<div id="0e503ec5" class="cell" data-execution_count="29">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href></a><span class="co"># Keep only the rows where &quot;alt&quot; is NOT numeric, then list the unique values</span></span>
 <span id="cb50-2"><a href></a>subset <span class="op">=</span> circuits.query(<span class="st">&quot;alt.str.isnumeric() == False&quot;</span>)</span>
 <span id="cb50-3"><a href></a>list_unique <span class="op">=</span> pd.unique(subset[<span class="st">&quot;alt&quot;</span>])</span>
@@ -2665,7 +2667,7 @@ Length: 2, dtype: str</code></pre>
 <li>The syntax is <code>dataframe[&quot;variable&quot;].replace(list_old, list_new)</code></li>
 <li>More information about the function can be found <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.replace.html">here</a></li>
 </ul>
-<div id="febbb88e" class="cell" data-execution_count="30">
+<div id="be1b235f" class="cell" data-execution_count="30">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href></a><span class="co"># &quot;list_old&quot; encodes values we want to change</span></span>
 <span id="cb52-2"><a href></a><span class="co"># From the list_unique, we see that the values we want to change are &#39;\N&#39; and &#39;-7&#39;</span></span>
 <span id="cb52-3"><a href></a><span class="co"># &quot;list_new&quot; encodes the values that will replace the old</span></span>
@@ -2680,7 +2682,7 @@ Length: 2, dtype: str</code></pre>
 <li>It’s <span class="alert">strongly recommended</span> to do this in a separate file from the original</li>
 <li>Use <code>to_csv()</code> to save the dataset as a <code>.csv</code> file</li>
 </ul>
-<div id="1c9fd82e" class="cell" data-execution_count="31">
+<div id="db9d5571" class="cell" data-execution_count="31">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href></a>circuits.to_csv(<span class="st">&quot;data_clean/circuits_clean.csv&quot;</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
@@ -2726,7 +2728,7 @@ Length: 2, dtype: str</code></pre>
 </ul></li>
 <li>Please remember to <span class="alert">convert the variable to the correct type</span> before recoding</li>
 </ul>
-<div id="f22a362f" class="cell" data-execution_count="32">
+<div id="e4f20ca5" class="cell" data-execution_count="32">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href></a><span class="co"># Check the data type of the &quot;alt&quot; column</span></span>
 <span id="cb54-2"><a href></a>circuits[<span class="st">&quot;alt&quot;</span>].dtype</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="29">
@@ -2737,7 +2739,7 @@ Length: 2, dtype: str</code></pre>
 <ul>
 <li><code>pd.to_numeric()</code> is used to convert a variable to a numeric type</li>
 </ul>
-<div id="01c3b607" class="cell" data-execution_count="33">
+<div id="cbba8ef5" class="cell" data-execution_count="33">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href></a><span class="co"># pd.to_numeric() converts </span></span>
 <span id="cb56-2"><a href></a><span class="co"># a column to numeric</span></span>
 <span id="cb56-3"><a href></a><span class="co"># Before you use this option, </span></span>
@@ -2750,7 +2752,7 @@ Length: 2, dtype: str</code></pre>
 <pre><code>248.1891891891892</code></pre>
 </div>
 </div>
-<div id="e965d000" class="cell" data-execution_count="34">
+<div id="778b4347" class="cell" data-execution_count="34">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href></a><span class="bu">print</span>(circuits[<span class="st">&quot;alt_numeric&quot;</span>].<span class="bu">min</span>())</span>
 <span id="cb58-2"><a href></a><span class="bu">print</span>(circuits[<span class="st">&quot;alt_numeric&quot;</span>].<span class="bu">max</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -2779,7 +2781,7 @@ Length: 2, dtype: str</code></pre>
 </ul></li>
 <li>More information about the function can be found <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.cut.html">here</a></li>
 </ul>
-<div id="8f7b7ff4" class="cell" data-execution_count="35">
+<div id="9b188e83" class="cell" data-execution_count="35">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href></a><span class="co"># Recode the &quot;alt&quot; variable into an interval</span></span>
 <span id="cb60-2"><a href></a>bins_x <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">2500</span>, <span class="dv">5000</span>]</span>
 <span id="cb60-3"><a href></a>labels_x <span class="op">=</span> [<span class="st">&quot;Between 0 and 2500&quot;</span>,</span>
@@ -2919,7 +2921,7 @@ text-align: right;
 <li>Add a variable to the dataset called <code>has_siblings</code></li>
 <li>Assign True/False to this variable using <code>apply()</code></li>
 </ul>
-<div id="0c2612fd" class="cell" data-execution_count="36">
+<div id="a256a727" class="cell" data-execution_count="36">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href></a>fn_has_siblings <span class="op">=</span> <span class="kw">lambda</span> num_siblings: num_siblings <span class="op">&gt;=</span> <span class="dv">1</span></span>
 <span id="cb61-2"><a href></a></span>
 <span id="cb61-3"><a href></a>data[<span class="st">&quot;has_siblings&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;num_adult_siblings&quot;</span>].<span class="bu">apply</span>(fn_has_siblings)</span>
@@ -2991,7 +2993,7 @@ text-align: right;
 <li>Add a variable <code>mpg_above_29</code> which is <code>True/False</code> if <code>mpg</code> <span class="math inline">\(\ge\)</span> 29</li>
 <li>Store the new dataset to <code>data_clean/features.csv</code></li>
 </ul>
-<div id="a396961b" class="cell" data-execution_count="37">
+<div id="d483bc8e" class="cell" data-execution_count="37">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href></a>data_raw <span class="op">=</span> pd.read_csv(<span class="st">&quot;data_raw/features.csv&quot;</span>)</span>
 <span id="cb62-2"><a href></a></span>
 <span id="cb62-3"><a href></a>data_raw[<span class="st">&quot;mpg_above_29&quot;</span>] <span class="op">=</span> data_raw[<span class="st">&quot;mpg&quot;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> mpg: mpg <span class="op">&gt;=</span> <span class="dv">29</span>)</span>
@@ -3094,7 +3096,7 @@ text-align: right;
 <li>Use <code>.replace()</code> with the “country” column</li>
 <li>Replace “UK” with “United Kingdom”</li>
 </ul>
-<div id="9c9ae232" class="cell" data-execution_count="38">
+<div id="b4f98f31" class="cell" data-execution_count="38">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href></a><span class="co"># Replace &quot;UK&quot; with &quot;United Kingdom&quot;</span></span>
 <span id="cb63-2"><a href></a>circuits[<span class="st">&quot;country&quot;</span>] <span class="op">=</span> circuits[<span class="st">&quot;country&quot;</span>].replace(<span class="st">&quot;UK&quot;</span>, <span class="st">&quot;United Kingdom&quot;</span>)</span>
 <span id="cb63-3"><a href></a>display(circuits[[<span class="st">&quot;country&quot;</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -3177,7 +3179,7 @@ text-align: right;
 <section id="sec:appendix-05" class="slide level2">
 <h2>Appendix 05</h2>
 <div style="margin-top: 30px; font-size: 24px;">
-<div id="5fec83da" class="cell" data-execution_count="39">
+<div id="058e67bd" class="cell" data-execution_count="39">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href></a><span class="co"># Check the data type of the &quot;lat&quot; column</span></span>
 <span id="cb64-2"><a href></a><span class="bu">print</span>(circuits[<span class="st">&quot;lat&quot;</span>].dtype)</span>
 <span id="cb64-3"><a href></a></span>

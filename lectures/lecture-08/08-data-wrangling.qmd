@@ -701,7 +701,7 @@ circuits.dtypes
 
 ## Check rows with numeric values
 
-:::{style="margin-top: 30px; font-size: 25px;"}
+:::{style="margin-top: 30px; font-size: 23px;"}
 :::{.columns}
 :::{.column width="50%"}
 - We will use [`.str.isnumeric()`]{.alert}, which combines two calls:
@@ -709,6 +709,8 @@ circuits.dtypes
   - [`.isnumeric()`]{.alert}: check whether each string is numeric
 - [Why do we need both?]{.alert} DataFrame columns often mix data types, so we have to treat the values as strings before we can test them
 - Using `.isnumeric()` on its own would raise an error (trust me, I tried 😅)
+- [`.str.isnumeric()`]{.alert} checks characters, not values: it rejects decimals (`"3.5"`), negatives (`"-2"`), and commas (`"1,000"`)
+- For a true "is this a number?" test, use [`pd.to_numeric(s, errors="coerce").notna()`]{.alert}
 :::
 
 :::{.column width="50%"}
