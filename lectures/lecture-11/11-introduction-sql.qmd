@@ -430,6 +430,7 @@ SELECT * FROM drivers;
 :::
 
 :::{.column width="50%"}
+:::{style="margin-top: -20px;"}
 `PRAGMA table_info()` returns one row per column with:
 
 - `cid`: column ID
@@ -438,6 +439,7 @@ SELECT * FROM drivers;
 - `notnull`: 1 if `NULL` is forbidden, 0 otherwise
 - `dflt_value`: default value
 - `pk`: 1 if part of the primary key, 0 otherwise
+:::
 :::
 :::
 :::
