@@ -1507,7 +1507,7 @@ Danilo Freire
 <li>Use the dataset name, then a dot (<code>.</code>), then <code>columns</code> to list every column</li>
 <li>If you plan to reuse a list of column names, store it in a variable (we’ll do this below)</li>
 </ul>
-<div id="08ac5d1b" class="cell" data-execution_count="1">
+<div id="86e54e54" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href></a>carfeatures <span class="op">=</span> pd.read_csv(<span class="st">&#39;data_raw/features.csv&#39;</span>)</span>
 <span id="cb1-3"><a href></a>car_colnames <span class="op">=</span> carfeatures.columns</span>
@@ -1531,7 +1531,7 @@ Danilo Freire
 <li><p>We can either subset the data by typing the column name or the column index</p></li>
 <li><p>With the index (note the brackets):</p></li>
 </ul>
-<div id="8e462562" class="cell" data-execution_count="2">
+<div id="d16847f2" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href></a>carfeatures[car_colnames[<span class="dv">0</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>0      18.0
@@ -1552,7 +1552,7 @@ Name: mpg, Length: 398, dtype: float64</code></pre>
 <ul>
 <li>With the name:</li>
 </ul>
-<div id="0aef7f70" class="cell" data-execution_count="3">
+<div id="8c27aef7" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href></a>carfeatures[<span class="st">&#39;mpg&#39;</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>0      18.0
@@ -1582,7 +1582,7 @@ Name: mpg, Length: 398, dtype: float64</code></pre>
 <li>Let’s say we want to select the columns <code>mpg</code> and <code>weight</code></li>
 <li>We can do so by typing:</li>
 </ul>
-<div id="962f4119" class="cell" data-execution_count="4">
+<div id="5ce00c7e" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href></a>carfeatures[[<span class="st">&#39;mpg&#39;</span>, <span class="st">&#39;weight&#39;</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
@@ -1673,7 +1673,7 @@ text-align: right;
 <ul>
 <li>We can also store the columns in a variable and pass it to the <code>[]</code> operator</li>
 </ul>
-<div id="576c57e6" class="cell" data-execution_count="5">
+<div id="fbd760eb" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href></a>list_subsetcols <span class="op">=</span> [<span class="st">&quot;mpg&quot;</span>, <span class="st">&quot;weight&quot;</span>]</span>
 <span id="cb8-2"><a href></a>subcols_carfeatures <span class="op">=</span> carfeatures[list_subsetcols]</span>
 <span id="cb8-3"><a href></a>subcols_carfeatures</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1772,7 +1772,7 @@ text-align: right;
 <li>Note that <code>pandas</code> uses <span class="alert">double brackets</span> when selecting multiple columns</li>
 <li>This is because <code>pandas</code> <span class="alert">interprets a single bracket as a series</span> (a single column)</li>
 <li>So we need two brackets to pass a list of columns</li>
-<li>An explanation for this behavior is that <code>pandas</code> is trying to avoid ambiguity</li>
+<li>An explanation for this behaviour is that <code>pandas</code> is trying to avoid ambiguity</li>
 <li>Using <code>df[&#39;col1&#39;, &#39;col2&#39;]</code> would be interpreted as trying to access a single column with the name <code>&#39;col1&#39;, &#39;col2&#39;</code></li>
 <li>Yes, it’s a bizarre name, but it could happen if you, say, merged two columns and named it like that (which is not a good idea!)</li>
 <li>More on this <a href="https://www.reddit.com/r/learnpython/comments/yl9htk/pandas_module_double_square_brackets_purpose/">here</a> and <a href="https://stackoverflow.com/questions/33417991/pandas-why-are-double-brackets-needed-to-select-column-after-boolean-indexing">here</a></li>
@@ -1800,7 +1800,7 @@ text-align: right;
 <li>We can also use the <code>[]</code> operator to filter the whole dataframe, not just the columns</li>
 <li>For example, we can filter the dataframe to show only cars with <code>mpg</code> greater than 25</li>
 </ul>
-<div id="ae405c76" class="cell" data-execution_count="6">
+<div id="d8792b52" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href></a>carfeatures[carfeatures[<span class="st">&#39;mpg&#39;</span>] <span class="op">&gt;=</span> <span class="dv">25</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <div>
@@ -1963,7 +1963,7 @@ text-align: right;
 <ul>
 <li>One can make more complex queries by combining multiple conditions</li>
 </ul>
-<div id="47109ee0" class="cell" data-execution_count="7">
+<div id="c862829e" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href></a>carfeatures[(carfeatures[<span class="st">&#39;acceleration&#39;</span>]<span class="op">&gt;=</span><span class="dv">10</span>) <span class="op">&amp;</span> (carfeatures[<span class="st">&#39;acceleration&#39;</span>]<span class="op">&lt;</span><span class="dv">18</span>)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <div>
@@ -2122,7 +2122,7 @@ text-align: right;
 <li>What if we only care about a <span class="alert">few columns</span>?</li>
 <li>We can chain two <code>[]</code> operations: first filter the rows, then pick the columns</li>
 </ul>
-<div id="effc8052" class="cell" data-execution_count="8">
+<div id="09a44301" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href></a>carfeatures[carfeatures[<span class="st">&#39;mpg&#39;</span>] <span class="op">&gt;=</span> <span class="dv">25</span>][[<span class="st">&#39;mpg&#39;</span>, <span class="st">&#39;cylinders&#39;</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <div>
@@ -2218,7 +2218,7 @@ text-align: right;
 </ul></li>
 <li>If the line feels crowded, save the filter to a variable first</li>
 </ul>
-<div id="28319078" class="cell" data-execution_count="9">
+<div id="56154440" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href></a>fast_cars <span class="op">=</span> carfeatures[carfeatures[<span class="st">&#39;mpg&#39;</span>] <span class="op">&gt;=</span> <span class="dv">25</span>]</span>
 <span id="cb12-2"><a href></a>fast_cars[[<span class="st">&#39;mpg&#39;</span>, <span class="st">&#39;cylinders&#39;</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
@@ -2320,7 +2320,7 @@ text-align: right;
 <li>The <span class="alert">row selector</span> can be a boolean mask (just like with <code>[]</code>)</li>
 <li>The <span class="alert">column selector</span> is a list of column names</li>
 </ul>
-<div id="d8da0816" class="cell" data-execution_count="10">
+<div id="c9eb9b8a" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href></a>carfeatures.loc[carfeatures[<span class="st">&#39;mpg&#39;</span>] <span class="op">&gt;=</span> <span class="dv">25</span>, [<span class="st">&#39;mpg&#39;</span>, <span class="st">&#39;cylinders&#39;</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <div>
@@ -2412,7 +2412,7 @@ text-align: right;
 <li>Read it as: “from <code>carfeatures</code>, take the <span class="alert">rows</span> where <code>mpg &gt;= 25</code> and the <span class="alert">columns</span> <code>mpg</code> and <code>cylinders</code>”</li>
 <li>Multiple conditions work the same way as with <code>[]</code></li>
 </ul>
-<div id="0b274051" class="cell" data-execution_count="11">
+<div id="66cca53e" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href></a>carfeatures.loc[</span>
 <span id="cb14-2"><a href></a>    (carfeatures[<span class="st">&#39;cylinders&#39;</span>] <span class="op">==</span> <span class="dv">8</span>) <span class="op">&amp;</span> (carfeatures[<span class="st">&#39;mpg&#39;</span>] <span class="op">&lt;=</span> <span class="dv">15</span>),</span>
 <span id="cb14-3"><a href></a>    [<span class="st">&#39;mpg&#39;</span>, <span class="st">&#39;cylinders&#39;</span>, <span class="st">&#39;acceleration&#39;</span>]</span>
@@ -2552,7 +2552,7 @@ text-align: right;
 <li>Let’s see some examples!</li>
 <li>We can combine <code>.iloc[]</code> with <code>sort_values(by = &#39;variable&#39;)</code> to sort the data</li>
 </ul>
-<div id="1b337d84" class="cell" data-execution_count="12">
+<div id="30722b5c" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href></a>carsorted <span class="op">=</span> carfeatures.sort_values(by <span class="op">=</span> <span class="st">&quot;mpg&quot;</span>, ascending <span class="op">=</span> <span class="va">False</span>)</span>
 <span id="cb15-2"><a href></a><span class="bu">print</span>(carsorted.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -2568,7 +2568,7 @@ text-align: right;
 <ul>
 <li>For example, to select the first three rows and the first three columns:</li>
 </ul>
-<div id="945502ce" class="cell" data-execution_count="13">
+<div id="c7b76973" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href></a><span class="co"># Select the first three rows </span></span>
 <span id="cb17-2"><a href></a><span class="bu">print</span>(carsorted.iloc[[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -2578,7 +2578,7 @@ text-align: right;
 325  44.3          4            90         48    2085          21.7  V-1693355</code></pre>
 </div>
 </div>
-<div id="c376f4e4" class="cell" data-execution_count="14">
+<div id="b77d2dd5" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href></a><span class="co"># Select the first three rows and columns</span></span>
 <span id="cb19-2"><a href></a><span class="bu">print</span>(carsorted.iloc[<span class="dv">0</span>:<span class="dv">3</span>, <span class="dv">0</span>:<span class="dv">3</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -2588,7 +2588,7 @@ text-align: right;
 325  44.3          4            90</code></pre>
 </div>
 </div>
-<div id="bed899db" class="cell" data-execution_count="15">
+<div id="6f62c7b3" class="cell" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href></a><span class="co"># Compare with the original dataset</span></span>
 <span id="cb21-2"><a href></a><span class="bu">print</span>(carfeatures.iloc[<span class="dv">0</span>:<span class="dv">3</span>, <span class="dv">0</span>:<span class="dv">3</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -2608,7 +2608,7 @@ text-align: right;
 <li>The following command extracts all columns for row zero</li>
 <li>In this first example, we will show the car with the highest <code>mpg</code> value</li>
 </ul>
-<div id="7753184a" class="cell" data-execution_count="16">
+<div id="8cf2958a" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href></a><span class="co"># Select the first row, all columns</span></span>
 <span id="cb23-2"><a href></a>display(carsorted.iloc[<span class="dv">0</span>,:])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -2622,7 +2622,7 @@ vehicle_id      M-1693322
 Name: 322, dtype: object</code></pre>
 </div>
 </div>
-<div id="594410c2" class="cell" data-execution_count="17">
+<div id="cf79af49" class="cell" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href></a><span class="co"># Select the first three rows, all columns</span></span>
 <span id="cb25-2"><a href></a>display(carsorted.iloc[[<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>],:])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -2689,7 +2689,7 @@ text-align: right;
 </div>
 </div>
 </div>
-<div id="d3d5425a" class="cell" data-execution_count="18">
+<div id="9cd354f3" class="cell" data-execution_count="18">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href></a><span class="co"># The `:` can be omitted when selecting all columns</span></span>
 <span id="cb26-2"><a href></a>display(carsorted.iloc[[<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -2763,7 +2763,7 @@ text-align: right;
 <div style="margin-top: 30px; font-size: 21px;">
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="e0d1b114" class="cell" data-execution_count="19">
+<div id="f07b43f7" class="cell" data-execution_count="19">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href></a><span class="co"># Extract first 5 rows (rows 0 to 4)</span></span>
 <span id="cb27-2"><a href></a>display(carfeatures.iloc[<span class="dv">0</span>:<span class="dv">5</span>,:])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -2851,7 +2851,7 @@ text-align: right;
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="87081ee3" class="cell" data-execution_count="20">
+<div id="743b9e79" class="cell" data-execution_count="20">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href></a><span class="co"># Extract rows 8 onwards</span></span>
 <span id="cb28-2"><a href></a>display(carfeatures.iloc[<span class="dv">8</span>:,:])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -3029,7 +3029,7 @@ text-align: right;
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div id="db81555b" class="cell" data-execution_count="21">
+<div id="1fa07396" class="cell" data-execution_count="21">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href></a>carfeatures.query(<span class="st">&quot;mpg &gt;= 25&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="21">
 <div>
@@ -3187,7 +3187,7 @@ text-align: right;
 <li>Inside <code>.query()</code>, <code>and</code> and <code>&amp;</code> are equivalent (same for <code>or</code> and <code>|</code>)</li>
 <li>Outside <code>.query()</code>, you must use <code>&amp;</code> and <code>|</code>, because Python’s <code>and</code>/<code>or</code> don’t work on pandas Series</li>
 </ul>
-<div id="e327588a" class="cell" data-execution_count="22">
+<div id="6d840d6c" class="cell" data-execution_count="22">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href></a>carfeatures.query(<span class="st">&quot;(acceleration &gt;= 10) and (acceleration &lt; 18)&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="22">
 <div>
@@ -3342,7 +3342,7 @@ text-align: right;
 <ul>
 <li>Use <code>.query()</code> and <code>sort_values</code> together</li>
 </ul>
-<div id="f83f7614" class="cell" data-execution_count="23">
+<div id="199815f5" class="cell" data-execution_count="23">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href></a>carfeatures.query(<span class="st">&quot;(cylinders == 8) &amp; (mpg &lt;= 15) &amp; (acceleration &lt;= 12)&quot;</span>).sort_values(by <span class="op">=</span> <span class="st">&quot;mpg&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
 <div>
@@ -3669,7 +3669,7 @@ text-align: right;
 <li>Inside <code>.query()</code>, both <code>&amp;</code> and <code>and</code> work; we’ll stick with <code>&amp;</code> for consistency, but feel free to mix them as you wish</li>
 <li>Parentheses around each condition are not required, but they help readability</li>
 </ul>
-<div id="a812c0cd" class="cell" data-execution_count="24">
+<div id="f072c661" class="cell" data-execution_count="24">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href></a>carfeatures.query(<span class="st">&quot;(cylinders == 8) &amp; (mpg &lt;= 15) &amp; (acceleration &lt;= 12)&quot;</span>)[[<span class="st">&quot;mpg&quot;</span>, <span class="st">&quot;cylinders&quot;</span>, <span class="st">&quot;acceleration&quot;</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
 <div>
@@ -3877,7 +3877,7 @@ text-align: right;
 <ul>
 <li>Combine <code>.query()</code> with global variables</li>
 </ul>
-<div id="62eb9147" class="cell" data-execution_count="25">
+<div id="0be2dfc1" class="cell" data-execution_count="25">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href></a>threshold <span class="op">=</span> <span class="dv">25</span></span>
 <span id="cb33-2"><a href></a>data_varthreshold_mpg <span class="op">=</span> carfeatures.query(<span class="st">&quot;mpg &gt;= @threshold&quot;</span>)</span>
 <span id="cb33-3"><a href></a>data_varthreshold_mpg</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -4035,7 +4035,7 @@ text-align: right;
 <li>Expression with variable names that contain spaces</li>
 <li>Use backticks (<code>` `</code>) to refer to the variable name</li>
 </ul>
-<div id="bb159db2" class="cell" data-execution_count="26">
+<div id="4573bac4" class="cell" data-execution_count="26">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href></a>carfeatures[<span class="st">&quot;new variable&quot;</span>] <span class="op">=</span> carfeatures[<span class="st">&quot;mpg&quot;</span>]</span>
 <span id="cb34-2"><a href></a>data_spacesthreshold_mpg <span class="op">=</span> carfeatures.query(<span class="st">&quot;`new variable` &gt;= 25&quot;</span>)</span>
 <span id="cb34-3"><a href></a>data_spacesthreshold_mpg</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -4219,7 +4219,7 @@ text-align: right;
 <li><p>Let’s see an example using <code>cylinders</code></p></li>
 <li><p>First, we need to import <code>matplotlib</code> and use <code>pd.unique()</code> to extract a list with the unique elements in that column</p></li>
 </ul>
-<div id="37c4195e" class="cell" data-execution_count="27">
+<div id="7939fc50" class="cell" data-execution_count="27">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb35-2"><a href></a></span>
 <span id="cb35-3"><a href></a>list_unique_cylinders <span class="op">=</span> pd.unique(carfeatures[<span class="st">&quot;cylinders&quot;</span>])</span>
@@ -4233,7 +4233,7 @@ text-align: right;
 <section id="plotting-subsets-1" class="slide level2">
 <h2>Plotting subsets</h2>
 <div style="margin-top: 30px; font-size: 21px;">
-<div id="33fce402" class="cell" data-execution_count="28">
+<div id="12c7bda1" class="cell" data-execution_count="28">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href></a><span class="co"># If we call plt.scatter() twice, it will display both plots on the same graph</span></span>
 <span id="cb37-2"><a href></a><span class="co"># We also include plt.show() at the very end.</span></span>
 <span id="cb37-3"><a href></a>df_8 <span class="op">=</span> carfeatures.query(<span class="st">&quot;cylinders == 8&quot;</span>)</span>
@@ -4264,7 +4264,7 @@ text-align: right;
 <ul>
 <li>Using a <code>for</code> loop to plot multiple subsets</li>
 </ul>
-<div id="79a8c910" class="cell" data-execution_count="29">
+<div id="fa8f3369" class="cell" data-execution_count="29">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href></a><span class="co"># Compute number of unique categories</span></span>
 <span id="cb38-2"><a href></a>list_unique_cylinders <span class="op">=</span> pd.unique(carfeatures[<span class="st">&quot;cylinders&quot;</span>])</span>
 <span id="cb38-3"><a href></a></span>
@@ -4314,7 +4314,7 @@ text-align: right;
 <section id="sec:appendix-01" class="slide level2">
 <h2>Appendix 01</h2>
 <div style="margin-top: 30px; font-size: 20px;">
-<div id="ce91a2a8" class="cell" data-execution_count="30">
+<div id="7692a4c7" class="cell" data-execution_count="30">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb39-2"><a href></a>df <span class="op">=</span> pd.read_csv(<span class="st">&#39;data_raw/features.csv&#39;</span>)</span>
 <span id="cb39-3"><a href></a>df_filtered <span class="op">=</span> df[(df[<span class="st">&#39;cylinders&#39;</span>] <span class="op">&gt;=</span> <span class="dv">6</span>) <span class="op">&amp;</span> (df[<span class="st">&#39;acceleration&#39;</span>] <span class="op">&lt;=</span> <span class="dv">15</span>) <span class="op">&amp;</span> (df[<span class="st">&#39;mpg&#39;</span>] <span class="op">&lt;=</span> <span class="dv">12</span>)]</span>
@@ -4486,7 +4486,7 @@ text-align: right;
 <section id="sec:appendix-02" class="slide level2">
 <h2>Appendix 02</h2>
 <div style="margin-top: 30px; font-size: 22px;">
-<div id="c713d81d" class="cell" data-execution_count="31">
+<div id="82e9d48d" class="cell" data-execution_count="31">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb41-2"><a href></a>df <span class="op">=</span> pd.read_csv(<span class="st">&#39;data_raw/features.csv&#39;</span>)</span>
 <span id="cb41-3"><a href></a>df[[<span class="st">&#39;weight&#39;</span>, <span class="st">&#39;acceleration&#39;</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -4581,7 +4581,7 @@ text-align: right;
 <section id="sec:appendix-03" class="slide level2">
 <h2>Appendix 03</h2>
 <div style="margin-top: 30px; font-size: 24px;">
-<div id="c2b05f6d" class="cell" data-execution_count="32">
+<div id="413985c9" class="cell" data-execution_count="32">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb42-2"><a href></a>df <span class="op">=</span> pd.read_csv(<span class="st">&#39;data_raw/features.csv&#39;</span>)</span>
 <span id="cb42-3"><a href></a>car_ascendingmpg <span class="op">=</span> df.sort_values(by <span class="op">=</span> <span class="st">&quot;mpg&quot;</span>)</span>
@@ -4676,7 +4676,7 @@ text-align: right;
 <section id="sec:appendix-04" class="slide level2">
 <h2>Appendix 04</h2>
 <div style="margin-top: 30px; font-size: 24px;">
-<div id="bf6c211f" class="cell" data-execution_count="33">
+<div id="be21cd32" class="cell" data-execution_count="33">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb43-2"><a href></a>df <span class="op">=</span> pd.read_csv(<span class="st">&#39;data_raw/features.csv&#39;</span>)</span>
 <span id="cb43-3"><a href></a>df.query(<span class="st">&quot;(mpg &gt;= 25) &amp; (cylinders == 8)&quot;</span>)[[<span class="st">&quot;mpg&quot;</span>, <span class="st">&quot;cylinders&quot;</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -4720,7 +4720,7 @@ text-align: right;
 <section id="sec:appendix-05" class="slide level2">
 <h2>Appendix 05</h2>
 <div style="margin-top: 30px; font-size: 24px;">
-<div id="8a0f3ff5" class="cell" data-execution_count="34">
+<div id="737634e6" class="cell" data-execution_count="34">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb44-2"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb44-3"><a href></a></span>

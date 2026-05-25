@@ -291,7 +291,7 @@ subcols_carfeatures
 - Note that `pandas` uses [double brackets]{.alert} when selecting multiple columns
 - This is because `pandas` [interprets a single bracket as a series]{.alert} (a single column)
 - So we need two brackets to pass a list of columns
-- An explanation for this behavior is that `pandas` is trying to avoid ambiguity
+- An explanation for this behaviour is that `pandas` is trying to avoid ambiguity
 - Using `df['col1', 'col2']` would be interpreted as trying to access a single column with the name `'col1', 'col2'` 
 - Yes, it's a bizarre name, but it could happen if you, say, merged two columns and named it like that (which is not a good idea!)
 - More on this [here](https://www.reddit.com/r/learnpython/comments/yl9htk/pandas_module_double_square_brackets_purpose/) and [here](https://stackoverflow.com/questions/33417991/pandas-why-are-double-brackets-needed-to-select-column-after-boolean-indexing)
