@@ -31,15 +31,16 @@ editor:
 
 ## Today's lecture
 
-:::{style="margin-top: 30px; font-size: 22px;"}
+:::{style="margin-top: 30px; font-size: 24px;"}
 :::{.columns}
 :::{.column width="50%"}
 - Today we will dive a little deeper into the `pandas` library
 - More specifically, we will learn how to [subset data]{.alert}
 - This is a [very important skill]{.alert} to have when working with data
-- We will look into four ways to subset data
+- We will look into five ways to subset data
   - Using VS Code's [`Data Wrangler` extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler)
   - Using `[]`
+  - Using `.loc[]`
   - Using `.iloc[]`
   - Using `.query()`
 - We will also learn how to [sort data]{.alert} with `.sort_values()`
@@ -53,9 +54,17 @@ editor:
 :::
 :::
 
+## Tip of the day 😉
+
+:::{style="text-align: center; font-size: 22px;"}
+[![](figures/tip.png){width="50%"}](#){data-modal-type="image" data-modal-url="figures/tip.png"}
+
+Source: <https://www.reddit.com/r/ProgrammerHumor/comments/1tm1n5q/isthatreallythetruth/>
+:::
+
 ## Subsetting data with `Data Wrangler`
 
-:::{style="margin-top: 30px; font-size: 22px;"}
+:::{style="margin-top: 30px; font-size: 24px;"}
 :::{.columns}
 :::{.column width="50%"}
 - The [`Data Wrangler` extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) for VS Code lets you view, filter, sort, and clean data in a table format, with basic statistics built in
@@ -65,7 +74,7 @@ editor:
 :::
 
 :::{.column width="50%"}
-:::{style="text-align: center;"}
+:::{style="text-align: center; margin-top: -20px;"}
 [![](figures/data-wrangler01.png)](#){data-modal-type="image" data-modal-url="figures/data-wrangler01.png"}
 :::
 
@@ -76,7 +85,7 @@ editor:
 
 ## Subsetting data with `Data Wrangler`
 
-:::{style="margin-top: 30px; font-size: 20px;"}
+:::{style="margin-top: 30px; font-size: 24px;"}
 :::{.columns}
 :::{.column width="50%"}
 - Quickest way to open it: right-click a `.csv` file → `Open in Data Wrangler`
@@ -120,7 +129,7 @@ editor:
 
 ## Subsetting data with `Data Wrangler`
 
-:::{style="margin-top: 30px; font-size: 21px;"}
+:::{style="margin-top: 30px; font-size: 24px;"}
 :::{.columns}
 :::{.column width="50%"}
 - Click `Filter` to open the filter menu:
@@ -278,12 +287,12 @@ subcols_carfeatures
 
 ## Subsetting data with `pandas`
 
-:::{style="margin-top: 30px; font-size: 24px;"}
+:::{style="margin-top: 30px; font-size: 26px;"}
 - Note that `pandas` uses [double brackets]{.alert} when selecting multiple columns
 - This is because `pandas` [interprets a single bracket as a series]{.alert} (a single column)
 - So we need two brackets to pass a list of columns
 - An explanation for this behavior is that `pandas` is trying to avoid ambiguity
-- Using `df['col1', 'col2']` would be interpreted as trying to access a single column with the name `('col1', 'col2')` 
+- Using `df['col1', 'col2']` would be interpreted as trying to access a single column with the name `'col1', 'col2'` 
 - Yes, it's a bizarre name, but it could happen if you, say, merged two columns and named it like that (which is not a good idea!)
 - More on this [here](https://www.reddit.com/r/learnpython/comments/yl9htk/pandas_module_double_square_brackets_purpose/) and [here](https://stackoverflow.com/questions/33417991/pandas-why-are-double-brackets-needed-to-select-column-after-boolean-indexing)
 :::
@@ -316,7 +325,8 @@ carfeatures[carfeatures['mpg'] >= 25]
 :::{.column width="50%"}
 - This will return a new dataframe with only the rows that satisfy the condition
 - Note that we are using the `[]` operator twice
-- The first `[]` is used to [select the rows]{.alert}, and the second `[]` is used to [select the columns]{.alert}, all in one go
+- The [inner expression]{.alert} `carfeatures['mpg'] >= 25` builds a [True/False mask]{.alert}, one value per row
+- The [outer `[]`]{.alert} then keeps the rows where the mask is `True`
 :::
 :::
 :::
@@ -333,7 +343,74 @@ carfeatures[(carfeatures['acceleration']>=10) & (carfeatures['acceleration']<18)
 ```
 :::
 
-## Subsetting by row/column position 
+## Filtering rows [and]{.alert} selecting columns
+
+:::{style="margin-top: 30px; font-size: 22px;"}
+:::{.columns}
+:::{.column width="50%"}
+- So far the filter has returned [every column]{.alert} for the matching rows
+- What if we only care about a [few columns]{.alert}?
+- We can chain two `[]` operations: first filter the rows, then pick the columns
+
+```{python}
+#| echo: true
+#| eval: true
+carfeatures[carfeatures['mpg'] >= 25][['mpg', 'cylinders']]
+```
+:::
+
+:::{.column width="50%"}
+- Read it as two steps glued together:
+  - `carfeatures[carfeatures['mpg'] >= 25]` keeps the rows with `mpg >= 25`
+  - `[['mpg', 'cylinders']]` picks the two columns from that result
+- If the line feels crowded, save the filter to a variable first
+
+```{python}
+#| echo: true
+#| eval: true
+fast_cars = carfeatures[carfeatures['mpg'] >= 25]
+fast_cars[['mpg', 'cylinders']]
+```
+:::
+:::
+:::
+
+## Doing both in one step with `.loc[]`
+
+:::{style="margin-top: 30px; font-size: 21px;"}
+:::{.columns}
+:::{.column width="50%"}
+- The chain works, but `pandas` gives us a [cleaner one-liner]{.alert}: `.loc[]`
+- Syntax: `df.loc[row_selector, column_selector]`
+- The [row selector]{.alert} can be a boolean mask (just like with `[]`)
+- The [column selector]{.alert} is a list of column names
+
+```{python}
+#| echo: true
+#| eval: true
+carfeatures.loc[carfeatures['mpg'] >= 25, ['mpg', 'cylinders']]
+```
+:::
+
+:::{.column width="50%"}
+- Read it as: "from `carfeatures`, take the [rows]{.alert} where `mpg >= 25` and the [columns]{.alert} `mpg` and `cylinders`"
+- Multiple conditions work the same way as with `[]`
+
+```{python}
+#| echo: true
+#| eval: true
+carfeatures.loc[
+    (carfeatures['cylinders'] == 8) & (carfeatures['mpg'] <= 15),
+    ['mpg', 'cylinders', 'acceleration']
+]
+```
+
+- Why is this useful? `.loc[]` puts [rows and columns side by side]{.alert}, which mirrors how we think about a table
+:::
+:::
+:::
+
+## Subsetting by row/column position
 ### The `.iloc[]` (integer location) method
 
 :::{style="margin-top: 30px; font-size: 20px;"}
@@ -485,6 +562,8 @@ carfeatures.query("mpg >= 25")
 
 :::{style="margin-top: 30px; font-size: 23px;"}
 - Combine multiple conditions with `and`, `&`, `or`, `|`
+- Inside `.query()`, `and` and `&` are equivalent (same for `or` and `|`)
+- Outside `.query()`, you must use `&` and `|`, because Python's `and`/`or` don't work on pandas Series
 
 ```{python}
 #| echo: true
@@ -509,11 +588,12 @@ carfeatures.query("(cylinders == 8) & (mpg <= 15) & (acceleration <= 12)").sort_
 :::{style="margin-top: 30px; font-size: 21px;"}
 - Use `.query()` and select columns
 - Note that we are using the `[[]]` operator to select the columns
-- Also note that we don't need parentheses when using `&` and `|` in the expression, but it is a good practice to use them
+- Inside `.query()`, both `&` and `and` work; we'll stick with `&` for consistency, but feel free to mix them as you wish
+- Parentheses around each condition are not required, but they help readability
 ```{python}
 #| echo: true
 #| eval: true
-carfeatures.query("(cylinders == 8) & (mpg <= 15) and acceleration <= 12")[["mpg", "cylinders", "acceleration"]]
+carfeatures.query("(cylinders == 8) & (mpg <= 15) & (acceleration <= 12)")[["mpg", "cylinders", "acceleration"]]
 ```
 :::
 
