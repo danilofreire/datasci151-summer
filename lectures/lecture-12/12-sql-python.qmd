@@ -66,9 +66,9 @@ editor:
 ## Connecting and creating a cursor
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- To interact with an SQLite database from Python, we first need to [establish a connection]{.alert} and then [create a cursor]{.alert}.
-- The [connection]{.alert} links our script to the database file.
-- The [cursor]{.alert} is like a handle we use to send SQL commands and manage results.
+- To interact with an SQLite database from Python, we first need to [establish a connection]{.alert} and then [create a cursor]{.alert}
+- The [connection]{.alert} links our script to the database file
+- The [cursor]{.alert} is like a handle we use to send SQL commands and manage results
 
 ```{python}
 #| echo: true
@@ -90,14 +90,14 @@ cur = conn.cursor()
 ## Creating tables
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- We define the structure of our data using [`CREATE TABLE`]{.alert}.
-- Use `cur.execute()` to run the command and `conn.commit()` to [save]{.alert} the change.
+- We define the structure of our data using [`CREATE TABLE`]{.alert}
+- Use `cur.execute()` to run the command and `conn.commit()` to [save]{.alert} the change
 
 ```{python}
 #| echo: true
 #| eval: true
 # Use triple quotes for multi-line SQL
-# Drop table if exist 
+# Drop table if it exists
 sql_drop = '''
 DROP TABLE IF EXISTS drivers; 
 '''
@@ -122,15 +122,15 @@ cur.execute(sql_create)
 conn.commit() 
 
 # Check if the table was created
-cur.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='drivers';")
+cur.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='drivers';").fetchone()
 ```
 :::
 
 ## Inserting data
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- Once the table exists, we populate it using [`INSERT INTO`]{.alert}.
-- Again, `cursor.execute()` runs the command, and `conn.commit()` [makes the insertions permanent]{.alert}.
+- Once the table exists, we populate it using [`INSERT INTO`]{.alert}
+- Again, `cursor.execute()` runs the command, and `conn.commit()` [makes the insertions permanent]{.alert}
 
 ```{python}
 #| echo: true
@@ -155,8 +155,8 @@ conn.commit()
 ## Fetching all results (`fetchall`) and one result (`fetchone`)
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- After a `SELECT` query, `fetchall()` retrieves [all results at once]{.alert} into a list of tuples.
-- Useful if you need the full dataset immediately, but can use more memory for large results.
+- After a `SELECT` query, `fetchall()` retrieves [all results at once]{.alert} into a list of tuples
+- Useful if you need the full dataset immediately, but can use more memory for large results
 
 ```{python}
 #| echo: true
@@ -169,8 +169,8 @@ for row in all_rows:
     print(row) 
 ```
 
-- `fetchone()` retrieves rows [one by one]{.alert}. Each call gets the next available row.
-- Returns `None` when no more rows are left. Good for processing sequentially or just getting the top item.
+- `fetchone()` retrieves rows [one by one]{.alert}. Each call gets the next available row
+- Returns `None` when no more rows are left. Good for processing sequentially or just getting the top item
 
 ```{python}
 #| echo: true
@@ -188,7 +188,7 @@ print(row2) # Second row
 ## Iterating over the cursor
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- A more "Pythonic" and [memory-efficient]{.alert} way to process results row-by-row is to iterate directly over the cursor. 
+- A more "Pythonic" and [memory-efficient]{.alert} way to process results row-by-row is to iterate directly over the cursor 
 
 ```{python}
 #| echo: true
@@ -202,7 +202,7 @@ for row_tuple in cur.execute(query):
 
 ```
 
-- However, you can also use `.fetchall()` or `.fetchone()` after executing a query, depending on your needs.
+- However, you can also use `.fetchall()` or `.fetchone()` after executing a query, depending on your needs
 
 ```{python}
 #| echo: true
@@ -217,7 +217,7 @@ cur.execute("SELECT driver_name, team FROM drivers WHERE driver_name LIKE 'M%'")
 ## `IN` and `BETWEEN` operators
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- Use `IN` to check if a column's value matches [any value in a specified list]{.alert}.
+- Use `IN` to check if a column's value matches [any value in a specified list]{.alert}
 
 ```{python}
 #| echo: true
@@ -231,7 +231,7 @@ cur.execute("SELECT driver_name, team FROM drivers WHERE team IN ('Ferrari', 'Me
 #| eval: true
 cur.execute("SELECT driver_name, team FROM drivers WHERE team NOT IN ('Ferrari', 'Mercedes')").fetchall()
 ```
-- `BETWEEN` checks if a value is within a specified range. [Inclusive]{.alert} of the endpoints.
+- `BETWEEN` checks if a value is within a specified range. [Inclusive]{.alert} of the endpoints
 
 ```{python}
 #| echo: true
@@ -239,15 +239,15 @@ cur.execute("SELECT driver_name, team FROM drivers WHERE team NOT IN ('Ferrari',
 cur.execute("SELECT driver_name, victories FROM drivers WHERE victories BETWEEN 10 AND 60").fetchall()
 ```
 
-- `NOT BETWEEN` excludes values within the specified range.
+- `NOT BETWEEN` excludes values within the specified range
 :::
 
 ## `LIKE` operator: basic patterns
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- `LIKE` enables simple pattern matching in text strings.
-  - [`%`]{.alert}: Matches any sequence (including none) of characters.
-  - [`_`]{.alert}: Matches exactly one character.
+- `LIKE` enables simple pattern matching in text strings
+  - [`%`]{.alert}: Matches any sequence (including none) of characters
+  - [`_`]{.alert}: Matches exactly one character
 
 ```{python}
 #| echo: true
@@ -277,7 +277,7 @@ for row in cur.fetchall(): print(row)
 ## `LIKE` operator: case sensitivity and `NOT LIKE`
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- SQLite `LIKE` is case-insensitive by default. Use `LOWER()`/`UPPER()` for [reliable, explicit case handling]{.alert}.
+- SQLite `LIKE` is case-insensitive by default [for ASCII letters only]{.alert} (so `'a'` matches `'A'`, but `'é'` does not match `'É'`). Use `LOWER()`/`UPPER()` for [reliable, explicit case handling]{.alert}
 
 ```{python}
 #| echo: true
@@ -287,28 +287,28 @@ cur.execute("SELECT driver_name FROM drivers WHERE LOWER(driver_name) LIKE 'l%'"
 for row in cur.fetchall(): print(row)
 ```
 
-- You can also use `COLLATE NOCASE` to make a specific comparison case-insensitive. [This is a more general (and recommended) approach.]{.alert}
+- For `=`, `<>`, `<`, `>`, `ORDER BY`, and `GROUP BY`, use [`COLLATE NOCASE`]{.alert} to make the comparison case-insensitive. [Note: `COLLATE NOCASE` has no effect on `LIKE`, which uses its own case-folding (toggled with `PRAGMA case_sensitive_like`)]{.alert}
 
 ```{python}
 #| echo: true
 #| eval: true
-# Case-insensitive search for names starting with 'l' using COLLATE
-cur.execute("SELECT driver_name FROM drivers WHERE driver_name LIKE 'l%' COLLATE NOCASE")
+# Without COLLATE NOCASE, this returns nothing (stored value is 'Mercedes', not 'mercedes')
+cur.execute("SELECT driver_name, team FROM drivers WHERE team = 'mercedes' COLLATE NOCASE")
 for row in cur.fetchall(): print(row)
 ```
 
-- Use `NOT LIKE` to find strings that [do not match]{.alert} the pattern.
+- Use `NOT LIKE` to find strings that [do not match]{.alert} the pattern
 
 :::
 
 ## Try it yourself! 🤓 {#sec:exercise01}
 
 :::{style="margin-top: 50px; font-size: 24px;"}
-- Practice time! Use `cur.execute()` and fetching/looping.
-- Find all drivers whose names start with 'M'.
-- Find drivers whose nationality has exactly 7 characters ([`LENGTH()`]{.alert} function might be useful).
-- List drivers whose names start with 'L' [or]{.alert} 'M'.
-- Find drivers with 1 to 10 victories ([`BETWEEN`]{.alert}).
+- Practice time! Use `cur.execute()` and fetching/looping
+- Find all drivers whose names start with 'M'
+- Find drivers whose nationality has exactly 7 characters ([`LENGTH()`]{.alert} function might be useful)
+- List drivers whose names start with 'L' [or]{.alert} 'M'
+- Find drivers with 1 to 10 victories ([`BETWEEN`]{.alert})
 - [[Appendix 01]{.button}](#sec:appendix01)
 :::
 
@@ -317,7 +317,7 @@ for row in cur.fetchall(): print(row)
 ## Finding NULLs (`IS NULL`) and `COALESCE`
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- SQL represents missing values as `NULL`. Use `IS NULL` to find them. [`IS NOT NULL` finds rows with values]{.alert}.
+- SQL represents missing values as `NULL`. Use `IS NULL` to find them. [`IS NOT NULL` finds rows with values]{.alert}
 
 ```{python}
 #| echo: true
@@ -326,7 +326,7 @@ cur.execute("SELECT driver_name, victories FROM drivers WHERE victories IS NULL"
 for row in cur.fetchall(): print(row)
 ```
 
-- `COALESCE(value1, value2, ...)` is useful for replacing `NULL`s with a default value. It returns the [first non-NULL expression]{.alert} in its arguments.
+- `COALESCE(value1, value2, ...)` is useful for replacing `NULL`s with a default value. It returns the [first non-NULL expression]{.alert} in its arguments
 
 ```{python}
 #| echo: true
@@ -340,11 +340,11 @@ for row in cur.fetchall(): print(row)
 ## `COALESCE` with subqueries
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- The default value in `COALESCE` can be dynamic, calculated by a [subquery]{.alert}.
-- If `victories` is `NOT NULL`, it uses that value. Otherwise, it computes the average from non-NULL rows.
-- The syntax is `COALESCE(column01, column02, ..., (subquery))`.
-- `CAST` converts the result to a specific type, if needed.
-- We use `CAST(... AS INTEGER)` to ensure the result is an integer. But this is optional.
+- The default value in `COALESCE` can be dynamic, calculated by a [subquery]{.alert}
+- If `victories` is `NOT NULL`, it uses that value. Otherwise, it computes the average from non-NULL rows
+- The syntax is `COALESCE(column01, column02, ..., (subquery))`
+- `CAST` converts the result to a specific type, if needed
+- We use `CAST(... AS INTEGER)` to ensure the result is an integer. But this is optional
 
 ```{python}
 #| echo: true
@@ -363,7 +363,7 @@ FROM drivers;
 cur.execute(query_coalesce_sub)
 for row in cur.fetchall(): print(row)
 ```
-- Here, `NULL` victories are replaced by the average of non-NULL victories.
+- Here, `NULL` victories are replaced by the average of non-NULL victories
 :::
 
 # Window functions {background-color="#2d4563"}
@@ -371,15 +371,17 @@ for row in cur.fetchall(): print(row)
 ## Introduction to window functions
 
 :::{style="margin-top: 50px; font-size: 21px;"}
-- Window functions compute values across a set of rows (a "window") related to the current row, without collapsing them like `GROUP BY`.
-- Useful for ranking, running totals, moving averages, etc.
-- Basic syntax involves the [`OVER()`]{.alert} clause.
-- [Requires SQLite version 3.25.0 or newer]{.alert}.
+- Window functions compute values across a set of rows (a "window") related to the current row, without collapsing them like `GROUP BY`
+- Useful for ranking, running totals, moving averages, etc
+- Basic syntax involves the [`OVER()`]{.alert} clause
+- [Requires SQLite version 3.25.0 or newer]{.alert}
 
 ```{python}
 #| echo: true
 #| eval: true
-# Add more data for better examples
+# Add more data for better examples (delete first so re-running is safe)
+cur.execute("DELETE FROM drivers WHERE driver_name IN ('Valtteri Bottas', 'Sergio Perez', 'Lando Norris', 'Esteban Ocon');")
+
 more_drivers = """
 INSERT INTO drivers (driver_name, team, nationality, victories) VALUES
 ('Valtteri Bottas', 'Mercedes', 'Finnish', 10),
@@ -404,9 +406,9 @@ cur.execute("SELECT sqlite_version();").fetchone()
 
 :::{style="margin-top: 50px; font-size: 21px;"}
 - Let's see common window functions in action:
-- `AVG(...) OVER ()`: Average over the entire query result.
-- `AVG(...) OVER (PARTITION BY col)`: Average within groups (partitions) defined by `col`.
-- `RANK() OVER (ORDER BY col)`: Assigns rank based on `col` ([gaps possible for ties]{.alert}).
+- `AVG(...) OVER ()`: Average over the entire query result
+- `AVG(...) OVER (PARTITION BY col)`: Average within groups (partitions) defined by `col`
+- `RANK() OVER (ORDER BY col)`: Assigns rank based on `col` ([gaps possible for ties]{.alert})
 
 ```{python}
 #| echo: true
@@ -422,7 +424,7 @@ WHERE victories IS NOT NULL
 ORDER BY rank_overall; 
 '''
 cur.execute(query_window_avg_rank)
-print([names[0] for names in cur.description]) # Print column names
+print([col[0] for col in cur.description]) # Print column names
 for row in cur.fetchall(): print(row)
 ```
 :::
@@ -430,7 +432,7 @@ for row in cur.fetchall(): print(row)
 ## Window functions vs. `GROUP BY`
 
 :::{style="margin-top: 50px; font-size: 21px;"}
-- A key difference: `GROUP BY` [reduces]{.alert} the number of rows to one per group. Window functions [maintain]{.alert} all original rows and add new columns based on the window calculation.
+- A key difference: `GROUP BY` [reduces]{.alert} the number of rows to one per group. Window functions [maintain]{.alert} all original rows and add new columns based on the window calculation
 
 ```{python}
 #| echo: true
@@ -456,11 +458,11 @@ for row in cur.fetchall(): print(row)
 
 :::{style="margin-top: 50px; font-size: 24px;"}
 - Use a window function:
-- Select `driver_name`, `nationality`, `victories`.
-- Add `rank_nationality`: rank drivers by `victories` [within]{.alert} each `nationality`. ([`PARTITION BY`]{.alert} needed).
-- Exclude `NULL` victories.
-- Order by `nationality`, then `rank_nationality`.
-- Use `cur.execute()` and fetching/looping.
+- Select `driver_name`, `nationality`, `victories`
+- Add `rank_nationality`: rank drivers by `victories` [within]{.alert} each `nationality`. ([`PARTITION BY`]{.alert} needed)
+- Exclude `NULL` victories
+- Order by `nationality`, then `rank_nationality`
+- Use `cur.execute()` and fetching/looping
 - [[Appendix 02]{.button}](#sec:appendix02)
 :::
 
@@ -469,9 +471,9 @@ for row in cur.fetchall(): print(row)
 ## Basic string functions
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- SQLite provides standard functions for text processing.
-- `LENGTH(str)`, `UPPER(str)`, `LOWER(str)`.
-- `SUBSTR(str, start, length)` extracts a portion of the string ([start is 1-indexed]{.alert}).
+- SQLite provides standard functions for text processing
+- `LENGTH(str)`, `UPPER(str)`, `LOWER(str)`
+- `SUBSTR(str, start, length)` extracts a portion of the string ([start is 1-indexed]{.alert})
 
 ```{python}
 #| echo: true
@@ -492,10 +494,10 @@ for row in cur.fetchall(): print(row)
 ## More string functions
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- `TRIM(str)` removes leading/trailing whitespace.
-- `REPLACE(str, find, replace)` substitutes text.
-- `INSTR(str, find)` finds the starting position of `find` within `str` ([0 if not found]{.alert}).
-- The [`||`]{.alert} operator concatenates (joins) strings.
+- `TRIM(str)` removes leading/trailing whitespace
+- `REPLACE(str, find, replace)` substitutes text
+- `INSTR(str, find)` finds the starting position of `find` within `str` ([0 if not found]{.alert})
+- The [`||`]{.alert} operator concatenates (joins) strings
 
 ```{python}
 #| echo: true
@@ -517,7 +519,7 @@ for row in cur.fetchall(): print(row)
 ## Basic `CASE` statement
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- The `CASE` statement is SQL's way of implementing [if-then-else logic]{.alert} within a query.
+- The `CASE` statement is SQL's way of implementing [if-then-else logic]{.alert} within a query
 - `CASE WHEN condition THEN result ELSE default_result END`
 
 ```{python}
@@ -539,7 +541,7 @@ for row in cur.fetchall(): print(row)
 ## `CASE` with multiple conditions
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- You can chain multiple `WHEN` clauses. The [first condition that evaluates to true]{.alert} determines the result for that row. The optional `ELSE` handles cases where no `WHEN` is true.
+- You can chain multiple `WHEN` clauses. The [first condition that evaluates to true]{.alert} determines the result for that row. The optional `ELSE` handles cases where no `WHEN` is true
 
 ```{python}
 #| echo: true
@@ -553,19 +555,19 @@ SELECT driver_name, victories,
         WHEN victories > 0 THEN 'Podium Potential'
         ELSE 'Data Missing or Zero Wins' 
     END AS status
-FROM drivers ORDER BY victories DESC NULLS LAST;
+FROM drivers ORDER BY victories DESC;
 '''
 cur.execute(query_case2)
 for row in cur.fetchall(): print(row)
 ```
 
-- Note: `NULLS LAST` requires SQLite 3.30 or newer. If your version is older, drop the `NULLS LAST` and `DESC` will still put NULLs at the end
+- Note: in SQLite, `ORDER BY ... DESC` already places `NULL`s at the end (`NULL` is treated as smaller than any value), so an explicit `NULLS LAST` is redundant here. Other databases (e.g. PostgreSQL) behave differently, so `NULLS LAST` exists for portability
 :::
 
 ## `CASE` for conditional NULL handling
 
 :::{style="margin-top: 50px; font-size: 22px;"}
-- `CASE` offers more nuanced control over handling `NULL`s compared to just `COALESCE`, allowing checks on [other columns]{.alert}.
+- `CASE` offers more nuanced control over handling `NULL`s compared to just `COALESCE`, allowing checks on [other columns]{.alert}
 
 ```{python}
 #| echo: true
@@ -599,8 +601,8 @@ for row in cur.fetchall(): print(row)
   - 'Intermediate' if 10 <= victories <= 50
   - 'Expert' if victories > 50
   - 'Unknown' if victories is NULL [Handle NULL first!]{.alert}
-- Select `driver_name`, `victories`, `driver_level`.
-- Use `cur.execute()` and fetching/looping.
+- Select `driver_name`, `victories`, `driver_level`
+- Use `cur.execute()` and fetching/looping
 - [[Appendix 03]{.button}](#sec:appendix03) 
 :::
 
@@ -609,8 +611,8 @@ for row in cur.fetchall(): print(row)
 ## Reading data with `pandas.read_sql`
 
 :::{style="margin-top: 50px; font-size: 21px;"}
-- Reading data using loops and `fetchall()` works, but `pandas` makes it much easier for analysis.
-- [`pandas.read_sql()`]{.alert} executes a `SELECT` query and loads the results directly into a DataFrame.
+- Reading data using loops and `fetchall()` works, but `pandas` makes it much easier for analysis
+- [`pandas.read_sql()`]{.alert} executes a `SELECT` query and loads the results directly into a DataFrame
 
 ```{python}
 #| echo: true
@@ -622,13 +624,13 @@ df = pd.read_sql('SELECT * FROM drivers', conn)
 print(df) 
 ```
 
-- This combines execution and fetching into one step, returning a structured table.
+- This combines execution and fetching into one step, returning a structured table
 :::
 
 ## `read_sql` with any `SELECT` query
 
 :::{style="margin-top: 50px; font-size: 21px;"}
-- You can use complex `SELECT` statements, including joins, filtering, ordering, etc., within `read_sql`.
+- You can use complex `SELECT` statements, including joins, filtering, ordering, etc., within `read_sql`
 
 ```{python}
 #| echo: true
@@ -642,7 +644,7 @@ ORDER BY team
 df_filtered_ordered = pd.read_sql(query_pd, conn)
 print(df_filtered_ordered)
 ```
-- `pandas` handles retrieving all the data specified by your SQL query.
+- `pandas` handles retrieving all the data specified by your SQL query
 :::
 
 ## Manipulating DataFrames from SQL
@@ -669,7 +671,7 @@ print(df.query('victories > 50 and nationality == "British"'))
 ## Writing DataFrames to SQL (`to_sql`)
 
 :::{style="margin-top: 50px; font-size: 21px;"}
-- The reverse is also easy: `DataFrame.to_sql()` writes the DataFrame's contents into a database table.
+- The reverse is also easy: `DataFrame.to_sql()` writes the DataFrame's contents into a database table
 
 ```{python}
 #| echo: true
@@ -689,10 +691,10 @@ print(pd.read_sql('SELECT * FROM british_drivers', conn))
 ## Try it yourself! 🤓 {#sec:exercise04}
 
 :::{style="margin-top: 50px; font-size: 20px;"}
-- Create `employees` table (`id`, `name`, `dept`, `salary`) using `cursor`.
-- Insert data for Alice (HR, 50k), Bob (IT, 60k), Charlie (HR, 70k), David (IT, 80k) using `cursor`. Commit.
-- Read the full `employees` table into `df_employees` using [`pd.read_sql()`]{.alert}. Print it.
-- Using [`df_employees`]{.alert}, calculate and print the average salary per department.
+- Create `employees` table (`id`, `name`, `dept`, `salary`) using `cursor`
+- Insert data for Alice (HR, 50k), Bob (IT, 60k), Charlie (HR, 70k), David (IT, 80k) using `cursor`. Commit
+- Read the full `employees` table into `df_employees` using [`pd.read_sql()`]{.alert}. Print it
+- Using [`df_employees`]{.alert}, calculate and print the average salary per department
 - [[Appendix 04]{.button}](#sec:appendix04)
 :::
 
@@ -703,14 +705,13 @@ print(pd.read_sql('SELECT * FROM british_drivers', conn))
 :::{style="margin-top: 50px; font-size: 22px;"}
 :::{.columns}
 :::{.column width="50%"}
-- `sqlite3` provides the basic tools to interact with SQLite from Python.
-- Key steps: `connect()`, `cursor()`, `execute()`, [`commit()`]{.alert}.
-- Fetch results using `fetchone()`, `fetchall()`, or by iterating the cursor.
-- Common SQL commands work as expected.
-- Window functions require [modern SQLite versions]{.alert}.
-- Use `CASE` + `GROUP BY` for pivoting.
-- [`pandas.read_sql()`]{.alert} greatly simplifies loading data for analysis.
-- `df.to_sql()` saves DataFrames back to the database.
+- `sqlite3` provides the basic tools to interact with SQLite from Python
+- Key steps: `connect()`, `cursor()`, `execute()`, [`commit()`]{.alert}
+- Fetch results using `fetchone()`, `fetchall()`, or by iterating the cursor
+- Common SQL commands work as expected
+- Window functions require [modern SQLite versions]{.alert}
+- [`pandas.read_sql()`]{.alert} greatly simplifies loading data for analysis
+- `df.to_sql()` saves DataFrames back to the database
 :::
 
 :::{.column width="50%"}
@@ -831,7 +832,7 @@ SELECT
         WHEN victories < 10 THEN 'Beginner'
     END AS driver_level
 FROM drivers
-ORDER BY victories DESC NULLS LAST;
+ORDER BY victories DESC;
 '''
 cur.execute(query_driver_level)
 print("--- Driver classification using CASE ---")
@@ -862,13 +863,13 @@ cur = conn.cursor()
 cur.execute('DROP TABLE IF EXISTS employees;')
 cur.execute('''
 CREATE TABLE employees (
-    employee_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    employee_name TEXT, department TEXT, salary INTEGER
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT, dept TEXT, salary INTEGER
 );''')
 
 # 2. Insert data
 cur.execute('''
-INSERT INTO employees (employee_name, department, salary) VALUES
+INSERT INTO employees (name, dept, salary) VALUES
 ('Alice', 'HR', 50000),
 ('Bob', 'IT', 60000),
 ('Charlie', 'HR', 70000),
@@ -881,7 +882,7 @@ df_employees = pd.read_sql('SELECT * FROM employees', conn)
 print(df_employees)
 
 # 4. Compute average salary by department using pandas
-avg_salary_dept = df_employees.groupby('department')['salary'].mean()
+avg_salary_dept = df_employees.groupby('dept')['salary'].mean()
 print("\n--- Average salary by department (pandas) ---")
 print(avg_salary_dept)
 

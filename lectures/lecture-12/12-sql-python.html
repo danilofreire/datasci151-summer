@@ -1085,216 +1085,6 @@ opacity: 1;
 .multimodal.show.shown .mm-max {
 transition: none;
 }</style>
-  <style type="text/css">
-
-
-@keyframes skidLeft {
-from {
-transform: translate3d(-20%, 0, 0) skewX(0deg);
-opacity: 0;
-}
-50% {
-transform: translate3d(2%, 0, 0) skewX(-10deg);
-opacity: 1;
-}
-75% {
-transform: translate3d(-1%, 0, 0) skewX(10deg);
-}
-to {
-transform: translate3d(0, 0, 0) skewX(0deg);
-}
-}
-@keyframes skidLeftBig {
-from {
-transform: translate3d(-100%, 0, 0) skewX(0deg);
-opacity: 0;
-}
-50% {
-transform: translate3d(2%, 0, 0) skewX(-10deg);
-opacity: 1;
-}
-75% {
-transform: translate3d(-1%, 0, 0) skewX(10deg);
-}
-to {
-transform: translate3d(0, 0, 0) skewX(0deg);
-}
-}
-@keyframes skidRight {
-from {
-transform: translate3d(20%, 0, 0) skewX(0deg);
-opacity: 0;
-}
-50% {
-transform: translate3d(-2%, 0, 0) skewX(10deg);
-opacity: 1;
-}
-75% {
-transform: translate3d(1%, 0, 0) skewX(-10deg);
-}
-to {
-transform: translate3d(0, 0, 0) skewX(0deg);
-}
-}
-@keyframes skidRightBig {
-from {
-transform: translate3d(100%, 0, 0) skewX(0deg);
-opacity: 0;
-}
-50% {
-transform: translate3d(-2%, 0, 0) skewX(10deg);
-opacity: 1;
-}
-75% {
-transform: translate3d(1%, 0, 0) skewX(-10deg);
-}
-to {
-transform: translate3d(0, 0, 0) skewX(0deg);
-}
-}
-@keyframes shrinkIn {
-from {
-transform: scale3d(1.3, 1.3, 1.3);
-opacity: 0;
-}
-to {
-opacity: 1;
-}
-}
-@keyframes shrinkInBig {
-from {
-transform: scale3d(1.6, 1.6, 1.6);
-opacity: 0;
-}
-to {
-opacity: 1;
-}
-}
-@keyframes shrinkInBlur {
-from {
-transform: scale3d(1.3, 1.3, 1.3);
-opacity: 0;
-filter: blur(5px);
-}
-75% {
-opacity: 1;
-filter: blur(0.5px);
-}
-100% {
-transform: scale3d(1, 1, 1);
-}
-}
-
-.skidRight, .animate__skidRight {
-animation-name: skidRight;
-}
-.skidRightBig, .animate__skidRightBig {
-animation-name: skidRightBig;
-}
-.skidLeft, .animate__skidLeft {
-animation-name: skidLeft;
-}
-.skidLeftBig, .animate__skidLeftBig {
-animation-name: skidLeftBig;
-}
-.shrinkIn, .animate__shrinkIn {
-animation-name: shrinkIn;
-}
-.shrinkInBig, .animate__shrinkInBig {
-animation-name: shrinkInBig;
-}
-.shrinkInBlur, .animate__shrinkInBlur {
-animation-name: shrinkIn;
-}
-.shrinkInBlurAnyway, .animate__shrinkInBlurAnyway {
-backface-visibility: hidden;
-perspective: 1000;
-transform: translate3d(0, 0, 0) translateZ(0);
-animation-name: shrinkInBlur;
-}
-
-section:not(.stack):not([data-appearance-can-start]) .animate__animated, section:not(.stack):not([data-appearance-can-start]) .animated {
-opacity: 0;
-animation: none;
-}
-section:not(.stack)[data-appearance-can-start] .animate__animated:not(.fragment), section:not(.stack)[data-appearance-can-start] .animated:not(.fragment) {
-opacity: 1;
-}
-
-section:not(.stack):not([data-appearance-can-start]) .animate__animated,
-section:not(.stack):not([data-appearance-can-start]) .animated,
-.fragment:not(.visible) .animate__animated,
-.fragment:not(.visible) .animated {
-opacity: 0;
-animation: none;
-will-change: animation;
-}
-.reveal.overview section:not(.stack):not([data-appearance-can-start]) .animated,
-.reveal.overview section:not(.stack):not([data-appearance-can-start]) .animate__animated,
-.reveal.overview .fragment:not(.visible) .animated,
-.reveal.overview .fragment:not(.visible) .animate__animated {
-visibility: visible;
-animation: none;
-opacity: 1;
-}
-
-.reveal .fragment.animate__animated:not(.visible), .reveal .fragment.animated:not(.visible) {
-transition: all 0.2s ease;
-opacity: 0;
-animation: none;
-will-change: animation;
-}
-.reveal .fragment.animate__animated.visible:not(.animationended), .reveal .fragment.animated.visible:not(.animationended) {
-transition: none;
-}
-.reveal .fragment.animate__animated.visible.animationended, .reveal .fragment.animated.visible.animationended {
-animation: none;
-transition: all 0.2s ease;
-}
-i.animate__animated, i.animated, span.animate__animated, span.animated {
-display: inline-block;
-}
-.animate__animated[data-auto-animate-target]:not([data-auto-animate-target=unmatched]) {
-animation: none;
-}
-[data-auto-animate=running] .animate__animated[data-auto-animate-target]:not([data-auto-animate-target=unmatched]) {
-opacity: 1 !important;
-}
-.fast, .animate__fast {
-animation-duration: calc(var(--animate-duration) * 0.8);
-}
-.faster, .animate__faster {
-animation-duration: calc(var(--animate-duration) / 2);
-}
-.slow, .animate__slow {
-animation-duration: calc(var(--animate-duration) * 2);
-}
-.slower, .animate__slower {
-animation-duration: calc(var(--animate-duration) * 3);
-}
-.print-pdf .animated, .print-pdf .animate__animated,
-.print-pdf section:not(.stack):not([data-appearance-can-start]) .animated,
-.print-pdf section:not(.stack):not([data-appearance-can-start]) .animate__animated {
-opacity: 1;
-visibility: visible;
-animation: none;
-}
-.print-pdf .reveal .fragment {
-opacity: 1;
-}
-.reveal.sv .animated, .reveal.sv .animate__animated,
-.reveal.sv section:not(.stack):not([data-appearance-can-start]) .animated:not(.fragment),
-.reveal.sv section:not(.stack):not([data-appearance-can-start]) .animate__animated:not(.fragment),
-.reveal.sv section:not(.stack):not([data-appearance-can-start]) .animated.fragment.visible,
-.reveal.sv section:not(.stack):not([data-appearance-can-start]) .animate__animated.fragment.visible, .reveal-viewport.sv .animated, .reveal-viewport.sv .animate__animated,
-.reveal-viewport.sv section:not(.stack):not([data-appearance-can-start]) .animated:not(.fragment),
-.reveal-viewport.sv section:not(.stack):not([data-appearance-can-start]) .animate__animated:not(.fragment),
-.reveal-viewport.sv section:not(.stack):not([data-appearance-can-start]) .animated.fragment.visible,
-.reveal-viewport.sv section:not(.stack):not([data-appearance-can-start]) .animate__animated.fragment.visible {
-opacity: 1;
-visibility: visible;
-animation: none;
-}</style>
   <style type="text/css">.reveal .slide-logo {
 display: block;
 position: fixed;
@@ -1551,11 +1341,11 @@ Danilo Freire
 <h2>Connecting and creating a cursor</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <ul>
-<li>To interact with an SQLite database from Python, we first need to <span class="alert">establish a connection</span> and then <span class="alert">create a cursor</span>.</li>
-<li>The <span class="alert">connection</span> links our script to the database file.</li>
-<li>The <span class="alert">cursor</span> is like a handle we use to send SQL commands and manage results.</li>
+<li>To interact with an SQLite database from Python, we first need to <span class="alert">establish a connection</span> and then <span class="alert">create a cursor</span></li>
+<li>The <span class="alert">connection</span> links our script to the database file</li>
+<li>The <span class="alert">cursor</span> is like a handle we use to send SQL commands and manage results</li>
 </ul>
-<div id="a348670f" class="cell" data-execution_count="1">
+<div id="858ea0fa" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href></a><span class="im">import</span> sqlite3</span>
 <span id="cb1-2"><a href></a></span>
 <span id="cb1-3"><a href></a>db_file <span class="op">=</span> <span class="st">&#39;lecture12.db&#39;</span> <span class="co"># Database filename</span></span>
@@ -1577,12 +1367,12 @@ Danilo Freire
 <h2>Creating tables</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <ul>
-<li>We define the structure of our data using <span class="alert"><code>CREATE TABLE</code></span>.</li>
-<li>Use <code>cur.execute()</code> to run the command and <code>conn.commit()</code> to <span class="alert">save</span> the change.</li>
+<li>We define the structure of our data using <span class="alert"><code>CREATE TABLE</code></span></li>
+<li>Use <code>cur.execute()</code> to run the command and <code>conn.commit()</code> to <span class="alert">save</span> the change</li>
 </ul>
-<div id="94b08448" class="cell" data-execution_count="2">
+<div id="9161e950" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href></a><span class="co"># Use triple quotes for multi-line SQL</span></span>
-<span id="cb2-2"><a href></a><span class="co"># Drop table if exist </span></span>
+<span id="cb2-2"><a href></a><span class="co"># Drop table if it exists</span></span>
 <span id="cb2-3"><a href></a>sql_drop <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb2-4"><a href></a><span class="st">DROP TABLE IF EXISTS drivers; </span></span>
 <span id="cb2-5"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
@@ -1607,9 +1397,9 @@ Danilo Freire
 <span id="cb2-24"><a href></a>conn.commit() </span>
 <span id="cb2-25"><a href></a></span>
 <span id="cb2-26"><a href></a><span class="co"># Check if the table was created</span></span>
-<span id="cb2-27"><a href></a>cur.execute(<span class="st">&quot;SELECT name FROM sqlite_master WHERE type=&#39;table&#39; AND name=&#39;drivers&#39;;&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-27"><a href></a>cur.execute(<span class="st">&quot;SELECT name FROM sqlite_master WHERE type=&#39;table&#39; AND name=&#39;drivers&#39;;&quot;</span>).fetchone()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>&lt;sqlite3.Cursor at 0x796083f747c0&gt;</code></pre>
+<pre><code>(&#39;drivers&#39;,)</code></pre>
 </div>
 </div>
 </div>
@@ -1618,10 +1408,10 @@ Danilo Freire
 <h2>Inserting data</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <ul>
-<li>Once the table exists, we populate it using <span class="alert"><code>INSERT INTO</code></span>.</li>
-<li>Again, <code>cursor.execute()</code> runs the command, and <code>conn.commit()</code> <span class="alert">makes the insertions permanent</span>.</li>
+<li>Once the table exists, we populate it using <span class="alert"><code>INSERT INTO</code></span></li>
+<li>Again, <code>cursor.execute()</code> runs the command, and <code>conn.commit()</code> <span class="alert">makes the insertions permanent</span></li>
 </ul>
-<div id="b6a9341b" class="cell" data-execution_count="3">
+<div id="41a826a7" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href></a><span class="co"># Insert a few rows</span></span>
 <span id="cb4-2"><a href></a>insert_query <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb4-3"><a href></a><span class="st">INSERT INTO drivers (driver_name, team, nationality, victories) VALUES</span></span>
@@ -1643,10 +1433,10 @@ Danilo Freire
 <h2>Fetching all results (<code>fetchall</code>) and one result (<code>fetchone</code>)</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <ul>
-<li>After a <code>SELECT</code> query, <code>fetchall()</code> retrieves <span class="alert">all results at once</span> into a list of tuples.</li>
-<li>Useful if you need the full dataset immediately, but can use more memory for large results.</li>
+<li>After a <code>SELECT</code> query, <code>fetchall()</code> retrieves <span class="alert">all results at once</span> into a list of tuples</li>
+<li>Useful if you need the full dataset immediately, but can use more memory for large results</li>
 </ul>
-<div id="6092f5d7" class="cell" data-execution_count="4">
+<div id="16e06247" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href></a>cur.execute(<span class="st">&#39;SELECT driver_id, driver_name, team FROM drivers&#39;</span>) </span>
 <span id="cb5-2"><a href></a>all_rows <span class="op">=</span> cur.fetchall() <span class="co"># Get the list of tuples</span></span>
 <span id="cb5-3"><a href></a></span>
@@ -1661,10 +1451,10 @@ Danilo Freire
 </div>
 </div>
 <ul>
-<li><code>fetchone()</code> retrieves rows <span class="alert">one by one</span>. Each call gets the next available row.</li>
-<li>Returns <code>None</code> when no more rows are left. Good for processing sequentially or just getting the top item.</li>
+<li><code>fetchone()</code> retrieves rows <span class="alert">one by one</span>. Each call gets the next available row</li>
+<li>Returns <code>None</code> when no more rows are left. Good for processing sequentially or just getting the top item</li>
 </ul>
-<div id="9b71cbb6" class="cell" data-execution_count="5">
+<div id="3ad317b7" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href></a>cur.execute(<span class="st">&#39;SELECT driver_id, driver_name FROM drivers ORDER BY driver_id&#39;</span>)</span>
 <span id="cb7-2"><a href></a></span>
 <span id="cb7-3"><a href></a>row1 <span class="op">=</span> cur.fetchone()</span>
@@ -1683,9 +1473,9 @@ Danilo Freire
 <h2>Iterating over the cursor</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <ul>
-<li>A more “Pythonic” and <span class="alert">memory-efficient</span> way to process results row-by-row is to iterate directly over the cursor.</li>
+<li>A more “Pythonic” and <span class="alert">memory-efficient</span> way to process results row-by-row is to iterate directly over the cursor</li>
 </ul>
-<div id="b1f02ebd" class="cell" data-execution_count="6">
+<div id="15721c76" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href></a><span class="co"># Execute the query</span></span>
 <span id="cb9-2"><a href></a>query <span class="op">=</span> <span class="st">&quot;SELECT driver_name, team FROM drivers WHERE driver_name LIKE &#39;M%&#39;&quot;</span></span>
 <span id="cb9-3"><a href></a></span>
@@ -1697,9 +1487,9 @@ Danilo Freire
 </div>
 </div>
 <ul>
-<li>However, you can also use <code>.fetchall()</code> or <code>.fetchone()</code> after executing a query, depending on your needs.</li>
+<li>However, you can also use <code>.fetchall()</code> or <code>.fetchone()</code> after executing a query, depending on your needs</li>
 </ul>
-<div id="7a6b059a" class="cell" data-execution_count="7">
+<div id="bf27d3b7" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href></a><span class="co"># Fetch all results at once</span></span>
 <span id="cb11-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, team FROM drivers WHERE driver_name LIKE &#39;M%&#39;&quot;</span>).fetchall()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
@@ -1717,9 +1507,9 @@ Danilo Freire
 <h2><code>IN</code> and <code>BETWEEN</code> operators</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <ul>
-<li>Use <code>IN</code> to check if a column’s value matches <span class="alert">any value in a specified list</span>.</li>
+<li>Use <code>IN</code> to check if a column’s value matches <span class="alert">any value in a specified list</span></li>
 </ul>
-<div id="dbd74a18" class="cell" data-execution_count="8">
+<div id="5258358c" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, team FROM drivers WHERE team IN (&#39;Ferrari&#39;, &#39;Mercedes&#39;)&quot;</span>).fetchall()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>[(&#39;Lewis Hamilton&#39;, &#39;Mercedes&#39;), (&#39;Charles Leclerc&#39;, &#39;Ferrari&#39;)]</code></pre>
@@ -1728,23 +1518,23 @@ Danilo Freire
 <ul>
 <li><code>NOT IN</code> works similarly to exclude values in the list.</li>
 </ul>
-<div id="de4d54d6" class="cell" data-execution_count="9">
+<div id="0a85adf8" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, team FROM drivers WHERE team NOT IN (&#39;Ferrari&#39;, &#39;Mercedes&#39;)&quot;</span>).fetchall()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>[(&#39;Max Verstappen&#39;, &#39;Red Bull Racing&#39;), (&#39;Fernando Alonso&#39;, &#39;Aston Martin&#39;)]</code></pre>
 </div>
 </div>
 <ul>
-<li><code>BETWEEN</code> checks if a value is within a specified range. <span class="alert">Inclusive</span> of the endpoints.</li>
+<li><code>BETWEEN</code> checks if a value is within a specified range. <span class="alert">Inclusive</span> of the endpoints</li>
 </ul>
-<div id="e6491a97" class="cell" data-execution_count="10">
+<div id="3c175512" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, victories FROM drivers WHERE victories BETWEEN 10 AND 60&quot;</span>).fetchall()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>[(&#39;Max Verstappen&#39;, 55)]</code></pre>
 </div>
 </div>
 <ul>
-<li><code>NOT BETWEEN</code> excludes values within the specified range.</li>
+<li><code>NOT BETWEEN</code> excludes values within the specified range</li>
 </ul>
 </div>
 </section>
@@ -1752,13 +1542,13 @@ Danilo Freire
 <h2><code>LIKE</code> operator: basic patterns</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <ul>
-<li><code>LIKE</code> enables simple pattern matching in text strings.
+<li><code>LIKE</code> enables simple pattern matching in text strings
 <ul>
-<li><span class="alert"><code>%</code></span>: Matches any sequence (including none) of characters.</li>
-<li><span class="alert"><code>_</code></span>: Matches exactly one character.</li>
+<li><span class="alert"><code>%</code></span>: Matches any sequence (including none) of characters</li>
+<li><span class="alert"><code>_</code></span>: Matches exactly one character</li>
 </ul></li>
 </ul>
-<div id="94c18c15" class="cell" data-execution_count="11">
+<div id="96bdca96" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href></a><span class="co"># Starts with &#39;L&#39;</span></span>
 <span id="cb19-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name FROM drivers WHERE driver_name LIKE &#39;L%&#39;&quot;</span>)</span>
 <span id="cb19-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1766,7 +1556,7 @@ Danilo Freire
 <pre><code>(&#39;Lewis Hamilton&#39;,)</code></pre>
 </div>
 </div>
-<div id="2ec2ffc4" class="cell" data-execution_count="12">
+<div id="384665de" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href></a><span class="co"># Ends with &#39;Racing&#39;</span></span>
 <span id="cb21-2"><a href></a>cur.execute(<span class="st">&quot;SELECT team FROM drivers WHERE team LIKE &#39;%Racing&#39;&quot;</span>)</span>
 <span id="cb21-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1774,7 +1564,7 @@ Danilo Freire
 <pre><code>(&#39;Red Bull Racing&#39;,)</code></pre>
 </div>
 </div>
-<div id="f3820e71" class="cell" data-execution_count="13">
+<div id="febc711b" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href></a><span class="co"># &#39;e&#39; as the second letter</span></span>
 <span id="cb23-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name FROM drivers WHERE driver_name LIKE &#39;_e%&#39;&quot;</span>)</span>
 <span id="cb23-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1789,9 +1579,9 @@ Danilo Freire
 <h2><code>LIKE</code> operator: case sensitivity and <code>NOT LIKE</code></h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <ul>
-<li>SQLite <code>LIKE</code> is case-insensitive by default. Use <code>LOWER()</code>/<code>UPPER()</code> for <span class="alert">reliable, explicit case handling</span>.</li>
+<li>SQLite <code>LIKE</code> is case-insensitive by default <span class="alert">for ASCII letters only</span> (so <code>&#39;a&#39;</code> matches <code>&#39;A&#39;</code>, but <code>&#39;é&#39;</code> does not match <code>&#39;É&#39;</code>). Use <code>LOWER()</code>/<code>UPPER()</code> for <span class="alert">reliable, explicit case handling</span></li>
 </ul>
-<div id="64be0793" class="cell" data-execution_count="14">
+<div id="7976cb87" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href></a><span class="co"># Case-insensitive search for names starting with &#39;l&#39;</span></span>
 <span id="cb25-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name FROM drivers WHERE LOWER(driver_name) LIKE &#39;l%&#39;&quot;</span>)</span>
 <span id="cb25-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1800,18 +1590,18 @@ Danilo Freire
 </div>
 </div>
 <ul>
-<li>You can also use <code>COLLATE NOCASE</code> to make a specific comparison case-insensitive. <span class="alert">This is a more general (and recommended) approach.</span></li>
+<li>For <code>=</code>, <code>&lt;&gt;</code>, <code>&lt;</code>, <code>&gt;</code>, <code>ORDER BY</code>, and <code>GROUP BY</code>, use <span class="alert"><code>COLLATE NOCASE</code></span> to make the comparison case-insensitive. <span class="alert">Note: <code>COLLATE NOCASE</code> has no effect on <code>LIKE</code>, which uses its own case-folding (toggled with <code>PRAGMA case_sensitive_like</code>)</span></li>
 </ul>
-<div id="417c1ad1" class="cell" data-execution_count="15">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href></a><span class="co"># Case-insensitive search for names starting with &#39;l&#39; using COLLATE</span></span>
-<span id="cb27-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name FROM drivers WHERE driver_name LIKE &#39;l%&#39; COLLATE NOCASE&quot;</span>)</span>
+<div id="45b64c6a" class="cell" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href></a><span class="co"># Without COLLATE NOCASE, this returns nothing (stored value is &#39;Mercedes&#39;, not &#39;mercedes&#39;)</span></span>
+<span id="cb27-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, team FROM drivers WHERE team = &#39;mercedes&#39; COLLATE NOCASE&quot;</span>)</span>
 <span id="cb27-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>(&#39;Lewis Hamilton&#39;,)</code></pre>
+<pre><code>(&#39;Lewis Hamilton&#39;, &#39;Mercedes&#39;)</code></pre>
 </div>
 </div>
 <ul>
-<li>Use <code>NOT LIKE</code> to find strings that <span class="alert">do not match</span> the pattern.</li>
+<li>Use <code>NOT LIKE</code> to find strings that <span class="alert">do not match</span> the pattern</li>
 </ul>
 </div>
 </section>
@@ -1819,11 +1609,11 @@ Danilo Freire
 <h2>Try it yourself! 🤓</h2>
 <div style="margin-top: 50px; font-size: 24px;">
 <ul>
-<li>Practice time! Use <code>cur.execute()</code> and fetching/looping.</li>
-<li>Find all drivers whose names start with ‘M’.</li>
-<li>Find drivers whose nationality has exactly 7 characters (<span class="alert"><code>LENGTH()</code></span> function might be useful).</li>
-<li>List drivers whose names start with ‘L’ <span class="alert">or</span> ‘M’.</li>
-<li>Find drivers with 1 to 10 victories (<span class="alert"><code>BETWEEN</code></span>).</li>
+<li>Practice time! Use <code>cur.execute()</code> and fetching/looping</li>
+<li>Find all drivers whose names start with ‘M’</li>
+<li>Find drivers whose nationality has exactly 7 characters (<span class="alert"><code>LENGTH()</code></span> function might be useful)</li>
+<li>List drivers whose names start with ‘L’ <span class="alert">or</span> ‘M’</li>
+<li>Find drivers with 1 to 10 victories (<span class="alert"><code>BETWEEN</code></span>)</li>
 <li><a href="#/sec:appendix01"><span class="button">Appendix 01</span></a></li>
 </ul>
 </div>
@@ -1837,9 +1627,9 @@ Danilo Freire
 <h2>Finding NULLs (<code>IS NULL</code>) and <code>COALESCE</code></h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <ul>
-<li>SQL represents missing values as <code>NULL</code>. Use <code>IS NULL</code> to find them. <span class="alert"><code>IS NOT NULL</code> finds rows with values</span>.</li>
+<li>SQL represents missing values as <code>NULL</code>. Use <code>IS NULL</code> to find them. <span class="alert"><code>IS NOT NULL</code> finds rows with values</span></li>
 </ul>
-<div id="84a1ad76" class="cell" data-execution_count="16">
+<div id="e7f30e38" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, victories FROM drivers WHERE victories IS NULL&quot;</span>)</span>
 <span id="cb29-2"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -1848,9 +1638,9 @@ Danilo Freire
 </div>
 </div>
 <ul>
-<li><code>COALESCE(value1, value2, ...)</code> is useful for replacing <code>NULL</code>s with a default value. It returns the <span class="alert">first non-NULL expression</span> in its arguments.</li>
+<li><code>COALESCE(value1, value2, ...)</code> is useful for replacing <code>NULL</code>s with a default value. It returns the <span class="alert">first non-NULL expression</span> in its arguments</li>
 </ul>
-<div id="561ee97c" class="cell" data-execution_count="17">
+<div id="d53dc22b" class="cell" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href></a><span class="co"># If &#39;victories&#39; is NULL, display 0 instead.</span></span>
 <span id="cb31-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, COALESCE(victories, 0) AS victories_filled FROM drivers&quot;</span>)</span>
 <span id="cb31-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1867,13 +1657,13 @@ Danilo Freire
 <h2><code>COALESCE</code> with subqueries</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <ul>
-<li>The default value in <code>COALESCE</code> can be dynamic, calculated by a <span class="alert">subquery</span>.</li>
-<li>If <code>victories</code> is <code>NOT NULL</code>, it uses that value. Otherwise, it computes the average from non-NULL rows.</li>
-<li>The syntax is <code>COALESCE(column01, column02, ..., (subquery))</code>.</li>
-<li><code>CAST</code> converts the result to a specific type, if needed.</li>
-<li>We use <code>CAST(... AS INTEGER)</code> to ensure the result is an integer. But this is optional.</li>
+<li>The default value in <code>COALESCE</code> can be dynamic, calculated by a <span class="alert">subquery</span></li>
+<li>If <code>victories</code> is <code>NOT NULL</code>, it uses that value. Otherwise, it computes the average from non-NULL rows</li>
+<li>The syntax is <code>COALESCE(column01, column02, ..., (subquery))</code></li>
+<li><code>CAST</code> converts the result to a specific type, if needed</li>
+<li>We use <code>CAST(... AS INTEGER)</code> to ensure the result is an integer. But this is optional</li>
 </ul>
-<div id="da08b9c7" class="cell" data-execution_count="18">
+<div id="df3ddac9" class="cell" data-execution_count="18">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href></a>query_coalesce_sub <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb33-2"><a href></a><span class="st">SELECT </span></span>
 <span id="cb33-3"><a href></a><span class="st">  driver_name,</span></span>
@@ -1895,7 +1685,7 @@ Danilo Freire
 </div>
 </div>
 <ul>
-<li>Here, <code>NULL</code> victories are replaced by the average of non-NULL victories.</li>
+<li>Here, <code>NULL</code> victories are replaced by the average of non-NULL victories</li>
 </ul>
 </div>
 </section></section>
@@ -1908,30 +1698,32 @@ Danilo Freire
 <h2>Introduction to window functions</h2>
 <div style="margin-top: 50px; font-size: 21px;">
 <ul>
-<li>Window functions compute values across a set of rows (a “window”) related to the current row, without collapsing them like <code>GROUP BY</code>.</li>
-<li>Useful for ranking, running totals, moving averages, etc.</li>
-<li>Basic syntax involves the <span class="alert"><code>OVER()</code></span> clause.</li>
-<li><span class="alert">Requires SQLite version 3.25.0 or newer</span>.</li>
+<li>Window functions compute values across a set of rows (a “window”) related to the current row, without collapsing them like <code>GROUP BY</code></li>
+<li>Useful for ranking, running totals, moving averages, etc</li>
+<li>Basic syntax involves the <span class="alert"><code>OVER()</code></span> clause</li>
+<li><span class="alert">Requires SQLite version 3.25.0 or newer</span></li>
 </ul>
-<div id="012f623f" class="cell" data-execution_count="19">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href></a><span class="co"># Add more data for better examples</span></span>
-<span id="cb35-2"><a href></a>more_drivers <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb35-3"><a href></a><span class="st">INSERT INTO drivers (driver_name, team, nationality, victories) VALUES</span></span>
-<span id="cb35-4"><a href></a><span class="st">(&#39;Valtteri Bottas&#39;, &#39;Mercedes&#39;, &#39;Finnish&#39;, 10),</span></span>
-<span id="cb35-5"><a href></a><span class="st">(&#39;Sergio Perez&#39;, &#39;Red Bull Racing&#39;, &#39;Mexican&#39;, 5),</span></span>
-<span id="cb35-6"><a href></a><span class="st">(&#39;Lando Norris&#39;, &#39;McLaren&#39;, &#39;British&#39;, 2),</span></span>
-<span id="cb35-7"><a href></a><span class="st">(&#39;Esteban Ocon&#39;, &#39;Alpine&#39;, &#39;French&#39;, 1);</span></span>
-<span id="cb35-8"><a href></a><span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb35-9"><a href></a></span>
-<span id="cb35-10"><a href></a>cur.execute(more_drivers)</span>
+<div id="6487895c" class="cell" data-execution_count="19">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href></a><span class="co"># Add more data for better examples (delete first so re-running is safe)</span></span>
+<span id="cb35-2"><a href></a>cur.execute(<span class="st">&quot;DELETE FROM drivers WHERE driver_name IN (&#39;Valtteri Bottas&#39;, &#39;Sergio Perez&#39;, &#39;Lando Norris&#39;, &#39;Esteban Ocon&#39;);&quot;</span>)</span>
+<span id="cb35-3"><a href></a></span>
+<span id="cb35-4"><a href></a>more_drivers <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb35-5"><a href></a><span class="st">INSERT INTO drivers (driver_name, team, nationality, victories) VALUES</span></span>
+<span id="cb35-6"><a href></a><span class="st">(&#39;Valtteri Bottas&#39;, &#39;Mercedes&#39;, &#39;Finnish&#39;, 10),</span></span>
+<span id="cb35-7"><a href></a><span class="st">(&#39;Sergio Perez&#39;, &#39;Red Bull Racing&#39;, &#39;Mexican&#39;, 5),</span></span>
+<span id="cb35-8"><a href></a><span class="st">(&#39;Lando Norris&#39;, &#39;McLaren&#39;, &#39;British&#39;, 2),</span></span>
+<span id="cb35-9"><a href></a><span class="st">(&#39;Esteban Ocon&#39;, &#39;Alpine&#39;, &#39;French&#39;, 1);</span></span>
+<span id="cb35-10"><a href></a><span class="st">&quot;&quot;&quot;</span></span>
 <span id="cb35-11"><a href></a></span>
-<span id="cb35-12"><a href></a>cur.execute(<span class="st">&quot;SELECT * FROM drivers&quot;</span>) <span class="co"># Check inserted data</span></span>
+<span id="cb35-12"><a href></a>cur.execute(more_drivers)</span>
 <span id="cb35-13"><a href></a></span>
-<span id="cb35-14"><a href></a><span class="co"># Fetch and print data</span></span>
-<span id="cb35-15"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
-<span id="cb35-16"><a href></a></span>
-<span id="cb35-17"><a href></a><span class="co"># Check SQLite Version</span></span>
-<span id="cb35-18"><a href></a>cur.execute(<span class="st">&quot;SELECT sqlite_version();&quot;</span>).fetchone()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb35-14"><a href></a>cur.execute(<span class="st">&quot;SELECT * FROM drivers&quot;</span>) <span class="co"># Check inserted data</span></span>
+<span id="cb35-15"><a href></a></span>
+<span id="cb35-16"><a href></a><span class="co"># Fetch and print data</span></span>
+<span id="cb35-17"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
+<span id="cb35-18"><a href></a></span>
+<span id="cb35-19"><a href></a><span class="co"># Check SQLite Version</span></span>
+<span id="cb35-20"><a href></a>cur.execute(<span class="st">&quot;SELECT sqlite_version();&quot;</span>).fetchone()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(1, &#39;Lewis Hamilton&#39;, &#39;Mercedes&#39;, &#39;British&#39;, 103)
 (2, &#39;Max Verstappen&#39;, &#39;Red Bull Racing&#39;, &#39;Dutch&#39;, 55)
@@ -1953,11 +1745,11 @@ Danilo Freire
 <div style="margin-top: 50px; font-size: 21px;">
 <ul>
 <li>Let’s see common window functions in action:</li>
-<li><code>AVG(...) OVER ()</code>: Average over the entire query result.</li>
-<li><code>AVG(...) OVER (PARTITION BY col)</code>: Average within groups (partitions) defined by <code>col</code>.</li>
-<li><code>RANK() OVER (ORDER BY col)</code>: Assigns rank based on <code>col</code> (<span class="alert">gaps possible for ties</span>).</li>
+<li><code>AVG(...) OVER ()</code>: Average over the entire query result</li>
+<li><code>AVG(...) OVER (PARTITION BY col)</code>: Average within groups (partitions) defined by <code>col</code></li>
+<li><code>RANK() OVER (ORDER BY col)</code>: Assigns rank based on <code>col</code> (<span class="alert">gaps possible for ties</span>)</li>
 </ul>
-<div id="c14025a2" class="cell" data-execution_count="20">
+<div id="53238275" class="cell" data-execution_count="20">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href></a>query_window_avg_rank <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb38-2"><a href></a><span class="st">SELECT </span></span>
 <span id="cb38-3"><a href></a><span class="st">    driver_name, team, victories,</span></span>
@@ -1969,7 +1761,7 @@ Danilo Freire
 <span id="cb38-9"><a href></a><span class="st">ORDER BY rank_overall; </span></span>
 <span id="cb38-10"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb38-11"><a href></a>cur.execute(query_window_avg_rank)</span>
-<span id="cb38-12"><a href></a><span class="bu">print</span>([names[<span class="dv">0</span>] <span class="cf">for</span> names <span class="kw">in</span> cur.description]) <span class="co"># Print column names</span></span>
+<span id="cb38-12"><a href></a><span class="bu">print</span>([col[<span class="dv">0</span>] <span class="cf">for</span> col <span class="kw">in</span> cur.description]) <span class="co"># Print column names</span></span>
 <span id="cb38-13"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[&#39;driver_name&#39;, &#39;team&#39;, &#39;victories&#39;, &#39;avg_overall&#39;, &#39;avg_team&#39;, &#39;rank_overall&#39;]
@@ -1987,9 +1779,9 @@ Danilo Freire
 <h2>Window functions vs. <code>GROUP BY</code></h2>
 <div style="margin-top: 50px; font-size: 21px;">
 <ul>
-<li>A key difference: <code>GROUP BY</code> <span class="alert">reduces</span> the number of rows to one per group. Window functions <span class="alert">maintain</span> all original rows and add new columns based on the window calculation.</li>
+<li>A key difference: <code>GROUP BY</code> <span class="alert">reduces</span> the number of rows to one per group. Window functions <span class="alert">maintain</span> all original rows and add new columns based on the window calculation</li>
 </ul>
-<div id="b44ce64a" class="cell" data-execution_count="21">
+<div id="472f1f61" class="cell" data-execution_count="21">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href></a><span class="co"># GROUP BY example (summarises)</span></span>
 <span id="cb40-2"><a href></a>cur.execute(<span class="st">&quot;SELECT team, ROUND(AVG(victories), 2) FROM drivers WHERE victories IS NOT NULL GROUP BY team&quot;</span>)</span>
 <span id="cb40-3"><a href></a><span class="bu">print</span>(<span class="st">&quot;--- GROUP BY Output (Collapsed) ---&quot;</span>)</span>
@@ -2027,11 +1819,11 @@ Danilo Freire
 <div style="margin-top: 50px; font-size: 24px;">
 <ul>
 <li>Use a window function:</li>
-<li>Select <code>driver_name</code>, <code>nationality</code>, <code>victories</code>.</li>
-<li>Add <code>rank_nationality</code>: rank drivers by <code>victories</code> <span class="alert">within</span> each <code>nationality</code>. (<span class="alert"><code>PARTITION BY</code></span> needed).</li>
-<li>Exclude <code>NULL</code> victories.</li>
-<li>Order by <code>nationality</code>, then <code>rank_nationality</code>.</li>
-<li>Use <code>cur.execute()</code> and fetching/looping.</li>
+<li>Select <code>driver_name</code>, <code>nationality</code>, <code>victories</code></li>
+<li>Add <code>rank_nationality</code>: rank drivers by <code>victories</code> <span class="alert">within</span> each <code>nationality</code>. (<span class="alert"><code>PARTITION BY</code></span> needed)</li>
+<li>Exclude <code>NULL</code> victories</li>
+<li>Order by <code>nationality</code>, then <code>rank_nationality</code></li>
+<li>Use <code>cur.execute()</code> and fetching/looping</li>
 <li><a href="#/sec:appendix02"><span class="button">Appendix 02</span></a></li>
 </ul>
 </div>
@@ -2045,11 +1837,11 @@ Danilo Freire
 <h2>Basic string functions</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <ul>
-<li>SQLite provides standard functions for text processing.</li>
-<li><code>LENGTH(str)</code>, <code>UPPER(str)</code>, <code>LOWER(str)</code>.</li>
-<li><code>SUBSTR(str, start, length)</code> extracts a portion of the string (<span class="alert">start is 1-indexed</span>).</li>
+<li>SQLite provides standard functions for text processing</li>
+<li><code>LENGTH(str)</code>, <code>UPPER(str)</code>, <code>LOWER(str)</code></li>
+<li><code>SUBSTR(str, start, length)</code> extracts a portion of the string (<span class="alert">start is 1-indexed</span>)</li>
 </ul>
-<div id="8fd914d0" class="cell" data-execution_count="22">
+<div id="664b1e21" class="cell" data-execution_count="22">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href></a>query_str1 <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb42-2"><a href></a><span class="st">SELECT driver_name, </span></span>
 <span id="cb42-3"><a href></a><span class="st">    LENGTH(driver_name) AS len,</span></span>
@@ -2073,12 +1865,12 @@ Danilo Freire
 <h2>More string functions</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <ul>
-<li><code>TRIM(str)</code> removes leading/trailing whitespace.</li>
-<li><code>REPLACE(str, find, replace)</code> substitutes text.</li>
-<li><code>INSTR(str, find)</code> finds the starting position of <code>find</code> within <code>str</code> (<span class="alert">0 if not found</span>).</li>
-<li>The <span class="alert"><code>||</code></span> operator concatenates (joins) strings.</li>
+<li><code>TRIM(str)</code> removes leading/trailing whitespace</li>
+<li><code>REPLACE(str, find, replace)</code> substitutes text</li>
+<li><code>INSTR(str, find)</code> finds the starting position of <code>find</code> within <code>str</code> (<span class="alert">0 if not found</span>)</li>
+<li>The <span class="alert"><code>||</code></span> operator concatenates (joins) strings</li>
 </ul>
-<div id="c0af2e04" class="cell" data-execution_count="23">
+<div id="28de3079" class="cell" data-execution_count="23">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href></a>query_str2 <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb44-2"><a href></a><span class="st">SELECT driver_name, </span></span>
 <span id="cb44-3"><a href></a><span class="st">    REPLACE(driver_name, &#39; &#39;, &#39;_&#39;) AS replaced_space,</span></span>
@@ -2106,10 +1898,10 @@ Danilo Freire
 <h2>Basic <code>CASE</code> statement</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <ul>
-<li>The <code>CASE</code> statement is SQL’s way of implementing <span class="alert">if-then-else logic</span> within a query.</li>
+<li>The <code>CASE</code> statement is SQL’s way of implementing <span class="alert">if-then-else logic</span> within a query</li>
 <li><code>CASE WHEN condition THEN result ELSE default_result END</code></li>
 </ul>
-<div id="f78f897c" class="cell" data-execution_count="24">
+<div id="cbc03e1b" class="cell" data-execution_count="24">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href></a>query_case1 <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb46-2"><a href></a><span class="st">SELECT driver_name, victories,</span></span>
 <span id="cb46-3"><a href></a><span class="st">    CASE </span></span>
@@ -2137,9 +1929,9 @@ Danilo Freire
 <h2><code>CASE</code> with multiple conditions</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <ul>
-<li>You can chain multiple <code>WHEN</code> clauses. The <span class="alert">first condition that evaluates to true</span> determines the result for that row. The optional <code>ELSE</code> handles cases where no <code>WHEN</code> is true.</li>
+<li>You can chain multiple <code>WHEN</code> clauses. The <span class="alert">first condition that evaluates to true</span> determines the result for that row. The optional <code>ELSE</code> handles cases where no <code>WHEN</code> is true</li>
 </ul>
-<div id="4f42bc33" class="cell" data-execution_count="25">
+<div id="8dc2c8e1" class="cell" data-execution_count="25">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href></a>query_case2 <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb48-2"><a href></a><span class="st">SELECT driver_name, victories,</span></span>
 <span id="cb48-3"><a href></a><span class="st">    CASE </span></span>
@@ -2149,7 +1941,7 @@ Danilo Freire
 <span id="cb48-7"><a href></a><span class="st">        WHEN victories &gt; 0 THEN &#39;Podium Potential&#39;</span></span>
 <span id="cb48-8"><a href></a><span class="st">        ELSE &#39;Data Missing or Zero Wins&#39; </span></span>
 <span id="cb48-9"><a href></a><span class="st">    END AS status</span></span>
-<span id="cb48-10"><a href></a><span class="st">FROM drivers ORDER BY victories DESC NULLS LAST;</span></span>
+<span id="cb48-10"><a href></a><span class="st">FROM drivers ORDER BY victories DESC;</span></span>
 <span id="cb48-11"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb48-12"><a href></a>cur.execute(query_case2)</span>
 <span id="cb48-13"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2165,7 +1957,7 @@ Danilo Freire
 </div>
 </div>
 <ul>
-<li>Note: <code>NULLS LAST</code> requires SQLite 3.30 or newer. If your version is older, drop the <code>NULLS LAST</code> and <code>DESC</code> will still put NULLs at the end</li>
+<li>Note: in SQLite, <code>ORDER BY ... DESC</code> already places <code>NULL</code>s at the end (<code>NULL</code> is treated as smaller than any value), so an explicit <code>NULLS LAST</code> is redundant here. Other databases (e.g. PostgreSQL) behave differently, so <code>NULLS LAST</code> exists for portability</li>
 </ul>
 </div>
 </section>
@@ -2173,9 +1965,9 @@ Danilo Freire
 <h2><code>CASE</code> for conditional NULL handling</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <ul>
-<li><code>CASE</code> offers more nuanced control over handling <code>NULL</code>s compared to just <code>COALESCE</code>, allowing checks on <span class="alert">other columns</span>.</li>
+<li><code>CASE</code> offers more nuanced control over handling <code>NULL</code>s compared to just <code>COALESCE</code>, allowing checks on <span class="alert">other columns</span></li>
 </ul>
-<div id="d3de1274" class="cell" data-execution_count="26">
+<div id="a615207e" class="cell" data-execution_count="26">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href></a>query_case_null <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb50-2"><a href></a><span class="st">SELECT driver_name, </span></span>
 <span id="cb50-3"><a href></a><span class="st">    -- Fill nationality based on name if NULL</span></span>
@@ -2213,8 +2005,8 @@ Danilo Freire
 <li>‘Expert’ if victories &gt; 50</li>
 <li>‘Unknown’ if victories is NULL <span class="alert">Handle NULL first!</span></li>
 </ul></li>
-<li>Select <code>driver_name</code>, <code>victories</code>, <code>driver_level</code>.</li>
-<li>Use <code>cur.execute()</code> and fetching/looping.</li>
+<li>Select <code>driver_name</code>, <code>victories</code>, <code>driver_level</code></li>
+<li>Use <code>cur.execute()</code> and fetching/looping</li>
 <li><a href="#/sec:appendix03"><span class="button">Appendix 03</span></a></li>
 </ul>
 </div>
@@ -2228,10 +2020,10 @@ Danilo Freire
 <h2>Reading data with <code>pandas.read_sql</code></h2>
 <div style="margin-top: 50px; font-size: 21px;">
 <ul>
-<li>Reading data using loops and <code>fetchall()</code> works, but <code>pandas</code> makes it much easier for analysis.</li>
-<li><span class="alert"><code>pandas.read_sql()</code></span> executes a <code>SELECT</code> query and loads the results directly into a DataFrame.</li>
+<li>Reading data using loops and <code>fetchall()</code> works, but <code>pandas</code> makes it much easier for analysis</li>
+<li><span class="alert"><code>pandas.read_sql()</code></span> executes a <code>SELECT</code> query and loads the results directly into a DataFrame</li>
 </ul>
-<div id="83eefde4" class="cell" data-execution_count="27">
+<div id="96f94394" class="cell" data-execution_count="27">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd <span class="co"># Import pandas</span></span>
 <span id="cb52-2"><a href></a></span>
 <span id="cb52-3"><a href></a><span class="co"># Pass the SQL query and the connection object</span></span>
@@ -2250,7 +2042,7 @@ Danilo Freire
 </div>
 </div>
 <ul>
-<li>This combines execution and fetching into one step, returning a structured table.</li>
+<li>This combines execution and fetching into one step, returning a structured table</li>
 </ul>
 </div>
 </section>
@@ -2258,9 +2050,9 @@ Danilo Freire
 <h2><code>read_sql</code> with any <code>SELECT</code> query</h2>
 <div style="margin-top: 50px; font-size: 21px;">
 <ul>
-<li>You can use complex <code>SELECT</code> statements, including joins, filtering, ordering, etc., within <code>read_sql</code>.</li>
+<li>You can use complex <code>SELECT</code> statements, including joins, filtering, ordering, etc., within <code>read_sql</code></li>
 </ul>
-<div id="10aba4cd" class="cell" data-execution_count="28">
+<div id="2e964386" class="cell" data-execution_count="28">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href></a>query_pd <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
 <span id="cb54-2"><a href></a><span class="st">SELECT driver_name, team, victories </span></span>
 <span id="cb54-3"><a href></a><span class="st">FROM drivers </span></span>
@@ -2279,7 +2071,7 @@ Danilo Freire
 </div>
 </div>
 <ul>
-<li><code>pandas</code> handles retrieving all the data specified by your SQL query.</li>
+<li><code>pandas</code> handles retrieving all the data specified by your SQL query</li>
 </ul>
 </div>
 </section>
@@ -2289,7 +2081,7 @@ Danilo Freire
 <ul>
 <li>Once loaded, the DataFrame behaves like any other <code>pandas</code> DataFrame. Apply all your data manipulation skills!</li>
 </ul>
-<div id="50ee19c7" class="cell" data-execution_count="29">
+<div id="18bbaff1" class="cell" data-execution_count="29">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href></a><span class="co"># df was loaded previously</span></span>
 <span id="cb56-2"><a href></a>avg_vic_pd <span class="op">=</span> df.groupby(<span class="st">&#39;team&#39;</span>)[<span class="st">&#39;victories&#39;</span>].mean().dropna()</span>
 <span id="cb56-3"><a href></a><span class="bu">print</span>(avg_vic_pd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2302,7 +2094,7 @@ Red Bull Racing    30.0
 Name: victories, dtype: float64</code></pre>
 </div>
 </div>
-<div id="4714c05e" class="cell" data-execution_count="30">
+<div id="2a615cce" class="cell" data-execution_count="30">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href></a><span class="co"># Example using pandas .query() method for filtering</span></span>
 <span id="cb58-2"><a href></a><span class="bu">print</span>(df.query(<span class="st">&#39;victories &gt; 50 and nationality == &quot;British&quot;&#39;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -2316,9 +2108,9 @@ Name: victories, dtype: float64</code></pre>
 <h2>Writing DataFrames to SQL (<code>to_sql</code>)</h2>
 <div style="margin-top: 50px; font-size: 21px;">
 <ul>
-<li>The reverse is also easy: <code>DataFrame.to_sql()</code> writes the DataFrame’s contents into a database table.</li>
+<li>The reverse is also easy: <code>DataFrame.to_sql()</code> writes the DataFrame’s contents into a database table</li>
 </ul>
-<div id="51779ae8" class="cell" data-execution_count="31">
+<div id="c2ffab37" class="cell" data-execution_count="31">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href></a><span class="co"># Example: Create a DataFrame with British drivers</span></span>
 <span id="cb60-2"><a href></a>df_british <span class="op">=</span> df.query(<span class="st">&#39;nationality == &quot;British&quot;&#39;</span>).copy()</span>
 <span id="cb60-3"><a href></a></span>
@@ -2340,10 +2132,10 @@ Name: victories, dtype: float64</code></pre>
 <h2>Try it yourself! 🤓</h2>
 <div style="margin-top: 50px; font-size: 20px;">
 <ul>
-<li>Create <code>employees</code> table (<code>id</code>, <code>name</code>, <code>dept</code>, <code>salary</code>) using <code>cursor</code>.</li>
-<li>Insert data for Alice (HR, 50k), Bob (IT, 60k), Charlie (HR, 70k), David (IT, 80k) using <code>cursor</code>. Commit.</li>
-<li>Read the full <code>employees</code> table into <code>df_employees</code> using <span class="alert"><code>pd.read_sql()</code></span>. Print it.</li>
-<li>Using <span class="alert"><code>df_employees</code></span>, calculate and print the average salary per department.</li>
+<li>Create <code>employees</code> table (<code>id</code>, <code>name</code>, <code>dept</code>, <code>salary</code>) using <code>cursor</code></li>
+<li>Insert data for Alice (HR, 50k), Bob (IT, 60k), Charlie (HR, 70k), David (IT, 80k) using <code>cursor</code>. Commit</li>
+<li>Read the full <code>employees</code> table into <code>df_employees</code> using <span class="alert"><code>pd.read_sql()</code></span>. Print it</li>
+<li>Using <span class="alert"><code>df_employees</code></span>, calculate and print the average salary per department</li>
 <li><a href="#/sec:appendix04"><span class="button">Appendix 04</span></a></li>
 </ul>
 </div>
@@ -2359,14 +2151,13 @@ Name: victories, dtype: float64</code></pre>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li><code>sqlite3</code> provides the basic tools to interact with SQLite from Python.</li>
-<li>Key steps: <code>connect()</code>, <code>cursor()</code>, <code>execute()</code>, <span class="alert"><code>commit()</code></span>.</li>
-<li>Fetch results using <code>fetchone()</code>, <code>fetchall()</code>, or by iterating the cursor.</li>
-<li>Common SQL commands work as expected.</li>
-<li>Window functions require <span class="alert">modern SQLite versions</span>.</li>
-<li>Use <code>CASE</code> + <code>GROUP BY</code> for pivoting.</li>
-<li><span class="alert"><code>pandas.read_sql()</code></span> greatly simplifies loading data for analysis.</li>
-<li><code>df.to_sql()</code> saves DataFrames back to the database.</li>
+<li><code>sqlite3</code> provides the basic tools to interact with SQLite from Python</li>
+<li>Key steps: <code>connect()</code>, <code>cursor()</code>, <code>execute()</code>, <span class="alert"><code>commit()</code></span></li>
+<li>Fetch results using <code>fetchone()</code>, <code>fetchall()</code>, or by iterating the cursor</li>
+<li>Common SQL commands work as expected</li>
+<li>Window functions require <span class="alert">modern SQLite versions</span></li>
+<li><span class="alert"><code>pandas.read_sql()</code></span> greatly simplifies loading data for analysis</li>
+<li><code>df.to_sql()</code> saves DataFrames back to the database</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <div style="text-align: center;">
@@ -2384,7 +2175,7 @@ Name: victories, dtype: float64</code></pre>
 <section>
 <section id="have-a-great-day" class="title-slide slide level1 center" data-background-color="#2d4563">
 <h1>Have a great day! 😊</h1>
-<div id="c5f7cf56" class="cell" data-execution_count="32">
+<div id="741751bb" class="cell" data-execution_count="32">
 <div class="cell-output cell-output-stdout">
 <pre><code>
 SQLite connection closed.</code></pre>
@@ -2395,7 +2186,7 @@ SQLite connection closed.</code></pre>
 <h2>Appendix 01</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <p><em>Using standard <code>sqlite3</code> fetching:</em></p>
-<div id="74659b83" class="cell" data-execution_count="33">
+<div id="eb3ca5b5" class="cell" data-execution_count="33">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href></a><span class="im">import</span> sqlite3</span>
 <span id="cb63-2"><a href></a>db_file <span class="op">=</span> <span class="st">&#39;lecture12.db&#39;</span></span>
 <span id="cb63-3"><a href></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(db_file)</span>
@@ -2451,7 +2242,7 @@ SQLite connection closed.</code></pre>
 <h2>Appendix 02</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <p><em>Using standard <code>sqlite3</code> fetching:</em></p>
-<div id="6b875830" class="cell" data-execution_count="34">
+<div id="a540a2b5" class="cell" data-execution_count="34">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href></a><span class="im">import</span> sqlite3</span>
 <span id="cb65-2"><a href></a>db_file <span class="op">=</span> <span class="st">&#39;lecture12.db&#39;</span></span>
 <span id="cb65-3"><a href></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(db_file)</span>
@@ -2489,7 +2280,7 @@ SQLite connection closed.</code></pre>
 <h2>Appendix 03</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <p><em>Using standard <code>sqlite3</code> fetching:</em></p>
-<div id="083237a5" class="cell" data-execution_count="35">
+<div id="e79c0b0d" class="cell" data-execution_count="35">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href></a><span class="im">import</span> sqlite3</span>
 <span id="cb67-2"><a href></a>db_file <span class="op">=</span> <span class="st">&#39;lecture12.db&#39;</span></span>
 <span id="cb67-3"><a href></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(db_file)</span>
@@ -2505,7 +2296,7 @@ SQLite connection closed.</code></pre>
 <span id="cb67-13"><a href></a><span class="st">        WHEN victories &lt; 10 THEN &#39;Beginner&#39;</span></span>
 <span id="cb67-14"><a href></a><span class="st">    END AS driver_level</span></span>
 <span id="cb67-15"><a href></a><span class="st">FROM drivers</span></span>
-<span id="cb67-16"><a href></a><span class="st">ORDER BY victories DESC NULLS LAST;</span></span>
+<span id="cb67-16"><a href></a><span class="st">ORDER BY victories DESC;</span></span>
 <span id="cb67-17"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb67-18"><a href></a>cur.execute(query_driver_level)</span>
 <span id="cb67-19"><a href></a><span class="bu">print</span>(<span class="st">&quot;--- Driver classification using CASE ---&quot;</span>)</span>
@@ -2531,7 +2322,7 @@ SQLite connection closed.</code></pre>
 <h2>Appendix 04</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <p><em>Using <code>pandas</code>:</em></p>
-<div id="4df6d1f5" class="cell" data-execution_count="36">
+<div id="9d6b8eee" class="cell" data-execution_count="36">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href></a><span class="im">import</span> sqlite3</span>
 <span id="cb69-2"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb69-3"><a href></a></span>
@@ -2543,13 +2334,13 @@ SQLite connection closed.</code></pre>
 <span id="cb69-9"><a href></a>cur.execute(<span class="st">&#39;DROP TABLE IF EXISTS employees;&#39;</span>)</span>
 <span id="cb69-10"><a href></a>cur.execute(<span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb69-11"><a href></a><span class="st">CREATE TABLE employees (</span></span>
-<span id="cb69-12"><a href></a><span class="st">    employee_id INTEGER PRIMARY KEY AUTOINCREMENT,</span></span>
-<span id="cb69-13"><a href></a><span class="st">    employee_name TEXT, department TEXT, salary INTEGER</span></span>
+<span id="cb69-12"><a href></a><span class="st">    id INTEGER PRIMARY KEY AUTOINCREMENT,</span></span>
+<span id="cb69-13"><a href></a><span class="st">    name TEXT, dept TEXT, salary INTEGER</span></span>
 <span id="cb69-14"><a href></a><span class="st">);&#39;&#39;&#39;</span>)</span>
 <span id="cb69-15"><a href></a></span>
 <span id="cb69-16"><a href></a><span class="co"># 2. Insert data</span></span>
 <span id="cb69-17"><a href></a>cur.execute(<span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb69-18"><a href></a><span class="st">INSERT INTO employees (employee_name, department, salary) VALUES</span></span>
+<span id="cb69-18"><a href></a><span class="st">INSERT INTO employees (name, dept, salary) VALUES</span></span>
 <span id="cb69-19"><a href></a><span class="st">(&#39;Alice&#39;, &#39;HR&#39;, 50000),</span></span>
 <span id="cb69-20"><a href></a><span class="st">(&#39;Bob&#39;, &#39;IT&#39;, 60000),</span></span>
 <span id="cb69-21"><a href></a><span class="st">(&#39;Charlie&#39;, &#39;HR&#39;, 70000),</span></span>
@@ -2562,20 +2353,20 @@ SQLite connection closed.</code></pre>
 <span id="cb69-28"><a href></a><span class="bu">print</span>(df_employees)</span>
 <span id="cb69-29"><a href></a></span>
 <span id="cb69-30"><a href></a><span class="co"># 4. Compute average salary by department using pandas</span></span>
-<span id="cb69-31"><a href></a>avg_salary_dept <span class="op">=</span> df_employees.groupby(<span class="st">&#39;department&#39;</span>)[<span class="st">&#39;salary&#39;</span>].mean()</span>
+<span id="cb69-31"><a href></a>avg_salary_dept <span class="op">=</span> df_employees.groupby(<span class="st">&#39;dept&#39;</span>)[<span class="st">&#39;salary&#39;</span>].mean()</span>
 <span id="cb69-32"><a href></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">--- Average salary by department (pandas) ---&quot;</span>)</span>
 <span id="cb69-33"><a href></a><span class="bu">print</span>(avg_salary_dept)</span>
 <span id="cb69-34"><a href></a></span>
 <span id="cb69-35"><a href></a>conn.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   employee_id employee_name department  salary
-0            1         Alice         HR   50000
-1            2           Bob         IT   60000
-2            3       Charlie         HR   70000
-3            4         David         IT   80000
+<pre><code>   id     name dept  salary
+0   1    Alice   HR   50000
+1   2      Bob   IT   60000
+2   3  Charlie   HR   70000
+3   4    David   IT   80000
 
 --- Average salary by department (pandas) ---
-department
+dept
 HR    60000.0
 IT    70000.0
 Name: salary, dtype: float64</code></pre>
@@ -3137,22 +2928,6 @@ window.RevealMenuToolHandlers = {
  ******************************************************************/
 !function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e="undefined"!=typeof globalThis?globalThis:e||self).Multimodal=t()}(this,(function(){"use strict";var e="undefined"!=typeof document?document.currentScript:null;const t=e=>e&&"object"==typeof e&&!Array.isArray(e),n=(e,...s)=>{if(!s.length)return e;const r=s.shift();if(t(e)&&t(r))for(const s in r)t(r[s])?(e[s]||Object.assign(e,{[s]:{}}),n(e[s],r[s])):Object.assign(e,{[s]:r[s]});return n(e,...s)},s=(e,t,n)=>{let s,r=document.querySelector("head"),i=!1;if("script"===t?document.querySelector(`script[src="${e}"]`)?i=!0:(s=document.createElement("script"),s.type="text/javascript",s.src=e):"stylesheet"===t&&(document.querySelector(`link[href="${e}"]`)?i=!0:(s=document.createElement("link"),s.rel="stylesheet",s.href=e)),!i){const e=()=>{"function"==typeof n&&(n.call(),n=null)};s.onload=e,s.onreadystatechange=function(){"loaded"===this.readyState&&e()},r.appendChild(s)}},r=t=>{let n,s=document.querySelector(`script[src$="${t}"]`);return n=s?s.getAttribute("src").slice(0,-1*t.length):("undefined"==typeof document&&"undefined"==typeof location?require("url").pathToFileURL(__filename).href:"undefined"==typeof document?location.href:e&&e.src||new URL("multimodal.js",document.baseURI).href).slice(0,("undefined"==typeof document&&"undefined"==typeof location?require("url").pathToFileURL(__filename).href:"undefined"==typeof document?location.href:e&&e.src||new URL("multimodal.js",document.baseURI).href).lastIndexOf("/")+1),n},i=(e,t=1)=>{const n=1/t;return Math.round(e*n)/n};const l="multimodal",o="mm-body",a="shown",c="show",d="multimodal:show",h="multimodal:shown",u="multimodal:hidden";class m{constructor(e){this.isOpen=!1,this.modalElement=e.getRevealElement().querySelector(`.${l}`),this.modalMax=this.modalElement.querySelector(".mm-max"),this.modalDialog=this.modalElement.querySelector(".mm-dialog"),this.modalBody=this.modalElement.querySelector(`.${o}`),this.modalElement.style.setProperty("display","none"),this.modalElement.setAttribute("aria-hidden","true"),this.eventListeners={},this.presetConfigs={},this.closeButtonHtml="",this.deck=e,this.modalElement.addEventListener("transitionend",(e=>{e.target==this.modalElement&&(this.isOpen?(this.modalElement.classList.add(a),this.trigger(h,"shown")):(this.modalElement.classList.remove(a),this.modalElement.classList.remove(c),this.modalElement.style.setProperty("display","none"),this.trigger(u,"hidden"),this.modalElement.classList.forEach((e=>{e!==l&&e!==c&&e!==a&&"hide"!==e&&"hidden"!==e&&this.modalElement.classList.remove(e)}))))}))}on(e,t){this.eventListeners[e]||(this.eventListeners[e]=[]),this.eventListeners[e].push(t)}trigger(e,t="show",...n){const s=this.eventListeners[e];s&&s.forEach((e=>e(t,...n)));let r={action:t,trigger:this.triggerElement,modal:this.modalElement,dialog:this.modalDialog,body:this.modalDialog.querySelector(`.${o}`),args:n};const i=new CustomEvent(e,{detail:r});this.modalElement.dispatchEvent(i)}show(){this.isOpen=!0,this.modalElement.style.removeProperty("display"),this.modalElement.removeAttribute("aria-hidden"),"0s"===window.getComputedStyle(this.modalElement).getPropertyValue("transition-duration")?(this.modalElement.classList.add(c),this.trigger(d,"show"),this.modalElement.classList.add(a),this.trigger(h,"shown")):setTimeout((()=>{this.modalElement.classList.add(c),this.trigger(d,"show")}),10)}hide(){this.isOpen=!1,this.trigger("multimodal:hide","hide"),this.modalElement.setAttribute("aria-hidden","true"),"0s"===window.getComputedStyle(this.modalElement).getPropertyValue("transition-duration")?(this.modalElement.classList.remove(a),this.modalElement.classList.remove(c),this.modalElement.style.setProperty("display","none"),this.trigger(u,"hide")):this.modalElement.classList.remove(c)}setContent(e,t){let n=e;"html"==t&&(n=`<div class="mm-body"><div class="mm-scrollbody">${e}</div></div>`),this.modalDialog.innerHTML=this.closeButtonHtml+n}}let p=!1;if("undefined"!=typeof window){const e={get passive(){p=!0}};window.addEventListener("testPassive",null,e),window.removeEventListener("testPassive",null,e)}const g="undefined"!=typeof window&&window.navigator&&window.navigator.platform&&(/iP(ad|hone|od)/.test(window.navigator.platform)||"MacIntel"===window.navigator.platform&&window.navigator.maxTouchPoints>1);let f,k,w,x,y=[],b=new Map,v=!1,E=-1;const $=e=>y.some((t=>!(!t.options.allowTouchMove||!t.options.allowTouchMove(e)))),_=e=>{const t=e||window.event;return!!$(t.target)||(t.touches.length>1||(t.preventDefault&&t.preventDefault(),!1))},S=(e,t)=>{if(!e)return void console.error("disableBodyScroll unsuccessful - targetElement must be provided when calling disableBodyScroll on IOS devices.");if(b.set(e,(null==b?void 0:b.get(e))?(null==b?void 0:b.get(e))+1:1),y.some((t=>t.targetElement===e)))return;const n={targetElement:e,options:t||{}};y=[...y,n],g?window.requestAnimationFrame((()=>{const e=document.documentElement,t=document.body;if(void 0===w){k={...e.style},w={...t.style};const{scrollY:n,scrollX:s,innerHeight:r}=window;e.style.height="100%",e.style.overflow="hidden",t.style.position="fixed",t.style.top=-n+"px",t.style.left=-s+"px",t.style.width="100%",t.style.height="auto",t.style.overflow="hidden",setTimeout((()=>window.requestAnimationFrame((()=>{const e=r-window.innerHeight;e&&n>=r&&(t.style.top=-(n+e)+"px")}))),300)}})):(e=>{if(void 0===x){const t=!!e&&!0===e.reserveScrollBarGap,n=window.innerWidth-document.documentElement.getBoundingClientRect().width;if(t&&n>0){const e=parseInt(window.getComputedStyle(document.body).getPropertyValue("padding-right"),10);x=document.body.style.paddingRight,document.body.style.paddingRight=`${e+n}px`}}void 0===f&&(f=document.body.style.overflow,document.body.style.overflow="hidden")})(t),g&&(e.ontouchstart=e=>{1===e.targetTouches.length&&(E=e.targetTouches[0].clientY)},e.ontouchmove=t=>{1===t.targetTouches.length&&((e,t)=>{const n=e.targetTouches[0].clientY-E;!$(e.target)&&(t&&0===t.scrollTop&&n>0||(e=>!!e&&e.scrollHeight-e.scrollTop<=e.clientHeight)(t)&&n<0?_(e):e.stopPropagation())})(t,e)},v||(document.addEventListener("touchmove",_,p?{passive:!1}:void 0),v=!0))},z=e=>{e?(b.set(e,(null==b?void 0:b.get(e))?(null==b?void 0:b.get(e))-1:0),0===(null==b?void 0:b.get(e))&&(y=y.filter((t=>t.targetElement!==e)),null==b||b.delete(e)),g&&(e.ontouchstart=null,e.ontouchmove=null,v&&0===y.length&&(document.removeEventListener("touchmove",_,p?{passive:!1}:void 0),v=!1)),0===y.length&&(g?(()=>{if(void 0!==w){const e=-parseInt(document.body.style.top,10),t=-parseInt(document.body.style.left,10),n=document.documentElement,s=document.body;n.style.height=(null==k?void 0:k.height)||"",n.style.overflow=(null==k?void 0:k.overflow)||"",s.style.position=w.position||"",s.style.top=w.top||"",s.style.left=w.left||"",s.style.width=w.width||"",s.style.height=w.height||"",s.style.overflow=w.overflow||"",window.scrollTo(t,e),w=void 0}})():(void 0!==x&&(document.body.style.paddingRight=x,x=void 0),void 0!==f&&(document.body.style.overflow=f,f=void 0)))):console.error("enableBodyScroll unsuccessful - targetElement must be provided when calling enableBodyScroll on IOS devices.")},T=e=>!!e.getRevealElement().closest(".reveal-scroll"),L=(e,t,n,s,r)=>{let l=(1-e)*t.offsetWidth/n,o=(1-e)*t.offsetHeight/n;if(s.modalElement.style.setProperty("--mm-maxwidth",`${Math.floor(l)}px`),s.modalElement.style.setProperty("--mm-maxheight",`${Math.floor(o)}px`),r.scalecorrection){let e=Math.max(1,1/n);s.modalElement.style.setProperty("--mm-inversescale",i(e,.1));let t=r.borderwidth.match(/(\d*\.?\d+)\s*(\w+)/);if(null!==t){let n=parseFloat(t[1]),r=t[2],l=i(n*e,.5)+r;s.modalElement.style.setProperty("--mm-borderwidth",l)}}};function A(){return{async:!1,baseUrl:null,breaks:!1,extensions:null,gfm:!0,headerIds:!0,headerPrefix:"",highlight:null,hooks:null,langPrefix:"language-",mangle:!0,pedantic:!1,renderer:null,sanitize:!1,sanitizer:null,silent:!1,smartypants:!1,tokenizer:null,walkTokens:null,xhtml:!1}}let R={async:!1,baseUrl:null,breaks:!1,extensions:null,gfm:!0,headerIds:!0,headerPrefix:"",highlight:null,hooks:null,langPrefix:"language-",mangle:!0,pedantic:!1,renderer:null,sanitize:!1,sanitizer:null,silent:!1,smartypants:!1,tokenizer:null,walkTokens:null,xhtml:!1};const P=/[&<>"']/,C=new RegExp(P.source,"g"),I=/[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/,q=new RegExp(I.source,"g"),M={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"},O=e=>M[e];function D(e,t){if(t){if(P.test(e))return e.replace(C,O)}else if(I.test(e))return e.replace(q,O);return e}const B=/&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/gi;function H(e){return e.replace(B,((e,t)=>"colon"===(t=t.toLowerCase())?":":"#"===t.charAt(0)?"x"===t.charAt(1)?String.fromCharCode(parseInt(t.substring(2),16)):String.fromCharCode(+t.substring(1)):""))}const U=/(^|[^\[])\^/g;function Z(e,t){e="string"==typeof e?e:e.source,t=t||"";const n={replace:(t,s)=>(s=(s=s.source||s).replace(U,"$1"),e=e.replace(t,s),n),getRegex:()=>new RegExp(e,t)};return n}const N=/[^\w:]/g,j=/^$|^[a-z][a-z0-9+.-]*:|^[?#]/i;function Q(e,t,n){if(e){let e;try{e=decodeURIComponent(H(n)).replace(N,"").toLowerCase()}catch(e){return null}if(0===e.indexOf("javascript:")||0===e.indexOf("vbscript:")||0===e.indexOf("data:"))return null}t&&!j.test(n)&&(n=function(e,t){F[" "+e]||(W.test(e)?F[" "+e]=e+"/":F[" "+e]=J(e,"/",!0));e=F[" "+e];const n=-1===e.indexOf(":");return"//"===t.substring(0,2)?n?t:e.replace(G,"$1")+t:"/"===t.charAt(0)?n?t:e.replace(V,"$1")+t:e+t}(t,n));try{n=encodeURI(n).replace(/%25/g,"%")}catch(e){return null}return n}const F={},W=/^[^:]+:\/*[^/]*$/,G=/^([^:]+:)[\s\S]*$/,V=/^([^:]+:\/*[^/]*)[\s\S]*$/;const X={exec:function(){}};function Y(e,t){const n=e.replace(/\|/g,((e,t,n)=>{let s=!1,r=t;for(;--r>=0&&"\\"===n[r];)s=!s;return s?"|":" |"})).split(/ \|/);let s=0;if(n[0].trim()||n.shift(),n.length>0&&!n[n.length-1].trim()&&n.pop(),n.length>t)n.splice(t);else for(;n.length<t;)n.push("");for(;s<n.length;s++)n[s]=n[s].trim().replace(/\\\|/g,"|");return n}function J(e,t,n){const s=e.length;if(0===s)return"";let r=0;for(;r<s;){const i=e.charAt(s-r-1);if(i!==t||n){if(i===t||!n)break;r++}else r++}return e.slice(0,s-r)}function K(e,t){if(t<1)return"";let n="";for(;t>1;)1&t&&(n+=e),t>>=1,e+=e;return n+e}function ee(e,t,n,s){const r=t.href,i=t.title?D(t.title):null,l=e[1].replace(/\\([\[\]])/g,"$1");if("!"!==e[0].charAt(0)){s.state.inLink=!0;const e={type:"link",raw:n,href:r,title:i,text:l,tokens:s.inlineTokens(l)};return s.state.inLink=!1,e}return{type:"image",raw:n,href:r,title:i,text:D(l)}}class te{constructor(e){this.options=e||R}space(e){const t=this.rules.block.newline.exec(e);if(t&&t[0].length>0)return{type:"space",raw:t[0]}}code(e){const t=this.rules.block.code.exec(e);if(t){const e=t[0].replace(/^ {1,4}/gm,"");return{type:"code",raw:t[0],codeBlockStyle:"indented",text:this.options.pedantic?e:J(e,"\n")}}}fences(e){const t=this.rules.block.fences.exec(e);if(t){const e=t[0],n=function(e,t){const n=e.match(/^(\s+)(?:```)/);if(null===n)return t;const s=n[1];return t.split("\n").map((e=>{const t=e.match(/^\s+/);if(null===t)return e;const[n]=t;return n.length>=s.length?e.slice(s.length):e})).join("\n")}(e,t[3]||"");return{type:"code",raw:e,lang:t[2]?t[2].trim().replace(this.rules.inline._escapes,"$1"):t[2],text:n}}}heading(e){const t=this.rules.block.heading.exec(e);if(t){let e=t[2].trim();if(/#$/.test(e)){const t=J(e,"#");this.options.pedantic?e=t.trim():t&&!/ $/.test(t)||(e=t.trim())}return{type:"heading",raw:t[0],depth:t[1].length,text:e,tokens:this.lexer.inline(e)}}}hr(e){const t=this.rules.block.hr.exec(e);if(t)return{type:"hr",raw:t[0]}}blockquote(e){const t=this.rules.block.blockquote.exec(e);if(t){const e=t[0].replace(/^ *>[ \t]?/gm,""),n=this.lexer.state.top;this.lexer.state.top=!0;const s=this.lexer.blockTokens(e);return this.lexer.state.top=n,{type:"blockquote",raw:t[0],tokens:s,text:e}}}list(e){let t=this.rules.block.list.exec(e);if(t){let n,s,r,i,l,o,a,c,d,h,u,m,p=t[1].trim();const g=p.length>1,f={type:"list",raw:"",ordered:g,start:g?+p.slice(0,-1):"",loose:!1,items:[]};p=g?`\\d{1,9}\\${p.slice(-1)}`:`\\${p}`,this.options.pedantic&&(p=g?p:"[*+-]");const k=new RegExp(`^( {0,3}${p})((?:[\t ][^\\n]*)?(?:\\n|$))`);for(;e&&(m=!1,t=k.exec(e))&&!this.rules.block.hr.test(e);){if(n=t[0],e=e.substring(n.length),c=t[2].split("\n",1)[0].replace(/^\t+/,(e=>" ".repeat(3*e.length))),d=e.split("\n",1)[0],this.options.pedantic?(i=2,u=c.trimLeft()):(i=t[2].search(/[^ ]/),i=i>4?1:i,u=c.slice(i),i+=t[1].length),o=!1,!c&&/^ *$/.test(d)&&(n+=d+"\n",e=e.substring(d.length+1),m=!0),!m){const t=new RegExp(`^ {0,${Math.min(3,i-1)}}(?:[*+-]|\\d{1,9}[.)])((?:[ \t][^\\n]*)?(?:\\n|$))`),s=new RegExp(`^ {0,${Math.min(3,i-1)}}((?:- *){3,}|(?:_ *){3,}|(?:\\* *){3,})(?:\\n+|$)`),r=new RegExp(`^ {0,${Math.min(3,i-1)}}(?:\`\`\`|~~~)`),l=new RegExp(`^ {0,${Math.min(3,i-1)}}#`);for(;e&&(h=e.split("\n",1)[0],d=h,this.options.pedantic&&(d=d.replace(/^ {1,4}(?=( {4})*[^ ])/g,"  ")),!r.test(d))&&!l.test(d)&&!t.test(d)&&!s.test(e);){if(d.search(/[^ ]/)>=i||!d.trim())u+="\n"+d.slice(i);else{if(o)break;if(c.search(/[^ ]/)>=4)break;if(r.test(c))break;if(l.test(c))break;if(s.test(c))break;u+="\n"+d}o||d.trim()||(o=!0),n+=h+"\n",e=e.substring(h.length+1),c=d.slice(i)}}f.loose||(a?f.loose=!0:/\n *\n *$/.test(n)&&(a=!0)),this.options.gfm&&(s=/^\[[ xX]\] /.exec(u),s&&(r="[ ] "!==s[0],u=u.replace(/^\[[ xX]\] +/,""))),f.items.push({type:"list_item",raw:n,task:!!s,checked:r,loose:!1,text:u}),f.raw+=n}f.items[f.items.length-1].raw=n.trimRight(),f.items[f.items.length-1].text=u.trimRight(),f.raw=f.raw.trimRight();const w=f.items.length;for(l=0;l<w;l++)if(this.lexer.state.top=!1,f.items[l].tokens=this.lexer.blockTokens(f.items[l].text,[]),!f.loose){const e=f.items[l].tokens.filter((e=>"space"===e.type)),t=e.length>0&&e.some((e=>/\n.*\n/.test(e.raw)));f.loose=t}if(f.loose)for(l=0;l<w;l++)f.items[l].loose=!0;return f}}html(e){const t=this.rules.block.html.exec(e);if(t){const e={type:"html",raw:t[0],pre:!this.options.sanitizer&&("pre"===t[1]||"script"===t[1]||"style"===t[1]),text:t[0]};if(this.options.sanitize){const n=this.options.sanitizer?this.options.sanitizer(t[0]):D(t[0]);e.type="paragraph",e.text=n,e.tokens=this.lexer.inline(n)}return e}}def(e){const t=this.rules.block.def.exec(e);if(t){const e=t[1].toLowerCase().replace(/\s+/g," "),n=t[2]?t[2].replace(/^<(.*)>$/,"$1").replace(this.rules.inline._escapes,"$1"):"",s=t[3]?t[3].substring(1,t[3].length-1).replace(this.rules.inline._escapes,"$1"):t[3];return{type:"def",tag:e,raw:t[0],href:n,title:s}}}table(e){const t=this.rules.block.table.exec(e);if(t){const e={type:"table",header:Y(t[1]).map((e=>({text:e}))),align:t[2].replace(/^ *|\| *$/g,"").split(/ *\| */),rows:t[3]&&t[3].trim()?t[3].replace(/\n[ \t]*$/,"").split("\n"):[]};if(e.header.length===e.align.length){e.raw=t[0];let n,s,r,i,l=e.align.length;for(n=0;n<l;n++)/^ *-+: *$/.test(e.align[n])?e.align[n]="right":/^ *:-+: *$/.test(e.align[n])?e.align[n]="center":/^ *:-+ *$/.test(e.align[n])?e.align[n]="left":e.align[n]=null;for(l=e.rows.length,n=0;n<l;n++)e.rows[n]=Y(e.rows[n],e.header.length).map((e=>({text:e})));for(l=e.header.length,s=0;s<l;s++)e.header[s].tokens=this.lexer.inline(e.header[s].text);for(l=e.rows.length,s=0;s<l;s++)for(i=e.rows[s],r=0;r<i.length;r++)i[r].tokens=this.lexer.inline(i[r].text);return e}}}lheading(e){const t=this.rules.block.lheading.exec(e);if(t)return{type:"heading",raw:t[0],depth:"="===t[2].charAt(0)?1:2,text:t[1],tokens:this.lexer.inline(t[1])}}paragraph(e){const t=this.rules.block.paragraph.exec(e);if(t){const e="\n"===t[1].charAt(t[1].length-1)?t[1].slice(0,-1):t[1];return{type:"paragraph",raw:t[0],text:e,tokens:this.lexer.inline(e)}}}text(e){const t=this.rules.block.text.exec(e);if(t)return{type:"text",raw:t[0],text:t[0],tokens:this.lexer.inline(t[0])}}escape(e){const t=this.rules.inline.escape.exec(e);if(t)return{type:"escape",raw:t[0],text:D(t[1])}}tag(e){const t=this.rules.inline.tag.exec(e);if(t)return!this.lexer.state.inLink&&/^<a /i.test(t[0])?this.lexer.state.inLink=!0:this.lexer.state.inLink&&/^<\/a>/i.test(t[0])&&(this.lexer.state.inLink=!1),!this.lexer.state.inRawBlock&&/^<(pre|code|kbd|script)(\s|>)/i.test(t[0])?this.lexer.state.inRawBlock=!0:this.lexer.state.inRawBlock&&/^<\/(pre|code|kbd|script)(\s|>)/i.test(t[0])&&(this.lexer.state.inRawBlock=!1),{type:this.options.sanitize?"text":"html",raw:t[0],inLink:this.lexer.state.inLink,inRawBlock:this.lexer.state.inRawBlock,text:this.options.sanitize?this.options.sanitizer?this.options.sanitizer(t[0]):D(t[0]):t[0]}}link(e){const t=this.rules.inline.link.exec(e);if(t){const e=t[2].trim();if(!this.options.pedantic&&/^</.test(e)){if(!/>$/.test(e))return;const t=J(e.slice(0,-1),"\\");if((e.length-t.length)%2==0)return}else{const e=function(e,t){if(-1===e.indexOf(t[1]))return-1;const n=e.length;let s=0,r=0;for(;r<n;r++)if("\\"===e[r])r++;else if(e[r]===t[0])s++;else if(e[r]===t[1]&&(s--,s<0))return r;return-1}(t[2],"()");if(e>-1){const n=(0===t[0].indexOf("!")?5:4)+t[1].length+e;t[2]=t[2].substring(0,e),t[0]=t[0].substring(0,n).trim(),t[3]=""}}let n=t[2],s="";if(this.options.pedantic){const e=/^([^'"]*[^\s])\s+(['"])(.*)\2/.exec(n);e&&(n=e[1],s=e[3])}else s=t[3]?t[3].slice(1,-1):"";return n=n.trim(),/^</.test(n)&&(n=this.options.pedantic&&!/>$/.test(e)?n.slice(1):n.slice(1,-1)),ee(t,{href:n?n.replace(this.rules.inline._escapes,"$1"):n,title:s?s.replace(this.rules.inline._escapes,"$1"):s},t[0],this.lexer)}}reflink(e,t){let n;if((n=this.rules.inline.reflink.exec(e))||(n=this.rules.inline.nolink.exec(e))){let e=(n[2]||n[1]).replace(/\s+/g," ");if(e=t[e.toLowerCase()],!e){const e=n[0].charAt(0);return{type:"text",raw:e,text:e}}return ee(n,e,n[0],this.lexer)}}emStrong(e,t,n=""){let s=this.rules.inline.emStrong.lDelim.exec(e);if(!s)return;if(s[3]&&n.match(/[\p{L}\p{N}]/u))return;const r=s[1]||s[2]||"";if(!r||r&&(""===n||this.rules.inline.punctuation.exec(n))){const n=s[0].length-1;let r,i,l=n,o=0;const a="*"===s[0][0]?this.rules.inline.emStrong.rDelimAst:this.rules.inline.emStrong.rDelimUnd;for(a.lastIndex=0,t=t.slice(-1*e.length+n);null!=(s=a.exec(t));){if(r=s[1]||s[2]||s[3]||s[4]||s[5]||s[6],!r)continue;if(i=r.length,s[3]||s[4]){l+=i;continue}if((s[5]||s[6])&&n%3&&!((n+i)%3)){o+=i;continue}if(l-=i,l>0)continue;i=Math.min(i,i+l+o);const t=e.slice(0,n+s.index+(s[0].length-r.length)+i);if(Math.min(n,i)%2){const e=t.slice(1,-1);return{type:"em",raw:t,text:e,tokens:this.lexer.inlineTokens(e)}}const a=t.slice(2,-2);return{type:"strong",raw:t,text:a,tokens:this.lexer.inlineTokens(a)}}}}codespan(e){const t=this.rules.inline.code.exec(e);if(t){let e=t[2].replace(/\n/g," ");const n=/[^ ]/.test(e),s=/^ /.test(e)&&/ $/.test(e);return n&&s&&(e=e.substring(1,e.length-1)),e=D(e,!0),{type:"codespan",raw:t[0],text:e}}}br(e){const t=this.rules.inline.br.exec(e);if(t)return{type:"br",raw:t[0]}}del(e){const t=this.rules.inline.del.exec(e);if(t)return{type:"del",raw:t[0],text:t[2],tokens:this.lexer.inlineTokens(t[2])}}autolink(e,t){const n=this.rules.inline.autolink.exec(e);if(n){let e,s;return"@"===n[2]?(e=D(this.options.mangle?t(n[1]):n[1]),s="mailto:"+e):(e=D(n[1]),s=e),{type:"link",raw:n[0],text:e,href:s,tokens:[{type:"text",raw:e,text:e}]}}}url(e,t){let n;if(n=this.rules.inline.url.exec(e)){let e,s;if("@"===n[2])e=D(this.options.mangle?t(n[0]):n[0]),s="mailto:"+e;else{let t;do{t=n[0],n[0]=this.rules.inline._backpedal.exec(n[0])[0]}while(t!==n[0]);e=D(n[0]),s="www."===n[1]?"http://"+n[0]:n[0]}return{type:"link",raw:n[0],text:e,href:s,tokens:[{type:"text",raw:e,text:e}]}}}inlineText(e,t){const n=this.rules.inline.text.exec(e);if(n){let e;return e=this.lexer.state.inRawBlock?this.options.sanitize?this.options.sanitizer?this.options.sanitizer(n[0]):D(n[0]):n[0]:D(this.options.smartypants?t(n[0]):n[0]),{type:"text",raw:n[0],text:e}}}}const ne={newline:/^(?: *(?:\n|$))+/,code:/^( {4}[^\n]+(?:\n(?: *(?:\n|$))*)?)+/,fences:/^ {0,3}(`{3,}(?=[^`\n]*(?:\n|$))|~{3,})([^\n]*)(?:\n|$)(?:|([\s\S]*?)(?:\n|$))(?: {0,3}\1[~`]* *(?=\n|$)|$)/,hr:/^ {0,3}((?:-[\t ]*){3,}|(?:_[ \t]*){3,}|(?:\*[ \t]*){3,})(?:\n+|$)/,heading:/^ {0,3}(#{1,6})(?=\s|$)(.*)(?:\n+|$)/,blockquote:/^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/,list:/^( {0,3}bull)([ \t][^\n]+?)?(?:\n|$)/,html:"^ {0,3}(?:<(script|pre|style|textarea)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)|comment[^\\n]*(\\n+|$)|<\\?[\\s\\S]*?(?:\\?>\\n*|$)|<![A-Z][\\s\\S]*?(?:>\\n*|$)|<!\\[CDATA\\[[\\s\\S]*?(?:\\]\\]>\\n*|$)|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:(?:\\n *)+\\n|$)|<(?!script|pre|style|textarea)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n *)+\\n|$)|</(?!script|pre|style|textarea)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n *)+\\n|$))",def:/^ {0,3}\[(label)\]: *(?:\n *)?([^<\s][^\s]*|<.*?>)(?:(?: +(?:\n *)?| *\n *)(title))? *(?:\n+|$)/,table:X,lheading:/^((?:.|\n(?!\n))+?)\n {0,3}(=+|-+) *(?:\n+|$)/,_paragraph:/^([^\n]+(?:\n(?!hr|heading|lheading|blockquote|fences|list|html|table| +\n)[^\n]+)*)/,text:/^[^\n]+/,_label:/(?!\s*\])(?:\\.|[^\[\]\\])+/,_title:/(?:"(?:\\"?|[^"\\])*"|'[^'\n]*(?:\n[^'\n]+)*\n?'|\([^()]*\))/};ne.def=Z(ne.def).replace("label",ne._label).replace("title",ne._title).getRegex(),ne.bullet=/(?:[*+-]|\d{1,9}[.)])/,ne.listItemStart=Z(/^( *)(bull) */).replace("bull",ne.bullet).getRegex(),ne.list=Z(ne.list).replace(/bull/g,ne.bullet).replace("hr","\\n+(?=\\1?(?:(?:- *){3,}|(?:_ *){3,}|(?:\\* *){3,})(?:\\n+|$))").replace("def","\\n+(?="+ne.def.source+")").getRegex(),ne._tag="address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option|p|param|section|source|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul",ne._comment=/<!--(?!-?>)[\s\S]*?(?:-->|$)/,ne.html=Z(ne.html,"i").replace("comment",ne._comment).replace("tag",ne._tag).replace("attribute",/ +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex(),ne.paragraph=Z(ne._paragraph).replace("hr",ne.hr).replace("heading"," {0,3}#{1,6} ").replace("|lheading","").replace("|table","").replace("blockquote"," {0,3}>").replace("fences"," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list"," {0,3}(?:[*+-]|1[.)]) ").replace("html","</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag",ne._tag).getRegex(),ne.blockquote=Z(ne.blockquote).replace("paragraph",ne.paragraph).getRegex(),ne.normal={...ne},ne.gfm={...ne.normal,table:"^ *([^\\n ].*\\|.*)\\n {0,3}(?:\\| *)?(:?-+:? *(?:\\| *:?-+:? *)*)(?:\\| *)?(?:\\n((?:(?! *\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)"},ne.gfm.table=Z(ne.gfm.table).replace("hr",ne.hr).replace("heading"," {0,3}#{1,6} ").replace("blockquote"," {0,3}>").replace("code"," {4}[^\\n]").replace("fences"," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list"," {0,3}(?:[*+-]|1[.)]) ").replace("html","</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag",ne._tag).getRegex(),ne.gfm.paragraph=Z(ne._paragraph).replace("hr",ne.hr).replace("heading"," {0,3}#{1,6} ").replace("|lheading","").replace("table",ne.gfm.table).replace("blockquote"," {0,3}>").replace("fences"," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list"," {0,3}(?:[*+-]|1[.)]) ").replace("html","</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag",ne._tag).getRegex(),ne.pedantic={...ne.normal,html:Z("^ *(?:comment *(?:\\n|\\s*$)|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)|<tag(?:\"[^\"]*\"|'[^']*'|\\s[^'\"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))").replace("comment",ne._comment).replace(/tag/g,"(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b)\\w+(?!:|[^\\w\\s@]*@)\\b").getRegex(),def:/^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/,heading:/^(#{1,6})(.*)(?:\n+|$)/,fences:X,lheading:/^(.+?)\n {0,3}(=+|-+) *(?:\n+|$)/,paragraph:Z(ne.normal._paragraph).replace("hr",ne.hr).replace("heading"," *#{1,6} *[^\n]").replace("lheading",ne.lheading).replace("blockquote"," {0,3}>").replace("|fences","").replace("|list","").replace("|html","").getRegex()};const se={escape:/^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/,autolink:/^<(scheme:[^\s\x00-\x1f<>]*|email)>/,url:X,tag:"^comment|^</[a-zA-Z][\\w:-]*\\s*>|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>|^<\\?[\\s\\S]*?\\?>|^<![a-zA-Z]+\\s[\\s\\S]*?>|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>",link:/^!?\[(label)\]\(\s*(href)(?:\s+(title))?\s*\)/,reflink:/^!?\[(label)\]\[(ref)\]/,nolink:/^!?\[(ref)\](?:\[\])?/,reflinkSearch:"reflink|nolink(?!\\()",emStrong:{lDelim:/^(?:\*+(?:([punct_])|[^\s*]))|^_+(?:([punct*])|([^\s_]))/,rDelimAst:/^(?:[^_*\\]|\\.)*?\_\_(?:[^_*\\]|\\.)*?\*(?:[^_*\\]|\\.)*?(?=\_\_)|(?:[^*\\]|\\.)+(?=[^*])|[punct_](\*+)(?=[\s]|$)|(?:[^punct*_\s\\]|\\.)(\*+)(?=[punct_\s]|$)|[punct_\s](\*+)(?=[^punct*_\s])|[\s](\*+)(?=[punct_])|[punct_](\*+)(?=[punct_])|(?:[^punct*_\s\\]|\\.)(\*+)(?=[^punct*_\s])/,rDelimUnd:/^(?:[^_*\\]|\\.)*?\*\*(?:[^_*\\]|\\.)*?\_(?:[^_*\\]|\\.)*?(?=\*\*)|(?:[^_\\]|\\.)+(?=[^_])|[punct*](\_+)(?=[\s]|$)|(?:[^punct*_\s\\]|\\.)(\_+)(?=[punct*\s]|$)|[punct*\s](\_+)(?=[^punct*_\s])|[\s](\_+)(?=[punct*])|[punct*](\_+)(?=[punct*])/},code:/^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/,br:/^( {2,}|\\)\n(?!\s*$)/,del:X,text:/^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*_]|\b_|$)|[^ ](?= {2,}\n)))/,punctuation:/^([\spunctuation])/};function re(e){return e.replace(/---/g,"—").replace(/--/g,"–").replace(/(^|[-\u2014/(\[{"\s])'/g,"$1‘").replace(/'/g,"’").replace(/(^|[-\u2014/(\[{\u2018\s])"/g,"$1“").replace(/"/g,"”").replace(/\.{3}/g,"…")}function ie(e){let t,n,s="";const r=e.length;for(t=0;t<r;t++)n=e.charCodeAt(t),Math.random()>.5&&(n="x"+n.toString(16)),s+="&#"+n+";";return s}se._punctuation="!\"#$%&'()+\\-.,/:;<=>?@\\[\\]`^{|}~",se.punctuation=Z(se.punctuation).replace(/punctuation/g,se._punctuation).getRegex(),se.blockSkip=/\[[^\]]*?\]\([^\)]*?\)|`[^`]*?`|<[^>]*?>/g,se.escapedEmSt=/(?:^|[^\\])(?:\\\\)*\\[*_]/g,se._comment=Z(ne._comment).replace("(?:--\x3e|$)","--\x3e").getRegex(),se.emStrong.lDelim=Z(se.emStrong.lDelim).replace(/punct/g,se._punctuation).getRegex(),se.emStrong.rDelimAst=Z(se.emStrong.rDelimAst,"g").replace(/punct/g,se._punctuation).getRegex(),se.emStrong.rDelimUnd=Z(se.emStrong.rDelimUnd,"g").replace(/punct/g,se._punctuation).getRegex(),se._escapes=/\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/g,se._scheme=/[a-zA-Z][a-zA-Z0-9+.-]{1,31}/,se._email=/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/,se.autolink=Z(se.autolink).replace("scheme",se._scheme).replace("email",se._email).getRegex(),se._attribute=/\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/,se.tag=Z(se.tag).replace("comment",se._comment).replace("attribute",se._attribute).getRegex(),se._label=/(?:\[(?:\\.|[^\[\]\\])*\]|\\.|`[^`]*`|[^\[\]\\`])*?/,se._href=/<(?:\\.|[^\n<>\\])+>|[^\s\x00-\x1f]*/,se._title=/"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)/,se.link=Z(se.link).replace("label",se._label).replace("href",se._href).replace("title",se._title).getRegex(),se.reflink=Z(se.reflink).replace("label",se._label).replace("ref",ne._label).getRegex(),se.nolink=Z(se.nolink).replace("ref",ne._label).getRegex(),se.reflinkSearch=Z(se.reflinkSearch,"g").replace("reflink",se.reflink).replace("nolink",se.nolink).getRegex(),se.normal={...se},se.pedantic={...se.normal,strong:{start:/^__|\*\*/,middle:/^__(?=\S)([\s\S]*?\S)__(?!_)|^\*\*(?=\S)([\s\S]*?\S)\*\*(?!\*)/,endAst:/\*\*(?!\*)/g,endUnd:/__(?!_)/g},em:{start:/^_|\*/,middle:/^()\*(?=\S)([\s\S]*?\S)\*(?!\*)|^_(?=\S)([\s\S]*?\S)_(?!_)/,endAst:/\*(?!\*)/g,endUnd:/_(?!_)/g},link:Z(/^!?\[(label)\]\((.*?)\)/).replace("label",se._label).getRegex(),reflink:Z(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace("label",se._label).getRegex()},se.gfm={...se.normal,escape:Z(se.escape).replace("])","~|])").getRegex(),_extended_email:/[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![-_])/,url:/^((?:ftp|https?):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/,_backpedal:/(?:[^?!.,:;*_'"~()&]+|\([^)]*\)|&(?![a-zA-Z0-9]+;$)|[?!.,:;*_'"~)]+(?!$))+/,del:/^(~~?)(?=[^\s~])([\s\S]*?[^\s~])\1(?=[^~]|$)/,text:/^([`~]+|[^`~])(?:(?= {2,}\n)|(?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)|[\s\S]*?(?:(?=[\\<!\[`*~_]|\b_|https?:\/\/|ftp:\/\/|www\.|$)|[^ ](?= {2,}\n)|[^a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-](?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)))/},se.gfm.url=Z(se.gfm.url,"i").replace("email",se.gfm._extended_email).getRegex(),se.breaks={...se.gfm,br:Z(se.br).replace("{2,}","*").getRegex(),text:Z(se.gfm.text).replace("\\b_","\\b_| {2,}\\n").replace(/\{2,\}/g,"*").getRegex()};class le{constructor(e){this.tokens=[],this.tokens.links=Object.create(null),this.options=e||R,this.options.tokenizer=this.options.tokenizer||new te,this.tokenizer=this.options.tokenizer,this.tokenizer.options=this.options,this.tokenizer.lexer=this,this.inlineQueue=[],this.state={inLink:!1,inRawBlock:!1,top:!0};const t={block:ne.normal,inline:se.normal};this.options.pedantic?(t.block=ne.pedantic,t.inline=se.pedantic):this.options.gfm&&(t.block=ne.gfm,this.options.breaks?t.inline=se.breaks:t.inline=se.gfm),this.tokenizer.rules=t}static get rules(){return{block:ne,inline:se}}static lex(e,t){return new le(t).lex(e)}static lexInline(e,t){return new le(t).inlineTokens(e)}lex(e){let t;for(e=e.replace(/\r\n|\r/g,"\n"),this.blockTokens(e,this.tokens);t=this.inlineQueue.shift();)this.inlineTokens(t.src,t.tokens);return this.tokens}blockTokens(e,t=[]){let n,s,r,i;for(e=this.options.pedantic?e.replace(/\t/g,"    ").replace(/^ +$/gm,""):e.replace(/^( *)(\t+)/gm,((e,t,n)=>t+"    ".repeat(n.length)));e;)if(!(this.options.extensions&&this.options.extensions.block&&this.options.extensions.block.some((s=>!!(n=s.call({lexer:this},e,t))&&(e=e.substring(n.raw.length),t.push(n),!0)))))if(n=this.tokenizer.space(e))e=e.substring(n.raw.length),1===n.raw.length&&t.length>0?t[t.length-1].raw+="\n":t.push(n);else if(n=this.tokenizer.code(e))e=e.substring(n.raw.length),s=t[t.length-1],!s||"paragraph"!==s.type&&"text"!==s.type?t.push(n):(s.raw+="\n"+n.raw,s.text+="\n"+n.text,this.inlineQueue[this.inlineQueue.length-1].src=s.text);else if(n=this.tokenizer.fences(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.heading(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.hr(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.blockquote(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.list(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.html(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.def(e))e=e.substring(n.raw.length),s=t[t.length-1],!s||"paragraph"!==s.type&&"text"!==s.type?this.tokens.links[n.tag]||(this.tokens.links[n.tag]={href:n.href,title:n.title}):(s.raw+="\n"+n.raw,s.text+="\n"+n.raw,this.inlineQueue[this.inlineQueue.length-1].src=s.text);else if(n=this.tokenizer.table(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.lheading(e))e=e.substring(n.raw.length),t.push(n);else{if(r=e,this.options.extensions&&this.options.extensions.startBlock){let t=1/0;const n=e.slice(1);let s;this.options.extensions.startBlock.forEach((function(e){s=e.call({lexer:this},n),"number"==typeof s&&s>=0&&(t=Math.min(t,s))})),t<1/0&&t>=0&&(r=e.substring(0,t+1))}if(this.state.top&&(n=this.tokenizer.paragraph(r)))s=t[t.length-1],i&&"paragraph"===s.type?(s.raw+="\n"+n.raw,s.text+="\n"+n.text,this.inlineQueue.pop(),this.inlineQueue[this.inlineQueue.length-1].src=s.text):t.push(n),i=r.length!==e.length,e=e.substring(n.raw.length);else if(n=this.tokenizer.text(e))e=e.substring(n.raw.length),s=t[t.length-1],s&&"text"===s.type?(s.raw+="\n"+n.raw,s.text+="\n"+n.text,this.inlineQueue.pop(),this.inlineQueue[this.inlineQueue.length-1].src=s.text):t.push(n);else if(e){const t="Infinite loop on byte: "+e.charCodeAt(0);if(this.options.silent){console.error(t);break}throw new Error(t)}}return this.state.top=!0,t}inline(e,t=[]){return this.inlineQueue.push({src:e,tokens:t}),t}inlineTokens(e,t=[]){let n,s,r,i,l,o,a=e;if(this.tokens.links){const e=Object.keys(this.tokens.links);if(e.length>0)for(;null!=(i=this.tokenizer.rules.inline.reflinkSearch.exec(a));)e.includes(i[0].slice(i[0].lastIndexOf("[")+1,-1))&&(a=a.slice(0,i.index)+"["+K("a",i[0].length-2)+"]"+a.slice(this.tokenizer.rules.inline.reflinkSearch.lastIndex))}for(;null!=(i=this.tokenizer.rules.inline.blockSkip.exec(a));)a=a.slice(0,i.index)+"["+K("a",i[0].length-2)+"]"+a.slice(this.tokenizer.rules.inline.blockSkip.lastIndex);for(;null!=(i=this.tokenizer.rules.inline.escapedEmSt.exec(a));)a=a.slice(0,i.index+i[0].length-2)+"++"+a.slice(this.tokenizer.rules.inline.escapedEmSt.lastIndex),this.tokenizer.rules.inline.escapedEmSt.lastIndex--;for(;e;)if(l||(o=""),l=!1,!(this.options.extensions&&this.options.extensions.inline&&this.options.extensions.inline.some((s=>!!(n=s.call({lexer:this},e,t))&&(e=e.substring(n.raw.length),t.push(n),!0)))))if(n=this.tokenizer.escape(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.tag(e))e=e.substring(n.raw.length),s=t[t.length-1],s&&"text"===n.type&&"text"===s.type?(s.raw+=n.raw,s.text+=n.text):t.push(n);else if(n=this.tokenizer.link(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.reflink(e,this.tokens.links))e=e.substring(n.raw.length),s=t[t.length-1],s&&"text"===n.type&&"text"===s.type?(s.raw+=n.raw,s.text+=n.text):t.push(n);else if(n=this.tokenizer.emStrong(e,a,o))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.codespan(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.br(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.del(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.autolink(e,ie))e=e.substring(n.raw.length),t.push(n);else if(this.state.inLink||!(n=this.tokenizer.url(e,ie))){if(r=e,this.options.extensions&&this.options.extensions.startInline){let t=1/0;const n=e.slice(1);let s;this.options.extensions.startInline.forEach((function(e){s=e.call({lexer:this},n),"number"==typeof s&&s>=0&&(t=Math.min(t,s))})),t<1/0&&t>=0&&(r=e.substring(0,t+1))}if(n=this.tokenizer.inlineText(r,re))e=e.substring(n.raw.length),"_"!==n.raw.slice(-1)&&(o=n.raw.slice(-1)),l=!0,s=t[t.length-1],s&&"text"===s.type?(s.raw+=n.raw,s.text+=n.text):t.push(n);else if(e){const t="Infinite loop on byte: "+e.charCodeAt(0);if(this.options.silent){console.error(t);break}throw new Error(t)}}else e=e.substring(n.raw.length),t.push(n);return t}}class oe{constructor(e){this.options=e||R}code(e,t,n){const s=(t||"").match(/\S*/)[0];if(this.options.highlight){const t=this.options.highlight(e,s);null!=t&&t!==e&&(n=!0,e=t)}return e=e.replace(/\n$/,"")+"\n",s?'<pre><code class="'+this.options.langPrefix+D(s)+'">'+(n?e:D(e,!0))+"</code></pre>\n":"<pre><code>"+(n?e:D(e,!0))+"</code></pre>\n"}blockquote(e){return`<blockquote>\n${e}</blockquote>\n`}html(e){return e}heading(e,t,n,s){if(this.options.headerIds){return`<h${t} id="${this.options.headerPrefix+s.slug(n)}">${e}</h${t}>\n`}return`<h${t}>${e}</h${t}>\n`}hr(){return this.options.xhtml?"<hr/>\n":"<hr>\n"}list(e,t,n){const s=t?"ol":"ul";return"<"+s+(t&&1!==n?' start="'+n+'"':"")+">\n"+e+"</"+s+">\n"}listitem(e){return`<li>${e}</li>\n`}checkbox(e){return"<input "+(e?'checked="" ':"")+'disabled="" type="checkbox"'+(this.options.xhtml?" /":"")+"> "}paragraph(e){return`<p>${e}</p>\n`}table(e,t){return t&&(t=`<tbody>${t}</tbody>`),"<table>\n<thead>\n"+e+"</thead>\n"+t+"</table>\n"}tablerow(e){return`<tr>\n${e}</tr>\n`}tablecell(e,t){const n=t.header?"th":"td";return(t.align?`<${n} align="${t.align}">`:`<${n}>`)+e+`</${n}>\n`}strong(e){return`<strong>${e}</strong>`}em(e){return`<em>${e}</em>`}codespan(e){return`<code>${e}</code>`}br(){return this.options.xhtml?"<br/>":"<br>"}del(e){return`<del>${e}</del>`}link(e,t,n){if(null===(e=Q(this.options.sanitize,this.options.baseUrl,e)))return n;let s='<a href="'+e+'"';return t&&(s+=' title="'+t+'"'),s+=">"+n+"</a>",s}image(e,t,n){if(null===(e=Q(this.options.sanitize,this.options.baseUrl,e)))return n;let s=`<img src="${e}" alt="${n}"`;return t&&(s+=` title="${t}"`),s+=this.options.xhtml?"/>":">",s}text(e){return e}}class ae{strong(e){return e}em(e){return e}codespan(e){return e}del(e){return e}html(e){return e}text(e){return e}link(e,t,n){return""+n}image(e,t,n){return""+n}br(){return""}}class ce{constructor(){this.seen={}}serialize(e){return e.toLowerCase().trim().replace(/<[!\/a-z].*?>/gi,"").replace(/[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g,"").replace(/\s/g,"-")}getNextSafeSlug(e,t){let n=e,s=0;if(this.seen.hasOwnProperty(n)){s=this.seen[e];do{s++,n=e+"-"+s}while(this.seen.hasOwnProperty(n))}return t||(this.seen[e]=s,this.seen[n]=0),n}slug(e,t={}){const n=this.serialize(e);return this.getNextSafeSlug(n,t.dryrun)}}class de{constructor(e){this.options=e||R,this.options.renderer=this.options.renderer||new oe,this.renderer=this.options.renderer,this.renderer.options=this.options,this.textRenderer=new ae,this.slugger=new ce}static parse(e,t){return new de(t).parse(e)}static parseInline(e,t){return new de(t).parseInline(e)}parse(e,t=!0){let n,s,r,i,l,o,a,c,d,h,u,m,p,g,f,k,w,x,y,b="";const v=e.length;for(n=0;n<v;n++)if(h=e[n],this.options.extensions&&this.options.extensions.renderers&&this.options.extensions.renderers[h.type]&&(y=this.options.extensions.renderers[h.type].call({parser:this},h),!1!==y||!["space","hr","heading","code","table","blockquote","list","html","paragraph","text"].includes(h.type)))b+=y||"";else switch(h.type){case"space":continue;case"hr":b+=this.renderer.hr();continue;case"heading":b+=this.renderer.heading(this.parseInline(h.tokens),h.depth,H(this.parseInline(h.tokens,this.textRenderer)),this.slugger);continue;case"code":b+=this.renderer.code(h.text,h.lang,h.escaped);continue;case"table":for(c="",a="",i=h.header.length,s=0;s<i;s++)a+=this.renderer.tablecell(this.parseInline(h.header[s].tokens),{header:!0,align:h.align[s]});for(c+=this.renderer.tablerow(a),d="",i=h.rows.length,s=0;s<i;s++){for(o=h.rows[s],a="",l=o.length,r=0;r<l;r++)a+=this.renderer.tablecell(this.parseInline(o[r].tokens),{header:!1,align:h.align[r]});d+=this.renderer.tablerow(a)}b+=this.renderer.table(c,d);continue;case"blockquote":d=this.parse(h.tokens),b+=this.renderer.blockquote(d);continue;case"list":for(u=h.ordered,m=h.start,p=h.loose,i=h.items.length,d="",s=0;s<i;s++)f=h.items[s],k=f.checked,w=f.task,g="",f.task&&(x=this.renderer.checkbox(k),p?f.tokens.length>0&&"paragraph"===f.tokens[0].type?(f.tokens[0].text=x+" "+f.tokens[0].text,f.tokens[0].tokens&&f.tokens[0].tokens.length>0&&"text"===f.tokens[0].tokens[0].type&&(f.tokens[0].tokens[0].text=x+" "+f.tokens[0].tokens[0].text)):f.tokens.unshift({type:"text",text:x}):g+=x),g+=this.parse(f.tokens,p),d+=this.renderer.listitem(g,w,k);b+=this.renderer.list(d,u,m);continue;case"html":b+=this.renderer.html(h.text);continue;case"paragraph":b+=this.renderer.paragraph(this.parseInline(h.tokens));continue;case"text":for(d=h.tokens?this.parseInline(h.tokens):h.text;n+1<v&&"text"===e[n+1].type;)h=e[++n],d+="\n"+(h.tokens?this.parseInline(h.tokens):h.text);b+=t?this.renderer.paragraph(d):d;continue;default:{const e='Token with "'+h.type+'" type was not found.';if(this.options.silent)return void console.error(e);throw new Error(e)}}return b}parseInline(e,t){t=t||this.renderer;let n,s,r,i="";const l=e.length;for(n=0;n<l;n++)if(s=e[n],this.options.extensions&&this.options.extensions.renderers&&this.options.extensions.renderers[s.type]&&(r=this.options.extensions.renderers[s.type].call({parser:this},s),!1!==r||!["escape","html","link","image","strong","em","codespan","br","del","text"].includes(s.type)))i+=r||"";else switch(s.type){case"escape":case"text":i+=t.text(s.text);break;case"html":i+=t.html(s.text);break;case"link":i+=t.link(s.href,s.title,this.parseInline(s.tokens,t));break;case"image":i+=t.image(s.href,s.title,s.text);break;case"strong":i+=t.strong(this.parseInline(s.tokens,t));break;case"em":i+=t.em(this.parseInline(s.tokens,t));break;case"codespan":i+=t.codespan(s.text);break;case"br":i+=t.br();break;case"del":i+=t.del(this.parseInline(s.tokens,t));break;default:{const e='Token with "'+s.type+'" type was not found.';if(this.options.silent)return void console.error(e);throw new Error(e)}}return i}}class he{constructor(e){this.options=e||R}static passThroughHooks=new Set(["preprocess","postprocess"]);preprocess(e){return e}postprocess(e){return e}}function ue(e,t){return(n,s,r)=>{"function"==typeof s&&(r=s,s=null);const i={...s},l=function(e,t,n){return s=>{if(s.message+="\nPlease report this to https://github.com/markedjs/marked.",e){const e="<p>An error occurred:</p><pre>"+D(s.message+"",!0)+"</pre>";return t?Promise.resolve(e):n?void n(null,e):e}if(t)return Promise.reject(s);if(!n)throw s;n(s)}}((s={...me.defaults,...i}).silent,s.async,r);if(null==n)return l(new Error("marked(): input parameter is undefined or null"));if("string"!=typeof n)return l(new Error("marked(): input parameter is of type "+Object.prototype.toString.call(n)+", string expected"));if(function(e){e&&e.sanitize&&!e.silent&&console.warn("marked(): sanitize and sanitizer parameters are deprecated since version 0.7.0, should not be used and will be removed in the future. Read more here: https://marked.js.org/#/USING_ADVANCED.md#options")}(s),s.hooks&&(s.hooks.options=s),r){const i=s.highlight;let o;try{s.hooks&&(n=s.hooks.preprocess(n)),o=e(n,s)}catch(e){return l(e)}const a=function(e){let n;if(!e)try{s.walkTokens&&me.walkTokens(o,s.walkTokens),n=t(o,s),s.hooks&&(n=s.hooks.postprocess(n))}catch(t){e=t}return s.highlight=i,e?l(e):r(null,n)};if(!i||i.length<3)return a();if(delete s.highlight,!o.length)return a();let c=0;return me.walkTokens(o,(function(e){"code"===e.type&&(c++,setTimeout((()=>{i(e.text,e.lang,(function(t,n){if(t)return a(t);null!=n&&n!==e.text&&(e.text=n,e.escaped=!0),c--,0===c&&a()}))}),0))})),void(0===c&&a())}if(s.async)return Promise.resolve(s.hooks?s.hooks.preprocess(n):n).then((t=>e(t,s))).then((e=>s.walkTokens?Promise.all(me.walkTokens(e,s.walkTokens)).then((()=>e)):e)).then((e=>t(e,s))).then((e=>s.hooks?s.hooks.postprocess(e):e)).catch(l);try{s.hooks&&(n=s.hooks.preprocess(n));const r=e(n,s);s.walkTokens&&me.walkTokens(r,s.walkTokens);let i=t(r,s);return s.hooks&&(i=s.hooks.postprocess(i)),i}catch(e){return l(e)}}}function me(e,t,n){return ue(le.lex,de.parse)(e,t,n)}async function pe(e,t,n,s){const r=e.dataset.modalType,i=e.dataset.modalUrl||e.getAttribute("href")||null;let l,o=n.padding;if(e.dataset.modalOverlaycolor&&e.dataset.modalOverlaycolor!==s.overlaycolor&&t.modalElement.style.setProperty("--mm-overlaycolor",e.dataset.modalOverlaycolor),e.dataset.modalClass&&t.modalElement.classList.add(...e.dataset.modalClass.split(/[ ,]+/)),"html"==r){o=e.dataset.modalPadding||n.padding.html||n.padding,o!==s.padding.html&&t.modalElement.style.setProperty("--mm-modal-padding",o);let r=e.dataset.modalBackground||n.background.html||n.background;r!==s.background.html&&t.modalElement.style.setProperty("--mm-modal-background",r)}else if("iframe"==r){o=e.dataset.modalPadding||n.padding.iframe||n.padding,"0"!==o&&t.modalElement.style.setProperty("--mm-modal-padding",o);let r=e.dataset.modalBgcolor||n.background.iframe||n.background;r!==s.background.iframe&&t.modalElement.style.setProperty("--mm-modal-background",r)}else{o=e.dataset.modalPadding||n.padding.media||n.padding,"0"!==o&&t.modalElement.style.setProperty("--mm-modal-padding",o);let r=e.dataset.modalBackground||n.background.media||n.background;r!==s.background.media&&t.modalElement.style.setProperty("--mm-modal-background",r)}t.triggerElement=e;let a=!1;if("video"===r)l=await async function(e,t,n){try{const s=document.createElement("video");if(s.src=e,s.controls=n.videocontrols,s.preload="metadata",await new Promise(((e,t)=>{s.addEventListener("loadedmetadata",e),s.addEventListener("error",t)})),s.readyState>=0)return s.preload="auto",t.modalElement.dataset.modalType="video",s.classList.add("mm-body"),s.outerHTML;throw new Error("Video metadata cannot be loaded.")}catch(e){return console.error("Error loading video:",e),null}}(i,t,n);else if("image"===r){let n=i&&"#"!=i&&"#/"!=i?i:"IMG"==e.firstChild.tagName?e.firstChild.getAttribute("src"):null,s="IMG"==e.firstChild.tagName?e.firstChild.getAttribute("alt"):null;l=await async function(e,t,n){return new Promise((s=>{const r=new Image;let i="";n&&(i=` alt="${n}"`),r.onload=()=>{t.modalElement.dataset.modalType="image",s(`<img class="mm-body" src="${e}"${i}>`)},r.onerror=()=>{console.error(`Error loading image: ${e}`),s(null)},r.src=e}))}(n,t,s)}else if("html"===r)l=await function(e,t){return new Promise((async(n,s)=>{try{let s;if("string"!=typeof e)throw new Error("Invalid HTML content source. Must be a URL string or an anchor element.");if(e.startsWith("#")){const n=document.querySelector(e);if(!n)throw new Error("Anchor element with specified ID not found.");s="section"===n.firstElementChild.tagName.toLowerCase()?n.firstElementChild.innerHTML:n.innerHTML,t.modalElement.dataset.modalType="html"}else if(e.endsWith(".md")){const n=await fetch(e);if(!n.ok)throw new Error("Failed to fetch MD content.");const r=await n.text();t.modalElement.dataset.modalType="html",s=me(r)}else{if(!e.endsWith(".html"))throw new Error("Unsupported HTML content source.");{const n=await fetch(e);if(!n.ok)throw new Error("Failed to fetch HTML content.");s=await n.text(),t.modalElement.dataset.modalType="html"}}n(s)}catch(e){console.error("Error loading HTML content:",e),s(e)}}))}(i,t);else{if("iframe"!==r)return void console.error("Unknown modal type");l=`<iframe class="mm-body" src="${i}" frameborder="0" allowfullscreen></iframe>`,t.modalElement.dataset.modalType="iframe"}l||(a=!0),a||(t.setContent(l,r),t.show())}me.options=me.setOptions=function(e){var t;return me.defaults={...me.defaults,...e},t=me.defaults,R=t,me},me.getDefaults=A,me.defaults=R,me.use=function(...e){const t=me.defaults.extensions||{renderers:{},childTokens:{}};e.forEach((e=>{const n={...e};if(n.async=me.defaults.async||n.async||!1,e.extensions&&(e.extensions.forEach((e=>{if(!e.name)throw new Error("extension name required");if(e.renderer){const n=t.renderers[e.name];t.renderers[e.name]=n?function(...t){let s=e.renderer.apply(this,t);return!1===s&&(s=n.apply(this,t)),s}:e.renderer}if(e.tokenizer){if(!e.level||"block"!==e.level&&"inline"!==e.level)throw new Error("extension level must be 'block' or 'inline'");t[e.level]?t[e.level].unshift(e.tokenizer):t[e.level]=[e.tokenizer],e.start&&("block"===e.level?t.startBlock?t.startBlock.push(e.start):t.startBlock=[e.start]:"inline"===e.level&&(t.startInline?t.startInline.push(e.start):t.startInline=[e.start]))}e.childTokens&&(t.childTokens[e.name]=e.childTokens)})),n.extensions=t),e.renderer){const t=me.defaults.renderer||new oe;for(const n in e.renderer){const s=t[n];t[n]=(...r)=>{let i=e.renderer[n].apply(t,r);return!1===i&&(i=s.apply(t,r)),i}}n.renderer=t}if(e.tokenizer){const t=me.defaults.tokenizer||new te;for(const n in e.tokenizer){const s=t[n];t[n]=(...r)=>{let i=e.tokenizer[n].apply(t,r);return!1===i&&(i=s.apply(t,r)),i}}n.tokenizer=t}if(e.hooks){const t=me.defaults.hooks||new he;for(const n in e.hooks){const s=t[n];he.passThroughHooks.has(n)?t[n]=r=>{if(me.defaults.async)return Promise.resolve(e.hooks[n].call(t,r)).then((e=>s.call(t,e)));const i=e.hooks[n].call(t,r);return s.call(t,i)}:t[n]=(...r)=>{let i=e.hooks[n].apply(t,r);return!1===i&&(i=s.apply(t,r)),i}}n.hooks=t}if(e.walkTokens){const t=me.defaults.walkTokens;n.walkTokens=function(n){let s=[];return s.push(e.walkTokens.call(this,n)),t&&(s=s.concat(t.call(this,n))),s}}me.setOptions(n)}))},me.walkTokens=function(e,t){let n=[];for(const s of e)switch(n=n.concat(t.call(me,s)),s.type){case"table":for(const e of s.header)n=n.concat(me.walkTokens(e.tokens,t));for(const e of s.rows)for(const s of e)n=n.concat(me.walkTokens(s.tokens,t));break;case"list":n=n.concat(me.walkTokens(s.items,t));break;default:me.defaults.extensions&&me.defaults.extensions.childTokens&&me.defaults.extensions.childTokens[s.type]?me.defaults.extensions.childTokens[s.type].forEach((function(e){n=n.concat(me.walkTokens(s[e],t))})):s.tokens&&(n=n.concat(me.walkTokens(s.tokens,t)))}return n},me.parseInline=ue(le.lexInline,de.parseInline),me.Parser=de,me.parser=de.parse,me.Renderer=oe,me.TextRenderer=ae,me.Lexer=le,me.lexer=le.lex,me.Tokenizer=te,me.Slugger=ce,me.Hooks=he,me.parse=me,me.options,me.setOptions,me.use,me.walkTokens,me.parseInline,de.parse,le.lex;return()=>{let e={};const t=(e,t,n)=>{const s="data-modal-type",r="data-modal-close",i=e.getRevealElement(),l=Array.from(i.querySelectorAll(`[${s}]:not(section)`)),o=e.getConfig().margin,a=e=>{const a=new m(e);((e,t)=>{t.presetConfigs={keyboard:e.getConfig().keyboard,mouseWheel:e.getConfig().mouseWheel,scrollProgress:e.getConfig().scrollProgress}})(e,a),async function(e,t,n){if(""!==t.closebuttonhtml&&(e.closeButtonHtml=t.closebuttonhtml),t.overlaycolor!==n.overlaycolor&&e.modalElement.style.setProperty("--mm-overlaycolor",t.overlaycolor),t.speed!==n.speed){let n=t.speed/1e3;e.modalElement.style.setProperty("--mm-transspeed",`${n}s`)}if(t.htmlminwidth!==n.htmlminwidth){let n=isNaN(t.htmlminwidth)?t.htmlminwidth:`${t.htmlminwidth}px`;e.modalElement.style.setProperty("--mm-minwidth",n)}if(t.htmlminheight!==n.htmlminheight){let n=isNaN(t.htmlminheight)?t.htmlminheight:`${t.htmlminheight}px`;e.modalElement.style.setProperty("--mm-minheight",n)}t.radius!==n.radius&&e.modalElement.style.setProperty("--mm-outerradius",t.radius),t.bordercolor!==n.bordercolor&&e.modalElement.style.setProperty("--mm-bordercolor",t.bordercolor),t.borderwidth!==n.borderwidth&&e.modalElement.style.setProperty("--mm-borderwidth",t.borderwidth),t.shadow!==n.shadow&&e.modalElement.style.setProperty("--mm-shadow",t.shadow),t.zoom?t.zoomfrom!==n.zoomfrom&&e.modalElement.style.setProperty("--mm-initialscale",t.zoomfrom):e.modalElement.style.setProperty("--mm-initialscale",1)}(a,t,n);const c=e=>{"Escape"!==e.key&&27!==e.keyCode||a.isOpen&&a.hide()};a.closeButtonHtml=`<button class="mm-close" type="button" aria-hidden="true" ${r} aria-label="Close"><svg class="offset" viewport="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><g transform="rotate(45 12 12)"><line x1="0" y1="12" x2="24" y2="12"></line><line x1="12" y1="0" x2="12" y2="24"></line></g></svg></button>`;const d=async e=>{e.preventDefault();const s=e.currentTarget;!s.hasAttribute("href")||"#"!==s.getAttribute("href")&&"#/"!==s.getAttribute("href")||e.stopPropagation(),await pe(s,a,t,n)};l.forEach((e=>{e.addEventListener("click",d)}));const h=new MutationObserver((e=>{e.forEach((e=>{"childList"===e.type&&e.addedNodes.forEach((e=>{1===e.nodeType&&e.hasAttribute(s)&&"section"!==e.tagName.toLowerCase()&&e.addEventListener("click",d)}))}))}));e.addEventListener("click",(async e=>{(e.target.closest(`[${r}]`)||e.target.closest('a[href="#multimodal"]'))&&(e.preventDefault(),e.stopPropagation(),a.hide())}));const u=e=>{if(e.dataset.modalType){return e.dataset.modalEvent?e.dataset.modalEvent:t.slidemodalevent}};e.on("slidechanged",(async s=>{a.isOpen&&a.hide(),function(e){let t=e.querySelectorAll("[data-modal-type]");t&&t.forEach((e=>{if("image"==e.dataset.modalType){let t=e.dataset.modalUrl||e.getAttribute("href")||null;t||(t="IMG"==e.firstChild.tagName?e.firstChild.getAttribute("src"):null),t&&((new Image).src=t)}}))}(s.currentSlide),T(e)?s.currentSlide.dataset.modalType&&"slidetransitionend"==t.slidemodalevent&&setTimeout((()=>{e.getCurrentSlide()==s.currentSlide&&pe(s.currentSlide,a,t,n)}),10):u(s.currentSlide)&&"slidechanged"==u(s.currentSlide)&&await pe(s.currentSlide,a,t,n)})),e.on("slidetransitionend",(async e=>{u(e.currentSlide)&&"slidetransitionend"==u(e.currentSlide)&&await pe(e.currentSlide,a,t,n)})),e.on("ready",(async s=>{L(o,i,e.getScale(),a,t),!u(s.currentSlide)||"slidetransitionend"!=u(s.currentSlide)&&"slidechanged"!=u(s.currentSlide)||await pe(s.currentSlide,a,t,n),h.observe(i,{childList:!0,subtree:!0})})),e.on("resize",(e=>{L(o,i,e.scale,a,t)})),a.on("multimodal:show",(()=>{i.classList.add("multimodal-open"),document.addEventListener("keydown",c),a.modalElement.closest(".reveal-scroll")||((e,t)=>{if("video"==t.modalElement.dataset.modalType){const n=t.modalDialog.querySelector("video");n&&e.configure({keyboard:{27:()=>{t.hide()},32:()=>{n.paused?n.play():n.pause()}}})}else e.configure({keyboard:{27:()=>{t.hide()},32:()=>{t.hide()}}})})(e,a);const t=e=>{a.isLocked||e.target!==a.modalElement&&e.target!==a.modalMax||a.hide()};a.modalElement.addEventListener("click",t),a.closeOnClickOutside=t})),a.on("multimodal:shown",(()=>{a.triggerElement&&a.triggerElement.dataset.modalNavblock&&"true"==a.triggerElement.dataset.modalNavblock&&((e,t)=>{t.modalElement&&S(t.modalElement),T(e)||e.configure({keyboard:!1,mouseWheel:!1,scrollProgress:!1}),t.isLocked=!0})(e,a);const n=a.modalDialog.querySelector("video");n&&(t.videoautoplay&&n.play(),t.videoautohide&&n.addEventListener("ended",(()=>{a.hide()})),n.addEventListener("webkitendfullscreen",(function(e){t.debug&&console.log("Exited fullscreen"),a.hide()})))})),a.on("multimodal:hide",(()=>{i.classList.remove("multimodal-open"),a.closeOnClickOutside&&(a.modalElement.removeEventListener("click",a.closeOnClickOutside),a.closeOnClickOutside=null),((e,t)=>{t.modalElement&&z(t.modalElement),T(e)||e.configure({keyboard:t.presetConfigs.keyboard,mouseWheel:t.presetConfigs.mouseWheel,scrollProgress:t.presetConfigs.scrollProgress}),t.isLocked=!1})(e,a),document.removeEventListener("keydown",c);const t=a.modalDialog.querySelector("video");t&&t.pause()})),a.on("multimodal:hidden",(()=>{a.modalBody.innerHTML="";const e=a.modalDialog.querySelector("iframe");e&&(e.src=""),a.modalElement.style.removeProperty("--mm-modal-background"),a.modalElement.style.removeProperty("--mm-overlaycolor"),a.modalElement.style.removeProperty("--mm-modal-padding"),a.modalElement.style.removeProperty("--mm-outerradius")})),t.debug&&(e.on("multimodal:shown",(()=>{console.log("Modal shown")})),e.on("multimodal:hidden",(()=>{console.log("Modal hidden")})),e.on("multimodal:show",(()=>{console.log("Modal show")})),e.on("multimodal:hide",(()=>{console.log("Modal hide")})))};i.querySelector(".multimodal")?a(e):function(e){return new Promise(((t,n)=>{const s='\n      <div class="multimodal" id="multimodal" aria-hidden="true">\n        <div class="mm-max">\n          <div class="mm-dialog">\n            <button class="mm-close" type="button" aria-hidden="true" data-modal-close="true" aria-label="Close"><svg class="offset" viewport="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><g transform="rotate(45 12 12)"><line x1="0" y1="12" x2="24" y2="12"></line><line x1="12" y1="0" x2="12" y2="24"></line></g></svg></button>\n            <div class="mm-body"></div>\n          </div>\n        </div>\n      </div>\n    ';document.createElement("div").innerHTML=s,e.getSlidesElement().insertAdjacentHTML("afterend",s),t()}))}(e).then(a(e))};return{id:"multimodal",init:i=>{let l={background:{html:"var(--r-background-color)",iframe:"var(--r-background-color)",media:"white"},bordercolor:"white",borderwidth:"1px",closebuttonhtml:"",cssautoload:!0,csspath:"",htmlminwidth:"100px",htmlminheight:"100px",overlaycolor:"rgba(0, 0, 0, 0.30)",padding:{html:"1em",iframe:"0",media:"0"},radius:"0.5em",scalecorrection:!0,shadow:"0 0.5em 0.75em 0.5em rgba(0, 0, 0, 0.25)",slidemodalevent:"slidetransitionend",speed:300,videoautoplay:!0,videocontrols:!0,videoautohide:!0,zoom:!0,zoomfrom:.9},o=JSON.parse(JSON.stringify(l));if(e=n(l,i.getConfig().multimodal||{}),e.indexbase=i.getConfig().hashOneBasedIndex?1:0,e.cssautoload){let t=e.csspath.multimodal?e.csspath.multimodal:e.csspath?e.csspath:`${r()}multimodal.css`||"plugin/multimodal/multimodal.css";e.debug&&(console.log(`Plugin path = ${r()}`),console.log(`Multimodal CSS path = ${t}`));const n=document.querySelector("[name=generator]");n&&n.content.includes("quarto")||s(t,"stylesheet")}if(e.debug){let e=document.createElement("style");e.innerHTML=".reveal .slides, .scroll-page-content:has(section.present) { box-shadow: inset 0 0 0 1px orange} .mm-max { box-shadow: inset 0 0 0 1px red}",document.head.appendChild(e)}t(i,e,o)}}}}));
 </script>
-  <script>/*****************************************************************
- *
- * Appearance for Reveal.js 
- * Version 1.3.1
- * 
- * @author: Martijn De Jongh (Martino), martijn.de.jongh@gmail.com
- * https://github.com/martinomagnifico
- *
- * @license 
- * MIT licensed
- * 
- * Copyright (C) 2023 Martijn De Jongh (Martino)
- *
- ******************************************************************/
-!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e="undefined"!=typeof globalThis?globalThis:e||self).Appearance=t()}(this,(function(){"use strict";var e="undefined"!=typeof document?document.currentScript:null;const t=e=>e&&"object"==typeof e&&!Array.isArray(e),a=(e,...n)=>{if(!n.length)return e;const s=n.shift();if(t(e)&&t(s))for(const n in s)t(s[n])?(e[n]||Object.assign(e,{[n]:{}}),a(e[n],s[n])):Object.assign(e,{[n]:s[n]});return a(e,...n)},n=e=>{let t="";return"string"==typeof e&&(e=e.replace(/[“”]/g,'"').replace(/[‘’]/g,"'")),t=(e=>{try{return JSON.parse(e)&&!!e}catch(e){return!1}})(e)?e:"object"==typeof e?JSON.stringify(e,null,2):"{"===e.trim().replace(/'/g,'"').charAt(0)?e.trim().replace(/'/g,'"'):`{${e.trim().replace(/'/g,'"')}}`,t},s=(e,t,a)=>{let n,s=document.querySelector("head");"script"===t?(n=document.createElement("script"),n.type="text/javascript",n.src=e):"stylesheet"===t&&(n=document.createElement("link"),n.rel="stylesheet",n.href=e);const r=()=>{"function"==typeof a&&(a.call(),a=null)};n.onload=r,n.onreadystatechange=function(){"loaded"===this.readyState&&r()},s.appendChild(n)},r=(e,t)=>{e.debug&&console.log(t)},i=(t,a)=>{let n=(t=>{let a,n=document.querySelector(`script[src$="${t}"]`);return a=n?n.getAttribute("src").slice(0,-1*t.length):("undefined"==typeof document&&"undefined"==typeof location?require("url").pathToFileURL(__filename).href:"undefined"==typeof document?location.href:e&&e.src||new URL("appearance.js",document.baseURI).href).slice(0,("undefined"==typeof document&&"undefined"==typeof location?require("url").pathToFileURL(__filename).href:"undefined"==typeof document?location.href:e&&e.src||new URL("appearance.js",document.baseURI).href).lastIndexOf("/")+1),a})(a),r=a.replace(/\.[^/.]+$/,""),i=t.csspath.appearance?t.csspath.appearance:`${n}${r}.css`||`plugin/${r}/${r}.css`,o=t.compatibility?t.animatecsspath.compat:t.animatecsspath.link;t.debug&&(console.log("Paths:"),console.log(`  - Plugin path = ${n}`),console.log(`  - Appearance CSS path = ${i}`),console.log(`  - AnimateCSS CSS path = ${o}`)),s(o,"stylesheet",(function(){s(i,"stylesheet")}))},o=(e,t)=>{let a=e.parentNode;if(a){for(const t of a.children)if(t!==e&&t.dataset.appearParent)return;a.classList=e.classList,(({attributes:e},t,a)=>{[...e].filter((({nodeName:e})=>e.includes("data"))).forEach((({nodeName:e,nodeValue:n})=>{(a&&e!==a||!a)&&t.setAttribute(e,n)}))})(e,a,"data-appear-parent"),a.innerHTML=e.innerHTML,a.classList.add(t)}},l=(e,t,a)=>Array.from(a.querySelectorAll(`.${e}`)).filter((e=>!e.closest(`.${t}`))),c=(e,t,a)=>{const n=[l(t,a,e),...Array.from(e.querySelectorAll(`.${a}`)).map((e=>((e,t,a)=>Array.from(a.querySelectorAll(`.${e}`)).filter((e=>e.closest(`.${t}`)===a)))(t,a,e)))];return!!n.some((e=>e.length>0))&&n},d=(e,t)=>{t.hideagain&&e.from&&e.from.dataset.appearanceCanStart&&e.from.removeAttribute("data-appearance-can-start")},p=(e,t,a)=>{if(t.hideagain){e.from.querySelectorAll(a.animatecss).forEach((e=>{e.classList.remove("animationended")}));let t=e.from.querySelectorAll(".fragment.visible");t&&t.forEach((e=>{e.classList.remove("visible")}))}};return()=>{const e={names:{}};let t={};const s=(e,t,a)=>{r(e,"-------------   Preloading   -------------");let s=t.names;i(e,s.es5Filename),e.compatibility&&(s.animatecss=".backInDown, .backInLeft, .backInRight, .backInUp, .bounceIn, .bounceInDown, .bounceInLeft, .bounceInRight, .bounceInUp, .fadeIn, .fadeInDown, .fadeInDownBig, .fadeInLeft, .fadeInLeftBig, .fadeInRight, .fadeInRightBig, .fadeInUp, .fadeInUpBig, .fadeInTopLeft, .fadeInTopRight, .fadeInBottomLeft, .fadeInBottomRight, .flipInX, .flipInY, .lightSpeedInRight, .lightSpeedInLeft, .rotateIn, .rotateInDownLeft, .rotateInDownRight, .rotateInUpLeft, .rotateInUpRight, .jackInTheBox, .rollIn, .zoomIn, .zoomInDown, .zoomInLeft, .zoomInRight, .zoomInUp, .slideInDown, .slideInLeft, .slideInRight, .slideInUp, .skidLeft, .skidLeftBig, .skidRight, .skidRightBig, .shrinkIn, .shrinkInBlur",s.baseclass=e.compatibilitybaseclass),t.appearances=Array.from(t.slides.querySelectorAll(s.animatecss)),t.regularSections.forEach((a=>((e,t,a)=>{let s=null;if(e.hasAttribute("data-autoappear")){let a=e.dataset.autoappear;s="auto"==a||""==a||a.length<1||"true"==a?t.autoelements?t.autoelements:null:a}else t.autoappear&&t.autoelements&&(s=t.autoelements);if(s){let t=JSON.parse(n(s));Object.entries(t).forEach((([t,n])=>{let s=Array.from(e.querySelectorAll(t)).filter((e=>!a.appearances.includes(e)));s.length&&s.forEach((e=>{a.appearances.push(e);let t=[],s=null,r=!1,i=null,o=null;Array.isArray(n)?(t=n[0].split(/[ ,]+/),s=n[1]):"string"==typeof n?t=n.split(/[ ,]+/):n.constructor===Object&&((n.class||n.animation)&&(t=(n.animation?n.animation:n.class).split(/[ ,]+/)),n.speed&&(r=String(n.speed),r.includes("animate__")||(r=`animate__${r}`)),n.delay&&(s=String(n.delay)),n.split&&(i=String(n.split)),n["container-delay"]&&(o=String(n["container-delay"]))),e.classList.add(...t),r&&e.classList.add(r),s&&(e.dataset.delay=s),i&&(e.dataset.split=i),o&&(e.dataset.containerDelay=o)}))}))}})(a,e,t))),t.appearances.forEach(((t,a)=>{((e,t,a)=>{let n=a.baseclass;e.hasAttribute("data-appear-parent")&&o(e,n),t.appearparents&&e.parentNode&&e.parentNode.tagName&&"SPAN"==e.tagName&&"LI"==e.parentNode.tagName&&String(e.outerHTML).length==String(e.parentNode.innerHTML).length&&o(e)})(t,e,s),((e,t)=>{e.classList.contains(t.baseclass)||e.classList.add(t.baseclass),e.classList.contains(t.fragmentClass)&&e.classList.add("custom")})(t,s),t.hasAttribute("data-split")&&((e,t)=>{let a=!1,n=" ";if("words"==t?a=e.textContent.trim().split(/\s+/):"letters"==t&&(a=e.textContent.trim().split(""),n=""),a){const t=Array.from(e.classList).filter((e=>e.startsWith("animate__"))),s=a.map(((t,a)=>{const n=document.createElement("span");return n.textContent=t," "==t&&(n.textContent=" "),e.dataset.delay&&0!==a&&(n.dataset.delay=e.dataset.delay),e.dataset.containerDelay&&0===a&&(n.dataset.delay=e.dataset.containerDelay),e.classList.forEach((e=>e.startsWith("animate__")&&n.classList.add(e))),n.outerHTML})).join(n);t.forEach((t=>e.classList.remove(t))),e.removeAttribute("data-delay"),e.removeAttribute("data-split"),e.removeAttribute("data-container-delay"),e.innerHTML=s}})(t,t.dataset.split)})),t.regularSections.forEach(((t,a)=>{let n=c(t,s.baseclass,s.fragmentClass);n&&n.forEach((t=>{((e,t,a)=>{let n=0;e.forEach(((e,a)=>{if(0==a&&e.dataset.delay||0!=a){let a=t.delay;e.dataset&&e.dataset.delay&&(a=parseInt(e.dataset.delay)),n+=a,e.style.setProperty("animation-delay",n+"ms"),e.removeAttribute("data-delay")}}))})(t,e)}))})),(e=>{setTimeout(e,0)})(a)},l=function(t,a,n){let i=e.names;return i.baseclass=a.baseclass,i.compatibilitybaseclass=a.compatibilitybaseclass,i.fragmentSelector=".fragment",i.fragmentClass="fragment",i.speedClasses=["slower","slow","fast","faster"],i.speedClasses.push(...i.speedClasses.map((e=>`animate__${e}`))),i.animatecss='[class^="animate__"],[class*=" animate__"]',i.es5Filename=n,i.eventnames=["ready","slidechanged","slidetransitionend","autoanimate","overviewhidden","scrolle"],e.deck=t,e.dom=t.getRevealElement(),e.viewport=t.getViewportElement(),e.slides=t.getSlidesElement(),e.sections=e.slides.querySelectorAll("section"),e.fragments=e.slides.querySelectorAll(i.fragmentSelector),e.regularSections=Array.from(e.sections).filter((e=>!(({childNodes:e})=>{let t=!1;for(let a=0;a<e.length;a++)if("SECTION"==e[a].tagName){t=!0;break}return t})(e))),/receiver/i.test(window.location.search)&&e.viewport.classList.add("sv"),i.eventnames.forEach((n=>t.on(n,(t=>{((e,t,a,n)=>{let s=n.deck.getConfig().view,r=e.type,i=(e=>{let t={};return t.from=e.fromSlide||e.previousSlide||null,t.to=e.toSlide||e.currentSlide||null,t})(e);if(i.to){"ready"==r&&(i.to.dataset.appearanceCanStart=!0);let n=((e,t)=>(e.dataset.appearevent&&"auto"===e.dataset.appearevent&&(e.dataset.appearevent="autoanimate"),"auto"==t.appearevent&&(t.appearevent="autoanimate"),e.dataset.appearevent?e.dataset.appearevent:t.appearevent))(i.to,t);(r==n||"slidetransitionend"==r&&"autoanimate"==n)&&(i.to.dataset.appearanceCanStart=!0),"scroll"==s&&"slidechanged"==r&&(d(i,t),p(i,t,a),setTimeout((()=>{i.to.dataset.appearanceCanStart=!0}),t.delay)),"slidetransitionend"==r&&(d(i,t),p(i,t,a)),"slidechanged"==r&&document.body.dataset.exitoverview?(d(i,t),i.to.dataset.appearanceCanStart=!0):"overviewhidden"==r&&(document.body.dataset.exitoverview=!0,setTimeout((()=>{document.body.removeAttribute("data-exitoverview")}),500),e.currentSlide&&(d(i,t),i.to.dataset.appearanceCanStart=!0))}})(t,a,i,e)})))),e.viewport.addEventListener("animationend",(e=>{e.target.classList.add("animationended")})),e.viewport.addEventListener("fragmenthidden",(e=>{e.fragment.classList.remove("animationended"),e.fragment.querySelectorAll(".animationended").forEach((e=>{e.classList.remove("animationended")}))})),new Promise((t=>{s(a,e,t),r(a,"----------   Done preloading   ----------")}))};return{id:"appearance",init:function(e){return t=a({baseclass:"animate__animated",hideagain:!0,delay:300,debug:!1,appearevent:"slidetransitionend",autoappear:!1,autoelements:!1,appearparents:!1,csspath:"",animatecsspath:{link:"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",compat:"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.css"},compatibility:!1,compatibilitybaseclass:"animated"},e.getConfig().appearance||{}),l(e,t,"appearance.js")}}}}));
-</script>
   <script>// catch all plugin for various quarto features
 window.QuartoSupport = function () {
   function isPrintView() {
@@ -3614,7 +3389,6 @@ window.QuartoSupport = function () {
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'appearance': {"hideagain":true,"delay":300,"debug":false,"appearevent":"slidetransitionend","autoappear":false,"autoelements":false,"appearparents":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -3785,7 +3559,7 @@ window.QuartoSupport = function () {
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Multimodal, Appearance, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Multimodal, QuartoSupport,
 
           RevealMath,
           RevealNotes,
