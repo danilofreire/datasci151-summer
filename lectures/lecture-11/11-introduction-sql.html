@@ -1557,15 +1557,15 @@ Danilo Freire
 <ul>
 <li>The main object in SQL is the <span class="alert">table</span> (rows and columns)</li>
 <li>SQLite is <span class="alert">strongly typed</span>: each column has a specific data type</li>
-<li>Five core data types:
+<li>Five core storage classes:
 <ul>
 <li><span class="alert"><code>TEXT</code></span>: strings (UTF-8)</li>
 <li><span class="alert"><code>INTEGER</code></span>: whole numbers</li>
-<li><span class="alert"><code>NUMERIC</code></span>: decimals (floating-point)</li>
+<li><span class="alert"><code>REAL</code></span>: decimals (floating-point, IEEE 754, 8 bytes)</li>
 <li><span class="alert"><code>BLOB</code></span>: binary data, stored as-is</li>
 <li><span class="alert"><code>NULL</code></span>: missing or undefined values</li>
 </ul></li>
-<li>Plus extras like <code>REAL</code>, <code>BOOLEAN</code>, <code>DATE</code>, <code>TIME</code>, <code>DATETIME</code></li>
+<li>Plus type affinities like <code>NUMERIC</code> and convenience names like <code>BOOLEAN</code>, <code>DATE</code>, <code>TIME</code>, <code>DATETIME</code></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 id="primary-and-foreign-keys">Primary and foreign keys</h3>
@@ -1573,7 +1573,7 @@ Danilo Freire
 <li>The <span class="alert"><code>PRIMARY KEY</code></span> uniquely identifies each row, cannot be <code>NULL</code>, and is usually an integer</li>
 <li>Use <span class="alert"><code>AUTOINCREMENT</code></span> to generate the values for you (<code>driver_id INTEGER PRIMARY KEY AUTOINCREMENT</code>)</li>
 <li>The <span class="alert"><code>FOREIGN KEY</code></span> links two tables: a field in one table that refers to the <code>PRIMARY KEY</code> in another</li>
-<li><code>ROWID</code> is a hidden auto-generated column, <span class="alert">but avoid it</span>: it can change after deletions and is not portable across SQL databases</li>
+<li><code>ROWID</code> is a hidden auto-generated column, <span class="alert">but avoid it</span>: its values can be reused for new rows after deletions (so a stale reference may point at a different row) and the column is not portable across SQL databases</li>
 </ul>
 </div></div>
 </div>
@@ -2068,7 +2068,7 @@ Danilo Freire
 <span id="cb18-5"><a href></a>GROUP BY nationality</span>
 <span id="cb18-6"><a href></a>HAVING SUM(victories) &gt; 10;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:60%;">
-<div id="45677b10" class="cell" data-execution_count="1">
+<div id="c728f212" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href></a><span class="co"># Python</span></span>
 <span id="cb19-2"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb19-3"><a href></a></span>
@@ -2097,8 +2097,8 @@ Danilo Freire
 <li>Importing is just as easy: pick the file and choose which table to load into</li>
 <li>From the command line:
 <ul>
-<li>Export to CSV: <code>sqlite3 example.db .mode csv .output example.csv &quot;SELECT * FROM drivers;&quot;</code> (<a href="https://www.sqlitetutorial.net/sqlite-export-csv/" data-modal-type="iframe">guide</a>)</li>
-<li>Import from CSV: <code>sqlite3 example.db .mode csv .import example.csv drivers</code> (<a href="https://www.sqlitetutorial.net/sqlite-import-csv/" data-modal-type="iframe">guide</a>)</li>
+<li>Export to CSV: <code>sqlite3 -cmd &quot;.mode csv&quot; -cmd &quot;.output example.csv&quot; example.db &quot;SELECT * FROM drivers;&quot;</code> (<a href="https://www.sqlitetutorial.net/sqlite-export-csv/" data-modal-type="iframe">guide</a>)</li>
+<li>Import from CSV: <code>sqlite3 -cmd &quot;.mode csv&quot; example.db &quot;.import example.csv drivers&quot;</code> (<a href="https://www.sqlitetutorial.net/sqlite-import-csv/" data-modal-type="iframe">guide</a>)</li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">

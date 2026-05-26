@@ -280,13 +280,13 @@ CREATE TABLE drivers (
 
 - The main object in SQL is the [table]{.alert} (rows and columns)
 - SQLite is [strongly typed]{.alert}: each column has a specific data type
-- Five core data types:
+- Five core storage classes:
   - [`TEXT`]{.alert}: strings (UTF-8)
   - [`INTEGER`]{.alert}: whole numbers
-  - [`NUMERIC`]{.alert}: decimals (floating-point)
+  - [`REAL`]{.alert}: decimals (floating-point, IEEE 754, 8 bytes)
   - [`BLOB`]{.alert}: binary data, stored as-is
   - [`NULL`]{.alert}: missing or undefined values
-- Plus extras like `REAL`, `BOOLEAN`, `DATE`, `TIME`, `DATETIME`
+- Plus type affinities like `NUMERIC` and convenience names like `BOOLEAN`, `DATE`, `TIME`, `DATETIME`
 :::
 
 :::{.column width="50%"}
@@ -295,7 +295,7 @@ CREATE TABLE drivers (
 - The [`PRIMARY KEY`]{.alert} uniquely identifies each row, cannot be `NULL`, and is usually an integer
 - Use [`AUTOINCREMENT`]{.alert} to generate the values for you (`driver_id INTEGER PRIMARY KEY AUTOINCREMENT`)
 - The [`FOREIGN KEY`]{.alert} links two tables: a field in one table that refers to the `PRIMARY KEY` in another
-- `ROWID` is a hidden auto-generated column, [but avoid it]{.alert}: it can change after deletions and is not portable across SQL databases
+- `ROWID` is a hidden auto-generated column, [but avoid it]{.alert}: its values can be reused for new rows after deletions (so a stale reference may point at a different row) and the column is not portable across SQL databases
 :::
 :::
 :::
@@ -736,8 +736,8 @@ result = result[result['sum_victories'] > 10]
 - For XLSX, you can export one table or all of them at once
 - Importing is just as easy: pick the file and choose which table to load into
 - From the command line:
-  - Export to CSV: `sqlite3 example.db .mode csv .output example.csv "SELECT * FROM drivers;"` ([guide](https://www.sqlitetutorial.net/sqlite-export-csv/){data-modal-type="iframe"})
-  - Import from CSV: `sqlite3 example.db .mode csv .import example.csv drivers` ([guide](https://www.sqlitetutorial.net/sqlite-import-csv/){data-modal-type="iframe"})
+  - Export to CSV: `sqlite3 -cmd ".mode csv" -cmd ".output example.csv" example.db "SELECT * FROM drivers;"` ([guide](https://www.sqlitetutorial.net/sqlite-export-csv/){data-modal-type="iframe"})
+  - Import from CSV: `sqlite3 -cmd ".mode csv" example.db ".import example.csv drivers"` ([guide](https://www.sqlitetutorial.net/sqlite-import-csv/){data-modal-type="iframe"})
 :::
 
 :::{.column width="50%"}
