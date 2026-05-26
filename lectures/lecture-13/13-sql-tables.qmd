@@ -76,7 +76,7 @@ editor:
 :::
 :::
 
-## Load the libraries and connect to the database {#sec:tables}
+## Connect to the database and create the tables {#sec:tables}
 
 :::{style="margin-top: 50px; font-size: 23px;"}
 - Let's load the libraries and connect to the SQLite database. We'll use a file named `lecture13.db`
@@ -112,7 +112,7 @@ connection.commit()
 ```
 :::
 
-## Create the tables
+## Insert data into the tables
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 - Now let's insert some data into the tables!
@@ -214,6 +214,7 @@ ON players.player_id = teams.team_id;
 - Columns from the left side come back as `NULL` where there is no match
 - Less common in practice (you can usually rewrite it as a `LEFT JOIN` with the tables swapped)
 - In our data, every `team_id` matches a `player_id`, so the `RIGHT JOIN` happens to look identical to the `INNER JOIN`
+- [Requires SQLite 3.39.0 or newer]{.alert} (June 2022). The same goes for `FULL OUTER JOIN` on the next slide. On older versions you'd have to emulate them with `LEFT JOIN`
 
 ```{python}
 #| echo: true
@@ -434,7 +435,7 @@ ORDER BY difference DESC;
 ```
 :::
 
-## Try it yourself! 🧠 {#sec:exercise03}
+## Try it yourself! 🧠 {#sec:exercise02}
 
 :::{style="margin-top: 50px; font-size: 24px;"}
 Using the `family` table (still loaded from the earlier example):
@@ -443,7 +444,7 @@ Using the `family` table (still loaded from the earlier example):
 - Use a [self join]{.alert} on `family`, and apply the `f1.person_id < f2.person_id` trick to avoid duplicate pairs and self-matches
 - Return each pair as two columns: `sibling_a` and `sibling_b`
 
-- [[Appendix 03]{.button}](#sec:appendix03)
+- [[Appendix 02]{.button}](#sec:appendix02)
 :::
 
 # Merge tables by row 🧩 {background-color="#2d4563"}
@@ -459,7 +460,7 @@ Using the `family` table (still loaded from the earlier example):
 ```{python}
 #| echo: true
 #| eval: true
-# Select players with more than 5 goals OR more than 3 victories
+# Select players with more than 7 goals OR more than 3 victories
 pd.read_sql('''
 SELECT player_name, goals, victories
 FROM players
@@ -557,7 +558,7 @@ ORDER BY player_name;
 ```
 :::
 
-## Try it yourself! 🧠 {#sec:exercise02}
+## Try it yourself! 🧠 {#sec:exercise03}
 
 :::{style="margin-top: 50px; font-size: 24px;"}
 Using the `players` table:
@@ -565,7 +566,7 @@ Using the `players` table:
 1. Use [`UNION`]{.alert} to list every player who has either `goals > 5` OR `victories > 3`. How many distinct players do you get?
 2. Use [`EXCEPT`]{.alert} to list players with `goals > 5` who did NOT achieve `victories > 3`. Who shows up?
 
-- [[Appendix 02]{.button}](#sec:appendix02)
+- [[Appendix 03]{.button}](#sec:appendix03)
 :::
 
 ## UPSERT (`INSERT ... ON CONFLICT`)
@@ -658,7 +659,7 @@ pd.read_sql('SELECT * FROM colour_size;', connection)
 - We covered the four core joins (`INNER`, `LEFT`, `RIGHT`, `FULL OUTER`) and two special ones (`CROSS JOIN`, `SELF JOIN`)
 - We merged tables vertically with `UNION`, `UNION ALL`, `INTERSECT`, and `EXCEPT`
 - We saw SQLite's UPSERT clause (`INSERT ... ON CONFLICT`) and how to create reusable `VIEW`s
-- That's a lot for one lecture! 🚀 The exercises in the appendix will help you practise
+- That's a lot for one lecture! 🚀 The appendices have solutions to the 'Try it yourself!' exercises
 :::
 
 # And that's all for today! 🎉 {background-color="#2d4563"}
@@ -701,6 +702,31 @@ pd.read_sql('''
 ## Appendix 02 {#sec:appendix02}
 
 :::{style="margin-top: 50px; font-size: 20px;"}
+Self join on `family`, using two aliases (`f1`, `f2`) and the `<` trick to skip duplicates and self-matches:
+
+```{python}
+#| echo: true
+#| eval: true
+pd.read_sql('''
+SELECT
+    f1.name AS sibling_a,
+    f2.name AS sibling_b
+FROM family AS f1
+JOIN family AS f2
+    ON f1.mother_id = f2.mother_id
+    AND f1.person_id < f2.person_id
+ORDER BY sibling_a;
+''', connection)
+```
+
+Two pairs: Sarah-Lisa (both children of Emma) and Tom-Alice (both children of Sarah)
+
+[[Back to exercise]{.button}](#sec:exercise02)
+:::
+
+## Appendix 03 {#sec:appendix03}
+
+:::{style="margin-top: 50px; font-size: 20px;"}
 Part 1, `UNION` (distinct players satisfying either condition):
 
 ```{python}
@@ -730,31 +756,6 @@ ORDER BY player_name;
 ```
 
 Just Neymar: he scored more than 5 goals but did not pass the 3-victories threshold
-
-[[Back to exercise]{.button}](#sec:exercise02)
-:::
-
-## Appendix 03 {#sec:appendix03}
-
-:::{style="margin-top: 50px; font-size: 20px;"}
-Self join on `family`, using two aliases (`f1`, `f2`) and the `<` trick to skip duplicates and self-matches:
-
-```{python}
-#| echo: true
-#| eval: true
-pd.read_sql('''
-SELECT
-    f1.name AS sibling_a,
-    f2.name AS sibling_b
-FROM family AS f1
-JOIN family AS f2
-    ON f1.mother_id = f2.mother_id
-    AND f1.person_id < f2.person_id
-ORDER BY sibling_a;
-''', connection)
-```
-
-Two pairs: Sarah-Lisa (both children of Emma) and Tom-Alice (both children of Sarah)
 
 [[Back to exercise]{.button}](#sec:exercise03)
 :::
