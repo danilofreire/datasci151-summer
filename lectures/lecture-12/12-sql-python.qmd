@@ -240,6 +240,12 @@ cur.execute("SELECT driver_name, victories FROM drivers WHERE victories BETWEEN 
 ```
 
 - `NOT BETWEEN` excludes values within the specified range
+
+```{python}
+#| echo: true
+#| eval: true
+cur.execute("SELECT driver_name, victories FROM drivers WHERE victories NOT BETWEEN 10 AND 60").fetchall()
+```
 :::
 
 ## `LIKE` operator: basic patterns
@@ -298,6 +304,14 @@ for row in cur.fetchall(): print(row)
 ```
 
 - Use `NOT LIKE` to find strings that [do not match]{.alert} the pattern
+
+```{python}
+#| echo: true
+#| eval: true
+# Names that do not start with 'L'
+cur.execute("SELECT driver_name FROM drivers WHERE driver_name NOT LIKE 'L%'")
+for row in cur.fetchall(): print(row)
+```
 
 :::
 

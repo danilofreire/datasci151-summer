@@ -1345,7 +1345,7 @@ Danilo Freire
 <li>The <span class="alert">connection</span> links our script to the database file</li>
 <li>The <span class="alert">cursor</span> is like a handle we use to send SQL commands and manage results</li>
 </ul>
-<div id="858ea0fa" class="cell" data-execution_count="1">
+<div id="3415b3da" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href></a><span class="im">import</span> sqlite3</span>
 <span id="cb1-2"><a href></a></span>
 <span id="cb1-3"><a href></a>db_file <span class="op">=</span> <span class="st">&#39;lecture12.db&#39;</span> <span class="co"># Database filename</span></span>
@@ -1370,7 +1370,7 @@ Danilo Freire
 <li>We define the structure of our data using <span class="alert"><code>CREATE TABLE</code></span></li>
 <li>Use <code>cur.execute()</code> to run the command and <code>conn.commit()</code> to <span class="alert">save</span> the change</li>
 </ul>
-<div id="9161e950" class="cell" data-execution_count="2">
+<div id="3065b0ce" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href></a><span class="co"># Use triple quotes for multi-line SQL</span></span>
 <span id="cb2-2"><a href></a><span class="co"># Drop table if it exists</span></span>
 <span id="cb2-3"><a href></a>sql_drop <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
@@ -1411,7 +1411,7 @@ Danilo Freire
 <li>Once the table exists, we populate it using <span class="alert"><code>INSERT INTO</code></span></li>
 <li>Again, <code>cursor.execute()</code> runs the command, and <code>conn.commit()</code> <span class="alert">makes the insertions permanent</span></li>
 </ul>
-<div id="41a826a7" class="cell" data-execution_count="3">
+<div id="ec9ddbc8" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href></a><span class="co"># Insert a few rows</span></span>
 <span id="cb4-2"><a href></a>insert_query <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb4-3"><a href></a><span class="st">INSERT INTO drivers (driver_name, team, nationality, victories) VALUES</span></span>
@@ -1436,7 +1436,7 @@ Danilo Freire
 <li>After a <code>SELECT</code> query, <code>fetchall()</code> retrieves <span class="alert">all results at once</span> into a list of tuples</li>
 <li>Useful if you need the full dataset immediately, but can use more memory for large results</li>
 </ul>
-<div id="16e06247" class="cell" data-execution_count="4">
+<div id="8a27220d" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href></a>cur.execute(<span class="st">&#39;SELECT driver_id, driver_name, team FROM drivers&#39;</span>) </span>
 <span id="cb5-2"><a href></a>all_rows <span class="op">=</span> cur.fetchall() <span class="co"># Get the list of tuples</span></span>
 <span id="cb5-3"><a href></a></span>
@@ -1454,7 +1454,7 @@ Danilo Freire
 <li><code>fetchone()</code> retrieves rows <span class="alert">one by one</span>. Each call gets the next available row</li>
 <li>Returns <code>None</code> when no more rows are left. Good for processing sequentially or just getting the top item</li>
 </ul>
-<div id="3ad317b7" class="cell" data-execution_count="5">
+<div id="c1fac284" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href></a>cur.execute(<span class="st">&#39;SELECT driver_id, driver_name FROM drivers ORDER BY driver_id&#39;</span>)</span>
 <span id="cb7-2"><a href></a></span>
 <span id="cb7-3"><a href></a>row1 <span class="op">=</span> cur.fetchone()</span>
@@ -1475,7 +1475,7 @@ Danilo Freire
 <ul>
 <li>A more “Pythonic” and <span class="alert">memory-efficient</span> way to process results row-by-row is to iterate directly over the cursor</li>
 </ul>
-<div id="15721c76" class="cell" data-execution_count="6">
+<div id="3c69cf6d" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href></a><span class="co"># Execute the query</span></span>
 <span id="cb9-2"><a href></a>query <span class="op">=</span> <span class="st">&quot;SELECT driver_name, team FROM drivers WHERE driver_name LIKE &#39;M%&#39;&quot;</span></span>
 <span id="cb9-3"><a href></a></span>
@@ -1489,7 +1489,7 @@ Danilo Freire
 <ul>
 <li>However, you can also use <code>.fetchall()</code> or <code>.fetchone()</code> after executing a query, depending on your needs</li>
 </ul>
-<div id="bf27d3b7" class="cell" data-execution_count="7">
+<div id="2666cdfe" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href></a><span class="co"># Fetch all results at once</span></span>
 <span id="cb11-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, team FROM drivers WHERE driver_name LIKE &#39;M%&#39;&quot;</span>).fetchall()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
@@ -1509,7 +1509,7 @@ Danilo Freire
 <ul>
 <li>Use <code>IN</code> to check if a column’s value matches <span class="alert">any value in a specified list</span></li>
 </ul>
-<div id="5258358c" class="cell" data-execution_count="8">
+<div id="761bf7e3" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, team FROM drivers WHERE team IN (&#39;Ferrari&#39;, &#39;Mercedes&#39;)&quot;</span>).fetchall()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>[(&#39;Lewis Hamilton&#39;, &#39;Mercedes&#39;), (&#39;Charles Leclerc&#39;, &#39;Ferrari&#39;)]</code></pre>
@@ -1518,7 +1518,7 @@ Danilo Freire
 <ul>
 <li><code>NOT IN</code> works similarly to exclude values in the list.</li>
 </ul>
-<div id="0a85adf8" class="cell" data-execution_count="9">
+<div id="4602a399" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, team FROM drivers WHERE team NOT IN (&#39;Ferrari&#39;, &#39;Mercedes&#39;)&quot;</span>).fetchall()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>[(&#39;Max Verstappen&#39;, &#39;Red Bull Racing&#39;), (&#39;Fernando Alonso&#39;, &#39;Aston Martin&#39;)]</code></pre>
@@ -1527,7 +1527,7 @@ Danilo Freire
 <ul>
 <li><code>BETWEEN</code> checks if a value is within a specified range. <span class="alert">Inclusive</span> of the endpoints</li>
 </ul>
-<div id="3c175512" class="cell" data-execution_count="10">
+<div id="b370a02a" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, victories FROM drivers WHERE victories BETWEEN 10 AND 60&quot;</span>).fetchall()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>[(&#39;Max Verstappen&#39;, 55)]</code></pre>
@@ -1536,6 +1536,12 @@ Danilo Freire
 <ul>
 <li><code>NOT BETWEEN</code> excludes values within the specified range</li>
 </ul>
+<div id="3647b34b" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, victories FROM drivers WHERE victories NOT BETWEEN 10 AND 60&quot;</span>).fetchall()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>[(&#39;Lewis Hamilton&#39;, 103)]</code></pre>
+</div>
+</div>
 </div>
 </section>
 <section id="like-operator-basic-patterns" class="slide level2">
@@ -1548,26 +1554,26 @@ Danilo Freire
 <li><span class="alert"><code>_</code></span>: Matches exactly one character</li>
 </ul></li>
 </ul>
-<div id="96bdca96" class="cell" data-execution_count="11">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href></a><span class="co"># Starts with &#39;L&#39;</span></span>
-<span id="cb19-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name FROM drivers WHERE driver_name LIKE &#39;L%&#39;&quot;</span>)</span>
-<span id="cb19-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="0b9c7c1a" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href></a><span class="co"># Starts with &#39;L&#39;</span></span>
+<span id="cb21-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name FROM drivers WHERE driver_name LIKE &#39;L%&#39;&quot;</span>)</span>
+<span id="cb21-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(&#39;Lewis Hamilton&#39;,)</code></pre>
 </div>
 </div>
-<div id="384665de" class="cell" data-execution_count="12">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href></a><span class="co"># Ends with &#39;Racing&#39;</span></span>
-<span id="cb21-2"><a href></a>cur.execute(<span class="st">&quot;SELECT team FROM drivers WHERE team LIKE &#39;%Racing&#39;&quot;</span>)</span>
-<span id="cb21-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="0faa4639" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href></a><span class="co"># Ends with &#39;Racing&#39;</span></span>
+<span id="cb23-2"><a href></a>cur.execute(<span class="st">&quot;SELECT team FROM drivers WHERE team LIKE &#39;%Racing&#39;&quot;</span>)</span>
+<span id="cb23-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(&#39;Red Bull Racing&#39;,)</code></pre>
 </div>
 </div>
-<div id="febc711b" class="cell" data-execution_count="13">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href></a><span class="co"># &#39;e&#39; as the second letter</span></span>
-<span id="cb23-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name FROM drivers WHERE driver_name LIKE &#39;_e%&#39;&quot;</span>)</span>
-<span id="cb23-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="b724c6f7" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href></a><span class="co"># &#39;e&#39; as the second letter</span></span>
+<span id="cb25-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name FROM drivers WHERE driver_name LIKE &#39;_e%&#39;&quot;</span>)</span>
+<span id="cb25-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(&#39;Lewis Hamilton&#39;,)
 (&#39;Fernando Alonso&#39;,)</code></pre>
@@ -1581,10 +1587,10 @@ Danilo Freire
 <ul>
 <li>SQLite <code>LIKE</code> is case-insensitive by default <span class="alert">for ASCII letters only</span> (so <code>&#39;a&#39;</code> matches <code>&#39;A&#39;</code>, but <code>&#39;é&#39;</code> does not match <code>&#39;É&#39;</code>). Use <code>LOWER()</code>/<code>UPPER()</code> for <span class="alert">reliable, explicit case handling</span></li>
 </ul>
-<div id="7976cb87" class="cell" data-execution_count="14">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href></a><span class="co"># Case-insensitive search for names starting with &#39;l&#39;</span></span>
-<span id="cb25-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name FROM drivers WHERE LOWER(driver_name) LIKE &#39;l%&#39;&quot;</span>)</span>
-<span id="cb25-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="7762f8e0" class="cell" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href></a><span class="co"># Case-insensitive search for names starting with &#39;l&#39;</span></span>
+<span id="cb27-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name FROM drivers WHERE LOWER(driver_name) LIKE &#39;l%&#39;&quot;</span>)</span>
+<span id="cb27-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(&#39;Lewis Hamilton&#39;,)</code></pre>
 </div>
@@ -1592,10 +1598,10 @@ Danilo Freire
 <ul>
 <li>For <code>=</code>, <code>&lt;&gt;</code>, <code>&lt;</code>, <code>&gt;</code>, <code>ORDER BY</code>, and <code>GROUP BY</code>, use <span class="alert"><code>COLLATE NOCASE</code></span> to make the comparison case-insensitive. <span class="alert">Note: <code>COLLATE NOCASE</code> has no effect on <code>LIKE</code>, which uses its own case-folding (toggled with <code>PRAGMA case_sensitive_like</code>)</span></li>
 </ul>
-<div id="45b64c6a" class="cell" data-execution_count="15">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href></a><span class="co"># Without COLLATE NOCASE, this returns nothing (stored value is &#39;Mercedes&#39;, not &#39;mercedes&#39;)</span></span>
-<span id="cb27-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, team FROM drivers WHERE team = &#39;mercedes&#39; COLLATE NOCASE&quot;</span>)</span>
-<span id="cb27-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="0481392c" class="cell" data-execution_count="16">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href></a><span class="co"># Without COLLATE NOCASE, this returns nothing (stored value is &#39;Mercedes&#39;, not &#39;mercedes&#39;)</span></span>
+<span id="cb29-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, team FROM drivers WHERE team = &#39;mercedes&#39; COLLATE NOCASE&quot;</span>)</span>
+<span id="cb29-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(&#39;Lewis Hamilton&#39;, &#39;Mercedes&#39;)</code></pre>
 </div>
@@ -1603,6 +1609,16 @@ Danilo Freire
 <ul>
 <li>Use <code>NOT LIKE</code> to find strings that <span class="alert">do not match</span> the pattern</li>
 </ul>
+<div id="c0a9d682" class="cell" data-execution_count="17">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href></a><span class="co"># Names that do not start with &#39;L&#39;</span></span>
+<span id="cb31-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name FROM drivers WHERE driver_name NOT LIKE &#39;L%&#39;&quot;</span>)</span>
+<span id="cb31-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(&#39;Max Verstappen&#39;,)
+(&#39;Fernando Alonso&#39;,)
+(&#39;Charles Leclerc&#39;,)</code></pre>
+</div>
+</div>
 </div>
 </section>
 <section id="sec:exercise01" class="slide level2">
@@ -1629,9 +1645,9 @@ Danilo Freire
 <ul>
 <li>SQL represents missing values as <code>NULL</code>. Use <code>IS NULL</code> to find them. <span class="alert"><code>IS NOT NULL</code> finds rows with values</span></li>
 </ul>
-<div id="e7f30e38" class="cell" data-execution_count="16">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, victories FROM drivers WHERE victories IS NULL&quot;</span>)</span>
-<span id="cb29-2"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="7b537aa5" class="cell" data-execution_count="18">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, victories FROM drivers WHERE victories IS NULL&quot;</span>)</span>
+<span id="cb33-2"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(&#39;Fernando Alonso&#39;, None)
 (&#39;Charles Leclerc&#39;, None)</code></pre>
@@ -1640,10 +1656,10 @@ Danilo Freire
 <ul>
 <li><code>COALESCE(value1, value2, ...)</code> is useful for replacing <code>NULL</code>s with a default value. It returns the <span class="alert">first non-NULL expression</span> in its arguments</li>
 </ul>
-<div id="d53dc22b" class="cell" data-execution_count="17">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href></a><span class="co"># If &#39;victories&#39; is NULL, display 0 instead.</span></span>
-<span id="cb31-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, COALESCE(victories, 0) AS victories_filled FROM drivers&quot;</span>)</span>
-<span id="cb31-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="8bebf92b" class="cell" data-execution_count="19">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href></a><span class="co"># If &#39;victories&#39; is NULL, display 0 instead.</span></span>
+<span id="cb35-2"><a href></a>cur.execute(<span class="st">&quot;SELECT driver_name, COALESCE(victories, 0) AS victories_filled FROM drivers&quot;</span>)</span>
+<span id="cb35-3"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(&#39;Lewis Hamilton&#39;, 103)
 (&#39;Max Verstappen&#39;, 55)
@@ -1663,20 +1679,20 @@ Danilo Freire
 <li><code>CAST</code> converts the result to a specific type, if needed</li>
 <li>We use <code>CAST(... AS INTEGER)</code> to ensure the result is an integer. But this is optional</li>
 </ul>
-<div id="df3ddac9" class="cell" data-execution_count="18">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href></a>query_coalesce_sub <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb33-2"><a href></a><span class="st">SELECT </span></span>
-<span id="cb33-3"><a href></a><span class="st">  driver_name,</span></span>
-<span id="cb33-4"><a href></a><span class="st">  COALESCE(victories, </span></span>
-<span id="cb33-5"><a href></a><span class="st">    -- Subquery calculates average victories from non-NULL rows</span></span>
-<span id="cb33-6"><a href></a><span class="st">    (SELECT CAST(AVG(victories) AS INTEGER) </span></span>
-<span id="cb33-7"><a href></a><span class="st">     FROM drivers </span></span>
-<span id="cb33-8"><a href></a><span class="st">     WHERE victories IS NOT NULL) </span></span>
-<span id="cb33-9"><a href></a><span class="st">  ) AS victories_imputed</span></span>
-<span id="cb33-10"><a href></a><span class="st">FROM drivers; </span></span>
-<span id="cb33-11"><a href></a><span class="st">&#39;&#39;&#39;</span> </span>
-<span id="cb33-12"><a href></a>cur.execute(query_coalesce_sub)</span>
-<span id="cb33-13"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="8714d741" class="cell" data-execution_count="20">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href></a>query_coalesce_sub <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb37-2"><a href></a><span class="st">SELECT </span></span>
+<span id="cb37-3"><a href></a><span class="st">  driver_name,</span></span>
+<span id="cb37-4"><a href></a><span class="st">  COALESCE(victories, </span></span>
+<span id="cb37-5"><a href></a><span class="st">    -- Subquery calculates average victories from non-NULL rows</span></span>
+<span id="cb37-6"><a href></a><span class="st">    (SELECT CAST(AVG(victories) AS INTEGER) </span></span>
+<span id="cb37-7"><a href></a><span class="st">     FROM drivers </span></span>
+<span id="cb37-8"><a href></a><span class="st">     WHERE victories IS NOT NULL) </span></span>
+<span id="cb37-9"><a href></a><span class="st">  ) AS victories_imputed</span></span>
+<span id="cb37-10"><a href></a><span class="st">FROM drivers; </span></span>
+<span id="cb37-11"><a href></a><span class="st">&#39;&#39;&#39;</span> </span>
+<span id="cb37-12"><a href></a>cur.execute(query_coalesce_sub)</span>
+<span id="cb37-13"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(&#39;Lewis Hamilton&#39;, 103)
 (&#39;Max Verstappen&#39;, 55)
@@ -1703,27 +1719,27 @@ Danilo Freire
 <li>Basic syntax involves the <span class="alert"><code>OVER()</code></span> clause</li>
 <li><span class="alert">Requires SQLite version 3.25.0 or newer</span></li>
 </ul>
-<div id="6487895c" class="cell" data-execution_count="19">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href></a><span class="co"># Add more data for better examples (delete first so re-running is safe)</span></span>
-<span id="cb35-2"><a href></a>cur.execute(<span class="st">&quot;DELETE FROM drivers WHERE driver_name IN (&#39;Valtteri Bottas&#39;, &#39;Sergio Perez&#39;, &#39;Lando Norris&#39;, &#39;Esteban Ocon&#39;);&quot;</span>)</span>
-<span id="cb35-3"><a href></a></span>
-<span id="cb35-4"><a href></a>more_drivers <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb35-5"><a href></a><span class="st">INSERT INTO drivers (driver_name, team, nationality, victories) VALUES</span></span>
-<span id="cb35-6"><a href></a><span class="st">(&#39;Valtteri Bottas&#39;, &#39;Mercedes&#39;, &#39;Finnish&#39;, 10),</span></span>
-<span id="cb35-7"><a href></a><span class="st">(&#39;Sergio Perez&#39;, &#39;Red Bull Racing&#39;, &#39;Mexican&#39;, 5),</span></span>
-<span id="cb35-8"><a href></a><span class="st">(&#39;Lando Norris&#39;, &#39;McLaren&#39;, &#39;British&#39;, 2),</span></span>
-<span id="cb35-9"><a href></a><span class="st">(&#39;Esteban Ocon&#39;, &#39;Alpine&#39;, &#39;French&#39;, 1);</span></span>
-<span id="cb35-10"><a href></a><span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb35-11"><a href></a></span>
-<span id="cb35-12"><a href></a>cur.execute(more_drivers)</span>
-<span id="cb35-13"><a href></a></span>
-<span id="cb35-14"><a href></a>cur.execute(<span class="st">&quot;SELECT * FROM drivers&quot;</span>) <span class="co"># Check inserted data</span></span>
-<span id="cb35-15"><a href></a></span>
-<span id="cb35-16"><a href></a><span class="co"># Fetch and print data</span></span>
-<span id="cb35-17"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
-<span id="cb35-18"><a href></a></span>
-<span id="cb35-19"><a href></a><span class="co"># Check SQLite Version</span></span>
-<span id="cb35-20"><a href></a>cur.execute(<span class="st">&quot;SELECT sqlite_version();&quot;</span>).fetchone()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cb77dd51" class="cell" data-execution_count="21">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href></a><span class="co"># Add more data for better examples (delete first so re-running is safe)</span></span>
+<span id="cb39-2"><a href></a>cur.execute(<span class="st">&quot;DELETE FROM drivers WHERE driver_name IN (&#39;Valtteri Bottas&#39;, &#39;Sergio Perez&#39;, &#39;Lando Norris&#39;, &#39;Esteban Ocon&#39;);&quot;</span>)</span>
+<span id="cb39-3"><a href></a></span>
+<span id="cb39-4"><a href></a>more_drivers <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb39-5"><a href></a><span class="st">INSERT INTO drivers (driver_name, team, nationality, victories) VALUES</span></span>
+<span id="cb39-6"><a href></a><span class="st">(&#39;Valtteri Bottas&#39;, &#39;Mercedes&#39;, &#39;Finnish&#39;, 10),</span></span>
+<span id="cb39-7"><a href></a><span class="st">(&#39;Sergio Perez&#39;, &#39;Red Bull Racing&#39;, &#39;Mexican&#39;, 5),</span></span>
+<span id="cb39-8"><a href></a><span class="st">(&#39;Lando Norris&#39;, &#39;McLaren&#39;, &#39;British&#39;, 2),</span></span>
+<span id="cb39-9"><a href></a><span class="st">(&#39;Esteban Ocon&#39;, &#39;Alpine&#39;, &#39;French&#39;, 1);</span></span>
+<span id="cb39-10"><a href></a><span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb39-11"><a href></a></span>
+<span id="cb39-12"><a href></a>cur.execute(more_drivers)</span>
+<span id="cb39-13"><a href></a></span>
+<span id="cb39-14"><a href></a>cur.execute(<span class="st">&quot;SELECT * FROM drivers&quot;</span>) <span class="co"># Check inserted data</span></span>
+<span id="cb39-15"><a href></a></span>
+<span id="cb39-16"><a href></a><span class="co"># Fetch and print data</span></span>
+<span id="cb39-17"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
+<span id="cb39-18"><a href></a></span>
+<span id="cb39-19"><a href></a><span class="co"># Check SQLite Version</span></span>
+<span id="cb39-20"><a href></a>cur.execute(<span class="st">&quot;SELECT sqlite_version();&quot;</span>).fetchone()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(1, &#39;Lewis Hamilton&#39;, &#39;Mercedes&#39;, &#39;British&#39;, 103)
 (2, &#39;Max Verstappen&#39;, &#39;Red Bull Racing&#39;, &#39;Dutch&#39;, 55)
@@ -1734,7 +1750,7 @@ Danilo Freire
 (7, &#39;Lando Norris&#39;, &#39;McLaren&#39;, &#39;British&#39;, 2)
 (8, &#39;Esteban Ocon&#39;, &#39;Alpine&#39;, &#39;French&#39;, 1)</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="19">
+<div class="cell-output cell-output-display" data-execution_count="21">
 <pre><code>(&#39;3.53.1&#39;,)</code></pre>
 </div>
 </div>
@@ -1749,20 +1765,20 @@ Danilo Freire
 <li><code>AVG(...) OVER (PARTITION BY col)</code>: Average within groups (partitions) defined by <code>col</code></li>
 <li><code>RANK() OVER (ORDER BY col)</code>: Assigns rank based on <code>col</code> (<span class="alert">gaps possible for ties</span>)</li>
 </ul>
-<div id="53238275" class="cell" data-execution_count="20">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href></a>query_window_avg_rank <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb38-2"><a href></a><span class="st">SELECT </span></span>
-<span id="cb38-3"><a href></a><span class="st">    driver_name, team, victories,</span></span>
-<span id="cb38-4"><a href></a><span class="st">    ROUND(AVG(victories) OVER (), 2) AS avg_overall, </span></span>
-<span id="cb38-5"><a href></a><span class="st">    ROUND(AVG(victories) OVER (PARTITION BY team), 2) AS avg_team, </span></span>
-<span id="cb38-6"><a href></a><span class="st">    RANK() OVER (ORDER BY victories DESC) AS rank_overall </span></span>
-<span id="cb38-7"><a href></a><span class="st">FROM drivers</span></span>
-<span id="cb38-8"><a href></a><span class="st">WHERE victories IS NOT NULL </span></span>
-<span id="cb38-9"><a href></a><span class="st">ORDER BY rank_overall; </span></span>
-<span id="cb38-10"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb38-11"><a href></a>cur.execute(query_window_avg_rank)</span>
-<span id="cb38-12"><a href></a><span class="bu">print</span>([col[<span class="dv">0</span>] <span class="cf">for</span> col <span class="kw">in</span> cur.description]) <span class="co"># Print column names</span></span>
-<span id="cb38-13"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="ffca427d" class="cell" data-execution_count="22">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href></a>query_window_avg_rank <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb42-2"><a href></a><span class="st">SELECT </span></span>
+<span id="cb42-3"><a href></a><span class="st">    driver_name, team, victories,</span></span>
+<span id="cb42-4"><a href></a><span class="st">    ROUND(AVG(victories) OVER (), 2) AS avg_overall, </span></span>
+<span id="cb42-5"><a href></a><span class="st">    ROUND(AVG(victories) OVER (PARTITION BY team), 2) AS avg_team, </span></span>
+<span id="cb42-6"><a href></a><span class="st">    RANK() OVER (ORDER BY victories DESC) AS rank_overall </span></span>
+<span id="cb42-7"><a href></a><span class="st">FROM drivers</span></span>
+<span id="cb42-8"><a href></a><span class="st">WHERE victories IS NOT NULL </span></span>
+<span id="cb42-9"><a href></a><span class="st">ORDER BY rank_overall; </span></span>
+<span id="cb42-10"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb42-11"><a href></a>cur.execute(query_window_avg_rank)</span>
+<span id="cb42-12"><a href></a><span class="bu">print</span>([col[<span class="dv">0</span>] <span class="cf">for</span> col <span class="kw">in</span> cur.description]) <span class="co"># Print column names</span></span>
+<span id="cb42-13"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[&#39;driver_name&#39;, &#39;team&#39;, &#39;victories&#39;, &#39;avg_overall&#39;, &#39;avg_team&#39;, &#39;rank_overall&#39;]
 (&#39;Lewis Hamilton&#39;, &#39;Mercedes&#39;, 103, 29.33, 56.5, 1)
@@ -1781,21 +1797,21 @@ Danilo Freire
 <ul>
 <li>A key difference: <code>GROUP BY</code> <span class="alert">reduces</span> the number of rows to one per group. Window functions <span class="alert">maintain</span> all original rows and add new columns based on the window calculation</li>
 </ul>
-<div id="472f1f61" class="cell" data-execution_count="21">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href></a><span class="co"># GROUP BY example (summarises)</span></span>
-<span id="cb40-2"><a href></a>cur.execute(<span class="st">&quot;SELECT team, ROUND(AVG(victories), 2) FROM drivers WHERE victories IS NOT NULL GROUP BY team&quot;</span>)</span>
-<span id="cb40-3"><a href></a><span class="bu">print</span>(<span class="st">&quot;--- GROUP BY Output (Collapsed) ---&quot;</span>)</span>
-<span id="cb40-4"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
-<span id="cb40-5"><a href></a></span>
-<span id="cb40-6"><a href></a><span class="co"># Window Function example (adds detail to each row)</span></span>
-<span id="cb40-7"><a href></a>cur.execute(<span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb40-8"><a href></a><span class="st">    SELECT driver_name, team, victories, </span></span>
-<span id="cb40-9"><a href></a><span class="st">           ROUND(AVG(victories) OVER (PARTITION BY team), 2) as avg_in_team</span></span>
-<span id="cb40-10"><a href></a><span class="st">    FROM drivers </span></span>
-<span id="cb40-11"><a href></a><span class="st">    WHERE victories IS NOT NULL ORDER BY team, victories DESC</span></span>
-<span id="cb40-12"><a href></a><span class="st">&#39;&#39;&#39;</span>)</span>
-<span id="cb40-13"><a href></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">--- Window Function Output (All Rows) ---&quot;</span>)</span>
-<span id="cb40-14"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="d71fb13e" class="cell" data-execution_count="23">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href></a><span class="co"># GROUP BY example (summarises)</span></span>
+<span id="cb44-2"><a href></a>cur.execute(<span class="st">&quot;SELECT team, ROUND(AVG(victories), 2) FROM drivers WHERE victories IS NOT NULL GROUP BY team&quot;</span>)</span>
+<span id="cb44-3"><a href></a><span class="bu">print</span>(<span class="st">&quot;--- GROUP BY Output (Collapsed) ---&quot;</span>)</span>
+<span id="cb44-4"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
+<span id="cb44-5"><a href></a></span>
+<span id="cb44-6"><a href></a><span class="co"># Window Function example (adds detail to each row)</span></span>
+<span id="cb44-7"><a href></a>cur.execute(<span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb44-8"><a href></a><span class="st">    SELECT driver_name, team, victories, </span></span>
+<span id="cb44-9"><a href></a><span class="st">           ROUND(AVG(victories) OVER (PARTITION BY team), 2) as avg_in_team</span></span>
+<span id="cb44-10"><a href></a><span class="st">    FROM drivers </span></span>
+<span id="cb44-11"><a href></a><span class="st">    WHERE victories IS NOT NULL ORDER BY team, victories DESC</span></span>
+<span id="cb44-12"><a href></a><span class="st">&#39;&#39;&#39;</span>)</span>
+<span id="cb44-13"><a href></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">--- Window Function Output (All Rows) ---&quot;</span>)</span>
+<span id="cb44-14"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>--- GROUP BY Output (Collapsed) ---
 (&#39;Alpine&#39;, 1.0)
@@ -1841,17 +1857,17 @@ Danilo Freire
 <li><code>LENGTH(str)</code>, <code>UPPER(str)</code>, <code>LOWER(str)</code></li>
 <li><code>SUBSTR(str, start, length)</code> extracts a portion of the string (<span class="alert">start is 1-indexed</span>)</li>
 </ul>
-<div id="664b1e21" class="cell" data-execution_count="22">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href></a>query_str1 <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb42-2"><a href></a><span class="st">SELECT driver_name, </span></span>
-<span id="cb42-3"><a href></a><span class="st">    LENGTH(driver_name) AS len,</span></span>
-<span id="cb42-4"><a href></a><span class="st">    UPPER(driver_name) AS upper,</span></span>
-<span id="cb42-5"><a href></a><span class="st">    LOWER(driver_name) AS lower,</span></span>
-<span id="cb42-6"><a href></a><span class="st">    SUBSTR(driver_name, 1, 4) AS first_four -- Get first 4 characters</span></span>
-<span id="cb42-7"><a href></a><span class="st">FROM drivers LIMIT 4;</span></span>
-<span id="cb42-8"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb42-9"><a href></a>cur.execute(query_str1)</span>
-<span id="cb42-10"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fc4fd345" class="cell" data-execution_count="24">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href></a>query_str1 <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb46-2"><a href></a><span class="st">SELECT driver_name, </span></span>
+<span id="cb46-3"><a href></a><span class="st">    LENGTH(driver_name) AS len,</span></span>
+<span id="cb46-4"><a href></a><span class="st">    UPPER(driver_name) AS upper,</span></span>
+<span id="cb46-5"><a href></a><span class="st">    LOWER(driver_name) AS lower,</span></span>
+<span id="cb46-6"><a href></a><span class="st">    SUBSTR(driver_name, 1, 4) AS first_four -- Get first 4 characters</span></span>
+<span id="cb46-7"><a href></a><span class="st">FROM drivers LIMIT 4;</span></span>
+<span id="cb46-8"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb46-9"><a href></a>cur.execute(query_str1)</span>
+<span id="cb46-10"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(&#39;Lewis Hamilton&#39;, 14, &#39;LEWIS HAMILTON&#39;, &#39;lewis hamilton&#39;, &#39;Lewi&#39;)
 (&#39;Max Verstappen&#39;, 14, &#39;MAX VERSTAPPEN&#39;, &#39;max verstappen&#39;, &#39;Max &#39;)
@@ -1870,16 +1886,16 @@ Danilo Freire
 <li><code>INSTR(str, find)</code> finds the starting position of <code>find</code> within <code>str</code> (<span class="alert">0 if not found</span>)</li>
 <li>The <span class="alert"><code>||</code></span> operator concatenates (joins) strings</li>
 </ul>
-<div id="28de3079" class="cell" data-execution_count="23">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href></a>query_str2 <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb44-2"><a href></a><span class="st">SELECT driver_name, </span></span>
-<span id="cb44-3"><a href></a><span class="st">    REPLACE(driver_name, &#39; &#39;, &#39;_&#39;) AS replaced_space,</span></span>
-<span id="cb44-4"><a href></a><span class="st">    INSTR(LOWER(driver_name), &#39;a&#39;) AS first_a_pos, </span></span>
-<span id="cb44-5"><a href></a><span class="st">    &#39;Driver: &#39; || driver_name AS labelled_name -- Concatenation</span></span>
-<span id="cb44-6"><a href></a><span class="st">FROM drivers LIMIT 4;</span></span>
-<span id="cb44-7"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb44-8"><a href></a>cur.execute(query_str2)</span>
-<span id="cb44-9"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="6114c73e" class="cell" data-execution_count="25">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href></a>query_str2 <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb48-2"><a href></a><span class="st">SELECT driver_name, </span></span>
+<span id="cb48-3"><a href></a><span class="st">    REPLACE(driver_name, &#39; &#39;, &#39;_&#39;) AS replaced_space,</span></span>
+<span id="cb48-4"><a href></a><span class="st">    INSTR(LOWER(driver_name), &#39;a&#39;) AS first_a_pos, </span></span>
+<span id="cb48-5"><a href></a><span class="st">    &#39;Driver: &#39; || driver_name AS labelled_name -- Concatenation</span></span>
+<span id="cb48-6"><a href></a><span class="st">FROM drivers LIMIT 4;</span></span>
+<span id="cb48-7"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb48-8"><a href></a>cur.execute(query_str2)</span>
+<span id="cb48-9"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(&#39;Lewis Hamilton&#39;, &#39;Lewis_Hamilton&#39;, 8, &#39;Driver: Lewis Hamilton&#39;)
 (&#39;Max Verstappen&#39;, &#39;Max_Verstappen&#39;, 2, &#39;Driver: Max Verstappen&#39;)
@@ -1901,17 +1917,17 @@ Danilo Freire
 <li>The <code>CASE</code> statement is SQL’s way of implementing <span class="alert">if-then-else logic</span> within a query</li>
 <li><code>CASE WHEN condition THEN result ELSE default_result END</code></li>
 </ul>
-<div id="cbc03e1b" class="cell" data-execution_count="24">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href></a>query_case1 <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb46-2"><a href></a><span class="st">SELECT driver_name, victories,</span></span>
-<span id="cb46-3"><a href></a><span class="st">    CASE </span></span>
-<span id="cb46-4"><a href></a><span class="st">        WHEN victories &gt; 50 THEN &#39;Legend&#39; </span></span>
-<span id="cb46-5"><a href></a><span class="st">        ELSE &#39;Great Driver (or N/A)&#39;     </span></span>
-<span id="cb46-6"><a href></a><span class="st">    END AS category </span></span>
-<span id="cb46-7"><a href></a><span class="st">FROM drivers;</span></span>
-<span id="cb46-8"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb46-9"><a href></a>cur.execute(query_case1)</span>
-<span id="cb46-10"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="0951ebd7" class="cell" data-execution_count="26">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href></a>query_case1 <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb50-2"><a href></a><span class="st">SELECT driver_name, victories,</span></span>
+<span id="cb50-3"><a href></a><span class="st">    CASE </span></span>
+<span id="cb50-4"><a href></a><span class="st">        WHEN victories &gt; 50 THEN &#39;Legend&#39; </span></span>
+<span id="cb50-5"><a href></a><span class="st">        ELSE &#39;Great Driver (or N/A)&#39;     </span></span>
+<span id="cb50-6"><a href></a><span class="st">    END AS category </span></span>
+<span id="cb50-7"><a href></a><span class="st">FROM drivers;</span></span>
+<span id="cb50-8"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb50-9"><a href></a>cur.execute(query_case1)</span>
+<span id="cb50-10"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(&#39;Lewis Hamilton&#39;, 103, &#39;Legend&#39;)
 (&#39;Max Verstappen&#39;, 55, &#39;Legend&#39;)
@@ -1931,20 +1947,20 @@ Danilo Freire
 <ul>
 <li>You can chain multiple <code>WHEN</code> clauses. The <span class="alert">first condition that evaluates to true</span> determines the result for that row. The optional <code>ELSE</code> handles cases where no <code>WHEN</code> is true</li>
 </ul>
-<div id="8dc2c8e1" class="cell" data-execution_count="25">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href></a>query_case2 <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb48-2"><a href></a><span class="st">SELECT driver_name, victories,</span></span>
-<span id="cb48-3"><a href></a><span class="st">    CASE </span></span>
-<span id="cb48-4"><a href></a><span class="st">        WHEN victories &gt; 100 THEN &#39;All-Time Great&#39;</span></span>
-<span id="cb48-5"><a href></a><span class="st">        WHEN victories &gt; 50 THEN &#39;Legend&#39;</span></span>
-<span id="cb48-6"><a href></a><span class="st">        WHEN victories &gt;= 10 THEN &#39;Race Winner&#39;</span></span>
-<span id="cb48-7"><a href></a><span class="st">        WHEN victories &gt; 0 THEN &#39;Podium Potential&#39;</span></span>
-<span id="cb48-8"><a href></a><span class="st">        ELSE &#39;Data Missing or Zero Wins&#39; </span></span>
-<span id="cb48-9"><a href></a><span class="st">    END AS status</span></span>
-<span id="cb48-10"><a href></a><span class="st">FROM drivers ORDER BY victories DESC;</span></span>
-<span id="cb48-11"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb48-12"><a href></a>cur.execute(query_case2)</span>
-<span id="cb48-13"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="af626c83" class="cell" data-execution_count="27">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href></a>query_case2 <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb52-2"><a href></a><span class="st">SELECT driver_name, victories,</span></span>
+<span id="cb52-3"><a href></a><span class="st">    CASE </span></span>
+<span id="cb52-4"><a href></a><span class="st">        WHEN victories &gt; 100 THEN &#39;All-Time Great&#39;</span></span>
+<span id="cb52-5"><a href></a><span class="st">        WHEN victories &gt; 50 THEN &#39;Legend&#39;</span></span>
+<span id="cb52-6"><a href></a><span class="st">        WHEN victories &gt;= 10 THEN &#39;Race Winner&#39;</span></span>
+<span id="cb52-7"><a href></a><span class="st">        WHEN victories &gt; 0 THEN &#39;Podium Potential&#39;</span></span>
+<span id="cb52-8"><a href></a><span class="st">        ELSE &#39;Data Missing or Zero Wins&#39; </span></span>
+<span id="cb52-9"><a href></a><span class="st">    END AS status</span></span>
+<span id="cb52-10"><a href></a><span class="st">FROM drivers ORDER BY victories DESC;</span></span>
+<span id="cb52-11"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb52-12"><a href></a>cur.execute(query_case2)</span>
+<span id="cb52-13"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(&#39;Lewis Hamilton&#39;, 103, &#39;All-Time Great&#39;)
 (&#39;Max Verstappen&#39;, 55, &#39;Legend&#39;)
@@ -1967,25 +1983,25 @@ Danilo Freire
 <ul>
 <li><code>CASE</code> offers more nuanced control over handling <code>NULL</code>s compared to just <code>COALESCE</code>, allowing checks on <span class="alert">other columns</span></li>
 </ul>
-<div id="a615207e" class="cell" data-execution_count="26">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href></a>query_case_null <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb50-2"><a href></a><span class="st">SELECT driver_name, </span></span>
-<span id="cb50-3"><a href></a><span class="st">    -- Fill nationality based on name if NULL</span></span>
-<span id="cb50-4"><a href></a><span class="st">    CASE </span></span>
-<span id="cb50-5"><a href></a><span class="st">        WHEN nationality IS NULL AND driver_name = &#39;Fernando Alonso&#39; THEN &#39;Spanish&#39;</span></span>
-<span id="cb50-6"><a href></a><span class="st">        WHEN nationality IS NULL THEN &#39;Unknown&#39; </span></span>
-<span id="cb50-7"><a href></a><span class="st">        ELSE nationality</span></span>
-<span id="cb50-8"><a href></a><span class="st">    END AS nationality_filled,</span></span>
-<span id="cb50-9"><a href></a><span class="st">    -- Fill victories based on team if NULL</span></span>
-<span id="cb50-10"><a href></a><span class="st">    CASE </span></span>
-<span id="cb50-11"><a href></a><span class="st">        WHEN victories IS NULL AND team = &#39;Aston Martin&#39; THEN 32 -- Educated guess! </span></span>
-<span id="cb50-12"><a href></a><span class="st">        WHEN victories IS NULL THEN 0 </span></span>
-<span id="cb50-13"><a href></a><span class="st">        ELSE victories</span></span>
-<span id="cb50-14"><a href></a><span class="st">    END AS victories_filled</span></span>
-<span id="cb50-15"><a href></a><span class="st">FROM drivers WHERE driver_name LIKE &#39;F%&#39; OR driver_name LIKE &#39;L%&#39;; -- Limit output</span></span>
-<span id="cb50-16"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb50-17"><a href></a>cur.execute(query_case_null)</span>
-<span id="cb50-18"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="c942fc91" class="cell" data-execution_count="28">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href></a>query_case_null <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb54-2"><a href></a><span class="st">SELECT driver_name, </span></span>
+<span id="cb54-3"><a href></a><span class="st">    -- Fill nationality based on name if NULL</span></span>
+<span id="cb54-4"><a href></a><span class="st">    CASE </span></span>
+<span id="cb54-5"><a href></a><span class="st">        WHEN nationality IS NULL AND driver_name = &#39;Fernando Alonso&#39; THEN &#39;Spanish&#39;</span></span>
+<span id="cb54-6"><a href></a><span class="st">        WHEN nationality IS NULL THEN &#39;Unknown&#39; </span></span>
+<span id="cb54-7"><a href></a><span class="st">        ELSE nationality</span></span>
+<span id="cb54-8"><a href></a><span class="st">    END AS nationality_filled,</span></span>
+<span id="cb54-9"><a href></a><span class="st">    -- Fill victories based on team if NULL</span></span>
+<span id="cb54-10"><a href></a><span class="st">    CASE </span></span>
+<span id="cb54-11"><a href></a><span class="st">        WHEN victories IS NULL AND team = &#39;Aston Martin&#39; THEN 32 -- Educated guess! </span></span>
+<span id="cb54-12"><a href></a><span class="st">        WHEN victories IS NULL THEN 0 </span></span>
+<span id="cb54-13"><a href></a><span class="st">        ELSE victories</span></span>
+<span id="cb54-14"><a href></a><span class="st">    END AS victories_filled</span></span>
+<span id="cb54-15"><a href></a><span class="st">FROM drivers WHERE driver_name LIKE &#39;F%&#39; OR driver_name LIKE &#39;L%&#39;; -- Limit output</span></span>
+<span id="cb54-16"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb54-17"><a href></a>cur.execute(query_case_null)</span>
+<span id="cb54-18"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(&#39;Lewis Hamilton&#39;, &#39;British&#39;, 103)
 (&#39;Fernando Alonso&#39;, &#39;Spanish&#39;, 32)
@@ -2023,12 +2039,12 @@ Danilo Freire
 <li>Reading data using loops and <code>fetchall()</code> works, but <code>pandas</code> makes it much easier for analysis</li>
 <li><span class="alert"><code>pandas.read_sql()</code></span> executes a <code>SELECT</code> query and loads the results directly into a DataFrame</li>
 </ul>
-<div id="96f94394" class="cell" data-execution_count="27">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd <span class="co"># Import pandas</span></span>
-<span id="cb52-2"><a href></a></span>
-<span id="cb52-3"><a href></a><span class="co"># Pass the SQL query and the connection object</span></span>
-<span id="cb52-4"><a href></a>df <span class="op">=</span> pd.read_sql(<span class="st">&#39;SELECT * FROM drivers&#39;</span>, conn) </span>
-<span id="cb52-5"><a href></a><span class="bu">print</span>(df) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="77b50a22" class="cell" data-execution_count="29">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd <span class="co"># Import pandas</span></span>
+<span id="cb56-2"><a href></a></span>
+<span id="cb56-3"><a href></a><span class="co"># Pass the SQL query and the connection object</span></span>
+<span id="cb56-4"><a href></a>df <span class="op">=</span> pd.read_sql(<span class="st">&#39;SELECT * FROM drivers&#39;</span>, conn) </span>
+<span id="cb56-5"><a href></a><span class="bu">print</span>(df) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   driver_id      driver_name             team nationality  victories
 0          1   Lewis Hamilton         Mercedes     British      103.0
@@ -2052,15 +2068,15 @@ Danilo Freire
 <ul>
 <li>You can use complex <code>SELECT</code> statements, including joins, filtering, ordering, etc., within <code>read_sql</code></li>
 </ul>
-<div id="2e964386" class="cell" data-execution_count="28">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href></a>query_pd <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb54-2"><a href></a><span class="st">SELECT driver_name, team, victories </span></span>
-<span id="cb54-3"><a href></a><span class="st">FROM drivers </span></span>
-<span id="cb54-4"><a href></a><span class="st">WHERE victories &gt; 5 OR victories IS NULL</span></span>
-<span id="cb54-5"><a href></a><span class="st">ORDER BY team</span></span>
-<span id="cb54-6"><a href></a><span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb54-7"><a href></a>df_filtered_ordered <span class="op">=</span> pd.read_sql(query_pd, conn)</span>
-<span id="cb54-8"><a href></a><span class="bu">print</span>(df_filtered_ordered)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="17afc704" class="cell" data-execution_count="30">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href></a>query_pd <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb58-2"><a href></a><span class="st">SELECT driver_name, team, victories </span></span>
+<span id="cb58-3"><a href></a><span class="st">FROM drivers </span></span>
+<span id="cb58-4"><a href></a><span class="st">WHERE victories &gt; 5 OR victories IS NULL</span></span>
+<span id="cb58-5"><a href></a><span class="st">ORDER BY team</span></span>
+<span id="cb58-6"><a href></a><span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb58-7"><a href></a>df_filtered_ordered <span class="op">=</span> pd.read_sql(query_pd, conn)</span>
+<span id="cb58-8"><a href></a><span class="bu">print</span>(df_filtered_ordered)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       driver_name             team  victories
 0  Fernando Alonso     Aston Martin        NaN
@@ -2081,10 +2097,10 @@ Danilo Freire
 <ul>
 <li>Once loaded, the DataFrame behaves like any other <code>pandas</code> DataFrame. Apply all your data manipulation skills!</li>
 </ul>
-<div id="18bbaff1" class="cell" data-execution_count="29">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href></a><span class="co"># df was loaded previously</span></span>
-<span id="cb56-2"><a href></a>avg_vic_pd <span class="op">=</span> df.groupby(<span class="st">&#39;team&#39;</span>)[<span class="st">&#39;victories&#39;</span>].mean().dropna()</span>
-<span id="cb56-3"><a href></a><span class="bu">print</span>(avg_vic_pd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="3180c019" class="cell" data-execution_count="31">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href></a><span class="co"># df was loaded previously</span></span>
+<span id="cb60-2"><a href></a>avg_vic_pd <span class="op">=</span> df.groupby(<span class="st">&#39;team&#39;</span>)[<span class="st">&#39;victories&#39;</span>].mean().dropna()</span>
+<span id="cb60-3"><a href></a><span class="bu">print</span>(avg_vic_pd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>team
 Alpine              1.0
@@ -2094,9 +2110,9 @@ Red Bull Racing    30.0
 Name: victories, dtype: float64</code></pre>
 </div>
 </div>
-<div id="2a615cce" class="cell" data-execution_count="30">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href></a><span class="co"># Example using pandas .query() method for filtering</span></span>
-<span id="cb58-2"><a href></a><span class="bu">print</span>(df.query(<span class="st">&#39;victories &gt; 50 and nationality == &quot;British&quot;&#39;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fc33f043" class="cell" data-execution_count="32">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href></a><span class="co"># Example using pandas .query() method for filtering</span></span>
+<span id="cb62-2"><a href></a><span class="bu">print</span>(df.query(<span class="st">&#39;victories &gt; 50 and nationality == &quot;British&quot;&#39;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   driver_id     driver_name      team nationality  victories
 0          1  Lewis Hamilton  Mercedes     British      103.0</code></pre>
@@ -2110,16 +2126,16 @@ Name: victories, dtype: float64</code></pre>
 <ul>
 <li>The reverse is also easy: <code>DataFrame.to_sql()</code> writes the DataFrame’s contents into a database table</li>
 </ul>
-<div id="c2ffab37" class="cell" data-execution_count="31">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href></a><span class="co"># Example: Create a DataFrame with British drivers</span></span>
-<span id="cb60-2"><a href></a>df_british <span class="op">=</span> df.query(<span class="st">&#39;nationality == &quot;British&quot;&#39;</span>).copy()</span>
-<span id="cb60-3"><a href></a></span>
-<span id="cb60-4"><a href></a><span class="co"># Write to a new table named &#39;british_drivers&#39;</span></span>
-<span id="cb60-5"><a href></a><span class="co"># index=False: Prevents pandas index from becoming a DB column (important!)</span></span>
-<span id="cb60-6"><a href></a>df_british.to_sql(<span class="st">&#39;british_drivers&#39;</span>, conn, if_exists<span class="op">=</span><span class="st">&#39;replace&#39;</span>, index<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb60-7"><a href></a></span>
-<span id="cb60-8"><a href></a><span class="co"># Verify by reading it back using pandas</span></span>
-<span id="cb60-9"><a href></a><span class="bu">print</span>(pd.read_sql(<span class="st">&#39;SELECT * FROM british_drivers&#39;</span>, conn))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="3d0acff8" class="cell" data-execution_count="33">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href></a><span class="co"># Example: Create a DataFrame with British drivers</span></span>
+<span id="cb64-2"><a href></a>df_british <span class="op">=</span> df.query(<span class="st">&#39;nationality == &quot;British&quot;&#39;</span>).copy()</span>
+<span id="cb64-3"><a href></a></span>
+<span id="cb64-4"><a href></a><span class="co"># Write to a new table named &#39;british_drivers&#39;</span></span>
+<span id="cb64-5"><a href></a><span class="co"># index=False: Prevents pandas index from becoming a DB column (important!)</span></span>
+<span id="cb64-6"><a href></a>df_british.to_sql(<span class="st">&#39;british_drivers&#39;</span>, conn, if_exists<span class="op">=</span><span class="st">&#39;replace&#39;</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb64-7"><a href></a></span>
+<span id="cb64-8"><a href></a><span class="co"># Verify by reading it back using pandas</span></span>
+<span id="cb64-9"><a href></a><span class="bu">print</span>(pd.read_sql(<span class="st">&#39;SELECT * FROM british_drivers&#39;</span>, conn))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   driver_id     driver_name      team nationality  victories
 0          1  Lewis Hamilton  Mercedes     British      103.0
@@ -2175,7 +2191,7 @@ Name: victories, dtype: float64</code></pre>
 <section>
 <section id="have-a-great-day" class="title-slide slide level1 center" data-background-color="#2d4563">
 <h1>Have a great day! 😊</h1>
-<div id="741751bb" class="cell" data-execution_count="32">
+<div id="8a974488" class="cell" data-execution_count="34">
 <div class="cell-output cell-output-stdout">
 <pre><code>
 SQLite connection closed.</code></pre>
@@ -2186,33 +2202,33 @@ SQLite connection closed.</code></pre>
 <h2>Appendix 01</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <p><em>Using standard <code>sqlite3</code> fetching:</em></p>
-<div id="eb3ca5b5" class="cell" data-execution_count="33">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href></a><span class="im">import</span> sqlite3</span>
-<span id="cb63-2"><a href></a>db_file <span class="op">=</span> <span class="st">&#39;lecture12.db&#39;</span></span>
-<span id="cb63-3"><a href></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(db_file)</span>
-<span id="cb63-4"><a href></a>cur <span class="op">=</span> conn.cursor()</span>
-<span id="cb63-5"><a href></a></span>
-<span id="cb63-6"><a href></a><span class="co"># Find M names</span></span>
-<span id="cb63-7"><a href></a>cur.execute(<span class="st">&quot;SELECT * FROM drivers WHERE driver_name LIKE &#39;M%&#39;;&quot;</span>)</span>
-<span id="cb63-8"><a href></a><span class="bu">print</span>(<span class="st">&quot;--- Drivers starting with M ---&quot;</span>)</span>
-<span id="cb63-9"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
-<span id="cb63-10"><a href></a></span>
-<span id="cb63-11"><a href></a><span class="co"># Find 7 char nationalities</span></span>
-<span id="cb63-12"><a href></a>cur.execute(<span class="st">&quot;SELECT * FROM drivers WHERE LENGTH(nationality) = 7;&quot;</span>)</span>
-<span id="cb63-13"><a href></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">--- Nationalities with 7 chars ---&quot;</span>)</span>
-<span id="cb63-14"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
-<span id="cb63-15"><a href></a></span>
-<span id="cb63-16"><a href></a><span class="co"># Find L or M names</span></span>
-<span id="cb63-17"><a href></a>cur.execute(<span class="st">&quot;SELECT * FROM drivers WHERE driver_name LIKE &#39;L%&#39; OR driver_name LIKE &#39;M%&#39;;&quot;</span>)</span>
-<span id="cb63-18"><a href></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">--- Drivers starting with L or M ---&quot;</span>)</span>
-<span id="cb63-19"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
-<span id="cb63-20"><a href></a></span>
-<span id="cb63-21"><a href></a><span class="co"># Find 1-10 wins</span></span>
-<span id="cb63-22"><a href></a>cur.execute(<span class="st">&quot;SELECT * FROM drivers WHERE victories BETWEEN 1 AND 10;&quot;</span>)</span>
-<span id="cb63-23"><a href></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">--- Drivers with 1-10 wins ---&quot;</span>)</span>
-<span id="cb63-24"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
-<span id="cb63-25"><a href></a></span>
-<span id="cb63-26"><a href></a>conn.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="6ccce9cd" class="cell" data-execution_count="35">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href></a><span class="im">import</span> sqlite3</span>
+<span id="cb67-2"><a href></a>db_file <span class="op">=</span> <span class="st">&#39;lecture12.db&#39;</span></span>
+<span id="cb67-3"><a href></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(db_file)</span>
+<span id="cb67-4"><a href></a>cur <span class="op">=</span> conn.cursor()</span>
+<span id="cb67-5"><a href></a></span>
+<span id="cb67-6"><a href></a><span class="co"># Find M names</span></span>
+<span id="cb67-7"><a href></a>cur.execute(<span class="st">&quot;SELECT * FROM drivers WHERE driver_name LIKE &#39;M%&#39;;&quot;</span>)</span>
+<span id="cb67-8"><a href></a><span class="bu">print</span>(<span class="st">&quot;--- Drivers starting with M ---&quot;</span>)</span>
+<span id="cb67-9"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
+<span id="cb67-10"><a href></a></span>
+<span id="cb67-11"><a href></a><span class="co"># Find 7 char nationalities</span></span>
+<span id="cb67-12"><a href></a>cur.execute(<span class="st">&quot;SELECT * FROM drivers WHERE LENGTH(nationality) = 7;&quot;</span>)</span>
+<span id="cb67-13"><a href></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">--- Nationalities with 7 chars ---&quot;</span>)</span>
+<span id="cb67-14"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
+<span id="cb67-15"><a href></a></span>
+<span id="cb67-16"><a href></a><span class="co"># Find L or M names</span></span>
+<span id="cb67-17"><a href></a>cur.execute(<span class="st">&quot;SELECT * FROM drivers WHERE driver_name LIKE &#39;L%&#39; OR driver_name LIKE &#39;M%&#39;;&quot;</span>)</span>
+<span id="cb67-18"><a href></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">--- Drivers starting with L or M ---&quot;</span>)</span>
+<span id="cb67-19"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
+<span id="cb67-20"><a href></a></span>
+<span id="cb67-21"><a href></a><span class="co"># Find 1-10 wins</span></span>
+<span id="cb67-22"><a href></a>cur.execute(<span class="st">&quot;SELECT * FROM drivers WHERE victories BETWEEN 1 AND 10;&quot;</span>)</span>
+<span id="cb67-23"><a href></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">--- Drivers with 1-10 wins ---&quot;</span>)</span>
+<span id="cb67-24"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
+<span id="cb67-25"><a href></a></span>
+<span id="cb67-26"><a href></a>conn.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>--- Drivers starting with M ---
 (2, &#39;Max Verstappen&#39;, &#39;Red Bull Racing&#39;, &#39;Dutch&#39;, 55)
@@ -2242,26 +2258,26 @@ SQLite connection closed.</code></pre>
 <h2>Appendix 02</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <p><em>Using standard <code>sqlite3</code> fetching:</em></p>
-<div id="a540a2b5" class="cell" data-execution_count="34">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href></a><span class="im">import</span> sqlite3</span>
-<span id="cb65-2"><a href></a>db_file <span class="op">=</span> <span class="st">&#39;lecture12.db&#39;</span></span>
-<span id="cb65-3"><a href></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(db_file)</span>
-<span id="cb65-4"><a href></a>cur <span class="op">=</span> conn.cursor()</span>
-<span id="cb65-5"><a href></a></span>
-<span id="cb65-6"><a href></a><span class="co"># Query and display using standard fetch</span></span>
-<span id="cb65-7"><a href></a>query_rank_nationality <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb65-8"><a href></a><span class="st">SELECT </span></span>
-<span id="cb65-9"><a href></a><span class="st">    driver_name, nationality, victories,</span></span>
-<span id="cb65-10"><a href></a><span class="st">    RANK() OVER (PARTITION BY nationality ORDER BY victories DESC) AS rank_nationality</span></span>
-<span id="cb65-11"><a href></a><span class="st">FROM drivers</span></span>
-<span id="cb65-12"><a href></a><span class="st">WHERE victories IS NOT NULL </span></span>
-<span id="cb65-13"><a href></a><span class="st">ORDER BY nationality, rank_nationality; </span></span>
-<span id="cb65-14"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb65-15"><a href></a>cur.execute(query_rank_nationality)</span>
-<span id="cb65-16"><a href></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">--- Drivers ranked by victories within nationality ---&quot;</span>)</span>
-<span id="cb65-17"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
-<span id="cb65-18"><a href></a></span>
-<span id="cb65-19"><a href></a>conn.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="72243889" class="cell" data-execution_count="36">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href></a><span class="im">import</span> sqlite3</span>
+<span id="cb69-2"><a href></a>db_file <span class="op">=</span> <span class="st">&#39;lecture12.db&#39;</span></span>
+<span id="cb69-3"><a href></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(db_file)</span>
+<span id="cb69-4"><a href></a>cur <span class="op">=</span> conn.cursor()</span>
+<span id="cb69-5"><a href></a></span>
+<span id="cb69-6"><a href></a><span class="co"># Query and display using standard fetch</span></span>
+<span id="cb69-7"><a href></a>query_rank_nationality <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb69-8"><a href></a><span class="st">SELECT </span></span>
+<span id="cb69-9"><a href></a><span class="st">    driver_name, nationality, victories,</span></span>
+<span id="cb69-10"><a href></a><span class="st">    RANK() OVER (PARTITION BY nationality ORDER BY victories DESC) AS rank_nationality</span></span>
+<span id="cb69-11"><a href></a><span class="st">FROM drivers</span></span>
+<span id="cb69-12"><a href></a><span class="st">WHERE victories IS NOT NULL </span></span>
+<span id="cb69-13"><a href></a><span class="st">ORDER BY nationality, rank_nationality; </span></span>
+<span id="cb69-14"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb69-15"><a href></a>cur.execute(query_rank_nationality)</span>
+<span id="cb69-16"><a href></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">--- Drivers ranked by victories within nationality ---&quot;</span>)</span>
+<span id="cb69-17"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
+<span id="cb69-18"><a href></a></span>
+<span id="cb69-19"><a href></a>conn.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 --- Drivers ranked by victories within nationality ---
@@ -2280,29 +2296,29 @@ SQLite connection closed.</code></pre>
 <h2>Appendix 03</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <p><em>Using standard <code>sqlite3</code> fetching:</em></p>
-<div id="e79c0b0d" class="cell" data-execution_count="35">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href></a><span class="im">import</span> sqlite3</span>
-<span id="cb67-2"><a href></a>db_file <span class="op">=</span> <span class="st">&#39;lecture12.db&#39;</span></span>
-<span id="cb67-3"><a href></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(db_file)</span>
-<span id="cb67-4"><a href></a>cur <span class="op">=</span> conn.cursor()</span>
-<span id="cb67-5"><a href></a></span>
-<span id="cb67-6"><a href></a>query_driver_level <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb67-7"><a href></a><span class="st">SELECT</span></span>
-<span id="cb67-8"><a href></a><span class="st">    driver_name, victories,</span></span>
-<span id="cb67-9"><a href></a><span class="st">    CASE</span></span>
-<span id="cb67-10"><a href></a><span class="st">        WHEN victories IS NULL THEN &#39;Unknown&#39;</span></span>
-<span id="cb67-11"><a href></a><span class="st">        WHEN victories &gt; 50 THEN &#39;Expert&#39;</span></span>
-<span id="cb67-12"><a href></a><span class="st">        WHEN victories BETWEEN 10 AND 50 THEN &#39;Intermediate&#39;</span></span>
-<span id="cb67-13"><a href></a><span class="st">        WHEN victories &lt; 10 THEN &#39;Beginner&#39;</span></span>
-<span id="cb67-14"><a href></a><span class="st">    END AS driver_level</span></span>
-<span id="cb67-15"><a href></a><span class="st">FROM drivers</span></span>
-<span id="cb67-16"><a href></a><span class="st">ORDER BY victories DESC;</span></span>
-<span id="cb67-17"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb67-18"><a href></a>cur.execute(query_driver_level)</span>
-<span id="cb67-19"><a href></a><span class="bu">print</span>(<span class="st">&quot;--- Driver classification using CASE ---&quot;</span>)</span>
-<span id="cb67-20"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
-<span id="cb67-21"><a href></a></span>
-<span id="cb67-22"><a href></a>conn.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="c20c5e70" class="cell" data-execution_count="37">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href></a><span class="im">import</span> sqlite3</span>
+<span id="cb71-2"><a href></a>db_file <span class="op">=</span> <span class="st">&#39;lecture12.db&#39;</span></span>
+<span id="cb71-3"><a href></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(db_file)</span>
+<span id="cb71-4"><a href></a>cur <span class="op">=</span> conn.cursor()</span>
+<span id="cb71-5"><a href></a></span>
+<span id="cb71-6"><a href></a>query_driver_level <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb71-7"><a href></a><span class="st">SELECT</span></span>
+<span id="cb71-8"><a href></a><span class="st">    driver_name, victories,</span></span>
+<span id="cb71-9"><a href></a><span class="st">    CASE</span></span>
+<span id="cb71-10"><a href></a><span class="st">        WHEN victories IS NULL THEN &#39;Unknown&#39;</span></span>
+<span id="cb71-11"><a href></a><span class="st">        WHEN victories &gt; 50 THEN &#39;Expert&#39;</span></span>
+<span id="cb71-12"><a href></a><span class="st">        WHEN victories BETWEEN 10 AND 50 THEN &#39;Intermediate&#39;</span></span>
+<span id="cb71-13"><a href></a><span class="st">        WHEN victories &lt; 10 THEN &#39;Beginner&#39;</span></span>
+<span id="cb71-14"><a href></a><span class="st">    END AS driver_level</span></span>
+<span id="cb71-15"><a href></a><span class="st">FROM drivers</span></span>
+<span id="cb71-16"><a href></a><span class="st">ORDER BY victories DESC;</span></span>
+<span id="cb71-17"><a href></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb71-18"><a href></a>cur.execute(query_driver_level)</span>
+<span id="cb71-19"><a href></a><span class="bu">print</span>(<span class="st">&quot;--- Driver classification using CASE ---&quot;</span>)</span>
+<span id="cb71-20"><a href></a><span class="cf">for</span> row <span class="kw">in</span> cur.fetchall(): <span class="bu">print</span>(row)</span>
+<span id="cb71-21"><a href></a></span>
+<span id="cb71-22"><a href></a>conn.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>--- Driver classification using CASE ---
 (&#39;Lewis Hamilton&#39;, 103, &#39;Expert&#39;)
@@ -2322,42 +2338,42 @@ SQLite connection closed.</code></pre>
 <h2>Appendix 04</h2>
 <div style="margin-top: 50px; font-size: 22px;">
 <p><em>Using <code>pandas</code>:</em></p>
-<div id="9d6b8eee" class="cell" data-execution_count="36">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href></a><span class="im">import</span> sqlite3</span>
-<span id="cb69-2"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb69-3"><a href></a></span>
-<span id="cb69-4"><a href></a>db_file <span class="op">=</span> <span class="st">&#39;lecture12.db&#39;</span></span>
-<span id="cb69-5"><a href></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(db_file)</span>
-<span id="cb69-6"><a href></a>cur <span class="op">=</span> conn.cursor()</span>
-<span id="cb69-7"><a href></a></span>
-<span id="cb69-8"><a href></a><span class="co"># 1. Create employees table</span></span>
-<span id="cb69-9"><a href></a>cur.execute(<span class="st">&#39;DROP TABLE IF EXISTS employees;&#39;</span>)</span>
-<span id="cb69-10"><a href></a>cur.execute(<span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb69-11"><a href></a><span class="st">CREATE TABLE employees (</span></span>
-<span id="cb69-12"><a href></a><span class="st">    id INTEGER PRIMARY KEY AUTOINCREMENT,</span></span>
-<span id="cb69-13"><a href></a><span class="st">    name TEXT, dept TEXT, salary INTEGER</span></span>
-<span id="cb69-14"><a href></a><span class="st">);&#39;&#39;&#39;</span>)</span>
-<span id="cb69-15"><a href></a></span>
-<span id="cb69-16"><a href></a><span class="co"># 2. Insert data</span></span>
-<span id="cb69-17"><a href></a>cur.execute(<span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb69-18"><a href></a><span class="st">INSERT INTO employees (name, dept, salary) VALUES</span></span>
-<span id="cb69-19"><a href></a><span class="st">(&#39;Alice&#39;, &#39;HR&#39;, 50000),</span></span>
-<span id="cb69-20"><a href></a><span class="st">(&#39;Bob&#39;, &#39;IT&#39;, 60000),</span></span>
-<span id="cb69-21"><a href></a><span class="st">(&#39;Charlie&#39;, &#39;HR&#39;, 70000),</span></span>
-<span id="cb69-22"><a href></a><span class="st">(&#39;David&#39;, &#39;IT&#39;, 80000);</span></span>
-<span id="cb69-23"><a href></a><span class="st">&#39;&#39;&#39;</span>)</span>
-<span id="cb69-24"><a href></a>conn.commit()</span>
-<span id="cb69-25"><a href></a></span>
-<span id="cb69-26"><a href></a><span class="co"># 3. Read data with pandas</span></span>
-<span id="cb69-27"><a href></a>df_employees <span class="op">=</span> pd.read_sql(<span class="st">&#39;SELECT * FROM employees&#39;</span>, conn)</span>
-<span id="cb69-28"><a href></a><span class="bu">print</span>(df_employees)</span>
-<span id="cb69-29"><a href></a></span>
-<span id="cb69-30"><a href></a><span class="co"># 4. Compute average salary by department using pandas</span></span>
-<span id="cb69-31"><a href></a>avg_salary_dept <span class="op">=</span> df_employees.groupby(<span class="st">&#39;dept&#39;</span>)[<span class="st">&#39;salary&#39;</span>].mean()</span>
-<span id="cb69-32"><a href></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">--- Average salary by department (pandas) ---&quot;</span>)</span>
-<span id="cb69-33"><a href></a><span class="bu">print</span>(avg_salary_dept)</span>
-<span id="cb69-34"><a href></a></span>
-<span id="cb69-35"><a href></a>conn.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="1bcf2aa9" class="cell" data-execution_count="38">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href></a><span class="im">import</span> sqlite3</span>
+<span id="cb73-2"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb73-3"><a href></a></span>
+<span id="cb73-4"><a href></a>db_file <span class="op">=</span> <span class="st">&#39;lecture12.db&#39;</span></span>
+<span id="cb73-5"><a href></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(db_file)</span>
+<span id="cb73-6"><a href></a>cur <span class="op">=</span> conn.cursor()</span>
+<span id="cb73-7"><a href></a></span>
+<span id="cb73-8"><a href></a><span class="co"># 1. Create employees table</span></span>
+<span id="cb73-9"><a href></a>cur.execute(<span class="st">&#39;DROP TABLE IF EXISTS employees;&#39;</span>)</span>
+<span id="cb73-10"><a href></a>cur.execute(<span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb73-11"><a href></a><span class="st">CREATE TABLE employees (</span></span>
+<span id="cb73-12"><a href></a><span class="st">    id INTEGER PRIMARY KEY AUTOINCREMENT,</span></span>
+<span id="cb73-13"><a href></a><span class="st">    name TEXT, dept TEXT, salary INTEGER</span></span>
+<span id="cb73-14"><a href></a><span class="st">);&#39;&#39;&#39;</span>)</span>
+<span id="cb73-15"><a href></a></span>
+<span id="cb73-16"><a href></a><span class="co"># 2. Insert data</span></span>
+<span id="cb73-17"><a href></a>cur.execute(<span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb73-18"><a href></a><span class="st">INSERT INTO employees (name, dept, salary) VALUES</span></span>
+<span id="cb73-19"><a href></a><span class="st">(&#39;Alice&#39;, &#39;HR&#39;, 50000),</span></span>
+<span id="cb73-20"><a href></a><span class="st">(&#39;Bob&#39;, &#39;IT&#39;, 60000),</span></span>
+<span id="cb73-21"><a href></a><span class="st">(&#39;Charlie&#39;, &#39;HR&#39;, 70000),</span></span>
+<span id="cb73-22"><a href></a><span class="st">(&#39;David&#39;, &#39;IT&#39;, 80000);</span></span>
+<span id="cb73-23"><a href></a><span class="st">&#39;&#39;&#39;</span>)</span>
+<span id="cb73-24"><a href></a>conn.commit()</span>
+<span id="cb73-25"><a href></a></span>
+<span id="cb73-26"><a href></a><span class="co"># 3. Read data with pandas</span></span>
+<span id="cb73-27"><a href></a>df_employees <span class="op">=</span> pd.read_sql(<span class="st">&#39;SELECT * FROM employees&#39;</span>, conn)</span>
+<span id="cb73-28"><a href></a><span class="bu">print</span>(df_employees)</span>
+<span id="cb73-29"><a href></a></span>
+<span id="cb73-30"><a href></a><span class="co"># 4. Compute average salary by department using pandas</span></span>
+<span id="cb73-31"><a href></a>avg_salary_dept <span class="op">=</span> df_employees.groupby(<span class="st">&#39;dept&#39;</span>)[<span class="st">&#39;salary&#39;</span>].mean()</span>
+<span id="cb73-32"><a href></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">--- Average salary by department (pandas) ---&quot;</span>)</span>
+<span id="cb73-33"><a href></a><span class="bu">print</span>(avg_salary_dept)</span>
+<span id="cb73-34"><a href></a></span>
+<span id="cb73-35"><a href></a>conn.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   id     name dept  salary
 0   1    Alice   HR   50000
