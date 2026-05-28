@@ -1290,5 +1290,8 @@ jupyter/
 # Local VS Code workspace settings (user-specific paths)
 .vscode/
 
+# SQLite database regenerated on Quarto render (build artifact)
+lectures/lecture-12/lecture12.db
+
 # End of https://www.toptal.com/developers/gitignore/api/latex,linux,macos,python,r,vim,windows
 
