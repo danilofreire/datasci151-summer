@@ -1345,6 +1345,18 @@ Danilo Freire
 </ul>
 </div></div>
 </div>
+</section>
+<section id="course-evaluations" class="slide level2">
+<h2>Course evaluations 📝</h2>
+<div style="margin-top: 50px; font-size: 28px;">
+<ul>
+<li>Before we get into joins, a quick request: please take a few minutes to <span class="alert">fill in the course evaluation</span> 🤓</li>
+<li>Your feedback is important and shapes how I run this course next time!</li>
+<li>If there was anything you enjoyed about the class, or found the teaching helpful, please feel free to say so too 😊</li>
+<li>To find the form, open <span class="alert">Canvas</span> and go to <span class="alert">Account → Profile → Course Evaluations</span></li>
+<li>If you have already filled it out, thank you so much! 🙏</li>
+</ul>
+</div>
 </section></section>
 <section>
 <section id="basic-joins" class="title-slide slide level1 center" data-background-color="#2d4563">
@@ -1375,7 +1387,7 @@ Danilo Freire
 <ul>
 <li>Let’s load the libraries and connect to the SQLite database. We’ll use a file named <code>lecture13.db</code></li>
 </ul>
-<div id="dc42ba32" class="cell" data-execution_count="1">
+<div id="5a1bae0d" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href></a><span class="im">import</span> sqlite3</span>
 <span id="cb1-3"><a href></a></span>
@@ -1410,7 +1422,7 @@ Danilo Freire
 <ul>
 <li>Now let’s insert some data into the tables!</li>
 </ul>
-<div id="dba2db38" class="cell" data-execution_count="2">
+<div id="4cf01c83" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href></a><span class="co"># Insert data into the tables</span></span>
 <span id="cb2-2"><a href></a>cursor.execute(<span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb2-3"><a href></a><span class="st">INSERT INTO players (player_name, goals, victories) VALUES</span></span>
@@ -1441,7 +1453,7 @@ Danilo Freire
 <li>Let’s see our tables using <code>pandas</code></li>
 <li><code>read_sql</code> works fine with the <code>sqlite3</code> connection object</li>
 </ul>
-<div id="ee7d6252" class="cell" data-execution_count="3">
+<div id="731d34ef" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href></a>pd.read_sql(<span class="st">&#39;SELECT * FROM players&#39;</span>, connection)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
@@ -1516,7 +1528,7 @@ text-align: right;
 </div>
 </div>
 </div>
-<div id="dfe6740b" class="cell" data-execution_count="4">
+<div id="22c20deb" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href></a>pd.read_sql(<span class="st">&#39;SELECT * FROM teams&#39;</span>, connection)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
@@ -1588,7 +1600,7 @@ text-align: right;
 <li>The matching condition is specified in the <span class="alert"><code>ON</code></span> clause (e.g., <code>ON table1.id = table2.id</code>)</li>
 <li>Below, Haaland (<code>player_id</code> 6) is not in the <code>teams</code> table (which has 5 rows), so he doesn’t appear in the result</li>
 </ul>
-<div id="db95c030" class="cell" data-execution_count="5">
+<div id="494e0743" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href></a>pd.read_sql(<span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb5-2"><a href></a><span class="st">SELECT players.player_name, teams.team_name, players.goals, players.victories</span></span>
 <span id="cb5-3"><a href></a><span class="st">FROM players</span></span>
@@ -1672,7 +1684,7 @@ text-align: right;
 <li>Probably the <span class="alert">most common join in practice</span>, because it keeps every row from the table you’re focused on</li>
 <li>Haaland is included here because he is in the <code>players</code> table (the left one)</li>
 </ul>
-<div id="7cef6232" class="cell" data-execution_count="6">
+<div id="45c9173d" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href></a>pd.read_sql(<span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb6-2"><a href></a><span class="st">SELECT players.player_name, teams.team_name, players.goals</span></span>
 <span id="cb6-3"><a href></a><span class="st">FROM players</span></span>
@@ -1757,7 +1769,7 @@ text-align: right;
 <li>In our data, every <code>team_id</code> matches a <code>player_id</code>, so the <code>RIGHT JOIN</code> happens to look identical to the <code>INNER JOIN</code></li>
 <li><span class="alert">Requires SQLite 3.39.0 or newer</span> (June 2022). The same goes for <code>FULL OUTER JOIN</code> on the next slide. On older versions you’d have to emulate them with <code>LEFT JOIN</code></li>
 </ul>
-<div id="032a1f32" class="cell" data-execution_count="7">
+<div id="0b478c25" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href></a>pd.read_sql(<span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb7-2"><a href></a><span class="st">SELECT players.player_name, teams.team_name, players.goals</span></span>
 <span id="cb7-3"><a href></a><span class="st">FROM players</span></span>
@@ -1834,7 +1846,7 @@ text-align: right;
 <li>The least common join in practice: results are large, often less focused, and more expensive to compute</li>
 <li>Syntax: <code>SELECT columns FROM table1 FULL OUTER JOIN table2 ON table1.column = table2.column</code></li>
 </ul>
-<div id="601c7bea" class="cell" data-execution_count="8">
+<div id="27d16e96" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href></a>pd.read_sql(<span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb8-2"><a href></a><span class="st">SELECT players.player_name, teams.team_name, players.goals</span></span>
 <span id="cb8-3"><a href></a><span class="st">FROM players</span></span>
@@ -1915,7 +1927,7 @@ text-align: right;
 <ul>
 <li>First, let’s create two new tables (<code>products</code>, <code>reviews</code>) and insert some data. SQLite uses <code>REAL</code> for decimal numbers</li>
 </ul>
-<div id="c276ac41" class="cell" data-execution_count="9">
+<div id="a9d9857b" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href></a><span class="co"># Create the tables and insert data</span></span>
 <span id="cb9-2"><a href></a>cursor.execute(<span class="st">&#39;DROP TABLE IF EXISTS reviews;&#39;</span>) </span>
 <span id="cb9-3"><a href></a>cursor.execute(<span class="st">&#39;DROP TABLE IF EXISTS products;&#39;</span>)</span>
@@ -1987,7 +1999,7 @@ text-align: right;
 <li>Instead, the result pairs <em>every</em> row from the first table with <em>every</em> row from the second table (Cartesian product)</li>
 <li>Useful for generating all possible combinations (e.g., pairing all sizes with all colors)</li>
 </ul>
-<div id="6192267e" class="cell" data-execution_count="10">
+<div id="7dcfc210" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href></a><span class="co"># Displaying cross join between players and teams</span></span>
 <span id="cb11-2"><a href></a>pd.read_sql(<span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb11-3"><a href></a><span class="st">SELECT players.player_name, teams.team_name</span></span>
@@ -2182,7 +2194,7 @@ text-align: right;
 <ul>
 <li>Here’s another example generating T-shirt combinations. SQLite uses <span class="alert"><code>||</code></span> for string concatenation, not <code>CONCAT()</code></li>
 </ul>
-<div id="08bf5360" class="cell" data-execution_count="11">
+<div id="5945b422" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href></a><span class="co"># Drop and recreate tables</span></span>
 <span id="cb12-2"><a href></a>cursor.execute(<span class="st">&#39;DROP TABLE IF EXISTS colours;&#39;</span>)</span>
 <span id="cb12-3"><a href></a>cursor.execute(<span class="st">&#39;DROP TABLE IF EXISTS sizes;&#39;</span>)</span>
@@ -2275,7 +2287,7 @@ text-align: right;
 <ul>
 <li>Let’s see an example with a <code>family</code> table where <code>mother_id</code> refers back to <code>person_id</code></li>
 </ul>
-<div id="670f3d79" class="cell" data-execution_count="12">
+<div id="cd40ce98" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href></a>cursor.execute(<span class="st">&#39;DROP TABLE IF EXISTS family;&#39;</span>)</span>
 <span id="cb13-2"><a href></a>cursor.execute(<span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb13-3"><a href></a><span class="st">CREATE TABLE family (</span></span>
@@ -2367,7 +2379,7 @@ text-align: right;
 <li>Skips comparing a player to themselves</li>
 </ul></li>
 </ul>
-<div id="8bf1ace5" class="cell" data-execution_count="13">
+<div id="2891bf92" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href></a>pd.read_sql(<span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb14-2"><a href></a><span class="st">SELECT</span></span>
 <span id="cb14-3"><a href></a><span class="st">    p1.player_name,</span></span>
@@ -2560,7 +2572,7 @@ text-align: right;
 <li>Each <code>SELECT</code> must return the same number of columns, with compatible data types in corresponding positions</li>
 <li>Below we find players who scored more than 7 goals OR achieved more than 3 victories</li>
 </ul>
-<div id="5fc8104a" class="cell" data-execution_count="14">
+<div id="a9c1cb58" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href></a><span class="co"># Select players with more than 7 goals OR more than 3 victories</span></span>
 <span id="cb15-2"><a href></a>pd.read_sql(<span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb15-3"><a href></a><span class="st">SELECT player_name, goals, victories</span></span>
@@ -2626,7 +2638,7 @@ text-align: right;
 <li><span class="alert"><code>UNION ALL</code></span> also stacks two result sets vertically</li>
 <li>Unlike <code>UNION</code>, it <span class="alert">retains all duplicate rows</span>. It is generally faster than <code>UNION</code> because it does not check for duplicates</li>
 </ul>
-<div id="4453d6bf" class="cell" data-execution_count="15">
+<div id="0e22bea4" class="cell" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href></a><span class="co"># Combine players with &gt; 7 goals and players with &gt; 3 victories</span></span>
 <span id="cb16-2"><a href></a><span class="co"># UNION ALL keeps all rows, including duplicates if a player meets both criteria.</span></span>
 <span id="cb16-3"><a href></a>pd.read_sql(<span class="st">&#39;&#39;&#39;</span></span>
@@ -2711,7 +2723,7 @@ text-align: right;
 <li>Like <code>UNION</code>, it removes duplicates within the final result</li>
 <li>Below we find players who are both high scorers (more than 7 goals) and have achieved many victories (more than 3)</li>
 </ul>
-<div id="64160fd8" class="cell" data-execution_count="16">
+<div id="4c16d074" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href></a><span class="co"># Find players who are BOTH high scorers (goals &gt; 7) AND have many victories (victories &gt; 3)</span></span>
 <span id="cb17-2"><a href></a>pd.read_sql(<span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb17-3"><a href></a><span class="st">SELECT player_name</span></span>
@@ -2771,7 +2783,7 @@ text-align: right;
 <li><span class="alert"><code>EXCEPT</code></span> returns the rows from the first <code>SELECT</code> that are <span class="alert">not present</span> in the second. It finds the difference between the two sets</li>
 <li>Like <code>UNION</code>, it removes duplicates before returning the final result</li>
 </ul>
-<div id="2792082d" class="cell" data-execution_count="17">
+<div id="8344a1ef" class="cell" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href></a><span class="co"># Example for EXCEPT: Find players who scored more than 5 goals</span></span>
 <span id="cb18-2"><a href></a><span class="co"># but did NOT achieve more than 3 victories.</span></span>
 <span id="cb18-3"><a href></a>pd.read_sql(<span class="st">&#39;&#39;&#39;</span></span>
@@ -2844,7 +2856,7 @@ text-align: right;
 <li>Let’s see a simplified example: If we try to insert a player with an existing <code>player_name</code>, we update their <code>goals</code> instead</li>
 <li>You will notice that <code>excluded</code> is a special table that refers to the row that would have been inserted if there was no conflict. <span class="alert">SQLite always uses this name</span></li>
 </ul>
-<div id="ac6918c0" class="cell" data-execution_count="18">
+<div id="f92f7655" class="cell" data-execution_count="18">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href></a>player_data <span class="op">=</span> (<span class="st">&#39;Messi&#39;</span>, <span class="dv">2</span>, <span class="dv">1</span>)</span>
 <span id="cb19-2"><a href></a></span>
 <span id="cb19-3"><a href></a>sql_upsert <span class="op">=</span> <span class="st">&quot;&quot;&quot; </span></span>
@@ -2944,7 +2956,7 @@ text-align: right;
 <li>Useful for <span class="alert">simplifying complex queries</span> or saving the ones you reuse often</li>
 <li>Create one with <span class="alert"><code>CREATE VIEW</code></span>, remove it with <span class="alert"><code>DROP VIEW</code></span></li>
 </ul>
-<div id="054001d2" class="cell" data-execution_count="19">
+<div id="91cad348" class="cell" data-execution_count="19">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href></a><span class="co"># Drop the view if it exists</span></span>
 <span id="cb20-2"><a href></a>cursor.execute(<span class="st">&#39;DROP VIEW IF EXISTS player_stats;&#39;</span>)</span>
 <span id="cb20-3"><a href></a></span>
@@ -3020,7 +3032,7 @@ text-align: right;
 <ul>
 <li>You can also use the view in a join with another table. For example, let’s create a view that combines colours and sizes of T-shirts as we did before</li>
 </ul>
-<div id="d98c6454" class="cell" data-execution_count="20">
+<div id="caafa209" class="cell" data-execution_count="20">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href></a><span class="co"># Drop the view if it already exists to avoid errors on re-run</span></span>
 <span id="cb21-2"><a href></a>cursor.execute(<span class="st">&#39;DROP VIEW IF EXISTS colour_size;&#39;</span>)</span>
 <span id="cb21-3"><a href></a></span>
@@ -3127,7 +3139,7 @@ text-align: right;
 <ul>
 <li>Here is the solution to the exercise comparing <code>INNER JOIN</code> and <code>LEFT JOIN</code> for <code>products</code> and <code>reviews</code></li>
 </ul>
-<div id="b07049a9" class="cell" data-execution_count="21">
+<div id="8f333d58" class="cell" data-execution_count="21">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href></a><span class="co"># INNER JOIN only includes products that have at least one review.</span></span>
 <span id="cb22-2"><a href></a><span class="co"># Products like &#39;Microwave&#39; and &#39;Air Fryer&#39; are excluded.</span></span>
 <span id="cb22-3"><a href></a>pd.read_sql(<span class="st">&#39;&#39;&#39;</span></span>
@@ -3190,7 +3202,7 @@ text-align: right;
 </div>
 </div>
 </div>
-<div id="d0214709" class="cell" data-execution_count="22">
+<div id="d150e728" class="cell" data-execution_count="22">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href></a><span class="co"># LEFT JOIN keeps every product, with NULL ratings/comments where there is no review.</span></span>
 <span id="cb23-2"><a href></a>pd.read_sql(<span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb23-3"><a href></a><span class="st">    SELECT p.product_name, r.rating, r.comment</span></span>
@@ -3271,7 +3283,7 @@ text-align: right;
 <h2>Appendix 02</h2>
 <div style="margin-top: 50px; font-size: 20px;">
 <p>Self join on <code>family</code>, using two aliases (<code>f1</code>, <code>f2</code>) and the <code>&lt;</code> trick to skip duplicates and self-matches:</p>
-<div id="822890d7" class="cell" data-execution_count="23">
+<div id="e9cac789" class="cell" data-execution_count="23">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href></a>pd.read_sql(<span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb24-2"><a href></a><span class="st">SELECT</span></span>
 <span id="cb24-3"><a href></a><span class="st">    f1.name AS sibling_a,</span></span>
@@ -3329,7 +3341,7 @@ text-align: right;
 <h2>Appendix 03</h2>
 <div style="margin-top: 50px; font-size: 20px;">
 <p>Part 1, <code>UNION</code> (distinct players satisfying either condition):</p>
-<div id="392aeb5b" class="cell" data-execution_count="24">
+<div id="1423a95f" class="cell" data-execution_count="24">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href></a>pd.read_sql(<span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb25-2"><a href></a><span class="st">SELECT player_name FROM players WHERE goals &gt; 5</span></span>
 <span id="cb25-3"><a href></a><span class="st">UNION</span></span>
@@ -3378,7 +3390,7 @@ text-align: right;
 </div>
 <p>Three distinct players: Messi, Neymar, Vini Jr</p>
 <p>Part 2, <code>EXCEPT</code> (goals &gt; 5 but NOT victories &gt; 3):</p>
-<div id="d94b2ede" class="cell" data-execution_count="25">
+<div id="fd7353db" class="cell" data-execution_count="25">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href></a>pd.read_sql(<span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb26-2"><a href></a><span class="st">SELECT player_name FROM players WHERE goals &gt; 5</span></span>
 <span id="cb26-3"><a href></a><span class="st">EXCEPT</span></span>

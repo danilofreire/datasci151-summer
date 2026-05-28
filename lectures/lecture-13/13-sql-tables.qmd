@@ -59,6 +59,16 @@ editor:
 :::
 :::
 
+## Course evaluations 📝
+
+:::{style="margin-top: 50px; font-size: 28px;"}
+- Before we get into joins, a quick request: please take a few minutes to [fill in the course evaluation]{.alert} 🤓
+- Your feedback is important and shapes how I run this course next time!
+- If there was anything you enjoyed about the class, or found the teaching helpful, please feel free to say so too 😊
+- To find the form, open [Canvas]{.alert} and go to [Account → Profile → Course Evaluations]{.alert}
+- If you have already filled it out, thank you so much! 🙏
+:::
+
 # Basic joins 📊 {background-color="#2d4563"}
 
 ## Primary and foreign keys
