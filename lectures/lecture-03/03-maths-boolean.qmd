@@ -15,7 +15,7 @@ format:
             font-size: 42px !important;
           }
           </style>
-    footer: "[Maths with NumPy](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-04/04-maths-arrays-random.html)"
+    footer: "[Maths with NumPy](https://danilofreire.github.io/datasci151-summer/lectures/lecture-04/04-maths-arrays-random.html)"
 revealjs-plugins:
   - multimodal
 transition: slide

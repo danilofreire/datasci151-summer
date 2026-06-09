@@ -15,7 +15,7 @@ format:
             font-size: 42px !important;
           }
           </style>
-    footer: "[For and While Loops](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-06/06-loops.html)"
+    footer: "[For and While Loops](https://danilofreire.github.io/datasci151-summer/lectures/lecture-06/06-loops.html)"
 revealjs-plugins:
   - multimodal
 transition: slide

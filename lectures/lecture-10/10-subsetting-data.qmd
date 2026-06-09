@@ -15,7 +15,7 @@ format:
             font-size: 42px !important;
           }
           </style>
-    footer: "[Subsetting Data](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-10/10-subsetting-data.html)"
+    footer: "[Subsetting Data](https://danilofreire.github.io/datasci151-summer/lectures/lecture-10/10-subsetting-data.html)"
 revealjs-plugins:
   - multimodal
 transition: slide

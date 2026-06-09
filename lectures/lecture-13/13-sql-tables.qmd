@@ -16,7 +16,7 @@ format:
           }
           </style>
     code-overflow: wrap
-    footer: "[SQL Joins](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-13/13-sql-tables.html)"
+    footer: "[SQL Joins](https://danilofreire.github.io/datasci151-summer/lectures/lecture-13/13-sql-tables.html)"
 transition: slide
 transition-speed: default
 scrollable: true

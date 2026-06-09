@@ -15,7 +15,7 @@ format:
             font-size: 42px !important;
           }
           </style>
-    footer: "[Data Wrangling with Pandas](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-08/08-data-wrangling.html)"
+    footer: "[Data Wrangling with Pandas](https://danilofreire.github.io/datasci151-summer/lectures/lecture-08/08-data-wrangling.html)"
 revealjs-plugins:
   - multimodal
 transition: slide

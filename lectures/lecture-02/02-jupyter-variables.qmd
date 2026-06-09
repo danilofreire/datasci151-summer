@@ -15,7 +15,7 @@ format:
             font-size: 42px !important;
           }
           </style>
-    footer: "[Packages, Variables, and Lists](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-02/02-jupyter-variables.html)"
+    footer: "[Packages, Variables, and Lists](https://danilofreire.github.io/datasci151-summer/lectures/lecture-02/02-jupyter-variables.html)"
     slide-number: true
 revealjs-plugins:
   - multimodal

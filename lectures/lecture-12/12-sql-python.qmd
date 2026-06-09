@@ -16,7 +16,7 @@ format:
           }
           </style>
     code-overflow: wrap
-    footer: "[SQLite in Python](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-12/12-sql-python.html)"
+    footer: "[SQLite in Python](https://danilofreire.github.io/datasci151-summer/lectures/lecture-12/12-sql-python.html)"
 transition: slide
 transition-speed: default
 scrollable: true

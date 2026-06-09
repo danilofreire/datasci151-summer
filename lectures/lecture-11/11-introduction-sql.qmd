@@ -16,7 +16,7 @@ format:
           }
           </style>
     code-overflow: wrap
-    footer: "[Introduction to SQL](https://raw.githack.com/danilofreire/datasci151-summer/main/lectures/lecture-11/11-introduction-sql.html)"
+    footer: "[Introduction to SQL](https://danilofreire.github.io/datasci151-summer/lectures/lecture-11/11-introduction-sql.html)"
 transition: slide
 transition-speed: default
 scrollable: true
