@@ -47,7 +47,7 @@ packages <- c("fontawesome")
 lapply(packages, install_if_missing)
 ```
 
-# Welcome to DATASCI 151! 🥳 {background-color="#2d4563"}
+# Welcome to DATASCI 151! 🥳 {background-color="#4338CA"}
 
 ## Lecture overview
 
@@ -85,7 +85,7 @@ Please remember to check the course website regularly for updates and announceme
 :::
 :::
 
-# Nice to meet you! 👋 {background-color="#2d4563"}
+# Nice to meet you! 👋 {background-color="#4338CA"}
 
 ## Instructor
 
@@ -170,7 +170,7 @@ Please remember to check the course website regularly for updates and announceme
 :::
 ::::
 
-# Why Python and SQL? 🐍🗄️ {background-color="#2d4563"}
+# Why Python and SQL? 🐍🗄️ {background-color="#4338CA"}
 
 ## Why Python
 ### The world's most popular programming language
@@ -250,7 +250,7 @@ Much easier! 😃
 [![](figures/sql-salary.png){width="90%"}](#){data-modal-type="image" data-modal-url="figures/sql-salary.png"}
 :::
 
-# Course logistics 📚 {background-color="#2d4563"}
+# Course logistics 📚 {background-color="#4338CA"}
 
 ## Course objectives
 
@@ -286,7 +286,7 @@ Much easier! 😃
 :::
 :::
 
-# Computing set up 🖥️ {background-color="#2d4563"}
+# Computing set up 🖥️ {background-color="#4338CA"}
 
 ## Our class in a nutshell
 
@@ -334,7 +334,7 @@ Much easier! 😃
 Next class: we will create a course folder and open our GitHub materials in VSCode
 :::
 
-# Git and GitHub 🐙{background-color="#2d4563"}
+# Git and GitHub 🐙{background-color="#4338CA"}
 
 ## Git and GitHub
 
@@ -382,7 +382,7 @@ Next class: we will create a course folder and open our GitHub materials in VSCo
 :::
 :::
 
-# Jupyter Notebooks 📘 {background-color="#2d4563"}
+# Jupyter Notebooks 📘 {background-color="#4338CA"}
 
 ## Jupyter Notebooks
 
@@ -447,6 +447,6 @@ conda install jupyter
   - My only goal here is that you learn the material. Please ask me questions! 😉
 :::
 
-# Questions? {background-color="#2d4563"}
+# Questions? {background-color="#4338CA"}
 
-# Thank you very much for your attention! 🙏🎉 {background-color="#2d4563"}
+# Thank you very much for your attention! 🙏🎉 {background-color="#4338CA"}

@@ -27,9 +27,9 @@ editor:
   render-on-save: true
 ---
 
-# Nice to see you all! 😊 {background-color="#2d4563"}
+# Nice to see you all! 😊 {background-color="#4338CA"}
 
-# Brief recap 📚 {background-color="#2d4563"}
+# Brief recap 📚 {background-color="#4338CA"}
 
 ## Recap: conditional statements and lists
 
@@ -73,7 +73,7 @@ else:
 
 The ability to control program flow based on conditions is very important, and [loops will build upon this by allowing us to repeat actions]{.alert} 🤓
 :::
-# For loops in Python 🔄🐍 {background-color="#2d4563"}
+# For loops in Python 🔄🐍 {background-color="#4338CA"}
 
 ## What is a `for` loop?
 
@@ -475,7 +475,7 @@ plt.ylabel("Y-axis")
 - [[Appendix 02]{.button}](#sec:appendix2)
 :::
 
-# While loops in Python ⏳🐍 {background-color="#2d4563"}
+# While loops in Python ⏳🐍 {background-color="#4338CA"}
 
 ## What is a `while` loop?
 
@@ -604,7 +604,7 @@ index = 0 # Remember, lists are 0-indexed!
 - [[Appendix 03]{.button}](#sec:appendix3_for_break_simple)
 :::
 
-# Loop control statements 🚦 {background-color="#2d4563"}
+# Loop control statements 🚦 {background-color="#4338CA"}
 
 ## Introduction to loop control
 
@@ -696,7 +696,7 @@ else:
 ```
 :::
 
-# List comprehensions ⚡️ {background-color="#2d4563"}
+# List comprehensions ⚡️ {background-color="#4338CA"}
 
 ## What are list comprehensions?
 
@@ -771,9 +771,9 @@ You have a list of names:
 - [[Appendix 04]{.button}](#sec:appendix4_list_comp)
 :::
 
-# And that's all for today! 🎉 {background-color="#2d4563"}
+# And that's all for today! 🎉 {background-color="#4338CA"}
 
-# Thank you for your attention! 🙏🏽😊 {background-color="#2d4563"}
+# Thank you for your attention! 🙏🏽😊 {background-color="#4338CA"}
 
 ## Appendix 01 {#sec:appendix1}
 

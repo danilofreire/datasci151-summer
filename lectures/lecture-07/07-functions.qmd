@@ -27,9 +27,9 @@ editor:
   render-on-save: true
 ---
 
-# I hope you're having a great day! 😊 {background-color="#2d4563"}
+# I hope you're having a great day! 😊 {background-color="#4338CA"}
 
-# Brief recap 📚 {background-color="#2d4563"}
+# Brief recap 📚 {background-color="#4338CA"}
 
 ## Recap: loops in Python
 
@@ -46,7 +46,7 @@ In our last lecture, we covered loops:
 Today, we will see how to [package reusable code into functions]{.alert} 🤓
 :::
 
-# Today's plan 📋 {background-color="#2d4563"}
+# Today's plan 📋 {background-color="#4338CA"}
 
 ## What we will do today:
 
@@ -72,7 +72,7 @@ Today, we will see how to [package reusable code into functions]{.alert} 🤓
 :::
 :::
 
-# Functions in Python 🐍 {background-color="#2d4563"}
+# Functions in Python 🐍 {background-color="#4338CA"}
 
 ## What is a function?
 ### A function is a block of code that performs a specific task
@@ -195,7 +195,7 @@ print(vec_z)
 [What are the parameters, arguments, and return values in these examples?]{.alert} 🤓
 :::
 
-# Custom functions in Python 🐍 {background-color="#2d4563"}
+# Custom functions in Python 🐍 {background-color="#4338CA"}
 
 ## Defining a function
 ### You can define a function using the `def` keyword
@@ -301,7 +301,7 @@ $f(x) = x^2 + 2x + 1$
 - [[Appendix 02]{.button}](#sec:appendix02)
 :::
 
-# Lambda functions  {background-color="#2d4563"}
+# Lambda functions  {background-color="#4338CA"}
 
 ## Lambda functions
 
@@ -364,7 +364,7 @@ print(result)
 - [[Appendix 04]{.button}](#sec:appendix04)
 :::
 
-# Understanding scope in Python 🧐 {background-color="#2d4563"}
+# Understanding scope in Python 🧐 {background-color="#4338CA"}
 
 ## What is variable scope?
 
@@ -740,9 +740,9 @@ func_one()
 - [[Appendix 06]{.button}](#sec:appendix-06)
 :::
 
-# And that's all for today! 🎉 {background-color="#2d4563"}
+# And that's all for today! 🎉 {background-color="#4338CA"}
 
-# Have a great day! 😊 {background-color="#2d4563"}
+# Have a great day! 😊 {background-color="#4338CA"}
 
 ## Appendix 01: quadratic equation {#sec:appendix01}
 

@@ -28,7 +28,7 @@ editor:
   render-on-save: true
 ---
 
-# Nice to see you all again! 😊 {background-color="#2d4563"}
+# Nice to see you all again! 😊 {background-color="#4338CA"}
 
 ## Today's agenda 
 ### Installing packages and working with variables and lists
@@ -54,7 +54,7 @@ editor:
 :::
 :::
 
-# Python environments {background-color="#2d4563"}
+# Python environments {background-color="#4338CA"}
 
 ## What is a Python environment?
 
@@ -165,7 +165,7 @@ conda remove -n datasci151 --all -y
 :::
 :::
 
-# Python packages 📦 {background-color="#2d4563"}
+# Python packages 📦 {background-color="#4338CA"}
 
 ## Installing packages
 
@@ -246,7 +246,7 @@ conda remove -n datasci151 --all -y
 
 ## {background-image="figures/vscode-jupyter02.png" background-size="100%"}
 
-# Let's start coding: importing packages {background-color="#2d4563"}
+# Let's start coding: importing packages {background-color="#4338CA"}
 
 ## Loading Packages: the `import` statement
 
@@ -330,7 +330,7 @@ VS Code offers several ways to inspect your DataFrame:
 :::
 :::
 
-# Running basic analyses {background-color="#2d4563"}
+# Running basic analyses {background-color="#4338CA"}
 
 ## Displaying the `carfeatures` dataframe
 
@@ -455,7 +455,7 @@ The `horsepower` column might be missing from `.describe()` if it was read as no
 :::
 :::
 
-# Python variables & data types 📊 {background-color="#2d4563"}
+# Python variables & data types 📊 {background-color="#4338CA"}
 
 ## Variables: Named containers for data
 
@@ -579,7 +579,7 @@ print(full_name)
 :::
 :::
 
-# Python lists 📝 {background-color="#2d4563"}
+# Python lists 📝 {background-color="#4338CA"}
 
 ## Lists: Ordered, mutable collections
 
@@ -657,7 +657,7 @@ nested_list_example[2][0]
 - [[Solution]{.button}](#sec:appendix03)
 :::
 
-# Visualising data with matplotlib 📊 {background-color="#2d4563"}
+# Visualising data with matplotlib 📊 {background-color="#4338CA"}
 
 ## Visualising list data: histograms 
 
@@ -756,11 +756,11 @@ plt.show()
 [[Solution]{.button}](#sec:appendix05)
 :::
 
-# Any questions? 🤔 {background-color="#2d4563"}
+# Any questions? 🤔 {background-color="#4338CA"}
 
-# And that's all for today! 🎉 {background-color="#2d4563"}
+# And that's all for today! 🎉 {background-color="#4338CA"}
 
-# Appendices: Solutions to exercises {background-color="#2d4563"}
+# Appendices: Solutions to exercises {background-color="#4338CA"}
 
 ## Appendix 01 {#sec:appendix01}
 

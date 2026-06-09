@@ -28,9 +28,9 @@ editor:
   render-on-save: true
 ---
 
-# Hey, there! 😊 <br> I hope you're all doing well! {background-color="#2d4563"}
+# Hey, there! 😊 <br> I hope you're all doing well! {background-color="#4338CA"}
 
-# Today's lecture 📚 {background-color="#2d4563"}
+# Today's lecture 📚 {background-color="#4338CA"}
 
 ## Today's agenda
 ### SQL essentials
@@ -58,7 +58,7 @@ editor:
 :::
 :::
 
-# Structured Query Language (SQL) {background-color="#2d4563"}
+# Structured Query Language (SQL) {background-color="#4338CA"}
 
 ## SQL: A relational database management system (RDBMS)
 
@@ -84,7 +84,7 @@ editor:
 :::
 :::
 
-# Let's get started! 🤓 {background-color="#2d4563"}
+# Let's get started! 🤓 {background-color="#4338CA"}
 
 ## What is SQLite?
 
@@ -180,9 +180,9 @@ sqlite>
 :::
 :::
 
-# Any issues with the installation? 🤔 {background-color="#2d4563"}
+# Any issues with the installation? 🤔 {background-color="#4338CA"}
 
-# Let's create our first SQL table! 🚀 {background-color="#2d4563"}
+# Let's create our first SQL table! 🚀 {background-color="#4338CA"}
 
 ## Creating a database with SQLite3 Editor
 
@@ -417,7 +417,7 @@ SELECT * FROM drivers;
 - [[Appendix 01]{.button}](#sec:appendix01)
 :::
 
-# Table Schemas 📄 {background-color="#2d4563"}
+# Table Schemas 📄 {background-color="#4338CA"}
 
 ## What is a table schema?
 
@@ -500,7 +500,7 @@ SELECT * FROM drivers;
 :::
 :::
 
-# Table Operations 📊 {background-color="#2d4563"}
+# Table Operations 📊 {background-color="#4338CA"}
 
 ## Extracting columns from table
 
@@ -763,9 +763,9 @@ result = result[result['sum_victories'] > 10]
 - Or just come to our next class! 😊
 :::
 
-# And that's it for today! 🚀 {background-color="#2d4563"}
+# And that's it for today! 🚀 {background-color="#4338CA"}
 
-# See you next time! 😊 {background-color="#2d4563"}
+# See you next time! 😊 {background-color="#4338CA"}
 
 ## Appendix 01 {#sec:appendix01}
 

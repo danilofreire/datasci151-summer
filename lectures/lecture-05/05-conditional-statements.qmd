@@ -27,9 +27,9 @@ editor:
   render-on-save: true
 ---
 
-# Hello again! 😊 {background-color="#2d4563"}
+# Hello again! 😊 {background-color="#4338CA"}
 
-# Today's class 📚 {background-color="#2d4563"}
+# Today's class 📚 {background-color="#4338CA"}
 
 ## Today's class
 
@@ -58,7 +58,7 @@ Today we will:
 :::
 :::
 
-# Flow control: conditional statements 🐍 {background-color="#2d4563"}
+# Flow control: conditional statements 🐍 {background-color="#4338CA"}
 
 ## Flow control: conditional statements
 ### If, elif, else
@@ -273,7 +273,7 @@ else:
 ```
 :::
 
-# Combining conditions and logical operators 🤓 {background-color="#2d4563"}
+# Combining conditions and logical operators 🤓 {background-color="#4338CA"}
 
 ## Combining conditions and logical operators
 
@@ -337,7 +337,7 @@ else:
 :::
 :::
 
-# Nested if statements 🪆 {background-color="#2d4563"}
+# Nested if statements 🪆 {background-color="#4338CA"}
 
 ## Nested `if` statements
 
@@ -416,7 +416,7 @@ Modify the ticket pricing example:
 - [[Appendix 02]{.button}](#sec:appendix02)
 :::
 
-# Conditional expressions (ternary operator) ✨ {background-color="#2d4563"}
+# Conditional expressions (ternary operator) ✨ {background-color="#4338CA"}
 
 ## Conditional expressions (ternary operator)
 
@@ -539,7 +539,7 @@ print(f"Score: {score}, Correct Grade: {grade}")
 :::
 :::
 
-# A bit more about lists in Python 📝 {background-color="#2d4563"}
+# A bit more about lists in Python 📝 {background-color="#4338CA"}
 
 ## Lists with placeholder values
 ### Pre-allocating a list with `None`
@@ -693,7 +693,7 @@ print(my_list)
 :::
  
 
-# Lists with repetition 🔄 {background-color="#2d4563"}
+# Lists with repetition 🔄 {background-color="#4338CA"}
 
 ## Lists with repeated values
 
@@ -821,9 +821,9 @@ print(len(list_answers_rep))
 - [[Appendix 03]{.button}](#sec:appendix03)
 :::
 
-# And that's it for today! 🎉 {background-color="#2d4563"}
+# And that's it for today! 🎉 {background-color="#4338CA"}
 
-# Questions? 🤔 {background-color="#2d4563"}
+# Questions? 🤔 {background-color="#4338CA"}
 
 ## Try this at home! 🏠
 
@@ -844,7 +844,7 @@ Check that it works by trying different values of "points"!
 :::
 :::
 
-# Appendix: solutions to exercises {background-color="#2d4563"}
+# Appendix: solutions to exercises {background-color="#4338CA"}
 
 ## Appendix 01a {#sec:appendix01}
 

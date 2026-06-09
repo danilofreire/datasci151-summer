@@ -28,9 +28,9 @@ editor:
   render-on-save: true
 ---
 
-# Hello again! 😊 {background-color="#2d4563"}
+# Hello again! 😊 {background-color="#4338CA"}
 
-# Brief recap 📚 {background-color="#2d4563"}
+# Brief recap 📚 {background-color="#4338CA"}
 
 ## Recap of last class and today's plan
 
@@ -69,7 +69,7 @@ editor:
 - If you have already filled it out, thank you so much! 🙏
 :::
 
-# Basic joins 📊 {background-color="#2d4563"}
+# Basic joins 📊 {background-color="#4338CA"}
 
 ## Primary and foreign keys
 
@@ -317,7 +317,7 @@ print("Tables 'products' and 'reviews' created and populated.")
 - [[Appendix 01]{.button}](#sec:appendix01)
 :::
 
-# Special joins 🌟 {background-color="#2d4563"}
+# Special joins 🌟 {background-color="#4338CA"}
 
 ## Cross join
 
@@ -457,7 +457,7 @@ Using the `family` table (still loaded from the earlier example):
 - [[Appendix 02]{.button}](#sec:appendix02)
 :::
 
-# Merge tables by row 🧩 {background-color="#2d4563"}
+# Merge tables by row 🧩 {background-color="#4338CA"}
 
 ## Union
 
@@ -604,7 +604,7 @@ pd.read_sql('SELECT * FROM players', connection)
 ```
 :::
 
-# Views 🔎 {background-color="#2d4563"}
+# Views 🔎 {background-color="#4338CA"}
 
 ## Views
 
@@ -661,7 +661,7 @@ pd.read_sql('SELECT * FROM colour_size;', connection)
 ```
 :::
 
-# Conclusion 📖 {background-color="#2d4563"}
+# Conclusion 📖 {background-color="#4338CA"}
 
 ## Conclusion
 
@@ -672,9 +672,9 @@ pd.read_sql('SELECT * FROM colour_size;', connection)
 - That's a lot for one lecture! 🚀 The appendices have solutions to the 'Try it yourself!' exercises
 :::
 
-# And that's all for today! 🎉 {background-color="#2d4563"}
+# And that's all for today! 🎉 {background-color="#4338CA"}
 
-# Thank you and have a great rest of your day! 🙏 {background-color="#2d4563"}
+# Thank you and have a great rest of your day! 🙏 {background-color="#4338CA"}
 
 ## Appendix 01 {#sec:appendix01}
 

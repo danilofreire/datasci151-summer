@@ -27,9 +27,9 @@ editor:
   render-on-save: true
 ---
 
-# Hello again! 🥳 {background-color="#2d4563"}
+# Hello again! 🥳 {background-color="#4338CA"}
 
-# Recap of last class 📚 {background-color="#2d4563"}
+# Recap of last class 📚 {background-color="#4338CA"}
 
 ## In our last class, we learned
 
@@ -74,7 +74,7 @@ editor:
 :::
 :::
 
-# Operations over many variables using Pandas 🐼 {background-color="#2d4563"}
+# Operations over many variables using Pandas 🐼 {background-color="#4338CA"}
 
 ## Pandas 🐼
 
@@ -393,7 +393,7 @@ NameError: name 'apply' is not defined
 - [[Appendix 03]{.button}](#sec:appendix-03)
 :::
 
-# Importing modules 📦 {background-color="#2d4563"}
+# Importing modules 📦 {background-color="#4338CA"}
 
 ## Importing modules
 ### What is a module?
@@ -465,7 +465,7 @@ print(delta)  # -> 100
 :::
 :::
 
-# Loading packages and dataset 📦 {background-color="#2d4563"}
+# Loading packages and dataset 📦 {background-color="#4338CA"}
 
 ## Our dataset: Formula 1 World Championships 🏁🏎️
 
@@ -533,7 +533,7 @@ display(circuits.head(2))
 :::
 :::
 
-# NaN values 🚫 {background-color="#2d4563"}
+# NaN values 🚫 {background-color="#4338CA"}
 
 ## What is a `NaN` value?
 
@@ -668,7 +668,7 @@ print(dataset["x"].mean())
 :::
 :::
 
-# Data cleaning 🧹🧽 {background-color="#2d4563"}
+# Data cleaning 🧹🧽 {background-color="#4338CA"}
 
 ## Data cleaning
 
@@ -819,7 +819,7 @@ circuits.to_csv("data_clean/circuits_clean.csv", index=False)
 - [[Appendix 05]{.button}](#sec:appendix-05)
 :::
 
-# Recoding numeric variables 🔄 {background-color="#2d4563"}
+# Recoding numeric variables 🔄 {background-color="#4338CA"}
 
 ## Recoding numeric variables
 
@@ -897,9 +897,9 @@ display(circuits.sample(5))
 ```
 :::
 
-# And that's it for today! 🎉 {background-color="#2d4563"}
+# And that's it for today! 🎉 {background-color="#4338CA"}
 
-# Thanks very much! 😊 {background-color="#2d4563"}
+# Thanks very much! 😊 {background-color="#4338CA"}
 
 ## Appendix 02 {#sec:appendix-02}
 

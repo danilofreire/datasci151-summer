@@ -28,9 +28,9 @@ editor:
   render-on-save: true
 ---
 
-# Hello! Great to see you again! 😊 {background-color="#2d4563"}
+# Hello! Great to see you again! 😊 {background-color="#4338CA"}
 
-# Lecture overview 📚 {background-color="#2d4563"}
+# Lecture overview 📚 {background-color="#4338CA"}
 
 ## Lecture overview
 
@@ -61,7 +61,7 @@ editor:
 :::
 :::
 
-# Connecting SQLite with Python 🐍 {background-color="#2d4563"}
+# Connecting SQLite with Python 🐍 {background-color="#4338CA"}
 
 ## Connecting and creating a cursor
 
@@ -85,7 +85,7 @@ cur = conn.cursor()
 ```
 :::
 
-# Executing SQL in Python {background-color="#2d4563"}
+# Executing SQL in Python {background-color="#4338CA"}
 
 ## Creating tables
 
@@ -212,7 +212,7 @@ cur.execute("SELECT driver_name, team FROM drivers WHERE driver_name LIKE 'M%'")
 ```
 :::
 
-# Filtering data {background-color="#2d4563"}
+# Filtering data {background-color="#4338CA"}
 
 ## `IN` and `BETWEEN` operators
 
@@ -326,7 +326,7 @@ for row in cur.fetchall(): print(row)
 - [[Appendix 01]{.button}](#sec:appendix01)
 :::
 
-# Handling missing data {background-color="#2d4563"}
+# Handling missing data {background-color="#4338CA"}
 
 ## Finding NULLs (`IS NULL`) and `COALESCE`
 
@@ -380,7 +380,7 @@ for row in cur.fetchall(): print(row)
 - Here, `NULL` victories are replaced by the average of non-NULL victories
 :::
 
-# Window functions {background-color="#2d4563"}
+# Window functions {background-color="#4338CA"}
 
 ## Introduction to window functions
 
@@ -480,7 +480,7 @@ for row in cur.fetchall(): print(row)
 - [[Appendix 02]{.button}](#sec:appendix02)
 :::
 
-# String manipulation {background-color="#2d4563"}
+# String manipulation {background-color="#4338CA"}
 
 ## Basic string functions
 
@@ -528,7 +528,7 @@ for row in cur.fetchall(): print(row)
 ```
 :::
 
-# Conditional logic: `CASE` {background-color="#2d4563"}
+# Conditional logic: `CASE` {background-color="#4338CA"}
 
 ## Basic `CASE` statement
 
@@ -620,7 +620,7 @@ for row in cur.fetchall(): print(row)
 - [[Appendix 03]{.button}](#sec:appendix03) 
 :::
 
-# Using SQL with `pandas` 🐼 {background-color="#2d4563"}
+# Using SQL with `pandas` 🐼 {background-color="#4338CA"}
 
 ## Reading data with `pandas.read_sql`
 
@@ -712,7 +712,7 @@ print(pd.read_sql('SELECT * FROM british_drivers', conn))
 - [[Appendix 04]{.button}](#sec:appendix04)
 :::
 
-# Conclusion 📚 {background-color="#2d4563"}
+# Conclusion 📚 {background-color="#4338CA"}
 
 ## Conclusion
 
@@ -738,9 +738,9 @@ Source: [Susan Ibach (2020)](https://susanibach.wordpress.com/2020/01/07/pandas-
 :::
 :::
 
-# And that's all for today! 🚀 {background-color="#2d4563"}
+# And that's all for today! 🚀 {background-color="#4338CA"}
 
-# Have a great day! 😊 {background-color="#2d4563"}
+# Have a great day! 😊 {background-color="#4338CA"}
 
 ```{python}
 #| echo: false
