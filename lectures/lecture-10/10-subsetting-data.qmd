@@ -27,7 +27,7 @@ editor:
   render-on-save: true
 ---
 
-# I hope you're all having a great day! 😊 {background-color="#4338CA"}
+# I hope you're all having a great day! 😊 {background-color="#1B3A6B"}
 
 ## Today's lecture
 
@@ -125,7 +125,7 @@ Source: <https://www.reddit.com/r/ProgrammerHumor/comments/1tm1n5q/isthatreallyt
 [![](figures/data-wrangler05.png){width="85%"}](#){data-modal-type="image" data-modal-url="figures/data-wrangler05.png"}
 :::
 
-# Any questions so far? 🤔 {background-color="#4338CA"}
+# Any questions so far? 🤔 {background-color="#1B3A6B"}
 
 ## Subsetting data with `Data Wrangler`
 
@@ -713,9 +713,9 @@ plt.show()
 - [[Appendix 05]{.button}](#sec:appendix-05)
 :::
 
-# And that's it for today! 🎉 {background-color="#4338CA"}
+# And that's it for today! 🎉 {background-color="#1B3A6B"}
 
-# See you next time! 🚀 {background-color="#4338CA"}
+# See you next time! 🚀 {background-color="#1B3A6B"}
 
 ## Appendix 01 {#sec:appendix-01}
 

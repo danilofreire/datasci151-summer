@@ -27,7 +27,7 @@ editor:
   render-on-save: true
 ---
 
-# Welcome to another lecture! 😊 {background-color="#4338CA"}
+# Welcome to another lecture! 😊 {background-color="#1B3A6B"}
 
 ## Today's agenda 
 ### Introducing NumPy, `random`, and Boolean logic
@@ -52,7 +52,7 @@ editor:
 :::
 :::
 
-# Let's get started! 🚀 {background-color="#4338CA"}
+# Let's get started! 🚀 {background-color="#1B3A6B"}
 
 ## Importing NumPy and Matplotlib
 
@@ -110,7 +110,7 @@ x ** 5
 - [[Appendix 01]{.button}](#sec:appendix01)
 :::
 
-# Vector arrays with NumPy 📊 {background-color="#4338CA"}
+# Vector arrays with NumPy 📊 {background-color="#1B3A6B"}
 
 ## Creating arrays from lists
 
@@ -245,7 +245,7 @@ print(vec_a / vec_b)
 ```
 :::
 
-# Summary statistics 📊 {background-color="#4338CA"}
+# Summary statistics 📊 {background-color="#1B3A6B"}
 
 ## Summary statistics of an array
 
@@ -314,9 +314,9 @@ ValueError: operands could not be broadcast together with shapes (3,) (5,)
 ```
 :::
 
-# Questions? {background-color="#4338CA"}
+# Questions? {background-color="#1B3A6B"}
 
-# Random numbers with Python 🎲 {background-color="#4338CA"}
+# Random numbers with Python 🎲 {background-color="#1B3A6B"}
 
 ## Generating random numbers
 
@@ -395,7 +395,7 @@ plt.show()
 - [[Appendix 03]{.button}](#sec:appendix03)
 :::
 
-# Boolean logic 🧠 {background-color="#4338CA"}
+# Boolean logic 🧠 {background-color="#1B3A6B"}
 
 ## Boolean logic
 ### A bit of history
@@ -419,7 +419,7 @@ plt.show()
 :::
 :::
 
-# Testing expressions with text 🐍 {background-color="#4338CA"} 
+# Testing expressions with text 🐍 {background-color="#1B3A6B"} 
 
 ## True and False values
 
@@ -518,7 +518,7 @@ print('June' in list_summer_months)
 :::
 :::
 
-# Testing expressions with numbers 🐍 {background-color="#4338CA"}
+# Testing expressions with numbers 🐍 {background-color="#1B3A6B"}
 
 ## Testing expressions with numbers
 
@@ -587,7 +587,7 @@ vec_a == vec_b
 - [[Appendix 04]{.button}](#sec:appendix04)
 :::
 
-# Testing multiple conditions 🐍 {background-color="#4338CA"}
+# Testing multiple conditions 🐍 {background-color="#1B3A6B"}
 
 ## Testing multiple conditions
 
@@ -716,9 +716,9 @@ print((ages >= 20) & (ages <= 30))
 :::
 :::
 
-# And that's all for today! 🥳 {background-color="#4338CA"}
+# And that's all for today! 🥳 {background-color="#1B3A6B"}
 
-# Thank you very much and see you next time! 🙏 {background-color="#4338CA"}
+# Thank you very much and see you next time! 🙏 {background-color="#1B3A6B"}
 
 ## Appendix 01 {#sec:appendix01}
 ### Mathematical functions in NumPy
