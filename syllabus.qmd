@@ -1,5 +1,5 @@
 ---
-title: "DATASCI 151 - Introduction to Statistical Computing II"
+title: "Syllabus"
 ---
 
 # Course Description

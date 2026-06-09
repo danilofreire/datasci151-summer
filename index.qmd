@@ -1,5 +1,8 @@
 ---
 title: "DATASCI 151 - Introduction to Statistical Computing II"
+subtitle: "Emory University, Summer 2026"
+title-block-banner: "#0F766E"
+title-block-banner-color: "white"
 ---
 
 ## Course Overview
