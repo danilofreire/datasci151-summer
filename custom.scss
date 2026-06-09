@@ -4,12 +4,13 @@ $font-family-sans-serif: "Source Sans 3", system-ui, sans-serif;
 $headings-font-family:   "Lora", Georgia, serif;
 $font-family-monospace:  "Inconsolata", monospace;
 
-$primary:    #0F766E;
-$link-color: #0F766E;
-$navbar-bg:  #0F766E;
+$primary:    #4338CA;
+$link-color: #4338CA;
+$navbar-bg:  #4338CA;
 $navbar-fg:  #FFFFFF;
 
 $border-radius: 0.5rem;
+$font-size-base: 1.1rem;
 
 /*-- scss:rules --*/
 
@@ -22,3 +23,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1.title { color: $primary; }
+
+// Keep the long landing-page title on a single line (desktop),
+// wrapping only on very narrow screens to avoid horizontal overflow.
+.quarto-title-banner h1.title {
+  font-size: 1.9rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .quarto-title-banner h1.title { white-space: normal; font-size: 1.5rem; }
+}
