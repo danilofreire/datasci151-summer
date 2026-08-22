@@ -4,7 +4,7 @@ Welcome to [DATASCI 151 - Introduction to Statistical Computing II](https://gith
 
 ## Course Overview
 
-This course is designed to introduce students to statistical computing techniques using Python and SQL. It builds upon the foundational knowledge from QTM150 and focuses on practical applications of data analysis, reproducible research, and database management.
+This course is designed to introduce students to statistical computing techniques using Python and SQL. It builds upon the foundational knowledge from DATASCI 150 and focuses on practical applications of data analysis, reproducible research, and database management.
 
 ## Repository Structure
 
@@ -115,4 +115,4 @@ This repository is licensed under the [MIT License](https://github.com/danilofre
 
 -----
 
-We look forward to an engaging and productive semester! Good luck, and happy coding! :smiley:
+We look forward to an engaging and productive course! Good luck, and happy coding! :smiley:
