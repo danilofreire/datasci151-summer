@@ -115,4 +115,4 @@ This repository is licensed under the [MIT License](https://github.com/danilofre
 
 -----
 
-We look forward to an engaging and productive course! Good luck, and happy coding! :smiley:
+I look forward to an engaging and productive course! Good luck, and happy coding! :smiley:
