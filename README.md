@@ -10,7 +10,7 @@ This course is designed to introduce students to statistical computing technique
 
 This repository is organised as follows:
 
-- [`assignments/`](https://github.com/danilofreire/datasci151-summer/tree/main/assigments): Contains all course assignments
+- [`assignments/`](https://github.com/danilofreire/datasci151-summer/tree/main/assignments): Contains all course assignments
 - [`lectures/`](https://github.com/danilofreire/datasci151-summer/tree/main/lectures): Includes lecture materials and code
 - [`tutorials/`](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials): Step-by-step guides for the tools used in the course
 - [`README.md`](https://github.com/danilofreire/datasci151-summer/blob/main/README.md): This file, providing an overview of the course and repository
@@ -20,7 +20,7 @@ Each lecture folder contains an HTML file and a Jupyter notebook (`.ipynb`) with
 
 ### Assignments and Quizzes
 
-Throughout the course, students will complete some assignments to reinforce their learning. These will be posted in the [`assignments/`](https://github.com/danilofreire/datasci151-summer/tree/main/assigments) folder as the course progresses. We will also announce these in class and on Canvas. Please refer to the syllabus for due dates and submission guidelines.
+Throughout the course, students will complete some assignments to reinforce their learning. These will be posted in the [`assignments/`](https://github.com/danilofreire/datasci151-summer/tree/main/assignments) folder as the course progresses. I will also announce these in class and on Canvas. Please refer to the syllabus for due dates and submission guidelines.
 
 ### Tutorials
 
