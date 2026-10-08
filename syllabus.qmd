@@ -36,14 +36,17 @@ This course provides everything you need to master the core concepts, but you ar
 - [Elements of Data Science](https://allendowney.github.io/ElementsOfDataScience/README.html) by Allen Downey
 - [Automate the Boring Stuff with Python](https://automatetheboringstuff.com) by Al Sweigart
 - [Python for Everybody](https://www.py4e.com/book.php) by Charles Severance
-- [SQL for Data Scientists](https://sqlfordatascientists.com/) by Renee M. P. Teate
+- [Think Python](https://allendowney.github.io/ThinkPython/) by Allen Downey
+- [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/) by Jake VanderPlas
+- [Select Star SQL](https://selectstarsql.com/) by Zi Chong Kao
 
 ## Online Courses
 
 - [Coursera: Python for Everybody Specialisation](https://www.coursera.org/specializations/python)
 - [edX: Python Basics for Data Science](https://www.edx.org/learn/python/ibm-python-basics-for-data-science)
-- [Codecademy: Learn Python](https://www.codecademy.com/learn/learn-python-3)
-- [DataCamp: Introduction to SQL](https://www.datacamp.com/courses/intro-to-sql-for-data-science)
+- [Software Carpentry: Plotting and Programming in Python](https://swcarpentry.github.io/python-novice-gapminder/)
+- [Kaggle Learn: Intro to SQL](https://www.kaggle.com/learn/intro-to-sql)
+- [Software Carpentry: Databases and SQL](https://swcarpentry.github.io/sql-novice-survey/)
 - [Coursera: SQL for Data Science](https://www.coursera.org/learn/sql-for-data-science)
 
 ## Additional Resources
@@ -53,7 +56,7 @@ This course provides everything you need to master the core concepts, but you ar
 - [SQLite Documentation](https://www.sqlite.org/docs.html)
 - [SQLBolt](https://sqlbolt.com/)
 - [DataLemur for SQL interview practice](https://datalemur.com)
-- [Github Guides](https://guides.github.com/)
+- [GitHub Docs](https://docs.github.com/en)
 
 # Course Information
 
@@ -80,9 +83,7 @@ Every Emory University community member is responsible for upholding a standard 
 
 # Artificial Intelligence
 
-You will complete five problem sets and three in-class quizzes. You are welcome to use AI tools for assignments. I recommend [GitHub Copilot](https://copilot.github.com/) for generating code snippets (it is free for students and provides excellent suggestions). [Claude](https://claude.ai), [ChatGPT](https://chat.openai.com), and [Perplexity AI](https://perplexity.ai) are also great options. I am happy to help you use these tools during office hours or by appointment.
-
-However, you are responsible for any errors from AI tools. Do not rely on them exclusively. Always double-check your work and cite all sources, including AI assistance. Please add a note at the end of any document where AI was used.
+You will complete five problem sets and three in-class quizzes. You may use AI tools for assignments as a supplement to your own thinking, not a replacement for it. **AI tools are not permitted during quizzes**, which are individual tests of your understanding. If you use AI on an assignment, check the output carefully and take responsibility for any errors in what you submit. Cite all sources, including AI tools, and add a brief note at the end of any document where AI was used.
 
 # Special Needs and Accessibility Services
 
