@@ -1,6 +1,6 @@
 # DATASCI 151 - Introduction to Statistical Computing II
 
-Welcome to [DATASCI 151 - Introduction to Statistical Computing II](https://github.com/danilofreire/datasci151-summer)! This repository contains all the materials for the summer course, including lectures, assignments, and tutorials.
+Welcome to [DATASCI 151 - Introduction to Statistical Computing II](https://github.com/danilofreire/datasci151-summer)! This repository contains all the materials for the summer course, including lectures and assignments. The tutorials are on the [course website](https://danilofreire.github.io/datasci151-summer/tutorials.html).
 
 ## Course Overview
 
@@ -12,7 +12,6 @@ This repository is organised as follows:
 
 - [`assignments/`](https://github.com/danilofreire/datasci151-summer/tree/main/assignments): Contains all course assignments
 - [`lectures/`](https://github.com/danilofreire/datasci151-summer/tree/main/lectures): Includes lecture materials and code
-- [`tutorials/`](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials): Step-by-step guides for the tools used in the course
 - [`README.md`](https://github.com/danilofreire/datasci151-summer/blob/main/README.md): This file, providing an overview of the course and repository
 - [`syllabus.pdf`](https://github.com/danilofreire/datasci151-summer/blob/main/syllabus.pdf): Course syllabus in PDF format
 
@@ -24,13 +23,13 @@ Throughout the course, students will complete some assignments to reinforce thei
 
 ### Tutorials
 
-The [`tutorials/`](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials)
-folder contains step-by-step guides for various tools and techniques used in
-the course. These include:
+The [tutorials page](https://danilofreire.github.io/datasci151-summer/tutorials.html) on the course website has step-by-step guides for the tools we use in the course:
 
-- [VSCode and Anaconda Tutorial](https://github.com/danilofreire/datasci151-summer/blob/main/tutorials/01-vscode-anaconda-tutorial.pdf)
-- [Jupyter Notebook and Markdown Tutorial](https://github.com/danilofreire/datasci151-summer/blob/main/tutorials/02-jupyter-markdown-tutorial.pdf)
-- [GitHub Tutorial](https://github.com/danilofreire/datasci151-summer/blob/main/tutorials/03-github-tutorial.pdf)
+- [VS Code and Anaconda](https://danilofreire.github.io/datasci151-summer/01-vscode-anaconda-tutorial.html)
+- [Jupyter Notebook and Markdown](https://danilofreire.github.io/datasci151-summer/02-jupyter-markdown-tutorial.html)
+- [Git and GitHub](https://danilofreire.github.io/datasci151-summer/03-github-tutorial.html)
+- [The terminal and conda environments](https://danilofreire.github.io/datasci151-summer/04-conda-environments-tutorial.html)
+- [SQLite and SQLite3 Editor](https://danilofreire.github.io/datasci151-summer/05-sqlite-tutorial.html)
 
 ## Course Requirements
 
@@ -97,13 +96,13 @@ If you require any accommodations for this course, please contact the [Departmen
 If you encounter any issues with the course materials or have questions about the content, please:
 
 1. Check the [course syllabus](https://github.com/danilofreire/datasci151-summer/blob/main/syllabus.pdf) and this README for relevant information
-2. Review the [lecture materials](https://github.com/danilofreire/datasci151-summer/tree/main/lectures) and [tutorials](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials) in the repository
-3. Consult with your classmates or post in the [course discussion forum](https://github.com/danilofreire/datasci151-summer/discussions)
+2. Review the [lecture materials](https://github.com/danilofreire/datasci151-summer/tree/main/lectures) and [tutorials](https://danilofreire.github.io/datasci151-summer/tutorials.html) on the course website
+3. Consult with your classmates
 4. Attend office hours or schedule an appointment with the instructor
 
 ## Contributing to the Repository
 
-While this repository is primarily maintained by the course instructor, everyone is welcome to contribute. Please feel free to suggest improvements or report issues by [opening a GitHub issue](https://github.com/danilofreire/datasci151-summer/issues), [submitting a pull request](https://github.com/danilofreire/datasci151-summer/pulls), [creating a discussion post](https://github.com/danilofreire/datasci151-summer/discussions), or [contacting the instructor directly](mailto:danilo.freire@emory.edu).
+While this repository is primarily maintained by the course instructor, everyone is welcome to contribute. Please feel free to suggest improvements or report issues by [opening a GitHub issue](https://github.com/danilofreire/datasci151-summer/issues), [submitting a pull request](https://github.com/danilofreire/datasci151-summer/pulls), or [contacting the instructor directly](mailto:danilo.freire@emory.edu).
 
 ## Acknowledgements
 

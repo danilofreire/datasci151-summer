@@ -297,7 +297,7 @@ Much easier! 😃
 
 <br>
 
-- Follow the instructions [on our GitHub website](https://danilofreire.github.io/datasci151-summer/tutorials/01-vscode-anaconda-tutorial.html) 
+- Follow the instructions [on our GitHub website](https://danilofreire.github.io/datasci151-summer/01-vscode-anaconda-tutorial.html) 
 - Or just go to <https://www.anaconda.com/download/success?reg=skipped> and download the version for your operating system
 - We are using Anaconda virtual environments for this class (I will cover this in more detail soon)​
 - For now: Anaconda comes with a full Python installation​ with everything you need to follow along with the course 
@@ -314,7 +314,7 @@ Much easier! 😃
 ::: {.column width=50%}
 [Install VSCode]{.alert}
 
-- Follow our [step-by-step tutorial](https://github.com/danilofreire/datasci151-summer/blob/main/tutorials/01-vscode-anaconda-tutorial.pdf) on GitHub
+- Follow our [step-by-step tutorial](https://danilofreire.github.io/datasci151-summer/01-vscode-anaconda-tutorial.html) on our website
 - Or download VSCode directly at <https://code.visualstudio.com/download> (Windows, Mac, or Linux)
 - Find the [Extensions]{.alert} icon in the left sidebar (four small squares with one offset), or press `Ctrl+Shift+X` (`Cmd+Shift+X` on Mac)
 - Install the [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) and [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) extensions for VSCode
@@ -417,7 +417,7 @@ conda install jupyter
 :::{.column width=40%}
 - We will use Jupyter Notebooks a lot for our classes!
 - Quizzes and assignments will be in this format
-- Our website has [a tutorial on how to use them too](https://danilofreire.github.io/datasci151-summer/tutorials/02-jupyter-markdown-tutorial.html)
+- Our website has [a tutorial on how to use them too](https://danilofreire.github.io/datasci151-summer/02-jupyter-markdown-tutorial.html)
 - There are both Jupyter Notebooks and lecture notes for each class in the course repository
 - So you can choose which one you prefer to use, or use both!
 - Lecture notes are designed to be followed along, and there will be many "try it yourself" exercises throughout the lectures!
