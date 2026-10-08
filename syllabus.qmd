@@ -2,35 +2,34 @@
 title: "Syllabus"
 ---
 
-# Course Description
+# Course description
 
-Welcome to [DATASCI 151](https://github.com/danilofreire/datasci151-summer)! This Maymester course introduces data analysis and statistical computing using Python and SQL. It is perfect for beginners with little or no programming experience who want to build skills for data-driven decision making.
+Welcome to [DATASCI 151](https://github.com/danilofreire/datasci151-summer)! This Maymester course introduces data analysis and statistical computing with Python and SQL. It is designed for beginners, so you do not need any programming experience to take it.
 
-We will cover Python programming fundamentals, Jupyter Notebooks for reproducible research, data wrangling and merging with SQL, data visualisation, and introductions to linear modelling and time series analysis.
+We will cover the basics of Python programming, Jupyter Notebooks for reproducible research, data wrangling and merging with SQL, and data visualisation.
 
-You will work with real-world datasets and problems, gaining hands-on experience using these tools to extract insights from data. The course develops both technical skills and critical thinking abilities needed for tackling complex data challenges.
+You will work with real datasets and problems throughout the course and use these tools to answer questions with data. The course builds your technical skills and your critical thinking, which you will need for any data analysis you do later on.
 
-# Learning Objectives
+# Learning objectives
 
 By the end of this course, you will be able to:
 
-1. Write Python functions and perform mathematical operations
-2. Wrangle and manipulate data using Python libraries like Pandas
+1. Write Python functions and do mathematical operations
+2. Clean and manipulate data with Python libraries such as pandas
 3. Merge and manage databases with SQL
-4. Create visualisations to communicate data insights
-5. Implement linear models and understand time series analysis principles
-6. Use Jupyter Notebooks for reproducible research
-7. Develop problem-solving skills for data analysis and statistical computing
+4. Create visualisations to communicate what you find in the data
+5. Use Jupyter Notebooks for reproducible research
+6. Solve data analysis and statistical computing problems on your own
 
 # Prerequisites
 
-There are no prerequisites for this course. Everyone is welcome, regardless of prior programming or data analysis experience. Feel free to reach out if you have questions about the course content or whether it is right for you.
+None! Everyone is welcome, whatever your experience with programming or data analysis. If you are not sure whether the course is right for you, just send me an email and I will be happy to help.
 
 # Materials
 
-This course provides everything you need to master the core concepts, but you are encouraged to explore these additional resources to deepen your understanding of Python and SQL.
+The lecture notes cover everything you need for the course. If you would like to learn more about Python and SQL, all the resources below are free online (the Coursera and edX courses are free if you choose the audit option).
 
-## Suggested Books
+## Suggested books
 
 - [Python for Data Analysis](https://wesmckinney.com/book/) by Wes McKinney
 - [Elements of Data Science](https://allendowney.github.io/ElementsOfDataScience/README.html) by Allen Downey
@@ -40,7 +39,7 @@ This course provides everything you need to master the core concepts, but you ar
 - [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/) by Jake VanderPlas
 - [Select Star SQL](https://selectstarsql.com/) by Zi Chong Kao
 
-## Online Courses
+## Online courses
 
 - [Coursera: Python for Everybody Specialisation](https://www.coursera.org/specializations/python)
 - [edX: Python Basics for Data Science](https://www.edx.org/learn/python/ibm-python-basics-for-data-science)
@@ -49,63 +48,64 @@ This course provides everything you need to master the core concepts, but you ar
 - [Software Carpentry: Databases and SQL](https://swcarpentry.github.io/sql-novice-survey/)
 - [Coursera: SQL for Data Science](https://www.coursera.org/learn/sql-for-data-science)
 
-## Additional Resources
+## Additional resources
 
 - [Python Documentation](https://docs.python.org/3/)
-- [Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
+- [pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
 - [SQLite Documentation](https://www.sqlite.org/docs.html)
 - [SQLBolt](https://sqlbolt.com/)
 - [DataLemur for SQL interview practice](https://datalemur.com)
 - [GitHub Docs](https://docs.github.com/en)
 
-# Course Information
+# Course information
 
+We will meet online, Monday to Friday, from 11:00am to 12:20pm EDT. Please review the materials before each class. You can find all course information in our GitHub repository at <https://github.com/danilofreire/datasci151-summer>.
 
-We will meet online Monday through Friday from 11:00am to 12:20pm EDT. Please review the materials before each class. All course information is available on our GitHub repository at <https://github.com/danilofreire/datasci151-summer>. While I intend to follow the schedule as planned, I also want to adapt to your learning pace and style, so the syllabus may change during the course. Please check [the course repository](https://github.com/danilofreire/datasci151-summer) regularly for updates, which I will also announce in class and on Canvas.
+I plan to follow the schedule, but I also want to adapt it to your pace and learning style, so the syllabus may change during the course. I will announce any changes in class and on Canvas. Please also check [the course repository](https://github.com/danilofreire/datasci151-summer) regularly for updates.
 
 # Software
 
-We will mainly use [Python](https://www.python.org) in this course, which is a free and general-purpose programming language widely used in data science and machine learning. I recommend the [Anaconda distribution](https://www.anaconda.com/products/individual), which already includes many useful libraries like [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), and [Jupyter](https://jupyter.org/).
+We will mainly use [Python](https://www.python.org), a free, general-purpose programming language that is widely used in data science and machine learning. I recommend the [Anaconda distribution](https://www.anaconda.com/products/individual), which already includes many of the libraries we need, such as [pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/) and [Jupyter](https://jupyter.org/).
 
-You can use any text editor, but I recommend [VS Code](https://code.visualstudio.com/) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python). [PyCharm](https://www.jetbrains.com/pycharm/) is another excellent option. Feeling adventurous? Try [Neovim](https://neovim.io/) with the [coc-pyright](https://github.com/fannheyward/coc-pyright) plugin—that is, if [you can exit the editor](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/). :)
+You can use any text editor you like, but I recommend [VS Code](https://code.visualstudio.com/) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python). [PyCharm](https://www.jetbrains.com/pycharm/) is another excellent option. Feeling adventurous? Try [Neovim](https://neovim.io/) with the [coc-pyright](https://github.com/fannheyward/coc-pyright) plugin (that is, if [you can exit the editor](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/)). :)
 
-We will also use [Jupyter Notebooks](https://jupyter.org/) in class. Jupyter comes pre-installed with Anaconda, but please install the [Jupyter extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter&ssr=false) too. We will have a hands-on session to use Jupyter effectively.
+We will also use [Jupyter Notebooks](https://jupyter.org/) in class. Jupyter comes with Anaconda, but please also install the [Jupyter extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter&ssr=false). We will have a hands-on session on how to use it.
 
-I have prepared [a series of tutorials](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials) to help you install Anaconda, Jupyter, VS Code, and set up a free GitHub educational account. Please work through these tutorials as soon as possible to ensure you have all the necessary tools.
+I have written [a series of tutorials](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials) to help you install Anaconda, Jupyter and VS Code, and to open a free GitHub educational account. Please work through them as soon as possible, so you have all the tools ready when we start.
 
-# Office Hours
+# Office hours
 
-I am flexible with office hours, but email works best. Feel free to message me anytime at [danilo.freire@emory.edu](mailto:danilo.freire@emory.edu). I will usually reply within a few hours.
+I am flexible with office hours, but email works best. Feel free to write to me at any time at [danilo.freire@emory.edu](mailto:danilo.freire@emory.edu). I usually reply within a few hours.
 
-# Academic Integrity
+# Academic integrity
 
-Every Emory University community member is responsible for upholding a standard of unimpeachable honour in all academic work. The [Honour Code of Emory College](http://catalog.college.emory.edu/academic/policies-regulations/honor-code.html) assumes that every member of the University will not only conduct their own life according to the highest ethical standards but will also refuse to tolerate actions in others that would harm the institution's reputation. Academic misconduct includes any action or inaction that violates the integrity and honesty of the academic community. Any suspected cases will be referred to the Emory Honour Council.
+Every member of the Emory community is responsible for being honest in all academic work. The [Honor Code of Emory College](http://catalog.college.emory.edu/academic/policies-regulations/honor-code.html) expects every member of the University to follow the highest ethical standards, and also to refuse to tolerate actions by others that would harm the institution's reputation. Academic misconduct includes any action or inaction that violates the integrity and honesty of the academic community. I will refer any suspected case to the Emory Honor Council.
 
-# Artificial Intelligence
+# Artificial intelligence
 
-You will complete five problem sets and three in-class quizzes. You may use AI tools for assignments as a supplement to your own thinking, not a replacement for it. **AI tools are not permitted during quizzes**, which are individual tests of your understanding. If you use AI on an assignment, check the output carefully and take responsibility for any errors in what you submit. Cite all sources, including AI tools, and add a brief note at the end of any document where AI was used.
+You may use AI tools for the assignments, as long as they support your own thinking and do not replace it. **AI tools are not allowed during quizzes**, because quizzes are individual tests of your understanding. If you use AI for an assignment, please check the output carefully, as you are responsible for any errors in what you submit. Cite all your sources, including AI tools, and add a short note at the end of any document where you used AI.
 
-# Special Needs and Accessibility Services
+# Accessibility services
 
-I am committed to providing accommodations so all students can succeed. If you have medical or health conditions that might affect your performance, please visit the [Department of Accessibility Services (DAS)](http://accessibility.emory.edu/) to learn about available accommodations. Provide me with your DAS Accommodation Letter at the start of the semester or when it is granted.
+I want every student to succeed, and I am happy to provide accommodations. If you have a medical or health condition that may affect your work, please visit the [Department of Accessibility Services (DAS)](http://accessibility.emory.edu/) to learn about the accommodations available. Please send me your DAS Accommodation Letter at the start of the course, or as soon as you receive it.
 
-Note: DAS accommodations like extra time apply only to quizzes, not assignments (since assignments are released in advance, letting you work at your own pace). Athletes and students with other commitments should inform me of scheduling conflicts early in the course. I will do my best to accommodate you, though I cannot guarantee every request. Questions? Just reach out.
+DAS accommodations such as extra time apply only to quizzes. They do not apply to assignments, because I release assignments in advance and you can work on them at your own pace. If you are an athlete or have other commitments, please tell me about any scheduling conflicts early in the course. I will do my best to accommodate you, although I cannot promise to meet every request. Any questions? Just let me know.
 
-# English Language Learners
+# English language learners
 
-Emory University welcomes students from across the country and around the world. The unique perspectives that international and multilingual students bring enrich our entire community. To support multilingual learners, we offer language and culture workshops and individual appointments. For more information about English Language Learning support, contact the ELLP Specialists at <https://writingcenter.emory.edu>. Your English proficiency will never be penalized.
+Emory welcomes students from across the country and around the world, and international and multilingual students bring perspectives that make our whole community richer. To support multilingual learners, Emory offers language and culture workshops and individual appointments. For more information, please contact the ELLP Specialists at <https://writingcenter.emory.edu>. Your level of English will never be penalised in this course.
 
-# Assignments and Grading Policy
+# Assignments and grading
 
-**Problem Sets (50%).** You will complete five problem sets throughout the course. These reinforce lecture concepts and give you hands-on practise with statistical programming. Each set includes theoretical questions and practical applications that you must complete individually. Acknowledge all sources, including textbooks, articles, and AI tools.
+**Assignments (50%).** You will complete five assignments during the course. They give you hands-on practice with the lecture material, and each one has conceptual questions and practical exercises. Please complete them individually and acknowledge all your sources, including textbooks, articles and AI tools.
 
-*Late submissions receive half credit automatically.* Please submit all assignments as HTML files, Jupyter notebooks (`.ipynb`), or PDFs via Canvas by midnight on the due date.
+*Late submissions automatically receive half credit.* Please submit your assignments on Canvas as HTML files, Jupyter notebooks (`.ipynb`) or PDFs by midnight on the due date.
 
-**Class Quizzes (50%).** You will take three in-class quizzes on Fridays, based on that week's lectures. Quizzes test your understanding and ability to apply concepts to new problems. They are open-book and open-notes, but **AI tools are not allowed**. Quizzes are individual assessments—no discussing questions with classmates.
+**Quizzes (50%).** You will take three in-class quizzes, all on Fridays. Each quiz covers that week's lectures and asks you to apply the concepts to new problems. Quizzes are open-book and open-notes, but **AI tools are not allowed**. They are also individual, so please do not discuss the questions with your classmates.
 
-# Grading Scale
+# Grading scale
 
-Each student's final grade will be based on the following after rounding up to the nearest point:
+Your final grade will follow the ranges below, rounded up to the nearest point:
 
 | Grade | A       | A-      | B+      | B       | B-      | C       | D       | F    |
 |-------|---------|---------|---------|---------|---------|---------|---------|------|

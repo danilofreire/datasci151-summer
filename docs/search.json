@@ -11,42 +11,42 @@
     "href": "syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "Welcome to DATASCI 151! This Maymester course introduces data analysis and statistical computing using Python and SQL. It is perfect for beginners with little or no programming experience who want to build skills for data-driven decision making.\nWe will cover Python programming fundamentals, Jupyter Notebooks for reproducible research, data wrangling and merging with SQL, data visualisation, and introductions to linear modelling and time series analysis.\nYou will work with real-world datasets and problems, gaining hands-on experience using these tools to extract insights from data. The course develops both technical skills and critical thinking abilities needed for tackling complex data challenges."
+    "text": "Welcome to DATASCI 151! This Maymester course introduces data analysis and statistical computing with Python and SQL. It is designed for beginners, so you do not need any programming experience to take it.\nWe will cover the basics of Python programming, Jupyter Notebooks for reproducible research, data wrangling and merging with SQL, and data visualisation.\nYou will work with real datasets and problems throughout the course and use these tools to answer questions with data. The course builds your technical skills and your critical thinking, which you will need for any data analysis you do later on."
   },
   {
     "objectID": "syllabus.html#suggested-books",
     "href": "syllabus.html#suggested-books",
     "title": "Syllabus",
-    "section": "Suggested Books",
-    "text": "Suggested Books\n\nPython for Data Analysis by Wes McKinney\nElements of Data Science by Allen Downey\nAutomate the Boring Stuff with Python by Al Sweigart\nPython for Everybody by Charles Severance\nThink Python by Allen Downey\nPython Data Science Handbook by Jake VanderPlas\nSelect Star SQL by Zi Chong Kao"
+    "section": "Suggested books",
+    "text": "Suggested books\n\nPython for Data Analysis by Wes McKinney\nElements of Data Science by Allen Downey\nAutomate the Boring Stuff with Python by Al Sweigart\nPython for Everybody by Charles Severance\nThink Python by Allen Downey\nPython Data Science Handbook by Jake VanderPlas\nSelect Star SQL by Zi Chong Kao"
   },
   {
     "objectID": "syllabus.html#online-courses",
     "href": "syllabus.html#online-courses",
     "title": "Syllabus",
-    "section": "Online Courses",
-    "text": "Online Courses\n\nCoursera: Python for Everybody Specialisation\nedX: Python Basics for Data Science\nSoftware Carpentry: Plotting and Programming in Python\nKaggle Learn: Intro to SQL\nSoftware Carpentry: Databases and SQL\nCoursera: SQL for Data Science"
+    "section": "Online courses",
+    "text": "Online courses\n\nCoursera: Python for Everybody Specialisation\nedX: Python Basics for Data Science\nSoftware Carpentry: Plotting and Programming in Python\nKaggle Learn: Intro to SQL\nSoftware Carpentry: Databases and SQL\nCoursera: SQL for Data Science"
   },
   {
     "objectID": "syllabus.html#additional-resources",
     "href": "syllabus.html#additional-resources",
     "title": "Syllabus",
-    "section": "Additional Resources",
-    "text": "Additional Resources\n\nPython Documentation\nPandas Documentation\nSQLite Documentation\nSQLBolt\nDataLemur for SQL interview practice\nGitHub Docs"
+    "section": "Additional resources",
+    "text": "Additional resources\n\nPython Documentation\npandas Documentation\nSQLite Documentation\nSQLBolt\nDataLemur for SQL interview practice\nGitHub Docs"
   },
   {
     "objectID": "lectures.html",
     "href": "lectures.html",
     "title": "Lectures",
     "section": "",
-    "text": "The course covers the following main topics, with corresponding lecture materials available in the lectures folder in our course repository:\nEach lecture folder contains an HTML file or a Jupyter notebook (.ipynb) with code examples and explanations, along with any additional resources or datasets used in the lecture."
+    "text": "Below you will find the schedule for each class, with links to the slides, notebooks and suggested readings. The readings are all free online. You can also find every lecture in the lectures folder of our course repository.\nEach lecture folder has an HTML file or a Jupyter notebook (.ipynb) with code examples and explanations, plus any datasets or other files we use in class."
   },
   {
     "objectID": "lectures.html#schedule",
     "href": "lectures.html#schedule",
     "title": "Lectures",
     "section": "Schedule",
-    "text": "Schedule\n\nTuesday, May 12: Lecture 01: Welcome to DATASCI 151 - Introduction and Course Overview. Please make sure to install the necessary software for the course by following the Course Tutorials: How to Install Anaconda, Jupyter, VSCode, and Open a Free Educational Account on GitHub.\n\nSuggested readings:\n\nSeverance, C. Why should you learn to write programs? Chapter 1 of Python for Everybody.\nSoftware Carpentry. Automated version control. In Version Control with Git.\nGitHub Docs. Hello World.\nVisual Studio Code Docs. Jupyter Notebooks in VS Code.\n\n\nWednesday, May 13: Lecture 02: Jupyter Notebooks, Packages, Variables, and Lists. Lecture Slides, Lecture Notebook.\n\nSuggested readings:\n\nconda Docs. Managing environments.\nDowney, A. Variables and statements. Chapter 2 of Think Python, 3rd edition.\nSoftware Carpentry. Lists. In Plotting and Programming in Python.\nMatplotlib Docs. Quick start guide.\n\n\nThursday, May 14: Lecture 03: Maths Operations, Arrays, and Boolean Logic. Lecture Slides, Lecture Notebook\n\nKahoot Quiz. Kahoot quizzes are optional and will not be graded. We will do it in class! It is a fun way to review the material covered in the lecture.\nSuggested readings:\n\nNumPy Docs. NumPy: the absolute basics for beginners.\nDowney, A. Lists and arrays. Chapter 3 of Elements of Data Science.\nVanderPlas, J. Aggregations: min, max, and everything in between. In Python Data Science Handbook.\nVanderPlas, J. Comparisons, masks, and Boolean logic. In Python Data Science Handbook.\n\n\nFriday, May 15: Lecture 04: Quiz 01 - Based on Lectures 01-03. The repository contains the quiz questions and will be made online on the day of the quiz.\n\nAssignment 01 due.\n\nMonday, May 18: Lecture 05: Conditional Statements. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\nSuggested readings:\n\nSeverance, C. Conditional execution. Chapter 3 of Python for Everybody.\nDowney, A. Conditionals and recursion. Chapter 5 of Think Python, 3rd edition.\nPython Docs. More on lists. In The Python Tutorial.\n\n\nTuesday, May 19: Lecture 06: For and While Loops. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\nSuggested readings:\n\nSeverance, C. Iteration. Chapter 5 of Python for Everybody.\nSoftware Carpentry. For loops. In Plotting and Programming in Python.\nPython Docs. for statements and the range() function. In The Python Tutorial.\n\n\nWednesday, May 20: Lecture 07: Functions. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\nAssignment 02 due.\nSuggested readings:\n\nDowney, A. Functions. Chapter 3 of Think Python, 3rd edition.\nSoftware Carpentry. Writing functions and Variable scope. In Plotting and Programming in Python.\nPython Docs. Lambda expressions. In The Python Tutorial.\n\n\nThursday, May 21: Lecture 08: Data Wrangling with Pandas. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\nSuggested readings:\n\nMcKinney, W. Data cleaning and preparation, sections 7.1 and 7.2. Chapter 7 of Python for Data Analysis, 3rd edition.\npandas Docs. Working with missing data.\nPython Docs. Modules. In The Python Tutorial.\n\n\nFriday, May 22: Lecture 09: Quiz 02 - Based on Lectures 05-08. As with Quiz 01, the repository will be available on the day of the quiz.\n\nAssignment 03 due.\n\nMonday, May 25: Lecture 10: Subsetting and Filtering Data. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\nSuggested readings:\n\npandas Docs. How do I select a subset of a DataFrame?\nMcKinney, W. Getting started with pandas, section 5.2. Chapter 5 of Python for Data Analysis, 3rd edition.\npandas Docs. How do I create plots in pandas?\nVisual Studio Code Docs. Getting started with Data Wrangler in VS Code.\n\n\nTuesday, May 26: Lecture 11: Introduction to SQL. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\nSuggested readings:\n\nSQLBolt. Interactive SQL lessons, lessons 1-4 and 10-11.\nSoftware Carpentry. Selecting data, Filtering, and Aggregation. In Databases and SQL.\nKao, Z. C. Select Star SQL.\n\n\nWednesday, May 27: Lecture 12: SQL in Python. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\nAssignment 04 due.\nSuggested readings:\n\nPython Docs. sqlite3 tutorial.\nSoftware Carpentry. Missing data and Programming with databases: Python. In Databases and SQL.\nSQLite Tutorial. CASE and Window functions.\npandas Docs. Comparison with SQL.\n\n\nThursday, May 28: Lecture 13: Merge Tables in SQL. Lecture Slides, Lecture Notebook.\n\nKahoot Quiz.\nSuggested readings:\n\nSQLBolt. Multi-table queries with JOINs and OUTER JOINs.\nSoftware Carpentry. Combining data. In Databases and SQL.\nSQLite Tutorial. Self-join and UNION.\nMcKinney, W. Data wrangling: join, combine, and reshape, section 8.2. Chapter 8 of Python for Data Analysis, 3rd edition.\n\n\nFriday, May 29: Lecture 14: Quiz 03 - Based on Lectures 10-13.\n\nAssignment 05 due."
+    "text": "Schedule\n\nTuesday, May 11: Lecture 01: Welcome to DATASCI 151 - Introduction and Course Overview\n\nLecture slides\nPlease make sure to install the necessary software for the course by following the Course Tutorials: How to Install Anaconda, Jupyter, VSCode, and Open a Free Educational Account on GitHub\nSuggested readings:\n\nSeverance, C. Why should you learn to write programs? Chapter 1 of Python for Everybody.\nSoftware Carpentry. Automated version control. In Version Control with Git.\nGitHub Docs. Hello World.\nVisual Studio Code Docs. Jupyter Notebooks in VS Code.\n\n\nWednesday, May 12: Lecture 02: Jupyter Notebooks, Packages, Variables, and Lists\n\nLecture slides\nLecture notebook\nSuggested readings:\n\nconda Docs. Managing environments.\nDowney, A. Variables and statements. Chapter 2 of Think Python, 3rd edition.\nSoftware Carpentry. Lists. In Plotting and Programming in Python.\nMatplotlib Docs. Quick start guide.\n\n\nThursday, May 13: Lecture 03: Maths Operations, Arrays, and Boolean Logic\n\nLecture slides\nLecture notebook\nKahoot quiz. Kahoot quizzes are optional and not graded. We will do them together in class, and they are a fun way to review the lecture :)\nSuggested readings:\n\nNumPy Docs. NumPy: the absolute basics for beginners.\nDowney, A. Lists and arrays. Chapter 3 of Elements of Data Science.\nVanderPlas, J. Aggregations: min, max, and everything in between. In Python Data Science Handbook.\nVanderPlas, J. Comparisons, masks, and Boolean logic. In Python Data Science Handbook.\n\n\nFriday, May 14: Lecture 04: Quiz 01 - Based on Lectures 01-03. The repository with the questions will be available on the day of the quiz.\n\nAssignment 01 due.\n\nMonday, May 17: Lecture 05: Conditional Statements\n\nLecture slides\nLecture notebook\nKahoot quiz.\nSuggested readings:\n\nSeverance, C. Conditional execution. Chapter 3 of Python for Everybody.\nDowney, A. Conditionals and recursion. Chapter 5 of Think Python, 3rd edition.\nPython Docs. More on lists. In The Python Tutorial.\n\n\nTuesday, May 18: Lecture 06: For and While Loops\n\nLecture slides\nLecture notebook\nKahoot quiz.\nSuggested readings:\n\nSeverance, C. Iteration. Chapter 5 of Python for Everybody.\nSoftware Carpentry. For loops. In Plotting and Programming in Python.\nPython Docs. for statements and the range() function. In The Python Tutorial.\n\n\nWednesday, May 19: Lecture 07: Functions\n\nLecture slides\nLecture notebook\nKahoot quiz.\nAssignment 02 due.\nSuggested readings:\n\nDowney, A. Functions. Chapter 3 of Think Python, 3rd edition.\nSoftware Carpentry. Writing functions and Variable scope. In Plotting and Programming in Python.\nPython Docs. Lambda expressions. In The Python Tutorial.\n\n\nThursday, May 20: Lecture 08: Data Wrangling with Pandas\n\nLecture slides\nLecture notebook\nKahoot quiz.\nSuggested readings:\n\nMcKinney, W. Data cleaning and preparation, sections 7.1 and 7.2. Chapter 7 of Python for Data Analysis, 3rd edition.\npandas Docs. Working with missing data.\nPython Docs. Modules. In The Python Tutorial.\n\n\nFriday, May 21: Lecture 09: Quiz 02 - Based on Lectures 05-08. As with Quiz 01, the repository will be available on the day of the quiz.\n\nAssignment 03 due.\n\nMonday, May 24: Lecture 10: Subsetting and Filtering Data\n\nLecture slides\nLecture notebook\nKahoot quiz.\nSuggested readings:\n\npandas Docs. How do I select a subset of a DataFrame?\nMcKinney, W. Getting started with pandas, section 5.2. Chapter 5 of Python for Data Analysis, 3rd edition.\npandas Docs. How do I create plots in pandas?\nVisual Studio Code Docs. Getting started with Data Wrangler in VS Code.\n\n\nTuesday, May 25: Lecture 11: Introduction to SQL\n\nLecture slides\nLecture notebook\nKahoot quiz.\nSuggested readings:\n\nSQLBolt. Interactive SQL lessons, lessons 1-4 and 10-11.\nSoftware Carpentry. Selecting data, Filtering, and Aggregation. In Databases and SQL.\nKao, Z. C. Select Star SQL.\n\n\nWednesday, May 26: Lecture 12: SQL in Python\n\nLecture slides\nLecture notebook\nKahoot quiz.\nAssignment 04 due.\nSuggested readings:\n\nPython Docs. sqlite3 tutorial.\nSoftware Carpentry. Missing data and Programming with databases: Python. In Databases and SQL.\nSQLite Tutorial. CASE and Window functions.\npandas Docs. Comparison with SQL.\n\n\nThursday, May 27: Lecture 13: Merge Tables in SQL\n\nLecture slides\nLecture notebook\nKahoot quiz.\nSuggested readings:\n\nSQLBolt. Multi-table queries with JOINs and OUTER JOINs.\nSoftware Carpentry. Combining data. In Databases and SQL.\nSQLite Tutorial. Self-join and UNION.\nMcKinney, W. Data wrangling: join, combine, and reshape, section 8.2. Chapter 8 of Python for Data Analysis, 3rd edition.\n\n\nFriday, May 28: Lecture 14: Quiz 03 - Based on Lectures 10-13.\n\nAssignment 05 due."
   },
   {
     "objectID": "testing-ipython.html",
@@ -249,70 +249,70 @@
     "href": "assignments.html",
     "title": "Assignments",
     "section": "",
-    "text": "The course assessment consists of five assignments and three in-class quizzes. Each assignment is worth 10% of your final grade (50%), while the three quizzes combined are worth the remaining 50%, or about 16.67% each.\nAssignment submissions are typically due on Wednesdays and Fridays at 11:59pm following their publication. You may submit via Canvas (preferred) or email (danilo.freire@emory.edu).\nI encourage you to complete assignments in Jupyter Notebooks and submit them in PDF format.\nYou will find the assignments in .ipynb format in the assignments folder on the course repository."
+    "text": "You will complete five assignments and three in-class quizzes. Each assignment is worth 10% of your final grade (50% in total), and the three quizzes together are worth the other 50%, or about 16.67% each.\nAssignments are usually due on Wednesdays and Fridays at 11:59pm. You can submit them on Canvas (preferred) or by email (danilo.freire@emory.edu).\nI encourage you to complete the assignments in Jupyter Notebooks and submit them as PDFs.\nYou will find the assignments in .ipynb format in the assignments folder of the course repository."
   },
   {
     "objectID": "assignments.html#assignment-timeline",
     "href": "assignments.html#assignment-timeline",
     "title": "Assignments",
-    "section": "Assignment Timeline",
-    "text": "Assignment Timeline\n\n\n\nSessions\nTopics\nAssignment\nSubmission Deadline\n\n\n\n\n02-03\nVariables and Lists\nAssignment 01\n2026-05-15\n\n\n03-05\nArrays and Conditional Statements\nAssignment 02\n2026-05-20\n\n\n06-07\nWhile and For Loops, Functions\nAssignment 03\n2026-05-22\n\n\n10-11\nSubsetting Data\nAssignment 04\n2026-05-27\n\n\n12-13\nSQL\nAssignment 05\n2026-05-29"
+    "section": "Assignment timeline",
+    "text": "Assignment timeline\n\n\n\nSessions\nTopics\nAssignment\nSubmission Deadline\n\n\n\n\n02-03\nVariables and Lists\nAssignment 01\n2027-05-14\n\n\n03-05\nArrays and Conditional Statements\nAssignment 02\n2027-05-19\n\n\n06-07\nWhile and For Loops, Functions\nAssignment 03\n2027-05-21\n\n\n10-11\nSubsetting Data\nAssignment 04\n2027-05-26\n\n\n12-13\nSQL\nAssignment 05\n2027-05-28"
   },
   {
     "objectID": "assignments.html#in-class-quizzes",
     "href": "assignments.html#in-class-quizzes",
     "title": "Assignments",
-    "section": "In-Class Quizzes",
-    "text": "In-Class Quizzes\nIn-class quizzes will be held on Fridays. They will be based on the material covered in the previous sessions. The quizzes will be open-book and open-notes, but you will not be allowed communicate with others during the quiz.\n\nQuiz 01: https://github.com/danilofreire/datasci151-summer-quiz01.\nQuiz 02: https://github.com/danilofreire/datasci151-summer-quiz02.\nQuiz 03: https://github.com/danilofreire/datasci151-summer-quiz03."
+    "section": "In-class quizzes",
+    "text": "In-class quizzes\nWe will have the quizzes in class on Fridays, and each one covers the material from the previous sessions. The quizzes are open-book and open-notes, but you cannot communicate with anyone during the quiz.\n\nQuiz 01: https://github.com/danilofreire/datasci151-summer-quiz01\nQuiz 02: https://github.com/danilofreire/datasci151-summer-quiz02\nQuiz 03: https://github.com/danilofreire/datasci151-summer-quiz03"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "DATASCI 151 - Introduction to Statistical Computing II",
     "section": "",
-    "text": "Welcome to DATASCI 151! This course introduces students to data analysis and statistical computing using Python and SQL. Please have a look at the course syllabus and the lecture schedule for more information. A brief overview of the course content is provided below."
+    "text": "Welcome to DATASCI 151! This course introduces data analysis and statistical computing with Python and SQL. Please have a look at the course syllabus and the lecture schedule for more information. You will find a brief overview of the course below."
   },
   {
     "objectID": "index.html#course-overview",
     "href": "index.html#course-overview",
     "title": "DATASCI 151 - Introduction to Statistical Computing II",
     "section": "",
-    "text": "Welcome to DATASCI 151! This course introduces students to data analysis and statistical computing using Python and SQL. Please have a look at the course syllabus and the lecture schedule for more information. A brief overview of the course content is provided below."
+    "text": "Welcome to DATASCI 151! This course introduces data analysis and statistical computing with Python and SQL. Please have a look at the course syllabus and the lecture schedule for more information. You will find a brief overview of the course below."
   },
   {
     "objectID": "index.html#contact-information",
     "href": "index.html#contact-information",
     "title": "DATASCI 151 - Introduction to Statistical Computing II",
-    "section": "Contact Information",
-    "text": "Contact Information\n\nName: Danilo Freire\nEmail: danilo.freire@emory.edu\nOffice Hours: By appointment, please email me to schedule a meeting\nCanvas: Course announcements, Teams meeting links, and grades"
+    "section": "Contact information",
+    "text": "Contact information\n\nName: Danilo Freire\nEmail: danilo.freire@emory.edu\nOffice hours: by appointment, so please email me to schedule a meeting\nCanvas: course announcements, Teams meeting links and grades"
   },
   {
     "objectID": "index.html#repository-structure",
     "href": "index.html#repository-structure",
     "title": "DATASCI 151 - Introduction to Statistical Computing II",
-    "section": "Repository Structure",
-    "text": "Repository Structure\nWhile this website provides an overview of the course materials, the primary source of content is the course’s GitHub repository at https://github.com/danilofreire/datasci151-summer. The repository is organised as follows:\n\nassignments/: Contains all course assignments\nlectures/: Includes lecture materials and code\ntutorials/: Step-by-step guides for the tools used in the course\nsyllabus.pdf: Course syllabus in PDF format\n\nNote: The links will take you to the respective folders or files in the repository, not on this website. You can find links for the rendered content in the navigation bar above."
+    "section": "Repository structure",
+    "text": "Repository structure\nThis website gives an overview of the course, but all the materials live in our GitHub repository at https://github.com/danilofreire/datasci151-summer. The repository has the following folders and files:\n\nassignments/: all course assignments\nlectures/: lecture slides, notebooks and code\ntutorials/: step-by-step guides for the tools we use in the course\nsyllabus.pdf: the course syllabus in PDF format\n\nThe links above open the folders and files in the repository. To see the rendered pages on this website, please use the navigation bar at the top."
   },
   {
     "objectID": "index.html#course-content",
     "href": "index.html#course-content",
     "title": "DATASCI 151 - Introduction to Statistical Computing II",
-    "section": "Course Content",
-    "text": "Course Content\n\nLectures\nWe will meet every weekday from May 12th to May 29th, 2026 from 11:00am to 12:20pm EDT. Our meetings will be online via Teams. Please check our Canvas page for the link. Please check the course schedule for the full list of topics and dates. Lecture materials are available in the lectures folder in the repository.\nEach folder contains an HTML presentation or a Jupyter notebook (.ipynb) with code examples and explanations, along with any additional resources or datasets used in the lecture.\n\n\nAssignments and Quizzes\nThroughout the course, students will complete five assignments and three quizzes to reinforce their learning. The assignments will be posted in the assignments/ folder as the course progresses. The quizzes will be available as separate GitHub repositories. We will also announce these in class and on Canvas. Please refer to the syllabus or the lecture schedule for due dates and submission guidelines.\n\n\nTutorials\nThe tutorials/ tab contains step-by-step guides for various tools and techniques used in the course. Please have a look at these resources to help you get started.\nPDF versions of the tutorials are also available in the repository.\n\n\nJupyterLite\nYou can run Python directly in your browser at https://danilofreire.github.io/datasci151-summer/jupyter, no installation required. The runtime is Pyodide, a WebAssembly Python that comes with pandas, numpy, matplotlib, and the other libraries we use throughout the course. Useful for quick experiments without the local Anaconda setup."
+    "section": "Course content",
+    "text": "Course content\n\nLectures\nWe will meet online via Teams every weekday from May 11th to May 28th, 2027, from 11:00am to 12:20pm EDT. You will find the meeting link on Canvas. The course schedule lists all topics, dates and suggested readings, and the lecture materials are in the lectures folder of the repository.\nEach folder has an HTML presentation or a Jupyter notebook (.ipynb) with code examples and explanations, plus any datasets or other files we use in class.\n\n\nAssignments and quizzes\nYou will complete five assignments and three quizzes during the course. I will post the assignments in the assignments/ folder as the course goes on, and each quiz will have its own GitHub repository. I will also announce them in class and on Canvas. The syllabus and the lecture schedule have all due dates and submission guidelines.\n\n\nTutorials\nThe tutorials/ tab has step-by-step guides for the tools we use in the course. Please have a look at them before our first class, as they will help you get started.\nPDF versions of the tutorials are also available in the repository.\n\n\nJupyterLite\nYou can run Python directly in your browser at https://danilofreire.github.io/datasci151-summer/jupyter, with no installation required. It runs on Pyodide, a version of Python for the browser that comes with pandas, numpy, matplotlib and the other libraries we use in the course. It is useful for quick experiments when you do not have Anaconda at hand."
   },
   {
     "objectID": "index.html#course-requirements",
     "href": "index.html#course-requirements",
     "title": "DATASCI 151 - Introduction to Statistical Computing II",
-    "section": "Course Requirements",
-    "text": "Course Requirements\n\nPrerequisites: None, only willingness to learn and explore new tools!\nSoftware: Anaconda distribution of Python 3.x, VS Code, SQLite, and GitHub Desktop\nPlease also create an educational account on GitHub"
+    "section": "Course requirements",
+    "text": "Course requirements\n\nPrerequisites: none, only a willingness to learn and try new tools!\nSoftware: Anaconda distribution of Python 3.x, VS Code, SQLite and GitHub Desktop\nPlease also create an educational account on GitHub"
   },
   {
     "objectID": "index.html#grading",
     "href": "index.html#grading",
     "title": "DATASCI 151 - Introduction to Statistical Computing II",
     "section": "Grading",
-    "text": "Grading\n\nAssignments (5x): 50%\nClass Quizzes (3x): 50%"
+    "text": "Grading\n\nAssignments (5x): 50%\nQuizzes (3x): 50%"
   },
   {
     "objectID": "index.html#course-policies-and-expectations",
@@ -325,29 +325,29 @@
     "objectID": "index.html#getting-help",
     "href": "index.html#getting-help",
     "title": "DATASCI 151 - Introduction to Statistical Computing II",
-    "section": "Getting Help",
-    "text": "Getting Help\nIf you encounter any issues with the course materials or have questions about the content, please:\n\nCheck the course syllabus for relevant information\nReview the lecture materials and tutorials either in the repository or on the course website\nConsult with your classmates or post in the course discussion forum\nAttend office hours or schedule an appointment with the instructor"
+    "section": "Getting help",
+    "text": "Getting help\nIf you have a problem with the course materials or a question about the content, please:\n\nCheck the course syllabus\nReview the lecture materials and tutorials, either in the repository or on the course website\nAsk your classmates or post in the course discussion forum\nCome to office hours or email me to schedule an appointment"
   },
   {
     "objectID": "index.html#contributing-to-the-repository",
     "href": "index.html#contributing-to-the-repository",
     "title": "DATASCI 151 - Introduction to Statistical Computing II",
-    "section": "Contributing to the Repository",
-    "text": "Contributing to the Repository\nWhile this repository is primarily maintained by the course instructor, everyone is welcome to contribute. Please feel free to suggest improvements or report issues by opening a GitHub issue, submitting a pull request, creating a discussion post, or contacting the instructor directly."
+    "section": "Contributing to the repository",
+    "text": "Contributing to the repository\nI maintain this repository, but everyone is welcome to contribute! If you would like to suggest an improvement or report a problem, you can open a GitHub issue, submit a pull request, start a discussion or email me directly."
   },
   {
     "objectID": "index.html#acknowledgements",
     "href": "index.html#acknowledgements",
     "title": "DATASCI 151 - Introduction to Statistical Computing II",
     "section": "Acknowledgements",
-    "text": "Acknowledgements\nThis course and its materials have been developed with inspiration from previous versions of this course, as well as various open-source communities and educational resources. I am particularly grateful to Alejandro Sánchez Becerra for his teaching materials and guidance. I am also thankful for the contributions of the Python, SQL, and data science communities that make courses like this possible."
+    "text": "Acknowledgements\nThis course builds on previous versions of DATASCI 151 and on many open-source communities and educational resources. I am especially grateful to Alejandro Sánchez Becerra for his teaching materials and guidance. Many thanks also to the Python, SQL and data science communities, whose work makes courses like this possible."
   },
   {
     "objectID": "index.html#license",
     "href": "index.html#license",
     "title": "DATASCI 151 - Introduction to Statistical Computing II",
     "section": "License",
-    "text": "License\nThis repository is licensed under the MIT License. You are free to use, modify, and distribute the materials as needed, with appropriate attribution to the original source.\n\nWe look forward to an engaging and productive month! Good luck, and happy coding! 😀"
+    "text": "License\nThis repository is licensed under the MIT License. You are free to use, modify and distribute the materials, as long as you credit the original source.\n\nI look forward to working with you this May! Good luck, and happy coding! :)"
   },
   {
     "objectID": "03-github-tutorial.html",
@@ -390,5 +390,12 @@
     "title": "MIT License",
     "section": "",
     "text": "Copyright (c) 2024 Danilo Freire\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html#course-policies",
+    "href": "index.html#course-policies",
+    "title": "DATASCI 151 - Introduction to Statistical Computing II",
+    "section": "Course policies",
+    "text": "Course policies\nFor course policies, grading criteria, attendance and academic integrity, please see the syllabus in the repository or on the course website."
   }
 ]
