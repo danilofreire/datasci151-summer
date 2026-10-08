@@ -1,7 +1,8 @@
 ---
 title: "DATASCI 151 - Introduction to Statistical Computing II"
 author: "Danilo Freire"  
-date: "Summer 2026"
+date: "Maymester 2027"
+date-format: "[Maymester] YYYY"
 fontsize: 12pt
 fontfamily: libertine
 monofont: inconsolata
@@ -30,35 +31,34 @@ editor:
 
 \doublespacing 
 
-# Course Description
+# Course description
 
-Welcome to [DATASCI 151](https://github.com/danilofreire/datasci151-summer)! This Maymester course introduces data analysis and statistical computing using Python and SQL. It is perfect for beginners with little or no programming experience who want to build skills for data-driven decision making.
+Welcome to [DATASCI 151](https://github.com/danilofreire/datasci151-summer)! This Maymester course introduces data analysis and statistical computing with Python and SQL. It is designed for beginners, so you do not need any programming experience to take it.
 
-We will cover Python programming fundamentals, Jupyter Notebooks for reproducible research, data wrangling and merging with SQL, data visualisation, and introductions to linear modelling and time series analysis.
+We will cover the basics of Python programming, Jupyter Notebooks for reproducible research, data wrangling and merging with SQL, and data visualisation.
 
-You will work with real-world datasets and problems, gaining hands-on experience using these tools to extract insights from data. The course develops both technical skills and critical thinking abilities needed for tackling complex data challenges.
+You will work with real datasets and problems throughout the course and use these tools to answer questions with data. The course builds your technical skills and your critical thinking, which you will need for any data analysis you do later on.
 
-# Learning Objectives
+# Learning objectives
 
 By the end of this course, you will be able to:
 
-1. Write Python functions and perform mathematical operations
-2. Wrangle and manipulate data using Python libraries like Pandas
+1. Write Python functions and do mathematical operations
+2. Clean and manipulate data with Python libraries such as pandas
 3. Merge and manage databases with SQL
-4. Create visualisations to communicate data insights
-5. Implement linear models and understand time series analysis principles
-6. Use Jupyter Notebooks for reproducible research
-7. Develop problem-solving skills for data analysis and statistical computing
+4. Create visualisations to communicate what you find in the data
+5. Use Jupyter Notebooks for reproducible research
+6. Solve data analysis and statistical computing problems on your own
 
 # Prerequisites
 
-There are no prerequisites for this course. Everyone is welcome, regardless of prior programming or data analysis experience. Feel free to reach out if you have questions about the course content or whether it is right for you.
+None! Everyone is welcome, whatever your experience with programming or data analysis. If you are not sure whether the course is right for you, just send me an email and I will be happy to help.
 
 # Materials
 
-This course provides everything you need to master the core concepts, but you are encouraged to explore these additional resources to deepen your understanding of Python and SQL.
+The lecture notes cover everything you need for the course. If you would like to learn more about Python and SQL, all the resources below are free online (the Coursera and edX courses are free if you choose the audit option).
 
-## Suggested Books
+## Suggested books
 
 - [Python for Data Analysis](https://wesmckinney.com/book/) by Wes McKinney
 - [Elements of Data Science](https://allendowney.github.io/ElementsOfDataScience/README.html) by Allen Downey
@@ -68,7 +68,7 @@ This course provides everything you need to master the core concepts, but you ar
 - [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/) by Jake VanderPlas
 - [Select Star SQL](https://selectstarsql.com/) by Zi Chong Kao
 
-## Online Courses
+## Online courses
 
 - [Coursera: Python for Everybody Specialisation](https://www.coursera.org/specializations/python)
 - [edX: Python Basics for Data Science](https://www.edx.org/learn/python/ibm-python-basics-for-data-science)
@@ -77,149 +77,169 @@ This course provides everything you need to master the core concepts, but you ar
 - [Software Carpentry: Databases and SQL](https://swcarpentry.github.io/sql-novice-survey/)
 - [Coursera: SQL for Data Science](https://www.coursera.org/learn/sql-for-data-science)
 
-## Additional Resources
+## Additional resources
 
 - [Python Documentation](https://docs.python.org/3/)
-- [Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
+- [pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
 - [SQLite Documentation](https://www.sqlite.org/docs.html)
 - [SQLBolt](https://sqlbolt.com/)
 - [DataLemur for SQL interview practice](https://datalemur.com)
 - [GitHub Docs](https://docs.github.com/en)
 
-# Course Information
+# Course information
 
+We will meet online, Monday to Friday, from 11:00am to 12:20pm EDT. Please review the materials before each class. You can find all course information in our GitHub repository at <https://github.com/danilofreire/datasci151-summer>.
 
-We will meet online Monday through Friday from 11:00am to 12:20pm EDT. Please review the materials before each class. All course information is available on our GitHub repository at <https://github.com/danilofreire/datasci151-summer>. While I intend to follow the schedule as planned, I also want to adapt to your learning pace and style, so the syllabus may change during the course. Please check [the course repository](https://github.com/danilofreire/datasci151-summer) regularly for updates, which I will also announce in class and on Canvas.
+I plan to follow the schedule, but I also want to adapt it to your pace and learning style, so the syllabus may change during the course. I will announce any changes in class and on Canvas. Please also check [the course repository](https://github.com/danilofreire/datasci151-summer) regularly for updates.
 
 # Software
 
-We will mainly use [Python](https://www.python.org) in this course, which is a free and general-purpose programming language widely used in data science and machine learning. I recommend the [Anaconda distribution](https://www.anaconda.com/products/individual), which already includes many useful libraries like [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), and [Jupyter](https://jupyter.org/).
+We will mainly use [Python](https://www.python.org), a free, general-purpose programming language that is widely used in data science and machine learning. I recommend the [Anaconda distribution](https://www.anaconda.com/products/individual), which already includes many of the libraries we need, such as [pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/) and [Jupyter](https://jupyter.org/).
 
-You can use any text editor, but I recommend [VS Code](https://code.visualstudio.com/) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python). [PyCharm](https://www.jetbrains.com/pycharm/) is another excellent option. Feeling adventurous? Try [Neovim](https://neovim.io/) with the [coc-pyright](https://github.com/fannheyward/coc-pyright) plugin—that is, if [you can exit the editor](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/). :)
+You can use any text editor you like, but I recommend [VS Code](https://code.visualstudio.com/) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python). [PyCharm](https://www.jetbrains.com/pycharm/) is another excellent option. Feeling adventurous? Try [Neovim](https://neovim.io/) with the [coc-pyright](https://github.com/fannheyward/coc-pyright) plugin (that is, if [you can exit the editor](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/)). :)
 
-We will also use [Jupyter Notebooks](https://jupyter.org/) in class. Jupyter comes pre-installed with Anaconda, but please install the [Jupyter extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter&ssr=false) too. We will have a hands-on session to use Jupyter effectively.
+We will also use [Jupyter Notebooks](https://jupyter.org/) in class. Jupyter comes with Anaconda, but please also install the [Jupyter extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter&ssr=false). We will have a hands-on session on how to use it.
 
-I have prepared [a series of tutorials](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials) to help you install Anaconda, Jupyter, VS Code, and set up a free GitHub educational account. Please work through these tutorials as soon as possible to ensure you have all the necessary tools.
+I have written [a series of tutorials](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials) to help you install Anaconda, Jupyter and VS Code, and to open a free GitHub educational account. Please work through them as soon as possible, so you have all the tools ready when we start.
 
-# Office Hours
+# Office hours
 
-I am flexible with office hours, but email works best. Feel free to message me anytime at [danilo.freire@emory.edu](mailto:danilo.freire@emory.edu). I will usually reply within a few hours.
+I am flexible with office hours, but email works best. Feel free to write to me at any time at [danilo.freire@emory.edu](mailto:danilo.freire@emory.edu). I usually reply within a few hours.
 
-# Academic Integrity
+# Academic integrity
 
-Every Emory University community member is responsible for upholding a standard of unimpeachable honour in all academic work. The [Honour Code of Emory College](http://catalog.college.emory.edu/academic/policies-regulations/honor-code.html) assumes that every member of the University will not only conduct their own life according to the highest ethical standards but will also refuse to tolerate actions in others that would harm the institution's reputation. Academic misconduct includes any action or inaction that violates the integrity and honesty of the academic community. Any suspected cases will be referred to the Emory Honour Council.
+Every member of the Emory community is responsible for being honest in all academic work. The [Honor Code of Emory College](http://catalog.college.emory.edu/academic/policies-regulations/honor-code.html) expects every member of the University to follow the highest ethical standards, and also to refuse to tolerate actions by others that would harm the institution's reputation. Academic misconduct includes any action or inaction that violates the integrity and honesty of the academic community. I will refer any suspected case to the Emory Honor Council.
 
-# Artificial Intelligence
+# Artificial intelligence
 
-You will complete five problem sets and three in-class quizzes. You may use AI tools for assignments as a supplement to your own thinking, not a replacement for it. **AI tools are not permitted during quizzes**, which are individual tests of your understanding. If you use AI on an assignment, check the output carefully and take responsibility for any errors in what you submit. Cite all sources, including AI tools, and add a brief note at the end of any document where AI was used.
+You may use AI tools for the assignments, as long as they support your own thinking and do not replace it. **AI tools are not allowed during quizzes**, because quizzes are individual tests of your understanding. If you use AI for an assignment, please check the output carefully, as you are responsible for any errors in what you submit. Cite all your sources, including AI tools, and add a short note at the end of any document where you used AI.
 
-# Special Needs and Accessibility Services
+# Accessibility services
 
-I am committed to providing accommodations so all students can succeed. If you have medical or health conditions that might affect your performance, please visit the [Department of Accessibility Services (DAS)](http://accessibility.emory.edu/) to learn about available accommodations. Provide me with your DAS Accommodation Letter at the start of the semester or when it is granted.
+I want every student to succeed, and I am happy to provide accommodations. If you have a medical or health condition that may affect your work, please visit the [Department of Accessibility Services (DAS)](http://accessibility.emory.edu/) to learn about the accommodations available. Please send me your DAS Accommodation Letter at the start of the course, or as soon as you receive it.
 
-Note: DAS accommodations like extra time apply only to quizzes, not assignments (since assignments are released in advance, letting you work at your own pace). Athletes and students with other commitments should inform me of scheduling conflicts early in the course. I will do my best to accommodate you, though I cannot guarantee every request. Questions? Just reach out.
+DAS accommodations such as extra time apply only to quizzes. They do not apply to assignments, because I release assignments in advance and you can work on them at your own pace. If you are an athlete or have other commitments, please tell me about any scheduling conflicts early in the course. I will do my best to accommodate you, although I cannot promise to meet every request. Any questions? Just let me know.
 
-# English Language Learners
+# English language learners
 
-Emory University welcomes students from across the country and around the world. The unique perspectives that international and multilingual students bring enrich our entire community. To support multilingual learners, we offer language and culture workshops and individual appointments. For more information about English Language Learning support, contact the ELLP Specialists at <https://writingcenter.emory.edu>. Your English proficiency will never be penalized.
+Emory welcomes students from across the country and around the world, and international and multilingual students bring perspectives that make our whole community richer. To support multilingual learners, Emory offers language and culture workshops and individual appointments. For more information, please contact the ELLP Specialists at <https://writingcenter.emory.edu>. Your level of English will never be penalised in this course.
 
-# Assignments and Grading Policy
+# Assignments and grading
 
-**Problem Sets (50%).** You will complete five problem sets throughout the course. These reinforce lecture concepts and give you hands-on practise with statistical programming. Each set includes theoretical questions and practical applications that you must complete individually. Acknowledge all sources, including textbooks, articles, and AI tools.
+**Assignments (50%).** You will complete five assignments during the course. They give you hands-on practice with the lecture material, and each one has conceptual questions and practical exercises. Please complete them individually and acknowledge all your sources, including textbooks, articles and AI tools.
 
-*Late submissions receive half credit automatically.* Please submit all assignments as HTML files, Jupyter notebooks (`.ipynb`), or PDFs via Canvas by midnight on the due date.
+*Late submissions automatically receive half credit.* Please submit your assignments on Canvas as HTML files, Jupyter notebooks (`.ipynb`) or PDFs by midnight on the due date.
 
-**Class Quizzes (50%).** You will take three in-class quizzes on Fridays, based on that week's lectures. Quizzes test your understanding and ability to apply concepts to new problems. They are open-book and open-notes, but **AI tools are not allowed**. Quizzes are individual assessments—no discussing questions with classmates.
+**Quizzes (50%).** You will take three in-class quizzes, all on Fridays. Each quiz covers that week's lectures and asks you to apply the concepts to new problems. Quizzes are open-book and open-notes, but **AI tools are not allowed**. They are also individual, so please do not discuss the questions with your classmates.
 
-# Grading Scale
+# Grading scale
 
-Each student's final grade will be based on the following percentage ranges, rounded up to the nearest point:
+Your final grade will follow the ranges below, rounded up to the nearest point:
 
 | Grade | A  | A- | B+ | B  | B- | C  | D  | F  |
 |-------|----|----|----|----|----|----|----|----|
 | Range | 91–100 | 86–90 | 81–85 | 76–80 | 71–75 | 66–70 | 60–65 | <60 |
 
-# Course Outline and Suggested Readings
+# Course outline and suggested readings
 
-The lecture notes cover all essential material we will cover. As mentioned, the course outline may change, so please check our [GitHub repository](https://github.com/danilofreire/datasci151-summer) regularly for updates.
+The lecture notes cover all the essential material. As I mentioned above, the schedule may change, so please check our [GitHub repository](https://github.com/danilofreire/datasci151-summer) regularly for updates.
 
-Each lecture folder contains an HTML file or a Jupyter notebook (`.ipynb`) with code examples and explanations, along with any additional resources or datasets used in the lecture.
+Each lecture folder has an HTML file or a Jupyter notebook (`.ipynb`) with code examples and explanations, plus any datasets or other files we use in class. The suggested readings are all free online.
 
-- Tuesday, May 12: [Lecture 01: Welcome to DATASCI 151 - Introduction and Course Overview](https://danilofreire.github.io/datasci151-summer/lectures/lecture-01/01-introduction.html).
-  Please make sure to install the necessary software for the course by following the [Course Tutorials: How to Install Anaconda, Jupyter, VSCode, and Open a Free Educational Account on GitHub](https://danilofreire.github.io/datasci151-summer/tutorials.html).
+- Tuesday, May 11: Lecture 01: Welcome to DATASCI 151 - Introduction and Course Overview
+  - [Lecture slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-01/01-introduction.html)
+  - Please make sure to install the necessary software for the course by following the [Course Tutorials: How to Install Anaconda, Jupyter, VSCode, and Open a Free Educational Account on GitHub](https://danilofreire.github.io/datasci151-summer/tutorials.html)
   - Suggested readings:
     - Severance, C. [Why should you learn to write programs?](https://www.py4e.com/html3/01-intro) Chapter 1 of *Python for Everybody*.
     - Software Carpentry. [Automated version control](https://swcarpentry.github.io/git-novice/01-basics.html). In *Version Control with Git*.
     - GitHub Docs. [Hello World](https://docs.github.com/en/get-started/start-your-journey/hello-world).
     - Visual Studio Code Docs. [Jupyter Notebooks in VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks).
 
-- Wednesday, May 13: Lecture 02: Jupyter Notebooks, Packages, Variables, and Lists. [Lecture Slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-02/02-jupyter-variables.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-02/02-jupyter-variables.ipynb). 
+- Wednesday, May 12: Lecture 02: Jupyter Notebooks, Packages, Variables, and Lists
+  - [Lecture slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-02/02-jupyter-variables.html)
+  - [Lecture notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-02/02-jupyter-variables.ipynb)
   - Suggested readings:
     - conda Docs. [Managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
     - Downey, A. [Variables and statements](https://allendowney.github.io/ThinkPython/chap02.html). Chapter 2 of *Think Python*, 3rd edition.
     - Software Carpentry. [Lists](https://swcarpentry.github.io/python-novice-gapminder/11-lists.html). In *Plotting and Programming in Python*.
     - Matplotlib Docs. [Quick start guide](https://matplotlib.org/stable/users/explain/quick_start.html).
 
-- Thursday, May 14: Lecture 03: Maths Operations, Arrays, and Boolean Logic. [Lecture Slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-03/03-maths-boolean.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-03/03-maths-boolean.ipynb)
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=b9d95c73-826e-411a-99c3-1b5cc87780f2&hostId=05eb977d-4f8a-440e-9e45-95212b29d103). Kahoot quizzes are optional and will not be graded. We will do it in class! It is a fun way to review the material covered in the lecture.
+- Thursday, May 13: Lecture 03: Maths Operations, Arrays, and Boolean Logic
+  - [Lecture slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-03/03-maths-boolean.html)
+  - [Lecture notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-03/03-maths-boolean.ipynb)
+  - [Kahoot quiz](https://play.kahoot.it/v2/?quizId=b9d95c73-826e-411a-99c3-1b5cc87780f2&hostId=05eb977d-4f8a-440e-9e45-95212b29d103). Kahoot quizzes are optional and not graded. We will do them together in class, and they are a fun way to review the lecture :)
   - Suggested readings:
     - NumPy Docs. [NumPy: the absolute basics for beginners](https://numpy.org/doc/stable/user/absolute_beginners.html).
     - Downey, A. [Lists and arrays](https://allendowney.github.io/ElementsOfDataScience/03_arrays.html). Chapter 3 of *Elements of Data Science*.
     - VanderPlas, J. [Aggregations: min, max, and everything in between](https://jakevdp.github.io/PythonDataScienceHandbook/02.04-computation-on-arrays-aggregates.html). In *Python Data Science Handbook*.
     - VanderPlas, J. [Comparisons, masks, and Boolean logic](https://jakevdp.github.io/PythonDataScienceHandbook/02.06-boolean-arrays-and-masks.html). In *Python Data Science Handbook*.
 
-- Friday, May 15: [Lecture 04: Quiz 01 - Based on Lectures 01-03](https://github.com/danilofreire/datasci151-summer-quiz01/). The repository contains the quiz questions and will be made online on the day of the quiz.
+- Friday, May 14: [Lecture 04: Quiz 01 - Based on Lectures 01-03](https://github.com/danilofreire/datasci151-summer-quiz01/). The repository with the questions will be available on the day of the quiz.
   - [Assignment 01 due](https://github.com/danilofreire/datasci151-summer/tree/main/assignments/01-assignment).
 
-- Monday, May 18: Lecture 05: Conditional Statements. [Lecture Slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-05/05-conditional-statements.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-05/05-conditional-statements.ipynb).
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=d8d3593a-52c8-4d6c-b938-d880edb69745&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
+- Monday, May 17: Lecture 05: Conditional Statements
+  - [Lecture slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-05/05-conditional-statements.html)
+  - [Lecture notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-05/05-conditional-statements.ipynb)
+  - [Kahoot quiz](https://play.kahoot.it/v2/?quizId=d8d3593a-52c8-4d6c-b938-d880edb69745&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
   - Suggested readings:
     - Severance, C. [Conditional execution](https://www.py4e.com/html3/03-conditional). Chapter 3 of *Python for Everybody*.
     - Downey, A. [Conditionals and recursion](https://allendowney.github.io/ThinkPython/chap05.html). Chapter 5 of *Think Python*, 3rd edition.
     - Python Docs. [More on lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists). In *The Python Tutorial*.
 
-- Tuesday, May 19: Lecture 06: For and While Loops. [Lecture Slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-06/06-loops.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-06/06-loops.ipynb).
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=de289cbf-f886-4d4a-bd4c-91f1b2cc01c2&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
+- Tuesday, May 18: Lecture 06: For and While Loops
+  - [Lecture slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-06/06-loops.html)
+  - [Lecture notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-06/06-loops.ipynb)
+  - [Kahoot quiz](https://play.kahoot.it/v2/?quizId=de289cbf-f886-4d4a-bd4c-91f1b2cc01c2&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
   - Suggested readings:
     - Severance, C. [Iteration](https://www.py4e.com/html3/05-iterations). Chapter 5 of *Python for Everybody*.
     - Software Carpentry. [For loops](https://swcarpentry.github.io/python-novice-gapminder/12-for-loops.html). In *Plotting and Programming in Python*.
     - Python Docs. [`for` statements and the `range()` function](https://docs.python.org/3/tutorial/controlflow.html#for-statements). In *The Python Tutorial*.
 
-- Wednesday, May 20: Lecture 07: Functions. [Lecture Slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-07/07-functions.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-07/07-functions.ipynb).
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=0219d3ce-d690-4c88-9396-3ce6330bbfdb&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
+- Wednesday, May 19: Lecture 07: Functions
+  - [Lecture slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-07/07-functions.html)
+  - [Lecture notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-07/07-functions.ipynb)
+  - [Kahoot quiz](https://play.kahoot.it/v2/?quizId=0219d3ce-d690-4c88-9396-3ce6330bbfdb&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
   - [Assignment 02 due](https://github.com/danilofreire/datasci151-summer/tree/main/assignments/02-assignment).
   - Suggested readings:
     - Downey, A. [Functions](https://allendowney.github.io/ThinkPython/chap03.html). Chapter 3 of *Think Python*, 3rd edition.
     - Software Carpentry. [Writing functions](https://swcarpentry.github.io/python-novice-gapminder/16-writing-functions.html) and [Variable scope](https://swcarpentry.github.io/python-novice-gapminder/17-scope.html). In *Plotting and Programming in Python*.
     - Python Docs. [Lambda expressions](https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions). In *The Python Tutorial*.
 
-- Thursday, May 21: Lecture 08: Data Wrangling with Pandas. [Lecture Slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-08/08-data-wrangling.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-08/08-data-wrangling.ipynb).
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=1b854633-5911-431d-8ae3-fb3535c40266&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
+- Thursday, May 20: Lecture 08: Data Wrangling with Pandas
+  - [Lecture slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-08/08-data-wrangling.html)
+  - [Lecture notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-08/08-data-wrangling.ipynb)
+  - [Kahoot quiz](https://play.kahoot.it/v2/?quizId=1b854633-5911-431d-8ae3-fb3535c40266&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
   - Suggested readings:
     - McKinney, W. [Data cleaning and preparation](https://wesmckinney.com/book/data-cleaning), sections 7.1 and 7.2. Chapter 7 of *Python for Data Analysis*, 3rd edition.
     - pandas Docs. [Working with missing data](https://pandas.pydata.org/docs/user_guide/missing_data.html).
     - Python Docs. [Modules](https://docs.python.org/3/tutorial/modules.html). In *The Python Tutorial*.
 
-- Friday, May 22: [Lecture 09: Quiz 02 - Based on Lectures 05-08](https://github.com/danilofreire/datasci151-summer-quiz02/). As with Quiz 01, the repository will be available on the day of the quiz.
+- Friday, May 21: [Lecture 09: Quiz 02 - Based on Lectures 05-08](https://github.com/danilofreire/datasci151-summer-quiz02/). As with Quiz 01, the repository will be available on the day of the quiz.
   - [Assignment 03 due](https://github.com/danilofreire/datasci151-summer/tree/main/assignments/03-assignment).
 
-- Monday, May 25: Lecture 10: Subsetting and Filtering Data. [Lecture Slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-10/10-subsetting-data.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-10/10-subsetting-data.ipynb).
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=0479c8ec-6e88-43b7-9d65-fa41b23d60c1&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
+- Monday, May 24: Lecture 10: Subsetting and Filtering Data
+  - [Lecture slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-10/10-subsetting-data.html)
+  - [Lecture notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-10/10-subsetting-data.ipynb)
+  - [Kahoot quiz](https://play.kahoot.it/v2/?quizId=0479c8ec-6e88-43b7-9d65-fa41b23d60c1&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
   - Suggested readings:
     - pandas Docs. [How do I select a subset of a DataFrame?](https://pandas.pydata.org/docs/getting_started/intro_tutorials/03_subset_data.html)
     - McKinney, W. [Getting started with pandas](https://wesmckinney.com/book/pandas-basics), section 5.2. Chapter 5 of *Python for Data Analysis*, 3rd edition.
     - pandas Docs. [How do I create plots in pandas?](https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_plotting.html)
     - Visual Studio Code Docs. [Getting started with Data Wrangler in VS Code](https://code.visualstudio.com/docs/datascience/data-wrangler).
 
-- Tuesday, May 26: Lecture 11: Introduction to SQL. [Lecture Slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-11/11-introduction-sql.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-11/11-introduction-sql.ipynb).
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=29a7984b-c6ed-4e87-91bd-cd5e4bf38094&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
+- Tuesday, May 25: Lecture 11: Introduction to SQL
+  - [Lecture slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-11/11-introduction-sql.html)
+  - [Lecture notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-11/11-introduction-sql.ipynb)
+  - [Kahoot quiz](https://play.kahoot.it/v2/?quizId=29a7984b-c6ed-4e87-91bd-cd5e4bf38094&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
   - Suggested readings:
     - SQLBolt. [Interactive SQL lessons](https://sqlbolt.com/lesson/select_queries_introduction), lessons 1-4 and 10-11.
     - Software Carpentry. [Selecting data](https://swcarpentry.github.io/sql-novice-survey/01-select.html), [Filtering](https://swcarpentry.github.io/sql-novice-survey/03-filter.html), and [Aggregation](https://swcarpentry.github.io/sql-novice-survey/06-agg.html). In *Databases and SQL*.
     - Kao, Z. C. [Select Star SQL](https://selectstarsql.com/).
 
-- Wednesday, May 27: Lecture 12: SQL in Python. [Lecture Slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-12/12-sql-python.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-12/12-sql-python.ipynb).
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=8e782b35-ddb5-41a5-91e9-233fd7b01fbf&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
+- Wednesday, May 26: Lecture 12: SQL in Python
+  - [Lecture slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-12/12-sql-python.html)
+  - [Lecture notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-12/12-sql-python.ipynb)
+  - [Kahoot quiz](https://play.kahoot.it/v2/?quizId=8e782b35-ddb5-41a5-91e9-233fd7b01fbf&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
   - [Assignment 04 due](https://github.com/danilofreire/datasci151-summer/tree/main/assignments/04-assignment).
   - Suggested readings:
     - Python Docs. [`sqlite3` tutorial](https://docs.python.org/3/library/sqlite3.html#sqlite3-tutorial).
@@ -227,13 +247,15 @@ Each lecture folder contains an HTML file or a Jupyter notebook (`.ipynb`) with 
     - SQLite Tutorial. [`CASE`](https://www.sqlitetutorial.net/sqlite-case/) and [Window functions](https://www.sqlitetutorial.net/sqlite-window-functions/).
     - pandas Docs. [Comparison with SQL](https://pandas.pydata.org/docs/getting_started/comparison/comparison_with_sql.html).
 
-- Thursday, May 28: Lecture 13: Merge Tables in SQL. [Lecture Slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-13/13-sql-tables.html), [Lecture Notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-13/13-sql-tables.ipynb).
-  - [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=762c7a39-ee91-4977-a119-d3f34bc5a4f2&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
+- Thursday, May 27: Lecture 13: Merge Tables in SQL
+  - [Lecture slides](https://danilofreire.github.io/datasci151-summer/lectures/lecture-13/13-sql-tables.html)
+  - [Lecture notebook](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-13/13-sql-tables.ipynb)
+  - [Kahoot quiz](https://play.kahoot.it/v2/?quizId=762c7a39-ee91-4977-a119-d3f34bc5a4f2&hostId=05eb977d-4f8a-440e-9e45-95212b29d103).
   - Suggested readings:
     - SQLBolt. [Multi-table queries with JOINs](https://sqlbolt.com/lesson/select_queries_with_joins) and [OUTER JOINs](https://sqlbolt.com/lesson/select_queries_with_outer_joins).
     - Software Carpentry. [Combining data](https://swcarpentry.github.io/sql-novice-survey/07-join.html). In *Databases and SQL*.
     - SQLite Tutorial. [Self-join](https://www.sqlitetutorial.net/sqlite-self-join/) and [`UNION`](https://www.sqlitetutorial.net/sqlite-union/).
     - McKinney, W. [Data wrangling: join, combine, and reshape](https://wesmckinney.com/book/data-wrangling), section 8.2. Chapter 8 of *Python for Data Analysis*, 3rd edition.
 
-- Friday, May 29: [Lecture 14: Quiz 03 - Based on Lectures 10-13](https://github.com/danilofreire/datasci151-summer-quiz03/). 
+- Friday, May 28: [Lecture 14: Quiz 03 - Based on Lectures 10-13](https://github.com/danilofreire/datasci151-summer-quiz03/). 
   - [Assignment 05 due](https://github.com/danilofreire/datasci151-summer/tree/main/assignments/05-assignment).
