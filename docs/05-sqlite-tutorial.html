@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorials – DATASCI 151</title>
+<title>Installing SQLite and SQLite3 Editor – DATASCI 151</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -38,14 +73,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-711d1f9ca8572b13a79b12eced64be79.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-452aa33a76078c0c050d7f0839f841f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-711d1f9ca8572b13a79b12eced64be79.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-df58a58052b55e393ee96285dd0abd71.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-17d91d356485da7232ca3767b9ee3bc9.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-df58a58052b55e393ee96285dd0abd71.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-64dea11269d504a8354b4bac223596a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-9a3a37fff577f8390ff24c1dd2aa23ec.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-64dea11269d504a8354b4bac223596a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-219e1be4f55ffaba45988d4b2bfeffcc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-71fc8332b262a630d27c3030e86b02aa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-219e1be4f55ffaba45988d4b2bfeffcc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -268,7 +303,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./tutorials.html" aria-current="page"> <i class="bi bi-tools" role="img">
+    <a class="nav-link" href="./tutorials.html"> <i class="bi bi-tools" role="img">
 </i> 
 <span class="menu-text">Tutorials</span></a>
   </li>  
@@ -304,16 +339,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#available-tutorials" id="toc-available-tutorials" class="nav-link active" data-scroll-target="#available-tutorials">Available tutorials</a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional resources</a>
-  <ul class="collapse">
-  <li><a href="#further-examples" id="toc-further-examples" class="nav-link" data-scroll-target="#further-examples">Further examples</a></li>
-  <li><a href="#suggested-books" id="toc-suggested-books" class="nav-link" data-scroll-target="#suggested-books">Suggested books</a></li>
-  <li><a href="#online-courses" id="toc-online-courses" class="nav-link" data-scroll-target="#online-courses">Online courses</a></li>
-  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
-  </ul></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#what-is-sqlite" id="toc-what-is-sqlite" class="nav-link" data-scroll-target="#what-is-sqlite">What is SQLite?</a></li>
+  <li><a href="#step-1-check-pythons-sqlite3-module" id="toc-step-1-check-pythons-sqlite3-module" class="nav-link" data-scroll-target="#step-1-check-pythons-sqlite3-module">Step 1: check Python’s <code>sqlite3</code> module</a></li>
+  <li><a href="#step-2-install-sqlite3-editor-in-vs-code" id="toc-step-2-install-sqlite3-editor-in-vs-code" class="nav-link" data-scroll-target="#step-2-install-sqlite3-editor-in-vs-code">Step 2: install SQLite3 Editor in VS Code</a></li>
+  <li><a href="#step-3-optional-the-sqlite3-command-line-tool" id="toc-step-3-optional-the-sqlite3-command-line-tool" class="nav-link" data-scroll-target="#step-3-optional-the-sqlite3-command-line-tool">Step 3 (optional): the <code>sqlite3</code> command-line tool</a></li>
+  <li><a href="#further-resources" id="toc-further-resources" class="nav-link" data-scroll-target="#further-resources">Further resources</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/danilofreire/datasci151-summer/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/danilofreire/datasci151-summer/blob/gh-pages/tutorials.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/danilofreire/datasci151-summer/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/danilofreire/datasci151-summer/blob/gh-pages/05-sqlite-tutorial.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -321,7 +354,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutorials</h1>
+<h1 class="title">Installing SQLite and SQLite3 Editor</h1>
 </div>
 
 
@@ -338,65 +371,99 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>These tutorials show you how to install and use the tools we will use in class. Please work through them before our first class on 11 May, so you have everything ready when we start coding.</p>
-<section id="available-tutorials" class="level2">
-<h2 class="anchored" data-anchor-id="available-tutorials">Available tutorials</h2>
-<ul>
-<li><a href="./01-vscode-anaconda-tutorial.html">01 - VS Code and Anaconda tutorial</a></li>
-<li><a href="./02-jupyter-markdown-tutorial.html">02 - Jupyter Notebook and Markdown tutorial</a></li>
-<li><a href="./03-github-tutorial.html">03 - Git and GitHub tutorial</a></li>
-<li><a href="./04-conda-environments-tutorial.html">04 - The terminal and conda environments tutorial</a></li>
-<li><a href="./05-sqlite-tutorial.html">05 - SQLite and SQLite3 Editor tutorial</a> (please do this one before Lecture 11)</li>
-</ul>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>In Lectures 11 to 13, we will use <a href="https://en.wikipedia.org/wiki/SQL">SQL</a> to work with databases. This tutorial helps you set up everything you need before Lecture 11, so we can start writing queries right away in class. Please do <a href="./01-vscode-anaconda-tutorial.html">Tutorial 01</a> first, as you will need VS Code and Anaconda installed.</p>
+<p>You will set up three things:</p>
+<ol type="1">
+<li>The <code>sqlite3</code> module in Python, which comes with Anaconda, so you only need to check that it works</li>
+<li>The SQLite3 Editor extension for VS Code, which lets you see and edit databases without writing code</li>
+<li>The <code>sqlite3</code> command-line tool (optional), which lets you run SQL in the terminal</li>
+</ol>
 </section>
-<section id="additional-resources" class="level2">
-<h2 class="anchored" data-anchor-id="additional-resources">Additional resources</h2>
-<section id="further-examples" class="level3">
-<h3 class="anchored" data-anchor-id="further-examples">Further examples</h3>
-<ul>
-<li><a href="./testing-ipython.html">testing-ipython.ipynb</a>: a Jupyter Notebook with Markdown and code cells</li>
-<li><a href="testing-anaconda.py">testing-anaconda.py</a>: a Python script to test your Anaconda installation</li>
-</ul>
+<section id="what-is-sqlite" class="level1">
+<h1>What is SQLite?</h1>
+<p><a href="https://www.sqlite.org/">SQLite</a> is a database system that saves the whole database in a single file on your computer. You do not need to install or run a database server, which makes SQLite very easy to use. It is also one of the most widely used databases in the world: your phone and your web browser use it every day.</p>
+<p>People sometimes say that SQLite is “not a real database” because it is just one file. That is not true: SQLite can store far more data than you will ever need in this course. The SQL you learn with SQLite also works, with small differences, in other systems such as PostgreSQL and MySQL.</p>
 </section>
-<section id="suggested-books" class="level3">
-<h3 class="anchored" data-anchor-id="suggested-books">Suggested books</h3>
-<p>All the books below are free online.</p>
-<ul>
-<li><a href="https://wesmckinney.com/book/">Python for Data Analysis</a> by Wes McKinney</li>
-<li><a href="https://allendowney.github.io/ElementsOfDataScience/README.html">Elements of Data Science</a> by Allen Downey</li>
-<li><a href="https://automatetheboringstuff.com">Automate the Boring Stuff with Python</a> by Al Sweigart</li>
-<li><a href="https://www.py4e.com/book.php">Python for Everybody</a> by Charles Severance</li>
-<li><a href="https://allendowney.github.io/ThinkPython/">Think Python</a> by Allen Downey</li>
-<li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a> by Jake VanderPlas</li>
-<li><a href="https://selectstarsql.com/">Select Star SQL</a> by Zi Chong Kao</li>
-</ul>
+<section id="step-1-check-pythons-sqlite3-module" class="level1">
+<h1>Step 1: check Python’s <code>sqlite3</code> module</h1>
+<p>Python comes with a module called <code>sqlite3</code>, so you do not need to install anything. We will use it in Lectures 12 and 13. To check that it works, open a terminal in VS Code (“View” &gt; “Terminal”) and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-c</span> <span class="st">"import sqlite3; print(sqlite3.sqlite_version)"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You should see a version number, such as <code>3.50.2</code>. The exact number does not matter. On Windows, please run this command in the Anaconda PowerShell Prompt (see <a href="./04-conda-environments-tutorial.html">Tutorial 04</a>).</p>
 </section>
-<section id="online-courses" class="level3">
-<h3 class="anchored" data-anchor-id="online-courses">Online courses</h3>
-<p>The Coursera and edX courses are free if you choose the audit option.</p>
+<section id="step-2-install-sqlite3-editor-in-vs-code" class="level1">
+<h1>Step 2: install SQLite3 Editor in VS Code</h1>
+<p><a href="https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor">SQLite3 Editor</a> is a VS Code extension that opens database files like a spreadsheet. You can create tables, add and edit rows, run SQL queries and export data to CSV, all inside VS Code. We will use it in Lecture 11.</p>
+<p>To install it:</p>
 <ul>
-<li><a href="https://www.coursera.org/specializations/python">Coursera: Python for Everybody Specialisation</a></li>
-<li><a href="https://www.edx.org/learn/python/ibm-python-basics-for-data-science">edX: Python Basics for Data Science</a></li>
-<li><a href="https://swcarpentry.github.io/python-novice-gapminder/">Software Carpentry: Plotting and Programming in Python</a></li>
-<li><a href="https://www.kaggle.com/learn/intro-to-sql">Kaggle Learn: Intro to SQL</a></li>
-<li><a href="https://swcarpentry.github.io/sql-novice-survey/">Software Carpentry: Databases and SQL</a></li>
-<li><a href="https://www.coursera.org/learn/sql-for-data-science">Coursera: SQL for Data Science</a></li>
+<li>Click on the Extensions icon on the left sidebar of VS Code (it looks like four squares)</li>
+<li>Search for “SQLite3 Editor”</li>
+<li>Find the extension by yy0931 and click on “Install”</li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/vscode-sqlite.png" class="img-fluid figure-img"></p>
+<figcaption>SQLite3 Editor in the VS Code marketplace</figcaption>
+</figure>
+</div>
+<section id="create-your-first-database" class="level2">
+<h2 class="anchored" data-anchor-id="create-your-first-database">Create your first database</h2>
+<p>Let us check that the extension works:</p>
+<ul>
+<li>In VS Code, click on “File” &gt; “New File” and save the file as <code>example.db</code></li>
+<li>Click on <code>example.db</code> in the file explorer on the left. VS Code will open it with SQLite3 Editor</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sqlite-editor.png" class="img-fluid figure-img"></p>
+<figcaption>An empty database in SQLite3 Editor</figcaption>
+</figure>
+</div>
+<p>If VS Code opens the file as text instead, right-click on <code>example.db</code>, select “Open With…” and choose “SQLite3 Editor”.</p>
+<p>Now type the following query in the editor’s query box at the bottom and run it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> students (</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">id</span> <span class="dt">INTEGER</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    name TEXT,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    age <span class="dt">INTEGER</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You should see a new, empty table called <code>students</code>. That is all you need for Lecture 11!</p>
 </section>
-<section id="documentation" class="level3">
-<h3 class="anchored" data-anchor-id="documentation">Documentation</h3>
+</section>
+<section id="step-3-optional-the-sqlite3-command-line-tool" class="level1">
+<h1>Step 3 (optional): the <code>sqlite3</code> command-line tool</h1>
+<p>You do not need this tool for the course, as we will use Python and SQLite3 Editor in class. But it is useful if you want to run SQL in the terminal.</p>
+<section id="macos" class="level2">
+<h2 class="anchored" data-anchor-id="macos">macOS</h2>
+<p>SQLite comes with macOS. Open a terminal and type:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sqlite3</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You should see a version number. To open the SQLite prompt, type <code>sqlite3</code>. To leave it, type <code>.quit</code> and press Enter.</p>
+</section>
+<section id="windows" class="level2">
+<h2 class="anchored" data-anchor-id="windows">Windows</h2>
+<p>The easiest way is to install SQLite with conda. Open the Anaconda PowerShell Prompt and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install sqlite <span class="at">-y</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Anaconda may already include it, in which case conda will tell you that there is nothing to install. Then check that it works:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sqlite3</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>To open the SQLite prompt, type <code>sqlite3</code>. To leave it, type <code>.quit</code> and press Enter.</p>
+<p>You can also download SQLite from the <a href="https://www.sqlite.org/download.html">official website</a>, but then you have to add it to your system’s PATH yourself, so I recommend the conda option.</p>
+</section>
+<section id="linux" class="level2">
+<h2 class="anchored" data-anchor-id="linux">Linux</h2>
+<p>Most Linux distributions include SQLite. If yours does not, install the <code>sqlite3</code> package with your package manager, for example <code>sudo apt install sqlite3</code> on Ubuntu.</p>
+</section>
+</section>
+<section id="further-resources" class="level1">
+<h1>Further resources</h1>
 <ul>
-<li><a href="https://docs.python.org/3/">Python Documentation</a></li>
-<li><a href="https://pandas.pydata.org/pandas-docs/stable/">pandas Documentation</a></li>
-<li><a href="https://www.sqlite.org/docs.html">SQLite Documentation</a></li>
-<li><a href="https://sqlbolt.com/">SQLBolt</a></li>
-<li><a href="https://docs.github.com/en">GitHub Docs</a></li>
+<li><a href="https://www.sqlite.org/docs.html">SQLite documentation</a></li>
+<li><a href="https://www.sqlite.org/cli.html">The <code>sqlite3</code> command-line tool</a></li>
+<li><a href="https://docs.python.org/3/library/sqlite3.html#sqlite3-tutorial">Python’s <code>sqlite3</code> tutorial</a></li>
+<li><a href="https://sqlbolt.com/">SQLBolt</a>, with short interactive SQL lessons you can do in your browser</li>
 </ul>
-<p>If you have any questions or problems with these tutorials, please <a href="https://github.com/danilofreire/datasci151-summer/issues">open a GitHub issue</a>, <a href="https://github.com/danilofreire/datasci151-summer/pulls">submit a pull request</a> or <a href="mailto:danilo.freire@emory.edu">email me</a>.</p>
-<p>I hope you find the tutorials useful! :)</p>
+<p>If you have any problems with the installation, please email me at <a href="mailto:danilo.freire@emory.edu" class="email">danilo.freire@emory.edu</a> before Lecture 11, so we can fix them before class. Happy querying! :)</p>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -821,7 +888,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/danilofreire/datasci151-summer/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/danilofreire/datasci151-summer/blob/gh-pages/tutorials.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/danilofreire/datasci151-summer/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/danilofreire/datasci151-summer/blob/gh-pages/05-sqlite-tutorial.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

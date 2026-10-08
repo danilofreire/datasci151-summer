@@ -41,9 +41,7 @@ You will complete five assignments and three quizzes during the course. I will p
 
 ### Tutorials
 
-The [`tutorials/`](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials) tab has step-by-step guides for the tools we use in the course. Please have a look at them before our first class, as they will help you get started.
-
-PDF versions of the tutorials are also [available in the repository](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials).
+The [Tutorials](tutorials.qmd) page has step-by-step guides for the tools we use in the course. Please have a look at them before our first class, as they will help you get started.
 
 ### JupyterLite
 
@@ -70,14 +68,14 @@ If you have a problem with the course materials or a question about the content,
 
 1. Check the [course syllabus](https://github.com/danilofreire/datasci151-summer/blob/main/syllabus.pdf)
 2. Review the [lecture materials](https://github.com/danilofreire/datasci151-summer/tree/main/lectures) and
-   [tutorials](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials), either in the repository or on the
+   [tutorials](https://danilofreire.github.io/datasci151-summer/tutorials.html), either in the repository or on the
    course website
-3. Ask your classmates or post in the [course discussion forum](https://github.com/danilofreire/datasci151-summer/discussions)
+3. Ask your classmates
 4. Come to office hours or email me to schedule an appointment
 
 ## Contributing to the repository
 
-I maintain this repository, but everyone is welcome to contribute! If you would like to suggest an improvement or report a problem, you can [open a GitHub issue](https://github.com/danilofreire/datasci151-summer/issues), [submit a pull request](https://github.com/danilofreire/datasci151-summer/pulls), [start a discussion](https://github.com/danilofreire/datasci151-summer/discussions) or [email me directly](mailto:danilo.freire@emory.edu).
+I maintain this repository, but everyone is welcome to contribute! If you would like to suggest an improvement or report a problem, you can [open a GitHub issue](https://github.com/danilofreire/datasci151-summer/issues), [submit a pull request](https://github.com/danilofreire/datasci151-summer/pulls) or [email me directly](mailto:danilo.freire@emory.edu).
 
 ## Acknowledgements
 

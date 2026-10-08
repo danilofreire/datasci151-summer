@@ -1,5 +1,5 @@
 ---
-title: "Jupyter Notebook and Markdown Tutorial"
+title: "Jupyter Notebook and Markdown"
 lang: en-GB
 jupyter: python3
 highlight-style: arrow
@@ -14,39 +14,39 @@ editor:
 
 # Introduction
 
-This tutorial will introduce you to [Jupyter Notebook](https://jupyter.org/documentation) and [Markdown](https://www.markdownguide.org/). Jupyter Notebook is an interactive computing platform that allows users to create and share documents that contain live code, equations, visualisations, and narrative text. Markdown is a lightweight markup language that is used to format text, and can be used for everything - websites, documents, notes, books, presentations, email messages, and technical documentation. Even WhatsApp and Facebook Messenger use Markdown to format messages. So if you have already italicised a word or made a text bold on WhatsApp, you have used Markdown! 
+This tutorial introduces [Jupyter Notebook](https://jupyter.org/documentation) and [Markdown](https://www.markdownguide.org/). Jupyter Notebook lets you write documents that mix live code, equations, plots and text. Markdown is a simple way to format text, and people use it for websites, notes, books, presentations, emails and technical documentation. WhatsApp uses a similar syntax too, so if you have ever made a word bold or italic on WhatsApp, you have already used something very close to Markdown!
 
-This tutorial is divided into two parts. The first part will introduce you to Jupyter Notebook and show you how to create a new notebook, run code cells, and format text cells using Markdown. The second part will provide a more in-depth look at Markdown and show you how to create headings, lists, links, images, and tables.
+The tutorial has two parts. The first part shows you how to create a notebook, run code cells and write text cells. The second part covers Markdown in more detail: headings, lists, tables, equations, figures and footnotes.
 
 # Introduction to Jupyter Notebook
 
 ## What is Jupyter Notebook?
 
-[Jupyter Notebook](https://jupyter.org/documentation) is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations, and narrative text. Jupyter Notebook supports over 40 programming languages, including [Python](https://python.org), [R](https://www.r-project.org/), and [Julia](https://julialang.org/). Jupyter Notebook is widely used in data science, machine learning, scientific computing, and other fields.
+[Jupyter Notebook](https://jupyter.org/documentation) is free, open-source software for writing documents that combine code, equations, plots and text. It supports over 40 programming languages, including [Python](https://python.org), [R](https://www.r-project.org/) and [Julia](https://julialang.org/), and it is very popular in data science, machine learning and scientific computing.
 
-Jupyter Notebooks provide an interactive development environment that allows you to write and execute code, see the results immediately, and create reproducible analyses. Jupyter Notebooks are organized into cells, which can contain code, text, equations, or visualisations. You can run individual cells or the entire notebook, and you can save your work as a notebook file (`.ipynb`) that can be shared with others. 
+A notebook is made of cells. Each cell contains either code or text, and when you run a code cell you see the result right below it. You can run one cell at a time or the whole notebook. Notebooks are saved as `.ipynb` files, which you can share with others so they can reproduce your analysis.
 
-## Creating a New Notebook
+## Creating a new notebook
 
-First, please make sure you have Python, Jupyter Notebook, and VSCode installed on your computer. If you do not have these installed, please refer to the [VSCode and Anaconda Tutorial](https://github.com/danilofreire/datasci151-summer/blob/main/tutorials/01-vscode-anaconda-tutorial.pdf) for instructions on how to install them.
+First, please make sure you have Anaconda and VS Code installed on your computer. If you have not installed them yet, [Tutorial 01](01-vscode-anaconda-tutorial.qmd) shows you how.
 
-To create a new Jupyter Notebook in VSCode, please go to the tab "File" > "New File". You will see a prompt in the middle of the screen. Select the option "Jupyter Notebook". 
+To create a new notebook in VS Code, go to "File" > "New File". A prompt will appear in the middle of the screen. Select "Jupyter Notebook".
 
-![Creating a new Jupyter Notebook in VSCode.](images/new-jupyter-notebook.png)
+![Creating a new Jupyter Notebook in VS Code.](images/new-jupyter-notebook.png)
 
-A new Jupyter Notebook will be created with the file extension `.ipynb`. You can rename the notebook by clicking on the notebook name at the top of the screen. An empty notebook will look like this:
+VS Code will create a new notebook with the `.ipynb` extension. You can give it a name when you save it. An empty notebook looks like this:
 
 ![An empty Jupyter Notebook.](images/empty-jupyter-notebook.png)
 
-Please do not forget to select the Python interpreter that you want to use for the notebook. You can do this by clicking on the Python version at the top right corner of the screen. A prompt will appear, and you can select the Python interpreter that you want to use (in this case, Anacoda's "base").
+Please do not forget to select the Python version the notebook should use (Jupyter calls it the "kernel"). Click on "Select Kernel" at the top right corner of the screen and choose Anaconda's "base" environment.
 
 ![Selecting the Python interpreter for the notebook.](images/select-kernel.png)
 
-To create a chunk of Python code click on "+ Code." You will get an empty gray box which has Python on the lower-right corner. You can type Python code in this box and run it by clicking on the "Run" button on the left side of the box. You can also run the code by pressing "Shift + Enter" on your keyboard.
+To add a code cell, click on "+ Code". You will see an empty grey box with "Python" in the lower-right corner. Type your Python code in the box and run it by clicking on the "Run" button on its left, or by pressing `Shift + Enter`.
 
 ![A code cell in a Jupyter Notebook.](images/code-cell.png)
 
-Here you should enter the Python commands. For example, type the following lines of code in the code cell:
+For example, type the following code in the cell:
 
 ```{python}
 #| output: false
@@ -59,11 +59,11 @@ z = x + y
 print(z)
 ```
 
-The results of the code will be displayed below the code cell. In this case, the output will be:
+The result appears right below the cell:
 
 ![Output of the code cell.](images/code-output.png)
 
-To create a text cell click on "+ Markdown." You will get an empty white box where you can type text. We will cover Markdown in more detail in the next section. But for now, you can type the following text in the Markdown cell:
+To add a text cell, click on "+ Markdown". You will get an empty box where you can type text. We will see Markdown in more detail in the next section, but for now, type the following text in the cell:
 
 ```{markdown}
 # Welcome to DATASCI 151!
@@ -72,21 +72,21 @@ This is a Jupyter Notebook. You can write *text*, **equations**, and `code`
 in [this notebook](https://github.com/danilofreire/datasci151-summer/blob/main/tutorials/testing-ipython.ipynb). 
 ```
 
-The text will be displayed in the text cell like this:
+The text cell will look like this:
 
 ![A text cell in a Jupyter Notebook.](images/text-cell.png)
 
-You can run the text cell by clicking the "Run" button on the left side of the box or by pressing "Shift + Enter" on your keyboard. The first text block shows how the text looks before running the cell, and the second block shows how it looks after running the cell. Just double click on the space where the text is to edit the Markdown block. This is should open the gray box again.
+Run the text cell with the tick button or `Shift + Enter`. The first block in the image shows the text before you run the cell, and the second block shows it after. To edit the text again, just double-click on it.
 
 # Introduction to Markdown
 
-## Why Use Markdown?
+## Why use Markdown?
 
-Markdown is a great way to format text because it is simple, easy to learn, and widely supported. You can use Markdown to create headings, lists, tables, equations, and figures in your documents. Markdown is used in many different applications, including Jupyter Notebook, GitHub, and Slack. Learning Markdown will help you create well-formatted documents that are easy to read and share.
+Markdown is simple, easy to learn and supported almost everywhere. With a few symbols you can add headings, lists, tables, equations and figures to your documents. Jupyter Notebook, GitHub and Slack all use Markdown, so you will use what you learn here in many other places.
 
 ## Headings
 
-You can create headings using the `#` symbol. For example, `# Heading 1` creates a first-level heading, `## Heading 2` creates a second-level heading, and so on. You can create up to six levels of headings using the `#` symbol.
+Use the `#` symbol for headings. `# Heading 1` creates a first-level heading, `## Heading 2` a second-level heading, and so on, up to six levels.
 
 ```{markdown}
 # Heading 1
@@ -96,7 +96,7 @@ You can create headings using the `#` symbol. For example, `# Heading 1` creates
 
 ## Lists
 
-To create an ordered list with nested unordered sub-items in Markdown, you can write the following code:
+This is how you write a numbered list with bullet points inside it:
 
 ```{markdown}
 1. This is an ordered list.
@@ -110,7 +110,7 @@ To create an ordered list with nested unordered sub-items in Markdown, you can w
     - This is a sub-item in the unordered list.
         - This is a sub-sub-item in the unordered list.
 
-You can also create unordered lists:
+And this is a bullet-point list:
 
 ```{markdown}
 - This is an unordered list.
@@ -124,7 +124,7 @@ You can also create unordered lists:
 
 ## Tables
 
-You can create tables using the `|` symbol. For example:
+Use the `|` symbol to separate the columns of a table. For example:
 
 ```{markdown}
 Table: Your Caption 
@@ -142,33 +142,33 @@ Table: Your Caption
 
 Table: Your Caption 
 
-The `:` symbols in the second row of the table determine the alignment of the text in each column. You can use `left`, `center`, or `right` to align the text.
+The colons in the second row set the alignment of each column. A colon on the left (`:---`) aligns the text to the left, colons on both sides (`:---:`) centre it, and a colon on the right (`---:`) aligns it to the right.
 
-## Creating Markdown Tables from Pandas DataFrames in Jupyter Notebooks
+## Creating Markdown tables from pandas DataFrames
 
-When working with pandas DataFrames, you can convert them into Markdown tables for better presentation. The method is also relatively simple. Here is how to do it:
+You can also turn a pandas DataFrame into a Markdown table, which often looks nicer in a report. Here is how to do it.
 
 ### Prerequisites
 
-Ensure you have the following installed:
+You will need:
 
 1. Jupyter Notebook
 2. `pandas`
 3. `tabulate` (for enhanced table formatting)
 
-Jupyter Notebook and `pandas` are included in the Anaconda distribution. You can install `tabulate` using `conda install` in your terminal. If you are using VS Code, you can open a terminal by clicking on "Terminal" > "New Terminal" in the top menu. Then run the following command:
+Jupyter Notebook and `pandas` come with Anaconda. You can install `tabulate` with `conda install` in the terminal. In VS Code, open a terminal by clicking on "Terminal" > "New Terminal" in the top menu, then run:
 
 ```{markdown}
 conda install tabulate
 ```
 
-### Basic Method: Using `pandas.DataFrame.to_markdown()`
+### The basic method: `pandas.DataFrame.to_markdown()`
 
-`pandas` provides a built-in method `to_markdown()` for converting DataFrames to Markdown tables.
+pandas has a built-in method, `to_markdown()`, that converts a DataFrame into a Markdown table.
 
-#### Step 1: Import pandas and create a DataFrame 
+#### Step 1: import pandas and create a DataFrame
 
-You can create a dataframe by passing a dictionary to the `pd.DataFrame()` constructor:
+Create a DataFrame by passing a dictionary to `pd.DataFrame()`:
 
 ```{python}
 #| output: false
@@ -191,9 +191,9 @@ data = {
 df = pd.DataFrame(data)
 ```
 
-#### Step 2: Convert DataFrame to Markdown
+#### Step 2: convert the DataFrame to Markdown
 
-Then you just need to call the `to_markdown()` method on the DataFrame:
+Then call `to_markdown()` on the DataFrame:
 
 ```{python}
 #| output: false
@@ -215,9 +215,9 @@ This will output:
 | Charlie |   35 | Paris    |
 ```
 
-#### Step 3: Display in Jupyter Notebook
+#### Step 3: display the table in the notebook
 
-To display the Markdown table in a Jupyter Notebook cell, use the `display()` function from the `IPython.display` module:
+To show the table as formatted Markdown, use the `display()` function from the `IPython.display` module:
 
 ```{python}
 #| output: false
@@ -235,13 +235,13 @@ from IPython.display import display, Markdown
 display(Markdown(markdown_table))
 ```
 
-This will render a nicely formatted table in your notebook:
+The notebook will show a formatted table:
 
 ![Markdown table in a Jupyter Notebook.](images/markdown-table.png)
 
-### Advanced Formatting
+### More formatting options
 
-You can customise the Markdown table using various parameters of `to_markdown()`:
+`to_markdown()` has several arguments that change how the table looks:
 
 ```{python}
 #| output: false
@@ -257,9 +257,9 @@ markdown_table = df.to_markdown(
 display(Markdown(markdown_table))
 ```
 
-### Using tabulate for Enhanced Formatting
+### Using tabulate
 
-The `tabulate` library offers even more formatting options. While they are not necessary for basic tables, they can be useful for more complex tables. In our course, you will probably not need them, but I will show you how to use them for your reference. Please check their [documentation](https://pypi.org/project/tabulate/) for more information.
+The `tabulate` library has even more formatting options. You will probably not need them in our course, but I include an example here in case you want to try them. Please see the [tabulate documentation](https://pypi.org/project/tabulate/) for more information.
 
 ```{python}
 #| output: false
@@ -270,21 +270,17 @@ markdown_table = tabulate(df, headers='keys', tablefmt='pipe', showindex=False)
 display(Markdown(markdown_table))
 ```
 
-### Best Practices
+### Tips
 
-1. **Index**: Consider whether you need the index in your table. Often, it is cleaner to exclude it using `index=False`.
+1. You often do not need the index (the row numbers), so remove it with `index=False`
+2. Use `floatfmt` to set the number of decimal places
+3. Rename the headers if your column names are hard to read
+4. Try different `tablefmt` options to see which one you like best
+5. For large DataFrames, show only some of the rows or columns so the table stays readable
 
-2. **Formatting**: Use `floatfmt` to control decimal places for numerical data.
+### A complete example
 
-3. **Headers**: Customize headers for clarity, especially if your DataFrame column names are not user-friendly.
-
-4. **Table Format**: Experiment with different `tablefmt` options to find the most suitable for your needs.
-
-5. **Large DataFrames**: For large DataFrames, consider displaying only a subset of rows or columns to maintain readability.
-
-### Example: Comprehensive Table Creation
-
-Here is a more comprehensive example incorporating various best practices:
+Here is an example that uses several of these tips:
 
 ```{python}
 #| output: false
@@ -319,13 +315,13 @@ display(Markdown("### Product Inventory Summary"))
 display(Markdown(markdown_table))
 ```
 
-This will produce a well-formatted table with custom headers, appropriate number formatting, and a title.
+The result is a table with a title, custom headers and formatted numbers.
 
 ![Comprehensive Markdown table in a Jupyter Notebook.](images/comprehensive-table.png)
 
 ## Equations
 
-You can create equations using the `$$` symbol. For example, here is the formula for the standard deviation of a population:
+Write equations between two `$$` symbols. For example, here is the formula for the standard deviation of a population:
 
 ```{markdown}
 $$
@@ -337,31 +333,33 @@ $$
 \sigma = \sqrt{\frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N}}
 $$
 
-You can also create equations inline by using the `$` symbol. For example, `$\alpha = \beta + \gamma$` will render as $\alpha = \beta + \gamma$. To learn more about how to write equations in \LaTeX \hspace{.001cm} using Markdown, you can refer to the [Overleaf documentation](https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols).
+For an equation inside a sentence, use a single `$`. For example, `$\alpha = \beta + \gamma$` becomes $\alpha = \beta + \gamma$. Equations use LaTeX syntax, and the [Overleaf documentation](https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols) lists the symbols you can use.
 
 ## Figures
 
-You can include figures in your document using the `![Caption](path/to/image.png)` syntax. For example:
+To add a figure, use the `![Caption](path/to/image.png)` syntax. For example:
 
 ```{markdown}
 ![This is a figure caption.](path/to/image.png)
 ```
 
-This will include the image `path/to/image.png` in your document with the caption "This is a figure caption."
+This adds the image `path/to/image.png` to your document, with the caption "This is a figure caption."
 
-If you are creating plots on Jupyter Notebook, the graphs will appear after the code cell that generates them.
+Plots you create with Python appear automatically below the code cell that makes them.
 
 ## Citations
 
-Although Markdown has excellent reference support with [BibTeX files](https://en.wikipedia.org/wiki/BibTeX), there is no reliable way to include citations automatically in Jupyter Notebooks. The two packages I know that manage citations, [cite2c](https://github.com/takluyver/cite2c) and [Jupyterlab Citation Manager](https://github.com/krassowski/jupyterlab-citation-manager), are not ideal. The first has not been maintained for years, while the second is not ready for most uses. Therefore, I suggest simply copying the citation from Google Scholar and pasting it into a Markdown cell titled "References" at the end of your document. The same approach applies for inline citations.
+Tools such as Quarto can create citations automatically from [BibTeX files](https://en.wikipedia.org/wiki/BibTeX), but there is no reliable way to do this in Jupyter Notebooks. The two packages I know, [cite2c](https://github.com/takluyver/cite2c) and [JupyterLab Citation Manager](https://github.com/krassowski/jupyterlab-citation-manager), are not ideal: the first has not been maintained for years, and the second is not ready for most uses. So I suggest you copy each citation from Google Scholar and paste it into a Markdown cell called "References" at the end of your notebook. You can write inline citations by hand too, such as "(McKinney, 2022)".
 
 ## Footnotes
 
-Jupyter and Markdown support inline footnotes[^inline]. To create a footnote, simply add a caret and brackets with a label inside, like this: `[^label]`. Then, you can define the footnote content anywhere in the document using the same label followed by a colon[^content]. I usually include them at the end of a paragraph. Jupyter will automatically number and format your footnotes for you.
+Markdown also supports footnotes[^inline]. To add one, write a caret and a label inside square brackets where the footnote number should appear, like this: `[^label]`. Then write the footnote text anywhere in the document, starting with the same label and a colon[^content]. I usually put them right after the paragraph. The footnotes are numbered automatically.
 
-[^inline]: This is an inline footnote.
-[^content]: You can also include multiple paragraphs in a footnote by indenting the subsequent paragraphs.
+Footnotes are part of extended Markdown. They work in Quarto documents and on GitHub, but some notebook programs do not display them, so please check how they look before you use them in a notebook.
+
+[^inline]: This is a footnote.
+[^content]: A footnote can have several paragraphs if you indent the paragraphs after the first one.
 
 # Conclusion
 
-I hope you find this tutorial helpful and that you can use Jupyter Notebook and Markdown to create beautiful documents. If you have any questions or feedback, please feel free to reach out to me. Happy coding! :)
+I hope this tutorial helps you write clear notebooks with Jupyter and Markdown. If you have any questions or feedback, just send me an email. Happy coding! :)

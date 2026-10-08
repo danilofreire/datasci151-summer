@@ -71,7 +71,7 @@ You can use any text editor you like, but I recommend [VS Code](https://code.vis
 
 We will also use [Jupyter Notebooks](https://jupyter.org/) in class. Jupyter comes with Anaconda, but please also install the [Jupyter extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter&ssr=false). We will have a hands-on session on how to use it.
 
-I have written [a series of tutorials](https://github.com/danilofreire/datasci151-summer/tree/main/tutorials) to help you install Anaconda, Jupyter and VS Code, and to open a free GitHub educational account. Please work through them as soon as possible, so you have all the tools ready when we start.
+I have written [a series of tutorials](https://danilofreire.github.io/datasci151-summer/tutorials.html) to help you install Anaconda, VS Code and SQLite, use Jupyter Notebooks and conda environments, and open a free GitHub educational account. Please work through them as soon as possible, so you have all the tools ready when we start.
 
 # Office hours
 

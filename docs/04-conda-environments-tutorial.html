@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorials – DATASCI 151</title>
+<title>The terminal and conda environments – DATASCI 151</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -38,14 +73,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-711d1f9ca8572b13a79b12eced64be79.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-452aa33a76078c0c050d7f0839f841f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-711d1f9ca8572b13a79b12eced64be79.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-df58a58052b55e393ee96285dd0abd71.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-17d91d356485da7232ca3767b9ee3bc9.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-df58a58052b55e393ee96285dd0abd71.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-64dea11269d504a8354b4bac223596a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-9a3a37fff577f8390ff24c1dd2aa23ec.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-64dea11269d504a8354b4bac223596a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-219e1be4f55ffaba45988d4b2bfeffcc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-71fc8332b262a630d27c3030e86b02aa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-219e1be4f55ffaba45988d4b2bfeffcc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -268,7 +303,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./tutorials.html" aria-current="page"> <i class="bi bi-tools" role="img">
+    <a class="nav-link" href="./tutorials.html"> <i class="bi bi-tools" role="img">
 </i> 
 <span class="menu-text">Tutorials</span></a>
   </li>  
@@ -304,16 +339,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#available-tutorials" id="toc-available-tutorials" class="nav-link active" data-scroll-target="#available-tutorials">Available tutorials</a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional resources</a>
-  <ul class="collapse">
-  <li><a href="#further-examples" id="toc-further-examples" class="nav-link" data-scroll-target="#further-examples">Further examples</a></li>
-  <li><a href="#suggested-books" id="toc-suggested-books" class="nav-link" data-scroll-target="#suggested-books">Suggested books</a></li>
-  <li><a href="#online-courses" id="toc-online-courses" class="nav-link" data-scroll-target="#online-courses">Online courses</a></li>
-  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
-  </ul></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#what-is-a-python-environment" id="toc-what-is-a-python-environment" class="nav-link" data-scroll-target="#what-is-a-python-environment">What is a Python environment?</a></li>
+  <li><a href="#opening-the-terminal-in-vs-code" id="toc-opening-the-terminal-in-vs-code" class="nav-link" data-scroll-target="#opening-the-terminal-in-vs-code">Opening the terminal in VS Code</a></li>
+  <li><a href="#creating-and-using-an-environment" id="toc-creating-and-using-an-environment" class="nav-link" data-scroll-target="#creating-and-using-an-environment">Creating and using an environment</a></li>
+  <li><a href="#using-your-environment-in-vs-code" id="toc-using-your-environment-in-vs-code" class="nav-link" data-scroll-target="#using-your-environment-in-vs-code">Using your environment in VS Code</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#further-resources" id="toc-further-resources" class="nav-link" data-scroll-target="#further-resources">Further resources</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/danilofreire/datasci151-summer/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/danilofreire/datasci151-summer/blob/gh-pages/tutorials.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/danilofreire/datasci151-summer/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/danilofreire/datasci151-summer/blob/gh-pages/04-conda-environments-tutorial.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -321,7 +355,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutorials</h1>
+<h1 class="title">The terminal and conda environments</h1>
 </div>
 
 
@@ -338,65 +372,147 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>These tutorials show you how to install and use the tools we will use in class. Please work through them before our first class on 11 May, so you have everything ready when we start coding.</p>
-<section id="available-tutorials" class="level2">
-<h2 class="anchored" data-anchor-id="available-tutorials">Available tutorials</h2>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>This tutorial shows you how to use the terminal in VS Code to run <code>conda</code> commands, and how to create and manage Python environments. Please do <a href="./01-vscode-anaconda-tutorial.html">Tutorial 01</a> first, as you will need VS Code and Anaconda installed. We also cover environments in Lecture 02, so you can use this tutorial as a reference after class.</p>
+<p>In this course we will use Anaconda’s default environment, <code>base</code>, so creating your own environments is optional. But environments are very useful once you start working on more than one project, and it is good to know how they work.</p>
+</section>
+<section id="what-is-a-python-environment" class="level1">
+<h1>What is a Python environment?</h1>
+<p>A <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">Python environment</a> is a folder with its own copy of Python and its own packages. Each environment is separate from the others, so installing or updating a package in one environment does not change any other environment.</p>
+<p>Why is this useful? Imagine that one project needs an old version of pandas and another project needs the newest one. If you have only one Python installation, you can only have one version of pandas at a time. With environments, each project gets the versions it needs.</p>
+<p>Anaconda comes with one environment, called <code>base</code>. You can create as many new environments as you like, and you can create them either in the terminal or in Anaconda Navigator. We will use the terminal here.</p>
+</section>
+<section id="opening-the-terminal-in-vs-code" class="level1">
+<h1>Opening the terminal in VS Code</h1>
+<p>You will type all <code>conda</code> commands in VS Code’s terminal. To open it, click on “View” &gt; “Terminal” in the top menu, or press <code>Ctrl + `</code> (the key above <code>Tab</code>).</p>
+<section id="macos" class="level2">
+<h2 class="anchored" data-anchor-id="macos">macOS</h2>
+<p>On macOS, the terminal uses a program called <code>zsh</code>. The first time you use conda, run these two commands:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> init zsh</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> update conda</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then close the terminal and open it again. From now on, you can type <code>conda</code> commands directly. If you see <code>conda: command not found</code>, please check that Anaconda finished installing and then run <code>conda init zsh</code> again.</p>
+</section>
+<section id="windows" class="level2">
+<h2 class="anchored" data-anchor-id="windows">Windows</h2>
+<p>On Windows, VS Code may open PowerShell or Command Prompt by default, and these may not find conda. Please switch to the Anaconda PowerShell Prompt instead:</p>
 <ul>
-<li><a href="./01-vscode-anaconda-tutorial.html">01 - VS Code and Anaconda tutorial</a></li>
-<li><a href="./02-jupyter-markdown-tutorial.html">02 - Jupyter Notebook and Markdown tutorial</a></li>
-<li><a href="./03-github-tutorial.html">03 - Git and GitHub tutorial</a></li>
-<li><a href="./04-conda-environments-tutorial.html">04 - The terminal and conda environments tutorial</a></li>
-<li><a href="./05-sqlite-tutorial.html">05 - SQLite and SQLite3 Editor tutorial</a> (please do this one before Lecture 11)</li>
+<li>Click on the small arrow next to the <code>+</code> icon at the top of the terminal panel</li>
+<li>Select “Anaconda PowerShell Prompt” from the list</li>
+</ul>
+<p>If you do not see it in the list, you can also open the “Anaconda PowerShell Prompt” from the Windows Start menu. Anaconda’s <a href="https://www.anaconda.com/docs/getting-started/guides/ides/vscode">guide to VS Code</a> has more details.</p>
+</section>
+<section id="check-that-conda-works" class="level2">
+<h2 class="anchored" data-anchor-id="check-that-conda-works">Check that conda works</h2>
+<p>Type the following command and press Enter:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You should see something like <code>conda 25.x.x</code>. The exact number does not matter.</p>
+</section>
+</section>
+<section id="creating-and-using-an-environment" class="level1">
+<h1>Creating and using an environment</h1>
+<p>Here are the commands you will use most often. Please type them in the terminal, <em>not</em> in a Jupyter Notebook cell. The <code>-y</code> at the end of some commands answers “yes” automatically when conda asks for confirmation.</p>
+<section id="create-an-environment" class="level2">
+<h2 class="anchored" data-anchor-id="create-an-environment">Create an environment</h2>
+<p>This command creates a new environment called <code>datasci151</code> with Python 3.12:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> datasci151 python=3.12 <span class="at">-y</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>conda create</code> creates a new environment</li>
+<li><code>-n datasci151</code> sets its name (<code>-n</code> is short for <code>--name</code>)</li>
+<li><code>python=3.12</code> says which Python version to install</li>
 </ul>
 </section>
-<section id="additional-resources" class="level2">
-<h2 class="anchored" data-anchor-id="additional-resources">Additional resources</h2>
-<section id="further-examples" class="level3">
-<h3 class="anchored" data-anchor-id="further-examples">Further examples</h3>
-<ul>
-<li><a href="./testing-ipython.html">testing-ipython.ipynb</a>: a Jupyter Notebook with Markdown and code cells</li>
-<li><a href="testing-anaconda.py">testing-anaconda.py</a>: a Python script to test your Anaconda installation</li>
-</ul>
+<section id="activate-the-environment" class="level2">
+<h2 class="anchored" data-anchor-id="activate-the-environment">Activate the environment</h2>
+<p>To use the environment, you need to activate it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate datasci151</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The name of the active environment appears in brackets at the start of the terminal line, for example <code>(datasci151)</code>. Every <code>conda install</code> command now installs packages into this environment.</p>
 </section>
-<section id="suggested-books" class="level3">
-<h3 class="anchored" data-anchor-id="suggested-books">Suggested books</h3>
-<p>All the books below are free online.</p>
-<ul>
-<li><a href="https://wesmckinney.com/book/">Python for Data Analysis</a> by Wes McKinney</li>
-<li><a href="https://allendowney.github.io/ElementsOfDataScience/README.html">Elements of Data Science</a> by Allen Downey</li>
-<li><a href="https://automatetheboringstuff.com">Automate the Boring Stuff with Python</a> by Al Sweigart</li>
-<li><a href="https://www.py4e.com/book.php">Python for Everybody</a> by Charles Severance</li>
-<li><a href="https://allendowney.github.io/ThinkPython/">Think Python</a> by Allen Downey</li>
-<li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a> by Jake VanderPlas</li>
-<li><a href="https://selectstarsql.com/">Select Star SQL</a> by Zi Chong Kao</li>
-</ul>
+<section id="install-packages" class="level2">
+<h2 class="anchored" data-anchor-id="install-packages">Install packages</h2>
+<p>Install the packages we use in the course:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install numpy pandas matplotlib jupyter <span class="at">-y</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>To remove a package, use <code>conda remove package_name</code>.</p>
 </section>
-<section id="online-courses" class="level3">
-<h3 class="anchored" data-anchor-id="online-courses">Online courses</h3>
-<p>The Coursera and edX courses are free if you choose the audit option.</p>
-<ul>
-<li><a href="https://www.coursera.org/specializations/python">Coursera: Python for Everybody Specialisation</a></li>
-<li><a href="https://www.edx.org/learn/python/ibm-python-basics-for-data-science">edX: Python Basics for Data Science</a></li>
-<li><a href="https://swcarpentry.github.io/python-novice-gapminder/">Software Carpentry: Plotting and Programming in Python</a></li>
-<li><a href="https://www.kaggle.com/learn/intro-to-sql">Kaggle Learn: Intro to SQL</a></li>
-<li><a href="https://swcarpentry.github.io/sql-novice-survey/">Software Carpentry: Databases and SQL</a></li>
-<li><a href="https://www.coursera.org/learn/sql-for-data-science">Coursera: SQL for Data Science</a></li>
-</ul>
+<section id="list-your-environments" class="level2">
+<h2 class="anchored" data-anchor-id="list-your-environments">List your environments</h2>
+<p>To see all your environments, run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env list</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The active environment has an asterisk (<code>*</code>) next to it.</p>
 </section>
-<section id="documentation" class="level3">
-<h3 class="anchored" data-anchor-id="documentation">Documentation</h3>
+<section id="deactivate-the-environment" class="level2">
+<h2 class="anchored" data-anchor-id="deactivate-the-environment">Deactivate the environment</h2>
+<p>When you finish, go back to <code>base</code> with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> deactivate</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="delete-an-environment" class="level2">
+<h2 class="anchored" data-anchor-id="delete-an-environment">Delete an environment</h2>
+<p>If you no longer need an environment, you can delete it with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> remove <span class="at">-n</span> datasci151 <span class="at">--all</span> <span class="at">-y</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Please be careful, as this deletes the environment and all its packages. Your own files (notebooks, scripts, datasets) are not affected.</p>
+</section>
+</section>
+<section id="using-your-environment-in-vs-code" class="level1">
+<h1>Using your environment in VS Code</h1>
+<p>Creating an environment is not enough: you also need to tell VS Code to use it.</p>
 <ul>
-<li><a href="https://docs.python.org/3/">Python Documentation</a></li>
-<li><a href="https://pandas.pydata.org/pandas-docs/stable/">pandas Documentation</a></li>
-<li><a href="https://www.sqlite.org/docs.html">SQLite Documentation</a></li>
-<li><a href="https://sqlbolt.com/">SQLBolt</a></li>
-<li><a href="https://docs.github.com/en">GitHub Docs</a></li>
+<li>For a Python script, open the Command Palette (<code>Cmd+Shift+P</code> on macOS, <code>Ctrl+Shift+P</code> on Windows), type “Python: Select Interpreter” and choose your environment from the list</li>
+<li>For a Jupyter Notebook, click on the kernel name at the top right corner of the notebook (or on “Select Kernel”) and choose your environment</li>
 </ul>
-<p>If you have any questions or problems with these tutorials, please <a href="https://github.com/danilofreire/datasci151-summer/issues">open a GitHub issue</a>, <a href="https://github.com/danilofreire/datasci151-summer/pulls">submit a pull request</a> or <a href="mailto:danilo.freire@emory.edu">email me</a>.</p>
-<p>I hope you find the tutorials useful! :)</p>
+<p>If VS Code says a package is missing, but you are sure you installed it, the notebook is probably using a different environment. Check the kernel name first!</p>
+</section>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Task</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Create an environment</td>
+<td><code>conda create -n datasci151 python=3.12 -y</code></td>
+</tr>
+<tr class="even">
+<td>Activate it</td>
+<td><code>conda activate datasci151</code></td>
+</tr>
+<tr class="odd">
+<td>Install packages</td>
+<td><code>conda install numpy pandas -y</code></td>
+</tr>
+<tr class="even">
+<td>Remove a package</td>
+<td><code>conda remove package_name</code></td>
+</tr>
+<tr class="odd">
+<td>List environments</td>
+<td><code>conda env list</code></td>
+</tr>
+<tr class="even">
+<td>Go back to <code>base</code></td>
+<td><code>conda deactivate</code></td>
+</tr>
+<tr class="odd">
+<td>Delete an environment</td>
+<td><code>conda remove -n datasci151 --all -y</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="further-resources" class="level1">
+<h1>Further resources</h1>
+<ul>
+<li><a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">Managing environments</a>, in the conda documentation</li>
+<li><a href="https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html">Getting started with conda</a></li>
+<li><a href="https://code.visualstudio.com/docs/python/environments">Python environments in VS Code</a></li>
+<li><a href="https://swcarpentry.github.io/shell-novice/">Software Carpentry: The Unix Shell</a>, if you would like to learn more about the terminal</li>
+</ul>
+<p>If you have any problems with conda, just send me an email at <a href="mailto:danilo.freire@emory.edu" class="email">danilo.freire@emory.edu</a>. Happy coding! :)</p>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -821,7 +937,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/danilofreire/datasci151-summer/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/danilofreire/datasci151-summer/blob/gh-pages/tutorials.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/danilofreire/datasci151-summer/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/danilofreire/datasci151-summer/blob/gh-pages/04-conda-environments-tutorial.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

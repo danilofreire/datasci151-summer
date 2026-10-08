@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GitHub Tutorial – DATASCI 151</title>
+<title>Git and GitHub – DATASCI 151</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -306,10 +306,10 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#what-are-git-and-github" id="toc-what-are-git-and-github" class="nav-link" data-scroll-target="#what-are-git-and-github">What are Git and GitHub?</a></li>
-  <li><a href="#downloading-the-course-materials" id="toc-downloading-the-course-materials" class="nav-link" data-scroll-target="#downloading-the-course-materials">Downloading the Course Materials</a></li>
-  <li><a href="#how-to-add-changes-to-your-repository" id="toc-how-to-add-changes-to-your-repository" class="nav-link" data-scroll-target="#how-to-add-changes-to-your-repository">How to Add Changes to Your Repository</a></li>
-  <li><a href="#updating-the-course-materials" id="toc-updating-the-course-materials" class="nav-link" data-scroll-target="#updating-the-course-materials">Updating the Course Materials</a></li>
-  <li><a href="#recommended-readings-and-resources" id="toc-recommended-readings-and-resources" class="nav-link" data-scroll-target="#recommended-readings-and-resources">Recommended Readings and Resources</a></li>
+  <li><a href="#downloading-the-course-materials" id="toc-downloading-the-course-materials" class="nav-link" data-scroll-target="#downloading-the-course-materials">Downloading the course materials</a></li>
+  <li><a href="#saving-your-changes" id="toc-saving-your-changes" class="nav-link" data-scroll-target="#saving-your-changes">Saving your changes</a></li>
+  <li><a href="#updating-the-course-materials" id="toc-updating-the-course-materials" class="nav-link" data-scroll-target="#updating-the-course-materials">Updating the course materials</a></li>
+  <li><a href="#further-resources" id="toc-further-resources" class="nav-link" data-scroll-target="#further-resources">Further resources</a></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/danilofreire/datasci151-summer/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/danilofreire/datasci151-summer/blob/gh-pages/03-github-tutorial.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
@@ -319,7 +319,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">GitHub Tutorial</h1>
+<h1 class="title">Git and GitHub</h1>
 </div>
 
 
@@ -338,24 +338,24 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>This tutorial will guide you through the process of creating a <a href="https://github.com/education">GitHub educational account</a>, <a href="https://github.com/apps/desktop">downloading and installing GitHub Desktop</a>, and downloading the course materials from GitHub to your computer. The tutorial also covers the basics of Git and GitHub, such as creating a repository, committing changes, and pushing changes to GitHub. It will also show you how to use <a href="https://code.visualstudio.com/">VS Code</a> to edit and manage your code on GitHub. You can use any tool you prefer to version control your code.</p>
+<p>This tutorial shows you how to create a <a href="https://github.com/education">GitHub educational account</a>, install <a href="https://github.com/apps/desktop">GitHub Desktop</a> and download the course materials to your computer. It also covers the basics of Git and GitHub: committing changes, pushing them to GitHub and keeping your copy of the materials up to date. Finally, it shows you how to open the materials in <a href="https://code.visualstudio.com/">VS Code</a>. I use GitHub Desktop here because it is the easiest option for beginners, but you are free to use any tool you like.</p>
 </section>
 <section id="what-are-git-and-github" class="level1">
 <h1>What are Git and GitHub?</h1>
-<p><a href="https://git-scm.com/">Git</a> is a distributed version control system that allows you to track changes in your codebase, collaborate with others, and manage your projects. It was developed by <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a> (of <a href="https://en.wikipedia.org/wiki/Linux">Linux</a> fame) in 2005 and has become the <a href="https://stackoverflow.blog/2023/01/09/beyond-git-the-other-version-control-systems-developers-use/"><em>de facto</em> standard for version control</a> in the software development industry. While Git is a powerful tool, it can be a bit challenging to use, especially for beginners. That is where GitHub comes in.</p>
-<p><a href="https://github.com">GitHub</a> is a web-based platform that provides hosting for Git repositories, allowing you to store different versions your code in the cloud and collaborate with others. GitHub also offers several useful features, such as issue tracking, project management, and continuous integration. It can even <a href="https://pages.github.com/">host your website for free</a>. GitHub has become the go-to platform for open-source projects, and many companies use it to manage their codebase, such as <a href="https://github.com/microsoft">Microsoft</a>, <a href="https://github.com/google">Google</a>, and <a href="https://github.com/facebook">Meta</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Think about GitHub as a social network for developers, where you can follow other developers, star their projects, and contribute to open-source projects.</p>
-<p>We will use GitHub extensively in our course. So it is important that you become familiar with it. The good news is that GitHub is free for public and private repositories for educational purposes. Here are the steps to get started with GitHub:</p>
+<p><a href="https://git-scm.com/">Git</a> is a version control system. It keeps track of every change you make to your files, so you can go back to an older version or work on the same project with other people. <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a>, the creator of <a href="https://en.wikipedia.org/wiki/Linux">Linux</a>, wrote Git in 2005, and it is now the <a href="https://stackoverflow.blog/2023/01/09/beyond-git-the-other-version-control-systems-developers-use/"><em>de facto</em> standard for version control</a> in software development. Git is very powerful, but it can be hard to use at first. That is where GitHub comes in.</p>
+<p><a href="https://github.com">GitHub</a> is a website that stores Git repositories online. You can keep all versions of your code in the cloud and work on it with other people. GitHub also has tools for reporting bugs and managing projects, and it can even <a href="https://pages.github.com/">host your website for free</a> (this course website is hosted there!). Most open-source projects live on GitHub, and many companies use it too, such as <a href="https://github.com/microsoft">Microsoft</a>, <a href="https://github.com/google">Google</a> and <a href="https://github.com/facebook">Meta</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. You can think of GitHub as a social network for programmers, where you can follow other people, star their projects and contribute to them.</p>
+<p>We will use GitHub throughout the course, so it is a good idea to get familiar with it now. GitHub is free, including private repositories. Here is how to get started:</p>
 <ol type="1">
-<li><strong>Create a GitHub account</strong>. Go to <a href="https://github.com/" class="uri">https://github.com/</a> and sign up (top right). You can use your Emory email address to get a free educational account (more on this later). Be careful selecting your username, this will be visible to the public.</li>
+<li><strong>Create a GitHub account.</strong> Go to <a href="https://github.com/" class="uri">https://github.com/</a> and click on “Sign up” (top right). Use your Emory email address, as you will need it for the educational account below. Please choose your username carefully, because everyone will be able to see it</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/github-signup.png" class="img-fluid figure-img"></p>
-<figcaption>GitHub Signup</figcaption>
+<figcaption>GitHub sign-up page</figcaption>
 </figure>
 </div>
 <ol start="2" type="1">
-<li><strong>Apply to GitHub Education</strong>. Go to <a href="https://github.com/education" class="uri">https://github.com/education</a> and apply for the GitHub Student Developer Pack. This will give you access to several tools and services for free, such as a free domain name, cloud hosting, and more. You will need to provide proof of your student status, such as an ID card or transcript. Please click on “Join GitHub Education” and follow the instructions on the website.</li>
+<li><strong>Apply to GitHub Education.</strong> Go to <a href="https://github.com/education" class="uri">https://github.com/education</a>, click on “Join GitHub Education” and follow the instructions. You will need to show that you are a student, for example with your student ID card. Once GitHub approves your application, you will get the GitHub Student Developer Pack, which includes free access to <a href="https://docs.github.com/en/copilot/about-github-copilot/plans-for-github-copilot">Copilot Student</a> and many other tools</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -364,7 +364,7 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <ol start="3" type="1">
-<li><strong>Download and install GitHub Desktop</strong>. You can download GitHub Desktop from <a href="https://desktop.github.com/" class="uri">https://desktop.github.com/</a>. GitHub Desktop is a graphical user interface (GUI) for Git that makes it easier to work with repositories. It is available for Windows and macOS. You can also use the command line if you prefer, but GitHub Desktop is more user-friendly and will be used in this tutorial.</li>
+<li><strong>Download and install GitHub Desktop.</strong> You can download it from <a href="https://desktop.github.com/" class="uri">https://desktop.github.com/</a>. GitHub Desktop lets you use Git with buttons and menus instead of typing commands in the terminal. It is available for Windows and macOS</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -372,153 +372,151 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>GitHub Desktop</figcaption>
 </figure>
 </div>
-<p>After you install GitHub Desktop, you will need to sign in with your GitHub account. This will allow you to work with your repositories. Then you should see the following screen:</p>
+<p>After you install GitHub Desktop, sign in with your GitHub account. You should then see this screen:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/github-desktop-signin.png" class="img-fluid figure-img"></p>
-<figcaption>GitHub Desktop Sign In</figcaption>
+<figcaption>GitHub Desktop after signing in</figcaption>
 </figure>
 </div>
-<p>Now you are ready to start using Git and GitHub. Let us move on to the next step.</p>
+<p>You are now ready to use Git and GitHub. Let us download the course materials.</p>
 </section>
 <section id="downloading-the-course-materials" class="level1">
-<h1>Downloading the Course Materials</h1>
-<p>The course materials are available on GitHub at <a href="https://github.com/danilofreire/datasci151-summer" class="uri">https://github.com/danilofreire/datasci151-summer</a>. You should “fork” the repository to your account. This will create a copy of the repository in your account that you can modify and push changes to. Please click on the top-right corner of the repository page and select “Fork”.</p>
+<h1>Downloading the course materials</h1>
+<p>The course materials are on GitHub at <a href="https://github.com/danilofreire/datasci151-summer" class="uri">https://github.com/danilofreire/datasci151-summer</a>. First, you will “fork” the repository, which creates your own copy of it in your GitHub account. Go to the repository page, click on “Fork” in the top-right corner and then on “Create a new fork”.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/github-fork.png" class="img-fluid figure-img"></p>
-<figcaption>Fork the Repository</figcaption>
+<figcaption>Forking the repository</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/github-fork02.png" class="img-fluid figure-img"></p>
-<figcaption>Create a Copy of the Repository</figcaption>
+<figcaption>Creating your copy of the repository</figcaption>
 </figure>
 </div>
-<p>You will be asked to make your own copy of the lecture notes. You can add any name you like. I recommend you use the name same name I used for the repository (<code>datasci151-summer</code>). This will make it easier to follow the instructions in the tutorials. Click on “Create fork”.</p>
-<p><em>You will only do this once</em>. After you fork the repository, you will be able to pull changes from the original repository and push changes to your forked repository. This will allow you to keep your copy of the course materials up to date with the latest changes.</p>
-<p>Now you need to clone your repository to your computer. This will create a local copy of the repository on your computer that you can work with. To do this, click on the green “Code” button and copy the URL of your forked repository. Again, please remember that you should clone <em>your forked repository</em>, not the original repository. The name in the URL should be your username.</p>
-<p>Please open GitHub Desktop and click on the “Clone a Repository from the Internet” button. This will open a dialog where you can paste the URL of your repository and select a location on your computer to save the repository. Then click on “Clone”.</p>
+<p>GitHub will ask you to name your copy. I recommend that you keep the same name I use (<code>datasci151-summer</code>), as this makes it easier to follow the instructions in class. Then click on “Create fork”.</p>
+<p><em>You only need to do this once.</em> Your fork stays connected to my repository, so you can download my updates whenever I add new materials.</p>
+<p>Next, you will “clone” your fork, which downloads a copy of it to your computer. On your fork’s page, click on the green “Code” button and copy the URL. Please make sure you copy the URL of <em>your fork</em>, not of my repository: the URL should contain your username.</p>
+<p>Open GitHub Desktop and click on “Clone a Repository from the Internet”. Paste the URL, choose the folder where you want to save the materials and click on “Clone”.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/github-clone01.png" class="img-fluid figure-img"></p>
-<figcaption>Click on Clone a Repository from the Internet.</figcaption>
+<figcaption>Click on “Clone a Repository from the Internet”</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/github-clone02.png" class="img-fluid figure-img"></p>
-<figcaption>Click on URL and Paste the Repository URL. Then click on Clone.</figcaption>
+<figcaption>Click on “URL”, paste the repository URL and click on “Clone”</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/github-clone03.png" class="img-fluid figure-img"></p>
-<figcaption>Cloning</figcaption>
+<figcaption>Cloning the repository</figcaption>
 </figure>
 </div>
-<p>Then select “To contribute to the parent project” and click on “Continue”. This option allows you to keep updating your lecture notes from the instructor’s repository. The other option creates a local copy that has no links to the original repository. If you accidentally choose this option, you will not be able to see any changes. To reverse: (a) remove the repository on your computer (by right-clicking on the repository on Github dekstop), (b) manually delete the directory, (c) go back to Step 2.</p>
+<p>GitHub Desktop will then ask how you plan to use the fork. Select “To contribute to the parent project” and click on “Continue”. This option lets you download my updates later. The other option creates a copy with no link to my repository, so you would not see any changes I make. If you choose it by mistake, you can fix it this way:</p>
+<ul>
+<li>Remove the repository from GitHub Desktop (right-click on the repository name and select “Remove”)</li>
+<li>Delete the folder from your computer</li>
+<li>Clone your fork again, as explained above</li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/github-clone04.png" class="img-fluid figure-img"></p>
-<figcaption>Cloning</figcaption>
+<figcaption>Choosing how to use the fork</figcaption>
 </figure>
 </div>
-<p><em>And you are done!</em> You now have a local copy of the course materials on your computer that you can work with. You can open the repository in VS Code by clicking on “Repository” &gt; “Open in Visual Studio Code”. This will open the repository in VS Code, where you can edit and manage your code.</p>
+<p><em>And you are done!</em> You now have the course materials on your computer. To open them in VS Code, click on “Repository” &gt; “Open in Visual Studio Code” in GitHub Desktop.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/github-open-vscode.png" class="img-fluid figure-img"></p>
-<figcaption>Open in Visual Studio Code</figcaption>
+<figcaption>Opening the repository in VS Code</figcaption>
 </figure>
 </div>
 </section>
-<section id="how-to-add-changes-to-your-repository" class="level1">
-<h1>How to Add Changes to Your Repository</h1>
-<p>Now that you have the course materials on your computer, let us go over some of the essential Git and GitHub commands that you will need to use.</p>
+<section id="saving-your-changes" class="level1">
+<h1>Saving your changes</h1>
+<p>Now that you have the course materials on your computer, let us see the three steps you will use most often: change, commit and push.</p>
 <ol type="1">
-<li><em>A programmer makes some changes to their files</em>: In the photo you can see that I have made many changes to a few files. GitHub Desktop will show you the changes you made to your files. You can see the changes in the “Changes” tab.</li>
+<li><em>Change your files.</em> GitHub Desktop shows every change you make to your files in the “Changes” tab. In the image below, you can see that I have changed a few files</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/github-desktop-changes.png" class="img-fluid figure-img"></p>
-<figcaption>Changes</figcaption>
+<figcaption>The “Changes” tab</figcaption>
 </figure>
 </div>
-<p>You can also see the history of your changes in the “History” tab. This will show you all the commits you have made to your repository. The green lines indicate the changes you made, and the red lines indicate the changes you removed.</p>
+<p>The “History” tab shows all the commits in the repository. Green lines are text you added, and red lines are text you removed.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/github-desktop-history.png" class="img-fluid figure-img"></p>
-<figcaption>History</figcaption>
+<figcaption>The “History” tab</figcaption>
 </figure>
 </div>
 <ol start="2" type="1">
-<li><em>The programmer commits the changes</em>: After making changes to your files, you need to commit them to your local repository. This creates a snapshot of your changes that you can revert to later if needed. To commit changes, open GitHub Desktop and you will see the changes you made. Write a summary of the changes in the “Summary” box and click on “Commit to main”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. It is always a good idea to write a descriptive summary of your changes so that you can easily track them later.</li>
+<li><em>Commit your changes.</em> A commit is a snapshot of your files that you can go back to later. To commit, write a short description of your changes in the “Summary” box and click on “Commit to main”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. A clear summary, such as “Finish exercise 2 of lecture 05”, makes it much easier to find a change later</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/github-desktop-commit.png" class="img-fluid figure-img"></p>
-<figcaption>Commit Changes</figcaption>
+<figcaption>Committing changes</figcaption>
 </figure>
 </div>
-<p>As you can see, I have committed the changes I made to the files. You can see the commit message in the “History” tab. This will allow you to track the changes you made to your files.</p>
+<p>Your commit will then appear in the “History” tab:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/github-desktop-commit02.png" class="img-fluid figure-img"></p>
-<figcaption>Commit Message</figcaption>
+<figcaption>The commit in the “History” tab</figcaption>
 </figure>
 </div>
 <ol start="3" type="1">
-<li><em>The programmer pushes the changes to GitHub</em>: After committing your changes to your local repository, you need to push them to GitHub. This will update the remote repository with the changes you made. To push changes, click on “Repository” &gt; “Push” in GitHub Desktop. This will push your changes to GitHub.</li>
+<li><em>Push your changes to GitHub.</em> Commits are saved only on your computer until you push them. To send them to your fork on GitHub, click on “Repository” &gt; “Push”</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/github-desktop-push.png" class="img-fluid figure-img"></p>
-<figcaption>Push or Fetch Changes</figcaption>
+<figcaption>Push and fetch</figcaption>
 </figure>
 </div>
-<p>As you can also see, there are two options: “Push” and “Fetch”. “Push” will push your changes to GitHub, while “Fetch” will fetch (“download”) changes from GitHub. You can use “Fetch” to update your local repository with the changes from GitHub. We will cover this in more detail in the next section.</p>
+<p>You will also see a “Fetch” option. “Push” uploads your commits to GitHub, and “Fetch” checks GitHub for changes you do not have yet. We will use it in the next section.</p>
 </section>
 <section id="updating-the-course-materials" class="level1">
-<h1>Updating the Course Materials</h1>
-<p>The course materials will be updated regularly with new content, bug fixes, and improvements. To keep your copy of the course materials up to date, you need to pull changes from the original repository. However, before proceeding, make sure that you have read the previous section and that you have committed all outstanding changes.</p>
+<h1>Updating the course materials</h1>
+<p>I will update the course materials often, with new lectures, fixes and improvements. To get these updates, you need to download them from my repository. Before you start, please commit all your changes, as explained in the previous section.</p>
 <ol type="1">
-<li>In the top panel go to the “Branch” tab. Click on the option “update from upstream/main”.
+<li>In GitHub Desktop, click on the “Branch” menu and select “Update from upstream/main”
 <ul>
-<li>“upstream” refers to the original repository (the instructor’s).</li>
-<li>“main” is usually the name given to the primary version of your repository.</li>
-<li><em>Note</em>: You can create different branches to work on different features or bug fixes. This allows you to work on different parts of your codebase without affecting the main branch. You can then merge the changes from the different branches into the main branch when you are ready.</li>
+<li>“upstream” is my original repository</li>
+<li>“main” is the main branch of the repository</li>
 </ul></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/github-desktop-update.png" class="img-fluid figure-img"></p>
-<figcaption>Update from Upstream</figcaption>
+<figcaption>Updating from upstream</figcaption>
 </figure>
 </div>
-<p><strong>Some practical advice</strong>:</p>
+<p>Some practical advice:</p>
 <ul>
-<li><p>Try to do the updating process <em>at the start of every class</em>, to make sure you have the latest version.</p></li>
-<li><p>Store any modifications to the files <em>with a separate file name</em>. This avoids your files <em>being overwritten by the instructor’s version</em> when you do this process</p></li>
-<li><p>Privacy: Right now, your forked repository is publicly visible on your account. If you want to change this, you can make your repository private. How to do this:</p>
-<ul>
-<li>Go to your repository on GitHub</li>
-<li>Click on the “Settings” tab</li>
-<li>Scroll down to the “Danger Zone” section</li>
-<li>Click on “Make private”</li>
-<li>Confirm the change</li>
-</ul></li>
+<li>Please update your materials <em>at the start of every class</em>, so you always have the latest version</li>
+<li>If you want to change one of my files, save your version <em>with a different file name</em>. Otherwise, my updates may overwrite your changes</li>
+<li>Your fork is public, and GitHub does not let you make a fork of a public repository private. So please do not save anything in your fork that you do not want others to see, such as your answers to the assignments</li>
 </ul>
-<p>And that is it! You now know how to use Git and GitHub to manage your code and collaborate with others. If you have any questions or need help, feel free to ask. I am here to help you. Good luck with your coding!</p>
+<p>And that is it! You now know how to use Git and GitHub to manage your code. If you have any questions, just send me an email and I will be happy to help. Good luck!</p>
 </section>
-<section id="recommended-readings-and-resources" class="level1">
-<h1>Recommended Readings and Resources</h1>
+<section id="further-resources" class="level1">
+<h1>Further resources</h1>
 <ul>
-<li><a href="https://guides.github.com/">GitHub Guides</a>: A collection of guides to help you get started with Git and GitHub.</li>
-<li><a href="https://skills.github.com/">GitHub Skills</a>: A very useful website to help you improve your Git and GitHub skills.</li>
-<li><a href="https://docs.github.com/en/desktop">GitHub Desktop Documentation</a>: The official documentation for GitHub Desktop.</li>
-<li><a href="https://git-scm.com/book/en/v2">Pro Git</a>: A free book that covers everything you need to know about Git.</li>
-<li><a href="https://www.youtube.com/watch?v=MaqVvXv6zrU">How to Use Git &amp; GitHub Desktop Tutorial for Beginners - YouTube</a>: A video tutorial that covers the basics of GitHub Desktop. There are many other tutorials on YouTube that can help you get started, so feel free to explore!</li>
+<li><a href="https://docs.github.com/en/get-started">GitHub Docs</a>: GitHub’s official guides for beginners</li>
+<li><a href="https://skills.github.com/">GitHub Skills</a>: short, hands-on courses to practise Git and GitHub</li>
+<li><a href="https://docs.github.com/en/desktop">GitHub Desktop documentation</a>: everything about GitHub Desktop</li>
+<li><a href="https://git-scm.com/book/en/v2">Pro Git</a>: a free book that covers Git in detail</li>
+<li><a href="https://swcarpentry.github.io/git-novice/">Software Carpentry: Version Control with Git</a>: a free lesson for beginners</li>
+<li><a href="https://www.youtube.com/watch?v=MaqVvXv6zrU">How to use Git and GitHub Desktop (YouTube)</a>: a video that covers the basics of GitHub Desktop</li>
 </ul>
 
 
@@ -528,8 +526,8 @@ ul.task-list li input[type="checkbox"] {
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>As a curiosity, the code for the <a href="https://github.com/chrislgarry/Apollo-11">Apollo 11 mission</a> is also available on GitHub.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>The default branch in GitHub is called <code>main</code>. This is the branch where you will make most of your changes. You can create other branches if you want to work on different features or bug fixes.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>As a curiosity, the code for the <a href="https://github.com/chrislgarry/Apollo-11">Apollo 11 mission</a> is also on GitHub.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><code>main</code> is the name of the default branch in GitHub. You will make all your changes there in this course. Programmers also create other branches to work on new features or bug fixes without changing <code>main</code>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

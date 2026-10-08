@@ -1,0 +1,155 @@
+---
+title: "The terminal and conda environments"
+lang: en-GB
+jupyter: python3
+highlight-style: arrow
+format:
+    html:
+      toc: true
+      toc-depth: 1
+      number-sections: false
+editor:
+  render-on-save: true
+---
+
+# Introduction
+
+This tutorial shows you how to use the terminal in VS Code to run `conda` commands, and how to create and manage Python environments. Please do [Tutorial 01](01-vscode-anaconda-tutorial.qmd) first, as you will need VS Code and Anaconda installed. We also cover environments in Lecture 02, so you can use this tutorial as a reference after class.
+
+In this course we will use Anaconda's default environment, `base`, so creating your own environments is optional. But environments are very useful once you start working on more than one project, and it is good to know how they work.
+
+# What is a Python environment?
+
+A [Python environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) is a folder with its own copy of Python and its own packages. Each environment is separate from the others, so installing or updating a package in one environment does not change any other environment.
+
+Why is this useful? Imagine that one project needs an old version of pandas and another project needs the newest one. If you have only one Python installation, you can only have one version of pandas at a time. With environments, each project gets the versions it needs.
+
+Anaconda comes with one environment, called `base`. You can create as many new environments as you like, and you can create them either in the terminal or in Anaconda Navigator. We will use the terminal here.
+
+# Opening the terminal in VS Code
+
+You will type all `conda` commands in VS Code's terminal. To open it, click on "View" > "Terminal" in the top menu, or press `` Ctrl + ` `` (the key above `Tab`).
+
+## macOS
+
+On macOS, the terminal uses a program called `zsh`. The first time you use conda, run these two commands:
+
+```bash
+conda init zsh
+conda update conda
+```
+
+Then close the terminal and open it again. From now on, you can type `conda` commands directly. If you see `conda: command not found`, please check that Anaconda finished installing and then run `conda init zsh` again.
+
+## Windows
+
+On Windows, VS Code may open PowerShell or Command Prompt by default, and these may not find conda. Please switch to the Anaconda PowerShell Prompt instead:
+
+- Click on the small arrow next to the `+` icon at the top of the terminal panel
+- Select "Anaconda PowerShell Prompt" from the list
+
+If you do not see it in the list, you can also open the "Anaconda PowerShell Prompt" from the Windows Start menu. Anaconda's [guide to VS Code](https://www.anaconda.com/docs/getting-started/guides/ides/vscode) has more details.
+
+## Check that conda works
+
+Type the following command and press Enter:
+
+```bash
+conda --version
+```
+
+You should see something like `conda 25.x.x`. The exact number does not matter.
+
+# Creating and using an environment
+
+Here are the commands you will use most often. Please type them in the terminal, *not* in a Jupyter Notebook cell. The `-y` at the end of some commands answers "yes" automatically when conda asks for confirmation.
+
+## Create an environment
+
+This command creates a new environment called `datasci151` with Python 3.12:
+
+```bash
+conda create -n datasci151 python=3.12 -y
+```
+
+- `conda create` creates a new environment
+- `-n datasci151` sets its name (`-n` is short for `--name`)
+- `python=3.12` says which Python version to install
+
+## Activate the environment
+
+To use the environment, you need to activate it:
+
+```bash
+conda activate datasci151
+```
+
+The name of the active environment appears in brackets at the start of the terminal line, for example `(datasci151)`. Every `conda install` command now installs packages into this environment.
+
+## Install packages
+
+Install the packages we use in the course:
+
+```bash
+conda install numpy pandas matplotlib jupyter -y
+```
+
+To remove a package, use `conda remove package_name`.
+
+## List your environments
+
+To see all your environments, run:
+
+```bash
+conda env list
+```
+
+The active environment has an asterisk (`*`) next to it.
+
+## Deactivate the environment
+
+When you finish, go back to `base` with:
+
+```bash
+conda deactivate
+```
+
+## Delete an environment
+
+If you no longer need an environment, you can delete it with:
+
+```bash
+conda remove -n datasci151 --all -y
+```
+
+Please be careful, as this deletes the environment and all its packages. Your own files (notebooks, scripts, datasets) are not affected.
+
+# Using your environment in VS Code
+
+Creating an environment is not enough: you also need to tell VS Code to use it.
+
+- For a Python script, open the Command Palette (`Cmd+Shift+P` on macOS, `Ctrl+Shift+P` on Windows), type "Python: Select Interpreter" and choose your environment from the list
+- For a Jupyter Notebook, click on the kernel name at the top right corner of the notebook (or on "Select Kernel") and choose your environment
+
+If VS Code says a package is missing, but you are sure you installed it, the notebook is probably using a different environment. Check the kernel name first!
+
+# Summary
+
+| Task | Command |
+|------|---------|
+| Create an environment | `conda create -n datasci151 python=3.12 -y` |
+| Activate it | `conda activate datasci151` |
+| Install packages | `conda install numpy pandas -y` |
+| Remove a package | `conda remove package_name` |
+| List environments | `conda env list` |
+| Go back to `base` | `conda deactivate` |
+| Delete an environment | `conda remove -n datasci151 --all -y` |
+
+# Further resources
+
+- [Managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html), in the conda documentation
+- [Getting started with conda](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html)
+- [Python environments in VS Code](https://code.visualstudio.com/docs/python/environments)
+- [Software Carpentry: The Unix Shell](https://swcarpentry.github.io/shell-novice/), if you would like to learn more about the terminal
+
+If you have any problems with conda, just send me an email at <danilo.freire@emory.edu>. Happy coding! :)

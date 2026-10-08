@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Installing VS Code and Connecting it with Anaconda – DATASCI 151</title>
+<title>Installing VS Code and connecting it with Anaconda – DATASCI 151</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -341,7 +341,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#why-vs-code" id="toc-why-vs-code" class="nav-link" data-scroll-target="#why-vs-code">Why VS Code?</a></li>
-  <li><a href="#download-and-install-vs-code" id="toc-download-and-install-vs-code" class="nav-link" data-scroll-target="#download-and-install-vs-code">Download and Install VS Code</a></li>
+  <li><a href="#download-and-install-vs-code" id="toc-download-and-install-vs-code" class="nav-link" data-scroll-target="#download-and-install-vs-code">Download and install VS Code</a></li>
   <li><a href="#installing-anaconda" id="toc-installing-anaconda" class="nav-link" data-scroll-target="#installing-anaconda">Installing Anaconda</a></li>
   <li><a href="#connecting-vs-code-with-anaconda" id="toc-connecting-vs-code-with-anaconda" class="nav-link" data-scroll-target="#connecting-vs-code-with-anaconda">Connecting VS Code with Anaconda</a></li>
   <li><a href="#optional-github-copilot" id="toc-optional-github-copilot" class="nav-link" data-scroll-target="#optional-github-copilot">Optional: GitHub Copilot</a></li>
@@ -355,7 +355,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Installing VS Code and Connecting it with Anaconda</h1>
+<h1 class="title">Installing VS Code and connecting it with Anaconda</h1>
 </div>
 
 
@@ -374,139 +374,134 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>This tutorial will guide students new to computer programming through the process of installing Visual Studio Code (VS Code) and connecting it with Anaconda. We will cover each step in detail to ensure a smooth setup process. If you have any questions or encounter issues during the installation, please feel free to ask for help from me (<a href="mailto:danilo.freire@emory.edu" class="email">danilo.freire@emory.edu</a>) or the DATASCI 151 teaching assistants.</p>
+<p>This tutorial shows you how to install Visual Studio Code (VS Code) and Anaconda, and how to connect the two. It is written for students who have never programmed before, so we will go through each step slowly. If you have any questions or run into problems during the installation, please email me at <a href="mailto:danilo.freire@emory.edu" class="email">danilo.freire@emory.edu</a> and I will be happy to help.</p>
 </section>
 <section id="why-vs-code" class="level1">
 <h1>Why VS Code?</h1>
-<p>VS Code is a popular, free code editor developed by Microsoft. According to the <a href="https://survey.stackoverflow.co/2023/#section-most-popular-technologies-integrated-development-environment">2023 Stack Overflow Developer Survey</a>, VS Code is the most preferred integrated development environment (IDE) among developers. Here are some reasons to choose VS Code for Python development:</p>
+<p>VS Code is a free code editor developed by Microsoft. In the <a href="https://survey.stackoverflow.co/2025/technology">2025 Stack Overflow Developer Survey</a>, about 76% of respondents said they use VS Code, more than any other editor. Here are some reasons why we use it in this course:</p>
 <ul>
-<li><p>Extensive Features and Extensions: VS Code offers several built-in features such as syntax highlighting, IntelliSense, and debugging. It also features hundreds of extensions that can increase its functionality, such as <a href="https://github.com/features/copilot/">GitHub Copilot</a>.</p></li>
-<li><p>Cross-Platform Compatibility: VS Code is available for Windows, macOS, and Linux, so you can use it regardless of your operating system.</p></li>
-<li><p>Active Community and Support: The active community around VS Code means continuous updates and many community-driven extensions now and in the future.</p></li>
-<li><p>Integration with Git and Other Tools: VS Code seamlessly integrates with version control systems like Git (as <a href="https://news.microsoft.com/announcement/microsoft-acquires-github/">Microsoft owns GitHub</a>), making it easier to manage your code repositories and collaborate with others.</p></li>
+<li>It has many built-in features, such as syntax highlighting, code completion and debugging, and thousands of extensions that add more</li>
+<li>It works on Windows, macOS and Linux, so everyone in class can follow the same steps</li>
+<li>It has a large community, so it is updated often and you can easily find help online</li>
+<li>It works well with Git and GitHub (Microsoft <a href="https://news.microsoft.com/announcement/microsoft-acquires-github/">owns GitHub</a>), which we will use to manage the course materials</li>
 </ul>
-<p>With that said, let us start the installation process.</p>
+<p>Let us start with the installation.</p>
 </section>
 <section id="download-and-install-vs-code" class="level1">
-<h1>Download and Install VS Code</h1>
+<h1>Download and install VS Code</h1>
 <ul>
-<li>Please visit the official Visual Studio Code website: <a href="https://code.visualstudio.com/" class="uri">https://code.visualstudio.com/</a>.</li>
-<li>Click on the “Download” button for your operating system (Windows, macOS, or Linux).</li>
+<li>Go to the official VS Code website: <a href="https://code.visualstudio.com/" class="uri">https://code.visualstudio.com/</a></li>
+<li>Click on the “Download” button for your operating system (Windows, macOS or Linux)</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/vscode-download.png" class="img-fluid figure-img"></p>
-<figcaption>VS Code Website</figcaption>
+<figcaption>VS Code website</figcaption>
 </figure>
 </div>
-<section id="for-windows-users" class="level2">
-<h2 class="anchored" data-anchor-id="for-windows-users">For Windows Users</h2>
+<section id="windows" class="level2">
+<h2 class="anchored" data-anchor-id="windows">Windows</h2>
 <ul>
-<li>Run the “VSCodeUserSetup-{version}.exe” file.</li>
+<li>Run the <code>VSCodeUserSetup-{version}.exe</code> file you downloaded</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/windows01.png" class="img-fluid figure-img"></p>
-<figcaption>Windows Installation</figcaption>
+<figcaption>Windows installation</figcaption>
 </figure>
 </div>
 <ul>
-<li>Accept the license agreement and click “Next”.</li>
+<li>Accept the licence agreement and click “Next”</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/windows02.png" class="img-fluid figure-img"></p>
-<figcaption>License Agreement</figcaption>
+<figcaption>Licence agreement</figcaption>
 </figure>
 </div>
 <ul>
-<li>Choose the installation location (default is recommended) and click “Next”.</li>
+<li>Choose the installation folder (the default is fine) and click “Next”</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/windows03.png" class="img-fluid figure-img"></p>
-<figcaption>Installation Location</figcaption>
+<figcaption>Installation folder</figcaption>
 </figure>
 </div>
 <ul>
-<li>Select additional tasks if desired (e.g., adding “Open with Code” action) and click “Next”.</li>
+<li>Select any additional tasks you want, such as adding an “Open with Code” option to the right-click menu, and click “Next”</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/windows05.png" class="img-fluid figure-img"></p>
-<figcaption>Additional Tasks</figcaption>
+<figcaption>Additional tasks</figcaption>
 </figure>
 </div>
 <ul>
-<li>Click “Install” to begin the installation process.</li>
+<li>Click “Install”</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/windows06.png" class="img-fluid figure-img"></p>
-<figcaption>Installation Progress</figcaption>
+<figcaption>Installation progress</figcaption>
 </figure>
 </div>
 </section>
-<section id="for-macos-users" class="level2">
-<h2 class="anchored" data-anchor-id="for-macos-users">For macOS Users</h2>
+<section id="macos" class="level2">
+<h2 class="anchored" data-anchor-id="macos">macOS</h2>
 <ul>
-<li>Open the downloaded .zip file and drag the VS Code application to the Applications folder.</li>
+<li>Open the <code>.zip</code> file you downloaded and drag the VS Code application to your Applications folder</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/macos01.png" class="img-fluid figure-img"></p>
-<figcaption>Unzip file</figcaption>
+<figcaption>Unzip the file</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/macos02.png" class="img-fluid figure-img"></p>
-<figcaption>Drag to Applications folder</figcaption>
+<figcaption>Drag VS Code to the Applications folder</figcaption>
 </figure>
 </div>
 </section>
-<section id="for-linux-users" class="level2">
-<h2 class="anchored" data-anchor-id="for-linux-users">For Linux Users</h2>
+<section id="linux" class="level2">
+<h2 class="anchored" data-anchor-id="linux">Linux</h2>
 <ul>
-<li>Follow the distribution-specific instructions provided on the <a href="https://code.visualstudio.com/Download">VS Code website</a>.</li>
+<li>Follow the instructions for your distribution on the <a href="https://code.visualstudio.com/Download">VS Code website</a></li>
 </ul>
 </section>
-<section id="launch-vs-code" class="level2">
-<h2 class="anchored" data-anchor-id="launch-vs-code">Launch VS Code</h2>
+<section id="open-vs-code" class="level2">
+<h2 class="anchored" data-anchor-id="open-vs-code">Open VS Code</h2>
 <ul>
-<li>After installation, launch VS Code.</li>
-<li>You should see the welcome screen with options to start a new project or open existing files.</li>
+<li>Open VS Code after the installation</li>
+<li>You should see a welcome screen with options to start a new project or open existing files</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/vscode-screen.png" class="img-fluid figure-img"></p>
-<figcaption>VS Code Welcome Screen</figcaption>
+<figcaption>VS Code welcome screen</figcaption>
 </figure>
 </div>
-</section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
-<p>Microsoft has published a series of <a href="https://code.visualstudio.com/docs/introvideos/basics">introductory videos</a> to help you get started with VS Code. You can also read the <a href="https://code.visualstudio.com/docs">official documentation</a> for more detailed information.</p>
-<p>You should also install the <a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter</a> and the <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a> extensions for VS Code. These extensions will allow you to work with Jupyter notebooks and Python code directly in the editor.</p>
-<p>To install the extensions, click on the Extensions view icon on the left sidebar (it looks like four squares) and search for “Jupyter” and “Python”. Click “Install” for both extensions. Or just click on the links above to install them directly.</p>
+<p>Microsoft has a series of <a href="https://code.visualstudio.com/docs/introvideos/basics">introductory videos</a> that will help you get started with VS Code. The <a href="https://code.visualstudio.com/docs">official documentation</a> has more details if you need them.</p>
 </section>
 </section>
 <section id="installing-anaconda" class="level1">
 <h1>Installing Anaconda</h1>
-<p>Anaconda is a distribution of Python that includes many popular packages for data science and scientific computing. It also provides a convenient way to manage different Python environments.</p>
+<p>Anaconda is a distribution of Python that already includes many of the packages we use for data science, such as pandas, NumPy and Jupyter. It also helps you manage different Python environments (see <a href="./04-conda-environments-tutorial.html">Tutorial 04</a>). Anaconda is free for students and for teaching at universities.</p>
 <section id="download-anaconda" class="level2">
 <h2 class="anchored" data-anchor-id="download-anaconda">Download Anaconda</h2>
 <ul>
-<li>Visit the Anaconda website: <a href="https://www.anaconda.com/products/distribution" class="uri">https://www.anaconda.com/products/distribution</a>. You can skip the registration if you prefer.</li>
+<li>Go to the Anaconda website: <a href="https://www.anaconda.com/download" class="uri">https://www.anaconda.com/download</a>. You can skip the registration if you prefer</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/anaconda01.png" class="img-fluid figure-img"></p>
-<figcaption>Anaconda Website</figcaption>
+<figcaption>Anaconda website</figcaption>
 </figure>
 </div>
 <ul>
-<li>Click on the “Download” button for your operating system.</li>
+<li>Click on the “Download” button for your operating system</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -515,133 +510,134 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </section>
-<section id="for-windows-users-1" class="level2">
-<h2 class="anchored" data-anchor-id="for-windows-users-1">For Windows Users</h2>
+<section id="windows-1" class="level2">
+<h2 class="anchored" data-anchor-id="windows-1">Windows</h2>
 <ul>
-<li>Choose “Just Me” for the installation type (recommended).</li>
+<li>Choose “Just Me” as the installation type (recommended)</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/anaconda-windows01.png" class="img-fluid figure-img"></p>
-<figcaption>Anaconda Installation</figcaption>
+<figcaption>Installation type</figcaption>
 </figure>
 </div>
 <ul>
-<li>Select the installation location (default is fine).</li>
+<li>Select the installation folder (the default is fine)</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/anaconda-windows02.png" class="img-fluid figure-img"></p>
-<figcaption>Anaconda Installation</figcaption>
+<figcaption>Installation folder</figcaption>
 </figure>
 </div>
 <ul>
-<li>In the “Advanced Options” section, check “Add Anaconda to my PATH environment variable” and “Register Anaconda as my default Python”.</li>
+<li>In “Advanced Options”, keep “Register Anaconda as my default Python” ticked. Anaconda recommends that you do <em>not</em> tick “Add Anaconda to my PATH environment variable”, so please leave that box empty. Your screen may look slightly different from the image below, depending on the version you download</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/anaconda-windows03.png" class="img-fluid figure-img"></p>
-<figcaption>Advanced Options</figcaption>
+<figcaption>Advanced options</figcaption>
 </figure>
 </div>
 </section>
-<section id="for-macos-users-1" class="level2">
-<h2 class="anchored" data-anchor-id="for-macos-users-1">For macOS Users</h2>
+<section id="macos-1" class="level2">
+<h2 class="anchored" data-anchor-id="macos-1">macOS</h2>
 <ul>
-<li>Open the downloaded .pkg file and follow the installation instructions. You can install Anaconda for all users.</li>
+<li>Open the <code>.pkg</code> file you downloaded and follow the installation instructions. You can install Anaconda for all users</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/anaconda-macos01.png" class="img-fluid figure-img"></p>
-<figcaption>Anaconda Installation</figcaption>
+<figcaption>Anaconda installation on macOS</figcaption>
 </figure>
 </div>
 <ul>
-<li>Follow the on-screen instructions, accepting the default options.</li>
+<li>Accept the default options on each screen</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/anaconda-macos02.png" class="img-fluid figure-img"></p>
-<figcaption>Anaconda Installation</figcaption>
+<figcaption>Anaconda installation on macOS</figcaption>
 </figure>
 </div>
 </section>
-<section id="for-linux-users-1" class="level2">
-<h2 class="anchored" data-anchor-id="for-linux-users-1">For Linux Users</h2>
+<section id="linux-1" class="level2">
+<h2 class="anchored" data-anchor-id="linux-1">Linux</h2>
 <ul>
-<li>Please follow the distribution-specific instructions provided on the <a href="https://docs.anaconda.com/anaconda/install/linux/">Anaconda website</a>.</li>
+<li>Follow the instructions for Linux on the <a href="https://docs.anaconda.com/anaconda/install/">Anaconda website</a></li>
 </ul>
 </section>
-<section id="verify-anaconda-installation" class="level2">
-<h2 class="anchored" data-anchor-id="verify-anaconda-installation">Verify Anaconda Installation</h2>
+<section id="check-that-anaconda-works" class="level2">
+<h2 class="anchored" data-anchor-id="check-that-anaconda-works">Check that Anaconda works</h2>
 <ul>
-<li>Open a new terminal or command prompt. On VS Code, you can do it by clicking on “Terminal” &gt; “New Terminal” in the top menu.</li>
-<li>Type <code>conda --version</code> and press Enter. You should see the Conda version number.</li>
-<li>Type <code>python --version</code> and press Enter. You should see the Python version installed by Anaconda.</li>
+<li>Open a terminal. On Windows, use the “Anaconda PowerShell Prompt” from the Start menu. On macOS, you can open a terminal inside VS Code by clicking on “Terminal” &gt; “New Terminal” in the top menu</li>
+<li>Type <code>conda --version</code> and press Enter. You should see the conda version number</li>
+<li>Type <code>python --version</code> and press Enter. You should see the Python version that came with Anaconda</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/anaconda-verify.png" class="img-fluid figure-img"></p>
-<figcaption>Verify Anaconda Installation</figcaption>
+<figcaption>Checking the Anaconda installation</figcaption>
 </figure>
 </div>
+<p>If macOS says <code>conda: command not found</code>, run <code>conda init zsh</code> once in the terminal, then close and open the terminal again. We will see more about the terminal and conda in <a href="./04-conda-environments-tutorial.html">Tutorial 04</a>.</p>
 </section>
 </section>
 <section id="connecting-vs-code-with-anaconda" class="level1">
 <h1>Connecting VS Code with Anaconda</h1>
-<p>Now that both VS Code and Anaconda are installed, we will connect them to use Anaconda’s Python distribution within VS Code. If they are connected correctly, you should be able to see the Conda and Python versions again in the VS Code output window.</p>
-<section id="install-the-python-and-jupyer-extensions-in-vs-code" class="level2">
-<h2 class="anchored" data-anchor-id="install-the-python-and-jupyer-extensions-in-vs-code">Install the Python and Jupyer Extensions in VS Code:</h2>
+<p>Now that you have installed VS Code and Anaconda, we will tell VS Code to use Anaconda’s Python. If everything works, you will see the Python version from Anaconda in VS Code’s terminal.</p>
+<section id="install-the-python-and-jupyter-extensions" class="level2">
+<h2 class="anchored" data-anchor-id="install-the-python-and-jupyter-extensions">Install the Python and Jupyter extensions</h2>
 <ul>
-<li>Open VS Code and click on the Extensions view icon on the left sidebar (it looks like four squares). Search for “Python” in the search bar.</li>
+<li>Open VS Code and click on the Extensions icon on the left sidebar (it looks like four squares). Search for “Python”</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/vscode-python-extension.png" class="img-fluid figure-img"></p>
-<figcaption>Python Extension in VS Code</figcaption>
+<figcaption>Python extension in VS Code</figcaption>
 </figure>
 </div>
 <ul>
-<li><p>Find the <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">official Python extension</a> by Microsoft and click “Install”.</p></li>
-<li><p>Please also install the <a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter extension for VS Code</a> to work with Jupyter notebooks.</p></li>
+<li>Find the <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">official Python extension</a> by Microsoft and click “Install”</li>
+<li>Then install the <a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter extension</a>, which lets you work with Jupyter Notebooks in VS Code</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/vscode-jupyter-extension.png" class="img-fluid figure-img"></p>
-<figcaption>Jupyter Extension in VS Code</figcaption>
+<figcaption>Jupyter extension in VS Code</figcaption>
 </figure>
 </div>
 </section>
-<section id="select-the-anaconda-python-interpreter" class="level2">
-<h2 class="anchored" data-anchor-id="select-the-anaconda-python-interpreter">Select the Anaconda Python Interpreter:</h2>
+<section id="select-anacondas-python" class="level2">
+<h2 class="anchored" data-anchor-id="select-anacondas-python">Select Anaconda’s Python</h2>
 <ul>
-<li>Create a Python file in VS Code. Click on the “New File” button in the top left corner and save it with a <code>.py</code> extension.</li>
+<li>Create a new file in VS Code. Click on “File” &gt; “New File” and save it with a <code>.py</code> extension</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/vscode-new-file.png" class="img-fluid figure-img"></p>
-<figcaption>New Python File in VS Code</figcaption>
+<figcaption>New Python file in VS Code</figcaption>
 </figure>
 </div>
 <ul>
-<li>Include the following code in the file:</li>
+<li>Add the following code to the file:</li>
 </ul>
-<div id="67c01f55" class="cell" data-execution_count="1">
+<div id="e700b790" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sys.version)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sys.executable)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
-<li>Save the file again. Here I saved it as <code>testing-anaconda.py</code>.</li>
+<li>Save the file again. I saved mine as <code>testing-anaconda.py</code></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/vscode-save-file.png" class="img-fluid figure-img"></p>
-<figcaption>Save Python File in VS Code</figcaption>
+<figcaption>Saving the Python file</figcaption>
 </figure>
 </div>
 <ul>
-<li>Press <code>Ctrl+Shift+P</code> (Windows/Linux) or <code>Cmd+Shift+P</code> (macOS) to open the Command Palette.</li>
+<li>Press <code>Ctrl+Shift+P</code> (Windows/Linux) or <code>Cmd+Shift+P</code> (macOS) to open the Command Palette</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -650,61 +646,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <ul>
-<li>Type “Python: Select Interpreter” and select it from the list.</li>
+<li>Type “Python: Select Interpreter” and select it from the list</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/vscode-select-interpreter.png" class="img-fluid figure-img"></p>
-<figcaption>Select Python Interpreter</figcaption>
+<figcaption>Selecting the Python interpreter</figcaption>
 </figure>
 </div>
 <ul>
-<li>Choose the Anaconda Python interpreter from the list. It should be labelled something like “Python 3.x.x (‘base’) Conda”.</li>
+<li>Choose Anaconda’s Python from the list. It should be called something like “Python 3.x.x (‘base’)” and mention conda</li>
 </ul>
 </section>
-<section id="verify-the-connection" class="level2">
-<h2 class="anchored" data-anchor-id="verify-the-connection">Verify the Connection:</h2>
+<section id="check-the-connection" class="level2">
+<h2 class="anchored" data-anchor-id="check-the-connection">Check the connection</h2>
 <ul>
-<li>Please click on the “Run” button at the top right corner of the editor to execute the code in your <code>.py</code> file. Select “Run Current File in Dedicated Terminal”</li>
+<li>Click on the “Run” button at the top right corner of the editor and select “Run Python File in Dedicated Terminal”</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/vscode-run-file.png" class="img-fluid figure-img"></p>
-<figcaption>Run Python File in VS Code</figcaption>
+<figcaption>Running the Python file</figcaption>
 </figure>
 </div>
 <ul>
-<li>The output should show the Anaconda Python version and its location.</li>
+<li>The output should show Anaconda’s Python version and the folder where it is installed</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/vscode-output.png" class="img-fluid figure-img"></p>
-<figcaption>Python Output in VS Code</figcaption>
+<figcaption>Output in VS Code</figcaption>
 </figure>
 </div>
 </section>
 </section>
 <section id="optional-github-copilot" class="level1">
 <h1>Optional: GitHub Copilot</h1>
-<p><a href="https://github.com/features/copilot">GitHub Copilot</a> is an AI-powered code completion tool that helps you write code faster and with fewer errors. It is available as an extension for VS Code. Detailed instructions are available on the <a href="https://github.com/danilofreire/datasci151-summer/blob/main/tutorials/03-github-tutorial.pdf">03-github-copilot-tutorial</a> tutorial in the course repository, but I will provide a brief overview here. Please also refer to <a href="https://code.visualstudio.com/docs/copilot/getting-started-chat" class="uri">https://code.visualstudio.com/docs/copilot/getting-started-chat</a> for further instructions.</p>
-<p>To install GitHub Copilot, follow these steps:</p>
+<p><a href="https://github.com/features/copilot">GitHub Copilot</a> is an AI assistant that suggests code as you type and answers questions in a chat window. It is built into VS Code, so you do not need to install a separate extension.</p>
 <ul>
-<li><p>First, sign up for a free educational license at <a href="https://github.com/education/students" class="uri">https://github.com/education/students</a>. This will give you access to GitHub Copilot and other GitHub features.</p></li>
-<li><p>On the website, click on “Join GitHub Education” and follow the instructions to verify your student status. You will need to provide proof of enrollment, such as a school email address or a document from your institution. The educational license is valid for two years.</p></li>
-<li><p>Once you have verified your student status, you can install GitHub Copilot in VS Code. Go to the Extensions view in VS Code (the square icon on the left sidebar) and search for <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot">GitHub Copilot</a>. Click on “Install”. VS Code will install two extensions, GitHub Copilot and GitHub Copilot Chat.</p></li>
-<li><p>After installing the extensions, you will need to sign in to your GitHub account in VS Code. Click on the GitHub icon in the left sidebar and follow the prompts to sign in.</p></li>
-<li><p>Once you have signed in, you can start using GitHub Copilot. It will provide code suggestions as you type, based on the context of your code. You can accept the suggestions by pressing <code>Tab</code> or <code>Enter</code>. You can also use the Chat tab (the speech bubble icon) to ask questions in natural language, like you do with ChatGPT or other chatbots, and Copilot will provide code snippets in response.</p></li>
+<li>Hover over the Copilot icon in the Status Bar at the bottom of VS Code and select “Use AI Features”</li>
+<li>Sign in with your GitHub account. If you do not have a Copilot plan, VS Code will sign you up for Copilot Free, which gives you a limited number of suggestions and chat messages each month</li>
+<li>As a student, you can also get <a href="https://docs.github.com/en/copilot/about-github-copilot/plans-for-github-copilot">Copilot Student</a> for free. Verify your student status on <a href="https://github.com/education/students">GitHub Education</a> first (see <a href="./03-github-tutorial.html">Tutorial 03</a>)</li>
+<li>Once you are signed in, Copilot will suggest code as you type. Press <code>Tab</code> to accept a suggestion. You can also open the chat window and ask questions in plain English, as you would with ChatGPT or Claude</li>
 </ul>
-<p>GitHub Copilot can be very helpful for writing code and answering questions, but it also makes mistakes. It is important to review the code suggestions and ensure they are correct before using them in your projects.</p>
+<p>The <a href="https://code.visualstudio.com/docs/copilot/setup">VS Code documentation</a> has more details on how to set up Copilot.</p>
+<p>Copilot is very helpful, but it also makes mistakes. Please always check its suggestions before you use them. And remember that AI tools are not allowed during quizzes!</p>
 </section>
 <section id="conclusion" class="level1">
 <h1>Conclusion</h1>
-<p>You have now successfully installed Visual Studio Code and connected it with Anaconda. Remember to create and activate appropriate Conda environments for different projects to manage dependencies effectively.</p>
-<p>For further information and advanced usage, refer to the following resources:</p>
+<p>You have now installed VS Code and Anaconda and connected them. Well done! :)</p>
+<p>If you would like to learn more, these resources are a good place to start:</p>
 <ul>
-<li>VS Code Python Tutorial: <a href="https://code.visualstudio.com/docs/python/python-tutorial" class="uri">https://code.visualstudio.com/docs/python/python-tutorial</a></li>
-<li>Anaconda Documentation: <a href="https://docs.anaconda.com/" class="uri">https://docs.anaconda.com/</a></li>
-<li>VS Code Documentation: <a href="https://code.visualstudio.com/docs" class="uri">https://code.visualstudio.com/docs</a></li>
+<li><a href="https://code.visualstudio.com/docs/python/python-tutorial">VS Code Python tutorial</a></li>
+<li><a href="https://docs.anaconda.com/">Anaconda documentation</a></li>
+<li><a href="https://code.visualstudio.com/docs">VS Code documentation</a></li>
 </ul>
 <p>Happy coding!</p>
 
