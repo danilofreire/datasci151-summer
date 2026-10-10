@@ -1,6 +1,6 @@
-# DATASCI 151 (Summer 2026) - Quiz 03
+# DATASCI 151 (Maymester 2027) - Quiz 03
 
-**Date:** Friday, 29 May 2026
+**Date:** Friday, 28 May 2027
 **Coverage:** Lectures 10-13
 
 ## What to expect
