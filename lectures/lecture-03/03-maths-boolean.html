@@ -1339,7 +1339,7 @@ Danilo Freire
 <li>You can check a list of NumPy functions <a href="https://numpy.org/doc/stable/reference/routines.math.html">here</a> (there are many!)</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div id="892aee5d" class="cell" data-execution_count="1">
+<div id="9a3a8806" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href></a><span class="co"># Importing packages</span></span>
 <span id="cb1-2"><a href></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1377,7 +1377,7 @@ Danilo Freire
 </ul></li>
 <li>Don’t forget how to exponentiate in Python 😉</li>
 </ul>
-<div id="2cdc6489" class="cell" data-execution_count="2">
+<div id="35d8580d" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href></a>x <span class="op">=</span> <span class="dv">10</span></span>
 <span id="cb3-2"><a href></a>x <span class="op">**</span> <span class="dv">5</span></span>
 <span id="cb3-3"><a href></a></span>
@@ -1421,7 +1421,7 @@ Danilo Freire
 <li><p><span class="math inline">\(d = \begin{pmatrix} 4 \\ 2 \end{pmatrix}\)</span></p></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div id="55e7698b" class="cell" data-execution_count="3">
+<div id="30dd6845" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href></a>vec_a  <span class="op">=</span> np.array([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>])</span>
 <span id="cb5-2"><a href></a>vec_b  <span class="op">=</span> np.array([<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>])</span>
 <span id="cb5-3"><a href></a>vec_c  <span class="op">=</span> np.array([<span class="dv">10</span>,<span class="dv">100</span>,<span class="dv">1000</span>,<span class="dv">2000</span>,<span class="dv">5000</span>])</span>
@@ -1438,7 +1438,7 @@ Danilo Freire
 <li><p>Remember that <span class="alert">Python is zero-indexed</span>, which means that the first element is accessed with index 0, the second with index 1, and so on</p></li>
 <li><p>Access the first and the third element of <span class="math inline">\(a\)</span></p></li>
 </ul>
-<div id="e438b523" class="cell" data-execution_count="4">
+<div id="89dc70a1" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href></a><span class="bu">print</span>(vec_a)</span>
 <span id="cb6-2"><a href></a><span class="bu">print</span>(vec_a[<span class="dv">0</span>])</span>
 <span id="cb6-3"><a href></a><span class="bu">print</span>(vec_a[<span class="dv">2</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1465,7 +1465,7 @@ Danilo Freire
 <li><span class="math inline">\(a + 2 = \begin{pmatrix} a_1 + 2 \\ a_2 + 2 \\ a_3 + 2 \end{pmatrix}\)</span></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div id="3ad5f4e4" class="cell" data-execution_count="5">
+<div id="6adda332" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href></a><span class="co"># Print the original array</span></span>
 <span id="cb8-2"><a href></a><span class="bu">print</span>(vec_a)</span>
 <span id="cb8-3"><a href></a></span>
@@ -1480,7 +1480,7 @@ Danilo Freire
 <li>A scalar refers to either an int or float</li>
 <li>We can do many common operations, such as:</li>
 </ul>
-<div id="e9805969" class="cell" data-execution_count="6">
+<div id="e5792c7a" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href></a><span class="bu">print</span>(vec_a <span class="op">*</span> <span class="dv">2</span>)</span>
 <span id="cb10-2"><a href></a><span class="bu">print</span>(vec_a <span class="op">/</span> <span class="dv">2</span>)</span>
 <span id="cb10-3"><a href></a><span class="bu">print</span>(vec_a <span class="op">+</span> <span class="dv">2</span>)</span>
@@ -1499,7 +1499,7 @@ Danilo Freire
 <h2>Element-by-element addition between two arrays of the same size</h2>
 <div style="margin-top: 30px; font-size: 26px;">
 <p><span class="math inline">\(a + b = \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} +\)</span> <span class="math inline">\(\begin{pmatrix} b_1 \\ b_2 \\ b_3 \end{pmatrix} =\)</span> <span class="math inline">\(\begin{pmatrix} a_1 + b_1 \\ a_2 + b_2 \\ a_3 + b_3 \end{pmatrix}\)</span></p>
-<div id="d129225b" class="cell" data-execution_count="7">
+<div id="c2a5f8b2" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href></a><span class="bu">print</span>(vec_a)</span>
 <span id="cb12-2"><a href></a><span class="bu">print</span>(vec_b)</span>
 <span id="cb12-3"><a href></a></span>
@@ -1518,7 +1518,7 @@ Danilo Freire
 <h2>Element-by-element multiplication between two arrays of the same size</h2>
 <div style="margin-top: 30px; font-size: 24px;">
 <p><span class="math inline">\(a * b = \begin{pmatrix} a_1 * b_1 \\ a_2 * b_2 \\ a_3 * b_3 \end{pmatrix}\)</span></p>
-<div id="c422f390" class="cell" data-execution_count="8">
+<div id="0a319775" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href></a><span class="bu">print</span>(vec_a)</span>
 <span id="cb14-2"><a href></a><span class="bu">print</span>(vec_b)</span>
 <span id="cb14-3"><a href></a></span>
@@ -1529,7 +1529,8 @@ Danilo Freire
 <span id="cb14-8"><a href></a><span class="co"># We can do other similar element-by-element operations</span></span>
 <span id="cb14-9"><a href></a><span class="co"># such as subtraction, and division.</span></span>
 <span id="cb14-10"><a href></a><span class="bu">print</span>(vec_a <span class="op">-</span> vec_b)</span>
-<span id="cb14-11"><a href></a><span class="bu">print</span>(vec_a <span class="op">/</span> vec_b)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb14-11"><a href></a><span class="co"># Dividing by 0 gives inf (and a warning)</span></span>
+<span id="cb14-12"><a href></a><span class="bu">print</span>(vec_a <span class="op">/</span> vec_b)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1 2 3]
 [0 1 0]
@@ -1556,7 +1557,7 @@ Danilo Freire
 <div style="margin-top: 40px;">
 
 </div>
-<div id="7fe9f1d7" class="cell" data-execution_count="9">
+<div id="1a6678fb" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href></a><span class="bu">print</span>(np.mean(vec_a))</span>
 <span id="cb16-2"><a href></a><span class="bu">print</span>(np.std(vec_a))</span>
 <span id="cb16-3"><a href></a><span class="bu">print</span>(np.<span class="bu">min</span>(vec_a))</span>
@@ -1594,7 +1595,7 @@ Danilo Freire
 <h2>Common pitfall</h2>
 <h3 id="make-sure-that-the-arrays-are-of-the-same-size">Make sure that the arrays are of the same size!</h3>
 <div style="margin-top: 40px; font-size: 24px;">
-<div id="37717108" class="cell" data-execution_count="10">
+<div id="801937d6" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href></a><span class="bu">print</span>(vec_a)</span>
 <span id="cb18-2"><a href></a><span class="bu">print</span>(vec_c)</span>
 <span id="cb18-3"><a href></a></span>
@@ -1608,7 +1609,7 @@ Danilo Freire
 (5,)</code></pre>
 </div>
 </div>
-<div id="95a94389" class="cell" data-execution_count="11">
+<div id="451d365a" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href></a><span class="co"># When you add two arrays of different sizes,</span></span>
 <span id="cb20-2"><a href></a><span class="co"># Python will raise an error</span></span>
 <span id="cb20-3"><a href></a><span class="bu">print</span>(vec_a <span class="op">+</span> vec_c)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1653,15 +1654,15 @@ Danilo Freire
 <li>The number of distinct variables is <code>size</code></li>
 <li>More information about the <code>normal</code> function <a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.normal.html">here</a></li>
 </ul>
-<div id="1975082d" class="cell" data-execution_count="12">
+<div id="467a22af" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href></a><span class="co"># Generate 10 random variables </span></span>
 <span id="cb22-2"><a href></a><span class="co"># from a normal distribution</span></span>
 <span id="cb22-3"><a href></a><span class="co"># with mean = 0 and sd = 1</span></span>
 <span id="cb22-4"><a href></a>random_var_a <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">10</span>)</span>
 <span id="cb22-5"><a href></a><span class="bu">print</span>(random_var_a)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[-1.78742967 -1.49531739  0.18802424  0.83629309 -1.38247359 -0.77765685
-  0.30384544  0.33820253 -0.48253977  1.38053995]</code></pre>
+<pre><code>[-0.2837879  -0.80461618 -0.21886579 -3.1305208  -1.6733438   0.63639163
+  0.20603458 -1.44479918  0.50057824 -0.5613351 ]</code></pre>
 </div>
 </div>
 </div></div>
@@ -1675,7 +1676,7 @@ Danilo Freire
 <li>This is called a <span class="alert">seed</span>, and it is set using <code>np.random.seed()</code></li>
 <li>This allows for <a href="https://en.wikipedia.org/wiki/Reproducibility">reproducibility</a> of results</li>
 </ul>
-<div id="e0df3409" class="cell" data-execution_count="13">
+<div id="f040dc47" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href></a>np.random.seed(<span class="dv">151</span>)</span>
 <span id="cb24-2"><a href></a></span>
 <span id="cb24-3"><a href></a>random_var_b <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">10</span>)</span>
@@ -1693,7 +1694,7 @@ Danilo Freire
 <ul>
 <li>We can use the <code>plt.hist()</code> function to compute a histogram</li>
 </ul>
-<div id="bded6e1c" class="cell" data-execution_count="14">
+<div id="a2816c5a" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href></a><span class="co"># Create a histogram of the random variable</span></span>
 <span id="cb26-2"><a href></a>random_var_x <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
 <span id="cb26-3"><a href></a></span>
@@ -1763,7 +1764,7 @@ Danilo Freire
 <li><p>Let’s see how this works in Python</p></li>
 <li><p>First, let’s load the <code>matplotlib</code> and <code>numpy</code> libraries</p></li>
 </ul>
-<div id="0ef82d78" class="cell" data-execution_count="15">
+<div id="f872bad8" class="cell" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb27-2"><a href></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb27-3"><a href></a></span>
@@ -1775,8 +1776,8 @@ Danilo Freire
 <pre><code>False</code></pre>
 </div>
 </div>
-<p>Note: the <span class="alert">order of the strings matters</span>!</p>
-<div id="f41bd7ec" class="cell" data-execution_count="16">
+<p>Note: the <span class="alert">order of the characters matters</span>!</p>
+<div id="4d469c8c" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href></a><span class="co">&quot;ab&quot;</span> <span class="op">==</span> <span class="st">&quot;ba&quot;</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>False</code></pre>
@@ -1791,7 +1792,7 @@ Danilo Freire
 <li><p>Equality of strings is most useful when you’re comparing an unknown variable to a benchmark</p></li>
 <li><p>Below, try switching the value of <code>any_questions</code></p></li>
 </ul>
-<div id="44a0fc1b" class="cell" data-execution_count="17">
+<div id="3a0c06fe" class="cell" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href></a>any_questions <span class="op">=</span> <span class="st">&quot;no&quot;</span></span>
 <span id="cb31-2"><a href></a><span class="bu">print</span>(any_questions <span class="op">==</span> <span class="st">&quot;no&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -1799,7 +1800,7 @@ Danilo Freire
 </div>
 </div>
 <div class="fragment fade-in">
-<div id="4d8ad6af" class="cell" data-execution_count="18">
+<div id="a5ade11e" class="cell" data-execution_count="18">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href></a>any_questions <span class="op">=</span> <span class="st">&quot;yes&quot;</span> </span>
 <span id="cb33-2"><a href></a><span class="bu">print</span>(any_questions <span class="op">==</span> <span class="st">&quot;no&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -1818,7 +1819,7 @@ Danilo Freire
 <li>Let’s see how this works in Python</li>
 </ul>
 <div class="fragment fade-in">
-<div id="544f19b1" class="cell" data-execution_count="19">
+<div id="ec6cd851" class="cell" data-execution_count="19">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href></a><span class="co">&quot;apple&quot;</span> <span class="kw">in</span> <span class="st">&quot;I like apples&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="18">
 <pre><code>True</code></pre>
@@ -1826,7 +1827,7 @@ Danilo Freire
 </div>
 </div>
 <div class="fragment fade-in">
-<div id="e281b798" class="cell" data-execution_count="20">
+<div id="34528284" class="cell" data-execution_count="20">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href></a>keyword <span class="op">=</span> <span class="st">&quot;economic&quot;</span></span>
 <span id="cb37-2"><a href></a>sentence <span class="op">=</span> <span class="st">&quot;The Federal Reserve makes forecasts about many economic outcomes&quot;</span></span>
 <span id="cb37-3"><a href></a></span>
@@ -1842,7 +1843,7 @@ Danilo Freire
 <ul>
 <li>Now, let’s test whether a keyword is present in a list</li>
 </ul>
-<div id="31dc4ad2" class="cell" data-execution_count="21">
+<div id="fc76ace1" class="cell" data-execution_count="21">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href></a>current_month <span class="op">=</span> <span class="st">&quot;September&quot;</span></span>
 <span id="cb39-2"><a href></a>list_summer_months <span class="op">=</span> [<span class="st">&quot;June&quot;</span>,<span class="st">&quot;July&quot;</span>,<span class="st">&quot;August&quot;</span>]</span>
 <span id="cb39-3"><a href></a></span>
@@ -1873,7 +1874,7 @@ True</code></pre>
 </ul></li>
 <li>Let’s see how this works in Python</li>
 </ul>
-<div id="e1aaac0d" class="cell" data-execution_count="22">
+<div id="b00d28d9" class="cell" data-execution_count="22">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href></a>x <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb41-2"><a href></a></span>
 <span id="cb41-3"><a href></a><span class="bu">print</span>(x <span class="op">&lt;</span> <span class="dv">5</span>)</span>
@@ -1899,7 +1900,7 @@ False</code></pre>
 <li>For example, <code>isinstance(5, int)</code> returns <code>True</code></li>
 <li>Other data types include <code>float</code>, <code>str</code>, <code>list</code>, <code>tuple</code>, <code>dict</code>, <code>set</code>, <code>bool</code></li>
 </ul>
-<div id="cc178676" class="cell" data-execution_count="23">
+<div id="79ed4a02" class="cell" data-execution_count="23">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href></a>y <span class="op">=</span> <span class="dv">10</span></span>
 <span id="cb43-2"><a href></a></span>
 <span id="cb43-3"><a href></a><span class="bu">print</span>(<span class="bu">isinstance</span>(y,<span class="bu">int</span>))</span>
@@ -1918,10 +1919,10 @@ False</code></pre>
 <div style="margin-top: 30px; font-size: 24px;">
 <ul>
 <li>We can test whether two vectors are equal using the same == operator</li>
-<li>For example, <code>[1,2,3] == [1,2,3]</code> returns <code>True</code></li>
-<li>Please note that the equality of vectors is <a href="https://numpy.org/doc/stable/reference/generated/numpy.array_equal.html">done element-wise</a></li>
+<li>For lists, <code>[1,2,3] == [1,2,3]</code> returns a single <code>True</code></li>
+<li>For NumPy arrays, the comparison is done <span class="alert">element-wise</span>: one <code>True</code>/<code>False</code> per position (use <code>np.array_equal()</code> to compare whole arrays)</li>
 </ul>
-<div id="b75cb2f4" class="cell" data-execution_count="24">
+<div id="56c100a9" class="cell" data-execution_count="24">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href></a>vec_a <span class="op">=</span> np.array([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>])</span>
 <span id="cb45-2"><a href></a>vec_b <span class="op">=</span> np.array([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>])</span>
 <span id="cb45-3"><a href></a></span>
@@ -1981,7 +1982,7 @@ False</code></pre>
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div id="b4888f7f" class="cell" data-execution_count="25">
+<div id="13133a65" class="cell" data-execution_count="25">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href></a>age <span class="op">=</span> <span class="dv">22</span></span>
 <span id="cb47-2"><a href></a></span>
 <span id="cb47-3"><a href></a><span class="co"># Can this person legally vote in the US?</span></span>
@@ -1994,7 +1995,7 @@ False</code></pre>
 <li>The <code>not</code> operator can be separated by a space and parentheses are not necessary</li>
 <li>But parentheses can be helpful to organise your code logically</li>
 </ul>
-<div id="5d793ef0" class="cell" data-execution_count="26">
+<div id="cba9e1ee" class="cell" data-execution_count="26">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href></a><span class="kw">not</span> age <span class="op">&lt;</span> <span class="dv">18</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="25">
 <pre><code>True</code></pre>
@@ -2011,7 +2012,7 @@ False</code></pre>
 <li>The <code>and</code> operator returns <code>True</code> only if <span class="alert">both</span> conditions are <code>True</code></li>
 <li>For example, <code>(5 &gt; 3) and (5 &lt; 10)</code> returns <code>True</code></li>
 </ul>
-<div id="159f44ed" class="cell" data-execution_count="27">
+<div id="5fbcac38" class="cell" data-execution_count="27">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href></a><span class="co"># We use the `and` keyword to combine two conditions</span></span>
 <span id="cb51-2"><a href></a>age <span class="op">=</span> <span class="dv">31</span></span>
 <span id="cb51-3"><a href></a></span>
@@ -2030,17 +2031,17 @@ False</code></pre>
 <li>To test whether <span class="alert">at least one</span> condition is <code>True</code>, we use the <code>or</code> operator</li>
 <li>For example, <code>(5 &gt; 3) or (5 &gt; 10)</code> returns <code>True</code></li>
 </ul>
-<div id="1728042a" class="cell" data-execution_count="28">
+<div id="26ca4331" class="cell" data-execution_count="28">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href></a><span class="co"># We use the `or` keyword to combine two conditions</span></span>
 <span id="cb53-2"><a href></a>age <span class="op">=</span> <span class="dv">31</span></span>
 <span id="cb53-3"><a href></a></span>
-<span id="cb53-4"><a href></a><span class="co"># Is this age higher than 20 or lower than 30?</span></span>
+<span id="cb53-4"><a href></a><span class="co"># Is this age at least 20 or at most 30?</span></span>
 <span id="cb53-5"><a href></a>(age <span class="op">&gt;=</span> <span class="dv">20</span>) <span class="kw">or</span> (age <span class="op">&lt;=</span> <span class="dv">30</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="27">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="4b2c8801" class="cell" data-execution_count="29">
+<div id="5e1645d9" class="cell" data-execution_count="29">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href></a><span class="co"># Another example</span></span>
 <span id="cb55-2"><a href></a>student_status <span class="op">=</span> <span class="st">&quot;freshman&quot;</span></span>
 <span id="cb55-3"><a href></a></span>
@@ -2062,7 +2063,7 @@ False</code></pre>
 <li>These check each element separately and return <span class="alert">one answer per element</span></li>
 </ul></li>
 </ul>
-<div id="ad322d0f" class="cell" data-execution_count="30">
+<div id="451ad583" class="cell" data-execution_count="30">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href></a><span class="co"># Single value: one True/False answer</span></span>
 <span id="cb57-2"><a href></a>age <span class="op">=</span> <span class="dv">25</span></span>
 <span id="cb57-3"><a href></a><span class="bu">print</span>((age <span class="op">&gt;=</span> <span class="dv">20</span>) <span class="kw">and</span> (age <span class="op">&lt;=</span> <span class="dv">30</span>))</span>
@@ -2076,7 +2077,7 @@ False</code></pre>
 </div>
 </div>
 <ul>
-<li>We will use this in the <span class="alert">next lecture</span>, when we filter arrays of data 🚀</li>
+<li>We will use this <span class="alert">later in the course</span>, when we filter data 🚀</li>
 </ul>
 </div>
 </section>
@@ -2117,7 +2118,7 @@ False</code></pre>
 <li>Compute <span class="math inline">\(\pi x^2\)</span></li>
 <li>Compute <span class="math inline">\(\frac{1}{\sqrt{2\pi}}e^{-x^2/2}\)</span></li>
 </ul>
-<div id="4f957c8e" class="cell" data-execution_count="31">
+<div id="566c8849" class="cell" data-execution_count="31">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href></a>x <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb59-2"><a href></a><span class="bu">print</span>(np.pi <span class="op">*</span> x <span class="op">**</span> <span class="dv">2</span>)</span>
 <span id="cb59-3"><a href></a><span class="bu">print</span>((<span class="dv">1</span> <span class="op">/</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> np.pi)) <span class="op">*</span> np.exp(<span class="op">-</span>x <span class="op">**</span> <span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2137,7 +2138,7 @@ False</code></pre>
 <li>Compute the mean of</li>
 <li><span class="math inline">\(e = \begin{pmatrix} 10 \\ 8 \\ 15 \\ 0 \\ 24 \end{pmatrix}\)</span></li>
 </ul>
-<div id="1886b15c" class="cell" data-execution_count="32">
+<div id="76d6bae6" class="cell" data-execution_count="32">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href></a>vec_e <span class="op">=</span> np.array([<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">15</span>, <span class="dv">0</span>, <span class="dv">24</span>])</span>
 <span id="cb61-2"><a href></a><span class="bu">print</span>(np.mean(vec_e))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -2164,7 +2165,7 @@ False</code></pre>
 <span id="cb63-11"><a href></a>plt.hist(np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">10000</span>))</span>
 <span id="cb63-12"><a href></a>plt.title(<span class="st">&quot;size = 10000&quot;</span>)</span>
 <span id="cb63-13"><a href></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="595def88" class="cell quarto-layout-panel" data-layout-ncol="3" data-execution_count="33">
+<div id="b8e01eed" class="cell quarto-layout-panel" data-layout-ncol="3" data-execution_count="33">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img role="img" data-src="data:image/png;base64,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pUuX5ve/+tWvpptuuulz52WbLr/00kuFPRUGDBhQ63WzYJHNpnj88cfz5aXWrl2bOnbsuF1jPOKII9K///u/p4ZSlyWxdqZ169ZtFaXqIts0u7rnb+81q16v8vldunSp01gAAKCxiRUAANCIsqWU9t577/Tuu+/mG1VnG1NfdtllNe4X0RiyGRRPP/10ITDcf//9hRkRVWXjq1TTjIq/ll0vixVZlMn2QTj++OO3a4zZZt3ZrVhVDVWtWrWq03PatGlTOP7oo492+JpVr1d5TbECAICmwjJQAADQyL71rW8Vjq+88so8XvzDP/xD+s///M9874fPPvus0b53tkfFz372s/w4+76//vWvU/v27as998UXX9xqz4eSkpJt3qrOhsg2Cqd6bdu23WqmS1188sknNc6K2J5rVr1eTdcEAIAoYgUAADSyLFDccMMNhU+2Z/tY3Hfffemf//mfU//+/VPXrl3TBRdckObOndug3/eBBx5I3//+9wtvbGd7TNS2t0E2rh2RbRBO9Tp06FDv16nqbIqqz9/ea/717IzqrgkAAFEsAwUAADvBNddcky/HlC3BlC2blIWJbI+HzJo1a/LZD9kt22D7nnvuyTe43hF//OMf8wCSbZadzYCYOnVqvi9EbTZv3lw4vuKKK9J+++1Xr+85aNCg7R7vokWL8g29G3LPilNPPTU1FT169Cgcv/3223V6zrJlywrHe+21V7XXrNxkO7vmwIED63y9zp0779SlyAAAYFvECgAA2EmyN5evuuqq/JYt/ZQtuzR79uz0P//zP+nZZ5/Nz7n33nvTPvvsk374wx9u9/fJ3pQuKysr7GmQzer42te+ts3nZTM8Kp1wwgnp7LPPTjtLFlfGjBnTYNfLlrFqSrGib9++qUWLFvneHqtXr04rVqxI3bp1q/U5r732WuG4uv08Dj744HwZscyrr766zTFs63oAABDJMlAAABAg2+A6WwLq6quvTvPmzdtq74e77rpru/exWL9+ffrqV7+ab+id+cd//Mf0ve99r07P7devX+H497///XZ9f6qXLQF20EEH1fn1zX7+VZcFy/6s/LUBAwbU+XqZ3/3ud7VeDwAAIokVAADQBGSzLXbffff8eNWqVdu1WXX2Bvf5559f+LT94MGD009/+tM6P3/IkCGF41/84heFmRk7Q7b8VbZkVUPdshkqTU02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XJL69Omz1a936dIlXXbZZemkk05KgwYNShs2bEhjxoxJp59+eq3Xa9u2bWrfvn1jDBUAAAAAACjGmRU33XTT50JFVf369ctnVWQWL168zf0rAAAAAACA4tUosaIuDj300MLxO++8EzUMAAAAAABgV40Vy5cvLxzvsccedXrOpk2bGnFEAAAAAADALhUrpk2bVtjHom/fvrWeO2LEiNShQ4fUunXr/HbIIYekUaNGpddee20njRYAAAAAAGhWG2xvy+TJk9OLL76YH1966aWpRYsWtZ6/aNGirWZXZPtcZLe77ror3XzzzemKK67YrnGsXr26xsfWrFmzXdcEAAAAAACaeKzIIsPIkSPz4/333z99+9vfrva80tLSNGTIkHTuueemQYMGpV69eqXdd989lZeXp+nTp6cbb7wxrV27Nr9W+/btCxt210c2qwMAAAAAAIhVUlFRUbGzvtn777+fjjnmmPT666+nVq1apf/7v//L72+Pl19+OQ0ePDitXLkyjw5vvPFG6tixY72uUVJSUqfzVq1alTp37rxd4wQAAKDx9R4708tMtcrHD/XKAEADy1YtqpwM0FDvn++0PSs+/PDDdMopp+ShIlv26f7779/uUJHp169fuu666wovxqxZs+p9jex5Nd2WLl263WMDAAAAAACaWKzYsGFDOv3009MLL7yQz2a455570jnnnLPD1z3zzDMLxwsWLKj387PaU9OtU6dOOzw+AAAAAACgCcSKTz75JJ1xxhlp7ty5+f1JkyZt1/4S1enevXvh2IbYAAAAAADQPDVqrPj000/zGRSzZ8/O72ebYo8YMaLBrv/ee+8Vju0pAQAAAAAAzVOjxYotW7ak888/v7CXxDXXXJPGjh3boN9j2rRpheMBAwY06LUBAAAAAIBmHCsqKirSxRdfnB544IH8/pVXXpluuOGGel1j2bJltT6+cOHCNG7cuPw423X8tNNO24ERAwAAAAAAUVo2xkVHjhyZpkyZkh8PGzYsDxXr16+v8fw2bdqkli23Hsrhhx+ejjvuuFRWVpbPmth7771TaWlpKi8vTw8++GCaOHFivnF35tZbb00dO3ZsjN8KAAAAAADQyEoqsmkQDX3RkpJ6nT958uR00UUXbfVrnTp1Sh9++GGtz2vXrl267bbb0je/+c3U0FavXp3P2MisWrXKnhgAAABNWO+xM6OH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plGjRqUjjzwyengAAAAAAECxxwoAAAAAAKA4Nek9KwAAAAAAgOInVgAAAAAAAKHECgAAAAAAIJRYAQAAAAAAhBIrAAAAAACAUGIFAAAAAAAQSqwAAAAAAABCiRUAAAAAAEAosQIoSq+++mq65ZZb0hlnnJEOOOCA1LZt2/yWHZ933nnpscceix4i0ER98MEHaebMmenaa69Np512WurWrVsqKSnJb+PGjYseHhDo0UcfTWVlZWmfffZJbdq0Sfvtt18aNmxYmjdvnp8LUK2Kioq0ZMmSNGXKlHT55ZenI444IrVu3brwb4vy8nKvHPA5mzdvTo8//ngaPXp0Gjx4cNpzzz3Tbrvtljp16pQGDhyYxo4dm958802vHEWnpCL7f06AIjJx4sR09dVXb/O8c845J/385z/P32wAqHTCCSekJ598stoXJAsYggXsmkaNGpUmTZpU7WMtWrRI48ePz99QAKgqixHZB6Zq8sYbb6TevXt70YCtHHbYYWnhwoW1virt2rVLd955Z7rwwgu9ehQNMyuAorN27dr864EHHpi/sfjUU0+ld955J/+0dPaJyGOPPTZ//H//93/TRRddFDxaoKnafffd878vvvGNb0QPBWgCH4SoDBVDhw5Nzz77bP7vijlz5qSjjjoqbdmyJY0ZMyZNmzYteqhAE9azZ8901llnFf57BKC29zVKS0vTkCFD0t13351eeumltHLlyrR06dJ0xx13pK5du6aPPvooDR8+PM2aNcsLSdEwswIoOvfdd18+tTqbOZFNrf5r2RsKp59+emEpqOwNh2w6NkAmm27do0ePdPDBB+eflq76iUgzK2DXs2LFivwDEOvWrUsnnnhi+u1vf5u/eVDp448/Tv3790+vvPJK/uno7GurVq1Cxww0HdnfHbNnz05HHnlk/u+LTDZL87rrrsuPzawAqvOtb30rXXLJJalPnz7VPv7yyy+nQYMGpQ0bNuT/3bJo0SIvJEXBzAqg6GRrR3/ta1+rNlRksjcff/SjHxXu+xQCUFX26aW//du/zf+uAJg6dWr+ZmNmwoQJW4WKTLYn1vXXX58fZ3HTvyuAqjp06JDvdVMZKgDq4qabbqoxVGT69euXz6rILF682P4VFA2xAtglHXrooYXjbIkoAIDqzJgxI/+azbCqaSZm9kZk5R5YDz30kBcSAGh03tegGIkVwC5p+fLlheM99tgjdCwAQNO1YMGC/OvRRx9d4znZ8pPZUlCZ5557bqeNDQDYdXlfg2IkVgC7pGxz7UrHHHNM6FgAgKbp7bffLiwBle1bUZvKx1999dVUUVGxU8YHAOy6pk2bln/t0qVL6tu3b/RwoEGIFcAuuVHmD3/4w/x4//33zzfbBgCo7t8Mlfbaa69aX6Du3bvnXzdu3JjWr1/vxQQAGs3kyZPTiy++mB9feuml9tujaIgVwC5ly5Yt6fzzz08rV67M7//4xz9OrVq1ih4WANAEbdiwoXBcuSdFTbKNtiuJFQBAY8k21B45cmThA5jf/va3vdgUjZbRAwB2bdmnD994440duka3bt3yW11ceeWV6fHHH8+PR4wYkW+ICTRPO/vvD2DXU3U5p5KSktCxAAC8//776Ywzzsg/GJF98PL++++3DydFRawAQi1ZsqSwIeX2uvbaa9O4ceO2ed51112XfvKTn+THZ599drrtttt26PsCu87fH8CuqX379oXjjz/+uNZzqz5e9XkAAA3hww8/TKecckp6/fXX82WfslBhD06KjWWggF3CrbfeWnhD8stf/nL6xS9+YU1HAKBWVWdeLV++fJufdMy0bt1arAAAGnxpymy/zRdeeCGf7XnPPfekc845x6tM0TGzAgh1+OGHb7XEQmO4++6701VXXZUfH3vssWn69On2qYAisDP+/gB2bT179kwdOnRI69atS0uXLq313Mpl6fr06WPJKACgwXzyySf50k9z587N70+aNCkNHz7cK0xRMrMCKGo///nP07/8y7/kx0cccUSaOXNmateuXfSwAIBmYsCAAfnXZ555ptY9dBYsWJAfDxw4cKeNDQAobp9++mk+g2L27Nn5/RtvvDHffxOKlVgBFK1p06aliy66KH322WfpsMMOS4888kj+6UgAgLrKPsmYyWZWzJ8/v9pzZsyYkX/qMVNWVubFBQB22JYtW9L555+fZs2ald+/5ppr0tixY72yFDWxAihKWZg477zz8v9z79u3b3r88cdTly5doocFADQzF1xwQeHDDtkbBNmHIKrKIsW1116bH/fu3TtfTxoAYEdky91efPHF6YEHHsjvX3nllemGG27wolL07FkBFJ2nn346nX322WnTpk35WtMPPvhgvvTT+vXrqz2/RYsWqW3btjt9nEDT9MEHH6TXX3+9cP/dd98tHC9btmyrpWCyjXT79++/08cI7NxNtseNG5euvvrq9MQTT+QzJ7I4kYWJxYsX5wFjyZIl+bm33HKLfbGAz8n+rli7du1W/56o9Pzzz6f33nuvcL9Xr175Ddi1jRw5Mk2ZMiU/HjZsWB4qanpPI9OmTZvUsqW3eWn+SirsTAkUmWzpp8r/U6+L448/Ps2ZM6dRxwQ0H/fee2+dN6zbf//9U3l5eaOPCWgabxrcfvvt1T5WWlqaJkyYkEaPHr3TxwU0fSeccEJ68skn63RuFkOzQArs2kpKSup1/uTJk/P3QqC5swwUAADANkyaNClfZjLbw6JHjx75DIrs08/ZspNz584VKgAAYAeZWQEAAAAAAIQyswIAAAAAAAglVgAAAAAAAKHECgAAAAAAIJRYAQAAAAAAhBIrAAAAAACAUGIFAAAAAAAQSqwAAAAAAABCiRUAAAAAAEAosQIAAAAAAAglVgAAAAAAAKHECgAAAAAAIJRYAQAAAAAAhBIrAAAAAACAUGIFAAAAAAAQSqwAAAAAAABCiRUAAAAAAEAosQIAAAAAAAglVgAAAAAAAKHECgAAAAAAIJRYAQAAAAAAhBIrAAAAAACAUGIFAAAAAAAQSqwAAAAAAABCiRUAAAAAAECK9P8AkrZTImbHgU4AAAAASUVORK5CYII=" width="790"></p>
@@ -2190,7 +2191,7 @@ False</code></pre>
 <li>Whether <span class="math inline">\(x = -1\)</span> is a solution to the equation <span class="math inline">\(x^2 + 2x + 1 = 0\)</span></li>
 <li>Please remember that <span class="math inline">\(x^2\)</span> is written as <code>x**2</code> in Python</li>
 </ul>
-<div id="c4c70abc" class="cell" data-execution_count="34">
+<div id="498309c0" class="cell" data-execution_count="34">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href></a>x <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
 <span id="cb64-2"><a href></a><span class="bu">print</span>(x <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> x <span class="op">+</span> <span class="dv">1</span> <span class="op">==</span> <span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -2207,7 +2208,7 @@ False</code></pre>
 <li>Whether age (<code>age = 31</code>) is strictly less than 20, or greater than 30</li>
 <li>Not in the age range 25-27</li>
 </ul>
-<div id="eab7ee36" class="cell" data-execution_count="35">
+<div id="2519eb74" class="cell" data-execution_count="35">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href></a>age <span class="op">=</span> <span class="dv">31</span></span>
 <span id="cb66-2"><a href></a></span>
 <span id="cb66-3"><a href></a>(age <span class="op">&lt;</span> <span class="dv">20</span>) <span class="kw">or</span> (age <span class="op">&gt;</span> <span class="dv">30</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2215,7 +2216,7 @@ False</code></pre>
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="258810af" class="cell" data-execution_count="36">
+<div id="959171c6" class="cell" data-execution_count="36">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href></a>(age <span class="op">&lt;</span> <span class="dv">25</span>) <span class="kw">or</span> (age <span class="op">&gt;</span> <span class="dv">27</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="35">
 <pre><code>True</code></pre>
@@ -2229,7 +2230,7 @@ False</code></pre>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p><a href="https://danilofreire.github.io/datasci151-summer/lectures/lecture-04/04-maths-arrays-random.html">Maths with NumPy</a></p>
+<p><a href="https://danilofreire.github.io/datasci151-summer/lectures/lecture-03/03-maths-boolean.html">Maths with NumPy</a></p>
 </div>
 </div></div>
 
