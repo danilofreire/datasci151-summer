@@ -249,14 +249,14 @@
     "href": "assignments.html",
     "title": "Assignments",
     "section": "",
-    "text": "You will complete five assignments and three in-class quizzes. Each assignment is worth 10% of your final grade (50% in total), and the three quizzes together are worth the other 50%, or about 16.67% each.\nAssignments are usually due on Wednesdays and Fridays at 11:59pm. You can submit them on Canvas (preferred) or by email (danilo.freire@emory.edu).\nI encourage you to complete the assignments in Jupyter Notebooks and submit them as PDFs.\nYou will find the assignments in .ipynb format in the assignments folder of the course repository."
+    "text": "You will complete five assignments and three in-class quizzes. Each assignment is worth 10% of your final grade (50% in total), and the three quizzes together are worth the other 50%, or about 16.67% each.\nAssignments are due on Wednesdays and Fridays at 11:59pm. Please complete them in Jupyter Notebooks and submit them on Canvas as HTML or PDF files, as these are easier for me to read.\nYou will find the assignments in .ipynb format in the assignments folder of the course repository."
   },
   {
     "objectID": "assignments.html#assignment-timeline",
     "href": "assignments.html#assignment-timeline",
     "title": "Assignments",
     "section": "Assignment timeline",
-    "text": "Assignment timeline\n\n\n\nSessions\nTopics\nAssignment\nSubmission Deadline\n\n\n\n\n02-03\nVariables and Lists\nAssignment 01\n2027-05-14\n\n\n03-05\nArrays and Conditional Statements\nAssignment 02\n2027-05-19\n\n\n06-07\nWhile and For Loops, Functions\nAssignment 03\n2027-05-21\n\n\n10-11\nSubsetting Data\nAssignment 04\n2027-05-26\n\n\n12-13\nSQL\nAssignment 05\n2027-05-28"
+    "text": "Assignment timeline\n\n\n\nSessions\nTopics\nAssignment\nSubmission Deadline\n\n\n\n\n02-03\nVariables, Lists and Boolean Arrays\nAssignment 01\n2027-05-14\n\n\n03-07\nArrays, Conditional Statements, Loops and Functions\nAssignment 02\n2027-05-19\n\n\n06-08\nLoops, Functions and Pandas\nAssignment 03\n2027-05-21\n\n\n10-12\nSubsetting Data and SQL in Python\nAssignment 04\n2027-05-26\n\n\n11-13\nSQL\nAssignment 05\n2027-05-28"
   },
   {
     "objectID": "assignments.html#in-class-quizzes",

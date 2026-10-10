@@ -99,7 +99,7 @@ Emory welcomes students from across the country and around the world, and intern
 
 **Assignments (50%).** You will complete five assignments during the course. They give you hands-on practice with the lecture material, and each one has conceptual questions and practical exercises. Please complete them individually and acknowledge all your sources, including textbooks, articles and AI tools.
 
-*Late submissions automatically receive half credit.* Please submit your assignments on Canvas as HTML files, Jupyter notebooks (`.ipynb`) or PDFs by midnight on the due date.
+*Late submissions automatically receive half credit.* Please submit your assignments on Canvas as HTML or PDF files by midnight on the due date. These formats are easier for me to read than notebooks.
 
 **Quizzes (50%).** You will take three in-class quizzes, all on Fridays. Each quiz covers that week's lectures and asks you to apply the concepts to new problems. Quizzes are open-book and open-notes, but **AI tools are not allowed**. They are also individual, so please do not discuss the questions with your classmates.
 
