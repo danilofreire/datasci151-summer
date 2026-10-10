@@ -12,7 +12,7 @@ The quiz repository will be made public on the day of the quiz at <https://githu
 ## How the quiz works
 
 - Answer the questions in the Jupyter notebook (`01-quiz.ipynb`) inside the quiz repository.
-- Export your completed notebook as a PDF and submit it on Canvas.
+- Export your completed notebook as an HTML or PDF file and submit it on Canvas.
 - The quiz data files are in the `data` folder of the quiz repository.
 
 ## Rules
