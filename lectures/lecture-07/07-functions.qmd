@@ -108,8 +108,8 @@ Today, we will see how to [package reusable code into functions]{.alert} 🤓
 ```{python}
 #| eval: true
 #| echo: true
-# Argument: "Hello" 
-# Return: Showing the message on screen
+# Argument: the text to show
+# Result: shows the message on screen (returns None)
 
 print("Hello, "+str("DATASCI 151!"))
 ```
@@ -172,7 +172,7 @@ So far, so good? 😊
 ```{python}
 #| eval: true
 #| echo: true
-# A function that generates a random number
+# A function that generates random numbers
 vec_x = np.random.chisquare(df = 2, size = 10)
 print(vec_x)
 ```
@@ -293,9 +293,9 @@ $f(x) = x^2 + 2x + 1$
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 - Write a function with a parameter `numeric_grade`
-- Inside the function write an if/else statement for $grade \ge 55$.
-- If it's true, then assign `status = pass`
-- If it's false, then assign `status = fail`
+- Inside the function write an if/else statement for $grade \ge 55$
+- If it's true, then assign `status = "pass"`
+- If it's false, then assign `status = "fail"`
 - Return the value of `status`
 - Test your function with $numeric\_grade = 60$
 - [[Appendix 02]{.button}](#sec:appendix02)
@@ -349,7 +349,7 @@ print(result)
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 - Write a function called `fn_iseligible_vote`
-- This functions returns a boolean value that checks whether $age \ge$ 18
+- This function returns a boolean value that checks whether $age \ge$ 18
 - Test your function with $age = 20$
 - [[Appendix 03]{.button}](#sec:appendix03)
 :::
@@ -532,8 +532,8 @@ print(y)
 ```{python}
 #| echo: true
 #| eval: true
-# The following code assigns a global variable x
-# Inside the function
+# The function's local x and y disappear after each call
+# The global x and y stay the same
 
 x = 5
 y = 4
@@ -619,8 +619,8 @@ print(x)
 :::{.column width="50%"}
 - We have also seen many [built-in functions]{.alert} in Python, like `print()`, `len()`, `sum()`, etc
 - They are [available in any part of your code]{.alert}, and you don't need to define them
-- Python has a list of variables that are always available to prevent you from using the same names
-- Most of them are error names
+- Python has a list of names that are always available. You can overwrite them, so avoid using them as variable names
+- Many of them are error names
 - Python checks the built-in scope last (after Local, Enclosing, and Global)
 
 ```{python}
@@ -652,7 +652,7 @@ print(dir(builtins))
 :::{style="margin-top: 30px; font-size: 26px;"}
 - You can define a function *inside* another function. This is called a [nested function]{.alert}
 - The [enclosing scope]{.alert} is made up of the variables in the outer function that the inner one can see and use
-- This is the **E** in the LEGB rule (Local → Enclosing → Global → Built-in)
+- This is the [E]{.alert} in the LEGB rule (Local → Enclosing → Global → Built-in)
 - We won't use nested functions much in this course, but they are useful in some cases
 :::
 
@@ -678,7 +678,7 @@ def outer_function():
 # Now, let's call the outer_function to see it in action
 outer_function()
 ```
-In this example, `outer_variable` is "enclosing" for `inner_function`.
+In this example, `outer_variable` is "enclosing" for `inner_function`
 :::
 
 ## Enclosing scope: what if inner defines its own variable? (shadowing)
@@ -703,7 +703,7 @@ def outer_function_shadow():
 
 outer_function_shadow()
 ```
-The inner `message` is a completely separate variable from the outer `message`.
+The inner `message` is a completely separate variable from the outer `message`
 :::
 
 ## Try it out! 🚀 {#sec:exercise-07}
@@ -865,7 +865,7 @@ print(y)
 ## Appendix 06 {#sec:appendix-06}
 
 :::{style="margin-top: 30px; font-size: 21px;"}
-**1. Working output (predictions):**
+[1. Working output (predictions)]{.alert}:
 
 ```{python}
 #| echo: true
@@ -887,15 +887,15 @@ func_one()
 print(f"Outside all functions: a = {a}")
 ```
 
-**2. What would happen if we uncomment the print-outside-scope lines?**
+[2. What would happen if we uncomment the print-outside-scope lines?]{.alert}
 
 - `print(c)` inside `func_one` after `func_two()` returns: `NameError`, because `c` is local to `func_two` and no longer exists once that function ends
 - `print(b)` outside all functions: `NameError`, because `b` was local to `func_one` and is destroyed when it returns
 - `print(c)` outside all functions: `NameError`, for the same reason as above
 
-**3. Scope of each variable:**
+[3. Scope of each variable]{.alert}:
 
-- `a`: [global]{.alert} — defined at the top level, visible everywhere
+- `a`: [global]{.alert}, defined at the top level, visible everywhere
 - `b`: [local]{.alert} to `func_one` (and [enclosing]{.alert} for `func_two`, which can read it)
 - `c`: [local]{.alert} to `func_two` only
 

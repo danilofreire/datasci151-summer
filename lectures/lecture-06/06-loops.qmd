@@ -113,8 +113,8 @@ for i in variable:
 :::{style="margin-top: 30px; font-size: 23px;"}
 :::{.columns}
 :::{.column width="50%"}
-- You can iterate over [any sequence of elements]{.alert}, such as:
-  - Numbers, strings, lists, dictionaries, or any other type of object
+- You can iterate over [any sequence of elements]{.alert}
+  - The elements can be numbers, strings, lists, or any other type of object
 - You can even iterate over a [list of lists (nested lists)]{.alert} 🤯
   - This is very useful when working with dataframes or matrices
 
@@ -220,6 +220,26 @@ The `range()` function is often used with `for` loops to generate a sequence of 
     ```
 :::
 
+## Comparing each value with the previous
+
+:::{style="margin-top: 30px; font-size: 24px;"}
+- A useful pattern when you need to look at each value alongside the one before it
+- `range()` makes this easy because the index `i` also lets you reach `i-1`
+- Start the loop at index [1]{.alert}, since index 0 has no "previous"
+- Use `temperatures[i]` for the current value and `temperatures[i-1]` for the previous
+- Common in [data science]{.alert}: daily returns, growth rates, week-over-week changes
+
+```{python}
+#| echo: true
+#| eval: true
+temperatures = [22, 24, 23, 27, 26, 30, 28]
+
+for i in range(1, len(temperatures)):
+    change = temperatures[i] - temperatures[i-1]
+    print(f"Day {i}: temperature changed by {change}°C")
+```
+:::
+
 ## Iterating over strings
 
 :::{style="margin-top: 30px; font-size: 24px;"}
@@ -257,7 +277,7 @@ for index, fruit in enumerate(fruits):
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 - You can also include numbers in your messages
-- Initiate `index = 1` before the loop (just to start at 1, since Python indexes start at 0)
+- Initialise `index = 1` before the loop (just to start at 1, since Python indexes start at 0)
 - Add `index = index + 1` at the end of the body
 
 ```{python}
@@ -458,6 +478,7 @@ print(list_y)
 plt.scatter(list_x, list_y)
 plt.xlabel("X-axis")
 plt.ylabel("Y-axis")
+plt.show()
 ```
 :::
 
@@ -541,7 +562,7 @@ If `count = count + 1` is forgotten, it creates an infinite loop!
 #| echo: true
 #| eval: false
 # Example: Get a positive number from the user
-# Initialise to a value that fails the condition
+# Start with an invalid value so the loop runs at least once
 
 number = -1 
 while number <= 0:
@@ -555,7 +576,7 @@ while number <= 0:
 print(f"You entered a valid positive number: {number}")
 ```
 
-- The `try`/`except` block catches the error if the user types something that isn't a number. We'll cover error handling properly in a later lecture
+- The `try`/`except` block catches the error if the user types something that isn't a number. We will not cover error handling in this course; for now, read it as "if the conversion fails, run this instead"
 - This code is best run in a Jupyter Notebook, it fails in a non-interactive environment (like this one) because `input()` doesn't work here
 :::
 
@@ -703,7 +724,7 @@ else:
 :::{style="margin-top: 30px; font-size: 24px;"}
 - List comprehensions provide a [concise and readable]{.alert} way to create lists
 - They often achieve the same result as a `for` loop (and sometimes an `if` condition) but in a [single line of code]{.alert}
-- **Basic Syntax:**
+- [Basic syntax]{.alert}:
   `new_list = [expression for item in iterable]`
 
 Advantages:
@@ -715,7 +736,7 @@ Advantages:
 ## List comprehension examples
 
 :::{style="margin-top: 30px; font-size: 22px;"}
-**Example 1: Customised messages**
+[Example 1]{.alert}: Customised messages
 ```{python}
 #| echo: true
 #| eval: true
@@ -724,7 +745,7 @@ message_list = ["Your car model is: " + i for i in id_list]
 print(message_list)
 ```
 
-**Example 2: Math operations**
+[Example 2]{.alert}: Maths operations
 ```{python}
 #| echo: true
 #| eval: true
@@ -740,7 +761,7 @@ print(f"Squared list:  {x_sqr_list}")
 :::{style="margin-top: 30px; font-size: 24px;"}
 You can add an `if` condition to filter items during list creation
 
--   **Syntax with `if`:**
+-   [Syntax with `if`]{.alert}:
     `new_list = [expression for item in iterable if condition]`
 
 Example: Create a list of squares of only the even numbers from 0 to 9
@@ -765,8 +786,8 @@ print(f"Squares of even numbers from 0-9: {squares_of_evens}")
 You have a list of names:
 `names = ["Alice", "Bob", "Charlie", "David", "Eve", "Fiona", "George"]`
 
-1.  Using a list comprehension, create a new list called `short_names` that contains only the names from the `names` list that have 5 or fewer characters.
-2.  Using a list comprehension, create a new list called `uppercase_long_names` that contains the uppercase versions of names from the `names` list that have more than 5 characters.
+1.  Using a list comprehension, create a new list called `short_names` that contains only the names from the `names` list that have 5 or fewer characters
+2.  Using a list comprehension, create a new list called `uppercase_long_names` that contains the uppercase versions of names from the `names` list that have more than 5 characters (use `name.upper()`)
 
 - [[Appendix 04]{.button}](#sec:appendix4_list_comp)
 :::

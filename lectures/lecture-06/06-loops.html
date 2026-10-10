@@ -1330,7 +1330,7 @@ Danilo Freire
 <h2>Recap: conditional example</h2>
 <div style="margin-top: 30px; font-size: 22px;">
 <p>Remember this kind of structure?</p>
-<div id="f8bb5f4a" class="cell" data-execution_count="1">
+<div id="9b0150f1" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href></a>age <span class="op">=</span> <span class="dv">22</span></span>
 <span id="cb1-2"><a href></a>is_student <span class="op">=</span> <span class="va">True</span></span>
 <span id="cb1-3"><a href></a>has_scholarship <span class="op">=</span> <span class="va">False</span></span>
@@ -1365,7 +1365,7 @@ Danilo Freire
 <div style="margin-top: 20px;">
 
 </div>
-<div id="7489434c" class="cell" data-execution_count="2">
+<div id="8cdf1f6e" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href></a>variable <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>]</span>
 <span id="cb3-2"><a href></a></span>
 <span id="cb3-3"><a href></a><span class="cf">for</span> i <span class="kw">in</span> variable:</span>
@@ -1388,16 +1388,16 @@ Danilo Freire
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li>You can iterate over <span class="alert">any sequence of elements</span>, such as:
+<li>You can iterate over <span class="alert">any sequence of elements</span>
 <ul>
-<li>Numbers, strings, lists, dictionaries, or any other type of object</li>
+<li>The elements can be numbers, strings, lists, or any other type of object</li>
 </ul></li>
 <li>You can even iterate over a <span class="alert">list of lists (nested lists)</span> 🤯
 <ul>
 <li>This is very useful when working with dataframes or matrices</li>
 </ul></li>
 </ul>
-<div id="cf6fc3f4" class="cell" data-execution_count="3">
+<div id="e20df71a" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href></a>students_scores <span class="op">=</span> [</span>
 <span id="cb5-2"><a href></a>    [<span class="st">&quot;Alice&quot;</span>, <span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">88</span>],</span>
 <span id="cb5-3"><a href></a>    [<span class="st">&quot;Bob&quot;</span>, <span class="dv">78</span>, <span class="dv">82</span>, <span class="dv">84</span>],</span>
@@ -1420,7 +1420,7 @@ Danilo Freire
 <section id="some-examples" class="slide level2">
 <h2>Some examples</h2>
 <div style="margin-top: 30px; font-size: 24px;">
-<div id="230e0f53" class="cell" data-execution_count="4">
+<div id="bbdee4e1" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href></a>list_ids <span class="op">=</span> [<span class="st">&quot;KIA&quot;</span>, <span class="st">&quot;Ferrari&quot;</span>, <span class="st">&quot;Ford&quot;</span>, <span class="st">&quot;Tesla&quot;</span>]</span>
 <span id="cb7-2"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;Dear customer, we are writing about your </span><span class="sc">{</span>list_ids[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> car.&quot;</span>)</span>
 <span id="cb7-3"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;Dear customer, we are writing about your </span><span class="sc">{</span>list_ids[<span class="dv">1</span>]<span class="sc">}</span><span class="ss"> car.&quot;</span>)</span>
@@ -1442,7 +1442,7 @@ Dear customer, we are writing about your Tesla car.</code></pre>
 
 </div>
 <div class="fragment fade-in">
-<div id="46ebb5d9" class="cell" data-execution_count="5">
+<div id="82f0f668" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href></a>list_ids <span class="op">=</span> [<span class="st">&quot;KIA&quot;</span>, <span class="st">&quot;Ferrari&quot;</span>, <span class="st">&quot;Ford&quot;</span>, <span class="st">&quot;Tesla&quot;</span>]</span>
 <span id="cb9-2"><a href></a></span>
 <span id="cb9-3"><a href></a><span class="cf">for</span> i <span class="kw">in</span> list_ids:</span>
@@ -1471,7 +1471,7 @@ Dear customer, we are writing about your Tesla car.</code></pre>
 <li>For each element in the combined list, the loop assigns it to <code>id</code></li>
 <li>Then <code>print(id)</code> displays the value</li>
 </ul>
-<div id="624388a6" class="cell" data-execution_count="6">
+<div id="6353e427" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href></a><span class="cf">for</span> <span class="bu">id</span> <span class="kw">in</span> list_ids <span class="op">+</span> [<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>]:</span>
 <span id="cb11-2"><a href></a>    <span class="bu">print</span>(<span class="bu">id</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -1492,7 +1492,7 @@ c</code></pre>
 <p>The <code>range()</code> function is often used with <code>for</code> loops to generate a sequence of numbers</p>
 <ul>
 <li><p><code>range(stop)</code>: Generates numbers from 0 up to (but not including) <code>stop</code></p>
-<div id="43d91a48" class="cell" data-execution_count="7">
+<div id="ec3ffab4" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>): <span class="co"># Generates 0, 1, 2, 3, 4</span></span>
 <span id="cb13-2"><a href></a>    <span class="bu">print</span>(i)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -1504,7 +1504,7 @@ c</code></pre>
 </div>
 </div></li>
 <li><p><code>range(start, stop)</code>: Generates numbers from <code>start</code> up to (but not including) <code>stop</code></p>
-<div id="c79023c4" class="cell" data-execution_count="8">
+<div id="61b58168" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">5</span>): <span class="co"># Generates 2, 3, 4</span></span>
 <span id="cb15-2"><a href></a>    <span class="bu">print</span>(i)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -1514,7 +1514,7 @@ c</code></pre>
 </div>
 </div></li>
 <li><p><code>range(start, stop, step)</code>: Generates numbers from <code>start</code> up to (but not including) <code>stop</code>, with an increment of <code>step</code></p>
-<div id="f49ca654" class="cell" data-execution_count="9">
+<div id="05ffeab5" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">8</span>, <span class="dv">2</span>): <span class="co"># Generates 2, 4, 6</span></span>
 <span id="cb17-2"><a href></a>    <span class="bu">print</span>(i)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -1526,14 +1526,41 @@ c</code></pre>
 </ul>
 </div>
 </section>
+<section id="comparing-each-value-with-the-previous" class="slide level2">
+<h2>Comparing each value with the previous</h2>
+<div style="margin-top: 30px; font-size: 24px;">
+<ul>
+<li>A useful pattern when you need to look at each value alongside the one before it</li>
+<li><code>range()</code> makes this easy because the index <code>i</code> also lets you reach <code>i-1</code></li>
+<li>Start the loop at index <span class="alert">1</span>, since index 0 has no “previous”</li>
+<li>Use <code>temperatures[i]</code> for the current value and <code>temperatures[i-1]</code> for the previous</li>
+<li>Common in <span class="alert">data science</span>: daily returns, growth rates, week-over-week changes</li>
+</ul>
+<div id="4b58ddcb" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href></a>temperatures <span class="op">=</span> [<span class="dv">22</span>, <span class="dv">24</span>, <span class="dv">23</span>, <span class="dv">27</span>, <span class="dv">26</span>, <span class="dv">30</span>, <span class="dv">28</span>]</span>
+<span id="cb19-2"><a href></a></span>
+<span id="cb19-3"><a href></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(temperatures)):</span>
+<span id="cb19-4"><a href></a>    change <span class="op">=</span> temperatures[i] <span class="op">-</span> temperatures[i<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb19-5"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;Day </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">: temperature changed by </span><span class="sc">{</span>change<span class="sc">}</span><span class="ss">°C&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Day 1: temperature changed by 2°C
+Day 2: temperature changed by -1°C
+Day 3: temperature changed by 4°C
+Day 4: temperature changed by -1°C
+Day 5: temperature changed by 4°C
+Day 6: temperature changed by -2°C</code></pre>
+</div>
+</div>
+</div>
+</section>
 <section id="iterating-over-strings" class="slide level2">
 <h2>Iterating over strings</h2>
 <div style="margin-top: 30px; font-size: 24px;">
 <p>Strings are sequences of characters, so you can iterate over them directly:</p>
-<div id="8d3f5ce6" class="cell" data-execution_count="10">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href></a>course_name <span class="op">=</span> <span class="st">&quot;DATASCI 151&quot;</span></span>
-<span id="cb19-2"><a href></a><span class="cf">for</span> char <span class="kw">in</span> course_name:</span>
-<span id="cb19-3"><a href></a>    <span class="bu">print</span>(char)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fc5af1ac" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href></a>course_name <span class="op">=</span> <span class="st">&quot;DATASCI 151&quot;</span></span>
+<span id="cb21-2"><a href></a><span class="cf">for</span> char <span class="kw">in</span> course_name:</span>
+<span id="cb21-3"><a href></a>    <span class="bu">print</span>(char)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>D
 A
@@ -1559,10 +1586,10 @@ I
 <li>Indices start at <span class="alert">0</span> by default, but <code>enumerate(variable, start=1)</code> gives friendlier numbering (“Customer 1, Customer 2, …”)</li>
 <li>Works with <span class="alert">any iterable</span>: lists, strings, tuples, even <code>range()</code></li>
 </ul>
-<div id="fea90478" class="cell" data-execution_count="11">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href></a>fruits <span class="op">=</span> [<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;cherry&quot;</span>]</span>
-<span id="cb21-2"><a href></a><span class="cf">for</span> index, fruit <span class="kw">in</span> <span class="bu">enumerate</span>(fruits):</span>
-<span id="cb21-3"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;Index </span><span class="sc">{</span>index<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>fruit<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="187a8f9a" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href></a>fruits <span class="op">=</span> [<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;cherry&quot;</span>]</span>
+<span id="cb23-2"><a href></a><span class="cf">for</span> index, fruit <span class="kw">in</span> <span class="bu">enumerate</span>(fruits):</span>
+<span id="cb23-3"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;Index </span><span class="sc">{</span>index<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>fruit<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Index 0: apple
 Index 1: banana
@@ -1576,18 +1603,18 @@ Index 2: cherry</code></pre>
 <div style="margin-top: 30px; font-size: 24px;">
 <ul>
 <li>You can also include numbers in your messages</li>
-<li>Initiate <code>index = 1</code> before the loop (just to start at 1, since Python indexes start at 0)</li>
+<li>Initialise <code>index = 1</code> before the loop (just to start at 1, since Python indexes start at 0)</li>
 <li>Add <code>index = index + 1</code> at the end of the body</li>
 </ul>
-<div id="0a72a4c1" class="cell" data-execution_count="12">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href></a>list_ids <span class="op">=</span> [<span class="st">&quot;KIA&quot;</span>, <span class="st">&quot;Ferrari&quot;</span>, <span class="st">&quot;Ford&quot;</span>, <span class="st">&quot;Tesla&quot;</span>]</span>
-<span id="cb23-2"><a href></a></span>
-<span id="cb23-3"><a href></a>index <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb23-4"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;We are out of the loop </span><span class="sc">{</span>index<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb23-5"><a href></a><span class="cf">for</span> i <span class="kw">in</span> list_ids:</span>
-<span id="cb23-6"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;Dear customer, your position is </span><span class="sc">{</span>index<span class="sc">}</span><span class="ss"> on the waitlist and your car brand is </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb23-7"><a href></a>    index <span class="op">=</span> index <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb23-8"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;We are inside the loop </span><span class="sc">{</span>index<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="ef5dfb25" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href></a>list_ids <span class="op">=</span> [<span class="st">&quot;KIA&quot;</span>, <span class="st">&quot;Ferrari&quot;</span>, <span class="st">&quot;Ford&quot;</span>, <span class="st">&quot;Tesla&quot;</span>]</span>
+<span id="cb25-2"><a href></a></span>
+<span id="cb25-3"><a href></a>index <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb25-4"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;We are out of the loop </span><span class="sc">{</span>index<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb25-5"><a href></a><span class="cf">for</span> i <span class="kw">in</span> list_ids:</span>
+<span id="cb25-6"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;Dear customer, your position is </span><span class="sc">{</span>index<span class="sc">}</span><span class="ss"> on the waitlist and your car brand is </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb25-7"><a href></a>    index <span class="op">=</span> index <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb25-8"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;We are inside the loop </span><span class="sc">{</span>index<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>We are out of the loop 1
 Dear customer, your position is 1 on the waitlist and your car brand is KIA
@@ -1605,10 +1632,10 @@ We are inside the loop 5</code></pre>
 <section id="sec:for" class="slide level2">
 <h2>Another example</h2>
 <div style="margin-top: 30px; font-size: 24px;">
-<div id="e0b017a1" class="cell" data-execution_count="13">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(list_ids)):</span>
-<span id="cb25-2"><a href></a>    <span class="bu">print</span>(<span class="st">&quot;Dear customer, your position is &quot;</span> <span class="op">+</span> <span class="bu">str</span>(i<span class="op">+</span><span class="dv">1</span>) <span class="op">+</span> <span class="st">&quot; on the waitlist&quot;</span> <span class="op">+</span></span>
-<span id="cb25-3"><a href></a>           <span class="st">&quot; and your car brand is &quot;</span> <span class="op">+</span> list_ids[i])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="9cf72eb2" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(list_ids)):</span>
+<span id="cb27-2"><a href></a>    <span class="bu">print</span>(<span class="st">&quot;Dear customer, your position is &quot;</span> <span class="op">+</span> <span class="bu">str</span>(i<span class="op">+</span><span class="dv">1</span>) <span class="op">+</span> <span class="st">&quot; on the waitlist&quot;</span> <span class="op">+</span></span>
+<span id="cb27-3"><a href></a>           <span class="st">&quot; and your car brand is &quot;</span> <span class="op">+</span> list_ids[i])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Dear customer, your position is 1 on the waitlist and your car brand is KIA
 Dear customer, your position is 2 on the waitlist and your car brand is Ferrari
@@ -1636,10 +1663,10 @@ Dear customer, your position is 4 on the waitlist and your car brand is Tesla</c
 <ul>
 <li><code>i</code> becomes each <em>item</em> of the list in turn: <code>&quot;KIA&quot;</code>, <code>&quot;Ferrari&quot;</code>, <code>&quot;Ford&quot;</code>, <code>&quot;Tesla&quot;</code></li>
 </ul>
-<div id="d520e569" class="cell" data-execution_count="14">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href></a>list_ids <span class="op">=</span> [<span class="st">&quot;KIA&quot;</span>, <span class="st">&quot;Ferrari&quot;</span>, <span class="st">&quot;Ford&quot;</span>, <span class="st">&quot;Tesla&quot;</span>]</span>
-<span id="cb27-2"><a href></a><span class="cf">for</span> i <span class="kw">in</span> list_ids:</span>
-<span id="cb27-3"><a href></a>    <span class="bu">print</span>(i)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="4ec51700" class="cell" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href></a>list_ids <span class="op">=</span> [<span class="st">&quot;KIA&quot;</span>, <span class="st">&quot;Ferrari&quot;</span>, <span class="st">&quot;Ford&quot;</span>, <span class="st">&quot;Tesla&quot;</span>]</span>
+<span id="cb29-2"><a href></a><span class="cf">for</span> i <span class="kw">in</span> list_ids:</span>
+<span id="cb29-3"><a href></a>    <span class="bu">print</span>(i)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>KIA
 Ferrari
@@ -1653,9 +1680,9 @@ Tesla</code></pre>
 <ul>
 <li><code>i</code> becomes each <em>position number</em>: <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code> (because <code>len(list_ids)</code> is 4, and <code>range(4)</code> produces <code>0, 1, 2, 3</code>)</li>
 </ul>
-<div id="6d9ce4fd" class="cell" data-execution_count="15">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(list_ids)):</span>
-<span id="cb29-2"><a href></a>    <span class="bu">print</span>(i)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="028ce8f2" class="cell" data-execution_count="16">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(list_ids)):</span>
+<span id="cb31-2"><a href></a>    <span class="bu">print</span>(i)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0
 1
@@ -1666,9 +1693,9 @@ Tesla</code></pre>
 <ul>
 <li>When <code>i</code> is a position, you still need to fetch the value yourself with <code>list_ids[i]</code>:</li>
 </ul>
-<div id="692ed53a" class="cell" data-execution_count="16">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(list_ids)):</span>
-<span id="cb31-2"><a href></a>    <span class="bu">print</span>(list_ids[i])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="e211be44" class="cell" data-execution_count="17">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(list_ids)):</span>
+<span id="cb33-2"><a href></a>    <span class="bu">print</span>(list_ids[i])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>KIA
 Ferrari
@@ -1686,24 +1713,24 @@ Tesla</code></pre>
 <ul>
 <li>Boring 🥱</li>
 </ul>
-<div id="1103e0ad" class="cell" data-execution_count="17">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb33-2"><a href></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb33-3"><a href></a></span>
-<span id="cb33-4"><a href></a>carfeatures <span class="op">=</span> pd.read_csv(<span class="st">&quot;data/features.csv&quot;</span>)</span>
-<span id="cb33-5"><a href></a>list_vars <span class="op">=</span> [<span class="st">&quot;acceleration&quot;</span>,<span class="st">&quot;weight&quot;</span>]</span>
-<span id="cb33-6"><a href></a></span>
-<span id="cb33-7"><a href></a>variable_name <span class="op">=</span> <span class="st">&quot;acceleration&quot;</span></span>
-<span id="cb33-8"><a href></a>plt.scatter(x<span class="op">=</span>carfeatures[variable_name], y<span class="op">=</span>carfeatures[<span class="st">&quot;mpg&quot;</span>])</span>
-<span id="cb33-9"><a href></a>plt.ylabel(<span class="st">&quot;mpg&quot;</span>)</span>
-<span id="cb33-10"><a href></a>plt.xlabel(variable_name)</span>
-<span id="cb33-11"><a href></a>plt.show()</span>
-<span id="cb33-12"><a href></a></span>
-<span id="cb33-13"><a href></a>variable_name <span class="op">=</span> <span class="st">&quot;weight&quot;</span></span>
-<span id="cb33-14"><a href></a>plt.scatter(x<span class="op">=</span>carfeatures[variable_name], y<span class="op">=</span>carfeatures[<span class="st">&quot;mpg&quot;</span>])</span>
-<span id="cb33-15"><a href></a>plt.ylabel(<span class="st">&quot;mpg&quot;</span>)</span>
-<span id="cb33-16"><a href></a>plt.xlabel(variable_name)</span>
-<span id="cb33-17"><a href></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fb226c02" class="cell" data-execution_count="18">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb35-2"><a href></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb35-3"><a href></a></span>
+<span id="cb35-4"><a href></a>carfeatures <span class="op">=</span> pd.read_csv(<span class="st">&quot;data/features.csv&quot;</span>)</span>
+<span id="cb35-5"><a href></a>list_vars <span class="op">=</span> [<span class="st">&quot;acceleration&quot;</span>,<span class="st">&quot;weight&quot;</span>]</span>
+<span id="cb35-6"><a href></a></span>
+<span id="cb35-7"><a href></a>variable_name <span class="op">=</span> <span class="st">&quot;acceleration&quot;</span></span>
+<span id="cb35-8"><a href></a>plt.scatter(x<span class="op">=</span>carfeatures[variable_name], y<span class="op">=</span>carfeatures[<span class="st">&quot;mpg&quot;</span>])</span>
+<span id="cb35-9"><a href></a>plt.ylabel(<span class="st">&quot;mpg&quot;</span>)</span>
+<span id="cb35-10"><a href></a>plt.xlabel(variable_name)</span>
+<span id="cb35-11"><a href></a>plt.show()</span>
+<span id="cb35-12"><a href></a></span>
+<span id="cb35-13"><a href></a>variable_name <span class="op">=</span> <span class="st">&quot;weight&quot;</span></span>
+<span id="cb35-14"><a href></a>plt.scatter(x<span class="op">=</span>carfeatures[variable_name], y<span class="op">=</span>carfeatures[<span class="st">&quot;mpg&quot;</span>])</span>
+<span id="cb35-15"><a href></a>plt.ylabel(<span class="st">&quot;mpg&quot;</span>)</span>
+<span id="cb35-16"><a href></a>plt.xlabel(variable_name)</span>
+<span id="cb35-17"><a href></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -1724,15 +1751,15 @@ Tesla</code></pre>
 <section id="cool" class="slide level2">
 <h2>Cool 😎</h2>
 <div style="margin-top: 30px; font-size: 24px;">
-<div id="87979c5f" class="cell" data-execution_count="18">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href></a>carfeatures <span class="op">=</span> pd.read_csv(<span class="st">&quot;data/features.csv&quot;</span>)</span>
-<span id="cb34-2"><a href></a>list_vars <span class="op">=</span> [<span class="st">&quot;acceleration&quot;</span>,<span class="st">&quot;weight&quot;</span>]</span>
-<span id="cb34-3"><a href></a></span>
-<span id="cb34-4"><a href></a><span class="cf">for</span> variable_name <span class="kw">in</span> list_vars:</span>
-<span id="cb34-5"><a href></a>    plt.scatter(x<span class="op">=</span>carfeatures[variable_name], y<span class="op">=</span>carfeatures[<span class="st">&quot;mpg&quot;</span>])</span>
-<span id="cb34-6"><a href></a>    plt.ylabel(<span class="st">&quot;mpg&quot;</span>)</span>
-<span id="cb34-7"><a href></a>    plt.xlabel(variable_name)</span>
-<span id="cb34-8"><a href></a>    plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="9b8bda49" class="cell" data-execution_count="19">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href></a>carfeatures <span class="op">=</span> pd.read_csv(<span class="st">&quot;data/features.csv&quot;</span>)</span>
+<span id="cb36-2"><a href></a>list_vars <span class="op">=</span> [<span class="st">&quot;acceleration&quot;</span>,<span class="st">&quot;weight&quot;</span>]</span>
+<span id="cb36-3"><a href></a></span>
+<span id="cb36-4"><a href></a><span class="cf">for</span> variable_name <span class="kw">in</span> list_vars:</span>
+<span id="cb36-5"><a href></a>    plt.scatter(x<span class="op">=</span>carfeatures[variable_name], y<span class="op">=</span>carfeatures[<span class="st">&quot;mpg&quot;</span>])</span>
+<span id="cb36-6"><a href></a>    plt.ylabel(<span class="st">&quot;mpg&quot;</span>)</span>
+<span id="cb36-7"><a href></a>    plt.xlabel(variable_name)</span>
+<span id="cb36-8"><a href></a>    plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -1753,18 +1780,18 @@ Tesla</code></pre>
 <section id="even-cooler" class="slide level2">
 <h2>Even cooler! 🤩</h2>
 <div style="margin-top: 30px; font-size: 24px;">
-<div id="0ff78f28" class="cell" data-execution_count="19">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href></a>carfeatures <span class="op">=</span> pd.read_csv(<span class="st">&quot;data/features.csv&quot;</span>)</span>
-<span id="cb35-2"><a href></a>list_vars   <span class="op">=</span> [<span class="st">&quot;acceleration&quot;</span>,<span class="st">&quot;weight&quot;</span>]</span>
-<span id="cb35-3"><a href></a></span>
-<span id="cb35-4"><a href></a>index <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb35-5"><a href></a><span class="cf">for</span> variable_name <span class="kw">in</span> list_vars:</span>
-<span id="cb35-6"><a href></a>    plt.scatter(x<span class="op">=</span>carfeatures[variable_name], y<span class="op">=</span>carfeatures[<span class="st">&quot;mpg&quot;</span>])</span>
-<span id="cb35-7"><a href></a>    plt.ylabel(<span class="st">&quot;mpg&quot;</span>)</span>
-<span id="cb35-8"><a href></a>    plt.xlabel(variable_name)</span>
-<span id="cb35-9"><a href></a>    plt.title(<span class="ss">f&quot;Figure </span><span class="sc">{</span>index<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb35-10"><a href></a>    plt.show()</span>
-<span id="cb35-11"><a href></a>    index <span class="op">=</span> index <span class="op">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="e6e9ced0" class="cell" data-execution_count="20">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href></a>carfeatures <span class="op">=</span> pd.read_csv(<span class="st">&quot;data/features.csv&quot;</span>)</span>
+<span id="cb37-2"><a href></a>list_vars   <span class="op">=</span> [<span class="st">&quot;acceleration&quot;</span>,<span class="st">&quot;weight&quot;</span>]</span>
+<span id="cb37-3"><a href></a></span>
+<span id="cb37-4"><a href></a>index <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb37-5"><a href></a><span class="cf">for</span> variable_name <span class="kw">in</span> list_vars:</span>
+<span id="cb37-6"><a href></a>    plt.scatter(x<span class="op">=</span>carfeatures[variable_name], y<span class="op">=</span>carfeatures[<span class="st">&quot;mpg&quot;</span>])</span>
+<span id="cb37-7"><a href></a>    plt.ylabel(<span class="st">&quot;mpg&quot;</span>)</span>
+<span id="cb37-8"><a href></a>    plt.xlabel(variable_name)</span>
+<span id="cb37-9"><a href></a>    plt.title(<span class="ss">f&quot;Figure </span><span class="sc">{</span>index<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb37-10"><a href></a>    plt.show()</span>
+<span id="cb37-11"><a href></a>    index <span class="op">=</span> index <span class="op">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -1788,26 +1815,26 @@ Tesla</code></pre>
 <ul>
 <li>Solve the equation <span class="math inline">\(y = x^2 + 2x\)</span> for <span class="math inline">\(x = 1, 2, 3, \dots, 10\)</span></li>
 </ul>
-<div id="5a362093" class="cell" data-execution_count="20">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href></a><span class="co"># Create a list of x-values from 1 to 10</span></span>
-<span id="cb36-2"><a href></a><span class="co"># Create a list of y-values to fill in later.</span></span>
-<span id="cb36-3"><a href></a></span>
-<span id="cb36-4"><a href></a>list_x <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>]</span>
-<span id="cb36-5"><a href></a>list_y <span class="op">=</span> [<span class="va">None</span>] <span class="op">*</span> <span class="bu">len</span>(list_x)</span>
-<span id="cb36-6"><a href></a></span>
-<span id="cb36-7"><a href></a><span class="co"># Create an index </span></span>
-<span id="cb36-8"><a href></a>index <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb36-9"><a href></a><span class="cf">for</span> x <span class="kw">in</span> list_x:</span>
-<span id="cb36-10"><a href></a>    list_y[index] <span class="op">=</span> list_x[index]<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>list_x[index]</span>
-<span id="cb36-11"><a href></a>    index <span class="op">=</span> index <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb36-12"><a href></a></span>
-<span id="cb36-13"><a href></a><span class="co"># Display results visually</span></span>
-<span id="cb36-14"><a href></a><span class="bu">print</span>(list_y)</span>
-<span id="cb36-15"><a href></a>plt.scatter(list_x, list_y)</span>
-<span id="cb36-16"><a href></a>plt.xlabel(<span class="st">&quot;X-axis&quot;</span>)</span>
-<span id="cb36-17"><a href></a>plt.ylabel(<span class="st">&quot;Y-axis&quot;</span>)</span>
-<span id="cb36-18"><a href></a>plt.title(<span class="st">&quot;Scatter plot of Y = X^2 + 2X&quot;</span>)</span>
-<span id="cb36-19"><a href></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="aa0a9e92" class="cell" data-execution_count="21">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href></a><span class="co"># Create a list of x-values from 1 to 10</span></span>
+<span id="cb38-2"><a href></a><span class="co"># Create a list of y-values to fill in later.</span></span>
+<span id="cb38-3"><a href></a></span>
+<span id="cb38-4"><a href></a>list_x <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>]</span>
+<span id="cb38-5"><a href></a>list_y <span class="op">=</span> [<span class="va">None</span>] <span class="op">*</span> <span class="bu">len</span>(list_x)</span>
+<span id="cb38-6"><a href></a></span>
+<span id="cb38-7"><a href></a><span class="co"># Create an index </span></span>
+<span id="cb38-8"><a href></a>index <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb38-9"><a href></a><span class="cf">for</span> x <span class="kw">in</span> list_x:</span>
+<span id="cb38-10"><a href></a>    list_y[index] <span class="op">=</span> list_x[index]<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>list_x[index]</span>
+<span id="cb38-11"><a href></a>    index <span class="op">=</span> index <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb38-12"><a href></a></span>
+<span id="cb38-13"><a href></a><span class="co"># Display results visually</span></span>
+<span id="cb38-14"><a href></a><span class="bu">print</span>(list_y)</span>
+<span id="cb38-15"><a href></a>plt.scatter(list_x, list_y)</span>
+<span id="cb38-16"><a href></a>plt.xlabel(<span class="st">&quot;X-axis&quot;</span>)</span>
+<span id="cb38-17"><a href></a>plt.ylabel(<span class="st">&quot;Y-axis&quot;</span>)</span>
+<span id="cb38-18"><a href></a>plt.title(<span class="st">&quot;Scatter plot of Y = X^2 + 2X&quot;</span>)</span>
+<span id="cb38-19"><a href></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[3, 8, 15, 24, 35, 48, 63, 80, 99, 120]</code></pre>
 </div>
@@ -1824,28 +1851,26 @@ Tesla</code></pre>
 <section id="maths-equations-using-append" class="slide level2">
 <h2>Maths equations using <code>append</code></h2>
 <div style="margin-top: 30px; font-size: 24px;">
-<div id="d2cdf0b6" class="cell" data-execution_count="21">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href></a><span class="co"># Create a list of x-values from 1 to 10</span></span>
-<span id="cb38-2"><a href></a><span class="co"># Start an empty list of y-values with []</span></span>
-<span id="cb38-3"><a href></a></span>
-<span id="cb38-4"><a href></a>list_x <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>]</span>
-<span id="cb38-5"><a href></a>list_y <span class="op">=</span> []</span>
-<span id="cb38-6"><a href></a></span>
-<span id="cb38-7"><a href></a><span class="co"># No index needed - we append each y to list_y as we go</span></span>
-<span id="cb38-8"><a href></a><span class="cf">for</span> x <span class="kw">in</span> list_x:</span>
-<span id="cb38-9"><a href></a>    y <span class="op">=</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>x</span>
-<span id="cb38-10"><a href></a>    list_y.append(y)</span>
-<span id="cb38-11"><a href></a></span>
-<span id="cb38-12"><a href></a><span class="co"># Display results visually</span></span>
-<span id="cb38-13"><a href></a><span class="bu">print</span>(list_y)</span>
-<span id="cb38-14"><a href></a>plt.scatter(list_x, list_y)</span>
-<span id="cb38-15"><a href></a>plt.xlabel(<span class="st">&quot;X-axis&quot;</span>)</span>
-<span id="cb38-16"><a href></a>plt.ylabel(<span class="st">&quot;Y-axis&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="b0f0a7df" class="cell" data-execution_count="22">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href></a><span class="co"># Create a list of x-values from 1 to 10</span></span>
+<span id="cb40-2"><a href></a><span class="co"># Start an empty list of y-values with []</span></span>
+<span id="cb40-3"><a href></a></span>
+<span id="cb40-4"><a href></a>list_x <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>]</span>
+<span id="cb40-5"><a href></a>list_y <span class="op">=</span> []</span>
+<span id="cb40-6"><a href></a></span>
+<span id="cb40-7"><a href></a><span class="co"># No index needed - we append each y to list_y as we go</span></span>
+<span id="cb40-8"><a href></a><span class="cf">for</span> x <span class="kw">in</span> list_x:</span>
+<span id="cb40-9"><a href></a>    y <span class="op">=</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>x</span>
+<span id="cb40-10"><a href></a>    list_y.append(y)</span>
+<span id="cb40-11"><a href></a></span>
+<span id="cb40-12"><a href></a><span class="co"># Display results visually</span></span>
+<span id="cb40-13"><a href></a><span class="bu">print</span>(list_y)</span>
+<span id="cb40-14"><a href></a>plt.scatter(list_x, list_y)</span>
+<span id="cb40-15"><a href></a>plt.xlabel(<span class="st">&quot;X-axis&quot;</span>)</span>
+<span id="cb40-16"><a href></a>plt.ylabel(<span class="st">&quot;Y-axis&quot;</span>)</span>
+<span id="cb40-17"><a href></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[3, 8, 15, 24, 35, 48, 63, 80, 99, 120]</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="20">
-<pre><code>Text(0, 0.5, &#39;Y-axis&#39;)</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div>
@@ -1892,9 +1917,9 @@ Tesla</code></pre>
 <li>We use <code>while</code> loops when <span class="alert">we don’t know the number of times to iterate beforehand, or when the iteration depends on a condition being met</span></li>
 <li>Syntax:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode numberSource {verbatim} number-lines code-with-copy"><code class="sourceCode"><span id="cb41-1"><a href></a>while test_expression:</span>
-<span id="cb41-2"><a href></a>    Body of while loop</span>
-<span id="cb41-3"><a href></a>    (must include logic to eventually make test_expression False)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode numberSource {verbatim} number-lines code-with-copy"><code class="sourceCode"><span id="cb42-1"><a href></a>while test_expression:</span>
+<span id="cb42-2"><a href></a>    Body of while loop</span>
+<span id="cb42-3"><a href></a>    (must include logic to eventually make test_expression False)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:30%;">
 <p><a href="#/" data-modal-type="image" data-modal-url="figures/while.png"><img role="img" data-src="data:image/png;base64,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NPItgCeffLJ76pmn58hYS0g6SnKZAig7t0B8/lmj+b0ccgTS8Tt3tiw2/jiBL7/+qqQl/ZSfG//UM7IQnn766e53W6fxQG82Oxr5FsBKyAeOwoZQWTsG1pW1ey39/Pryzn+927373nvlRgAYCrMSSRncRfP/PPpImX4rZ24wqOv6zxqNRiPffDTyLYCVkC/Ke/Ott3QX/s+Lym1gtuH/x/nnddddf325jMGfMi9nWnvG2Wd1u+62W1mXxhqtpoB7R3fcZecip51+eimrusXC1rIQGvnmo5FvAayUfIBs2++wQ3fIoYd2Z51zdnfoEYd3/8ceu5f7MT/83x+VMH3ikX5+fUFopHjo4YdLGkNhakm6iwlLPvvi8263Pffojj3+uO7V11/rPvr44xL3iz//uRzrun6b6ng08s1HI98CQD5Ks1xo1Isvvrjbeeed556z++STT8rjP7vsskv5lHOtiM7ff//97379K/i/+eab5SL1BRdc0O2xxx7dI488Ui5c68z0SRA3EKb2i7v8lMnvKAT88Y9/7PbZZ5/u6KOPXpUPbzbyzUcj3wJYCfmi+Oeee26329bp4cPfWSgPwVLoY445pvwOfr51infYYYd1u+66a3fIIYd0V1xxRSEFaGfxf/zjH3c/+MEPuiOPPLI79thjC4Hvu+++7oUXXihvMEPq3D3iM9FHHHFEd8kllxTy9BX+scceK+nstddehcRHHXXU3G7kb3/72+64447rtt9++26nnXYqD+0i+Zdffrko5RhCI998NPItgNUkH0X3pDmCHH744cXqBTpgzz337C688MJCCr/FOe+884r/hx9+WKzn7rvv3j3wwAPdz372s27HHXcsxLn33ntLGE+zIyPLKN977rmnEAdpamXn984775T4wt91113dHXfc0R188MHl92uvvVYGCG7iIyHiv/LKK9+l8K0VXSoa+eajkW8BrOa0E/l8O52S+33QQQcV6/TFF18US0jJP//88+9ifkum7bbbrvv000+7G2+8sZxv2bJlrm2vvPLKQo4HH3yw/L7//vu7bbfdtpAJxEf0Os0oPWIh93XXXVd+w5133lmmmdJFLgTdYetalfUEbiu5ObqRbz4a+RbASslHYc8///yi6I8++miZEpq6XXXVVcXKXH311d27775bLBprWN9wTOmRy5rsrLPOKoRVnlidhx56qKRr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Otqar5FvLJbSGA0NS0Uj3xgspTEaGpaKRr4xWEpjNDQsFY18Y7CUxmhoWCoa+RoaJoRGvoaGCaGRr6FhQmjka2iYEBr5GhomhEa+hoYJoZGvoWFCaORraJgQGvkaGiaERr6Ghgmhka+hYUJo5GtomBAa+RoaJoRGvoaGCaGRr6FhQmjka2iYEBr5GhomhEa+hoYJoZGvoWFCaORraJgQGvkaGiaERr6Ghgmhka+hYUJo5GtomBAa+RoaJoRGvoaGCaGRr6FhQmjka1hXLFa5lovlpL+W5RmHRr6GdUFfsVZDagz59yUY8huStUYjX8O6IAqVr/rWX/ZdrtSI27j0g777QuHXCo18DeuCKNQ4cixVasRtofTrsJFR4dcajXwN64Io1ELkWIrUiNtC6ddhI6PCrzUa+RrWDRTqqaee6h599NHuwQcf7O65555y5AYIUMPvL7/8spx//vnn3THHHNMdeeSR8xSTAidMDXH5XXnlld1hhx3Wffjhh8X9m2++6b7++utyLozfIQGkDPJIOPjqq6/KsY4f+N13C0KkusxBI1/DuoFiH3XUUd3222/f7b333t2+++7b7brrrt0555xTFJFQQugr4GeffVbId8ghh3QfffRRSevTTz/t7r777u6FF14oyj9EojPOOKPbfffdu/fff7/4J01HhEq4HCHp9MtQgzvS//nPf54Lowx1+MSP9JF8Gvka1hwUjBX60Y9+1D3xxBPdBx980L333ntzVgmikCxMrYghB/cQVBqI/NBDD5UwyJBwfiPXeeed1+2yyy6FqPwi/BOuT0pIHjX4kX58ZYIvvvhi7jxhaumjka9hXcF6bbPNNnOEi7V45513urPOOqu76KKL5hTftJRVdIRLLrmkTCMp9g033NAde+yx3T777NMdd9xx3emnn9598sknc8ofXHzxxcW6IjllR0ikRUpTWOk//PDDJWzylf6NN95YrPQRRxxRyPH000+Xckpf/PPPP78cb7/99hJOvUyfQ5oQupY+Gvka1hVHH310t9tuuxVC3X///cVqIQarde2113Z77rlnUXzKiFSUOopJycWHLVu2FH/EEgaZkC9AIMp97rnndjvttFP3xz/+sbgji/ylg3jiyvOWW24p4eVlEDBVPeGEE7pTTz21O/HEE0s+yirMb37zm0J6xBTm7LPP7vbbb7+S7ltvvTVHvMXi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"></a></p>
 </div></div>
@@ -1922,16 +1947,16 @@ Tesla</code></pre>
 <h2><code>while</code> loop: simple counter example</h2>
 <div style="margin-top: 30px; font-size: 24px;">
 <p>This <code>while</code> loop acts like <code>for count in range(5):</code></p>
-<div id="a97d82bf" class="cell" data-execution_count="22">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href></a>count <span class="op">=</span> <span class="dv">0</span>                       <span class="co"># 1. Initialise a counter variable</span></span>
-<span id="cb42-2"><a href></a><span class="cf">while</span> count <span class="op">&lt;</span> <span class="dv">5</span>:                <span class="co"># 2. Set the condition</span></span>
-<span id="cb42-3"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;Count is: </span><span class="sc">{</span>count<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb42-4"><a href></a>    count <span class="op">=</span> count <span class="op">+</span> <span class="dv">1</span>           <span class="co"># 3. Update the counter (SERIOUSLY! 😂)</span></span>
-<span id="cb42-5"><a href></a><span class="bu">print</span>(<span class="st">&quot;Loop finished.&quot;</span>)</span>
-<span id="cb42-6"><a href></a></span>
-<span id="cb42-7"><a href></a><span class="co"># This could also be written as:</span></span>
-<span id="cb42-8"><a href></a><span class="co"># for count in range(5):</span></span>
-<span id="cb42-9"><a href></a><span class="co">#    print(f&quot;Count is: {count}&quot;)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="3efaa297" class="cell" data-execution_count="23">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href></a>count <span class="op">=</span> <span class="dv">0</span>                       <span class="co"># 1. Initialise a counter variable</span></span>
+<span id="cb43-2"><a href></a><span class="cf">while</span> count <span class="op">&lt;</span> <span class="dv">5</span>:                <span class="co"># 2. Set the condition</span></span>
+<span id="cb43-3"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;Count is: </span><span class="sc">{</span>count<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb43-4"><a href></a>    count <span class="op">=</span> count <span class="op">+</span> <span class="dv">1</span>           <span class="co"># 3. Update the counter (SERIOUSLY! 😂)</span></span>
+<span id="cb43-5"><a href></a><span class="bu">print</span>(<span class="st">&quot;Loop finished.&quot;</span>)</span>
+<span id="cb43-6"><a href></a></span>
+<span id="cb43-7"><a href></a><span class="co"># This could also be written as:</span></span>
+<span id="cb43-8"><a href></a><span class="co"># for count in range(5):</span></span>
+<span id="cb43-9"><a href></a><span class="co">#    print(f&quot;Count is: {count}&quot;)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Count is: 0
 Count is: 1
@@ -1948,23 +1973,23 @@ Loop finished.</code></pre>
 <h2><code>while</code> loop: user input validation</h2>
 <div style="margin-top: 30px; font-size: 22px;">
 <p><code>while</code> loops are great for repeatedly asking for user input until it’s valid</p>
-<div id="30516a28" class="cell" data-execution_count="23">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href></a><span class="co"># Example: Get a positive number from the user</span></span>
-<span id="cb44-2"><a href></a><span class="co"># Initialise to a value that fails the condition</span></span>
-<span id="cb44-3"><a href></a></span>
-<span id="cb44-4"><a href></a>number <span class="op">=</span> <span class="op">-</span><span class="dv">1</span> </span>
-<span id="cb44-5"><a href></a><span class="cf">while</span> number <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
-<span id="cb44-6"><a href></a>    <span class="cf">try</span>:</span>
-<span id="cb44-7"><a href></a>        user_input <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Please enter a positive number: &quot;</span>)</span>
-<span id="cb44-8"><a href></a>        number <span class="op">=</span> <span class="bu">float</span>(user_input) <span class="co"># Try to convert to float</span></span>
-<span id="cb44-9"><a href></a>        <span class="cf">if</span> number <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
-<span id="cb44-10"><a href></a>            <span class="bu">print</span>(<span class="st">&quot;That&#39;s not a positive number. Try again.&quot;</span>)</span>
-<span id="cb44-11"><a href></a>    <span class="cf">except</span> <span class="pp">ValueError</span>:</span>
-<span id="cb44-12"><a href></a>        <span class="bu">print</span>(<span class="st">&quot;Invalid input. Please enter a number.&quot;</span>)</span>
-<span id="cb44-13"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;You entered a valid positive number: </span><span class="sc">{</span>number<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="67c2128b" class="cell" data-execution_count="24">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href></a><span class="co"># Example: Get a positive number from the user</span></span>
+<span id="cb45-2"><a href></a><span class="co"># Start with an invalid value so the loop runs at least once</span></span>
+<span id="cb45-3"><a href></a></span>
+<span id="cb45-4"><a href></a>number <span class="op">=</span> <span class="op">-</span><span class="dv">1</span> </span>
+<span id="cb45-5"><a href></a><span class="cf">while</span> number <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
+<span id="cb45-6"><a href></a>    <span class="cf">try</span>:</span>
+<span id="cb45-7"><a href></a>        user_input <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Please enter a positive number: &quot;</span>)</span>
+<span id="cb45-8"><a href></a>        number <span class="op">=</span> <span class="bu">float</span>(user_input) <span class="co"># Try to convert to float</span></span>
+<span id="cb45-9"><a href></a>        <span class="cf">if</span> number <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
+<span id="cb45-10"><a href></a>            <span class="bu">print</span>(<span class="st">&quot;That&#39;s not a positive number. Try again.&quot;</span>)</span>
+<span id="cb45-11"><a href></a>    <span class="cf">except</span> <span class="pp">ValueError</span>:</span>
+<span id="cb45-12"><a href></a>        <span class="bu">print</span>(<span class="st">&quot;Invalid input. Please enter a number.&quot;</span>)</span>
+<span id="cb45-13"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;You entered a valid positive number: </span><span class="sc">{</span>number<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
-<li>The <code>try</code>/<code>except</code> block catches the error if the user types something that isn’t a number. We’ll cover error handling properly in a later lecture</li>
+<li>The <code>try</code>/<code>except</code> block catches the error if the user types something that isn’t a number. We will not cover error handling in this course; for now, read it as “if the conversion fails, run this instead”</li>
 <li>This code is best run in a Jupyter Notebook, it fails in a non-interactive environment (like this one) because <code>input()</code> doesn’t work here</li>
 </ul>
 </div>
@@ -1978,11 +2003,11 @@ Loop finished.</code></pre>
 <li>This usually occurs when you forget to update the variable(s) inside the loop</li>
 </ul>
 <p>Example of an infinite loop (DO NOT RUN THIS CELL AS IS 😅):</p>
-<div id="04b06782" class="cell" data-execution_count="24">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href></a>count <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb45-2"><a href></a><span class="cf">while</span> count <span class="op">&lt;</span> <span class="dv">5</span>:</span>
-<span id="cb45-3"><a href></a>    <span class="bu">print</span>(<span class="st">&quot;Still looping...&quot;</span>)</span>
-<span id="cb45-4"><a href></a>    <span class="co"># Missing count = count + 1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="ab70a8fd" class="cell" data-execution_count="25">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href></a>count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb46-2"><a href></a><span class="cf">while</span> count <span class="op">&lt;</span> <span class="dv">5</span>:</span>
+<span id="cb46-3"><a href></a>    <span class="bu">print</span>(<span class="st">&quot;Still looping...&quot;</span>)</span>
+<span id="cb46-4"><a href></a>    <span class="co"># Missing count = count + 1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>If you accidentally run an infinite loop, you usually need to interrupt the kernel (press <code>Ctrl+C</code> in the terminal, or click the “Interrupt Kernel” button in Jupyter)</li>
@@ -1997,15 +2022,15 @@ Loop finished.</code></pre>
 <li>Write a <code>while</code> loop to access the fruit at the current index and print the fruit name</li>
 <li>You can start with the following code:</li>
 </ul>
-<div id="8d181986" class="cell" data-execution_count="25">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href></a>list_fruits <span class="op">=</span> [<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;cherry&quot;</span>, <span class="st">&quot;date&quot;</span>, <span class="st">&quot;elderberry&quot;</span>]</span>
-<span id="cb46-2"><a href></a>index <span class="op">=</span> <span class="dv">0</span> <span class="co"># Remember, lists are 0-indexed!</span></span>
-<span id="cb46-3"><a href></a></span>
-<span id="cb46-4"><a href></a><span class="co"># while ... :</span></span>
-<span id="cb46-5"><a href></a>    <span class="co"># Add your code here to:</span></span>
-<span id="cb46-6"><a href></a>    <span class="co"># 1. Access the fruit at the current index</span></span>
-<span id="cb46-7"><a href></a>    <span class="co"># 2. Print the fruit</span></span>
-<span id="cb46-8"><a href></a>    <span class="co"># 3. IMPORTANT: Update the index to move to the next fruit!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="a972d013" class="cell" data-execution_count="26">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href></a>list_fruits <span class="op">=</span> [<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;cherry&quot;</span>, <span class="st">&quot;date&quot;</span>, <span class="st">&quot;elderberry&quot;</span>]</span>
+<span id="cb47-2"><a href></a>index <span class="op">=</span> <span class="dv">0</span> <span class="co"># Remember, lists are 0-indexed!</span></span>
+<span id="cb47-3"><a href></a></span>
+<span id="cb47-4"><a href></a><span class="co"># while ... :</span></span>
+<span id="cb47-5"><a href></a>    <span class="co"># Add your code here to:</span></span>
+<span id="cb47-6"><a href></a>    <span class="co"># 1. Access the fruit at the current index</span></span>
+<span id="cb47-7"><a href></a>    <span class="co"># 2. Print the fruit</span></span>
+<span id="cb47-8"><a href></a>    <span class="co"># 3. IMPORTANT: Update the index to move to the next fruit!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li><a href="#/sec:appendix3_for_break_simple"><span class="button">Appendix 03</span></a></li>
@@ -2042,15 +2067,15 @@ Loop finished.</code></pre>
 <li>The <code>break</code> statement is used to <span class="alert">exit a <code>for</code> or <code>while</code> loop immediately</span>, regardless of whether the loop’s condition is still true or if there are more items to iterate over</li>
 </ul>
 <p>Example: Find the first non-integer element in a list and stop the loop</p>
-<div id="1d5fa9d3" class="cell" data-execution_count="26">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href></a>list_mixed <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">&quot;text_message&quot;</span>, <span class="dv">5</span>, <span class="fl">10.5</span>]</span>
-<span id="cb47-2"><a href></a></span>
-<span id="cb47-3"><a href></a><span class="cf">for</span> value <span class="kw">in</span> list_mixed:</span>
-<span id="cb47-4"><a href></a>    <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(value, <span class="bu">int</span>): <span class="co"># Check if value is NOT an integer</span></span>
-<span id="cb47-5"><a href></a>        <span class="bu">print</span>(<span class="ss">f&quot;Stopped: Found a non-integer element: &#39;</span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">&#39; (type: </span><span class="sc">{</span><span class="bu">type</span>(value)<span class="sc">.</span><span class="va">__name__</span><span class="sc">}</span><span class="ss">)&quot;</span>)</span>
-<span id="cb47-6"><a href></a>        <span class="cf">break</span> <span class="co"># Exit the loop</span></span>
-<span id="cb47-7"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;Processing integer: </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb47-8"><a href></a><span class="bu">print</span>(<span class="st">&quot;Loop ended.&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="615a7d18" class="cell" data-execution_count="27">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href></a>list_mixed <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">&quot;text_message&quot;</span>, <span class="dv">5</span>, <span class="fl">10.5</span>]</span>
+<span id="cb48-2"><a href></a></span>
+<span id="cb48-3"><a href></a><span class="cf">for</span> value <span class="kw">in</span> list_mixed:</span>
+<span id="cb48-4"><a href></a>    <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(value, <span class="bu">int</span>): <span class="co"># Check if value is NOT an integer</span></span>
+<span id="cb48-5"><a href></a>        <span class="bu">print</span>(<span class="ss">f&quot;Stopped: Found a non-integer element: &#39;</span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">&#39; (type: </span><span class="sc">{</span><span class="bu">type</span>(value)<span class="sc">.</span><span class="va">__name__</span><span class="sc">}</span><span class="ss">)&quot;</span>)</span>
+<span id="cb48-6"><a href></a>        <span class="cf">break</span> <span class="co"># Exit the loop</span></span>
+<span id="cb48-7"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;Processing integer: </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb48-8"><a href></a><span class="bu">print</span>(<span class="st">&quot;Loop ended.&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Processing integer: 1
 Processing integer: 2
@@ -2067,15 +2092,15 @@ Loop ended.</code></pre>
 <li>The <code>continue</code> statement is used to <span class="alert">skip the remaining code</span> inside the current iteration of a loop and move to the next iteration</li>
 </ul>
 <p>Example: Print only integers from a list and skip non-integer elements</p>
-<div id="a1daf352" class="cell" data-execution_count="27">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href></a>list_mixed <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">&quot;text_message&quot;</span>, <span class="dv">5</span>, <span class="fl">10.5</span>, <span class="st">&quot;another_string&quot;</span>, <span class="dv">7</span>]</span>
-<span id="cb49-2"><a href></a></span>
-<span id="cb49-3"><a href></a><span class="cf">for</span> value <span class="kw">in</span> list_mixed:</span>
-<span id="cb49-4"><a href></a>    <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(value, <span class="bu">int</span>):</span>
-<span id="cb49-5"><a href></a>        <span class="bu">print</span>(<span class="ss">f&quot;  Skipping non-integer: &#39;</span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">&#39;&quot;</span>)</span>
-<span id="cb49-6"><a href></a>        <span class="cf">continue</span> <span class="co"># Skip to the next iteration</span></span>
-<span id="cb49-7"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;Integer found: </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb49-8"><a href></a><span class="bu">print</span>(<span class="st">&quot;Loop finished processing all elements.&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="2a4fea9c" class="cell" data-execution_count="28">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href></a>list_mixed <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">&quot;text_message&quot;</span>, <span class="dv">5</span>, <span class="fl">10.5</span>, <span class="st">&quot;another_string&quot;</span>, <span class="dv">7</span>]</span>
+<span id="cb50-2"><a href></a></span>
+<span id="cb50-3"><a href></a><span class="cf">for</span> value <span class="kw">in</span> list_mixed:</span>
+<span id="cb50-4"><a href></a>    <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(value, <span class="bu">int</span>):</span>
+<span id="cb50-5"><a href></a>        <span class="bu">print</span>(<span class="ss">f&quot;  Skipping non-integer: &#39;</span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">&#39;&quot;</span>)</span>
+<span id="cb50-6"><a href></a>        <span class="cf">continue</span> <span class="co"># Skip to the next iteration</span></span>
+<span id="cb50-7"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;Integer found: </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb50-8"><a href></a><span class="bu">print</span>(<span class="st">&quot;Loop finished processing all elements.&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Integer found: 1
 Integer found: 2
@@ -2097,24 +2122,24 @@ Loop finished processing all elements.</code></pre>
 <li>The <code>else</code> block runs <span class="alert">if and only if</span> the loop terminates normally (i.e., not by a <code>break</code> statement)</li>
 </ul>
 <p>Example with <code>for</code> and <code>else</code>: Searching for an item</p>
-<div id="bc0aa47d" class="cell" data-execution_count="28">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href></a>my_numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>]</span>
-<span id="cb51-2"><a href></a>search_for <span class="op">=</span> <span class="dv">6</span></span>
-<span id="cb51-3"><a href></a></span>
-<span id="cb51-4"><a href></a><span class="cf">for</span> num <span class="kw">in</span> my_numbers:</span>
-<span id="cb51-5"><a href></a>    <span class="cf">if</span> num <span class="op">==</span> search_for:</span>
-<span id="cb51-6"><a href></a>        <span class="bu">print</span>(<span class="ss">f&quot;Found </span><span class="sc">{</span>search_for<span class="sc">}</span><span class="ss"> in the list.&quot;</span>)</span>
-<span id="cb51-7"><a href></a>        <span class="cf">break</span></span>
-<span id="cb51-8"><a href></a><span class="cf">else</span>: <span class="co"># Executed if the loop completes without a break</span></span>
-<span id="cb51-9"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>search_for<span class="sc">}</span><span class="ss"> was not found in the list.&quot;</span>)</span>
-<span id="cb51-10"><a href></a></span>
-<span id="cb51-11"><a href></a>search_for <span class="op">=</span> <span class="dv">5</span> <span class="co"># Try again with a number that is in the list</span></span>
-<span id="cb51-12"><a href></a><span class="cf">for</span> num <span class="kw">in</span> my_numbers:</span>
-<span id="cb51-13"><a href></a>    <span class="cf">if</span> num <span class="op">==</span> search_for:</span>
-<span id="cb51-14"><a href></a>        <span class="bu">print</span>(<span class="ss">f&quot;Found </span><span class="sc">{</span>search_for<span class="sc">}</span><span class="ss"> in the list.&quot;</span>)</span>
-<span id="cb51-15"><a href></a>        <span class="cf">break</span></span>
-<span id="cb51-16"><a href></a><span class="cf">else</span>:</span>
-<span id="cb51-17"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>search_for<span class="sc">}</span><span class="ss"> was not found in the list.&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="56b4db1a" class="cell" data-execution_count="29">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href></a>my_numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>]</span>
+<span id="cb52-2"><a href></a>search_for <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb52-3"><a href></a></span>
+<span id="cb52-4"><a href></a><span class="cf">for</span> num <span class="kw">in</span> my_numbers:</span>
+<span id="cb52-5"><a href></a>    <span class="cf">if</span> num <span class="op">==</span> search_for:</span>
+<span id="cb52-6"><a href></a>        <span class="bu">print</span>(<span class="ss">f&quot;Found </span><span class="sc">{</span>search_for<span class="sc">}</span><span class="ss"> in the list.&quot;</span>)</span>
+<span id="cb52-7"><a href></a>        <span class="cf">break</span></span>
+<span id="cb52-8"><a href></a><span class="cf">else</span>: <span class="co"># Executed if the loop completes without a break</span></span>
+<span id="cb52-9"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>search_for<span class="sc">}</span><span class="ss"> was not found in the list.&quot;</span>)</span>
+<span id="cb52-10"><a href></a></span>
+<span id="cb52-11"><a href></a>search_for <span class="op">=</span> <span class="dv">5</span> <span class="co"># Try again with a number that is in the list</span></span>
+<span id="cb52-12"><a href></a><span class="cf">for</span> num <span class="kw">in</span> my_numbers:</span>
+<span id="cb52-13"><a href></a>    <span class="cf">if</span> num <span class="op">==</span> search_for:</span>
+<span id="cb52-14"><a href></a>        <span class="bu">print</span>(<span class="ss">f&quot;Found </span><span class="sc">{</span>search_for<span class="sc">}</span><span class="ss"> in the list.&quot;</span>)</span>
+<span id="cb52-15"><a href></a>        <span class="cf">break</span></span>
+<span id="cb52-16"><a href></a><span class="cf">else</span>:</span>
+<span id="cb52-17"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>search_for<span class="sc">}</span><span class="ss"> was not found in the list.&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>6 was not found in the list.
 Found 5 in the list.</code></pre>
@@ -2133,7 +2158,7 @@ Found 5 in the list.</code></pre>
 <ul>
 <li>List comprehensions provide a <span class="alert">concise and readable</span> way to create lists</li>
 <li>They often achieve the same result as a <code>for</code> loop (and sometimes an <code>if</code> condition) but in a <span class="alert">single line of code</span></li>
-<li><strong>Basic Syntax:</strong> <code>new_list = [expression for item in iterable]</code></li>
+<li><span class="alert">Basic syntax</span>: <code>new_list = [expression for item in iterable]</code></li>
 </ul>
 <p>Advantages:</p>
 <ul>
@@ -2145,21 +2170,21 @@ Found 5 in the list.</code></pre>
 <section id="list-comprehension-examples" class="slide level2">
 <h2>List comprehension examples</h2>
 <div style="margin-top: 30px; font-size: 22px;">
-<p><strong>Example 1: Customised messages</strong></p>
-<div id="3f7a0558" class="cell" data-execution_count="29">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href></a>id_list <span class="op">=</span> [<span class="st">&quot;KIA&quot;</span>, <span class="st">&quot;Ferrari&quot;</span>, <span class="st">&quot;Ford&quot;</span>, <span class="st">&quot;Tesla&quot;</span>]</span>
-<span id="cb53-2"><a href></a>message_list <span class="op">=</span> [<span class="st">&quot;Your car model is: &quot;</span> <span class="op">+</span> i <span class="cf">for</span> i <span class="kw">in</span> id_list]</span>
-<span id="cb53-3"><a href></a><span class="bu">print</span>(message_list)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span class="alert">Example 1</span>: Customised messages</p>
+<div id="71e974bc" class="cell" data-execution_count="30">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href></a>id_list <span class="op">=</span> [<span class="st">&quot;KIA&quot;</span>, <span class="st">&quot;Ferrari&quot;</span>, <span class="st">&quot;Ford&quot;</span>, <span class="st">&quot;Tesla&quot;</span>]</span>
+<span id="cb54-2"><a href></a>message_list <span class="op">=</span> [<span class="st">&quot;Your car model is: &quot;</span> <span class="op">+</span> i <span class="cf">for</span> i <span class="kw">in</span> id_list]</span>
+<span id="cb54-3"><a href></a><span class="bu">print</span>(message_list)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[&#39;Your car model is: KIA&#39;, &#39;Your car model is: Ferrari&#39;, &#39;Your car model is: Ford&#39;, &#39;Your car model is: Tesla&#39;]</code></pre>
 </div>
 </div>
-<p><strong>Example 2: Math operations</strong></p>
-<div id="157b417a" class="cell" data-execution_count="30">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href></a>x_list_lc <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]</span>
-<span id="cb55-2"><a href></a>x_sqr_list <span class="op">=</span> [x<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> x_list_lc]</span>
-<span id="cb55-3"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;Original list: </span><span class="sc">{</span>x_list_lc<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb55-4"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;Squared list:  </span><span class="sc">{</span>x_sqr_list<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span class="alert">Example 2</span>: Maths operations</p>
+<div id="ba5beebe" class="cell" data-execution_count="31">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href></a>x_list_lc <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]</span>
+<span id="cb56-2"><a href></a>x_sqr_list <span class="op">=</span> [x<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> x_list_lc]</span>
+<span id="cb56-3"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;Original list: </span><span class="sc">{</span>x_list_lc<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb56-4"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;Squared list:  </span><span class="sc">{</span>x_sqr_list<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Original list: [1, 2, 3, 4, 5, 6, 7]
 Squared list:  [1, 4, 9, 16, 25, 36, 49]</code></pre>
@@ -2172,19 +2197,19 @@ Squared list:  [1, 4, 9, 16, 25, 36, 49]</code></pre>
 <div style="margin-top: 30px; font-size: 24px;">
 <p>You can add an <code>if</code> condition to filter items during list creation</p>
 <ul>
-<li><strong>Syntax with <code>if</code>:</strong> <code>new_list = [expression for item in iterable if condition]</code></li>
+<li><span class="alert">Syntax with <code>if</code></span>: <code>new_list = [expression for item in iterable if condition]</code></li>
 </ul>
 <p>Example: Create a list of squares of only the even numbers from 0 to 9</p>
-<div id="1848b0f5" class="cell" data-execution_count="31">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href></a>squares_of_evens <span class="op">=</span> [x<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>) <span class="cf">if</span> x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>]</span>
-<span id="cb57-2"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;Squares of even numbers from 0-9: </span><span class="sc">{</span>squares_of_evens<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb57-3"><a href></a></span>
-<span id="cb57-4"><a href></a><span class="co"># Equivalent for loop:</span></span>
-<span id="cb57-5"><a href></a><span class="co"># squares_of_evens_loop = []</span></span>
-<span id="cb57-6"><a href></a><span class="co"># for x in range(10):</span></span>
-<span id="cb57-7"><a href></a><span class="co">#     if x % 2 == 0:</span></span>
-<span id="cb57-8"><a href></a><span class="co">#         squares_of_evens_loop.append(x**2)</span></span>
-<span id="cb57-9"><a href></a><span class="co"># print(squares_of_evens_loop)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="c45e42b5" class="cell" data-execution_count="32">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href></a>squares_of_evens <span class="op">=</span> [x<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>) <span class="cf">if</span> x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>]</span>
+<span id="cb58-2"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;Squares of even numbers from 0-9: </span><span class="sc">{</span>squares_of_evens<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb58-3"><a href></a></span>
+<span id="cb58-4"><a href></a><span class="co"># Equivalent for loop:</span></span>
+<span id="cb58-5"><a href></a><span class="co"># squares_of_evens_loop = []</span></span>
+<span id="cb58-6"><a href></a><span class="co"># for x in range(10):</span></span>
+<span id="cb58-7"><a href></a><span class="co">#     if x % 2 == 0:</span></span>
+<span id="cb58-8"><a href></a><span class="co">#         squares_of_evens_loop.append(x**2)</span></span>
+<span id="cb58-9"><a href></a><span class="co"># print(squares_of_evens_loop)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Squares of even numbers from 0-9: [0, 4, 16, 36, 64]</code></pre>
 </div>
@@ -2196,8 +2221,8 @@ Squared list:  [1, 4, 9, 16, 25, 36, 49]</code></pre>
 <div style="margin-top: 30px; font-size: 24px;">
 <p>You have a list of names: <code>names = [&quot;Alice&quot;, &quot;Bob&quot;, &quot;Charlie&quot;, &quot;David&quot;, &quot;Eve&quot;, &quot;Fiona&quot;, &quot;George&quot;]</code></p>
 <ol type="1">
-<li>Using a list comprehension, create a new list called <code>short_names</code> that contains only the names from the <code>names</code> list that have 5 or fewer characters.</li>
-<li>Using a list comprehension, create a new list called <code>uppercase_long_names</code> that contains the uppercase versions of names from the <code>names</code> list that have more than 5 characters.</li>
+<li>Using a list comprehension, create a new list called <code>short_names</code> that contains only the names from the <code>names</code> list that have 5 or fewer characters</li>
+<li>Using a list comprehension, create a new list called <code>uppercase_long_names</code> that contains the uppercase versions of names from the <code>names</code> list that have more than 5 characters (use <code>name.upper()</code>)</li>
 </ol>
 <ul>
 <li><a href="#/sec:appendix4_list_comp"><span class="button">Appendix 04</span></a></li>
@@ -2238,14 +2263,14 @@ Squared list:  [1, 4, 9, 16, 25, 36, 49]</code></pre>
 <section id="sec:appendix2" class="slide level2">
 <h2>Appendix 02</h2>
 <div style="margin-top: 30px; font-size: 21px;">
-<div id="c9f70f6f" class="cell" data-execution_count="32">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb59-2"><a href></a>list_datasets <span class="op">=</span> [<span class="st">&quot;features.csv&quot;</span>, <span class="st">&quot;worldbank_wdi_2019.csv&quot;</span>]</span>
-<span id="cb59-3"><a href></a><span class="cf">for</span> dataset <span class="kw">in</span> list_datasets:</span>
-<span id="cb59-4"><a href></a>    data <span class="op">=</span> pd.read_csv(<span class="st">&quot;data/&quot;</span> <span class="op">+</span> dataset)</span>
-<span id="cb59-5"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;Descriptive statistics for </span><span class="sc">{</span>dataset<span class="sc">}</span><span class="ss">:&quot;</span>)</span>
-<span id="cb59-6"><a href></a>    <span class="bu">print</span>(data.describe())</span>
-<span id="cb59-7"><a href></a>    <span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="e5ecb906" class="cell" data-execution_count="33">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb60-2"><a href></a>list_datasets <span class="op">=</span> [<span class="st">&quot;features.csv&quot;</span>, <span class="st">&quot;worldbank_wdi_2019.csv&quot;</span>]</span>
+<span id="cb60-3"><a href></a><span class="cf">for</span> dataset <span class="kw">in</span> list_datasets:</span>
+<span id="cb60-4"><a href></a>    data <span class="op">=</span> pd.read_csv(<span class="st">&quot;data/&quot;</span> <span class="op">+</span> dataset)</span>
+<span id="cb60-5"><a href></a>    <span class="bu">print</span>(<span class="ss">f&quot;Descriptive statistics for </span><span class="sc">{</span>dataset<span class="sc">}</span><span class="ss">:&quot;</span>)</span>
+<span id="cb60-6"><a href></a>    <span class="bu">print</span>(data.describe())</span>
+<span id="cb60-7"><a href></a>    <span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Descriptive statistics for features.csv:
               mpg   cylinders  displacement       weight  acceleration
@@ -2281,14 +2306,14 @@ max          85.078049       199377.481800
 <section id="sec:appendix3_for_break_simple" class="slide level2">
 <h2>Appendix 03</h2>
 <div style="margin-top: 30px; font-size: 21px;">
-<div id="903ad1a0" class="cell" data-execution_count="33">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href></a>list_fruits <span class="op">=</span> [<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;cherry&quot;</span>, <span class="st">&quot;date&quot;</span>, <span class="st">&quot;elderberry&quot;</span>]</span>
-<span id="cb61-2"><a href></a>index <span class="op">=</span> <span class="dv">0</span> </span>
-<span id="cb61-3"><a href></a></span>
-<span id="cb61-4"><a href></a><span class="cf">while</span> index <span class="op">&lt;</span> <span class="bu">len</span>(list_fruits): </span>
-<span id="cb61-5"><a href></a>    current_fruit <span class="op">=</span> list_fruits[index]</span>
-<span id="cb61-6"><a href></a>    <span class="bu">print</span>(current_fruit)</span>
-<span id="cb61-7"><a href></a>    index <span class="op">=</span> index <span class="op">+</span> <span class="dv">1</span> <span class="co"># or index += 1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="a902b87a" class="cell" data-execution_count="34">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href></a>list_fruits <span class="op">=</span> [<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;cherry&quot;</span>, <span class="st">&quot;date&quot;</span>, <span class="st">&quot;elderberry&quot;</span>]</span>
+<span id="cb62-2"><a href></a>index <span class="op">=</span> <span class="dv">0</span> </span>
+<span id="cb62-3"><a href></a></span>
+<span id="cb62-4"><a href></a><span class="cf">while</span> index <span class="op">&lt;</span> <span class="bu">len</span>(list_fruits): </span>
+<span id="cb62-5"><a href></a>    current_fruit <span class="op">=</span> list_fruits[index]</span>
+<span id="cb62-6"><a href></a>    <span class="bu">print</span>(current_fruit)</span>
+<span id="cb62-7"><a href></a>    index <span class="op">=</span> index <span class="op">+</span> <span class="dv">1</span> <span class="co"># or index += 1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>apple
 banana
@@ -2306,17 +2331,17 @@ elderberry</code></pre>
 <h2>Appendix 04: solution for list comprehensions exercise</h2>
 <div style="margin-top: 30px; font-size: 21px;">
 <p>Solution for the list comprehension “Try it yourself!” exercise:</p>
-<div id="80497930" class="cell" data-execution_count="34">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href></a>names <span class="op">=</span> [<span class="st">&quot;Alice&quot;</span>, <span class="st">&quot;Bob&quot;</span>, <span class="st">&quot;Charlie&quot;</span>, <span class="st">&quot;David&quot;</span>, <span class="st">&quot;Eve&quot;</span>, <span class="st">&quot;Fiona&quot;</span>, <span class="st">&quot;George&quot;</span>]</span>
-<span id="cb63-2"><a href></a></span>
-<span id="cb63-3"><a href></a><span class="co"># 1. Names with 5 or fewer characters</span></span>
-<span id="cb63-4"><a href></a>short_names <span class="op">=</span> [name <span class="cf">for</span> name <span class="kw">in</span> names <span class="cf">if</span> <span class="bu">len</span>(name) <span class="op">&lt;=</span> <span class="dv">5</span>]</span>
-<span id="cb63-5"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;Original names: </span><span class="sc">{</span>names<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb63-6"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;Short names (&lt;= 5 chars): </span><span class="sc">{</span>short_names<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb63-7"><a href></a></span>
-<span id="cb63-8"><a href></a><span class="co"># 2. Uppercase versions of names longer than 5 characters</span></span>
-<span id="cb63-9"><a href></a>uppercase_long_names <span class="op">=</span> [name.upper() <span class="cf">for</span> name <span class="kw">in</span> names <span class="cf">if</span> <span class="bu">len</span>(name) <span class="op">&gt;</span> <span class="dv">5</span>]</span>
-<span id="cb63-10"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;Uppercase long names (&gt; 5 chars): </span><span class="sc">{</span>uppercase_long_names<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="dbd33d22" class="cell" data-execution_count="35">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href></a>names <span class="op">=</span> [<span class="st">&quot;Alice&quot;</span>, <span class="st">&quot;Bob&quot;</span>, <span class="st">&quot;Charlie&quot;</span>, <span class="st">&quot;David&quot;</span>, <span class="st">&quot;Eve&quot;</span>, <span class="st">&quot;Fiona&quot;</span>, <span class="st">&quot;George&quot;</span>]</span>
+<span id="cb64-2"><a href></a></span>
+<span id="cb64-3"><a href></a><span class="co"># 1. Names with 5 or fewer characters</span></span>
+<span id="cb64-4"><a href></a>short_names <span class="op">=</span> [name <span class="cf">for</span> name <span class="kw">in</span> names <span class="cf">if</span> <span class="bu">len</span>(name) <span class="op">&lt;=</span> <span class="dv">5</span>]</span>
+<span id="cb64-5"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;Original names: </span><span class="sc">{</span>names<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb64-6"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;Short names (&lt;= 5 chars): </span><span class="sc">{</span>short_names<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb64-7"><a href></a></span>
+<span id="cb64-8"><a href></a><span class="co"># 2. Uppercase versions of names longer than 5 characters</span></span>
+<span id="cb64-9"><a href></a>uppercase_long_names <span class="op">=</span> [name.upper() <span class="cf">for</span> name <span class="kw">in</span> names <span class="cf">if</span> <span class="bu">len</span>(name) <span class="op">&gt;</span> <span class="dv">5</span>]</span>
+<span id="cb64-10"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;Uppercase long names (&gt; 5 chars): </span><span class="sc">{</span>uppercase_long_names<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Original names: [&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;David&#39;, &#39;Eve&#39;, &#39;Fiona&#39;, &#39;George&#39;]
 Short names (&lt;= 5 chars): [&#39;Alice&#39;, &#39;Bob&#39;, &#39;David&#39;, &#39;Eve&#39;, &#39;Fiona&#39;]

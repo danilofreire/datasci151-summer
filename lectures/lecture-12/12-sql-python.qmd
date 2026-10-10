@@ -130,7 +130,7 @@ cur.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='drivers
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 - Once the table exists, we populate it using [`INSERT INTO`]{.alert}
-- Again, `cursor.execute()` runs the command, and `conn.commit()` [makes the insertions permanent]{.alert}
+- Again, `cur.execute()` runs the command, and `conn.commit()` [makes the insertions permanent]{.alert}
 
 ```{python}
 #| echo: true
@@ -225,7 +225,7 @@ cur.execute("SELECT driver_name, team FROM drivers WHERE driver_name LIKE 'M%'")
 cur.execute("SELECT driver_name, team FROM drivers WHERE team IN ('Ferrari', 'Mercedes')").fetchall()
 ```
 
-- `NOT IN` works similarly to exclude values in the list.
+- `NOT IN` works similarly to exclude values in the list
 ```{python}
 #| echo: true
 #| eval: true
@@ -315,6 +315,34 @@ for row in cur.fetchall(): print(row)
 
 :::
 
+## Adding more data
+
+:::{style="margin-top: 50px; font-size: 22px;"}
+- Let's add four more drivers, so the exercise and the next examples have more rows to work with
+
+```{python}
+#| echo: true
+#| eval: true
+# Add more data for better examples (delete first so re-running is safe)
+cur.execute("DELETE FROM drivers WHERE driver_name IN ('Valtteri Bottas', 'Sergio Perez', 'Lando Norris', 'Esteban Ocon');")
+
+more_drivers = """
+INSERT INTO drivers (driver_name, team, nationality, victories) VALUES
+('Valtteri Bottas', 'Mercedes', 'Finnish', 10),
+('Sergio Perez', 'Red Bull Racing', 'Mexican', 5),
+('Lando Norris', 'McLaren', 'British', 2),
+('Esteban Ocon', 'Alpine', 'French', 1);
+"""
+
+cur.execute(more_drivers)
+
+cur.execute("SELECT * FROM drivers") # Check inserted data
+
+# Fetch and print data
+for row in cur.fetchall(): print(row)
+```
+:::
+
 ## Try it yourself! 🤓 {#sec:exercise01}
 
 :::{style="margin-top: 50px; font-size: 24px;"}
@@ -393,24 +421,6 @@ for row in cur.fetchall(): print(row)
 ```{python}
 #| echo: true
 #| eval: true
-# Add more data for better examples (delete first so re-running is safe)
-cur.execute("DELETE FROM drivers WHERE driver_name IN ('Valtteri Bottas', 'Sergio Perez', 'Lando Norris', 'Esteban Ocon');")
-
-more_drivers = """
-INSERT INTO drivers (driver_name, team, nationality, victories) VALUES
-('Valtteri Bottas', 'Mercedes', 'Finnish', 10),
-('Sergio Perez', 'Red Bull Racing', 'Mexican', 5),
-('Lando Norris', 'McLaren', 'British', 2),
-('Esteban Ocon', 'Alpine', 'French', 1);
-"""
-
-cur.execute(more_drivers)
-
-cur.execute("SELECT * FROM drivers") # Check inserted data
-
-# Fetch and print data
-for row in cur.fetchall(): print(row)
-
 # Check SQLite Version
 cur.execute("SELECT sqlite_version();").fetchone()
 ```
@@ -575,7 +585,7 @@ cur.execute(query_case2)
 for row in cur.fetchall(): print(row)
 ```
 
-- Note: in SQLite, `ORDER BY ... DESC` already places `NULL`s at the end (`NULL` is treated as smaller than any value), so an explicit `NULLS LAST` is redundant here. Other databases (e.g. PostgreSQL) behave differently, so `NULLS LAST` exists for portability
+- Note: in SQLite, `ORDER BY ... DESC` places `NULL`s at the end, because `NULL` is treated as smaller than any value. Other databases (e.g. PostgreSQL) put them first, and you would add `NULLS LAST` to get the same order
 :::
 
 ## `CASE` for conditional NULL handling

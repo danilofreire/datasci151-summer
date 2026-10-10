@@ -40,7 +40,7 @@ editor:
 ::::{.column width="50%"}
 - [Introduction to SQL]{.alert}: We will start by learning the fundamentals of SQL, focusing on [SQLite](https://www.sqlite.org/index.html){data-modal-type="iframe"}
 - [Setup]{.alert}: You will learn how to:
-  - Install and load the SQLite3 Editor in VSCode
+  - Install and load the SQLite3 Editor in VS Code
   - Create a database
   - Create a table
   - Add and query rows
@@ -60,7 +60,7 @@ editor:
 
 # Structured Query Language (SQL) {background-color="#1B3A6B"}
 
-## SQL: A relational database management system (RDBMS)
+## SQL: the language of relational databases
 
 :::{style="margin-top: 50px; font-size: 20px;"}
 :::{.columns}
@@ -100,7 +100,7 @@ editor:
 
 :::{.column width="50%"}
 - A common myth: SQLite is "not a real database" because it lives in one file
-- [This is false]{.alert}: SQLite can handle [Exabyte-scale data](https://sqlite.org/hctree/doc/hctree/doc/hctree/index.html) (1M TB), far more than any classroom project will ever need
+- [This is false]{.alert}: SQLite can handle [exabyte-scale data](https://sqlite.org/hctree/doc/hctree/doc/hctree/index.html) (1M TB), far more than any classroom project will ever need
 - The differences between SQL flavours are mostly small
 - [Learn one and you can pick up the others quickly](https://www.postgresql.org/docs/current/sql-commands.html)
 :::
@@ -108,65 +108,33 @@ editor:
 :::
 
 ## Installing SQLite
-### macOS and Linux
+### macOS
 
-:::{style="margin-top: 50px; font-size: 20px;"}
-- If you use MacOS or Linux, you probably already have SQLite installed
-- To check, open a terminal and type `sqlite3` 
-  - Then type `.quit` to exit the SQLite prompt!
-- If you see the SQLite prompt, you are good to go! 😊
-- In case you don't have SQLite installed, you can download it from the [SQLite website](https://www.sqlite.org/download.html) or using [Homebrew](https://brew.sh/) (recommended)
-- To install [Homebrew](https://brew.sh/), paste the following command in your terminal
-
-```{verbatim}
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-- Then install SQLite and verify the installation with the following commands
-
-```{verbatim}
-brew install sqlite3
-sqlite3 --version
-```
+:::{style="margin-top: 50px; font-size: 22px;"}
+- SQLite already comes with macOS
+- To check, open a terminal and type `sqlite3 --version`
+- Type `sqlite3` to open the SQLite prompt and `.quit` to leave it
+- Python's `sqlite3` module also comes with Anaconda, so you do not need to install anything else
+- For step-by-step instructions, see [Tutorial 05](https://danilofreire.github.io/datasci151-summer/05-sqlite-tutorial.html)
 :::
 
 ## Installing SQLite
 ### Windows
 
-:::{style="margin-top: 50px; font-size: 20px;"}
-:::{.columns}
-:::{.column width="50%"}
-- Windows users can download the SQLite precompiled binaries from the [SQLite website](https://www.sqlite.org/download.html). Download the files that have the `sqlite3` DLL and the command-line shell (`sqlite-dll...` and `sqlite-tools...`)
-- Then follow these steps:
-  - Create a folder `C:\>sqlite` and unzip the files in this folder, which will give you `sqlite3.def`, `sqlite3.dll` and `sqlite3.exe` files 
-  - Double click the `sqlite3` file to open the software, and you will see the SQLite prompt
-
-```{verbatim}
-C:\>sqlite3
-SQLite version 3.7.15.2 2013-01-09 11:53:05
-Enter ".help" for instructions
-Enter SQL statements terminated with a ";"
-sqlite>
-```
+:::{style="margin-top: 50px; font-size: 22px;"}
+- Open the Anaconda PowerShell Prompt and run `conda install sqlite -y` (Anaconda may already include it)
+- To check, type `sqlite3 --version`
+- Python's `sqlite3` module comes with Anaconda
+- For step-by-step instructions, see [Tutorial 05](https://danilofreire.github.io/datasci151-summer/05-sqlite-tutorial.html)
 :::
 
-:::{.column width="50%"}
-- If you want to use SQLite in the command line, you can add the folder to your PATH variable
-- Search and click on `Edit the system environment variables`
-- Click on `Environment Variables...`
-- Set `C:\sqlite` to `Path` in both or either User variables and/or System variables, then you can use SQLite on terminal (command prompt)
-- [More about this here](https://stackoverflow.com/questions/7330565/how-to-install-sqlite-on-windows)
-:::
-:::
-:::
-
-## Installing SQLite3 Editor in VSCode
+## Installing SQLite3 Editor in VS Code
 
 :::{style="margin-top: 50px; font-size: 22px;"}
 :::{.columns}
 :::{.column width="40%"}
-- Install the [SQLite3 Editor](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor) extension from the VSCode marketplace (or search `SQLite3 Editor` in the Extensions tab and click `Install`)
-- Lets you connect to a SQLite database and run SQL inside VSCode, or edit data without writing any SQL at all
+- Install the [SQLite3 Editor](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor) extension from the VS Code marketplace (or search `SQLite3 Editor` in the Extensions tab and click `Install`)
+- Lets you connect to a SQLite database and run SQL inside VS Code, or edit data without writing any SQL at all
 - Handles table creation, CSV / JSON export, query running, and `git diff` for database files
 - We will use it today to interact with our SQLite database 😊
 :::
@@ -174,7 +142,7 @@ sqlite>
 :::{.column width="60%"}
 :::{style="text-align: center;"}
 [![](figures/vscode-sqlite.png){width="100%"}](#){data-modal-type="image" data-modal-url="figures/vscode-sqlite.png"}
-[Download it here](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor) or search for it in the extensions tab in VSCode
+[Download it here](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor) or search for it in the extensions tab in VS Code
 :::
 :::
 :::
@@ -192,12 +160,8 @@ sqlite>
 - It is very easy to create a [SQLite database file](https://www.sqlite.org/onefile.html) using the extension
 - Simply create a file ending in `.sqlite` or `.db` and open it with the SQLite3 Editor
 - Here I will create a file called `example.db` and open it with the extension
-
-```{verbatim}
-touch example.db
-```
-
-- Then just click on the file (or right-click and select `Open to the Side` -- same thing)
+- In VS Code, click on `File` > `New File` and save the file as `example.db`
+- Then just click on the file (or right-click it, select `Open With...` and choose `SQLite3 Editor`)
 - You will see a new tab with the SQLite3 Editor
 :::
 
@@ -215,7 +179,7 @@ touch example.db
 :::{.columns}
 :::{.column width="50%"}
 - Now that you have opened the file with the extension, you will see the following screen (right)
-- You will see that there is no table in the database yet
+- You will see that there is no table in the database yet (if you did Tutorial 05, you may already see a `students` table)
 - Most of the time, the data come from other sources, such as APIs, JSON or CSV files
 - But in small projects, it is common to create a database to store the data
 - So let's create one right now! 😉
@@ -251,7 +215,7 @@ touch example.db
 [![](figures/add-columns.png){width="100%"}](#){data-modal-type="image" data-modal-url="figures/add-columns.png"}
 :::
 
-- This is equivalent of the following SQL code (as you can see in the editor):
+- This is equivalent to the following SQL code (as you can see in the editor):
  
 ```{sql}
 CREATE TABLE drivers (
@@ -279,7 +243,7 @@ CREATE TABLE drivers (
 ### Database structure
 
 - The main object in SQL is the [table]{.alert} (rows and columns)
-- SQLite is [strongly typed]{.alert}: each column has a specific data type
+- Each column has a [declared data type]{.alert} (SQLite is flexible about enforcing it; most other databases are strict)
 - Five core storage classes:
   - [`TEXT`]{.alert}: strings (UTF-8)
   - [`INTEGER`]{.alert}: whole numbers
@@ -360,17 +324,17 @@ Table: orders
 - Click on `Query Editor` and paste the following code:
 
 ```{sql}
-INSERT INTO drivers VALUES (2, 'Michael Schumacher', 'German', 53);
-INSERT INTO drivers VALUES (3, 'Sebastian Vettel', 'German', 91);
+INSERT INTO drivers VALUES (2, 'Michael Schumacher', 'German', 91);
+INSERT INTO drivers VALUES (3, 'Sebastian Vettel', 'German', 53);
 INSERT INTO drivers VALUES (4, 'Fernando Alonso', 'Spanish', 32);
 ```
 
-Or more efficiently:
+Or more efficiently (run one block or the other, not both, as the same `driver_id` cannot be inserted twice):
 
 ```{sql}
 INSERT INTO drivers (driver_id, driver_name, nationality, victories) VALUES
-(2, 'Michael Schumacher', 'German', 53),
-(3, 'Sebastian Vettel', 'German', 91),
+(2, 'Michael Schumacher', 'German', 91),
+(3, 'Sebastian Vettel', 'German', 53),
 (4, 'Fernando Alonso', 'Spanish', 32);
 ```
 
@@ -417,7 +381,7 @@ SELECT * FROM drivers;
 - [[Appendix 01]{.button}](#sec:appendix01)
 :::
 
-# Table Schemas 📄 {background-color="#1B3A6B"}
+# Table schemas 📄 {background-color="#1B3A6B"}
 
 ## What is a table schema?
 
@@ -500,7 +464,7 @@ SELECT * FROM drivers;
 :::
 :::
 
-# Table Operations 📊 {background-color="#1B3A6B"}
+# Table operations 📊 {background-color="#1B3A6B"}
 
 ## Extracting columns from table
 
@@ -732,12 +696,13 @@ result = result[result['sum_victories'] > 10]
 :::{style="margin-top: 50px; font-size: 22px;"}
 :::{.columns}
 :::{.column width="50%"}
-- The SQLite3 Editor imports and exports data in CSV, JSON, and XLSX formats. Click `Other Tools` → `Export / Import`
+- The SQLite3 Editor exports data to CSV, JSON, XLSX and SQL, and imports from CSV, JSON and SQL. Click `Other Tools` → `Export / Import`
 - For XLSX, you can export one table or all of them at once
 - Importing is just as easy: pick the file and choose which table to load into
 - From the command line:
-  - Export to CSV: `sqlite3 -cmd ".mode csv" -cmd ".output example.csv" example.db "SELECT * FROM drivers;"` ([guide](https://www.sqlitetutorial.net/sqlite-export-csv/){data-modal-type="iframe"})
-  - Import from CSV: `sqlite3 -cmd ".mode csv" example.db ".import example.csv drivers"` ([guide](https://www.sqlitetutorial.net/sqlite-import-csv/){data-modal-type="iframe"})
+  - Export to CSV: `sqlite3 -cmd ".headers on" -cmd ".mode csv" -cmd ".output example.csv" example.db "SELECT * FROM drivers;"` ([guide](https://www.sqlitetutorial.net/sqlite-export-csv/){data-modal-type="iframe"})
+  - Import from CSV into a new table, `drivers_copy`: `sqlite3 -cmd ".mode csv" example.db ".import example.csv drivers_copy"` ([guide](https://www.sqlitetutorial.net/sqlite-import-csv/){data-modal-type="iframe"})
+  - Importing into `drivers` again would fail, as its `driver_id` values already exist
 :::
 
 :::{.column width="50%"}
@@ -751,7 +716,7 @@ result = result[result['sum_victories'] > 10]
 :::{style="margin-top: 50px; font-size: 22px;"}
 - Here is a list of resources to help you learn more about SQL:
   - [Overview of the SQLite3 Extension](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor): Worth reading to understand all the features of the extension
-  - [SQLean](https://github.com/nalgeon/sqlean): SQLite extensions. MacOS users should install the [sqlean.py](https://antonz.org/sqlean-py/) Python package, as sqlite3 is compiled without extension support
+  - [SQLean](https://github.com/nalgeon/sqlean): SQLite extensions. macOS users should install the [sqlean.py](https://github.com/nalgeon/sqlean.py) Python package, as sqlite3 is compiled without extension support
   - [SQLBolt](https://sqlbolt.com/): Interactive SQL tutorials
   - [W3Schools](https://www.w3schools.com/sql/): SQL tutorials
   - [Kaggle](https://www.kaggle.com/learn/intro-to-sql): SQL course

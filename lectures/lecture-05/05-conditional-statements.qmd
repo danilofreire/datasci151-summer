@@ -559,7 +559,7 @@ print(list_answers)
 ```
 
 :::{.callout-note}
-You can read more about `None` at <https://realpython.com/null-in-python/>.
+You can read more about `None` at <https://realpython.com/null-in-python/>
 :::
 :::
 

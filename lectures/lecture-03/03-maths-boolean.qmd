@@ -15,7 +15,7 @@ format:
             font-size: 42px !important;
           }
           </style>
-    footer: "[Maths with NumPy](https://danilofreire.github.io/datasci151-summer/lectures/lecture-04/04-maths-arrays-random.html)"
+    footer: "[Maths with NumPy](https://danilofreire.github.io/datasci151-summer/lectures/lecture-03/03-maths-boolean.html)"
 revealjs-plugins:
   - multimodal
 transition: slide
@@ -241,6 +241,7 @@ print(vec_a * vec_b)
 # We can do other similar element-by-element operations
 # such as subtraction, and division.
 print(vec_a - vec_b)
+# Dividing by 0 gives inf (and a warning)
 print(vec_a / vec_b)
 ```
 :::
@@ -443,7 +444,7 @@ import numpy as np
 "Is this the real life?" == "is this just fantasy?" 
 ```
 
-Note: the [order of the strings matters]{.alert}!
+Note: the [order of the characters matters]{.alert}!
 
 ```{python}
 #| echo: true
@@ -565,8 +566,8 @@ print(isinstance(y,str))
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 - We can test whether two vectors are equal using the same == operator
-- For example, `[1,2,3] == [1,2,3]` returns `True`
-- Please note that the equality of vectors is [done element-wise](https://numpy.org/doc/stable/reference/generated/numpy.array_equal.html)
+- For lists, `[1,2,3] == [1,2,3]` returns a single `True`
+- For NumPy arrays, the comparison is done [element-wise]{.alert}: one `True`/`False` per position (use `np.array_equal()` to compare whole arrays)
 
 ```{python}
 #| echo: true
@@ -666,7 +667,7 @@ age = 31
 # We use the `or` keyword to combine two conditions
 age = 31
 
-# Is this age higher than 20 or lower than 30?
+# Is this age at least 20 or at most 30?
 (age >= 20) or (age <= 30)
 ```
 
@@ -700,7 +701,7 @@ ages = np.array([15, 25, 35])
 print((ages >= 20) & (ages <= 30))
 ```
 
-- We will use this in the [next lecture]{.alert}, when we filter arrays of data 🚀
+- We will use this [later in the course]{.alert}, when we filter data 🚀
 :::
 
 ## Try it yourself! 🚀 {#sec:question04}

@@ -81,7 +81,7 @@ editor:
 :::{style="margin-top: 30px; font-size: 29px;"}
 - `pandas` is the main library for [data manipulation]{.alert} in Python 🐼
 - We will use it a lot in this course (and in your life as a data scientist!)
-- It is built on top of `numpy` and `matplotlib`, and has [a gazillion functions to work with data](https://pandas.pydata.org/docs/reference/index.html) 😁
+- It is built on top of `numpy`, and has [a gazillion functions to work with data](https://pandas.pydata.org/docs/reference/index.html) 😁
 - If you use `R` already, think about it as the `dplyr` of Python
   - A list of [equivalences between `dplyr` and `pandas`](https://pandas.pydata.org/docs/getting_started/comparison/comparison_with_r.html)
 - We will learn more about it in the next classes
@@ -99,46 +99,6 @@ editor:
 - You can apply functions to rows or columns
   - `df.apply(function, axis=0)` applies the function to each column (default)
   - `df.apply(function, axis=1)` applies the function to each row
-:::
-
-## How do I find a value's methods?
-
-:::{style="margin-top: 30px; font-size: 23px;"}
-- You don't need to memorise every button on an object. Python and Jupyter will show them to you on demand
-
-:::{.columns}
-:::{.column width="50%"}
-- [Tab-completion]{.alert} is your daily tool. Type the name, a dot, then hit `Tab`:
-
-```python
-circuits.<TAB>
-```
-
-A drop-down lists every method available. Keep typing to filter: `circuits.dr<TAB>` shows `drop`, `dropna`, `drop_duplicates`, and so on
-
-- [`dir()`]{.alert} prints the full list as text
-
-```python
-dir(circuits)
-```
-
-Ignore names starting with `_`; those are internals
-:::
-
-:::{.column width="50%"}
-- [`?`]{.alert} opens the docstring for a method:
-
-```python
-circuits.drop?
-```
-
-You get the arguments and an explanation of what it does. Two question marks (`circuits.drop??`) shows the source code, which is occasionally useful
-
-- [The official docs](https://pandas.pydata.org/docs/) are for when the docstring is too terse, or you want runnable examples
-:::
-:::
-
-- In practice: `Tab` to discover, `?` to investigate, docs only when you need depth
 :::
 
 ## Applying functions to a dataset
@@ -171,6 +131,46 @@ print(df.apply(lambda x: x**2))
 ```
 :::
 
+## How do I find a value's methods?
+
+:::{style="margin-top: 30px; font-size: 23px;"}
+- You don't need to memorise every button on an object. Python and Jupyter will show them to you on demand
+
+:::{.columns}
+:::{.column width="50%"}
+- [Tab-completion]{.alert} is your daily tool. Type the name, a dot, then hit `Tab`:
+
+```python
+df.<TAB>
+```
+
+A drop-down lists every method available. Keep typing to filter: `df.dr<TAB>` shows `drop`, `dropna`, `drop_duplicates`, and so on
+
+- [`dir()`]{.alert} prints the full list as text
+
+```python
+dir(df)
+```
+
+Ignore names starting with `_`; those are internals
+:::
+
+:::{.column width="50%"}
+- [`?`]{.alert} opens the docstring for a method:
+
+```python
+df.drop?
+```
+
+You get the arguments and an explanation of what it does. Two question marks (`df.drop??`) shows the source code, which is occasionally useful
+
+- [The official docs](https://pandas.pydata.org/docs/) are for when the docstring is too terse, or you want runnable examples
+:::
+:::
+
+- In practice: `Tab` to discover, `?` to investigate, docs only when you need depth
+:::
+
 ## Applying functions to a dataset
 
 :::{style="margin-top: 30px; font-size: 24px;"}
@@ -187,6 +187,7 @@ data["age"] = [18,29,15,32,6]
 data["num_underage_siblings"] = [0,0,1,1,0]
 data["num_adult_siblings"] = [1,0,0,1,0]
 
+# display() shows a DataFrame as a formatted table
 display(data)
 ```
 :::
@@ -286,7 +287,7 @@ data.drop(columns = ["new_var"], inplace = True)
 - `map` [applies a function]{.alert} to a list, an array, or a Series
   - A Series is one column of a DataFrame
 - On a Series, `map` and `apply` are mostly [interchangeable]{.alert}
-  - `map` is often faster; `apply` is more flexible (it also works on whole DataFrames)
+  - `apply` is more flexible (it also works on whole DataFrames)
 - For [plain Python lists]{.alert}, use `map`, since `apply` is not a built-in Python function
 - About `data[["age", "age_bracket01"]]`: the [outer brackets]{.alert} index the DataFrame, and the [inner brackets]{.alert} build a list of column names. Single brackets return a Series, double brackets return a DataFrame
   
@@ -377,7 +378,7 @@ NameError: name 'apply' is not defined
 ## Try it yourself! 🚀 {#sec:exercise-02}
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-- Write a lambda function checking whether `num_siblings` $\ge 1$
+- Write a lambda function checking whether `num_adult_siblings` $\ge 1$
 - Add a variable to the dataset called `has_siblings`
 - Assign True/False to this variable using `apply()`
 - [[Appendix 02]{.button}](#sec:appendix-02)
@@ -389,7 +390,7 @@ NameError: name 'apply' is not defined
 - Read the car dataset `data_raw/features.csv` with `pd.read_csv()`
 - Write a lambda function that tests whether `mpg` $\ge 29$
 - Add a new column called `mpg_above_29` that is `True/False` depending on the result
-- Save the new dataset to `data_clean/features.csv` with `to_csv()`
+- Save the new dataset to `data_clean/features.csv` with `to_csv()` (`DataFrame.to_csv()` saves a DataFrame as a CSV file)
 - [[Appendix 03]{.button}](#sec:appendix-03)
 :::
 
@@ -495,11 +496,11 @@ display(circuits.head(2))
 ## Our dataset: Formula 1 World Championships 🏁🏎️
 
 :::{style="margin-top: 30px; font-size: 25px;"}
-- The dataset contains information about F1 circuits, such as its name, location, latitude, longitude, and more
+- The dataset contains information about F1 circuits, such as their name, location, latitude, longitude, and more
 - You can find more information about the dataset [here](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020/data)
 - The dataset is available in the course's GitHub repository [here](https://github.com/danilofreire/datasci151-summer/blob/main/lectures/lecture-08/data_raw/circuits.csv)
   - Or you can download it using the command above
-- Let's see how the codebook looks like
+- Let's see what the codebook looks like
 - More information about [Formula 1 here](https://en.wikipedia.org/wiki/Formula_One)
 :::
 
@@ -587,7 +588,7 @@ np.nan
 #| echo: true
 #| eval: true
 # Create two arrays with and without "NaNs"
-# The "np.array()" functions converts 
+# The "np.array()" function converts 
 # a list to an array
 
 vec_without_nans = np.array([1,1,1])
@@ -687,7 +688,7 @@ print(dataset["x"].mean())
 :::{.column width="50%"}
 - Let's get the data types of the columns in the `circuits` dataset
 - We use the command `dtypes` for that
-- `object` means that the variable is a string or a variable with mixed types (e.g., numbers and strings)
+- `str` means the column holds text (older pandas versions show `object`); `object` is used for mixed types
 
 ```{python}
 #| echo: true
@@ -904,7 +905,7 @@ display(circuits.sample(5))
 ## Appendix 02 {#sec:appendix-02}
 
 :::{style="margin-top: 30px; font-size: 24px;"}
-- Write a lambda function checking whether `num_siblings` $\ge 1$
+- Write a lambda function checking whether `num_adult_siblings` $\ge 1$
 - Add a variable to the dataset called `has_siblings`
 - Assign True/False to this variable using `apply()`
  

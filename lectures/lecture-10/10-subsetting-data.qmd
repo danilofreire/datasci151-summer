@@ -70,7 +70,7 @@ Source: <https://www.reddit.com/r/ProgrammerHumor/comments/1tm1n5q/isthatreallyt
 - The [`Data Wrangler` extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) for VS Code lets you view, filter, sort, and clean data in a table format, with basic statistics built in
 - Especially handy when working with an [unfamiliar dataset]{.alert}
 - Uses a [sandboxed environment]{.alert}: changes do not touch the original file unless you save them
-- Install: Extensions view (`Ctrl+Shift+X`) → search for `Data Wrangler`. [Full documentation](https://code.visualstudio.com/docs/datascience/data-wrangler)
+- Install: Extensions view (`Ctrl+Shift+X`, `Cmd+Shift+X` on Mac) → search for `Data Wrangler`. [Full documentation](https://code.visualstudio.com/docs/datascience/data-wrangler)
 :::
 
 :::{.column width="50%"}
@@ -154,7 +154,7 @@ Source: <https://www.reddit.com/r/ProgrammerHumor/comments/1tm1n5q/isthatreallyt
 :::
 :::
 
-## Let's practice!
+## Let's practise!
 
 :::{style="margin-top: 30px; font-size: 21px;"}
 :::{.columns}
@@ -184,7 +184,7 @@ Open `features.csv` in `Data Wrangler` and:
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 - Now, let's add two more conditions to the filter
-- We want to find the fastest, less fuel-efficient cars with 6 or more cylinders
+- We want to find the fastest, least fuel-efficient cars with 6 or more cylinders
 - Add a new condition to the filter:
   - Select `acceleration` in `Choose column`
   - Select `Less than or equal to` in `condition`
@@ -313,7 +313,7 @@ subcols_carfeatures
 :::{.columns}
 :::{.column width="50%"}
 - We can also use the `[]` operator to filter the whole dataframe, not just the columns
-- For example, we can filter the dataframe to show only cars with `mpg` greater than 25
+- For example, we can filter the dataframe to show only cars with `mpg` of 25 or more
 
 ```{python}
 #| echo: true
@@ -368,8 +368,8 @@ carfeatures[carfeatures['mpg'] >= 25][['mpg', 'cylinders']]
 ```{python}
 #| echo: true
 #| eval: true
-fast_cars = carfeatures[carfeatures['mpg'] >= 25]
-fast_cars[['mpg', 'cylinders']]
+efficient_cars = carfeatures[carfeatures['mpg'] >= 25]
+efficient_cars[['mpg', 'cylinders']]
 ```
 :::
 :::
@@ -429,7 +429,7 @@ The `:` selects all rows or columns, or a range:
 - `df.iloc[:, 0:3]`: all rows, first three columns
 - `df.iloc[0:3, 0:3]`: first three rows and columns
 
-Remember: [Python is zero-indexed and the last index is not included in lists]{.alert}.
+Remember: [Python is zero-indexed and the last index is not included in lists]{.alert}
 :::
 
 ## Subsetting by row/column position 
@@ -449,7 +449,7 @@ print(carsorted.head())
 :::
 
 :::{.column width="50%"}
-- For example, to select the first three rows and the first three columns:
+- For example, to select the first three rows, and then the first three rows and columns:
 ```{python}
 #| echo: true
 #| eval: true
@@ -696,7 +696,7 @@ for category in list_unique_cylinders:
     df   = carfeatures.query("cylinders == @category")
     plt.scatter(x = df["weight"],y = df["acceleration"])
     
-# Add labels and a legends    
+# Add labels and a legend    
 plt.xlabel("Weight")
 plt.ylabel("Acceleration")
 plt.legend(labels = list_unique_cylinders,

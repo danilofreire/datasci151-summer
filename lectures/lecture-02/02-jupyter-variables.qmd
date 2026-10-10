@@ -219,11 +219,11 @@ conda remove -n datasci151 --all -y
 :::{style="margin-top: 30px; font-size: 22px;"}
 :::{.columns}
 :::{.column width="50%"}
-**Option 1: Via File Menu**
+[Option 1: via File menu]{.alert}
 
-- Go to "File" > "New File...".
-- Select "Jupyter Notebook" from the options.
-- Save the new file with a `.ipynb` extension (e.g., `lecture_notes.ipynb`).
+- Go to "File" > "New File..."
+- Select "Jupyter Notebook" from the options
+- Save the new file with a `.ipynb` extension (e.g., `lecture_notes.ipynb`)
 
 :::{style="text-align: center;"}
 [![](figures/vscode-new-file.png){alt="VS Code New File Menu" width="80%"}](#){data-modal-type="image" data-modal-url="figures/vscode-new-file.png"}
@@ -231,11 +231,11 @@ conda remove -n datasci151 --all -y
 :::
 
 :::{.column width="50%"}
-**Option 2: Via Command Palette**
+[Option 2: via command palette]{.alert}
 
-- Press `Cmd + Shift + P` (macOS) or `Ctrl + Shift + P` (Windows/Linux).
-- Type "Create: New Jupyter Notebook" and select it.
-- Again, ensure the correct kernel is selected for this new notebook.
+- Press `Cmd + Shift + P` (macOS) or `Ctrl + Shift + P` (Windows/Linux)
+- Type "Create: New Jupyter Notebook" and select it
+- Again, ensure the correct kernel is selected for this new notebook
 
 :::{style="text-align: center;"}
 [![](figures/vscode-jupyter.png){alt="VS Code Command Palette for New Jupyter Notebook" width="80%"}](#){data-modal-type="image" data-modal-url="figures/vscode-jupyter.png"}
@@ -248,7 +248,7 @@ conda remove -n datasci151 --all -y
 
 # Let's start coding: importing packages {background-color="#1B3A6B"}
 
-## Loading Packages: the `import` statement
+## Loading packages: the `import` statement
 
 :::{style="margin-top: 30px; font-size: 24px;"}
 - To use a package in your notebook, you first need to load it with [`import`]{.alert}
@@ -261,7 +261,7 @@ conda remove -n datasci151 --all -y
 - If you only need one or two functions, you can grab them directly with [`from`]{.alert}
   - `from pandas import DataFrame`
   - `from matplotlib.pyplot import plot`
-- This way, you avoid loading the entire package into memory
+- This way, you can write `DataFrame(...)` instead of `pd.DataFrame(...)`
 :::
 
 ## Loading packages: in practice
@@ -306,7 +306,7 @@ carfeatures.info() # Check the structure of the DataFrame
 ```
 :::
 
-## Viewing Your DataFrame in VS Code
+## Viewing your DataFrame in VS Code
 
 :::{style="margin-top: 30px; font-size: 25px;"}
 :::{.columns}
@@ -391,7 +391,7 @@ carfeatures['cylinders'].head()
 # Using dot notation
 carfeatures.cylinders.head()
 ```
-- **Note:** [Dot notation is less flexible than bracket notation]{.alert}, especially for column names with spaces or special characters
+- [Note]{.alert}: [Dot notation is less flexible than bracket notation]{.alert}, especially for column names with spaces or special characters
 :::
 :::
 :::
@@ -451,7 +451,7 @@ carfeatures.describe()
 ```
 
 :::{.callout-note}
-The `horsepower` column might be missing from `.describe()` if it was read as non-numeric (e.g., due to placeholder characters like '?'). Data cleaning would be needed to convert it. You can use `carfeatures['horsepower'] = pd.to_numeric(carfeatures['horsepower'], errors='coerce')` to convert it to numeric, which will turn non-convertible values into NaN (missing values).
+The `horsepower` column might be missing from `.describe()` if it was read as non-numeric (e.g., due to placeholder characters like '?'). Data cleaning would be needed to convert it. You can use `carfeatures['horsepower'] = pd.to_numeric(carfeatures['horsepower'], errors='coerce')` to convert it to numeric, which will turn non-convertible values into NaN (missing values)
 :::
 :::
 
@@ -464,7 +464,7 @@ The `horsepower` column might be missing from `.describe()` if it was read as no
 :::{.column width="40%"}
 - Variables are used to store data values.
 - Python is dynamically typed, meaning you don't need to declare the type of a variable.
-- **Common Data Types:**
+- [Common data types]{.alert}:
   - [Integers (`int`)]{.alert}: Whole numbers (e.g., `x = 10`)
   - [Floats (`float`)]{.alert}: Numbers with decimals (e.g., `pi = 3.14`)
   - [Strings (`str`)]{.alert}: Text, enclosed in single `' '` or double `" "` quotes (e.g., `message = "Hello"`)
@@ -501,11 +501,11 @@ print(f"Value: {is_enrolled}, Type: {type(is_enrolled)}")
 :::{.columns}
 ::::{.column width="50%"}
 - Assign values with `=`, e.g., `user_count = 150`
-- **Naming rules (Python enforces these):**
+- [Naming rules (Python enforces these)]{.alert}:
   - Must start with a letter or underscore (`_`); after that, use letters, numbers, or `_`
   - Must not match a Python keyword (`if`, `for`, `class`, ...)
   - Names are [case-sensitive]{.alert}: `myVar` and `myvar` are different variables
-- **Naming style (we choose these):**
+- [Naming style (we choose these)]{.alert}:
   - Use [`snake_case`]{.alert}: lowercase words joined with underscores
   - Pick descriptive names: `average_score` beats `avg`
 - See your active variables in the [Variables panel]{.alert} or Data Wrangler
@@ -525,7 +525,7 @@ print(user_greeting)
 ```
 
 - [Try it yourself!]{.alert}
-- **Exercise:** Create a variable to store the title of your favourite film and print it!
+- [Exercise]{.alert}: Create a variable to store the title of your favourite film and print it!
 - [[Solution]{.button}](#sec:appendix01)
 :::
 :::
@@ -536,7 +536,7 @@ print(user_greeting)
 :::{style="margin-top: 30px; font-size: 21px;"}
 :::{.columns}
 :::{.column width="50%"}
-**Numeric Operations:**
+[Numeric operations]{.alert}:
 
 - Addition: `+`
 - Subtraction: `-`
@@ -545,7 +545,7 @@ print(user_greeting)
 - Floor Division: `//` (discards decimal)
 - Modulus: `%` (remainder)
 - Exponentiation: `**` (e.g., `2**3` is 8)
-- Use parentheses `()` to control the order of operations.
+- Use parentheses `()` to control the order of operations
 
 ```{python}
 #| echo: true
@@ -560,9 +560,9 @@ print(f"Calculation result: {calculation}")
 :::
 
 :::{.column width="50%"}
-**String [Concatenation]{.alert}:**
+[String concatenation]{.alert}:
 
-- Use the `+` operator to join strings.
+- Use the `+` operator to join strings
 ```{python}
 #| echo: true
 #| eval: true
@@ -573,7 +573,7 @@ print(full_name)
 ```
 
 - [Try it yourself!]{.alert}
-- **Exercise:** Define variables for your name and major, then print a concatenated string introducing yourself
+- [Exercise]{.alert}: Define variables for your name and major, then print a concatenated string introducing yourself
 - [[Solution]{.button}](#sec:appendix02)
 :::
 :::
@@ -622,7 +622,7 @@ nested_list_example
 - Use square brackets `[]` with the index number after the list's name
   - `my_list[0]` gets the first element
   - `my_list[1]` gets the second element
-- **Negative Indexing:**
+- [Negative indexing]{.alert}:
   - `my_list[-1]` gets the *last* element
   - `my_list[-2]` gets the second-to-last element
 - For nested lists, use multiple index brackets: `nested_list[outer_index][inner_index]`
@@ -727,7 +727,7 @@ plt.show()
 
 :::{style="margin-top: 30px; font-size: 22px;"}
 - You can create scatter plots using columns from your pandas DataFrames
-- The `x` and `y` parameters can be set to the names of the columns you want to plot
+- Pass the columns themselves, such as `carfeatures['weight']`, as `x` and `y`
 - Ensure the DataFrame is not empty and contains the specified columns!
 
 ```{python}
@@ -743,15 +743,15 @@ plt.grid(True)
 plt.show()
 ```
 
-**Suggestion:** Try another scatter plot using different columns, e.g., `x=carfeatures['acceleration']` vs `y=carfeatures['mpg']`.
+[Suggestion]{.alert}: Try another scatter plot using different columns, e.g., `x=carfeatures['acceleration']` vs `y=carfeatures['mpg']`
 :::
 
 ## Try it yourself! {#sec:exercise05}
 
 :::{style="margin-top: 30px; font-size: 28px;"}
-- Create two lists of numbers representing, for example, hours studied and exam scores.
-- Generate your own scatter plot from these lists.
-- Ensure you add a title, and labels for the x and y axes.
+- Create two lists of numbers representing, for example, hours studied and exam scores
+- Generate your own scatter plot from these lists
+- Ensure you add a title, and labels for the x and y axes
 
 [[Solution]{.button}](#sec:appendix05)
 :::
@@ -830,11 +830,11 @@ print(favourite_films_list[-1])
 #| eval: true
 # A list of favourite books, with some titles repeated
 favourite_books_survey = [
-    "The Illiad", "1984", "Brave New World", "The Illiad",
-    "The Odyssey", "1984", "The Odyssey", "The Illiad"
+    "The Iliad", "1984", "Brave New World", "The Iliad",
+    "The Odyssey", "1984", "The Odyssey", "The Iliad"
 ]
 
-plt.hist(x=favourite_books_survey, color='teal', edgecolor='black') # rwidth adds spacing
+plt.hist(x=favourite_books_survey, color='teal', edgecolor='black') # edgecolor draws a border around each bar
 plt.title("Frequency of Favourite Books Mentioned")
 plt.xlabel("Book Title")
 plt.ylabel("Number of Mentions")

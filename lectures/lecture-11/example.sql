@@ -11,9 +11,9 @@ INSERT INTO drivers VALUES (1, 'Lewis Hamilton','British', 103);
 
 INSERT INTO drivers VALUES (4, 'Fernando Alonso', 'Spanish', 32);
 
-INSERT INTO drivers VALUES (3, 'Sebastian Vettel', 'German', 91);
+INSERT INTO drivers VALUES (3, 'Sebastian Vettel', 'German', 53);
 
-INSERT INTO drivers VALUES (2, 'Michael Schumacher', 'German', 53);
+INSERT INTO drivers VALUES (2, 'Michael Schumacher', 'German', 91);
 
 INSERT INTO drivers VALUES (5, 'Max Verstappen', 'Dutch', 51); 
 
